@@ -9,7 +9,7 @@ type Props = {
   note?: string
   /** スロー再生ボタンも表示 */
   slow?: boolean
-  /** 発話内の先頭に短い開始キューを追加 */
+  /** 発話内の先頭に短い開始キューを追加(モバイル幅では付かない) */
   leadingPause?: boolean
 }
 

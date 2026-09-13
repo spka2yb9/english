@@ -19,10 +19,23 @@ const speakMock = vi.fn()
 const cancelMock = vi.fn()
 const resumeMock = vi.fn()
 
+/** matchMedia を画面幅だけ返すスタブに差し替える。 */
+function stubViewport(isMobile: boolean) {
+  Object.defineProperty(window, 'matchMedia', {
+    configurable: true,
+    value: vi.fn(() => ({
+      matches: isMobile,
+      addEventListener: vi.fn(),
+      removeEventListener: vi.fn(),
+    })),
+  })
+}
+
 beforeEach(() => {
   speakMock.mockReset()
   cancelMock.mockReset()
   resumeMock.mockReset()
+  stubViewport(false)
   vi.stubGlobal('SpeechSynthesisUtterance', FakeUtterance)
   Object.defineProperty(window, 'speechSynthesis', {
     configurable: true,
@@ -39,6 +52,7 @@ afterEach(() => {
   vi.unstubAllGlobals()
   // @ts-expect-error テスト用に注入したモックを除去
   delete window.speechSynthesis
+  Reflect.deleteProperty(window, 'matchMedia')
 })
 
 describe('speechService', () => {
@@ -71,6 +85,21 @@ describe('speechService', () => {
     expect(utterance.text).toBe('Ready. I am a student.')
     utterance.onend?.()
     await promise
+  })
+
+  it('モバイル幅では開始キューを付けず、教材英文だけを渡す', async () => {
+    stubViewport(true)
+    const explicit = speechService.speak('I am a student.', { leadingPause: true })
+    const first = speakMock.mock.calls[0][0] as FakeUtterance
+    expect(first.text).toBe('I am a student.')
+    first.onend?.()
+    await explicit
+
+    const byDefault = speechService.speak('I have lived here for five years.')
+    const second = speakMock.mock.calls[1][0] as FakeUtterance
+    expect(second.text).toBe('I have lived here for five years.')
+    second.onend?.()
+    await byDefault
   })
 
   it('音量は Web Speech API の有効範囲に収める', async () => {
