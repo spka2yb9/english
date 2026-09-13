@@ -95,14 +95,23 @@ export function schedulePush(): void {
   }, PUSH_DELAY_MS)
 }
 
-// タブを離れる時に未送信分を取りこぼさない
+/**
+ * まとめ送りを待たずに今すぐ送る。文法のセクション完了・多読の読了のような「区切りの操作」から呼ぶ。
+ * 未送信が無ければ何もしないので、何度呼んでも余計な通信は起きない。
+ */
+export function flushPush(): void {
+  if (timer === undefined) return
+  clearTimeout(timer)
+  timer = undefined
+  void push().catch(() => {})
+}
+
+// タブを離れる時に未送信分を取りこぼさない。スマホのプロセス終了は visibilitychange を経ないことがある
 if (typeof document !== 'undefined') {
   document.addEventListener('visibilitychange', () => {
-    if (document.visibilityState !== 'hidden' || timer === undefined) return
-    clearTimeout(timer)
-    timer = undefined
-    void push().catch(() => {})
+    if (document.visibilityState === 'hidden') flushPush()
   })
+  window.addEventListener('pagehide', flushPush)
 }
 
 /** サインイン。既存の保存先 Gist があれば再利用し、無ければ private Gist を作る。 */

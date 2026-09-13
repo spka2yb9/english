@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { pull, push, signOut } from './sync'
+import { flushPush, pull, push, schedulePush, signOut } from './sync'
 
 const FILE = 'english-progress.json'
 
@@ -75,6 +75,34 @@ describe('端末間同期', () => {
 
     const sent = JSON.parse(JSON.parse(sentBody).files[FILE].content).data
     expect(Object.keys(sent).sort()).toEqual(['eng.practice.stats.dictation', 'eng.vocab.stats'])
+  })
+
+  it('flushPush はまとめ送りを待たずにその場で送る', async () => {
+    signedInFixture()
+    sessionStorage.setItem('eng.sync.pulled', '1')
+    localStorage.setItem('eng.sync.savedAt', '999')
+    localStorage.setItem('eng.vocab.stats', '{"a":1}')
+    const fetchMock = vi.fn(async (_url: string, init?: RequestInit) =>
+      init?.method === 'PATCH' ? { ok: true } : gistResponse({ savedAt: 1, data: {} }),
+    )
+    vi.stubGlobal('fetch', fetchMock)
+
+    schedulePush() // 3秒待つ予定の送信を
+    flushPush() // その場で送る
+
+    await vi.waitFor(() => expect(fetchMock).toHaveBeenCalledTimes(1))
+    expect(fetchMock.mock.calls[0][1]?.method).toBe('PATCH')
+  })
+
+  it('未送信が無ければ flushPush は通信しない', () => {
+    signedInFixture()
+    sessionStorage.setItem('eng.sync.pulled', '1')
+    const fetchMock = vi.fn()
+    vi.stubGlobal('fetch', fetchMock)
+
+    flushPush()
+
+    expect(fetchMock).not.toHaveBeenCalled()
   })
 
   it('サインアウトすると同期は止まる', async () => {

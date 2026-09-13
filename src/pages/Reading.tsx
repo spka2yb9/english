@@ -5,6 +5,7 @@ import { Quiz } from '../components/Quiz'
 import { findPassage, readingPassages } from '../content/reading'
 import type { ReadingPassage } from '../content/types'
 import { KEYS, loadJson, saveJson } from '../services/storage'
+import { flushPush } from '../services/sync'
 
 const LEVELS: ReadingPassage['level'][] = ['A2', 'B1', 'B2']
 
@@ -12,12 +13,16 @@ function getDone(): Set<string> {
   return new Set(loadJson<string[]>(KEYS.readingDone, []))
 }
 
-/** 読了の記録。`done=false` で取り消す。文法の `markLessonCompleted` と同じ扱い。 */
+/**
+ * 読了の記録。`done=false` で取り消す。文法の `markLessonCompleted` と同じ扱いで、
+ * 読了は区切りなので、保存の3秒まとめを待たずその場で Gist へ送る。
+ */
 function markPassageDone(passageId: string, done = true): void {
   const ids = getDone()
   if (done) ids.add(passageId)
   else ids.delete(passageId)
   saveJson(KEYS.readingDone, [...ids])
+  flushPush()
 }
 
 export function ReadingIndex() {

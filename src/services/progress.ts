@@ -1,6 +1,7 @@
 // 学習進捗のローカル永続化(文法の完了レッスン・文法問題のSRS・語彙統計・語彙の日次ログ)
 
 import { KEYS, loadJson, saveJson } from './storage'
+import { flushPush } from './sync'
 import { masteryOf, recordAnswer } from './vocabSelection'
 import type { WordStats } from './vocabSelection'
 
@@ -8,12 +9,16 @@ export function getCompletedLessons(): Set<string> {
   return new Set(loadJson<string[]>(KEYS.grammarProgress, []))
 }
 
-/** 完了ボタンの操作。`completed=false` で取り消す。 */
+/**
+ * 完了ボタンの操作。`completed=false` で取り消す。
+ * セクション完了は区切りなので、保存の3秒まとめを待たずその場で Gist へ送る。
+ */
 export function markLessonCompleted(lessonId: string, completed = true): void {
   const lessons = getCompletedLessons()
   if (completed) lessons.add(lessonId)
   else lessons.delete(lessonId)
   saveJson(KEYS.grammarProgress, [...lessons])
+  flushPush()
 }
 
 export function getGrammarItemStats(): WordStats {
