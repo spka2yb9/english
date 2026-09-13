@@ -1,0 +1,377 @@
+import type { GrammarUnit } from '../../types'
+
+// U18 過去完了と時制の整理 — 過去完了の基本、過去形との使い分け、物語の時制
+
+export const u18: GrammarUnit = {
+  id: 'u18',
+  level: 'B1+',
+  title: '過去完了と時制の整理',
+  lessons: [
+    {
+      id: 'u18-l1',
+      unitId: 'u18',
+      level: 'B1+',
+      title: '過去完了の基本',
+      objective: 'had + 過去分詞を使って、「過去のある時点よりさらに前」に起きていた出来事を表せるようになります。',
+      minutes: 10,
+      prereqs: ['u11-l6'],
+      blocks: [
+        {
+          type: 'explanation',
+          title: '「過去の中の、さらに過去」',
+          body:
+            '過去のことを話している最中に、「その時点よりさらに前に起きていたこと」に触れたくなることがあります。\n\n- 駅に着いた(過去)\n- 電車は出発してしまっていた(それより前)\n\nこの「過去の中の、さらに過去」を表すのが**過去完了(had + 過去分詞)**です。\n\nWhen I arrived at the station, the train **had already left**.\n\n現在完了(have + 過去分詞)が「過去と今」をつなぐのに対し、過去完了は「より前の過去」と「基準となる過去」をつなぎます。have を had に変えるだけで、視点全体が過去へスライドするイメージです。',
+        },
+        {
+          type: 'timeline',
+          title: '「過去より前」を図で見る',
+          timelines: [
+            {
+              title: 'I arrived at the station.(過去形)',
+              point: 60,
+              pointLabel: '駅に到着(基準となる過去)',
+              caption: '物語の基準になる過去の時点です。0が遠い過去、100が今です。',
+            },
+            {
+              title: 'The train had left.(過去完了)',
+              point: 30,
+              pointLabel: '電車が出発(基準より前)',
+              caption: '到着(60のあたり)の時点で、出発はすでに終わっていました。この「基準より前」が過去完了の守備範囲です。',
+            },
+          ],
+        },
+        {
+          type: 'examples',
+          title: '例文',
+          items: [
+            { en: 'When I arrived at the station, the train had already left.', ja: '駅に着いたとき、電車はすでに出発していました。', highlight: 'had already left' },
+            { en: 'She had worked at a bank before she became a teacher.', ja: '彼女は教師になる前、銀行で働いていました。', highlight: 'had worked' },
+            { en: "I couldn't open the door because I had left my key at the office.", ja: 'オフィスに鍵を置いてきてしまったので、ドアを開けられませんでした。', highlight: 'had left' },
+            { en: 'By the time the guests arrived, we had finished all the preparations.', ja: 'お客さんが着く頃までには、準備はすべて終わっていました。', highlight: 'had finished' },
+            { en: "He hadn't eaten sushi until he visited Japan.", ja: '日本を訪れるまで、彼は寿司を食べたことがありませんでした。', highlight: "hadn't eaten" },
+          ],
+        },
+        {
+          type: 'explanation',
+          title: '形と、よく一緒に使う目印',
+          body:
+            "形は主語が何であっても **had + 過去分詞** です。短縮形は I'd / she'd など、否定は hadn't + 過去分詞、疑問は Had + 主語 + 過去分詞になります。\n\nよく一緒に使われる目印:\n\n- **already / just**: had already left(すでに出てしまっていた)\n- **by the time ...**: By the time we arrived, ...(〜する頃までには)\n- **before / after / when**: 出来事の前後関係を示す接続詞\n\nただし目印の語がなくても、「基準の過去より前」のことであれば過去完了を使えます。",
+        },
+      ],
+      quiz: [
+        {
+          id: 'u18-l1-q1',
+          prompt: '空所に入る形を選んでください。',
+          sentence: 'When we got to the theater, the movie ___.',
+          sentenceJa: '映画館に着いたとき、映画はすでに始まっていました。',
+          choices: ['already started', 'has already started', 'had already started', 'was already starting'],
+          correctIndex: 2,
+          explanation: '「着いた(過去)」より前に始まっていたことを表すので、過去完了 had already started を使います。',
+          choiceNotes: ['過去形だけでは「すでに始まっていた」という基準より前の意味がはっきりしません。', '現在完了は「今」とつながる形なので、過去の基準(got)とは組み合わせられません。', null, 'was starting だと「まさに始まりかけていた」となり、意味が変わります。'],
+          audioEn: 'When we got to the theater, the movie had already started.',
+        },
+        {
+          id: 'u18-l1-q2',
+          prompt: '正しい文を選んでください。',
+          sentenceJa: '「家に着いたとき、妻はもう夕食を作り終えていました」と言いたいとき。',
+          choices: [
+            'When I got home, my wife has already made dinner.',
+            'When I got home, my wife had already made dinner.',
+            'When I got home, my wife had already make dinner.',
+            'When I got home, my wife already makes dinner.',
+          ],
+          correctIndex: 1,
+          explanation: '帰宅(過去)より前に終わっていたことなので、had + 過去分詞(made)で表します。',
+          choiceNotes: ['has made は現在完了で、過去の基準(got home)と一緒には使えません。', null, 'had のあとは過去分詞です。原形 make は続けられません。', '現在形 makes では過去の話になりません。'],
+          audioEn: 'When I got home, my wife had already made dinner.',
+        },
+        {
+          id: 'u18-l1-q3',
+          prompt: 'この文の内容として正しいものを選んでください。',
+          sentence: 'When I arrived at the office, the meeting had started.',
+          choices: ['会議は私が着く前に始まっていた', '会議は私が着いたのと同時に始まった', '会議は私が着いたあとに始まった', '会議はこれから始まるところだった'],
+          correctIndex: 0,
+          explanation: 'had started は「基準となる過去(到着)より前に始まっていた」ことを表します。',
+          choiceNotes: [null, 'ほぼ同時なら the meeting started と過去形で表します。', '着いたあとに始まったのなら After I arrived, the meeting started. のように過去形を使います。', '「始まりかけていた」なら was about to start などで表します。'],
+          audioEn: 'When I arrived at the office, the meeting had started.',
+        },
+        {
+          id: 'u18-l1-q4',
+          prompt: '空所に入る形を選んでください。',
+          sentence: 'I was really hungry because I ___ anything since breakfast.',
+          sentenceJa: '朝食から何も食べていなかったので、本当にお腹がすいていました。',
+          choices: ["didn't eat", "haven't eaten", "hadn't eaten", "wasn't eating"],
+          correctIndex: 2,
+          explanation: '「お腹がすいていた(過去)」の時点まで続いていた「食べていない」状態なので、過去完了の否定 hadn\'t eaten を使います。',
+          choiceNotes: ['過去形では「空腹だった時点より前からの継続」を表せません。', '現在完了は今とのつながりを表すので、過去の基準(was hungry)には合いません。', null, '過去進行形だと「そのとき食べている最中ではなかった」という別の意味になります。'],
+          audioEn: "I was really hungry because I hadn't eaten anything since breakfast.",
+        },
+      ],
+      summary: [
+        '過去完了(had + 過去分詞)は「基準となる過去の時点より、さらに前」の出来事を表す。',
+        "主語が何でも had を使う。否定は hadn't + 過去分詞、疑問は Had + 主語 + 過去分詞。",
+        'already / by the time / before / after などが前後関係の目印になる。',
+        '現在完了の have を had に変えると、視点全体が過去にスライドする。',
+      ],
+    },
+    {
+      id: 'u18-l2',
+      unitId: 'u18',
+      level: 'B1+',
+      title: '過去完了 vs 過去形',
+      objective: '出来事の前後関係に応じて過去形と過去完了を使い分け、不要な過去完了を避けられるようになります。',
+      minutes: 12,
+      prereqs: ['u18-l1'],
+      blocks: [
+        {
+          type: 'explanation',
+          title: '過去の話がぜんぶ過去完了になるわけではない',
+          body:
+            "「過去より前」と聞くと、過去の話をすべて過去完了にしたくなりますが、そうではありません。**起きた順番のとおりに語るなら、過去形を並べるだけで十分**です。\n\n- I got up, had breakfast, and left home.(起きて、食べて、家を出た)\n\n過去完了の出番は、**語る順番と起きた順番がずれるとき**です。あとから「実はその前に〜していた」とさかのぼる場面で had + 過去分詞を使います。\n\n- I couldn't pay. I **had left** my wallet at home.(払えなかった。実はその前に財布を家に忘れていた)",
+        },
+        {
+          type: 'contrast',
+          title: '過去形 vs 過去完了',
+          left: {
+            label: '過去形(起きた順に語る)',
+            items: [
+              { en: 'She checked the report and sent it to her boss.', ja: '彼女はレポートを確認して、上司に送りました。', highlight: 'checked' },
+              { en: 'When the phone rang, I answered it right away.', ja: '電話が鳴ったとき、すぐに出ました。', highlight: 'answered' },
+            ],
+            pointJa: '出来事を起きた順番のまま並べる。順序は語順が教えてくれる',
+          },
+          right: {
+            label: '過去完了(基準より前にさかのぼる)',
+            items: [
+              { en: 'When I turned on the TV, the show had ended.', ja: 'テレビをつけたとき、番組はもう終わっていました。', highlight: 'had ended' },
+              { en: 'He realized that he had sent the email to the wrong person.', ja: '彼はメールを送る相手を間違えていたことに気づきました。', highlight: 'had sent' },
+            ],
+            pointJa: '基準となる過去の時点より前に起きていたことを示す',
+          },
+          note: '迷ったら「基準の過去より前のことか?」と自問してください。前なら過去完了、順番どおりなら過去形です。',
+        },
+        {
+          type: 'timeline',
+          title: '同じ when の文でも順番が変わる',
+          timelines: [
+            {
+              title: 'When we arrived, the concert started.',
+              point: 55,
+              pointLabel: 'コンサート開始',
+              caption: '過去形: 私たちの到着(50のあたり)のあとに始まりました。',
+            },
+            {
+              title: 'When we arrived, the concert had started.',
+              point: 25,
+              pointLabel: 'コンサート開始(到着より前)',
+              caption: '過去完了: 到着(50のあたり)の時点で、すでに始まっていました。',
+            },
+          ],
+        },
+        {
+          type: 'examples',
+          title: '例文',
+          items: [
+            { en: 'When we arrived, the concert started.', ja: '私たちが着くと、コンサートが始まりました。', highlight: 'started', note: '到着 → 開始の順です。' },
+            { en: 'When we arrived, the concert had started.', ja: '私たちが着いたとき、コンサートはすでに始まっていました。', highlight: 'had started', note: '開始 → 到着の順に変わります。' },
+            { en: 'After the guests had left, we cleaned the kitchen.', ja: 'お客さんが帰ったあと、私たちは台所を片づけました。', highlight: 'had left', note: 'after が順番を示すので、After the guests left と過去形にしても意味は通じます。' },
+            { en: 'I lost the watch that my grandfather had given me.', ja: '祖父がくれた腕時計をなくしてしまいました。', highlight: 'had given', note: '「もらった」のは「なくした」より前のことです。' },
+            { en: 'Last night I watched a movie and went to bed early.', ja: '昨夜は映画を見て、早めに寝ました。', note: '順番どおりの語りなので、過去形を並べるだけで十分です。' },
+          ],
+        },
+        {
+          type: 'explanation',
+          title: 'before / after があれば過去形でもよい',
+          body:
+            'before や after は接続詞そのものが順番を教えてくれるので、**過去完了を使わず過去形だけでも正しい文になります**。\n\n- After she **finished**(または had finished)the report, she went home.\n\n一方 when は「同時」にも「その前」にも読めるため、順番をはっきりさせたいときに過去完了が効いてきます。\n\nもうひとつの注意点は、**last night / yesterday など単独の時間表現だけの文で過去完了を使わない**ことです。基準となる別の過去の時点がなければ、過去形が正解です。\n\n× I had watched a movie last night. → ○ I watched a movie last night.',
+        },
+      ],
+      quiz: [
+        {
+          id: 'u18-l2-q1',
+          prompt: 'この文が表す出来事の順番として正しいものを選んでください。',
+          sentence: 'When I called her, she had left the office.',
+          choices: ['彼女がオフィスを出た → 私が電話した', '私が電話した → 彼女がオフィスを出た', '電話している最中に彼女がオフィスを出た', '彼女はこれからオフィスを出るところだった'],
+          correctIndex: 0,
+          explanation: 'had left は「電話した(基準の過去)より前に出ていた」ことを表します。',
+          choiceNotes: [null, 'その順番なら When I called her, she left the office. と過去形で表します。', '最中なら she was leaving のように過去進行形を使います。', '「出るところだった」なら was about to leave などで表します。'],
+          audioEn: 'When I called her, she had left the office.',
+        },
+        {
+          id: 'u18-l2-q2',
+          prompt: '時制の使い方に誤りがある文を選んでください。',
+          choices: [
+            'After the guests had left, we cleaned the kitchen.',
+            'I had visited Kyoto twice before I moved there.',
+            'I had watched a movie last night and went to bed.',
+            'She was upset because her team had lost the game.',
+          ],
+          correctIndex: 2,
+          explanation: 'last night の出来事を順番どおりに語っているだけなので、過去形 I watched a movie last night and went to bed. が正しい形です。基準となる別の過去の時点がなければ過去完了は使いません。',
+          choiceNotes: ['after と過去完了の組み合わせで、順番が正しく示されています。', '引っ越しより前の経験なので過去完了が使えます。', null, '「動揺していた」より前に負けたので過去完了が適切です。'],
+          audioEn: 'I watched a movie last night and went to bed.',
+        },
+        {
+          id: 'u18-l2-q3',
+          prompt: '空所に入る形を選んでください。',
+          sentence: 'He ___ his coffee, grabbed his bag, and left for work.',
+          sentenceJa: '彼はコーヒーを飲み、かばんをつかんで、仕事に出かけました。',
+          choices: ['drinks', 'drank', 'had drunk', 'has drunk'],
+          correctIndex: 1,
+          explanation: '起きた順番のとおりに出来事を並べているだけなので、grabbed / left と同じ過去形 drank を使います。',
+          choiceNotes: ['過去の話なので現在形は使えません。', null, '順番どおりの語りに、さかのぼりの過去完了は不要です。', '現在完了は「今」とつながる形で、過去の出来事の連続には使えません。'],
+          audioEn: 'He drank his coffee, grabbed his bag, and left for work.',
+        },
+        {
+          id: 'u18-l2-q4',
+          prompt: '空所に入る形を選んでください。',
+          sentence: 'By the time we got to the stadium, the first half ___.',
+          sentenceJa: 'スタジアムに着く頃には、前半はすでに終わっていました。',
+          choices: ['ended', 'has ended', 'had ended', 'was ending'],
+          correctIndex: 2,
+          explanation: 'by the time は「〜する頃までにはすでに」という前後関係を示すので、基準(got)より前を表す過去完了を使います。',
+          choiceNotes: ['過去形では「すでに終わっていた」という基準より前の意味が出ません。', '現在完了は過去の基準(got)と組み合わせられません。', null, 'was ending だと「終わりかけていた」となり、意味が変わります。'],
+          audioEn: 'By the time we got to the stadium, the first half had ended.',
+        },
+      ],
+      summary: [
+        '起きた順番のとおりに語るなら、過去形を並べるだけでよい。',
+        '語る順番と起きた順番がずれるとき、基準より前の出来事を過去完了で示す。',
+        'before / after があれば過去形でも順番は伝わる。when の文では過去完了が効く。',
+        'last night など単独の過去の時間表現だけの文に過去完了は使わない。',
+      ],
+    },
+    {
+      id: 'u18-l3',
+      unitId: 'u18',
+      level: 'B1+',
+      title: '物語の時制',
+      objective: '過去形・過去進行形・過去完了を役割に応じて組み合わせ、過去の出来事をひとつの物語として語れるようになります。',
+      minutes: 12,
+      prereqs: ['u18-l2'],
+      blocks: [
+        {
+          type: 'explanation',
+          title: '物語を動かす3つの時制',
+          body:
+            '過去の出来事を語るとき、英語は3つの時制に役割を分担させます。\n\n- **過去形**: 物語を前に進める(主役の出来事)\n- **過去進行形**: 場面の背景や、そのとき進行中だった様子を描く\n- **過去完了**: 基準の時点より前のことにさかのぼる\n\nWhen I got to the café, Ken **was waiting** for me. He **had ordered** two coffees.\n(カフェに着くと、ケンが待っていました。彼はコーヒーを2つ注文してくれていました)\n\ngot が物語を進め、was waiting が場面を描き、had ordered が少し前の出来事を補足しています。',
+        },
+        {
+          type: 'timeline',
+          title: '1つの場面を3つの時制で見る',
+          timelines: [
+            {
+              title: 'I got to the café.(過去形)',
+              point: 50,
+              pointLabel: '到着(物語の基準点)',
+              caption: '物語を前に進める出来事です。',
+            },
+            {
+              title: 'Ken was waiting for me.(過去進行形)',
+              range: [30, 70],
+              rangeLabel: '待っていた',
+              caption: '到着した場面の背景として、そのとき進行中だった動作です。',
+            },
+            {
+              title: 'He had ordered two coffees.(過去完了)',
+              point: 20,
+              pointLabel: '注文(基準より前)',
+              caption: '到着より前にすんでいたことへのさかのぼりです。',
+            },
+          ],
+        },
+        {
+          type: 'examples',
+          title: '例文(小さな物語)',
+          items: [
+            { en: 'It was raining hard when I left home this morning.', ja: '今朝家を出たとき、雨が激しく降っていました。', highlight: 'was raining', note: '場面の背景は過去進行形で描きます。' },
+            { en: 'I ran to the station and jumped on a train.', ja: '駅まで走り、電車に飛び乗りました。', highlight: 'ran', note: '出来事は過去形で順番に進めます。' },
+            { en: 'A few minutes later, I realized that I had taken the wrong train.', ja: '数分後、電車を間違えたことに気づきました。', highlight: 'had taken', note: '気づいた時点より前のミスなので過去完了です。' },
+            { en: 'While I was looking at the route map, an old man kindly spoke to me.', ja: '路線図を見ていると、年配の男性が親切に声をかけてくれました。', highlight: 'was looking', note: 'while + 過去進行形の最中に、過去形の出来事が割り込みます。' },
+            { en: 'In the end, I got to work only ten minutes late.', ja: '結局、わずか10分の遅刻で職場に着きました。', highlight: 'got' },
+          ],
+        },
+        {
+          type: 'table',
+          title: '役割の早見表',
+          headers: ['役割', '時制', '例'],
+          rows: [
+            ['出来事を順番に進める', '過去形', 'I opened the door.'],
+            ['場面の背景・進行中の動作', '過去進行形', 'The wind was blowing.'],
+            ['基準の時点より前にさかのぼる', '過去完了', 'Someone had broken the window.'],
+          ],
+        },
+        {
+          type: 'explanation',
+          title: 'had の省略と過去形への切り替えを区別する',
+          body:
+            '過去完了で前の出来事にさかのぼり、時間の流れがはっきりしたら、過去形で話を続けることもできます。ただし、**助動詞 had の省略と、過去形への切り替えを区別**しましょう。\n\nI **had gone** to a concert, **stayed** out late, and **missed** the last train.\n\nこの文は had が gone / stayed / missed の3つに共通してかかると読めます。stayed と missed は過去形と過去分詞が同じ形なので、見た目だけで「過去形に戻った」とは判断できません。\n\n物語では、出来事を順に進めるなら過去形、その時点の途中の様子なら過去進行形、さらに前の経緯なら過去完了を使います。**どの時点を基準に話しているか**を追いながら読みましょう。',
+        },
+      ],
+      quiz: [
+        {
+          id: 'u18-l3-q1',
+          prompt: '空所に入る形を選んでください。',
+          sentence: 'When I woke up, the sun ___ and the birds were singing.',
+          sentenceJa: '目が覚めると、太陽が輝き、鳥がさえずっていました。',
+          choices: ['is shining', 'was shining', 'had shone', 'has shone'],
+          correctIndex: 1,
+          explanation: '目覚めた場面の背景として進行中だった様子なので、were singing と同じ過去進行形 was shining を使います。',
+          choiceNotes: ['過去の場面に現在進行形は使えません。', null, '目覚めより前に終わった出来事ではなく、そのとき続いていた背景です。', '現在完了は過去の場面の描写には使えません。'],
+          audioEn: 'When I woke up, the sun was shining and the birds were singing.',
+        },
+        {
+          id: 'u18-l3-q2',
+          prompt: '正しい文を選んでください。',
+          sentenceJa: '「皿を洗っている間に、電話が鳴りました」と言いたいとき。',
+          choices: [
+            'While I was washing the dishes, the phone rang.',
+            'While I was washing the dishes, the phone had rung.',
+            'While I had washed the dishes, the phone rang.',
+            'While I was washing the dishes, the phone rings.',
+          ],
+          correctIndex: 0,
+          explanation: 'while + 過去進行形(背景)の最中に起きた出来事は、過去形(rang)で表します。',
+          choiceNotes: [null, '鳴ったのは洗っている最中の出来事なので、さかのぼりの過去完了は合いません。', 'while のあとは進行中の動作(was washing)が自然です。過去完了では「〜している間に」の意味になりません。', '過去の場面に現在形 rings は混ぜられません。'],
+          audioEn: 'While I was washing the dishes, the phone rang.',
+        },
+        {
+          id: 'u18-l3-q3',
+          prompt: '時制の使い方に誤りがある文を選んでください。',
+          sentenceJa: '昨夜の帰宅を語る4つの文です。',
+          choices: [
+            'I got home late last night.',
+            'My family had already finished dinner.',
+            'My dog was sleeping on the sofa.',
+            'I made a sandwich and had gone to bed.',
+          ],
+          correctIndex: 3,
+          explanation: 'サンドイッチを作って寝た、という順番どおりの語りなので、made と同じ過去形で went to bed とします。had gone だと「作るより前にすでに寝ていた」という不自然なさかのぼりになります。',
+          choiceNotes: ['帰宅という出来事を過去形で語る、物語の基準です。', '帰宅より前に終わっていたことなので過去完了が正しく使えています。', '帰宅した場面の背景として過去進行形が適切です。', null],
+          audioEn: 'I made a sandwich and went to bed.',
+        },
+        {
+          id: 'u18-l3-q4',
+          prompt: 'この文から分かる状況として正しいものを選んでください。',
+          sentence: 'When Ken arrived at the party, most of the guests had left, and the host was cleaning the room.',
+          choices: [
+            'ケンが着く前に多くの客は帰っていて、着いたときは片づけの最中だった',
+            'ケンが着いたあとに多くの客が帰り、それから片づけが始まった',
+            'ケンが着いたとき、客は全員まだ残っていた',
+            '片づけがすべて終わったあとに、ケンが到着した',
+          ],
+          correctIndex: 0,
+          explanation: 'had left は到着より前に帰っていたこと、was cleaning は到着時に片づけが進行中だったことを表します。',
+          choiceNotes: [null, 'その順番なら most of the guests left, and the host started cleaning のように過去形で語ります。', 'had left は「すでに帰っていた」ことを表します。', 'was cleaning は片づけがまだ進行中だったことを表します。'],
+          audioEn: 'When Ken arrived at the party, most of the guests had left, and the host was cleaning the room.',
+        },
+      ],
+      summary: [
+        '過去形は物語を前に進め、過去進行形は背景を描き、過去完了は基準より前にさかのぼる。',
+        'while + 過去進行形(〜している間に)の最中に、過去形の出来事が割り込む。',
+        '一度過去完了でさかのぼれば、続く出来事は過去形に戻してよい。',
+        '「基準の過去より前かどうか」を意識して時制を選ぶ。',
+      ],
+    },
+  ],
+}

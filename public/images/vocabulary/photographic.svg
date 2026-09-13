@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="見たままがそのまま写る一枚">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1l8 4-8 4z" fill="#2f4055"/></marker></defs>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 306h600v94H0z" class="ground"/>
+  <g transform="translate(170 200)"><path d="M-100 66l64-90 44 46 40-52 60 96z" class="greenp o"/>
+  <circle cx="60" cy="-50" r="24" class="goldp o"/><g class="golds"><path d="M60 -88v-16" transform="rotate(0 60 -50)"/><path d="M60 -88v-16" transform="rotate(45 60 -50)"/><path d="M60 -88v-16" transform="rotate(90 60 -50)"/><path d="M60 -88v-16" transform="rotate(135 60 -50)"/><path d="M60 -88v-16" transform="rotate(180 60 -50)"/><path d="M60 -88v-16" transform="rotate(225 60 -50)"/><path d="M60 -88v-16" transform="rotate(270 60 -50)"/><path d="M60 -88v-16" transform="rotate(315 60 -50)"/></g></g>
+<g transform="translate(300 130)"><rect x="-56" y="-34" width="112" height="76" rx="10" class="teald o"/>
+  <circle cy="4" r="26" fill="#9fb3c0" class="o"/><circle cy="4" r="13" class="ink"/>
+  <rect x="-46" y="-46" width="34" height="14" rx="4" class="teal o"/></g>
+<path d="M300 190v40" class="a" marker-end="url(#ar)"/>
+<g transform="translate(440 300) rotate(6)"><rect x="-96" y="-116" width="192" height="232" rx="4" fill="#f7f3e8" class="o"/>
+  <rect x="-80" y="-100" width="160" height="160" class="greenp o"/>
+  <path d="M-80 60l52-70 34 36 32-40 42 74z" class="green o"/></g>
+</svg>

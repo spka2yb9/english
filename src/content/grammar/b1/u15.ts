@@ -1,0 +1,498 @@
+import type { GrammarUnit } from '../../types'
+
+// U15 条件文 — ゼロ・第1・第2条件文と if 以外の条件表現。
+// 軸は「その条件をどれくらい現実的と見ているか」。現実的(1型)vs 非現実的(2型)の対比を全体で貫く。
+
+export const u15: GrammarUnit = {
+  id: 'u15',
+  level: 'B1',
+  title: '条件文',
+  lessons: [
+    {
+      id: 'u15-l1',
+      unitId: 'u15',
+      level: 'B1',
+      title: 'ゼロ条件文と第1条件文',
+      objective: '「いつでも成り立つこと」はゼロ条件文で、「これから起こりうること」は第1条件文で表せるようになります。',
+      minutes: 10,
+      prereqs: ['u12-l3'],
+      blocks: [
+        {
+          type: 'explanation',
+          title: '条件文は「もし〜なら、…」の2つの部品',
+          body:
+            '条件文は **if節(もし〜なら)** と **主節(…だ / …する)** の2つの部品でできています。\n\n- **If it rains**, we will cancel the barbecue.\n\n英語の条件文で大事なのは、**その条件をどれくらい現実的と見ているかで動詞の形が変わる**ことです。このレッスンでは「現実的な話」をする2つの形——ゼロ条件文と第1条件文——を学びます。',
+        },
+        {
+          type: 'structure',
+          title: '第1条件文の形',
+          parts: [
+            { label: '条件(現在形)', text: 'If it rains tomorrow,' },
+            { label: '結果(will + 原形)', text: 'we will cancel the barbecue' },
+          ],
+          caption: 'U12で学んだとおり、if節の中は未来の話でも現在形です(× If it will rain)。if節を後ろに置く(We will cancel the barbecue if it rains tomorrow.)こともでき、その場合カンマは不要です。',
+        },
+        {
+          type: 'contrast',
+          title: 'ゼロ条件文 vs 第1条件文',
+          left: {
+            label: 'ゼロ条件文(いつでもそうなる)',
+            items: [
+              { en: 'If you press this button, the door opens.', ja: 'このボタンを押すと、ドアが開きます。', highlight: 'opens' },
+              { en: "If I drink coffee at night, I can't sleep.", ja: '夜にコーヒーを飲むと眠れなくなります。', highlight: "can't sleep" },
+            ],
+            pointJa: 'If + 現在形, 現在形。事実・習慣・ルールなど「毎回そうなる」こと',
+          },
+          right: {
+            label: '第1条件文(今回そうなる)',
+            items: [
+              { en: 'If it snows tonight, the roads will be dangerous.', ja: '今夜雪が降ったら、道路は危険になるでしょう。', highlight: 'will be' },
+              { en: "If you hurry, you'll catch the bus.", ja: '急げばバスに間に合いますよ。', highlight: "you'll catch" },
+            ],
+            pointJa: 'If + 現在形, will + 原形。これから起こりうる特定の1回の話',
+          },
+          note: 'if節はどちらも現在形。違いは主節です。現在形なら「いつでもそうなる」、will なら「(今回)そうなるだろう」という意味になります。',
+        },
+        {
+          type: 'examples',
+          title: '例文',
+          items: [
+            { en: 'If you heat ice, it melts.', ja: '氷は熱すると溶けます。', highlight: 'melts', note: 'いつでも成り立つ事実。ゼロ条件文です。' },
+            { en: 'If I miss the last train, I take a taxi.', ja: '終電を逃したときは(いつも)タクシーで帰ります。', note: '習慣もゼロ条件文で表せます。' },
+            { en: 'If it rains tomorrow, we will cancel the barbecue.', ja: '明日雨が降ったら、バーベキューは中止します。', highlight: 'rains', note: '未来の話でも if節の中は現在形です。' },
+            { en: "If you don't leave now, you'll miss your flight.", ja: '今出発しないと、飛行機に乗り遅れますよ。', highlight: "don't leave" },
+            { en: 'I will call you if the package arrives.', ja: '荷物が届いたら電話します。', note: 'if節を後ろに置く形。カンマは付けません。' },
+          ],
+        },
+        {
+          type: 'explanation',
+          title: '主節は will だけではない',
+          body:
+            '第1条件文の主節には、will のほかに **命令文** や **can / should などの助動詞** も使えます。\n\n- If you feel tired, **take** a break.(疲れたら休憩してください)\n- If you finish early, you **can** go home.(早く終わったら帰っていいですよ)\n\n変わらないルールはひとつだけ——**if節の中は現在形**。ここさえ守れば、主節は伝えたい内容に合わせて選べます。',
+        },
+      ],
+      quiz: [
+        {
+          id: 'u15-l1-q1',
+          prompt: '空所に入る形を選んでください。',
+          sentence: 'If it ___ this weekend, we will stay home.',
+          sentenceJa: '今週末雨が降ったら、家にいます。',
+          choices: ['rains', 'will rain', 'rained', 'is rain'],
+          correctIndex: 0,
+          explanation: '第1条件文の if節は、未来の話でも現在形を使います。主節の will が未来を表す役割を引き受けています。',
+          choiceNotes: [null, 'if節の中には will を入れません。未来でも現在形にします。', '過去形にすると「現実とは違う想像」(第2条件文)の響きになります。次のレッスンで学びます。', 'is rain という動詞の形はありません。'],
+          audioEn: 'If it rains this weekend, we will stay home.',
+        },
+        {
+          id: 'u15-l1-q2',
+          prompt: '「青と黄色を混ぜると緑になる」という一般的な事実として最も自然な文を選んでください。',
+          choices: [
+            'If you mix blue and yellow, you get green.',
+            'If you mix blue and yellow, you got green.',
+            'If you mixed blue and yellow, you get green.',
+            'If you will mix blue and yellow, you get green.',
+          ],
+          correctIndex: 0,
+          explanation: 'いつでも成り立つ事実はゼロ条件文で表します。if節・主節の両方を現在形にします。',
+          choiceNotes: [null, '主節を過去形にすると「毎回そうなる」という事実を表せません。', 'if節だけ過去形にすると時制がかみ合わず、事実の文になりません。', 'if節の中には will を入れません。'],
+          audioEn: 'If you mix blue and yellow, you get green.',
+        },
+        {
+          id: 'u15-l1-q3',
+          prompt: '正しい文を選んでください。',
+          sentenceJa: '「手伝いが必要になったら電話してね」と言いたいとき。',
+          choices: ['Call me if you need help.', 'Call me if you will need help.', 'Call me if you needed help.', "Call me if you don't need help."],
+          correctIndex: 0,
+          explanation: '主節が命令文(Call me)の第1条件文です。if節は未来のことでも現在形 need を使います。',
+          choiceNotes: [null, 'if節の中には will を入れません。', '過去形 needed にすると「現実とは違う想像」の響きになり、この場面に合いません。', "don't を入れると「必要ないなら電話して」という逆の意味になります。"],
+          audioEn: 'Call me if you need help.',
+        },
+        {
+          id: 'u15-l1-q4',
+          prompt: '次の文から分かることを選んでください。',
+          sentence: 'If the meeting finishes early, I will join you for dinner.',
+          choices: [
+            '会議が早く終わる可能性は実際にあると話し手は考えている。',
+            '会議は必ず早く終わると決まっている。',
+            '会議が早く終わることはありえないと話し手は考えている。',
+            '会議はすでに早く終わった。',
+          ],
+          correctIndex: 0,
+          explanation: '第1条件文(現在形 + will)は「これから起こりうること」を表します。話し手は早く終わる可能性が現実にあると見ています。',
+          choiceNotes: [null, '条件文なので「早く終わったら」という仮定の話です。確定はしていません。', '「ありえない想像」なら過去形 + would(第2条件文)を使うはずです。', '未来の話であり、すでに起きたことではありません。'],
+          audioEn: 'If the meeting finishes early, I will join you for dinner.',
+        },
+      ],
+      summary: [
+        '条件文は if節(条件)+ 主節(結果)。if節の中は未来の話でも現在形。',
+        'ゼロ条件文(If + 現在形, 現在形)は事実・習慣・ルールなど「いつでもそうなる」こと。',
+        '第1条件文(If + 現在形, will + 原形)は「これから起こりうる」特定の1回の話。',
+        '主節には will のほか、命令文や can / should なども使える。',
+      ],
+    },
+    {
+      id: 'u15-l2',
+      unitId: 'u15',
+      level: 'B1',
+      title: '第2条件文',
+      objective: '「もし〜だったら…なのに」という現実とは違う想像を、If + 過去形, would + 原形で表せるようになります。',
+      minutes: 12,
+      prereqs: ['u15-l1'],
+      blocks: [
+        {
+          type: 'explanation',
+          title: '過去形なのに過去の話ではない',
+          body:
+            '**If I had more time, I would learn the piano.**(もっと時間があったらピアノを習うのに)——この文は過去形 had を使っていますが、**過去の話ではありません**。「今、実際には時間がない」という現実と違う想像の話です。\n\nこれが第2条件文です。英語では、**過去形を「時間のズレ」ではなく「現実からのズレ」を表すためにも使います**。現実から一歩離れた想像だからこそ、動詞も一歩下がって過去形になる、とイメージしてください。',
+        },
+        {
+          type: 'structure',
+          title: '第2条件文の形',
+          parts: [
+            { label: '条件(過去形)', text: 'If I had more time,' },
+            { label: '結果(would + 原形)', text: 'I would learn the piano' },
+          ],
+          caption: '主節には would のほか、could(〜できるのに)や might(〜かもしれないのに)も使えます。',
+        },
+        {
+          type: 'explanation',
+          title: 'be動詞は were — If I were you',
+          body:
+            '第2条件文の if節では、be動詞は主語が I / he / she / it でも **were** を使うのが標準的な形です。\n\n- If I **were** you, I would take the job.(私があなたなら、その仕事を受けますね)\n- If she **were** here, she would know what to do.\n\n**If I were you, I would ...** は「私だったら〜するけどね」という**アドバイスの定番表現**です。会話では was も聞かれますが、まずは were を基本として身につけましょう。',
+        },
+        {
+          type: 'contrast',
+          title: '第1条件文 vs 第2条件文',
+          left: {
+            label: '第1条件文(ありうる話)',
+            items: [
+              { en: 'If I have time tomorrow, I will clean my room.', ja: '明日時間があれば部屋を掃除します。', highlight: 'have', note: '時間が取れる可能性は実際にあります。' },
+              { en: 'If she studies hard, she will pass the exam.', ja: '一生懸命勉強すれば、彼女は試験に受かるでしょう。', highlight: 'studies' },
+            ],
+            pointJa: 'If + 現在形, will + 原形。現実に起こりうると見ている',
+          },
+          right: {
+            label: '第2条件文(現実と違う想像)',
+            items: [
+              { en: 'If I had time, I would clean my room.', ja: '時間があれば部屋を掃除するのですが。', highlight: 'had', note: '実際には時間がありません。' },
+              { en: 'If I were a bird, I would fly to you.', ja: 'もし私が鳥だったら、あなたのところへ飛んでいくのに。', highlight: 'were' },
+            ],
+            pointJa: 'If + 過去形, would + 原形。現実と違う・まず起きないと見ている',
+          },
+          note: '形の違いは「可能性の見方」の違いです。過去形にするほど、話は現実から遠ざかります。',
+        },
+        {
+          type: 'examples',
+          title: '例文',
+          items: [
+            { en: 'If I had more money, I would travel around the world.', ja: 'もっとお金があったら世界一周するのですが。', highlight: 'would travel', note: '実際にはそのお金がありません。' },
+            { en: 'If I were you, I would see a doctor.', ja: '私だったら医者に診てもらいますね。', highlight: 'were', note: 'アドバイスの定番表現です。' },
+            { en: 'If we lived closer, we would see each other more often.', ja: 'もっと近くに住んでいたら、もっと頻繁に会えるのに。', highlight: 'lived' },
+            { en: "She would be happier if she didn't work so much.", ja: 'そんなに働かなければ、彼女はもっと幸せだろうに。', highlight: "didn't work", note: 'if節を後ろに置く形。否定は didn\'t + 原形です。' },
+            { en: 'If I could speak Chinese, I would work in Shanghai.', ja: '中国語が話せたら、上海で働くのですが。', highlight: 'could speak', note: '「〜できたら」は if節に could を使います。' },
+          ],
+        },
+      ],
+      quiz: [
+        {
+          id: 'u15-l2-q1',
+          prompt: '空所に入る形を選んでください。',
+          sentence: 'If I ___ you, I would apologize first.',
+          sentenceJa: '私があなたなら、まず謝りますね。',
+          choices: ['were', 'am', 'will be', 'would be'],
+          correctIndex: 0,
+          explanation: '「私があなたなら」は現実と違う想像なので第2条件文です。if節のbe動詞は主語が I でも were を使います。',
+          choiceNotes: [null, '現在形 am では「現実と違う想像」を表せません。第2条件文の if節は過去形です。', 'if節の中には will を入れません。', 'would は主節で使う語で、if節の中には置きません。'],
+          audioEn: 'If I were you, I would apologize first.',
+        },
+        {
+          id: 'u15-l2-q2',
+          prompt: '空所に入る形を選んでください。',
+          sentence: 'If we ___ a garden, we would grow tomatoes.',
+          sentenceJa: '庭があったらトマトを育てるのですが(実際は庭がありません)。',
+          choices: ['had', 'have', 'would have', 'will have'],
+          correctIndex: 0,
+          explanation: '主節の would grow から、現実と違う想像(第2条件文)だと分かります。if節は過去形 had にします。',
+          choiceNotes: [null, '現在形 have だと第1条件文になり、主節の would とかみ合いません。', 'would は主節側で使います。if節の中には置きません。', 'if節の中には will を入れません。'],
+          audioEn: 'If we had a garden, we would grow tomatoes.',
+        },
+        {
+          id: 'u15-l2-q3',
+          prompt: '次の文から分かることを選んでください。',
+          sentence: 'If Ken had a car, he would drive us to the lake.',
+          choices: ['ケンは車を持っていない。', 'ケンは車を持っている。', 'ケンは昔、車を持っていた。', 'ケンは私たちを湖まで乗せていく予定だ。'],
+          correctIndex: 0,
+          explanation: '第2条件文は「現実と違う想像」を表します。「車があったら乗せていくのに」ということは、実際には車を持っていません。',
+          choiceNotes: [null, '持っているなら想像で語る必要がなく、この形は使いません。', 'had は過去形ですが、ここでは過去の話ではなく「今の現実とのズレ」を表しています。', 'would は「(もし〜なら)…するだろうに」という想像で、実際の予定ではありません。'],
+          audioEn: 'If Ken had a car, he would drive us to the lake.',
+        },
+        {
+          id: 'u15-l2-q4',
+          prompt: '正しい文を選んでください。',
+          sentenceJa: '「彼がここにいたら、何と言うでしょうね(実際はいません)」と言いたいとき。',
+          choices: [
+            'If he were here, what would he say?',
+            'If he is here, what would he say?',
+            'If he were here, what will he say?',
+            'If he would be here, what would he say?',
+          ],
+          correctIndex: 0,
+          explanation: '現実と違う想像なので第2条件文です。if節は were、主節は would を使います。',
+          choiceNotes: [null, '現在形 is は「実際にいるかもしれない」という現実的な条件になり、主節の would とかみ合いません。', '現実と違う想像の主節には will ではなく would を使います。', 'would は主節で使う語です。if節の中には置きません。'],
+          audioEn: 'If he were here, what would he say?',
+        },
+      ],
+      summary: [
+        '第2条件文(If + 過去形, would + 原形)は「現実と違うこと・まず起きないこと」の想像を表す。',
+        '過去形は過去の話ではなく「現実からのズレ」のしるし。',
+        'if節のbe動詞は主語にかかわらず were。If I were you, I would ... はアドバイスの定番。',
+        '主節には would のほか could(〜できるのに)/ might(〜かもしれないのに)も使える。',
+      ],
+    },
+    {
+      id: 'u15-l3',
+      unitId: 'u15',
+      level: 'B1',
+      title: 'unless / in case / as long as',
+      objective: 'if 以外の条件表現 unless(〜しない限り)・in case(〜に備えて)・as long as(〜しさえすれば)を意味の違いに応じて使い分けられるようになります。',
+      minutes: 10,
+      prereqs: ['u15-l2'],
+      blocks: [
+        {
+          type: 'explanation',
+          title: '条件を表すのは if だけではない',
+          body:
+            '「チケットが**ない限り**入れません」「雨に**備えて**傘を持っていこう」「静かにしてくれる**なら**いていいよ」——日本語でも条件の言い方はいろいろあります。英語も同じで、if のほかに3つの表現をよく使います。\n\n- **unless**: 〜しない限り(if ... not を1語で言う形)\n- **in case**: 〜する場合に備えて\n- **as long as**: 〜しさえすれば・〜という条件で\n\nどれも if と同じ仲間なので、**節の中は未来の話でも現在形**です(will を入れません)。',
+        },
+        {
+          type: 'table',
+          title: '3つの表現の整理',
+          headers: ['表現', '意味', '例'],
+          rows: [
+            ['unless', '〜しない限り(= if ... not)', "Unless you hurry, you'll miss the bus."],
+            ['in case', '〜する場合に備えて', 'Take an umbrella in case it rains.'],
+            ['as long as', '〜しさえすれば・〜という条件で', 'You can stay here as long as you keep quiet.'],
+          ],
+        },
+        {
+          type: 'contrast',
+          title: 'if vs in case',
+          left: {
+            label: 'if(起こったら、そのときする)',
+            items: [
+              { en: "I'll call a taxi if it rains.", ja: '雨が降ったらタクシーを呼びます。', highlight: 'if', note: '行動するのは雨が降ったあとです。' },
+              { en: "I'll take medicine if I feel sick.", ja: '気分が悪くなったら薬を飲みます。', highlight: 'if' },
+            ],
+            pointJa: '条件が起きてから行動する',
+          },
+          right: {
+            label: 'in case(起こる前に、備えておく)',
+            items: [
+              { en: "I'll take some cash in case the shop doesn't accept cards.", ja: '店でカードが使えないといけないので、現金を持っていきます。', highlight: 'in case', note: '現金を持つのは出かける前。カードが使えるかはまだ分かりません。' },
+              { en: 'Take some medicine in case you feel sick.', ja: '気分が悪くなったときのために薬を持っていきなさい。', highlight: 'in case' },
+            ],
+            pointJa: '条件が起きる前に、念のため行動しておく',
+          },
+          note: 'in case の文では、備えの行動は「起こる前」にします。実際に起こるかどうかは分からないまま備えるのがポイントです。',
+        },
+        {
+          type: 'examples',
+          title: '例文',
+          items: [
+            { en: "Unless you have a ticket, you can't get in.", ja: 'チケットがない限り、中には入れません。', highlight: 'Unless' },
+            { en: "I won't go unless you come with me.", ja: 'あなたが一緒に来てくれないなら行きません。', highlight: 'unless', note: 'unless節は文の後ろにも置けます。' },
+            { en: "You'll be fine as long as you follow the instructions.", ja: '指示に従ってさえいれば大丈夫ですよ。', highlight: 'as long as' },
+            { en: 'We can sit outside as long as it stays warm.', ja: '暖かいうちは外に座っていられますね。', highlight: 'as long as' },
+            { en: 'Write down the address in case you forget it.', ja: '忘れたときのために住所をメモしておきなさい。', highlight: 'in case' },
+          ],
+        },
+        {
+          type: 'explanation',
+          title: 'unless の注意点',
+          body:
+            'unless は **それ自体が「〜しない」という否定を含む**ので、節の中で not を重ねません。\n\n- Unless you hurry, ...(急がない限り)\n- × Unless you **don\'t** hurry, ...(否定が二重になってしまう)\n\nまた、unless は「**それだけが唯一の例外**」と言いたいときの表現です。「急ぐ、という場合を除けば → バスを逃す」のように、if ... not で言い換えられるか確認すると使いどころを間違えません。',
+        },
+      ],
+      quiz: [
+        {
+          id: 'u15-l3-q1',
+          prompt: '空所に入る表現を選んでください。',
+          sentence: "You can't use the pool ___ you are a hotel guest.",
+          sentenceJa: 'ホテルの宿泊客でない限り、プールは使えません。',
+          choices: ['unless', 'if', 'in case', 'as long as'],
+          correctIndex: 0,
+          explanation: '「〜でない限り」は unless で表します。unless you are a hotel guest = if you are not a hotel guest です。',
+          choiceNotes: [null, 'if だと「宿泊客ならプールを使えない」という逆の意味になってしまいます。', 'in case は「〜に備えて」という意味で、この文には合いません。', 'as long as だと「宿泊客である限り使えない」という逆の意味になります。'],
+          audioEn: "You can't use the pool unless you are a hotel guest.",
+        },
+        {
+          id: 'u15-l3-q2',
+          prompt: '次の文の意味として正しいものを選んでください。',
+          sentence: 'Take a jacket in case it gets cold.',
+          choices: [
+            '寒くなったときに備えて、上着を持っていきなさい。',
+            '寒くなったら、上着を取りに戻りなさい。',
+            '寒くない限り、上着を持っていきなさい。',
+            'もう寒くなったので、上着を持っていきなさい。',
+          ],
+          correctIndex: 0,
+          explanation: 'in case は「〜する場合に備えて」。寒くなるかどうかは分からないまま、前もって上着を持っていく、という意味です。',
+          choiceNotes: [null, '「起こったら行動する」は if の意味です。in case は起こる前に備えます。', '「〜しない限り」は unless の意味です。', 'in case は「すでに起きたこと」ではなく、これから起こるかもしれないことへの備えです。'],
+          audioEn: 'Take a jacket in case it gets cold.',
+        },
+        {
+          id: 'u15-l3-q3',
+          prompt: '正しい文を選んでください。',
+          sentenceJa: '「急がない限り、終電を逃しますよ」と言いたいとき。',
+          choices: [
+            "Unless you hurry, you'll miss the last train.",
+            "Unless you don't hurry, you'll miss the last train.",
+            "Unless you will hurry, you'll miss the last train.",
+            "If you hurry, you'll miss the last train.",
+          ],
+          correctIndex: 0,
+          explanation: 'unless 自体が「〜しない」という否定を含むので、節の中の動詞は肯定形 hurry のままにします。',
+          choiceNotes: [null, "unless と don't で否定が二重になり、「急がないことをしない限り」という意味の通らない文になります。", 'unless の節の中には will を入れません。if と同じルールです。', 'if だと「急いだら逃す」という逆の意味になってしまいます。'],
+          audioEn: "Unless you hurry, you'll miss the last train.",
+        },
+        {
+          id: 'u15-l3-q4',
+          prompt: '空所に入る表現を選んでください。',
+          sentence: 'You can borrow my camera ___ you are careful with it.',
+          sentenceJa: '丁寧に扱ってくれるなら、カメラを貸してあげますよ。',
+          choices: ['as long as', 'unless', 'in case', 'so that'],
+          correctIndex: 0,
+          explanation: '「〜という条件を満たしていれば」は as long as で表します。「丁寧に扱う」という条件付きの許可です。',
+          choiceNotes: [null, 'unless だと「丁寧に扱わない限り貸す」という逆の意味になります。', 'in case は「〜に備えて」という意味で、条件付きの許可には使えません。', 'so that は「〜するために」という目的を表す表現で、条件ではありません。'],
+          audioEn: 'You can borrow my camera as long as you are careful with it.',
+        },
+      ],
+      summary: [
+        'unless は「〜しない限り」(= if ... not)。節の中で not を重ねない。',
+        'in case は「〜する場合に備えて」。if(起こったらする)と違い、起こる前に備えておく。',
+        'as long as は「〜しさえすれば・〜という条件で」。条件付きの許可・保証によく使う。',
+        'どの表現も if と同じく、節の中は未来の話でも現在形。',
+      ],
+    },
+    {
+      id: 'u15-l4',
+      unitId: 'u15',
+      level: 'B1',
+      title: '条件文 練習(1型 vs 2型)',
+      objective: '状況が現実的か仮定的かを文脈から判断し、第1条件文と第2条件文を正しく選べるようになります。',
+      minutes: 10,
+      prereqs: ['u15-l3'],
+      blocks: [
+        {
+          type: 'explanation',
+          title: '文法の問題ではなく「見方」の問題',
+          body:
+            '第1条件文と第2条件文の選択は、どちらが文法的に正しいかという問題ではありません。**話し手がその条件をどう見ているか**の問題です。\n\n- 「実際に起こりうる」と見ている → **第1条件文**(現在形 + will)\n- 「現実と違う・まず起きない」と見ている → **第2条件文**(過去形 + would)\n\n問題を解くときは、動詞の形を見る前に「この人はこの条件を本気でありうると思っているか?」と考えるのが近道です。',
+        },
+        {
+          type: 'contrast',
+          title: '現実的(1型)vs 非現実的(2型)',
+          left: {
+            label: '第1条件文(本気の計画・予測)',
+            items: [
+              { en: 'If I get the job, I will move to Nagoya.', ja: 'その仕事に就けたら、名古屋に引っ越します。', highlight: 'get', note: '選考結果を待っている人の言葉。実際にありうる話です。' },
+              { en: 'If the bus is late, we will take the train.', ja: 'バスが遅れたら電車で行きましょう。', highlight: 'is' },
+            ],
+            pointJa: '現在形 + will。起こりうる未来への現実的な備え・計画',
+          },
+          right: {
+            label: '第2条件文(ただの想像)',
+            items: [
+              { en: 'If I got a job like that, I would move anywhere.', ja: 'そんな仕事に就けたら、どこへでも引っ越すんですけどね。', highlight: 'got', note: '今の自分には縁がない、という想像の話です。' },
+              { en: 'If I were the mayor, I would build more parks.', ja: 'もし私が市長なら、公園をもっと作るのに。', highlight: 'were' },
+            ],
+            pointJa: '過去形 + would。現実とは違う世界の想像',
+          },
+          note: '同じ「もし〜なら」でも、動詞の形で「本気の計画」か「ただの想像」かが相手に伝わります。',
+        },
+        {
+          type: 'table',
+          title: '3つの型の整理',
+          headers: ['型', 'if節', '主節', '使う場面'],
+          rows: [
+            ['ゼロ条件文', '現在形', '現在形', 'いつでも成り立つ事実・習慣'],
+            ['第1条件文', '現在形', 'will + 原形', 'これから起こりうること'],
+            ['第2条件文', '過去形', 'would + 原形', '現実と違うこと・まず起きないこと'],
+          ],
+        },
+        {
+          type: 'examples',
+          title: '例文(型を判断しながら)',
+          items: [
+            { en: 'If it snows tonight, the trains will probably stop.', ja: '今夜雪が降ったら、電車はたぶん止まるでしょう。', highlight: 'will probably stop', note: '雪は実際にありうるので第1条件文。' },
+            { en: 'If I won the lottery, I would quit my job.', ja: '宝くじが当たったら仕事を辞めるんだけどな。', highlight: 'would quit', note: 'まず当たらないと思っているので第2条件文。' },
+            { en: "If you leave now, you'll be home by nine.", ja: '今出れば9時までに家に着きますよ。', highlight: 'leave', note: '目の前の現実的な話なので第1条件文。' },
+            { en: 'If I knew her number, I would call her right now.', ja: '彼女の番号を知っていたら、今すぐ電話するのですが。', highlight: 'knew', note: '実際には知らないので第2条件文。' },
+            { en: 'If our apartment had a balcony, we would grow vegetables.', ja: 'うちのアパートにベランダがあったら、野菜を育てるのに。', highlight: 'had', note: '実際にはないので第2条件文。' },
+          ],
+        },
+        {
+          type: 'explanation',
+          title: '同じ話題でも、選ぶのは話し手',
+          body:
+            '同じ未来の話でも、どちらの型も使えます。伝わる「本気度」が変わるだけです。\n\n- If I **have** time this weekend, I **will** visit my grandmother.(行けそうだと思っている)\n- If I **had** time this weekend, I **would** visit my grandmother.(たぶん無理だと思っている)\n\nどちらも文法的に正しい文です。だからこそ、聞き手は動詞の形からあなたの気持ちを読み取ります。「ありうる話なのか、残念な想像なのか」——伝えたい方に合わせて型を選びましょう。',
+        },
+      ],
+      quiz: [
+        {
+          id: 'u15-l4-q1',
+          prompt: '空所に入る形を選んでください。',
+          sentence: 'The sky is getting dark. If it starts raining, we ___ inside.',
+          sentenceJa: '空が暗くなってきました。雨が降り出したら中に入りましょう。',
+          choices: ['will go', 'would go', 'went', 'going'],
+          correctIndex: 0,
+          explanation: '空が暗くなっていて、雨は実際に降りそうです。現実的にありうる条件なので第1条件文(現在形 + will)を使います。',
+          choiceNotes: [null, 'would だと「まず降らないだろうけど」という想像の話になり、目の前の状況と合いません。', '過去形では未来の行動を表せません。', 'going だけでは動詞になりません。'],
+          audioEn: 'The sky is getting dark. If it starts raining, we will go inside.',
+        },
+        {
+          id: 'u15-l4-q2',
+          prompt: '空所に入る形を選んでください。',
+          sentence: "I'm so busy these days. If I ___ more free time, I would take a cooking class.",
+          sentenceJa: '最近とても忙しいんです。もっと自由な時間があったら、料理教室に通うのですが。',
+          choices: ['had', 'have', 'will have', 'would have'],
+          correctIndex: 0,
+          explanation: '「実際には忙しくて時間がない」という現実と違う想像なので第2条件文です。主節の would ともかみ合う過去形 had を選びます。',
+          choiceNotes: [null, '現在形 have だと第1条件文になり、主節の would とかみ合いません。', 'if節の中には will を入れません。', 'would は主節側で使います。if節の中には置きません。'],
+          audioEn: "I'm so busy these days. If I had more free time, I would take a cooking class.",
+        },
+        {
+          id: 'u15-l4-q3',
+          prompt: '次の文を言った人について正しいものを選んでください。',
+          sentence: 'If I lived in Okinawa, I would go to the beach every morning.',
+          choices: ['沖縄には住んでいない。', '沖縄に住んでいる。', '来月、沖縄に引っ越す予定がある。', '毎朝ビーチに行っている。'],
+          correctIndex: 0,
+          explanation: '過去形 + would の第2条件文は「現実と違う想像」です。「沖縄に住んでいたら」と想像しているので、実際には住んでいません。',
+          choiceNotes: [null, '住んでいるなら想像で語る必要がありません。', '実際に引っ越す予定があるなら、第1条件文(If I move ..., I will ...)などで現実の計画として話すはずです。', '「行くのに」という想像であり、実際の習慣ではありません。'],
+          audioEn: 'If I lived in Okinawa, I would go to the beach every morning.',
+        },
+        {
+          id: 'u15-l4-q4',
+          prompt: '状況に合う文を選んでください。',
+          sentenceJa: '来週の試験に向けて勉強中の学生が、「合格したら友達とお祝いするんだ」と前向きに言うとき。',
+          choices: [
+            'If I pass the exam, I will celebrate with my friends.',
+            'If I passed the exam, I would celebrate with my friends.',
+            'If I pass the exam, I would celebrate with my friends.',
+            'If I will pass the exam, I will celebrate with my friends.',
+          ],
+          correctIndex: 0,
+          explanation: '実際に受験して合格を目指している人の言葉なので、現実的な条件として第1条件文(現在形 + will)を使います。',
+          choiceNotes: [null, '第2条件文だと「どうせ受からないだろうけど」という響きになり、前向きな発言に合いません。', '現在形の if節と would の主節は型がそろっていません。', 'if節の中には will を入れません。'],
+          audioEn: 'If I pass the exam, I will celebrate with my friends.',
+        },
+      ],
+      summary: [
+        '1型か2型かは文法の正誤ではなく、話し手が条件を「ありうる」と見るか「現実と違う」と見るかで決まる。',
+        'ありうる話 → 第1条件文(現在形 + will)。現実と違う想像 → 第2条件文(過去形 + would)。',
+        '同じ話題でもどちらの型も使え、選んだ型が「本気度」を相手に伝える。',
+        '迷ったら「この人はこの条件を本気でありうると思っているか?」と文脈に問いかける。',
+      ],
+    },
+  ],
+}

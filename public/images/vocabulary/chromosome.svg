@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="中央がくびれたX字形の染色体が並んでいる">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 0h600v400H0z" fill="#eef4f8"/>
+<g>
+<g transform="translate(110 130) scale(1.0)">
+  <path d="M-46-90q26 0 34 26l14 46-14 46q-8 26-34 26-16 0-16-18l24-54-24-54q0-18 16-18z"
+        fill="#816eb2" class="o"/>
+  <path d="M46-90q-26 0-34 26L-2-18l14 46q8 26 34 26 16 0 16-18L38-18l24-54q0-18-16-18z"
+        fill="#816eb2" class="o"/>
+  <ellipse cy="-18" rx="20" ry="13" fill="#5f4d91" class="o"/>
+</g><g transform="translate(240 130) scale(0.9)">
+  <path d="M-46-90q26 0 34 26l14 46-14 46q-8 26-34 26-16 0-16-18l24-54-24-54q0-18 16-18z"
+        fill="#238b83" class="o"/>
+  <path d="M46-90q-26 0-34 26L-2-18l14 46q8 26 34 26 16 0 16-18L38-18l24-54q0-18-16-18z"
+        fill="#238b83" class="o"/>
+  <ellipse cy="-18" rx="20" ry="13" fill="#176a66" class="o"/>
+</g><g transform="translate(370 130) scale(0.8)">
+  <path d="M-46-90q26 0 34 26l14 46-14 46q-8 26-34 26-16 0-16-18l24-54-24-54q0-18 16-18z"
+        fill="#e86452" class="o"/>
+  <path d="M46-90q-26 0-34 26L-2-18l14 46q8 26 34 26 16 0 16-18L38-18l24-54q0-18-16-18z"
+        fill="#e86452" class="o"/>
+  <ellipse cy="-18" rx="20" ry="13" fill="#b74338" class="o"/>
+</g><g transform="translate(500 130) scale(1.0)">
+  <path d="M-46-90q26 0 34 26l14 46-14 46q-8 26-34 26-16 0-16-18l24-54-24-54q0-18 16-18z"
+        fill="#d99a2b" class="o"/>
+  <path d="M46-90q-26 0-34 26L-2-18l14 46q8 26 34 26 16 0 16-18L38-18l24-54q0-18-16-18z"
+        fill="#d99a2b" class="o"/>
+  <ellipse cy="-18" rx="20" ry="13" fill="#a66b15" class="o"/>
+</g><g transform="translate(110 280) scale(0.9)">
+  <path d="M-46-90q26 0 34 26l14 46-14 46q-8 26-34 26-16 0-16-18l24-54-24-54q0-18 16-18z"
+        fill="#816eb2" class="o"/>
+  <path d="M46-90q-26 0-34 26L-2-18l14 46q8 26 34 26 16 0 16-18L38-18l24-54q0-18-16-18z"
+        fill="#816eb2" class="o"/>
+  <ellipse cy="-18" rx="20" ry="13" fill="#5f4d91" class="o"/>
+</g><g transform="translate(240 280) scale(0.8)">
+  <path d="M-46-90q26 0 34 26l14 46-14 46q-8 26-34 26-16 0-16-18l24-54-24-54q0-18 16-18z"
+        fill="#238b83" class="o"/>
+  <path d="M46-90q-26 0-34 26L-2-18l14 46q8 26 34 26 16 0 16-18L38-18l24-54q0-18-16-18z"
+        fill="#238b83" class="o"/>
+  <ellipse cy="-18" rx="20" ry="13" fill="#176a66" class="o"/>
+</g><g transform="translate(370 280) scale(1.0)">
+  <path d="M-46-90q26 0 34 26l14 46-14 46q-8 26-34 26-16 0-16-18l24-54-24-54q0-18 16-18z"
+        fill="#e86452" class="o"/>
+  <path d="M46-90q-26 0-34 26L-2-18l14 46q8 26 34 26 16 0 16-18L38-18l24-54q0-18-16-18z"
+        fill="#e86452" class="o"/>
+  <ellipse cy="-18" rx="20" ry="13" fill="#b74338" class="o"/>
+</g><g transform="translate(500 280) scale(0.9)">
+  <path d="M-46-90q26 0 34 26l14 46-14 46q-8 26-34 26-16 0-16-18l24-54-24-54q0-18 16-18z"
+        fill="#d99a2b" class="o"/>
+  <path d="M46-90q-26 0-34 26L-2-18l14 46q8 26 34 26 16 0 16-18L38-18l24-54q0-18-16-18z"
+        fill="#d99a2b" class="o"/>
+  <ellipse cy="-18" rx="20" ry="13" fill="#a66b15" class="o"/>
+</g>
+</g>
+<g transform="translate(500 320)">
+  <circle r="66" fill="none" stroke="#2f4055" stroke-width="9"/>
+  <path d="M48 48l44 44" stroke="#2f4055" stroke-width="12" stroke-linecap="round" fill="none"/>
+</g>
+</svg>

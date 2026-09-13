@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="運転席の前に計器が並んだダッシュボード">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 0h600v400H0z" fill="#3b4450"/>
+<path d="M0 0h600v130H0z" fill="#dceaf4"/>
+<path d="M0 130h600v40H0z" fill="#5a6270" class="o"/>
+<g transform="translate(300 260)">
+  <path d="M-290-90h580v190h-580z" fill="#4a5560" class="o"/>
+  <circle cx="-110" cy="-10" r="66" fill="#2c333d" class="o"/>
+  <circle cx="60" cy="-10" r="54" fill="#2c333d" class="o"/>
+  <g fill="none" stroke="#fff0c5" stroke-width="3">
+<path d="M-147 27l-7 7"/><path d="M-158 10l-9 4"/><path d="M-162 -10l-10 0"/><path d="M-158 -30l-9 -4"/><path d="M-147 -47l-7 -7"/><path d="M-130 -58l-4 -9"/><path d="M-110 -62l-0 -10"/><path d="M-90 -58l4 -9"/><path d="M-73 -47l7 -7"/><path d="M-62 -30l9 -4"/><path d="M-58 -10l10 -0"/>
+<path d="M30 20l-6 6"/><path d="M19 1l-9 2"/><path d="M19 -21l-9 -2"/><path d="M30 -40l-6 -6"/><path d="M49 -51l-2 -9"/><path d="M71 -51l2 -9"/><path d="M90 -40l6 -6"/><path d="M101 -21l9 -2"/><path d="M100 1l9 2"/>
+  </g>
+  <path d="M-110-10l30-42" stroke="#e86452" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M60-10l-26-34" stroke="#e86452" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M150-50h120v70H150z" fill="#2c333d" class="o"/>
+  <g fill="#4e986a"><rect x="164" y="-36" width="14" height="42"/><rect x="186" y="-24" width="14" height="30"/><rect x="208" y="-40" width="14" height="46"/></g>
+  <g fill="#2c333d" class="o"><circle cx="-230" cy="20" r="24"/><circle cx="-170" cy="20" r="24"/></g>
+</g>
+<g transform="translate(140 300)">
+  <circle r="70" fill="none" stroke="#2f4055" stroke-width="18"/>
+  <path d="M-60 10h120M0 10v50" stroke="#2f4055" stroke-width="12" fill="none"/>
+</g>
+</svg>

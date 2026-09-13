@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="玄関の前に敷かれた厚い毛の敷物で、靴の底をぬぐう">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 306h600v94H0z" class="ground"/>
+  <g transform="translate(300 380)">
+  <path d="M-120-320h240v300h-240z" fill="#e8ddc9" class="o"/>
+  <path d="M-96-296h192v276h-192z" class="teal o"/>
+  <circle cx="66" cy="-160" r="10" class="goldp o"/></g>
+<g transform="translate(300 350) rotate(-2)">
+  <path d="M-130-32h260v64h-260z" fill="#9a7a4a" class="o"/>
+  <path d="M-110-18h220v36h-220z" fill="none" stroke="#7a5c34" stroke-width="4"/>
+  <path d="M-120 -32v64" stroke="#7a5c34" stroke-width="2" fill="none"/><path d="M-96 -32v64" stroke="#7a5c34" stroke-width="2" fill="none"/><path d="M-72 -32v64" stroke="#7a5c34" stroke-width="2" fill="none"/><path d="M-48 -32v64" stroke="#7a5c34" stroke-width="2" fill="none"/><path d="M-24 -32v64" stroke="#7a5c34" stroke-width="2" fill="none"/><path d="M0 -32v64" stroke="#7a5c34" stroke-width="2" fill="none"/><path d="M24 -32v64" stroke="#7a5c34" stroke-width="2" fill="none"/><path d="M48 -32v64" stroke="#7a5c34" stroke-width="2" fill="none"/><path d="M72 -32v64" stroke="#7a5c34" stroke-width="2" fill="none"/><path d="M96 -32v64" stroke="#7a5c34" stroke-width="2" fill="none"/><path d="M120 -32v64" stroke="#7a5c34" stroke-width="2" fill="none"/></g>
+<g transform="translate(300 300)"><path d="M-40 20q0-40 34-40h18l30 24v16z" fill="#2f4055"/></g>
+</svg>

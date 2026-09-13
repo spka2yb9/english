@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="厚切りの肉が皿にのり、一部が切られている">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <ellipse cx="300" cy="240" rx="190" ry="62" fill="#fffefd" class="o"/>
+<g transform="translate(280 226)">
+  <path d="M-110 22q-14-56 30-72 46-16 110-6 56 10 52 46-4 34-64 42-72 8-128-10z" fill="#8f4436" class="o"/>
+  <path d="M-88 12q-8-38 26-50 36-12 88-4 44 8 40 30-4 22-52 28-58 6-102-4z" fill="#b05a48"/>
+</g>
+<g transform="translate(386 250) rotate(12)">
+  <path d="M-38-16q30-14 64 0-12 22-64 20z" fill="#8f4436" class="o"/>
+  <path d="M-30-10q26-10 52 0-10 14-52 12z" fill="#c96f5a"/>
+</g>
+<g stroke="#80909d" stroke-width="6" stroke-linecap="round" fill="none">
+  <path d="M448 176l40-40"/>
+</g>
+<path d="M460 190l50-48-8-10-52 44z" fill="#cfd6dd" class="o"/>
+</svg>

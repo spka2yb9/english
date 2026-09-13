@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="12マスの年の帯の4つ目が塗られ、花の咲いた木と小雨の景色になる">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 306h600v94H0z" class="ground"/>
+  <path d="M0 250h600v70H0z" class="greenp"/>
+<g transform="translate(180 250) scale(1.0)"><path d="M-9 0v-60h18V0z" class="goldd"/><circle cx="-26" cy="-76" r="30" class="coralp o"/><circle cx="24" cy="-84" r="34" class="coralp o"/><circle cx="0" cy="-108" r="28" class="coralp o"/></g>
+<path d="M330 70l-10 22" fill="none" stroke="#4e86c6" stroke-width="4" stroke-linecap="round"/><path d="M370 104l-10 22" fill="none" stroke="#4e86c6" stroke-width="4" stroke-linecap="round"/><path d="M410 138l-10 22" fill="none" stroke="#4e86c6" stroke-width="4" stroke-linecap="round"/><path d="M450 70l-10 22" fill="none" stroke="#4e86c6" stroke-width="4" stroke-linecap="round"/><path d="M490 104l-10 22" fill="none" stroke="#4e86c6" stroke-width="4" stroke-linecap="round"/><path d="M530 138l-10 22" fill="none" stroke="#4e86c6" stroke-width="4" stroke-linecap="round"/><path d="M570 70l-10 22" fill="none" stroke="#4e86c6" stroke-width="4" stroke-linecap="round"/>
+<circle cx="500" cy="90" r="34" class="goldp o"/><g class="golds"><path d="M500 42v-16" transform="rotate(0 500 90)"/><path d="M500 42v-16" transform="rotate(45 500 90)"/><path d="M500 42v-16" transform="rotate(90 500 90)"/><path d="M500 42v-16" transform="rotate(135 500 90)"/><path d="M500 42v-16" transform="rotate(180 500 90)"/><path d="M500 42v-16" transform="rotate(225 500 90)"/><path d="M500 42v-16" transform="rotate(270 500 90)"/><path d="M500 42v-16" transform="rotate(315 500 90)"/></g>
+<rect x="40" y="330" width="38" height="38" rx="5" fill="#fffefd" stroke="#2f4055" stroke-width="2.5"/><rect x="84" y="330" width="38" height="38" rx="5" fill="#fffefd" stroke="#2f4055" stroke-width="2.5"/><rect x="128" y="330" width="38" height="38" rx="5" fill="#fffefd" stroke="#2f4055" stroke-width="2.5"/><rect x="172" y="330" width="38" height="38" rx="5" fill="#e86452" stroke="#2f4055" stroke-width="2.5"/><rect x="216" y="330" width="38" height="38" rx="5" fill="#fffefd" stroke="#2f4055" stroke-width="2.5"/><rect x="260" y="330" width="38" height="38" rx="5" fill="#fffefd" stroke="#2f4055" stroke-width="2.5"/><rect x="304" y="330" width="38" height="38" rx="5" fill="#fffefd" stroke="#2f4055" stroke-width="2.5"/><rect x="348" y="330" width="38" height="38" rx="5" fill="#fffefd" stroke="#2f4055" stroke-width="2.5"/><rect x="392" y="330" width="38" height="38" rx="5" fill="#fffefd" stroke="#2f4055" stroke-width="2.5"/><rect x="436" y="330" width="38" height="38" rx="5" fill="#fffefd" stroke="#2f4055" stroke-width="2.5"/><rect x="480" y="330" width="38" height="38" rx="5" fill="#fffefd" stroke="#2f4055" stroke-width="2.5"/><rect x="524" y="330" width="38" height="38" rx="5" fill="#fffefd" stroke="#2f4055" stroke-width="2.5"/>
+</svg>

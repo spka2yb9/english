@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="数えきれないほどの点が散らばるイラスト。">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <g class="teal o">
+  <circle cx="80" cy="100" r="9"/><circle cx="147" cy="213" r="9"/><circle cx="214" cy="326" r="9"/><circle cx="281" cy="199" r="9"/><circle cx="348" cy="312" r="9"/><circle cx="415" cy="185" r="9"/><circle cx="482" cy="298" r="9"/><circle cx="89" cy="171" r="9"/><circle cx="156" cy="284" r="9"/><circle cx="223" cy="157" r="9"/><circle cx="290" cy="270" r="9"/><circle cx="357" cy="143" r="9"/><circle cx="424" cy="256" r="9"/><circle cx="491" cy="129" r="9"/><circle cx="98" cy="242" r="9"/><circle cx="165" cy="115" r="9"/><circle cx="232" cy="228" r="9"/><circle cx="299" cy="101" r="9"/><circle cx="366" cy="214" r="9"/><circle cx="433" cy="327" r="9"/><circle cx="500" cy="200" r="9"/><circle cx="107" cy="313" r="9"/><circle cx="174" cy="186" r="9"/><circle cx="241" cy="299" r="9"/><circle cx="308" cy="172" r="9"/><circle cx="375" cy="285" r="9"/><circle cx="442" cy="158" r="9"/><circle cx="509" cy="271" r="9"/><circle cx="116" cy="144" r="9"/><circle cx="183" cy="257" r="9"/><circle cx="250" cy="130" r="9"/><circle cx="317" cy="243" r="9"/><circle cx="384" cy="116" r="9"/><circle cx="451" cy="229" r="9"/><circle cx="518" cy="102" r="9"/><circle cx="125" cy="215" r="9"/><circle cx="192" cy="328" r="9"/><circle cx="259" cy="201" r="9"/><circle cx="326" cy="314" r="9"/><circle cx="393" cy="187" r="9"/><circle cx="460" cy="300" r="9"/><circle cx="527" cy="173" r="9"/><circle cx="134" cy="286" r="9"/><circle cx="201" cy="159" r="9"/><circle cx="268" cy="272" r="9"/><circle cx="335" cy="145" r="9"/><circle cx="402" cy="258" r="9"/><circle cx="469" cy="131" r="9"/><circle cx="536" cy="244" r="9"/><circle cx="143" cy="117" r="9"/><circle cx="210" cy="230" r="9"/><circle cx="277" cy="103" r="9"/><circle cx="344" cy="216" r="9"/><circle cx="411" cy="329" r="9"/><circle cx="478" cy="202" r="9"/><circle cx="85" cy="315" r="9"/><circle cx="152" cy="188" r="9"/><circle cx="219" cy="301" r="9"/><circle cx="286" cy="174" r="9"/><circle cx="353" cy="287" r="9"/><circle cx="420" cy="160" r="9"/><circle cx="487" cy="273" r="9"/><circle cx="94" cy="146" r="9"/><circle cx="161" cy="259" r="9"/><circle cx="228" cy="132" r="9"/><circle cx="295" cy="245" r="9"/><circle cx="362" cy="118" r="9"/><circle cx="429" cy="231" r="9"/><circle cx="496" cy="104" r="9"/><circle cx="103" cy="217" r="9"/><circle cx="170" cy="330" r="9"/><circle cx="237" cy="203" r="9"/><circle cx="304" cy="316" r="9"/><circle cx="371" cy="189" r="9"/><circle cx="438" cy="302" r="9"/><circle cx="505" cy="175" r="9"/><circle cx="112" cy="288" r="9"/><circle cx="179" cy="161" r="9"/><circle cx="246" cy="274" r="9"/><circle cx="313" cy="147" r="9"/><circle cx="380" cy="260" r="9"/><circle cx="447" cy="133" r="9"/><circle cx="514" cy="246" r="9"/><circle cx="121" cy="119" r="9"/><circle cx="188" cy="232" r="9"/><circle cx="255" cy="105" r="9"/><circle cx="322" cy="218" r="9"/><circle cx="389" cy="331" r="9"/><circle cx="456" cy="204" r="9"/><circle cx="523" cy="317" r="9"/>
+</g>
+<g fill="#2f4055" transform="translate(500 350)">
+  <path d="M0 0q0-26 20-26t20 26q0 14-14 18v12h-10v-20q14-4 14-14t-8-8-8 12z"/><rect x="12" y="42" width="10" height="10"/>
+</g>
+</svg>

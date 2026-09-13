@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="池に浮かぶ、大きな葉と八重の花">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 306h600v94H0z" class="ground"/>
+  <path d="M0 240h600v160H0z" fill="#e1edfb"/>
+<g transform="translate(130 320)"><path d="M-60 0a60 30 0 1 0 120 0 60 30 0 1 0-120 0z" class="greenp o"/><path d="M0-8v16M-40 0h80" fill="none" stroke="#34734d" stroke-width="3"/></g><g transform="translate(470 300)"><path d="M-60 0a60 30 0 1 0 120 0 60 30 0 1 0-120 0z" class="greenp o"/><path d="M0-8v16M-40 0h80" fill="none" stroke="#34734d" stroke-width="3"/></g>
+<g transform="translate(300 250)">
+  <ellipse cx="0" cy="-40" rx="18" ry="46" class="coralp o" transform="rotate(0 0 0)"/><ellipse cx="0" cy="-40" rx="18" ry="46" class="coralp o" transform="rotate(45 0 0)"/><ellipse cx="0" cy="-40" rx="18" ry="46" class="coralp o" transform="rotate(90 0 0)"/><ellipse cx="0" cy="-40" rx="18" ry="46" class="coralp o" transform="rotate(135 0 0)"/><ellipse cx="0" cy="-40" rx="18" ry="46" class="coralp o" transform="rotate(180 0 0)"/><ellipse cx="0" cy="-40" rx="18" ry="46" class="coralp o" transform="rotate(225 0 0)"/><ellipse cx="0" cy="-40" rx="18" ry="46" class="coralp o" transform="rotate(270 0 0)"/><ellipse cx="0" cy="-40" rx="18" ry="46" class="coralp o" transform="rotate(315 0 0)"/>
+  <ellipse cx="0" cy="-26" rx="14" ry="32" class="coral o" transform="rotate(22 0 0)"/><ellipse cx="0" cy="-26" rx="14" ry="32" class="coral o" transform="rotate(67 0 0)"/><ellipse cx="0" cy="-26" rx="14" ry="32" class="coral o" transform="rotate(112 0 0)"/><ellipse cx="0" cy="-26" rx="14" ry="32" class="coral o" transform="rotate(157 0 0)"/><ellipse cx="0" cy="-26" rx="14" ry="32" class="coral o" transform="rotate(202 0 0)"/><ellipse cx="0" cy="-26" rx="14" ry="32" class="coral o" transform="rotate(247 0 0)"/><ellipse cx="0" cy="-26" rx="14" ry="32" class="coral o" transform="rotate(292 0 0)"/><ellipse cx="0" cy="-26" rx="14" ry="32" class="coral o" transform="rotate(337 0 0)"/>
+  <circle r="16" class="goldp o"/>
+  <path d="M0 46v50" fill="none" stroke="#34734d" stroke-width="6"/></g>
+</svg>

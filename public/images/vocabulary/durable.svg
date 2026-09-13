@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="何年たっても形の変わらない同じかばんが、ずっと使われ続ける">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1l8 4-8 4z" fill="#2f4055"/></marker></defs>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 306h600v94H0z" class="ground"/>
+  <path d="M300 20v360" stroke="#80909d" stroke-width="3" stroke-dasharray="10 9" fill="none"/>
+<g transform="translate(160 230)"><path d="M-70-50h140v110h-140z" class="goldd o"/><path d="M-40-50q40-40 80 0" fill="none" stroke="#8b6437" stroke-width="10"/><path d="M-70-10h140" fill="none" stroke="#8b6437" stroke-width="5"/></g><g transform="translate(440 230)"><path d="M-70-50h140v110h-140z" class="goldd o"/><path d="M-40-50q40-40 80 0" fill="none" stroke="#8b6437" stroke-width="10"/><path d="M-70-10h140" fill="none" stroke="#8b6437" stroke-width="5"/></g>
+<circle cx="160" cy="350" r="26" fill="#fffefd" class="o"/><circle cx="160" cy="350" r="22.36" fill="none" stroke="#80909d" stroke-width="2"/><path d="M160 350l-10 -6" stroke="#2f4055" stroke-width="6" stroke-linecap="round" fill="none"/><path d="M160 350l16 -9" stroke="#2f4055" stroke-width="4" stroke-linecap="round" fill="none"/><circle cx="160" cy="350" r="4" class="ink"/>
+<circle cx="410" cy="350" r="26" fill="#fffefd" class="o"/><circle cx="410" cy="350" r="22.36" fill="none" stroke="#80909d" stroke-width="2"/><path d="M410 350l-10 -6" stroke="#2f4055" stroke-width="6" stroke-linecap="round" fill="none"/><path d="M410 350l16 -9" stroke="#2f4055" stroke-width="4" stroke-linecap="round" fill="none"/><circle cx="410" cy="350" r="4" class="ink"/><circle cx="470" cy="350" r="26" fill="#fffefd" class="o"/><circle cx="470" cy="350" r="22.36" fill="none" stroke="#80909d" stroke-width="2"/><path d="M470 350l-10 -6" stroke="#2f4055" stroke-width="6" stroke-linecap="round" fill="none"/><path d="M470 350l16 -9" stroke="#2f4055" stroke-width="4" stroke-linecap="round" fill="none"/><circle cx="470" cy="350" r="4" class="ink"/><circle cx="530" cy="350" r="26" fill="#fffefd" class="o"/><circle cx="530" cy="350" r="22.36" fill="none" stroke="#80909d" stroke-width="2"/><path d="M530 350l-10 -6" stroke="#2f4055" stroke-width="6" stroke-linecap="round" fill="none"/><path d="M530 350l16 -9" stroke="#2f4055" stroke-width="4" stroke-linecap="round" fill="none"/><circle cx="530" cy="350" r="4" class="ink"/>
+<path d="M250 180Q300.0 136.0 350 180" fill="none" stroke="#80909d" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 9" marker-end="url(#ar)"/>
+<g fill="none" stroke="#4e986a" stroke-width="7.2" stroke-linecap="round" stroke-linejoin="round"><path d="M416.0 90l17.6 19.200000000000003 33.6-41.6"/></g>
+</svg>

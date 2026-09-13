@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="住む人のいない、荒れ果てた家と土地">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 0h600v250H0z" fill="#b6bcc2"/>
+<path d="M0 250h600v150H0z" fill="#9a9d94" class="o"/>
+<g fill="none" stroke="#868a80" stroke-width="4"><path d="M0 300q140-20 300 0t300-14M0 350q160-16 300 8t300-16"/></g>
+<g transform="translate(300 250)">
+  <path d="M-90 0v-90h180V0z" fill="#a89880" class="o"/>
+  <path d="M-104-90L0-140l104 50z" fill="#8f8574" class="o"/>
+  <path d="M-60-70h40v40h-40z" fill="#5a5a52"/>
+  <path d="M10-50h40V0H10z" fill="#5a5a52"/>
+  <path d="M-40-30l30 30M40-70l-30 30" stroke="#7d7d72" stroke-width="4" fill="none"/>
+</g>
+<g fill="#7f8378"><path d="M470 250v-40h6v40zM484 250v-56h6v56z"/></g>
+<g fill="#868a80" class="o"><ellipse cx="130" cy="320" rx="30" ry="16"/></g>
+</svg>

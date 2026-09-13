@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="通貨どうしを交換する比率が表に出ている">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M40 380h520v20H40z" fill="#c9a464" class="o"/><path d="M80 400v60M520 400v60" stroke="#a0764a" stroke-width="14" stroke-linecap="round" fill="none"/>
+<g transform="translate(300 200)">
+  <path d="M-200-140h400v280h-400z" fill="#3b4450" class="o"/>
+  <path d="M-180-120h360v240h-360z" fill="#1c2530"/>
+  <g>
+<g transform="translate(0 -80)">
+  <rect x="-150" y="-11" width="70" height="22" rx="8" fill="#d99a2b"/>
+  <path d="M-60 0h30" stroke="#80909d" stroke-width="4"/>
+  <rect x="-14" y="-11" width="70" height="22" rx="8" fill="#238b83"/>
+  <rect x="80" y="-11" width="70" height="22" rx="8" fill="#4e986a"/>
+</g><g transform="translate(0 -24)">
+  <rect x="-150" y="-11" width="70" height="22" rx="8" fill="#d99a2b"/>
+  <path d="M-60 0h30" stroke="#80909d" stroke-width="4"/>
+  <rect x="-14" y="-11" width="70" height="22" rx="8" fill="#238b83"/>
+  <rect x="80" y="-11" width="70" height="22" rx="8" fill="#4e986a"/>
+</g><g transform="translate(0 32)">
+  <rect x="-150" y="-11" width="70" height="22" rx="8" fill="#d99a2b"/>
+  <path d="M-60 0h30" stroke="#80909d" stroke-width="4"/>
+  <rect x="-14" y="-11" width="70" height="22" rx="8" fill="#238b83"/>
+  <rect x="80" y="-11" width="70" height="22" rx="8" fill="#4e986a"/>
+</g>
+  </g>
+</g>
+<g class="a" marker-end="url(#ar)" stroke="#d99a2b"><path d="M120 340h100"/></g>
+<g class="a" marker-end="url(#ar)" stroke="#238b83"><path d="M220 366H120"/></g>
+</svg>

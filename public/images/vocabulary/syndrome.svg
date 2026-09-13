@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="いくつもの症状がまとまって現れる症候群のイラスト。">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <g fill="none" stroke="#e86452" stroke-width="5" stroke-dasharray="14 12"><circle cx="300" cy="210" r="170"/></g>
+<g transform="translate(180 270) scale(0.85)"><rect x="-14" y="-176" width="28" height="176" rx="14" fill="#fffdf6" class="o"/><circle cx="0" cy="6" r="26" fill="#fffdf6" class="o"/><rect x="-7" y="-86.5" width="14" height="92.5" rx="7" class="coral"/><circle cx="0" cy="6" r="17" class="coral"/><g fill="none" stroke="#80909d" stroke-width="2"><path d="M14 -30h10"/><path d="M14 -60h10"/><path d="M14 -90h10"/><path d="M14 -120h10"/><path d="M14 -150h10"/></g></g>
+<g transform="translate(300 120)">
+  <circle r="40" fill="#f2c29d" stroke="#a86f55" stroke-width="3"/>
+  <path d="M-16 14q16 12 32 0" fill="none" stroke="#2f4055" stroke-width="3" transform="translate(0 6) scale(1 -1)"/>
+  <g fill="#2f4055"><circle cx="-14" cy="-8" r="4"/><circle cx="14" cy="-8" r="4"/></g>
+</g>
+<g transform="translate(420 250)">
+  <path d="M-40 40l10-60q-30-16-30-46 0-36 36-36t36 36q0 30-30 46l10 60z" fill="#f2c29d" stroke="#a86f55" stroke-width="3"/>
+  <g fill="none" stroke="#e86452" stroke-width="4"><path d="M-20-40h40M-14-24h28"/></g>
+</g>
+<g class="coral"><circle cx="220" cy="330" r="8"/><circle cx="250" cy="350" r="7"/><circle cx="196" cy="352" r="6"/></g>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="日が沈んだあとの薄暗い時間、街灯がともる">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 0h600v320H0z" fill="#5b6a86"/>
+<path d="M0 0h600v130H0z" fill="#3b4a66"/>
+<path d="M0 130h600v70H0z" fill="#7a7290" opacity="0.7"/>
+<path d="M0 320h600v80H0z" fill="#333c33"/>
+<path d="M0 320h600" stroke="#2f4055" stroke-width="2.5" fill="none"/>
+<g fill="#2c333d">
+  <path d="M60 320V200h60v120zM160 320V160h70v160zM380 320V180h64v140zM480 320V220h56v100z"/>
+</g>
+<g fill="#fff0c5">
+  <rect x="176" y="180" width="16" height="20"/><rect x="202" y="216" width="16" height="20"/>
+  <rect x="396" y="200" width="16" height="20"/><rect x="496" y="242" width="16" height="20"/>
+</g>
+<g>
+  <path d="M296 320V150h10v170z" fill="#2c333d"/>
+  <circle cx="301" cy="140" r="20" class="goldp o"/>
+  <g fill="#fff0c5" opacity="0.4"><path d="M301 140l-70 180h140z"/></g>
+</g>
+<g fill="#fdf0d0"><circle cx="500" cy="60" r="5"/><circle cx="440" cy="40" r="4"/><circle cx="550" cy="96" r="4"/></g>
+</svg>

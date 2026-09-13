@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="自転車の後ろの反射板が、光を受けて赤く輝く">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 306h600v94H0z" class="ground"/>
+  <g transform="translate(300 200)"><path d="M-300-200h600v400h-600z" fill="#2f3a4d"/></g>
+<g transform="translate(330 300)">
+  <circle cx="-130" cy="40" r="56" fill="none" stroke="#8a97a3" stroke-width="7"/>
+  <path d="M-130 40L-30-30h80" fill="none" stroke="#4e6070" stroke-width="8" stroke-linecap="round"/>
+  <path d="M-70-40h50l-10 20h-50z" fill="#4e6070"/></g>
+<g transform="translate(210 300)">
+  <rect x="-30" y="-18" width="60" height="36" rx="8" class="coral o"/>
+  <path d="M-20 -14v28" stroke="#b74338" stroke-width="4" fill="none"/><path d="M0 -14v28" stroke="#b74338" stroke-width="4" fill="none"/><path d="M20 -14v28" stroke="#b74338" stroke-width="4" fill="none"/></g>
+<path d="M164 274l-24 -13" stroke="#e86452" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M184 254l-13 -24" stroke="#e86452" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M210 248l0 -28" stroke="#e86452" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M236 254l14 -24" stroke="#e86452" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M255 274l24 -13" stroke="#e86452" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M158 300l-28 0" stroke="#e86452" stroke-width="6" fill="none" stroke-linecap="round"/>
+</svg>

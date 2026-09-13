@@ -1,0 +1,69 @@
+{
+  "method": "Built-in image_gen (imagegen skill), one image per word",
+  "outputDirectory": "public/images/vocabulary",
+  "prompts": {
+    "fluid": "Use case: illustration-story. Asset type: one mnemonic illustration in the '覚えるヒント' section of an English vocabulary app for Japanese adults. One single coherent scene, not a collage, no panels. Word: fluid. Scene: a clear glass beaker being tipped so a smooth continuous ribbon of pale blue liquid pours out and settles into a shallow dish, taking the dish's shape exactly; beside it a solid brown wooden cube keeps its own fixed shape for contrast. The liquid's flowing, shape-changing nature is the unmistakable focal point. Meaning: fluid, a liquid; something that flows and has no fixed shape. Style: friendly polished editorial gouache, clean silhouettes and soft paper texture, uncluttered warm ivory background, restrained teal, blue and warm ochre palette, consistent with the existing illustrated plant roots absorbing water. Landscape 3:2 aspect ratio, generous margins, one clear memorable action readable at 400px wide. No text, letters, numbers, logos or watermark.",
+    "dissolve": "Use case: illustration-story. Asset type: one mnemonic illustration in the '覚えるヒント' section of an English vocabulary app for Japanese adults. One single coherent scene, not a collage, no panels. Word: dissolve. Scene: a hand stirring a glass mug of warm water with a spoon; a white sugar cube is half gone, its edges breaking into fine specks that swirl away and vanish into the clear water. The cube's disappearance into the liquid is the focal point. Meaning: dissolve, to become part of a liquid and disappear. Style: friendly polished editorial gouache, clean silhouettes and soft paper texture, uncluttered warm ivory background, restrained teal, blue and warm ochre palette, consistent with the existing illustrated plant roots absorbing water. Landscape 3:2 aspect ratio, generous margins, one clear memorable action readable at 400px wide. No text, letters, numbers, logos or watermark.",
+    "melt": "Use case: illustration-story. Asset type: one mnemonic illustration in the '覚えるヒント' section of an English vocabulary app for Japanese adults. One single coherent scene, not a collage, no panels. Word: melt. Scene: a single ice cube on a sunlit wooden table, its top corners rounded and softened, with a widening puddle of water spreading beneath it and one drop running down its side. Warm sunlight falls on the cube. The change from solid ice to water is the focal point. Meaning: melt, to change from solid to liquid with heat. Style: friendly polished editorial gouache, clean silhouettes and soft paper texture, uncluttered warm ivory background, restrained teal, blue and warm ochre palette, consistent with the existing illustrated plant roots absorbing water. Landscape 3:2 aspect ratio, generous margins, one clear memorable action readable at 400px wide. No text, letters, numbers, logos or watermark.",
+    "spill": "Use case: illustration-story. Asset type: one mnemonic illustration in the '覚えるヒント' section of an English vocabulary app for Japanese adults. One single coherent scene, not a collage, no panels. Word: spill. Scene: a tipped-over mug on a table, with a wide pool of liquid spreading across the surface and one thin stream running over the table edge; a surprised person reaches out too late. The liquid escaping the container onto the table is the focal point. Meaning: spill, liquid escaping a container by accident. Style: friendly polished editorial gouache, clean silhouettes and soft paper texture, uncluttered warm ivory background, restrained teal, blue and warm ochre palette, consistent with the existing illustrated plant roots absorbing water. Landscape 3:2 aspect ratio, generous margins, one clear memorable action readable at 400px wide. No text, letters, numbers, logos or watermark.",
+    "leak": "Use case: illustration-story. Asset type: one mnemonic illustration in the '覚えるヒント' section of an English vocabulary app for Japanese adults. One single coherent scene, not a collage, no panels. Word: leak. Scene: a cutaway of a metal water pipe with one small hole, from which a thin steady jet of water sprays out into a bucket placed below. The rest of the pipe is intact; only the single small hole lets water out. The small unintended escape point is the focal point. Meaning: leak, liquid or information escaping through a small opening. Style: friendly polished editorial gouache, clean silhouettes and soft paper texture, uncluttered warm ivory background, restrained teal, blue and warm ochre palette, consistent with the existing illustrated plant roots absorbing water. Landscape 3:2 aspect ratio, generous margins, one clear memorable action readable at 400px wide. No text, letters, numbers, logos or watermark.",
+    "drift": "Use case: illustration-story. Asset type: one mnemonic illustration in the '覚えるヒント' section of an English vocabulary app for Japanese adults. One single coherent scene, not a collage, no panels. Word: drift. Scene: a small empty wooden boat with no oars and no one aboard, floating on calm water and carried sideways by a gentle current away from a wooden jetty, with a few soft curved current lines showing it moving without power or steering. Meaning: drift, to be carried along slowly without control or direction. Style: friendly polished editorial gouache, clean silhouettes and soft paper texture, uncluttered warm ivory background, restrained teal, blue and warm ochre palette, consistent with the existing illustrated plant roots absorbing water. Landscape 3:2 aspect ratio, generous margins, one clear memorable action readable at 400px wide. No text, letters, numbers, logos or watermark.",
+    "fragile": "Use case: illustration-story. Asset type: one mnemonic illustration in the '覚えるヒント' section of an English vocabulary app for Japanese adults. One single coherent scene, not a collage, no panels. Word: fragile. Scene: a thin-walled ceramic teacup held carefully in two open cupped hands, with a hairline crack visible on its side and a soft cushion of straw beneath. The careful, delicate handling and the crack make its breakability obvious. Nothing is shattered. Meaning: fragile, easily broken or damaged. Style: friendly polished editorial gouache, clean silhouettes and soft paper texture, uncluttered warm ivory background, restrained teal, blue and warm ochre palette, consistent with the existing illustrated plant roots absorbing water. Landscape 3:2 aspect ratio, generous margins, one clear memorable action readable at 400px wide. No text, letters, numbers, logos or watermark.",
+    "shrink": "Use case: illustration-story. Asset type: one mnemonic illustration in the '覚えるヒント' section of an English vocabulary app for Japanese adults. One single coherent scene, not a collage, no panels. Word: shrink. Scene: a red knitted wool sweater on a clothesline, now clearly child-sized, hanging in front of a faint larger dashed outline showing its original adult size; a washtub with warm water sits below. The size reduction is the focal point. Meaning: shrink, to become smaller in size or amount. Style: friendly polished editorial gouache, clean silhouettes and soft paper texture, uncluttered warm ivory background, restrained teal, blue and warm ochre palette, consistent with the existing illustrated plant roots absorbing water. Landscape 3:2 aspect ratio, generous margins, one clear memorable action readable at 400px wide. No text, letters, numbers, logos or watermark.",
+    "fade": "Use case: illustration-story. Asset type: one mnemonic illustration in the '覚えるヒント' section of an English vocabulary app for Japanese adults. One single coherent scene, not a collage, no panels. Word: fade. Scene: one curtain hanging in a sunny window, its colour strong deep blue at the shaded bottom and gradually washing out to pale near-white where direct sunlight has struck it for years. A smooth continuous gradient, not two separate curtains. Meaning: fade, to lose colour or strength gradually. Style: friendly polished editorial gouache, clean silhouettes and soft paper texture, uncluttered warm ivory background, restrained teal, blue and warm ochre palette, consistent with the existing illustrated plant roots absorbing water. Landscape 3:2 aspect ratio, generous margins, one clear memorable action readable at 400px wide. No text, letters, numbers, logos or watermark.",
+    "bend": "Use case: illustration-story. Asset type: one mnemonic illustration in the '覚えるヒント' section of an English vocabulary app for Japanese adults. One single coherent scene, not a collage, no panels. Word: bend. Scene: two hands holding a straight green garden hose and curving its middle into a smooth U shape; a faint dashed straight line shows where it was before. The hose is curved, not cut or broken. Meaning: bend, to make something curved instead of straight. Style: friendly polished editorial gouache, clean silhouettes and soft paper texture, uncluttered warm ivory background, restrained teal, blue and warm ochre palette, consistent with the existing illustrated plant roots absorbing water. Landscape 3:2 aspect ratio, generous margins, one clear memorable action readable at 400px wide. No text, letters, numbers, logos or watermark."
+  },
+  "entries": {
+    "fluid": {
+      "src": "images/vocabulary/fluid.png",
+      "alt": "ビーカーから注がれた液体が、浅い皿の形にぴったり広がっていくイラスト。隣の木の立方体は形を変えない。",
+      "caption": "液体は入れ物の形に合わせて姿を変える。この「流れて形が決まらないもの」が fluid（液体）。状況が「流動的な」という意味でも使います。"
+    },
+    "dissolve": {
+      "src": "images/vocabulary/dissolve.png",
+      "alt": "温かい水の入ったカップをスプーンでかき混ぜ、角砂糖が崩れて水の中へ消えていくイラスト。",
+      "caption": "角砂糖が水に混ざって見えなくなるのが dissolve（溶ける）。組織や議会を「解散する」という意味でも使います。"
+    },
+    "melt": {
+      "src": "images/vocabulary/melt.png",
+      "alt": "日差しの当たる机の上で、氷が角から丸くなり、下に水たまりが広がっているイラスト。",
+      "caption": "熱で固体が液体に変わるのが melt。氷や雪、バターのように「溶ける・溶かす」ときに使います。"
+    },
+    "spill": {
+      "src": "images/vocabulary/spill.png",
+      "alt": "倒れたマグカップから中身が机いっぱいに広がり、縁からしたたり落ちているイラスト。",
+      "caption": "うっかり容器から中身があふれ出るのが spill（こぼす・こぼれる）。石油の流出など、こぼれたもの自体も指します。"
+    },
+    "leak": {
+      "src": "images/vocabulary/leak.png",
+      "alt": "水道管に開いた小さな穴から水が細く噴き出し、下のバケツに落ちているイラスト。",
+      "caption": "小さな穴からじわじわ漏れ出るのが leak。水やガスだけでなく、情報が外部に「漏洩する」ときにも使います。"
+    },
+    "drift": {
+      "src": "images/vocabulary/drift.png",
+      "alt": "オールのない小舟が、桟橋から離れて水の流れのままに横へ運ばれていくイラスト。",
+      "caption": "自分で進まず流れに任せて運ばれるのが drift（漂う）。話が本題からそれていくときにも使います。"
+    },
+    "fragile": {
+      "src": "images/vocabulary/fragile.png",
+      "alt": "両手でそっと支えられた薄いカップに、細いひびが入っているイラスト。下には藁のクッション。",
+      "caption": "そっと扱わないと壊れてしまう状態が fragile（壊れやすい）。停戦や関係など、崩れやすいものにも使います。"
+    },
+    "shrink": {
+      "src": "images/vocabulary/shrink.png",
+      "alt": "洗濯後に子ども用ほどの大きさになったセーターが、元の大きさの点線の輪郭の前に干されているイラスト。",
+      "caption": "洗ったセーターが小さくなるように、shrink は「縮む」。市場や人口が「減少する」ときにも使います。"
+    },
+    "fade": {
+      "src": "images/vocabulary/fade.png",
+      "alt": "日の当たる窓辺のカーテンが、影の部分は濃い青、日の当たる部分は白っぽく色あせているイラスト。",
+      "caption": "日光に当たり続けて色が抜けていくのが fade。記憶や音が「だんだん薄れる」ときにも使います。"
+    },
+    "bend": {
+      "src": "images/vocabulary/bend.png",
+      "alt": "まっすぐだったホースを両手でU字に曲げているイラスト。元の直線が点線で示されている。",
+      "caption": "まっすぐなものを曲げるのが bend。折って壊すのではなく、湾曲させるイメージです。膝を曲げるときにも使います。"
+    }
+  },
+  "note": "第3回はこのプロンプトを使わず手書きSVGで作成した。alt/caption のみ流用。fragile の alt は実際の絵に合わせて illustrations.ts 側で調整。"
+}

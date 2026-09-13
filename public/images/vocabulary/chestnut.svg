@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="いがの割れ目から、つやのある茶色の栗の実がのぞく">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 306h600v94H0z" class="ground"/>
+  <path d="M40 352h520v20H40z" fill="#c9a464" class="o"/><path d="M80 372v60M520 372v60" stroke="#a0764a" stroke-width="14" stroke-linecap="round" fill="none"/>
+<g transform="translate(220 260)">
+  <circle r="80" class="greenp o"/>
+  <path d="M0 0l96 0" stroke="#34734d" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M0 0l90 32" stroke="#34734d" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M0 0l73 61" stroke="#34734d" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M0 0l48 83" stroke="#34734d" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M0 0l16 94" stroke="#34734d" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M0 0l-16 94" stroke="#34734d" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M0 0l-47 83" stroke="#34734d" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M0 0l-73 61" stroke="#34734d" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M0 0l-90 32" stroke="#34734d" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M0 0l-96 0" stroke="#34734d" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M0 0l-90 -32" stroke="#34734d" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M0 0l-73 -61" stroke="#34734d" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M0 0l-48 -83" stroke="#34734d" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M0 0l-16 -94" stroke="#34734d" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M0 0l16 -94" stroke="#34734d" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M0 0l48 -83" stroke="#34734d" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M0 0l73 -61" stroke="#34734d" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M0 0l90 -32" stroke="#34734d" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M-50 10q50 50 100 0-50-30-100 0z" fill="#8a5c2b" class="o"/></g>
+<g transform="translate(430 290)">
+  <path d="M-60 40q-20-70 20-92 20-12 40 0 40 22 20 92z" fill="#8a5c2b" class="o"/>
+  <path d="M-40 40q40 16 80 0" fill="#c8a05f"/>
+  <path d="M-60 40q-20-70 20-92 20-12 40 0 40 22 20 92z" fill="none" class="o"/>
+  <path d="M-6-56h12v-18h-12z" fill="#5b4030"/></g>
+</svg>

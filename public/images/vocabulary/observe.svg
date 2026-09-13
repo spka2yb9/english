@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="虫めがねを通して、葉の上の虫をじっくり観察しているイラスト。">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 306h600v94H0z" class="ground"/>
+  <circle cx="120" cy="100" r="56" class="tealp"/>
+<g transform="translate(320 290)">
+  <path d="M-10 30C-90 22-94-50-2-58 78-52 84 22-10 30z" class="green o"/>
+</g>
+<g transform="translate(300 200)">
+  <circle r="94" fill="#e8f4fb" opacity=".35"/>
+  <g transform="scale(0.62)">
+    <ellipse cy="40" rx="52" ry="70" class="teal o"/>
+    <circle cy="-32" r="30" class="teald o"/>
+    <g fill="none" stroke="#2f4055" stroke-width="7" stroke-linecap="round"><path d="M-40 20l-64-22M40 20l64-22M-42 74l-70 32M42 74l70 32"/></g>
+    <path d="M-12-56q-20-30-40-34M12-56q20-30 40-34" fill="none" stroke="#2f4055" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <circle r="94" fill="none" stroke="#2f4055" stroke-width="7"/>
+  <path d="M66 66l70 70" fill="none" stroke="#2f4055" stroke-width="15" stroke-linecap="round"/>
+</g>
+</svg>

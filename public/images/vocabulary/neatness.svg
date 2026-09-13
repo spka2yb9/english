@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="引き出しのなかが、きちんとそろっている">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 306h600v94H0z" class="ground"/>
+  <path d="M300 20v360" stroke="#80909d" stroke-width="3" stroke-dasharray="10 9" fill="none"/>
+<g transform="translate(150 210)"><rect x="-110" y="-90" width="220" height="180" rx="8" fill="#c9a06c" class="o"/>
+  <rect x="-24" y="-22" width="48" height="44" rx="6" fill="#eef2f4" stroke="#2f4055" stroke-width="2.5" transform="translate(-60 -40) rotate(-30)"/><rect x="-24" y="-22" width="48" height="44" rx="6" fill="#eef2f4" stroke="#2f4055" stroke-width="2.5" transform="translate(0 -40) rotate(-12)"/><rect x="-24" y="-22" width="48" height="44" rx="6" fill="#eef2f4" stroke="#2f4055" stroke-width="2.5" transform="translate(60 -40) rotate(6)"/><rect x="-24" y="-22" width="48" height="44" rx="6" fill="#eef2f4" stroke="#2f4055" stroke-width="2.5" transform="translate(-60 14) rotate(24)"/><rect x="-24" y="-22" width="48" height="44" rx="6" fill="#eef2f4" stroke="#2f4055" stroke-width="2.5" transform="translate(0 14) rotate(42)"/><rect x="-24" y="-22" width="48" height="44" rx="6" fill="#eef2f4" stroke="#2f4055" stroke-width="2.5" transform="translate(60 14) rotate(60)"/></g>
+<circle cx="150" cy="210" r="132" fill="none" stroke="#80909d" stroke-width="4" stroke-dasharray="11 10"/>
+<g transform="translate(450 210)"><rect x="-110" y="-90" width="220" height="180" rx="8" fill="#c9a06c" class="o"/>
+  <rect x="-90" y="-70" width="52" height="60" rx="6" fill="#eef2f4" stroke="#2f4055" stroke-width="2.5"/><rect x="-28" y="-70" width="52" height="60" rx="6" fill="#eef2f4" stroke="#2f4055" stroke-width="2.5"/><rect x="34" y="-70" width="52" height="60" rx="6" fill="#eef2f4" stroke="#2f4055" stroke-width="2.5"/><rect x="-90" y="10" width="52" height="60" rx="6" fill="#eef2f4" stroke="#2f4055" stroke-width="2.5"/><rect x="-28" y="10" width="52" height="60" rx="6" fill="#eef2f4" stroke="#2f4055" stroke-width="2.5"/><rect x="34" y="10" width="52" height="60" rx="6" fill="#eef2f4" stroke="#2f4055" stroke-width="2.5"/></g>
+<path d="M370 98.8l3.5 7.699999999999999 7.699999999999999 3.5-7.699999999999999 3.5-3.5 7.699999999999999-3.5-7.699999999999999-7.699999999999999-3.5 7.699999999999999-3.5z" class="gold o"/><path d="M540 108.8l3.5 7.699999999999999 7.699999999999999 3.5-7.699999999999999 3.5-3.5 7.699999999999999-3.5-7.699999999999999-7.699999999999999-3.5 7.699999999999999-3.5z" class="gold o"/>
+<circle cx="450" cy="210" r="132" fill="none" stroke="#e86452" stroke-width="4"/>
+</svg>

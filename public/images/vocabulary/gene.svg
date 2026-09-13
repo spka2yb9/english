@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="生き物の設計図である遺伝子のらせんのイラスト。">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 306h600v94H0z" class="ground"/>
+  <g transform="translate(300 200)">
+  <path d="M0 -150 L12 -135 L24 -120 L32 -105 L38 -90 L40 -75 L38 -60 L32 -45 L24 -30 L12 -15 L0 0 L-12 15 L-24 30 L-32 45 L-38 60 L-40 75 L-38 90 L-32 105 L-24 120 L-12 135 L-0 150" fill="none" stroke="#238b83" stroke-width="9" stroke-linecap="round"/>
+  <path d="M-0 -150 L-12 -135 L-24 -120 L-32 -105 L-38 -90 L-40 -75 L-38 -60 L-32 -45 L-24 -30 L-12 -15 L-0 0 L12 15 L24 30 L32 45 L38 60 L40 75 L38 90 L32 105 L24 120 L12 135 L0 150" fill="none" stroke="#e86452" stroke-width="9" stroke-linecap="round"/>
+  <g stroke="#80909d" stroke-width="5" stroke-linecap="round">
+    <path d="M12 -135H-12"/><path d="M24 -120H-24"/><path d="M32 -105H-32"/><path d="M38 -90H-38"/><path d="M40 -75H-40"/><path d="M38 -60H-38"/><path d="M32 -45H-32"/><path d="M24 -30H-24"/><path d="M12 -15H-12"/><path d="M0 0H-0"/><path d="M-12 15H12"/><path d="M-24 30H24"/><path d="M-32 45H32"/><path d="M-38 60H38"/><path d="M-40 75H40"/><path d="M-38 90H38"/><path d="M-32 105H32"/><path d="M-24 120H24"/><path d="M-12 135H12"/>
+  </g>
+</g>
+<path d="M60 372h480" class="a"/>
+</svg>

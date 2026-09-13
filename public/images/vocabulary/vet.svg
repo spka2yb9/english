@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="白衣の獣医が、診察台の上の犬を診る">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 306h600v94H0z" class="ground"/>
+  <path d="M40 300h520v20H40z" fill="#c9a464" class="o"/><path d="M80 320v60M520 320v60" stroke="#a0764a" stroke-width="14" stroke-linecap="round" fill="none"/>
+<g transform="translate(160 330) scale(1.2 1.2)"><path d="M-12-8l-7 35M12-8l7 35" fill="none" stroke="#315f98" stroke-width="11" stroke-linecap="round"/><path d="M-25-78q25-13 50 0l-8 72h-34z" fill="#816eb2" class="o"/><path d="M-22-70l-16 45M22-70l40-30" fill="none" stroke="#f2c29d" stroke-width="10" stroke-linecap="round"/><circle cx="0" cy="-108" r="24" fill="#f2c29d" stroke="#a86f55" stroke-width="2.5"/><path d="M-26-111q3-28 27-28 22 0 27 27-15-13-28-3-12-9-26 4z" fill="#34475a" stroke="#34475a" stroke-width="2"/><circle cx="-8" cy="-104" r="2.2" class="ink"/><circle cx="8" cy="-104" r="2.2" class="ink"/><path d="M-8-94q8 8 16 0" fill="none" stroke="#2f4055" stroke-width="2"/></g>
+<g transform="translate(420 280)">
+  <ellipse rx="80" ry="40" fill="#c8a05f" class="o"/>
+  <circle cx="66" cy="-30" r="30" fill="#c8a05f" class="o"/>
+  <path d="M40-48q-20-18-10-38 22 8 28 26zM92-50q20-18 10-38-22 8-28 26z" fill="#a8814a" class="o"/>
+  <circle cx="56" cy="-34" r="4" class="ink"/><circle cx="78" cy="-34" r="4" class="ink"/>
+  <ellipse cx="68" cy="-16" rx="9" ry="6" fill="#5b4030"/>
+  <path d="M-50 34v18M-8 38v14M34 38v14" stroke="#c8a05f" stroke-width="12" fill="none" stroke-linecap="round"/></g>
+<g transform="translate(180 240)">
+  <path d="M-30-40q-24 70 20 96" fill="none" stroke="#80909d" stroke-width="6"/>
+  <circle cx="-10" cy="60" r="14" fill="none" stroke="#80909d" stroke-width="6"/></g>
+</svg>

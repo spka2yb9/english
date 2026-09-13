@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="ビーカーから注がれた液体が、浅い皿の形にぴったり広がっていくイラスト。隣の木の立方体は形を変えない。">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .wash { fill: #e1edfb; stroke: none; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .water { fill: #7fb0e0; stroke: none; }
+    .waterdeep { fill: #4e86c6; stroke: #315f98; }
+    .glass { fill: #f4fbff; stroke: #2f4055; }
+    .wood { fill: #d99a2b; stroke: #a66b15; }
+    .woodtop { fill: #f0c574; stroke: #a66b15; }
+  </style>
+  <clipPath id="beaker">
+    <path transform="rotate(-42 150 150)" d="M112 78h76v128a10 10 0 0 1-10 10h-56a10 10 0 0 1-10-10z"/>
+  </clipPath>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <circle cx="120" cy="70" r="72" class="wash"/>
+  <path d="M0 300h600v100H0z" class="ground"/>
+
+  <!-- tilted beaker; the liquid inside keeps a level surface -->
+  <g transform="rotate(-42 150 150)">
+    <path d="M112 78h76v128a10 10 0 0 1-10 10h-56a10 10 0 0 1-10-10z" class="glass a"/>
+  </g>
+  <rect x="60" y="128" width="200" height="140" class="water" clip-path="url(#beaker)"/>
+  <g transform="rotate(-42 150 150)">
+    <path d="M112 78h76v128a10 10 0 0 1-10 10h-56a10 10 0 0 1-10-10z" class="a"/>
+    <path d="M106 78h88" class="a"/>
+  </g>
+
+  <!-- pouring stream -->
+  <path d="M198 150c30 26 46 62 52 106 4 26 8 36 14 42" fill="none" stroke="#4e86c6" stroke-width="16" stroke-linecap="round"/>
+  <path d="M198 150c30 26 46 62 52 106 4 26 8 36 14 42" fill="none" stroke="#9dc6ea" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- shallow dish: the same liquid now takes the dish's shape -->
+  <path d="M200 288h196l-26 56H226z" class="glass a"/>
+  <path d="M214 300h168l-20 40H234z" class="waterdeep a"/>
+
+  <!-- solid block keeps its own shape -->
+  <path d="M448 268h84v66h-84z" class="wood a"/>
+  <path d="M448 268l24-22h84l-24 22z" class="woodtop a"/>
+  <path d="M532 268l24-22v66l-24 22z" class="wood a"/>
+</svg>

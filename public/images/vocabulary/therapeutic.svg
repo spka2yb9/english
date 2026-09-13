@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="湯につかると、こわばりがほどけて楽になる">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 306h600v94H0z" class="ground"/>
+  <g transform="translate(300 300)"><path d="M-190 60V-40q0-26 26-26h328q26 0 26 26V60z" class="tealp o"/>
+  <path d="M-184-26h368" fill="none" stroke="#4e86c6" stroke-width="5"/>
+  <path d="M-190 0h380v60h-380z" fill="#e1edfb"/></g>
+<g transform="translate(300 240)"><circle r="30" fill="#f2c29d" stroke="#a86f55" stroke-width="2.5"/><path d="M-26-111q3-28 27-28 22 0 27 27-15-13-28-3-12-9-26 4z" transform="translate(0 108) scale(1.25)" fill="#34475a"/><circle cx="-10" cy="-5" r="2.4" fill="#2f4055"/><circle cx="10" cy="-5" r="2.4" fill="#2f4055"/><path d="M-9 10q9 9 18 0" fill="none" stroke="#2f4055" stroke-width="2"/><path d="M-33 45q33-18 66 0l-9 36h-48z" fill="#e86452" class="o"/></g>
+<g fill="none" stroke="#80909d" stroke-width="5" stroke-linecap="round">
+  <path d="M170 200q-18-26 0-52 18-26 0-50M430 206q-18-26 0-52 18-26 0-50"/></g>
+<path d="M220 117.2l4.0 8.8 8.8 4.0-8.8 4.0-4.0 8.8-4.0-8.8-8.8-4.0 8.8-4.0z" class="gold o"/><path d="M390 107.2l4.0 8.8 8.8 4.0-8.8 4.0-4.0 8.8-4.0-8.8-8.8-4.0 8.8-4.0z" class="gold o"/>
+</svg>

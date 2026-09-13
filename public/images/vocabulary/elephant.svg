@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="長い鼻と大きな耳を持つゾウ">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 312h600v88H0z" fill="#dfe8d8"/><path d="M0 312h600" stroke="#2f4055" stroke-width="2.5" fill="none"/>
+<g transform="translate(300 220)">
+  <path d="M-40 20q0-50 70-50h70q60 0 60 56v54q0 20-20 20h-160q-20 0-20-20z" fill="#9aa5b0" class="o"/>
+  <path d="M158 34q26 22 22 62-26 8-34-30z" fill="#8f9aa6" class="o"/>
+  <path d="M-40 20q-46-16-56-64-10-46 26-60 30-12 42 16l18 66z" fill="#a6b0bb" class="o"/>
+  <ellipse cx="-40" cy="-64" rx="52" ry="56" fill="#8f9aa6" class="o"/>
+  <circle cx="-92" cy="-70" r="7" fill="#2f4055"/>
+  <path d="M-108-48q-24 40-16 80 4 28 30 22 22-6 12-28-10-20 8-38z" fill="#a6b0bb" class="o"/>
+  <path d="M-84-30q-24 8-16 40" fill="none" stroke="#fdf8ec" stroke-width="8" stroke-linecap="round"/>
+  <g stroke="#8f9aa6" stroke-width="16" stroke-linecap="round" fill="none">
+    <path d="M-4 96v34M50 96v34M104 96v34M146 92v38"/>
+  </g>
+</g>
+</svg>

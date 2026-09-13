@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="数えきれないほど多くの点があるイラスト。">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1l8 4-8 4z" fill="#2f4055"/></marker></defs>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <g class="teal o">
+  <circle cx="90" cy="110" r="11"/><circle cx="143" cy="207" r="11"/><circle cx="196" cy="304" r="11"/><circle cx="249" cy="171" r="11"/><circle cx="302" cy="268" r="11"/><circle cx="355" cy="135" r="11"/><circle cx="408" cy="232" r="11"/><circle cx="461" cy="329" r="11"/><circle cx="514" cy="196" r="11"/><circle cx="107" cy="293" r="11"/><circle cx="160" cy="160" r="11"/><circle cx="213" cy="257" r="11"/><circle cx="266" cy="124" r="11"/><circle cx="319" cy="221" r="11"/><circle cx="372" cy="318" r="11"/><circle cx="425" cy="185" r="11"/><circle cx="478" cy="282" r="11"/><circle cx="531" cy="149" r="11"/><circle cx="124" cy="246" r="11"/><circle cx="177" cy="113" r="11"/><circle cx="230" cy="210" r="11"/><circle cx="283" cy="307" r="11"/><circle cx="336" cy="174" r="11"/><circle cx="389" cy="271" r="11"/><circle cx="442" cy="138" r="11"/><circle cx="495" cy="235" r="11"/><circle cx="548" cy="332" r="11"/><circle cx="141" cy="199" r="11"/><circle cx="194" cy="296" r="11"/><circle cx="247" cy="163" r="11"/><circle cx="300" cy="260" r="11"/><circle cx="353" cy="127" r="11"/><circle cx="406" cy="224" r="11"/><circle cx="459" cy="321" r="11"/><circle cx="512" cy="188" r="11"/><circle cx="105" cy="285" r="11"/><circle cx="158" cy="152" r="11"/><circle cx="211" cy="249" r="11"/><circle cx="264" cy="116" r="11"/><circle cx="317" cy="213" r="11"/><circle cx="370" cy="310" r="11"/><circle cx="423" cy="177" r="11"/><circle cx="476" cy="274" r="11"/><circle cx="529" cy="141" r="11"/><circle cx="122" cy="238" r="11"/><circle cx="175" cy="335" r="11"/><circle cx="228" cy="202" r="11"/><circle cx="281" cy="299" r="11"/><circle cx="334" cy="166" r="11"/><circle cx="387" cy="263" r="11"/><circle cx="440" cy="130" r="11"/><circle cx="493" cy="227" r="11"/><circle cx="546" cy="324" r="11"/><circle cx="139" cy="191" r="11"/><circle cx="192" cy="288" r="11"/><circle cx="245" cy="155" r="11"/><circle cx="298" cy="252" r="11"/><circle cx="351" cy="119" r="11"/><circle cx="404" cy="216" r="11"/><circle cx="457" cy="313" r="11"/><circle cx="510" cy="180" r="11"/><circle cx="103" cy="277" r="11"/><circle cx="156" cy="144" r="11"/><circle cx="209" cy="241" r="11"/><circle cx="262" cy="338" r="11"/><circle cx="315" cy="205" r="11"/><circle cx="368" cy="302" r="11"/><circle cx="421" cy="169" r="11"/><circle cx="474" cy="266" r="11"/><circle cx="527" cy="133" r="11"/>
+</g>
+<g class="a" marker-end="url(#ar)"><path d="M100 370h400"/></g>
+</svg>

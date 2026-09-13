@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="肥えた黒い土から、太い茎の作物がいくつも実をつけて育つ">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 306h600v94H0z" class="ground"/>
+  <path d="M0 300h600v100H0z" fill="#5b4636"/>
+<g transform="translate(110 300)"><path d="M0 0v-140" stroke="#34734d" stroke-width="10" fill="none"/><ellipse cx="-30" cy="-110" rx="28" ry="14" class="green o"/><ellipse cx="30" cy="-86" rx="28" ry="14" class="green o"/><circle cy="-152" r="22" class="coral o"/></g><g transform="translate(240 300)"><path d="M0 0v-140" stroke="#34734d" stroke-width="10" fill="none"/><ellipse cx="-30" cy="-110" rx="28" ry="14" class="green o"/><ellipse cx="30" cy="-86" rx="28" ry="14" class="green o"/><circle cy="-152" r="22" class="coral o"/></g><g transform="translate(370 300)"><path d="M0 0v-140" stroke="#34734d" stroke-width="10" fill="none"/><ellipse cx="-30" cy="-110" rx="28" ry="14" class="green o"/><ellipse cx="30" cy="-86" rx="28" ry="14" class="green o"/><circle cy="-152" r="22" class="coral o"/></g><g transform="translate(500 300)"><path d="M0 0v-140" stroke="#34734d" stroke-width="10" fill="none"/><ellipse cx="-30" cy="-110" rx="28" ry="14" class="green o"/><ellipse cx="30" cy="-86" rx="28" ry="14" class="green o"/><circle cy="-152" r="22" class="coral o"/></g>
+<path d="M40 340q20 14 40 0" fill="none" stroke="#3f3126" stroke-width="4"/><path d="M150 340q20 14 40 0" fill="none" stroke="#3f3126" stroke-width="4"/><path d="M260 340q20 14 40 0" fill="none" stroke="#3f3126" stroke-width="4"/><path d="M370 340q20 14 40 0" fill="none" stroke="#3f3126" stroke-width="4"/><path d="M480 340q20 14 40 0" fill="none" stroke="#3f3126" stroke-width="4"/>
+<circle cx="520" cy="80" r="40" class="goldp o"/><g class="golds"><path d="M520 26v-16" transform="rotate(0 520 80)"/><path d="M520 26v-16" transform="rotate(45 520 80)"/><path d="M520 26v-16" transform="rotate(90 520 80)"/><path d="M520 26v-16" transform="rotate(135 520 80)"/><path d="M520 26v-16" transform="rotate(180 520 80)"/><path d="M520 26v-16" transform="rotate(225 520 80)"/><path d="M520 26v-16" transform="rotate(270 520 80)"/><path d="M520 26v-16" transform="rotate(315 520 80)"/></g>
+</svg>

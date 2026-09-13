@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="親犬のそばに子犬が並び、同じ品種として育っているイラスト。">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1l8 4-8 4z" fill="#2f4055"/></marker></defs>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 306h600v94H0z" class="ground"/>
+  <circle cx="120" cy="100" r="56" class="greenp"/>
+<g transform="translate(220 280)">
+  <ellipse cx="0" cy="20" rx="90" ry="50" class="goldp o"/>
+  <path d="M-60 60v26M-20 64v22M28 64v22M64 56v30" fill="none" stroke="#a66b15" stroke-width="14" stroke-linecap="round"/>
+  <g transform="translate(100 -20)">
+    <path d="M-32-30q32-24 64 0 18 18 14 42-4 28-46 28t-46-28q-4-24 14-42z" class="goldp o"/>
+    <path d="M-36-32q-22-36 4-38 22-2 24 24z" class="goldd o"/>
+    <path d="M32-34q24-34 42-12 16 16-6 34z" class="goldd o"/>
+    <circle cx="6" cy="-4" r="3.4" class="ink"/><ellipse cx="44" cy="20" rx="9" ry="7" class="ink"/>
+  </g>
+</g>
+<g transform="translate(430 320) scale(0.55)">
+  <ellipse cx="0" cy="20" rx="90" ry="50" class="goldp o"/>
+  <path d="M-60 60v26M-20 64v22M28 64v22M64 56v30" fill="none" stroke="#a66b15" stroke-width="14" stroke-linecap="round"/>
+  <g transform="translate(100 -20)">
+    <path d="M-32-30q32-24 64 0 18 18 14 42-4 28-46 28t-46-28q-4-24 14-42z" class="goldp o"/>
+    <path d="M-36-32q-22-36 4-38 22-2 24 24z" class="goldd o"/>
+    <circle cx="6" cy="-4" r="3.4" class="ink"/><ellipse cx="44" cy="20" rx="9" ry="7" class="ink"/>
+  </g>
+</g>
+<path d="M340 250q60 10 80 40" class="muted" marker-end="url(#ar)"/>
+</svg>

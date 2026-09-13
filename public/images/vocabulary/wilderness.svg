@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="道も家もない、手つかずの広大な自然">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 0h600v400H0z" fill="#dceaf4"/>
+<path d="M0 250l110-110 90 70 100-100 110 110 90-70 100 90v160H0z" fill="#9aa5b0" class="o"/>
+<path d="M0 300q120-20 300 10t300-20v110H0z" fill="#7d9a70" class="o"/>
+<g transform="translate(30 330) scale(0.7)">
+  <path d="M-8 0h16v-40h-16z" fill="#8b6437"/>
+  <path d="M0-140l-32 46h64zM0-114l-44 52h88zM0-84l-54 56h108z" fill="#34734d" class="o"/>
+</g><g transform="translate(86 352) scale(0.84)">
+  <path d="M-8 0h16v-40h-16z" fill="#8b6437"/>
+  <path d="M0-140l-32 46h64zM0-114l-44 52h88zM0-84l-54 56h108z" fill="#34734d" class="o"/>
+</g><g transform="translate(142 374) scale(0.98)">
+  <path d="M-8 0h16v-40h-16z" fill="#8b6437"/>
+  <path d="M0-140l-32 46h64zM0-114l-44 52h88zM0-84l-54 56h108z" fill="#34734d" class="o"/>
+</g><g transform="translate(198 330) scale(0.7)">
+  <path d="M-8 0h16v-40h-16z" fill="#8b6437"/>
+  <path d="M0-140l-32 46h64zM0-114l-44 52h88zM0-84l-54 56h108z" fill="#34734d" class="o"/>
+</g><g transform="translate(254 352) scale(0.84)">
+  <path d="M-8 0h16v-40h-16z" fill="#8b6437"/>
+  <path d="M0-140l-32 46h64zM0-114l-44 52h88zM0-84l-54 56h108z" fill="#34734d" class="o"/>
+</g><g transform="translate(310 374) scale(0.98)">
+  <path d="M-8 0h16v-40h-16z" fill="#8b6437"/>
+  <path d="M0-140l-32 46h64zM0-114l-44 52h88zM0-84l-54 56h108z" fill="#34734d" class="o"/>
+</g><g transform="translate(366 330) scale(0.7)">
+  <path d="M-8 0h16v-40h-16z" fill="#8b6437"/>
+  <path d="M0-140l-32 46h64zM0-114l-44 52h88zM0-84l-54 56h108z" fill="#34734d" class="o"/>
+</g><g transform="translate(422 352) scale(0.84)">
+  <path d="M-8 0h16v-40h-16z" fill="#8b6437"/>
+  <path d="M0-140l-32 46h64zM0-114l-44 52h88zM0-84l-54 56h108z" fill="#34734d" class="o"/>
+</g><g transform="translate(478 374) scale(0.98)">
+  <path d="M-8 0h16v-40h-16z" fill="#8b6437"/>
+  <path d="M0-140l-32 46h64zM0-114l-44 52h88zM0-84l-54 56h108z" fill="#34734d" class="o"/>
+</g><g transform="translate(534 330) scale(0.7)">
+  <path d="M-8 0h16v-40h-16z" fill="#8b6437"/>
+  <path d="M0-140l-32 46h64zM0-114l-44 52h88zM0-84l-54 56h108z" fill="#34734d" class="o"/>
+</g>
+<path d="M0 380q160-30 300 0t300-20v40H0z" fill="#5b8caa" opacity="0.6"/>
+<circle cx="510" cy="70" r="30" class="goldp o"/><g class="golds"><path d="M510 26v-16" transform="rotate(0 510 70)"/><path d="M510 26v-16" transform="rotate(45 510 70)"/><path d="M510 26v-16" transform="rotate(90 510 70)"/><path d="M510 26v-16" transform="rotate(135 510 70)"/><path d="M510 26v-16" transform="rotate(180 510 70)"/><path d="M510 26v-16" transform="rotate(225 510 70)"/><path d="M510 26v-16" transform="rotate(270 510 70)"/><path d="M510 26v-16" transform="rotate(315 510 70)"/></g>
+</svg>

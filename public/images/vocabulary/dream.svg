@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="眠っている人の頭の上に、夢の場面が雲の中で浮かんでいるイラスト。">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 306h600v94H0z" class="ground"/>
+  <g transform="translate(180 320)">
+  <path d="M-110-30h220v40h-220z" class="tealp o"/>
+  <ellipse cx="-60" cy="-46" rx="40" ry="24" fill="#fffdf6" class="o"/>
+  <g transform="translate(-60 -60)">
+    <circle r="24" fill="#f2c29d" stroke="#a86f55" stroke-width="2.5"/>
+    <path d="M-24-2q3-28 25-28 24 0 27 26-13-10-27-4-12-11-25 6z" fill="#34475a"/>
+    <path d="M-9 2h6M9 2h-6" class="a"/>
+  </g>
+</g>
+<g transform="translate(410 160)">
+  <path d="M-150 40q-16-70 50-84 20-56 96-40 46 6 60 54 74-8 82 60 4 60-64 66h-180q-46-4-44-56z" fill="#fffdf6" stroke="#2f4055" stroke-width="3"/>
+  <g transform="translate(0 16)">
+    <circle cx="-60" cy="-6" r="26" class="goldp o"/><g class="golds"><path d="M-60 -46v-16" transform="rotate(0 -60 -6)"/><path d="M-60 -46v-16" transform="rotate(45 -60 -6)"/><path d="M-60 -46v-16" transform="rotate(90 -60 -6)"/><path d="M-60 -46v-16" transform="rotate(135 -60 -6)"/><path d="M-60 -46v-16" transform="rotate(180 -60 -6)"/><path d="M-60 -46v-16" transform="rotate(225 -60 -6)"/><path d="M-60 -46v-16" transform="rotate(270 -60 -6)"/><path d="M-60 -46v-16" transform="rotate(315 -60 -6)"/></g>
+    <path d="M20 30L60-20l40 50z" class="tealp o"/>
+  </g>
+</g>
+<g fill="#fffdf6" stroke="#2f4055" stroke-width="2.5"><circle cx="230" cy="250" r="12"/><circle cx="200" cy="276" r="8"/></g>
+</svg>

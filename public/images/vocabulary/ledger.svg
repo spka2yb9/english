@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="取引を一行ずつ書きこんでいく、分厚い帳簿">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 306h600v94H0z" class="ground"/>
+  <path d="M40 340h520v20H40z" fill="#c9a464" class="o"/><path d="M80 360v60M520 360v60" stroke="#a0764a" stroke-width="14" stroke-linecap="round" fill="none"/>
+<g transform="translate(300 210)"><path d="M-230 130q110-40 226-16v-250q-116-26-226 14z" fill="#fffefd" class="o"/>
+  <path d="M230 130q-110-40-226-16v-250q116-26 226 14z" fill="#fffefd" class="o"/>
+  <path d="M-4-122v246" fill="none" stroke="#80909d" stroke-width="3"/>
+  <path d="M-200 -80q90-18 190-6" fill="none" stroke="#dde4e8" stroke-width="3"/><path d="M-200 -38q90-18 190-6" fill="none" stroke="#dde4e8" stroke-width="3"/><path d="M-200 4q90-18 190-6" fill="none" stroke="#dde4e8" stroke-width="3"/><path d="M-200 46q90-18 190-6" fill="none" stroke="#dde4e8" stroke-width="3"/><path d="M-200 88q90-18 190-6" fill="none" stroke="#dde4e8" stroke-width="3"/>
+  <path d="M200 -80q-90-18-190-6" fill="none" stroke="#dde4e8" stroke-width="3"/><path d="M200 -38q-90-18-190-6" fill="none" stroke="#dde4e8" stroke-width="3"/><path d="M200 4q-90-18-190-6" fill="none" stroke="#dde4e8" stroke-width="3"/><path d="M200 46q-90-18-190-6" fill="none" stroke="#dde4e8" stroke-width="3"/><path d="M200 88q-90-18-190-6" fill="none" stroke="#dde4e8" stroke-width="3"/>
+  <rect x="-180" y="-90" width="90" height="12" rx="6" fill="#80909d"/><rect x="-70" y="-90" width="50" height="12" rx="6" class="teal"/><rect x="-180" y="-48" width="90" height="12" rx="6" fill="#80909d"/><rect x="-70" y="-48" width="50" height="12" rx="6" class="teal"/><rect x="-180" y="-6" width="90" height="12" rx="6" fill="#80909d"/><rect x="-70" y="-6" width="50" height="12" rx="6" class="teal"/><rect x="-180" y="36" width="90" height="12" rx="6" fill="#80909d"/><rect x="-70" y="36" width="50" height="12" rx="6" class="teal"/>
+  <rect x="30" y="-90" width="90" height="12" rx="6" fill="#80909d"/><rect x="132" y="-90" width="46" height="12" rx="6" class="coral"/><rect x="30" y="-48" width="90" height="12" rx="6" fill="#80909d"/><rect x="132" y="-48" width="46" height="12" rx="6" class="coral"/><rect x="30" y="-6" width="90" height="12" rx="6" fill="#80909d"/><rect x="132" y="-6" width="46" height="12" rx="6" class="coral"/><rect x="30" y="36" width="90" height="12" rx="6" fill="#80909d"/><rect x="132" y="36" width="46" height="12" rx="6" class="coral"/>
+  <path d="M-230 130q110-40 226-16M230 130q-110-40-226-16" fill="none" class="o"/></g>
+</svg>

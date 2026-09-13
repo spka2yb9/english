@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="下水管が汚水を運び、処理場できれいにする">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 0h600v170H0z" fill="#dceaf4"/>
+<path d="M0 170h600v230H0z" fill="#a8845c"/>
+<path d="M0 158h600v14H0z" fill="#dfe8d8"/>
+<path d="M0 158h600" stroke="#2f4055" stroke-width="2.5" fill="none"/>
+<g transform="translate(120 158)">
+  <path d="M-60 0v-90h120V0z" fill="#fffdf6" class="o"/>
+  <path d="M-70-90L0-134l70 44z" class="coral o"/>
+</g>
+<path d="M120 170v70h280" fill="none" stroke="#8f9aa6" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M120 170v70h280" fill="none" stroke="#2f4055" stroke-width="2.5"/>
+<g fill="#6b7a5e"><circle cx="200" cy="240" r="9"/><circle cx="270" cy="240" r="7"/><circle cx="330" cy="240" r="8"/></g>
+<g transform="translate(470 250)">
+  <ellipse rx="100" ry="34" fill="#8f9aa6" class="o"/>
+  <path d="M-100 0v70q0 34 100 34t100-34V0z" fill="#8f9aa6" class="o"/>
+  <ellipse ry="26" rx="86" fill="#e1edfb" class="o"/>
+  <g fill="none" stroke="#4e86c6" stroke-width="3"><ellipse ry="14" rx="50"/></g>
+</g>
+<g fill="none" stroke="#4e986a" stroke-width="7.2" stroke-linecap="round" stroke-linejoin="round"><path d="M446.0 160l17.6 19.200000000000003 33.6-41.6"/></g>
+</svg>

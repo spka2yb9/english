@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="くずれた建物の、こわれた石やコンクリート">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 306h600v94H0z" class="ground"/>
+  <path d="M0 306h600v94H0z" class="ground"/>
+<g transform="translate(120 306)"><path d="M-70 0v-110h50v50h40V0z" fill="#c3cbd1" class="o"/>
+  <path d="M-70-110l24-24 20 20" fill="none" stroke="#80909d" stroke-width="5"/></g>
+<rect x="-24" y="-16" width="48" height="32" rx="3" fill="#c3cbd1" stroke="#2f4055" stroke-width="2.5" transform="translate(240 300) rotate(-40)"/><rect x="-24" y="-16" width="48" height="32" rx="3" fill="#b0b8bd" stroke="#2f4055" stroke-width="2.5" transform="translate(306 300) rotate(-18)"/><rect x="-24" y="-16" width="48" height="32" rx="3" fill="#d5dbde" stroke="#2f4055" stroke-width="2.5" transform="translate(372 300) rotate(4)"/><rect x="-24" y="-16" width="48" height="32" rx="3" fill="#a9b3ba" stroke="#2f4055" stroke-width="2.5" transform="translate(438 300) rotate(26)"/><rect x="-24" y="-16" width="48" height="32" rx="3" fill="#c9d0d4" stroke="#2f4055" stroke-width="2.5" transform="translate(504 300) rotate(48)"/><rect x="-24" y="-16" width="48" height="32" rx="3" fill="#bcc4c9" stroke="#2f4055" stroke-width="2.5" transform="translate(240 336) rotate(70)"/><rect x="-24" y="-16" width="48" height="32" rx="3" fill="#d5dbde" stroke="#2f4055" stroke-width="2.5" transform="translate(306 336) rotate(92)"/><rect x="-24" y="-16" width="48" height="32" rx="3" fill="#b0b8bd" stroke="#2f4055" stroke-width="2.5" transform="translate(372 336) rotate(114)"/><rect x="-24" y="-16" width="48" height="32" rx="3" fill="#c3cbd1" stroke="#2f4055" stroke-width="2.5" transform="translate(438 336) rotate(136)"/><rect x="-24" y="-16" width="48" height="32" rx="3" fill="#a9b3ba" stroke="#2f4055" stroke-width="2.5" transform="translate(504 336) rotate(158)"/>
+<path d="M280 250l30 20" fill="none" stroke="#80909d" stroke-width="4"/><path d="M340 250l30 20" fill="none" stroke="#80909d" stroke-width="4"/><path d="M400 250l30 20" fill="none" stroke="#80909d" stroke-width="4"/>
+</svg>

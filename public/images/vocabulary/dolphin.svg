@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="背びれととがった口を持つイルカが水面から跳ねている">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 300h600v100H0z" fill="#cfe0ec"/>
+<g fill="none" stroke="#a8c4da" stroke-width="4"><path d="M40 336h160M360 356h180"/></g>
+<g transform="translate(300 200) rotate(-14)">
+  <path d="M-180 30q0-64 90-70 90-6 150 22 56 26 26 52-70 26-166 12-100-16-100-16z" fill="#7a9ec0" class="o"/>
+  <path d="M-180 30q-46 0-56-30 44-14 84 4z" fill="#7a9ec0" class="o"/>
+  <path d="M-186 6q-40-6-52-24 34-10 62 6z" fill="#7a9ec0" class="o"/>
+  <path d="M0-40q10-60 44-64-10 42-16 62z" fill="#5b7a9e" class="o"/>
+  <path d="M76 44q46 20 90-2-30 40-96 18z" fill="#5b7a9e" class="o"/>
+  <path d="M-130 22q90 26 190 6" fill="none" stroke="#d6e6f0" stroke-width="12"/>
+  <circle cx="-150" cy="-2" r="7" fill="#2f4055"/>
+  <path d="M-170 12q18 8 32 2" stroke="#2f4055" stroke-width="3" fill="none"/>
+</g>
+<g fill="none" stroke="#fffefd" stroke-width="6" stroke-linecap="round">
+  <path d="M120 316q30-16 60 0M440 330q30-16 60 0"/>
+</g>
+</svg>

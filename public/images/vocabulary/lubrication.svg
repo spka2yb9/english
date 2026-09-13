@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="油をさすと、きしみが消えてなめらかに回る">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 306h600v94H0z" class="ground"/>
+  <path d="M300 20v360" stroke="#80909d" stroke-width="3" stroke-dasharray="10 9" fill="none"/>
+<g transform="translate(150 210)"><circle r="66" class="teal o"/>
+  <rect x="-9" y="-84" width="18" height="20" rx="3" class="teal o" transform="rotate(0)"/><rect x="-9" y="-84" width="18" height="20" rx="3" class="teal o" transform="rotate(45)"/><rect x="-9" y="-84" width="18" height="20" rx="3" class="teal o" transform="rotate(90)"/><rect x="-9" y="-84" width="18" height="20" rx="3" class="teal o" transform="rotate(135)"/><rect x="-9" y="-84" width="18" height="20" rx="3" class="teal o" transform="rotate(180)"/><rect x="-9" y="-84" width="18" height="20" rx="3" class="teal o" transform="rotate(225)"/><rect x="-9" y="-84" width="18" height="20" rx="3" class="teal o" transform="rotate(270)"/><rect x="-9" y="-84" width="18" height="20" rx="3" class="teal o" transform="rotate(315)"/>
+  <circle r="22" fill="#fffdf6" class="o"/></g>
+<path d="M70 130q-18 16 0 32" fill="none" stroke="#e86452" stroke-width="5"/><path d="M60 160q-18 16 0 32" fill="none" stroke="#e86452" stroke-width="5"/>
+<circle cx="150" cy="210" r="126" fill="none" stroke="#80909d" stroke-width="4" stroke-dasharray="11 10"/>
+<g transform="translate(450 230)"><circle r="66" class="teal o"/>
+  <rect x="-9" y="-84" width="18" height="20" rx="3" class="teal o" transform="rotate(0)"/><rect x="-9" y="-84" width="18" height="20" rx="3" class="teal o" transform="rotate(45)"/><rect x="-9" y="-84" width="18" height="20" rx="3" class="teal o" transform="rotate(90)"/><rect x="-9" y="-84" width="18" height="20" rx="3" class="teal o" transform="rotate(135)"/><rect x="-9" y="-84" width="18" height="20" rx="3" class="teal o" transform="rotate(180)"/><rect x="-9" y="-84" width="18" height="20" rx="3" class="teal o" transform="rotate(225)"/><rect x="-9" y="-84" width="18" height="20" rx="3" class="teal o" transform="rotate(270)"/><rect x="-9" y="-84" width="18" height="20" rx="3" class="teal o" transform="rotate(315)"/>
+  <circle r="22" fill="#fffdf6" class="o"/></g>
+<g transform="translate(430 100) rotate(150)"><path d="M-24 0v-40h48V0z" class="goldd o"/>
+  <path d="M24-30l40-16v34z" class="goldd o"/></g>
+<path d="M455 140c6.4 6.4 6.4 12.0 0 15.200000000000001c-6.4-3.2-6.4-8.8 0-15.200000000000001z" class="gold o"/><path d="M467 154c6.4 6.4 6.4 12.0 0 15.200000000000001c-6.4-3.2-6.4-8.8 0-15.200000000000001z" class="gold o"/>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="体の守り手が、入りこんだ菌を取り囲む">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1l8 4-8 4z" fill="#2f4055"/></marker></defs>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 306h600v94H0z" class="ground"/>
+  <g transform="translate(300 200)"><circle r="150" fill="#fde9e3" class="o"/>
+  <g transform="translate(0 0) scale(1.1)"><g class="violets" stroke-width="4"><path d="M0 -22v-12" transform="rotate(0)"/><path d="M0 -22v-12" transform="rotate(45)"/><path d="M0 -22v-12" transform="rotate(90)"/><path d="M0 -22v-12" transform="rotate(135)"/><path d="M0 -22v-12" transform="rotate(180)"/><path d="M0 -22v-12" transform="rotate(225)"/><path d="M0 -22v-12" transform="rotate(270)"/><path d="M0 -22v-12" transform="rotate(315)"/></g><circle r="22" class="violet o"/><circle cx="-7" cy="-5" r="4" fill="#fffefd"/></g>
+  <circle cx="90" cy="0" r="26" class="tealp o"/><circle cx="45" cy="78" r="26" class="tealp o"/><circle cx="-45" cy="78" r="26" class="tealp o"/><circle cx="-90" cy="0" r="26" class="tealp o"/><circle cx="-45" cy="-78" r="26" class="tealp o"/><circle cx="45" cy="-78" r="26" class="tealp o"/>
+  <path d="M62 0L40 0" class="a" marker-end="url(#ar)"/><path d="M31 54L20 35" class="a" marker-end="url(#ar)"/><path d="M-31 54L-20 35" class="a" marker-end="url(#ar)"/><path d="M-62 0L-40 0" class="a" marker-end="url(#ar)"/><path d="M-31 -54L-20 -35" class="a" marker-end="url(#ar)"/><path d="M31 -54L20 -35" class="a" marker-end="url(#ar)"/></g>
+</svg>

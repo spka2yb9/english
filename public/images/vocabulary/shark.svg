@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="三角の背びれを水面に出して泳ぐサメ">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 210h600v190H0z" fill="#cfe0ec"/>
+<path d="M0 210h600" stroke="#2f4055" stroke-width="2.5" fill="none"/>
+<g transform="translate(300 290)">
+  <path d="M-190 10q0-56 90-64 96-8 156 26 54 30 20 52-76 24-176 6-90-16-90-20z" fill="#8f9aa6" class="o"/>
+  <path d="M-190 10q-46 4-56-26 44-16 84 2z" fill="#8f9aa6" class="o"/>
+  <path d="M-196-12q-40-8-50-28 34-8 62 10z" fill="#8f9aa6" class="o"/>
+  <path d="M-10-52q20-80 50-88-4 52-14 86z" fill="#6f7b88" class="o"/>
+  <path d="M70 40q50 22 96 0-30 40-100 16z" fill="#6f7b88" class="o"/>
+  <path d="M-130 4q94 24 190 6" fill="none" stroke="#d6dde4" stroke-width="12"/>
+  <circle cx="-152" cy="-16" r="7" fill="#2f4055"/>
+  <path d="M-176 6q34 14 62 4" fill="none" stroke="#2f4055" stroke-width="3"/>
+  <g fill="#fffefd" stroke="#2f4055" stroke-width="1.4">
+<path d="M-172 6l6 12 6-12z"/><path d="M-154 6l6 12 6-12z"/><path d="M-136 6l6 12 6-12z"/><path d="M-118 6l6 12 6-12z"/><path d="M-100 6l6 12 6-12z"/><path d="M-82 6l6 12 6-12z"/>
+  </g>
+  <g stroke="#6f7b88" stroke-width="4" fill="none">
+    <path d="M-70-20v26M-52-22v28M-34-22v28"/>
+  </g>
+</g>
+</svg>

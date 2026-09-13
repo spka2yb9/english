@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="コーヒーの代わりにお茶を選ぶ">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M40 340h520v20H40z" fill="#c9a464" class="o"/><path d="M80 360v60M520 360v60" stroke="#a0764a" stroke-width="14" stroke-linecap="round" fill="none"/>
+<g transform="translate(180 270)">
+  <path d="M-44-50h88l-10 70q-2 12-34 12t-34-12z" fill="#e8f0f6" class="o"/>
+  <path d="M-38-20h76l-6 40q-2 10-32 10t-32-10z" fill="#6b4c28"/>
+  <path d="M44-40q34 0 34 22t-34 22" fill="none" stroke="#2f4055" stroke-width="7"/>
+</g>
+<g fill="none" stroke="#e86452" stroke-width="11.700000000000001" stroke-linecap="round"><path d="M146.2 236.2l67.60000000000001 67.60000000000001M213.8 236.2l-67.60000000000001 67.60000000000001"/></g>
+<g transform="translate(420 270)">
+  <path d="M-44-50h88l-10 70q-2 12-34 12t-34-12z" fill="#e8f0f6" class="o"/>
+  <path d="M-38-20h76l-6 40q-2 10-32 10t-32-10z" class="green"/>
+  <path d="M44-40q34 0 34 22t-34 22" fill="none" stroke="#2f4055" stroke-width="7"/>
+</g>
+<g fill="none" stroke="#4e986a" stroke-width="5.3999999999999995" stroke-linecap="round" stroke-linejoin="round"><path d="M402.0 130l13.2 14.399999999999999 25.2-31.2"/></g>
+<g class="a" marker-end="url(#ar)"><path d="M270 150h60"/></g>
+</svg>

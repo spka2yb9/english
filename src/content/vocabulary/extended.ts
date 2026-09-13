@@ -1,0 +1,25414 @@
+// このファイルは scripts/vocab4500.mjs で生成する(手で編集しない)。
+// 3,000語から4,500語へ拡張した分。Oxford 5000 の C1帯を B2到達に必要な受容語彙として採り、
+// 高頻度句動詞・定型表現・派生語を加えた。例文・和訳・コロケーション・覚えるヒントは本プロジェクトの自作。
+import type { VocabularyEntry } from '../types'
+
+type ExtendedRow = [
+  word: string,
+  level: 'A2' | 'B1' | 'B2',
+  partOfSpeech: string,
+  meaningsJa: string[],
+  pronunciation: string,
+  exampleSentence: string,
+  exampleTranslationJa: string,
+  collocations: string[] | null,
+  mnemonic: string,
+]
+
+const rows: ExtendedRow[] = [
+  [
+    "abolish",
+    "B2",
+    "動詞",
+    [
+      "(制度・法律を)廃止する"
+    ],
+    "/əˈbɑlɪʃ/",
+    "The country abolished the death penalty more than twenty years ago.",
+    "その国は20年以上前に死刑を廃止した。",
+    [
+      "abolish slavery",
+      "abolish a law",
+      "abolish a tax"
+    ],
+    "ab-(離れて)+ ol(育つ。adolescent と同語根)。育ってきた制度を根こそぎ取り去る。物ではなく法律・制度・慣習に使う。"
+  ],
+  [
+    "abortion",
+    "B2",
+    "名詞",
+    [
+      "妊娠中絶",
+      "(計画の)中止"
+    ],
+    "/əˈbɔrʃən/",
+    "The clinic offers counselling to women considering an abortion.",
+    "その診療所は中絶を考えている女性に相談を提供している。",
+    [
+      "have an abortion",
+      "abortion law"
+    ],
+    "ab-(離れて)+ ort(生まれる。origin と同語根)。生まれる前に離れてしまうこと。計画が途中で流れる意味にも広がる。"
+  ],
+  [
+    "absence",
+    "B2",
+    "名詞",
+    [
+      "不在",
+      "欠席",
+      "欠如"
+    ],
+    "/ˈæbsəns/",
+    "Her long absence from the office worried her colleagues.",
+    "彼女が長く職場を離れていたことは同僚を心配させた。",
+    [
+      "in the absence of",
+      "absence from work",
+      "a long absence"
+    ],
+    "ab-(離れて)+ ess(ある。essence と同語根)。「その場にあることから離れている」。人の欠席にも、物のないことにも使う。"
+  ],
+  [
+    "absent",
+    "B2",
+    "形容詞",
+    [
+      "欠席の",
+      "不在の",
+      "上の空の"
+    ],
+    "/ˈæbsənt/",
+    "Three students were absent from class because of the flu.",
+    "インフルエンザで3人の生徒が授業を欠席した。",
+    [
+      "be absent from",
+      "absent without leave"
+    ],
+    "absence の形容詞。be absent from の from が「その場から離れている」という語源そのままの形。"
+  ],
+  [
+    "absurd",
+    "B2",
+    "形容詞",
+    [
+      "ばかげた",
+      "不合理な"
+    ],
+    "/əbˈsɝd/",
+    "It seems absurd to spend that much money on a single meal.",
+    "一食にそれほどの金額を使うのはばかげているように思える。",
+    [
+      "absurd idea",
+      "utterly absurd",
+      "sound absurd"
+    ],
+    "ラテン語 absurdus(耳障りな)。音がひどくずれている感じから、理屈がずれていて聞くに堪えない、へと広がった。"
+  ],
+  [
+    "abundance",
+    "B2",
+    "名詞",
+    [
+      "豊富さ",
+      "大量"
+    ],
+    "/əˈbʌndəns/",
+    "The region is known for an abundance of fresh seafood.",
+    "その地域は新鮮な魚介類が豊富なことで知られている。",
+    [
+      "an abundance of",
+      "in abundance"
+    ],
+    "ab-(あふれ出る)+ und(波。wave と同じイメージ)。波のようにあふれてくる量。in abundance で「ありあまるほど」。"
+  ],
+  [
+    "abuse",
+    "B2",
+    "名詞・動詞",
+    [
+      "乱用",
+      "虐待",
+      "乱用する"
+    ],
+    "/əbˈjus/",
+    "Managers who abuse their power should be held responsible.",
+    "権力を乱用する管理職は責任を問われるべきだ。",
+    [
+      "abuse of power",
+      "child abuse",
+      "drug abuse"
+    ],
+    "ab-(外れて)+ use(使う)。本来の使い方から外れた使い方が核。物なら乱用、人に向かえば虐待。"
+  ],
+  [
+    "academy",
+    "B2",
+    "名詞",
+    [
+      "学院",
+      "専門学校",
+      "学術団体"
+    ],
+    "/əˈkædəmi/",
+    "He trained at a national academy for young musicians.",
+    "彼は若い音楽家のための国立学院で訓練を受けた。",
+    [
+      "military academy",
+      "the Academy Awards"
+    ],
+    "academic と同じくプラトンの学園アカデメイアが語源。専門を深く教える場、または権威ある学術団体を指す。"
+  ],
+  [
+    "accelerate",
+    "B2",
+    "動詞",
+    [
+      "加速する",
+      "早める"
+    ],
+    "/ækˈsɛlɚeɪt/",
+    "Online shopping accelerated after the new delivery service started.",
+    "新しい配送サービスが始まってからネット通販が加速した。",
+    [
+      "accelerate growth",
+      "accelerate a process"
+    ],
+    "ac-(〜へ)+ celer(速い。celerity)。アクセルと同じ語。速度だけでなく、変化や成長の進み方にも使う。"
+  ],
+  [
+    "acceptance",
+    "B2",
+    "名詞",
+    [
+      "受け入れ",
+      "受諾",
+      "承認"
+    ],
+    "/ækˈsɛptəns/",
+    "Her acceptance of the offer surprised everyone on the team.",
+    "彼女がその申し出を受けたことはチーム全員を驚かせた。",
+    [
+      "acceptance of",
+      "widespread acceptance",
+      "acceptance speech"
+    ],
+    "accept(受け取る)の名詞。差し出されたものを手に取る動作が、そのまま「認めること」を表す。"
+  ],
+  [
+    "accessible",
+    "B2",
+    "形容詞",
+    [
+      "近づきやすい",
+      "利用しやすい",
+      "分かりやすい"
+    ],
+    "/ækˈsɛsəbəl/",
+    "The museum is fully accessible to visitors in wheelchairs.",
+    "その美術館は車いすの来館者が完全に利用できるようになっている。",
+    [
+      "easily accessible",
+      "accessible to",
+      "make accessible"
+    ],
+    "access(そこへ行ける)+ -ible(できる)。物理的に行けるかだけでなく、内容が難しくないという意味にも使う。"
+  ],
+  [
+    "accomplishment",
+    "B2",
+    "名詞",
+    [
+      "達成",
+      "業績",
+      "成し遂げたこと"
+    ],
+    "/əˈkɑmplɪʃmənt/",
+    "Finishing the marathon was the greatest accomplishment of her life.",
+    "マラソンを完走したことは彼女の人生で最大の達成だった。",
+    [
+      "a great accomplishment",
+      "sense of accomplishment"
+    ],
+    "accomplish(最後まで満たしきる)の名詞。途中ではなく最後まで届いた結果を指すので、誇れる成果の響きがある。"
+  ],
+  [
+    "accordance",
+    "B2",
+    "名詞",
+    [
+      "一致",
+      "合致"
+    ],
+    "/əˈkɔrdəns/",
+    "All the work was carried out in accordance with safety rules.",
+    "すべての作業は安全規則に従って行われた。",
+    [
+      "in accordance with"
+    ],
+    "accord(心 cord が合う)の名詞。ほぼ in accordance with の形だけで使い、「〜と合った形で」つまり「〜に従って」。"
+  ],
+  [
+    "accordingly",
+    "B2",
+    "副詞",
+    [
+      "それに応じて",
+      "したがって"
+    ],
+    "/əˈkɔrdɪŋli/",
+    "Costs have risen, and we have adjusted our prices accordingly.",
+    "費用が上がったので、それに応じて価格を調整した。",
+    [
+      "act accordingly",
+      "adjust accordingly"
+    ],
+    "according(合わせて)の副詞。前に言ったことに「合わせて」動く、が核。文頭に置けば「したがって」。"
+  ],
+  [
+    "accountability",
+    "B2",
+    "名詞",
+    [
+      "説明責任"
+    ],
+    "/əˈkaʊntəbɪlɪti/",
+    "Voters are demanding greater accountability from local officials.",
+    "有権者は地方公務員により大きな説明責任を求めている。",
+    [
+      "public accountability",
+      "demand accountability"
+    ],
+    "account(数え上げて説明する)+ -ability。求められたら数え上げて示せる状態のこと。"
+  ],
+  [
+    "accountable",
+    "B2",
+    "形容詞",
+    [
+      "説明責任がある",
+      "責任を負う"
+    ],
+    "/əˈkaʊntəbəl/",
+    "Managers are accountable to shareholders for how they spend money.",
+    "経営陣は資金の使い方について株主に説明する責任がある。",
+    [
+      "hold someone accountable",
+      "accountable for",
+      "accountable to"
+    ],
+    "account(説明する)+ -able。「聞かれたら説明できる立場にある」。for が説明する中身、to が説明する相手。"
+  ],
+  [
+    "accumulate",
+    "B2",
+    "動詞",
+    [
+      "蓄積する",
+      "たまる",
+      "ためこむ"
+    ],
+    "/əkˈjumjəleɪt/",
+    "Dust had accumulated on the shelves during the long holiday.",
+    "長い休暇の間に棚にほこりがたまっていた。",
+    [
+      "accumulate wealth",
+      "accumulate evidence",
+      "accumulate over time"
+    ],
+    "ac-(〜へ)+ cumul(積み重ね。cumulus 積乱雲)。少しずつ山になっていくのが核で、努力せず自然にたまる場合にも使う。"
+  ],
+  [
+    "accumulation",
+    "B2",
+    "名詞",
+    [
+      "蓄積",
+      "堆積"
+    ],
+    "/əkjumjəˈleɪʃən/",
+    "The accumulation of small errors caused the system to fail.",
+    "小さな誤りの蓄積がシステムの故障を引き起こした。",
+    [
+      "accumulation of wealth",
+      "snow accumulation"
+    ],
+    "accumulate の名詞。積み重なった山そのもの、または積み重なる過程を指す。"
+  ],
+  [
+    "accusation",
+    "B2",
+    "名詞",
+    [
+      "非難",
+      "告発",
+      "申し立て"
+    ],
+    "/ækjəˈzeɪʃən/",
+    "He strongly denied the accusation that he had copied the report.",
+    "彼は報告書を写したという非難を強く否定した。",
+    [
+      "make an accusation",
+      "face accusations",
+      "a false accusation"
+    ],
+    "accuse(原因はお前だと突きつける)の名詞。証明されたものではなく、あくまで向けられた言い分である点が要点。"
+  ],
+  [
+    "accused",
+    "B2",
+    "名詞",
+    [
+      "被告人"
+    ],
+    "/əkˈjuzd/",
+    "The accused pleaded not guilty at the start of the trial.",
+    "被告人は裁判の冒頭で無罪を主張した。",
+    [
+      "the accused",
+      "represent the accused"
+    ],
+    "accuse の過去分詞が the を伴って名詞になった形。「告発された人」がそのまま法廷の被告人を指す。"
+  ],
+  [
+    "acquisition",
+    "B2",
+    "名詞",
+    [
+      "獲得",
+      "習得",
+      "買収"
+    ],
+    "/ækwəˈzɪʃən/",
+    "The acquisition of a second language takes years of steady practice.",
+    "第二言語の習得には何年もの地道な練習が必要だ。",
+    [
+      "language acquisition",
+      "the acquisition of",
+      "a major acquisition"
+    ],
+    "acquire(自分のものにする)の名詞。ac-(〜へ)+ quir(求める。inquire)。企業が会社を手に入れれば買収、能力なら習得。"
+  ],
+  [
+    "acre",
+    "B2",
+    "名詞",
+    [
+      "エーカー"
+    ],
+    "/ˈeɪkɚ/",
+    "The family farm covers about two hundred acres of land.",
+    "その家族の農場は約200エーカーの土地を占めている。",
+    [
+      "a hundred acres",
+      "acres of land"
+    ],
+    "もとは「耕された野」を指す古い語で、agriculture の agr- と同語源。約4,047平方メートル、サッカー場より少し小さい広さ。"
+  ],
+  [
+    "activation",
+    "B2",
+    "名詞",
+    [
+      "起動",
+      "活性化",
+      "有効化"
+    ],
+    "/æktəˈveɪʃən/",
+    "Activation of the alarm system requires a four-digit code.",
+    "警報システムの起動には4桁の暗証番号が必要だ。",
+    [
+      "activation code",
+      "activation of"
+    ],
+    "activate(動く状態にする)の名詞。眠っていたものにスイッチを入れて働かせること。"
+  ],
+  [
+    "activist",
+    "B2",
+    "名詞",
+    [
+      "活動家"
+    ],
+    "/ˈæktəvəst/",
+    "Environmental activists gathered outside the government building.",
+    "環境活動家たちが政府庁舎の外に集まった。",
+    [
+      "human rights activist",
+      "political activist"
+    ],
+    "active(活動的な)+ -ist(人)。主義主張のために実際に動く人を指し、単に元気な人には使わない。"
+  ],
+  [
+    "acute",
+    "B2",
+    "形容詞",
+    [
+      "深刻な",
+      "鋭い",
+      "急性の"
+    ],
+    "/əkˈjut/",
+    "The city faces an acute shortage of affordable housing.",
+    "その都市は手頃な価格の住宅の深刻な不足に直面している。",
+    [
+      "acute pain",
+      "acute shortage",
+      "acute angle"
+    ],
+    "ラテン語 acutus(とがった)。針が刺さるような鋭さが核。痛みや不足なら差し迫って深刻、病気なら急性。"
+  ],
+  [
+    "adaptation",
+    "B2",
+    "名詞",
+    [
+      "適応",
+      "順応",
+      "翻案"
+    ],
+    "/ædəpˈteɪʃən/",
+    "The film is an adaptation of a novel published in the 1950s.",
+    "その映画は1950年代に出版された小説の翻案だ。",
+    [
+      "film adaptation",
+      "adaptation to",
+      "climate adaptation"
+    ],
+    "adapt(合わせる)の名詞。ad-(〜へ)+ apt(適した)。環境に自分を合わせれば適応、別の形式に作品を合わせれば翻案。"
+  ],
+  [
+    "adhere",
+    "B2",
+    "動詞",
+    [
+      "付着する",
+      "順守する"
+    ],
+    "/ədˈhɪr/",
+    "All staff must adhere to the safety guidelines at all times.",
+    "全職員は常に安全基準を順守しなければならない。",
+    [
+      "adhere to rules",
+      "adhere to a surface"
+    ],
+    "ad-(〜へ)+ here(くっつく。cohere)。接着剤の adhesive と同じ語根。物がくっつく用法から、規則にぴったり従う意味へ。"
+  ],
+  [
+    "adjacent",
+    "B2",
+    "形容詞",
+    [
+      "隣接した",
+      "すぐ隣の"
+    ],
+    "/əˈdʒeɪsənt/",
+    "Our office is adjacent to the station, so commuting is easy.",
+    "私たちのオフィスは駅に隣接しているので通勤が楽だ。",
+    [
+      "adjacent to",
+      "adjacent building",
+      "adjacent rooms"
+    ],
+    "ad-(〜へ)+ jac(横たわる。project の ject と同語根)。すぐ横に寝そべっている位置関係。next to より硬い語。"
+  ],
+  [
+    "adjustment",
+    "B2",
+    "名詞",
+    [
+      "調整",
+      "修正",
+      "順応"
+    ],
+    "/əˈdʒʌstmənt/",
+    "A few small adjustments to the schedule solved the problem.",
+    "予定へのわずかな調整が問題を解決した。",
+    [
+      "make an adjustment",
+      "minor adjustment",
+      "adjustment to"
+    ],
+    "adjust(ちょうどよく合わせる)の名詞。大きく作り直すのではなく、少し動かして合わせる含み。"
+  ],
+  [
+    "administer",
+    "B2",
+    "動詞",
+    [
+      "管理する",
+      "運営する",
+      "投与する"
+    ],
+    "/ədˈmɪnəstɚ/",
+    "An independent body administers the national examination each year.",
+    "独立した機関が毎年その全国試験を運営している。",
+    [
+      "administer a test",
+      "administer a drug",
+      "administer a fund"
+    ],
+    "ad-(〜へ)+ minister(仕える)。人のために取り仕切るのが核。制度を運営する、薬を人に与える、どちらも同じ発想。"
+  ],
+  [
+    "administrative",
+    "B2",
+    "形容詞",
+    [
+      "管理の",
+      "行政の",
+      "事務の"
+    ],
+    "/ədˈmɪnəstreɪtɪv/",
+    "Most of her day is taken up by administrative tasks.",
+    "彼女の一日の大半は事務作業に占められている。",
+    [
+      "administrative work",
+      "administrative costs",
+      "administrative staff"
+    ],
+    "administer の形容詞。実務そのものではなく、それを回すための手続き・事務を指すことが多い。"
+  ],
+  [
+    "administrator",
+    "B2",
+    "名詞",
+    [
+      "管理者",
+      "運営者"
+    ],
+    "/ədˈmɪnəstreɪtɚ/",
+    "The system administrator restored the files within an hour.",
+    "システム管理者は1時間以内にファイルを復元した。",
+    [
+      "system administrator",
+      "hospital administrator"
+    ],
+    "administer + -or(人)。組織や仕組みを取り仕切る立場の人。日本語の「アドミン」はこの語の略。"
+  ],
+  [
+    "admission",
+    "B2",
+    "名詞",
+    [
+      "入場",
+      "入学",
+      "認めること",
+      "入院"
+    ],
+    "/ædˈmɪʃən/",
+    "Admission to the gallery is free on the first Sunday of the month.",
+    "そのギャラリーへの入場は毎月第1日曜日は無料だ。",
+    [
+      "admission fee",
+      "admission to",
+      "an admission of guilt"
+    ],
+    "admit(中に入れる)の名詞。ad-(〜へ)+ miss(送る)。人を中へ通せば入場・入学、事実を自分の中へ通せば「認めること」。"
+  ],
+  [
+    "adolescent",
+    "B2",
+    "名詞",
+    [
+      "思春期の若者",
+      "青年"
+    ],
+    "/ædəˈlɛsənt/",
+    "Many adolescents struggle to get enough sleep on school nights.",
+    "多くの思春期の若者は学校のある夜に十分な睡眠をとるのに苦労している。",
+    [
+      "adolescent behaviour",
+      "a troubled adolescent"
+    ],
+    "ラテン語 adolescere(育つ)。abolish の ol と同語根で「成長の途中」。子どもと大人のあいだの時期を指す。"
+  ],
+  [
+    "adoption",
+    "B2",
+    "名詞",
+    [
+      "採用",
+      "導入",
+      "養子縁組"
+    ],
+    "/əˈdɑpʃən/",
+    "The adoption of the new software improved response times.",
+    "新しいソフトの導入によって応答時間が改善した。",
+    [
+      "the adoption of",
+      "adoption rate",
+      "put up for adoption"
+    ],
+    "adopt(自分のものとして選び取る)の名詞。制度や方法を選び取れば採用、子どもを迎え入れれば養子縁組。"
+  ],
+  [
+    "adverse",
+    "B2",
+    "形容詞",
+    [
+      "不利な",
+      "好ましくない"
+    ],
+    "/ædˈvɝs/",
+    "The trial was stopped because of adverse effects on patients.",
+    "患者への悪影響のため、その治験は中止された。",
+    [
+      "adverse effect",
+      "adverse conditions",
+      "adverse weather"
+    ],
+    "ad-(〜へ)+ vers(向く。reverse)。こちらへ向かって逆らってくる向き。追い風ではなく向かい風のイメージ。"
+  ],
+  [
+    "advocate",
+    "B2",
+    "名詞・動詞",
+    [
+      "擁護者",
+      "支持する",
+      "主張する"
+    ],
+    "/ˈædvəkət/",
+    "She has long advocated stronger protection for temporary workers.",
+    "彼女は長らく非正規労働者のより強い保護を主張してきた。",
+    [
+      "advocate for",
+      "a strong advocate of"
+    ],
+    "ad-(〜へ)+ voc(声。voice, vocal)。誰かのために声を上げる人、あるいは声を上げる行為。"
+  ],
+  [
+    "aesthetic",
+    "B2",
+    "形容詞",
+    [
+      "美的な",
+      "美学の"
+    ],
+    "/ɛsˈθɛtɪk/",
+    "The renovation was driven by aesthetic rather than practical concerns.",
+    "その改修は実用性よりも美的な関心から進められた。",
+    [
+      "aesthetic appeal",
+      "aesthetic value",
+      "aesthetic sense"
+    ],
+    "ギリシャ語 aisthetikos(感覚で知る)。理屈ではなく感覚が受け取る美しさ。日本語の「エステ」も同語源。"
+  ],
+  [
+    "affection",
+    "B2",
+    "名詞",
+    [
+      "愛情",
+      "親愛の情"
+    ],
+    "/əˈfɛkʃən/",
+    "He spoke about his old teacher with obvious affection.",
+    "彼は明らかな愛情を込めて昔の恩師について語った。",
+    [
+      "show affection",
+      "deep affection",
+      "affection for"
+    ],
+    "af-(〜へ)+ fect(作用する。affect)。心が誰かに向かって働いている状態。恋愛に限らず、家族やペットへの情にも使う。"
+  ],
+  [
+    "aftermath",
+    "B2",
+    "名詞",
+    [
+      "余波",
+      "直後の状況"
+    ],
+    "/ˈæftɚmæθ/",
+    "In the aftermath of the storm, thousands were left without power.",
+    "嵐の直後、何千人もが停電したままになった。",
+    [
+      "in the aftermath of",
+      "the aftermath of war"
+    ],
+    "after(後)+ math(古語で刈り取り)。刈った後に残る二番草が原義で、出来事が去った後に残る状況を指す。"
+  ],
+  [
+    "aggression",
+    "B2",
+    "名詞",
+    [
+      "攻撃性",
+      "侵略"
+    ],
+    "/əˈgrɛʃən/",
+    "The dog showed no aggression toward the children.",
+    "その犬は子どもたちに対して何の攻撃性も見せなかった。",
+    [
+      "an act of aggression",
+      "verbal aggression"
+    ],
+    "ag-(〜へ)+ gress(進む。progress, congress)。相手に向かってずかずか進み出ること。国家なら侵略、人なら攻撃性。"
+  ],
+  [
+    "agricultural",
+    "B2",
+    "形容詞",
+    [
+      "農業の"
+    ],
+    "/ægrəˈkʌltʃɚəl/",
+    "Agricultural land in the valley has shrunk over the last decade.",
+    "その谷の農地はこの10年で減少した。",
+    [
+      "agricultural land",
+      "agricultural production"
+    ],
+    "agri(畑。acre と同語源)+ culture(耕す)。cultureの原義が「耕す」ことだと分かる語。"
+  ],
+  [
+    "aide",
+    "B2",
+    "名詞",
+    [
+      "側近",
+      "補佐官"
+    ],
+    "/eɪd/",
+    "A senior aide to the president resigned without explanation.",
+    "大統領の上級補佐官が説明もなく辞任した。",
+    [
+      "a senior aide",
+      "a presidential aide"
+    ],
+    "aid(助ける)から来たフランス語風の形。組織の長のそばで実務を助ける人を指す。"
+  ],
+  [
+    "albeit",
+    "B2",
+    "接続詞",
+    [
+      "〜ではあるが"
+    ],
+    "/ɔlˈbiɪt/",
+    "The plan worked, albeit more slowly than we had hoped.",
+    "その計画はうまくいったが、期待していたより遅かった。",
+    [
+      "albeit briefly",
+      "albeit slowly"
+    ],
+    "although it be(たとえ〜であっても)が縮まった語。書き言葉専用で、直後は文ではなく語句が来ることが多い。"
+  ],
+  [
+    "alert",
+    "B2",
+    "形容詞・名詞・動詞",
+    [
+      "警戒した",
+      "警報",
+      "警告する"
+    ],
+    "/əˈlɝt/",
+    "Staff were alert to the risk of fire during the dry season.",
+    "乾季の間、職員は火災の危険に警戒していた。",
+    [
+      "stay alert",
+      "on high alert",
+      "alert someone to"
+    ],
+    "イタリア語 all erta(見張り台の上へ)。高い所で見張っている状態が核。名詞なら警報、動詞なら危険を知らせること。"
+  ],
+  [
+    "align",
+    "B2",
+    "動詞",
+    [
+      "一直線に並べる",
+      "足並みをそろえる"
+    ],
+    "/əˈlaɪn/",
+    "We need to align our goals with the company strategy.",
+    "私たちは目標を会社の戦略に合わせる必要がある。",
+    [
+      "align with",
+      "closely aligned"
+    ],
+    "a-(〜へ)+ line(線)。同じ線の上に乗せるのが核。物の位置にも、方針や利害の一致にも使う。"
+  ],
+  [
+    "alignment",
+    "B2",
+    "名詞",
+    [
+      "整列",
+      "連携",
+      "位置合わせ"
+    ],
+    "/əˈlaɪnmənt/",
+    "The wheels are out of alignment, which makes the car pull left.",
+    "車輪の位置がずれていて、車が左に寄ってしまう。",
+    [
+      "in alignment with",
+      "out of alignment"
+    ],
+    "align の名詞。同じ線に乗っているかどうかを指し、out of alignment で「ずれている」。"
+  ],
+  [
+    "alike",
+    "B2",
+    "形容詞・副詞",
+    [
+      "似ている",
+      "同様に"
+    ],
+    "/əˈlaɪk/",
+    "The two brothers look alike but behave very differently.",
+    "その兄弟は見た目は似ているが振る舞いはまるで違う。",
+    [
+      "look alike",
+      "treat everyone alike"
+    ],
+    "a-(〜の状態で)+ like(似た)。名詞の前には置けず、be動詞の後ろか副詞として使うのが特徴。"
+  ],
+  [
+    "allegation",
+    "B2",
+    "名詞",
+    [
+      "申し立て",
+      "疑惑"
+    ],
+    "/æləˈgeɪʃən/",
+    "The company denied all allegations of unfair hiring practices.",
+    "その会社は不公正な採用に関するすべての疑惑を否定した。",
+    [
+      "deny an allegation",
+      "serious allegations"
+    ],
+    "allege の名詞。まだ証明されていない主張である点が accusation よりさらに強く、報道でよく使われる。"
+  ],
+  [
+    "allege",
+    "B2",
+    "動詞",
+    [
+      "(証拠なしに)主張する",
+      "申し立てる"
+    ],
+    "/əˈlɛdʒ/",
+    "Residents allege that the factory has been dumping waste at night.",
+    "住民は、その工場が夜間に廃棄物を捨てていると主張している。",
+    [
+      "allege that",
+      "the alleged victim"
+    ],
+    "ラテン語 allegare(持ち出す)。法廷に証拠なしで言い分を持ち出すこと。書き手が真偽を保証しない合図になる。"
+  ],
+  [
+    "allegedly",
+    "B2",
+    "副詞",
+    [
+      "伝えられるところでは",
+      "〜とされる"
+    ],
+    "/əˈlɛdʒədli/",
+    "The two companies allegedly agreed to fix prices for years.",
+    "両社は何年も価格を操作することに合意していたとされる。",
+    [
+      "allegedly involved",
+      "allegedly stole"
+    ],
+    "allege の副詞。報道で「まだ確認されていない」と断りを入れるための語で、書き手の断定を避ける。"
+  ],
+  [
+    "alliance",
+    "B2",
+    "名詞",
+    [
+      "同盟",
+      "提携"
+    ],
+    "/əˈlaɪəns/",
+    "The two airlines formed an alliance to share routes.",
+    "その2社の航空会社は路線を共有するために提携を結んだ。",
+    [
+      "form an alliance",
+      "a strategic alliance"
+    ],
+    "ally の名詞。ラテン語 ligare(結ぶ)から来ており、league や ligament と同語根。結び合った関係。"
+  ],
+  [
+    "allocate",
+    "B2",
+    "動詞",
+    [
+      "割り当てる",
+      "配分する"
+    ],
+    "/ˈæləkeɪt/",
+    "The city allocated extra funds to repair the old bridges.",
+    "市は古い橋の修復に追加の資金を割り当てた。",
+    [
+      "allocate resources",
+      "allocate funds",
+      "allocate time"
+    ],
+    "ad-(〜へ)+ loc(場所。location)。「置き場所を決めてやる」が核で、資源や時間を用途ごとに振り分けること。"
+  ],
+  [
+    "allocation",
+    "B2",
+    "名詞",
+    [
+      "割り当て",
+      "配分"
+    ],
+    "/æləˈkeɪʃən/",
+    "The allocation of seats was decided by a public lottery.",
+    "座席の割り当ては公開抽選で決められた。",
+    [
+      "budget allocation",
+      "the allocation of resources"
+    ],
+    "allocate の名詞。誰に何をどれだけ置くか、その決め方や決まった量を指す。"
+  ],
+  [
+    "allowance",
+    "B2",
+    "名詞",
+    [
+      "手当",
+      "小遣い",
+      "許容量"
+    ],
+    "/əˈlaʊəns/",
+    "Employees receive a monthly travel allowance for commuting costs.",
+    "従業員は通勤費として月々の交通手当を受け取る。",
+    [
+      "a travel allowance",
+      "make allowances for"
+    ],
+    "allow(許す)の名詞。あらかじめ「これだけは使ってよい」と許された枠のこと。make allowances for なら事情を差し引いて考える。"
+  ],
+  [
+    "ally",
+    "B2",
+    "名詞",
+    [
+      "同盟国",
+      "味方"
+    ],
+    "/ˈælaɪ/",
+    "The country has been a close ally of its neighbour for decades.",
+    "その国は何十年も隣国の緊密な同盟国であり続けている。",
+    [
+      "a close ally",
+      "political allies"
+    ],
+    "ラテン語 ligare(結ぶ)。alliance と同根で、結びついて味方になっている相手。動詞なら ally with。"
+  ],
+  [
+    "aluminium",
+    "B2",
+    "名詞",
+    [
+      "アルミニウム"
+    ],
+    "/əˈlumɪnəm/",
+    "Aluminium is light enough to be used in aircraft frames.",
+    "アルミニウムは航空機の骨組みに使えるほど軽い。",
+    [
+      "aluminium foil",
+      "aluminium can"
+    ],
+    "明礬(みょうばん)を指すラテン語 alumen から。米つづりは aluminum で、発音も強勢の位置も変わる点に注意。"
+  ],
+  [
+    "amateur",
+    "B2",
+    "形容詞・名詞",
+    [
+      "素人の",
+      "アマチュア"
+    ],
+    "/ˈæmətɝ/",
+    "The tournament is open to both amateur and professional players.",
+    "その大会はアマチュアとプロの両方の選手に開かれている。",
+    [
+      "an amateur photographer",
+      "amateur sports"
+    ],
+    "ラテン語 amare(愛する)から。報酬ではなく「好きだから」やる人。技量が低いという含みは後から付いたもの。"
+  ],
+  [
+    "ambassador",
+    "B2",
+    "名詞",
+    [
+      "大使",
+      "代表"
+    ],
+    "/æmˈbæsədɚ/",
+    "She served as ambassador to France for three years.",
+    "彼女は3年間フランス大使を務めた。",
+    [
+      "an ambassador to",
+      "a goodwill ambassador"
+    ],
+    "「使いに出された者」を意味する古い語から。国を代表して相手国に常駐する人。比喩で活動の顔役にも使う。"
+  ],
+  [
+    "amend",
+    "B2",
+    "動詞",
+    [
+      "修正する",
+      "改める"
+    ],
+    "/əˈmɛnd/",
+    "Parliament voted to amend the law on data protection.",
+    "議会はデータ保護に関する法律を修正することを可決した。",
+    [
+      "amend a law",
+      "amend a contract"
+    ],
+    "ラテン語 emendare(欠点 menda を取り除く)。全部作り直すのではなく、悪いところを直す。法律や文書に使う硬い語。"
+  ],
+  [
+    "amendment",
+    "B2",
+    "名詞",
+    [
+      "修正",
+      "改正"
+    ],
+    "/əˈmɛndmənt/",
+    "The proposed amendment was rejected by a narrow margin.",
+    "提案された修正案はわずかの差で否決された。",
+    [
+      "a constitutional amendment",
+      "propose an amendment"
+    ],
+    "amend の名詞。修正する行為にも、修正案という文書そのものにも使う。"
+  ],
+  [
+    "amid",
+    "B2",
+    "前置詞",
+    [
+      "〜の最中に",
+      "〜に囲まれて"
+    ],
+    "/əˈmɪd/",
+    "Shares fell sharply amid fears of a global slowdown.",
+    "世界的な景気減速への不安の中で株価は急落した。",
+    [
+      "amid concerns",
+      "amid growing tension"
+    ],
+    "a-(〜に)+ mid(真ん中)。ざわつく状況の真っただ中にいる、が核。ニュース英語で「〜する中で」を表す定番。"
+  ],
+  [
+    "analogy",
+    "B2",
+    "名詞",
+    [
+      "類推",
+      "たとえ"
+    ],
+    "/əˈnælədʒi/",
+    "He explained the network using an analogy with a city road system.",
+    "彼は都市の道路網とのたとえを使ってそのネットワークを説明した。",
+    [
+      "draw an analogy",
+      "by analogy with"
+    ],
+    "ana-(〜に応じて)+ logy(比)。二つのものの間に同じ比を見つけること。似た構造を借りて説明するのが本質。"
+  ],
+  [
+    "anchor",
+    "B2",
+    "名詞",
+    [
+      "いかり",
+      "よりどころ",
+      "固定する"
+    ],
+    "/ˈæŋkɚ/",
+    "The old lighthouse serves as an anchor for the whole harbour view.",
+    "その古い灯台は港の景色全体のよりどころになっている。",
+    [
+      "drop anchor",
+      "an anchor for"
+    ],
+    "ギリシャ語 ankura(曲がったもの)。船を動かなくする重り。動かないよりどころ、報道番組の司会にも広がる。"
+  ],
+  [
+    "angel",
+    "B2",
+    "名詞",
+    [
+      "天使"
+    ],
+    "/ˈeɪndʒəl/",
+    "The child sang so beautifully that people called her an angel.",
+    "その子はあまりに美しく歌ったので、人々は彼女を天使と呼んだ。",
+    [
+      "a guardian angel",
+      "like an angel"
+    ],
+    "ギリシャ語 angelos(使者)。もとは「知らせを運ぶ者」で、宗教画の翼は後の姿。優しい人のたとえにも使う。"
+  ],
+  [
+    "anonymous",
+    "B2",
+    "形容詞",
+    [
+      "匿名の",
+      "名前を伏せた"
+    ],
+    "/əˈnɑnəməs/",
+    "The newspaper received an anonymous letter about the accident.",
+    "その新聞社は事故に関する匿名の手紙を受け取った。",
+    [
+      "remain anonymous",
+      "an anonymous donor"
+    ],
+    "an-(無い)+ onym(名前。synonym, antonym)。名前が付いていない状態。個性がなく特徴に乏しい、の意味にもなる。"
+  ],
+  [
+    "apparatus",
+    "B2",
+    "名詞",
+    [
+      "装置",
+      "器具",
+      "機構"
+    ],
+    "/æpɚˈætəs/",
+    "The laboratory installed new apparatus for measuring air quality.",
+    "その研究所は大気の質を測る新しい装置を導入した。",
+    [
+      "laboratory apparatus",
+      "the state apparatus"
+    ],
+    "ラテン語 apparare(準備する)。目的のためにひとそろい整えられた仕掛け。組織の「機構」にも使う。"
+  ],
+  [
+    "appealing",
+    "B2",
+    "形容詞",
+    [
+      "魅力的な",
+      "心を引く"
+    ],
+    "/əˈpilɪŋ/",
+    "The idea of working from home is appealing to many parents.",
+    "在宅勤務という考えは多くの親にとって魅力的だ。",
+    [
+      "appealing to",
+      "an appealing idea"
+    ],
+    "appeal(訴えかける)の形容詞。こちらの心にまっすぐ訴えてくるから魅力的、という順序で覚える。"
+  ],
+  [
+    "appetite",
+    "B2",
+    "名詞",
+    [
+      "食欲",
+      "欲求"
+    ],
+    "/ˈæpətaɪt/",
+    "Walking in the cold air gave the children a huge appetite.",
+    "冷たい空気の中を歩いたことで子どもたちはとても食欲が出た。",
+    [
+      "lose one's appetite",
+      "an appetite for risk"
+    ],
+    "ad-(〜へ)+ pet(求める。compete, petition)。何かを求める気持ちが核で、食べ物以外への欲求にも広く使う。"
+  ],
+  [
+    "applaud",
+    "B2",
+    "動詞",
+    [
+      "拍手する",
+      "称賛する"
+    ],
+    "/əˈplɔd/",
+    "The audience applauded loudly when the pianist finished.",
+    "ピアニストが弾き終えると聴衆は大きく拍手した。",
+    [
+      "applaud a decision",
+      "applaud loudly"
+    ],
+    "ad-(〜へ)+ plaud(たたく。explode の plode と同語根)。手をたたく動作から、行いをほめる意味へ広がった。"
+  ],
+  [
+    "applicable",
+    "B2",
+    "形容詞",
+    [
+      "当てはまる",
+      "適用できる"
+    ],
+    "/ˈæpləkəbəl/",
+    "These rules are applicable only to full-time employees.",
+    "これらの規則は常勤の従業員にのみ適用される。",
+    [
+      "applicable to",
+      "where applicable"
+    ],
+    "apply(当てはめる)+ -able。「その場に当てて使える」。書式の where applicable は「該当する場合は」。"
+  ],
+  [
+    "appoint",
+    "B2",
+    "動詞",
+    [
+      "任命する",
+      "指定する"
+    ],
+    "/əˈpɔɪnt/",
+    "The board appointed her as head of research last spring.",
+    "理事会は昨春、彼女を研究責任者に任命した。",
+    [
+      "appoint someone as",
+      "appoint a date"
+    ],
+    "ad-(〜へ)+ point(点)。人や日を一点に定めること。約束の日時を定めれば appointment。"
+  ],
+  [
+    "appreciation",
+    "B2",
+    "名詞",
+    [
+      "感謝",
+      "理解",
+      "評価",
+      "値上がり"
+    ],
+    "/əpriʃiˈeɪʃən/",
+    "He sent flowers as a token of appreciation for their help.",
+    "彼は助けへの感謝のしるしとして花を送った。",
+    [
+      "show appreciation",
+      "in appreciation of"
+    ],
+    "ap-(〜へ)+ preci(値。price)。価値を正しく見積もること。ありがたみが分かれば感謝、価値が上がれば値上がり。"
+  ],
+  [
+    "arbitrary",
+    "B2",
+    "形容詞",
+    [
+      "恣意的な",
+      "独断的な"
+    ],
+    "/ˈɑrbətrɛri/",
+    "The deadline felt arbitrary because no one explained the reason.",
+    "誰も理由を説明しなかったので、その締め切りは恣意的に感じられた。",
+    [
+      "an arbitrary decision",
+      "arbitrary rules"
+    ],
+    "ラテン語 arbiter(裁定者)。決める人の一存で決まる、が核。根拠が示されないことへの批判として使う。"
+  ],
+  [
+    "architectural",
+    "B2",
+    "形容詞",
+    [
+      "建築の",
+      "建築上の"
+    ],
+    "/ɑrkəˈtɛktʃɚəl/",
+    "The city protects buildings of special architectural value.",
+    "その市は特別な建築的価値のある建物を保護している。",
+    [
+      "architectural style",
+      "architectural design"
+    ],
+    "architecture(建築)の形容詞。archi-(主たる)+ tect(作る人)。棟梁が組み立てる仕事、が原義。"
+  ],
+  [
+    "archive",
+    "B2",
+    "名詞",
+    [
+      "記録保管所",
+      "保存記録"
+    ],
+    "/ˈɑrkaɪv/",
+    "The photographs are kept in the national film archive.",
+    "それらの写真は国立の映画記録保管所に保管されている。",
+    [
+      "a digital archive",
+      "archive footage"
+    ],
+    "ギリシャ語 arkheion(役所)。公的な記録を置く場所が原義。今はデータの保存領域にも使う。"
+  ],
+  [
+    "arena",
+    "B2",
+    "名詞",
+    [
+      "競技場",
+      "活動の場"
+    ],
+    "/ɚˈinə/",
+    "Ten thousand fans filled the arena before the concert began.",
+    "コンサートが始まる前に1万人のファンが競技場を埋めた。",
+    [
+      "a sports arena",
+      "the political arena"
+    ],
+    "ラテン語 arena(砂)。円形闘技場の床にまいた砂が語源。転じて、人が競い合う場そのもの。"
+  ],
+  [
+    "arguably",
+    "B2",
+    "副詞",
+    [
+      "おそらく",
+      "議論の余地はあるが"
+    ],
+    "/ˈɑrgjuəbli/",
+    "She is arguably the most influential architect of her generation.",
+    "彼女はおそらく同世代で最も影響力のある建築家だ。",
+    [
+      "arguably the best",
+      "arguably more important"
+    ],
+    "argue(論じる)+ -ably。「主張しようと思えばできる」。断定を避けつつ強い評価を述べる、書き言葉向きの語。"
+  ],
+  [
+    "arm",
+    "B2",
+    "動詞",
+    [
+      "武装させる",
+      "備えさせる"
+    ],
+    "/ɑrm/",
+    "The soldiers were armed with nothing more than radios.",
+    "その兵士たちは無線機以外は何も持たされていなかった。",
+    [
+      "armed with",
+      "arm oneself"
+    ],
+    "名詞の arm(腕)とは別系統で、ラテン語 arma(武器)から。armed with は道具や情報を手にした状態にも使う。"
+  ],
+  [
+    "array",
+    "B2",
+    "名詞",
+    [
+      "ずらりと並んだもの",
+      "配列"
+    ],
+    "/ɚˈeɪ/",
+    "The market offered a wide array of local cheeses.",
+    "その市場は地元産チーズを幅広く取りそろえていた。",
+    [
+      "a wide array of",
+      "an array of options"
+    ],
+    "古フランス語 areer(整える)。きちんと並べて見せることが核。a wide array of で「多種多様な」。"
+  ],
+  [
+    "articulate",
+    "B2",
+    "動詞",
+    [
+      "明確に述べる",
+      "はっきり発音する"
+    ],
+    "/ɑrˈtɪkjəleɪt/",
+    "She articulated her concerns calmly at the staff meeting.",
+    "彼女は職員会議で懸念を落ち着いて明確に述べた。",
+    [
+      "articulate a vision",
+      "clearly articulated"
+    ],
+    "ラテン語 articulus(関節)。関節で区切るように言葉を切り分けること。もやもやした考えを形にする含み。"
+  ],
+  [
+    "ash",
+    "B2",
+    "名詞",
+    [
+      "灰"
+    ],
+    "/æʃ/",
+    "Grey ash from the volcano covered the roofs of nearby villages.",
+    "火山からの灰色の灰が近隣の村の屋根を覆った。",
+    [
+      "volcanic ash",
+      "cigarette ash"
+    ],
+    "古英語 aesce。燃え尽きた後に残る粉。volcanic ash のように、火山灰にもそのまま使う。"
+  ],
+  [
+    "aspiration",
+    "B2",
+    "名詞",
+    [
+      "大志",
+      "強い願望"
+    ],
+    "/æspɚˈeɪʃən/",
+    "Her aspiration to become a surgeon began in high school.",
+    "外科医になりたいという彼女の願望は高校時代に始まった。",
+    [
+      "career aspirations",
+      "aspiration to"
+    ],
+    "ad-(〜へ)+ spir(息。spirit, inspire)。息を吸い込むように上を目指す気持ち。単なる願望より強く、生き方に関わる。"
+  ],
+  [
+    "aspire",
+    "B2",
+    "動詞",
+    [
+      "熱望する",
+      "目指す"
+    ],
+    "/əˈspaɪr/",
+    "Many young players aspire to play in the national team.",
+    "多くの若い選手が代表チームでプレーすることを目指している。",
+    [
+      "aspire to",
+      "aspire to be"
+    ],
+    "aspiration の動詞。ad-(〜へ)+ spir(息)。後ろは aspire to do の形をとる。"
+  ],
+  [
+    "assassination",
+    "B2",
+    "名詞",
+    [
+      "暗殺"
+    ],
+    "/əsæsəˈneɪʃən/",
+    "The assassination of the leader triggered months of unrest.",
+    "その指導者の暗殺が数か月に及ぶ混乱を引き起こした。",
+    [
+      "an assassination attempt",
+      "political assassination"
+    ],
+    "中世の暗殺教団を指すアラビア語由来。政治的な立場の人物を狙って殺す場合に限って使う。"
+  ],
+  [
+    "assault",
+    "B2",
+    "名詞・動詞",
+    [
+      "暴行",
+      "襲撃",
+      "襲う"
+    ],
+    "/əˈsɔlt/",
+    "He was charged with assault after the fight outside the bar.",
+    "彼はバーの外での喧嘩の後、暴行の罪で起訴された。",
+    [
+      "sexual assault",
+      "assault on",
+      "physical assault"
+    ],
+    "as-(〜へ)+ salt(跳ぶ。somersault の salt)。相手に飛びかかることが核。法律用語としての「暴行」でよく見る。"
+  ],
+  [
+    "assemble",
+    "B2",
+    "動詞",
+    [
+      "集める",
+      "集まる",
+      "組み立てる"
+    ],
+    "/əˈsɛmbəl/",
+    "Workers assemble the entire engine by hand at this factory.",
+    "この工場では作業員がエンジン全体を手で組み立てる。",
+    [
+      "assemble a team",
+      "assemble furniture"
+    ],
+    "as-(〜へ)+ simil(似た。similar)。似たものを一か所に寄せることが核。部品を寄せ集めれば組み立て。"
+  ],
+  [
+    "assembly",
+    "B2",
+    "名詞",
+    [
+      "集会",
+      "議会",
+      "組み立て"
+    ],
+    "/əˈsɛmbli/",
+    "The school holds a short assembly every Monday morning.",
+    "その学校は毎週月曜の朝に短い集会を開く。",
+    [
+      "a general assembly",
+      "an assembly line"
+    ],
+    "assemble の名詞。人が集まれば集会・議会、部品が集まる工程なら assembly line(流れ作業の組立)。"
+  ],
+  [
+    "assert",
+    "B2",
+    "動詞",
+    [
+      "断言する",
+      "主張する",
+      "行使する"
+    ],
+    "/əˈsɝt/",
+    "The author asserts that the evidence has been misread for years.",
+    "著者は、その証拠が何年も誤読されてきたと断言している。",
+    [
+      "assert that",
+      "assert one's rights",
+      "assert authority"
+    ],
+    "ad-(〜へ)+ sert(結びつける。series, insert)。自分をその立場に結びつけて言い切ること。権利なら「行使する」。"
+  ],
+  [
+    "assertion",
+    "B2",
+    "名詞",
+    [
+      "主張",
+      "断言"
+    ],
+    "/əˈsɝʃən/",
+    "His assertion that costs would fall proved to be wrong.",
+    "費用が下がるという彼の主張は誤りだと分かった。",
+    [
+      "a bold assertion",
+      "make an assertion"
+    ],
+    "assert の名詞。証拠を添えずに言い切った内容を指すことが多く、claim よりも硬い。"
+  ],
+  [
+    "assurance",
+    "B2",
+    "名詞",
+    [
+      "保証",
+      "確約",
+      "自信"
+    ],
+    "/əˈʃʊrəns/",
+    "We were given an assurance that the repairs would be free.",
+    "修理は無料だという保証を私たちは与えられた。",
+    [
+      "give an assurance",
+      "an assurance that"
+    ],
+    "as-(〜へ)+ sure(確か)。相手を確かな気持ちにさせるもの。自分に向かえば落ち着き・自信の意味になる。"
+  ],
+  [
+    "asylum",
+    "B2",
+    "名詞",
+    [
+      "亡命",
+      "保護",
+      "避難所"
+    ],
+    "/əˈsaɪləm/",
+    "The family applied for asylum after fleeing the conflict.",
+    "その一家は紛争から逃れた後、亡命を申請した。",
+    [
+      "seek asylum",
+      "political asylum",
+      "an asylum seeker"
+    ],
+    "ギリシャ語 asylon(奪ってはならない場所)。手出しできない安全な場所が原義で、そこから国家の保護へ。"
+  ],
+  [
+    "atrocity",
+    "B2",
+    "名詞",
+    [
+      "残虐行為"
+    ],
+    "/əˈtrɑsəti/",
+    "Survivors described the atrocities committed during the occupation.",
+    "生存者たちは占領期間中に行われた残虐行為を語った。",
+    [
+      "commit an atrocity",
+      "wartime atrocities"
+    ],
+    "ラテン語 atrox(むごい)。戦争や紛争で行われる、常識を超えた行為に対して使う重い語。"
+  ],
+  [
+    "attain",
+    "B2",
+    "動詞",
+    [
+      "達成する",
+      "到達する"
+    ],
+    "/əˈteɪn/",
+    "Few runners attain this level of fitness without years of training.",
+    "何年もの訓練なしにこの水準の体力に達する走者はほとんどいない。",
+    [
+      "attain a goal",
+      "attain a level"
+    ],
+    "ad-(〜へ)+ tain(触れる。contact の tact と同語根)。手を伸ばして届くことが核で、achieve より硬い。"
+  ],
+  [
+    "attendance",
+    "B2",
+    "名詞",
+    [
+      "出席",
+      "出席者数",
+      "通うこと"
+    ],
+    "/əˈtɛndəns/",
+    "Attendance at the evening classes has doubled this year.",
+    "夜間講座の出席者数は今年2倍になった。",
+    [
+      "attendance at",
+      "poor attendance",
+      "take attendance"
+    ],
+    "attend(そこに心と体を向ける)の名詞。出席という行為にも、集まった人数にも使う。"
+  ],
+  [
+    "attorney",
+    "B2",
+    "名詞",
+    [
+      "弁護士",
+      "代理人"
+    ],
+    "/əˈtɝni/",
+    "Her attorney advised her not to comment before the trial.",
+    "彼女の弁護士は裁判前に発言しないよう助言した。",
+    [
+      "a defense attorney",
+      "power of attorney"
+    ],
+    "古フランス語 atorner(任せる)。代理を任された人が原義で、主に米国で弁護士を指す。英国は solicitor。"
+  ],
+  [
+    "attribute",
+    "B2",
+    "名詞・動詞",
+    [
+      "特質",
+      "〜のせいだとする"
+    ],
+    "/ˈætrəbjut/",
+    "Scientists attribute the change to rising ocean temperatures.",
+    "科学者はその変化を海水温の上昇によるものだとしている。",
+    [
+      "attribute to",
+      "a key attribute"
+    ],
+    "ad-(〜へ)+ tribute(割り当てる。tribe, contribute)。原因や特徴を相手に割り当てる。名詞と動詞で強勢の位置が変わる。"
+  ],
+  [
+    "audit",
+    "B2",
+    "名詞",
+    [
+      "監査",
+      "会計検査"
+    ],
+    "/ˈɔdɪt/",
+    "An outside firm carried out an audit of the charity accounts.",
+    "外部の会社がその慈善団体の会計監査を行った。",
+    [
+      "a financial audit",
+      "conduct an audit"
+    ],
+    "ラテン語 audire(聞く。audio)。もとは帳簿を読み上げて聞かせた手続き。今は帳簿を精査すること。"
+  ],
+  [
+    "authentic",
+    "B2",
+    "形容詞",
+    [
+      "本物の",
+      "真正の"
+    ],
+    "/əˈθɛntɪk/",
+    "The restaurant serves authentic regional dishes from southern Italy.",
+    "そのレストランは南イタリアの本格的な郷土料理を出す。",
+    [
+      "authentic food",
+      "an authentic document"
+    ],
+    "ギリシャ語 authentikos(自分の手で作った)。作った本人にさかのぼって確かめられる、が核。偽物でないこと。"
+  ],
+  [
+    "authorize",
+    "B2",
+    "動詞",
+    [
+      "許可する",
+      "権限を与える"
+    ],
+    "/ˈɔθɚaɪz/",
+    "Only the manager can authorize a refund over this amount.",
+    "この金額を超える返金は責任者だけが承認できる。",
+    [
+      "authorize payment",
+      "be authorized to"
+    ],
+    "author(生み出す者)+ -ize。権威 authority を与えることで、「やってよい」と正式に認めること。"
+  ],
+  [
+    "auto",
+    "B2",
+    "名詞",
+    [
+      "自動車"
+    ],
+    "/ˈɔtoʊ/",
+    "The plant employs thousands of workers in the auto industry.",
+    "その工場は自動車産業で数千人の労働者を雇用している。",
+    [
+      "the auto industry",
+      "an auto plant"
+    ],
+    "ギリシャ語 autos(自分)。自分で動くから automobile、それを縮めた米語。auto- が付く語はすべて「自力で」が共通の芯。"
+  ],
+  [
+    "autonomy",
+    "B2",
+    "名詞",
+    [
+      "自治",
+      "自律性"
+    ],
+    "/ɔˈtɑnəmi/",
+    "Teachers here enjoy a high degree of autonomy in the classroom.",
+    "ここの教師は教室で高い自律性を認められている。",
+    [
+      "a degree of autonomy",
+      "local autonomy"
+    ],
+    "auto(自分)+ nomy(法。economy の nomy)。自分の法で自分を動かせる状態。組織の自治にも個人の裁量にも使う。"
+  ],
+  [
+    "availability",
+    "B2",
+    "名詞",
+    [
+      "入手可能性",
+      "空き状況"
+    ],
+    "/əveɪləˈbɪləti/",
+    "Please check the availability of rooms before you book.",
+    "予約する前に部屋の空き状況を確認してください。",
+    [
+      "check availability",
+      "limited availability"
+    ],
+    "available の名詞。avail は「役に立つ」で、「必要なときに使える状態にあるか」を問う語。"
+  ],
+  [
+    "await",
+    "B2",
+    "動詞",
+    [
+      "待つ",
+      "待ち受ける"
+    ],
+    "/əˈweɪt/",
+    "Hundreds of passengers awaited news of the delayed flight.",
+    "何百人もの乗客が遅延した便の知らせを待っていた。",
+    [
+      "await a decision",
+      "eagerly await"
+    ],
+    "a-(強め)+ wait。wait と違って前置詞を挟まず直接目的語を取る点が要点で、書き言葉向き。"
+  ],
+  [
+    "backdrop",
+    "B2",
+    "名詞",
+    [
+      "背景",
+      "背景幕"
+    ],
+    "/ˈbækdrɑp/",
+    "The talks took place against a backdrop of rising unemployment.",
+    "その協議は失業率の上昇という背景の中で行われた。",
+    [
+      "against a backdrop of",
+      "a dramatic backdrop"
+    ],
+    "舞台の後ろに垂らす幕 back + drop。出来事の後ろに広がる状況、という比喩で使うことが多い。"
+  ],
+  [
+    "backing",
+    "B2",
+    "名詞",
+    [
+      "支援",
+      "後ろ盾"
+    ],
+    "/ˈbækɪŋ/",
+    "The project went ahead with financial backing from the city.",
+    "その事業は市からの資金的な支援を得て進められた。",
+    [
+      "financial backing",
+      "strong backing"
+    ],
+    "back(背中を支える)の名詞。表に立つのではなく、後ろから支える力。特に資金面の支えを指すことが多い。"
+  ],
+  [
+    "backup",
+    "B2",
+    "名詞",
+    [
+      "予備",
+      "控え",
+      "バックアップ"
+    ],
+    "/ˈbækʌp/",
+    "Always keep a backup of important files on a separate drive.",
+    "重要なファイルの予備は必ず別のドライブに保存しておくこと。",
+    [
+      "a backup copy",
+      "backup plan"
+    ],
+    "back up(後ろから支える)が名詞化した語。データにも人員にも使い、「本命が倒れたときの控え」が共通の芯。"
+  ],
+  [
+    "bail",
+    "B2",
+    "名詞",
+    [
+      "保釈",
+      "保釈金"
+    ],
+    "/beɪl/",
+    "He was released on bail while awaiting trial.",
+    "彼は裁判を待つ間、保釈されて釈放された。",
+    [
+      "release on bail",
+      "post bail"
+    ],
+    "古フランス語 bailler(預ける)。身柄の代わりに金を預けて外に出る仕組み。released on bail の形で覚える。"
+  ],
+  [
+    "ballot",
+    "B2",
+    "名詞",
+    [
+      "投票",
+      "投票用紙"
+    ],
+    "/ˈbælət/",
+    "Members will choose the new leader by secret ballot.",
+    "会員は秘密投票で新しい代表を選ぶ。",
+    [
+      "a secret ballot",
+      "cast a ballot"
+    ],
+    "イタリア語 ballotta(小さな球)。昔は玉を壺に入れて投票したことに由来する。投票の仕組みそのものを指す。"
+  ],
+  [
+    "banner",
+    "B2",
+    "名詞",
+    [
+      "横断幕",
+      "旗",
+      "バナー"
+    ],
+    "/ˈbænɚ/",
+    "Protesters carried banners demanding cleaner air.",
+    "抗議者たちはより清潔な空気を求める横断幕を掲げていた。",
+    [
+      "a banner reading",
+      "under the banner of"
+    ],
+    "旗を意味する古い語 bandwa から。掲げて主張を見せる布が核で、ウェブの広告帯もこの延長。"
+  ],
+  [
+    "bare",
+    "B2",
+    "形容詞",
+    [
+      "むき出しの",
+      "何もない"
+    ],
+    "/bɛr/",
+    "The walls were bare except for a single old photograph.",
+    "壁は古い写真が1枚あるほかは何もなかった。",
+    [
+      "bare feet",
+      "bare walls",
+      "the bare minimum"
+    ],
+    "古英語 baer(覆いのない)。覆いを取り去った状態が核。the bare minimum なら飾りを落とした最低限。"
+  ],
+  [
+    "barrel",
+    "B2",
+    "名詞",
+    [
+      "たる",
+      "バレル"
+    ],
+    "/ˈbærəl/",
+    "Oil prices rose above eighty dollars a barrel last month.",
+    "先月、原油価格は1バレル80ドルを超えた。",
+    [
+      "a barrel of oil",
+      "a wooden barrel"
+    ],
+    "木のたるを指す古フランス語から。石油の取引単位としても使われ、約159リットルにあたる。"
+  ],
+  [
+    "bass",
+    "B2",
+    "名詞",
+    [
+      "低音",
+      "ベース"
+    ],
+    "/bæs/",
+    "The bass in this recording is too strong for small speakers.",
+    "この録音の低音は小型スピーカーには強すぎる。",
+    [
+      "bass guitar",
+      "turn up the bass"
+    ],
+    "base(低い)と同語源で、音の低さを指す。魚の bass と綴りは同じだが発音が異なる点に注意。"
+  ],
+  [
+    "battlefield",
+    "B2",
+    "名詞",
+    [
+      "戦場"
+    ],
+    "/ˈbætəlfild/",
+    "The old battlefield is now a quiet park with memorial stones.",
+    "その古戦場は今では記念碑のある静かな公園になっている。",
+    [
+      "on the battlefield",
+      "a former battlefield"
+    ],
+    "battle(戦い)+ field(野)。比喩で、激しく争われる領域そのものを指すこともある。"
+  ],
+  [
+    "bay",
+    "B2",
+    "名詞",
+    [
+      "湾",
+      "入り江"
+    ],
+    "/beɪ/",
+    "Small fishing boats were anchored across the calm bay.",
+    "小さな漁船が穏やかな湾の各所に停泊していた。",
+    [
+      "a sandy bay",
+      "across the bay"
+    ],
+    "ラテン語 baia。陸が口を開けて海を抱え込んだ地形。gulf より小ぶりのものを指すことが多い。"
+  ],
+  [
+    "beam",
+    "B2",
+    "名詞",
+    [
+      "光線",
+      "梁",
+      "輝く"
+    ],
+    "/bim/",
+    "A narrow beam of light came through the gap in the curtains.",
+    "細い光の筋がカーテンの隙間から差し込んできた。",
+    [
+      "a beam of light",
+      "a wooden beam"
+    ],
+    "古英語 beam(木)。まっすぐ伸びる材木が原義で、そこから「まっすぐ伸びる光」へ。建築の梁は原義のまま。"
+  ],
+  [
+    "beast",
+    "B2",
+    "名詞",
+    [
+      "獣",
+      "けだもの"
+    ],
+    "/bist/",
+    "Farmers told stories about a wild beast living in the forest.",
+    "農民たちは森に住む野獣の話をしていた。",
+    [
+      "a wild beast",
+      "beast of burden"
+    ],
+    "ラテン語 bestia。理性のない生き物、が核。人に使えば乱暴さを非難する語になる。"
+  ],
+  [
+    "behalf",
+    "B2",
+    "名詞",
+    [
+      "代理",
+      "味方"
+    ],
+    "/bɪˈhæf/",
+    "She accepted the award on behalf of the whole research team.",
+    "彼女は研究チーム全体を代表してその賞を受け取った。",
+    [
+      "on behalf of",
+      "on someone's behalf"
+    ],
+    "古い by half(〜の側で)から。ほぼ on behalf of の形でだけ使い、「〜の側に立って」つまり代理・代表。"
+  ],
+  [
+    "beloved",
+    "B2",
+    "形容詞",
+    [
+      "最愛の",
+      "愛される"
+    ],
+    "/bɪˈlʌvd/",
+    "The town raised money to restore its beloved old theatre.",
+    "町は愛されてきた古い劇場を修復するために資金を集めた。",
+    [
+      "a beloved friend",
+      "much beloved"
+    ],
+    "be-(強め)+ loved。love の受け身が形容詞に固まった語で、名詞の前に置いて使うのが普通。"
+  ],
+  [
+    "bench",
+    "B2",
+    "名詞",
+    [
+      "ベンチ",
+      "裁判官席"
+    ],
+    "/bɛntʃ/",
+    "They sat on a bench by the river and watched the boats.",
+    "彼らは川辺のベンチに座って船を眺めた。",
+    [
+      "a park bench",
+      "on the bench"
+    ],
+    "古英語 benc(長い腰かけ)。bank(土手・銀行)と同語源で、平らな台という共通イメージ。法廷では裁判官の席を指す。"
+  ],
+  [
+    "benchmark",
+    "B2",
+    "名詞",
+    [
+      "基準",
+      "指標"
+    ],
+    "/ˈbɛntʃmɑrk/",
+    "Test scores are used as a benchmark for comparing schools.",
+    "試験の点数は学校を比較する基準として使われる。",
+    [
+      "set a benchmark",
+      "a benchmark for"
+    ],
+    "測量で基準点を刻んだ台 bench + mark から。比較の物差しになる値、が核。"
+  ],
+  [
+    "beneath",
+    "B2",
+    "前置詞",
+    [
+      "〜の下に",
+      "〜の下方に"
+    ],
+    "/bɪˈniθ/",
+    "A thin layer of ice had formed beneath the fallen leaves.",
+    "落ち葉の下に薄い氷の層ができていた。",
+    [
+      "beneath the surface",
+      "far beneath"
+    ],
+    "be-(そばに)+ neath(下。nether)。under より硬い語で、比喩の「表面の下に隠れて」に向く。"
+  ],
+  [
+    "beneficiary",
+    "B2",
+    "名詞",
+    [
+      "受益者",
+      "恩恵を受ける人"
+    ],
+    "/bɛnəˈfɪʃiɛri/",
+    "Small farmers were the main beneficiaries of the new subsidy.",
+    "小規模農家がその新しい補助金の主な受益者だった。",
+    [
+      "the main beneficiary",
+      "a beneficiary of"
+    ],
+    "bene(よい)+ fic(なす)。benefit と同根で、良いことを受け取る側の人。保険や遺言の受取人も指す。"
+  ],
+  [
+    "betray",
+    "B2",
+    "動詞",
+    [
+      "裏切る",
+      "うっかり示す"
+    ],
+    "/bɪˈtreɪ/",
+    "He felt betrayed when his closest friend shared the secret.",
+    "最も親しい友人が秘密を漏らしたとき、彼は裏切られたと感じた。",
+    [
+      "betray a friend",
+      "betray trust"
+    ],
+    "be-(強め)+ tray(引き渡す。tradition の trad と同語根)。味方を敵に引き渡すこと。表情が本心を「引き渡す」用法もある。"
+  ],
+  [
+    "bind",
+    "B2",
+    "動詞",
+    [
+      "縛る",
+      "結びつける",
+      "拘束する"
+    ],
+    "/baɪnd/",
+    "The contract binds both sides for a period of five years.",
+    "その契約は5年間、双方を拘束する。",
+    [
+      "legally binding",
+      "bind together"
+    ],
+    "古英語 bindan。物を縛る動作から、契約や義務が人を縛る意味へ。binding は「拘束力のある」。"
+  ],
+  [
+    "biography",
+    "B2",
+    "名詞",
+    [
+      "伝記"
+    ],
+    "/baɪˈɑgrəfi/",
+    "Her biography of the composer took eight years to write.",
+    "その作曲家についての彼女の伝記は書き上げるのに8年かかった。",
+    [
+      "write a biography",
+      "an official biography"
+    ],
+    "bio(命)+ graphy(書く)。他人が書くのが biography、自分で書けば autobiography。"
+  ],
+  [
+    "bishop",
+    "B2",
+    "名詞",
+    [
+      "司教",
+      "主教"
+    ],
+    "/ˈbɪʃəp/",
+    "The bishop led the service in the old stone cathedral.",
+    "司教は古い石造りの大聖堂で礼拝を導いた。",
+    [
+      "a Catholic bishop",
+      "the bishop of"
+    ],
+    "ギリシャ語 episkopos(上から見守る者)。epi-(上)+ skop(見る。scope)。教区を見渡して監督する立場。"
+  ],
+  [
+    "bizarre",
+    "B2",
+    "形容詞",
+    [
+      "奇妙な",
+      "異様な"
+    ],
+    "/bəˈzɑr/",
+    "The film tells a bizarre story about a town without clocks.",
+    "その映画は時計のない町についての奇妙な物語を語る。",
+    [
+      "a bizarre incident",
+      "utterly bizarre"
+    ],
+    "フランス語 bizarre(風変わりな)。strange より驚きが強く、理解を超えて不可解だという含み。"
+  ],
+  [
+    "blade",
+    "B2",
+    "名詞",
+    [
+      "刃",
+      "羽根"
+    ],
+    "/bleɪd/",
+    "The knife has a short blade that folds into the handle.",
+    "そのナイフには柄に折りたたまれる短い刃がついている。",
+    [
+      "a sharp blade",
+      "a blade of grass"
+    ],
+    "古英語 blaed(葉)。もとは葉の形をした薄いもので、草の葉、扇風機の羽根、刃はいずれも同じ形の連想。"
+  ],
+  [
+    "blast",
+    "B2",
+    "名詞・動詞",
+    [
+      "爆風",
+      "爆発",
+      "吹き飛ばす"
+    ],
+    "/blæst/",
+    "The blast shattered windows several streets away.",
+    "その爆風は数本先の通りの窓を粉々にした。",
+    [
+      "a bomb blast",
+      "blast of cold air"
+    ],
+    "古英語 blaest(吹くこと)。強く吹きつける空気が核。爆発でも冷たい風でも、押し寄せる勢いを表す。"
+  ],
+  [
+    "bleed",
+    "B2",
+    "動詞",
+    [
+      "出血する",
+      "血を流す"
+    ],
+    "/blid/",
+    "The cut on his hand kept bleeding despite the bandage.",
+    "包帯をしても手の切り傷は出血し続けた。",
+    [
+      "bleed heavily",
+      "bleed to death"
+    ],
+    "blood(血)の動詞形。母音が変わるだけの素直な組で、feed と food の関係と同じ型。"
+  ],
+  [
+    "blend",
+    "B2",
+    "名詞・動詞",
+    [
+      "混ぜる",
+      "混合",
+      "溶け込む"
+    ],
+    "/blɛnd/",
+    "Blend the flour and butter until the mixture looks like sand.",
+    "生地が砂のように見えるまで小麦粉とバターを混ぜなさい。",
+    [
+      "blend in",
+      "a blend of",
+      "blend together"
+    ],
+    "古ノルド語 blanda(混ぜる)。境目が分からなくなるまで混ぜるのが核。blend in なら周囲に溶け込む。"
+  ],
+  [
+    "bless",
+    "B2",
+    "動詞",
+    [
+      "祝福する",
+      "恵む"
+    ],
+    "/blɛs/",
+    "The region is blessed with rich soil and plenty of rain.",
+    "その地域は豊かな土壌と豊富な雨に恵まれている。",
+    [
+      "be blessed with",
+      "God bless you"
+    ],
+    "古英語 bletsian(血で清める)。祈って良いものを与える動作。be blessed with で「〜に恵まれている」。"
+  ],
+  [
+    "blessing",
+    "B2",
+    "名詞",
+    [
+      "恵み",
+      "祝福",
+      "承認"
+    ],
+    "/ˈblɛsɪŋ/",
+    "Steady rain in June was a blessing for the rice farmers.",
+    "6月の安定した雨は稲作農家にとって恵みだった。",
+    [
+      "a mixed blessing",
+      "give one's blessing"
+    ],
+    "bless の名詞。天から与えられた良いもの、または「やってよい」という承認。a mixed blessing は良し悪し半々。"
+  ],
+  [
+    "boast",
+    "B2",
+    "動詞",
+    [
+      "自慢する",
+      "誇る"
+    ],
+    "/boʊst/",
+    "The hotel boasts the largest indoor pool in the region.",
+    "そのホテルは地域最大の屋内プールを誇っている。",
+    [
+      "boast about",
+      "boast of"
+    ],
+    "古い語で「大声を出す」が原義。人が主語なら鼻につく自慢、物や場所が主語なら「〜を売りにしている」と中立に読む。"
+  ],
+  [
+    "bonus",
+    "B2",
+    "名詞",
+    [
+      "賞与",
+      "特典"
+    ],
+    "/ˈboʊnəs/",
+    "Staff received a small year-end bonus despite the difficult season.",
+    "厳しい時期にもかかわらず職員はわずかな年末賞与を受け取った。",
+    [
+      "a year-end bonus",
+      "an added bonus"
+    ],
+    "ラテン語 bonus(良い)。約束された分に上乗せされる良いもの。bene- や benefit と同じ語根。"
+  ],
+  [
+    "boom",
+    "B2",
+    "名詞",
+    [
+      "急成長",
+      "好況"
+    ],
+    "/bum/",
+    "The city saw a construction boom after the new line opened.",
+    "新路線の開通後、その都市は建設ブームを迎えた。",
+    [
+      "a housing boom",
+      "an economic boom"
+    ],
+    "もとは大きく響く音を表す擬音。景気が一気に鳴り響くように伸びる状態を指すようになった。"
+  ],
+  [
+    "bounce",
+    "B2",
+    "動詞",
+    [
+      "弾む",
+      "跳ね返る"
+    ],
+    "/baʊns/",
+    "The ball bounced twice before it crossed the line.",
+    "ボールはラインを越える前に2回弾んだ。",
+    [
+      "bounce back",
+      "bounce off"
+    ],
+    "擬音から生まれた語。当たって跳ね返る動きが核で、bounce back なら不調から立ち直ること。"
+  ],
+  [
+    "boundary",
+    "B2",
+    "名詞",
+    [
+      "境界",
+      "限界"
+    ],
+    "/ˈbaʊndɚi/",
+    "A low stone wall marks the boundary between the two farms.",
+    "低い石垣が2つの農場の境界を示している。",
+    [
+      "cross a boundary",
+      "push the boundaries"
+    ],
+    "bound(境)+ -ary。ここまでという線が核。push the boundaries なら常識の線を押し広げること。"
+  ],
+  [
+    "bow",
+    "B2",
+    "名詞・動詞",
+    [
+      "おじぎする",
+      "おじぎ"
+    ],
+    "/baʊ/",
+    "The performers bowed deeply as the audience kept clapping.",
+    "聴衆が拍手を続ける中、演者たちは深くおじぎをした。",
+    [
+      "take a bow",
+      "bow to"
+    ],
+    "「曲げる」が原義で、体を曲げればおじぎ、木を曲げれば弓。おじぎは baʊ、弓は boʊ と発音が分かれる。"
+  ],
+  [
+    "breach",
+    "B2",
+    "名詞・動詞",
+    [
+      "違反",
+      "破ること",
+      "突破する"
+    ],
+    "/britʃ/",
+    "The company was fined for a serious breach of safety rules.",
+    "その会社は安全規則の重大な違反で罰金を科された。",
+    [
+      "a breach of contract",
+      "breach of trust"
+    ],
+    "break と同語源。壁に開いた破れ目が原義で、そこから約束や規則を破ることへ。"
+  ],
+  [
+    "breakdown",
+    "B2",
+    "名詞",
+    [
+      "故障",
+      "内訳",
+      "破綻"
+    ],
+    "/ˈbreɪkdaʊn/",
+    "A breakdown in communication delayed the rescue by two hours.",
+    "意思疎通の断絶が救助を2時間遅らせた。",
+    [
+      "a breakdown in",
+      "a nervous breakdown",
+      "a breakdown of costs"
+    ],
+    "break down の名詞形。機械なら故障、話し合いなら決裂、費用なら細かく分解した内訳。"
+  ],
+  [
+    "breakthrough",
+    "B2",
+    "名詞",
+    [
+      "突破口",
+      "大きな進展"
+    ],
+    "/ˈbreɪkθru/",
+    "The team made a breakthrough in treating the disease.",
+    "そのチームはその病気の治療で大きな進展を果たした。",
+    [
+      "a major breakthrough",
+      "make a breakthrough"
+    ],
+    "break through(突き破る)の名詞。行き詰まりの壁を破った瞬間を指し、小さな改善には使わない。"
+  ],
+  [
+    "breed",
+    "B2",
+    "名詞・動詞",
+    [
+      "品種",
+      "繁殖する",
+      "育てる"
+    ],
+    "/brid/",
+    "These dogs were bred to work in cold mountain areas.",
+    "これらの犬は寒い山岳地帯で働くために育種された。",
+    [
+      "breed animals",
+      "a rare breed"
+    ],
+    "brood(ひな)と同語源で「温めて育てる」。動物を計画的に増やすのが核で、名詞なら育てられた品種。"
+  ],
+  [
+    "broadband",
+    "B2",
+    "名詞",
+    [
+      "ブロードバンド",
+      "高速通信"
+    ],
+    "/ˈbrɔdbænd/",
+    "Broadband access is still limited in remote mountain villages.",
+    "高速通信の利用は遠隔の山村では依然として限られている。",
+    [
+      "broadband access",
+      "broadband connection"
+    ],
+    "broad(広い)+ band(帯域)。使える周波数の帯が広いほど速い、という理屈がそのまま名前になっている。"
+  ],
+  [
+    "browser",
+    "B2",
+    "名詞",
+    [
+      "ブラウザー"
+    ],
+    "/ˈbraʊzɚ/",
+    "Clear your browser history if the page will not load.",
+    "ページが読み込まれない場合はブラウザーの履歴を消してください。",
+    [
+      "a web browser",
+      "browser settings"
+    ],
+    "browse(拾い読みする、家畜が草を食む)+ -er。あちこち少しずつ見て回る道具、という発想。"
+  ],
+  [
+    "brutal",
+    "B2",
+    "形容詞",
+    [
+      "残忍な",
+      "容赦ない"
+    ],
+    "/ˈbrutəl/",
+    "The report gives a brutal account of conditions in the camp.",
+    "その報告書は収容所の状況を容赦なく描き出している。",
+    [
+      "a brutal attack",
+      "brutal honesty"
+    ],
+    "ラテン語 brutus(鈍い、獣のような)。理性を欠いた獣の荒さが核で、brutal honesty なら遠慮のない率直さ。"
+  ],
+  [
+    "buck",
+    "B2",
+    "名詞",
+    [
+      "ドル",
+      "雄の鹿"
+    ],
+    "/bʌk/",
+    "The whole meal cost less than twenty bucks.",
+    "その食事全体で20ドルもかからなかった。",
+    [
+      "a few bucks",
+      "make a buck"
+    ],
+    "もとは雄鹿。毛皮が取引の単位だった名残でドルの俗称になった。くだけた会話専用の語。"
+  ],
+  [
+    "buddy",
+    "B2",
+    "名詞",
+    [
+      "相棒",
+      "仲間"
+    ],
+    "/ˈbʌdi/",
+    "He went hiking with an old college buddy last weekend.",
+    "彼は先週末、大学時代の旧友とハイキングに行った。",
+    [
+      "a study buddy",
+      "an old buddy"
+    ],
+    "brother がなまった形とされる。友情の近さを気軽に表す語で、書き言葉には向かない。"
+  ],
+  [
+    "buffer",
+    "B2",
+    "名詞",
+    [
+      "緩衝",
+      "緩衝材"
+    ],
+    "/ˈbʌfɚ/",
+    "Savings act as a buffer against a sudden loss of income.",
+    "貯蓄は突然の収入減に対する緩衝の役割を果たす。",
+    [
+      "a buffer against",
+      "a buffer zone"
+    ],
+    "衝撃をやわらげる buff(打つ音)から。間に挟まって衝撃を吸収するもの。通信の一時記憶も同じ発想。"
+  ],
+  [
+    "bulk",
+    "B2",
+    "名詞",
+    [
+      "大部分",
+      "大量",
+      "かさ"
+    ],
+    "/bʌlk/",
+    "The bulk of the budget goes to staff salaries.",
+    "予算の大部分は職員の給与に充てられる。",
+    [
+      "the bulk of",
+      "buy in bulk"
+    ],
+    "古ノルド語 bulki(積み荷)。かさばる量そのものが核。the bulk of で「〜の大半」。"
+  ],
+  [
+    "burden",
+    "B2",
+    "名詞",
+    [
+      "重荷",
+      "負担"
+    ],
+    "/ˈbɝdən/",
+    "Caring for two elderly parents placed a heavy burden on her.",
+    "年老いた両親2人の世話は彼女に重い負担を課した。",
+    [
+      "a heavy burden",
+      "the burden of proof"
+    ],
+    "bear(運ぶ)の名詞形。背負って運ぶ荷が原義で、責任や費用の重さの比喩に広く使う。"
+  ],
+  [
+    "bureaucracy",
+    "B2",
+    "名詞",
+    [
+      "官僚制",
+      "お役所仕事"
+    ],
+    "/bjʊˈrɑkrəsi/",
+    "Applicants complained about the bureaucracy involved in getting a permit.",
+    "申請者たちは許可を得るのに伴うお役所仕事に不満を述べた。",
+    [
+      "government bureaucracy",
+      "cut through bureaucracy"
+    ],
+    "フランス語 bureau(事務机)+ cracy(支配)。机の上の手続きが支配する仕組み、という皮肉が込もった語。"
+  ],
+  [
+    "burial",
+    "B2",
+    "名詞",
+    [
+      "埋葬"
+    ],
+    "/ˈbɛriəl/",
+    "The burial took place in a small churchyard outside the village.",
+    "埋葬は村外れの小さな教会墓地で行われた。",
+    [
+      "a burial site",
+      "a proper burial"
+    ],
+    "bury(埋める)の名詞。動詞は beri、名詞は beri と同じ音で始まる点に注意。遺体を土に納める儀式全体を指す。"
+  ],
+  [
+    "cabinet",
+    "B2",
+    "名詞",
+    [
+      "内閣",
+      "戸棚"
+    ],
+    "/ˈkæbənət/",
+    "The prime minister reshuffled the cabinet after the election.",
+    "首相は選挙の後に内閣を改造した。",
+    [
+      "a cabinet minister",
+      "a filing cabinet"
+    ],
+    "cabin(小部屋)の縮小形。小部屋に集まる少人数の会議が「内閣」になった。家具の戸棚は原義寄り。"
+  ],
+  [
+    "calculation",
+    "B2",
+    "名詞",
+    [
+      "計算",
+      "見積もり"
+    ],
+    "/kælkjəˈleɪʃən/",
+    "A simple calculation shows that the plan will not pay for itself.",
+    "簡単な計算で、その計画は採算が取れないと分かる。",
+    [
+      "a rough calculation",
+      "by my calculation"
+    ],
+    "ラテン語 calculus(小石)。小石を並べて数えたことに由来し、calculus や calcium も同じ石の系統。"
+  ],
+  [
+    "canvas",
+    "B2",
+    "名詞",
+    [
+      "キャンバス",
+      "帆布"
+    ],
+    "/ˈkænvəs/",
+    "He stretched a fresh canvas before starting the portrait.",
+    "彼は肖像画を描き始める前に新しいキャンバスを張った。",
+    [
+      "paint on canvas",
+      "a canvas bag"
+    ],
+    "ラテン語 cannabis(麻)。麻で織った丈夫な布が原義で、帆にも絵の下地にも使われた。"
+  ],
+  [
+    "capability",
+    "B2",
+    "名詞",
+    [
+      "能力",
+      "機能"
+    ],
+    "/keɪpəˈbɪləti/",
+    "The country lacks the capability to produce its own vaccines.",
+    "その国は自国でワクチンを生産する能力を欠いている。",
+    [
+      "have the capability",
+      "nuclear capability"
+    ],
+    "capable(受け入れられる)+ -ity。cap は「つかむ、収める」。実際にやってのけられる容量、という感覚。"
+  ],
+  [
+    "capitalism",
+    "B2",
+    "名詞",
+    [
+      "資本主義"
+    ],
+    "/ˈkæpɪtəlɪzəm/",
+    "The book compares capitalism in Europe and East Asia.",
+    "その本はヨーロッパと東アジアの資本主義を比較している。",
+    [
+      "modern capitalism",
+      "free-market capitalism"
+    ],
+    "capital(元手)+ -ism。頭 caput から来た capital は「元となるもの」。元手が利益を生む仕組みを指す。"
+  ],
+  [
+    "capitalist",
+    "B2",
+    "形容詞",
+    [
+      "資本主義の",
+      "資本家"
+    ],
+    "/ˈkæpətəlɪst/",
+    "Most capitalist economies rely on private ownership of firms.",
+    "ほとんどの資本主義経済は企業の私的所有に依拠している。",
+    [
+      "a capitalist economy",
+      "a capitalist society"
+    ],
+    "capitalism の形容詞・人。制度を指すときは中立だが、人を指すと批判的に響くことがある。"
+  ],
+  [
+    "cargo",
+    "B2",
+    "名詞",
+    [
+      "貨物",
+      "積み荷"
+    ],
+    "/ˈkɑrgoʊ/",
+    "The ship was carrying a cargo of grain from South America.",
+    "その船は南米からの穀物の積み荷を運んでいた。",
+    [
+      "a cargo ship",
+      "cargo of"
+    ],
+    "スペイン語 cargar(積む)。charge や car と同語源で「載せる」が芯。船・飛行機・トラックの積み荷に使う。"
+  ],
+  [
+    "carriage",
+    "B2",
+    "名詞",
+    [
+      "客車",
+      "馬車",
+      "輸送"
+    ],
+    "/ˈkærɪdʒ/",
+    "The first carriage of the train is reserved for season-ticket holders.",
+    "その列車の先頭車両は定期券の所持者専用だ。",
+    [
+      "a horse-drawn carriage",
+      "the front carriage"
+    ],
+    "carry(運ぶ)+ -age。運ぶための箱が核で、英国では鉄道の客車を指す。米国は car を使う。"
+  ],
+  [
+    "carve",
+    "B2",
+    "動詞",
+    [
+      "彫る",
+      "切り分ける"
+    ],
+    "/kɑrv/",
+    "The artist carved the whole figure from a single block of wood.",
+    "その芸術家は一本の木の塊から像全体を彫り出した。",
+    [
+      "carve wood",
+      "carve out a niche"
+    ],
+    "古英語 ceorfan(切る)。削って形を出すのが核。carve out なら自分の場所を切り開くこと。"
+  ],
+  [
+    "casino",
+    "B2",
+    "名詞",
+    [
+      "カジノ"
+    ],
+    "/kəˈsinoʊ/",
+    "The city approved plans for a casino near the waterfront.",
+    "市は湾岸近くのカジノ計画を承認した。",
+    [
+      "a casino resort",
+      "go to a casino"
+    ],
+    "イタリア語 casa(家)の縮小形で「小さな家」。もとは社交用の別棟で、後に賭博場を指すようになった。"
+  ],
+  [
+    "casualty",
+    "B2",
+    "名詞",
+    [
+      "死傷者",
+      "犠牲"
+    ],
+    "/ˈkæʒəwəlti/",
+    "There were no casualties in the fire thanks to the alarm.",
+    "警報のおかげでその火災に死傷者はいなかった。",
+    [
+      "heavy casualties",
+      "a casualty of"
+    ],
+    "casual(偶然の)と同語源で、ラテン語 cadere(落ちる)。偶然ふりかかって倒れた人、が核。"
+  ],
+  [
+    "catalogue",
+    "B2",
+    "名詞",
+    [
+      "カタログ",
+      "目録"
+    ],
+    "/ˈkætəlɔg/",
+    "The library catalogue lists every item held in the archive.",
+    "その図書館の目録は保管庫にある全品目を載せている。",
+    [
+      "a mail-order catalogue",
+      "a catalogue of errors"
+    ],
+    "ギリシャ語 katalogos(数え上げる)。順に並べて数え上げた一覧。米つづりは catalog。"
+  ],
+  [
+    "cater",
+    "B2",
+    "動詞",
+    [
+      "料理を提供する",
+      "要望に応える"
+    ],
+    "/ˈkeɪtɚ/",
+    "The hotel caters mainly to business travellers.",
+    "そのホテルは主に出張者の要望に応えている。",
+    [
+      "cater for",
+      "cater to"
+    ],
+    "ラテン語 capere(取る)から。もとは食事を調達すること。cater to なら特定の相手に合わせて用意する。"
+  ],
+  [
+    "cattle",
+    "B2",
+    "名詞",
+    [
+      "牛"
+    ],
+    "/ˈkætəl/",
+    "The farmer keeps about sixty cattle on the hillside pasture.",
+    "その農家は丘の牧草地で約60頭の牛を飼っている。",
+    [
+      "raise cattle",
+      "a herd of cattle"
+    ],
+    "capital と同語源で、もとは「財産」。家畜が富そのものだった時代の名残。常に複数扱いで a cattle とは言わない。"
+  ],
+  [
+    "caution",
+    "B2",
+    "名詞",
+    [
+      "用心",
+      "警告"
+    ],
+    "/ˈkɑʃən/",
+    "Drivers should approach the bend with caution in wet weather.",
+    "雨天時、運転者は用心してそのカーブに近づくべきだ。",
+    [
+      "with caution",
+      "a word of caution"
+    ],
+    "ラテン語 cavere(用心する)。危険を先に見て身構えること。with caution で副詞的に使う形が定番。"
+  ],
+  [
+    "cautious",
+    "B2",
+    "形容詞",
+    [
+      "慎重な",
+      "用心深い"
+    ],
+    "/ˈkɔʃəs/",
+    "Investors remain cautious about the housing market this year.",
+    "投資家は今年の住宅市場について慎重な姿勢を保っている。",
+    [
+      "cautious about",
+      "a cautious approach"
+    ],
+    "caution の形容詞。危険を予想して足を止められる性質。臆病 timid と違い、判断としての慎重さを指す。"
+  ],
+  [
+    "cease",
+    "B2",
+    "動詞",
+    [
+      "やめる",
+      "終わる"
+    ],
+    "/sis/",
+    "The factory ceased production at the end of last year.",
+    "その工場は昨年末に生産を停止した。",
+    [
+      "cease to exist",
+      "cease fire"
+    ],
+    "ラテン語 cessare(やめる)。process や success の cess(行く)と同根で、進むのを止めること。stop より硬い。"
+  ],
+  [
+    "cemetery",
+    "B2",
+    "名詞",
+    [
+      "墓地"
+    ],
+    "/ˈsɛmətɛri/",
+    "Her grandparents are buried in a hillside cemetery near the sea.",
+    "彼女の祖父母は海に近い丘の墓地に埋葬されている。",
+    [
+      "a public cemetery",
+      "visit a cemetery"
+    ],
+    "ギリシャ語 koimeterion(眠る場所)。死を眠りとみる発想がそのまま名前になっている。"
+  ],
+  [
+    "chamber",
+    "B2",
+    "名詞",
+    [
+      "議場",
+      "部屋"
+    ],
+    "/ˈtʃeɪmbɚ/",
+    "The upper chamber rejected the bill by a single vote.",
+    "上院はその法案を1票差で否決した。",
+    [
+      "a debating chamber",
+      "the upper chamber"
+    ],
+    "ラテン語 camera(部屋)。カメラと同語源で「囲まれた空間」。議会の一院や心臓の各室にも使う。"
+  ],
+  [
+    "chaos",
+    "B2",
+    "名詞",
+    [
+      "大混乱",
+      "無秩序"
+    ],
+    "/ˈkeɪɑs/",
+    "Heavy snow caused chaos on the roads all morning.",
+    "大雪が午前中ずっと道路に大混乱を引き起こした。",
+    [
+      "cause chaos",
+      "total chaos"
+    ],
+    "ギリシャ語 khaos(大口を開けた空虚)。秩序が生まれる前の状態が原義。発音は ケイオス に近い。"
+  ],
+  [
+    "characterize",
+    "B2",
+    "動詞",
+    [
+      "特徴づける",
+      "性格を描く"
+    ],
+    "/ˈkɛrəktɚaɪz/",
+    "The period was characterized by rapid growth and rising prices.",
+    "その時期は急速な成長と物価上昇によって特徴づけられた。",
+    [
+      "be characterized by",
+      "characterize as"
+    ],
+    "character(刻まれた印)+ -ize。印を刻むように、そのものらしさを示すこと。be characterized by の形が多い。"
+  ],
+  [
+    "charm",
+    "B2",
+    "名詞",
+    [
+      "魅力",
+      "お守り",
+      "魅了する"
+    ],
+    "/tʃɑrm/",
+    "The old town has a quiet charm that photographs never capture.",
+    "その旧市街には写真では決してとらえられない静かな魅力がある。",
+    [
+      "rustic charm",
+      "charm bracelet"
+    ],
+    "ラテン語 carmen(歌、呪文)。もとは唱えて人を動かす呪文で、そこから人を引きつける力へ。"
+  ],
+  [
+    "charter",
+    "B2",
+    "名詞",
+    [
+      "憲章",
+      "貸し切り"
+    ],
+    "/ˈtʃɑrtɚ/",
+    "The company runs charter flights to several island resorts.",
+    "その会社はいくつかの島のリゾートへチャーター便を運航している。",
+    [
+      "a charter flight",
+      "the UN Charter"
+    ],
+    "ラテン語 charta(紙)。card や chart と同語源。権利を書いた文書が憲章、貸し切り契約書からチャーター便。"
+  ],
+  [
+    "chronic",
+    "B2",
+    "形容詞",
+    [
+      "慢性の",
+      "長引く"
+    ],
+    "/ˈkrɑnɪk/",
+    "She has lived with chronic back pain for over ten years.",
+    "彼女は10年以上、慢性の腰痛を抱えて生活してきた。",
+    [
+      "chronic illness",
+      "a chronic shortage"
+    ],
+    "ギリシャ語 khronos(時間。chronology)。時間が長く続くのが核で、急性の acute と対になる。"
+  ],
+  [
+    "chunk",
+    "B2",
+    "名詞",
+    [
+      "大きな塊",
+      "かたまり"
+    ],
+    "/tʃʌŋk/",
+    "A large chunk of the budget was spent on new equipment.",
+    "予算の大きな部分が新しい設備に費やされた。",
+    [
+      "a chunk of",
+      "a large chunk"
+    ],
+    "chuck(丸太の切れ端)の変形。ざっくり割った塊が核で、時間やお金の「まとまった量」にも使う。"
+  ],
+  [
+    "circulate",
+    "B2",
+    "動詞",
+    [
+      "循環する",
+      "出回る"
+    ],
+    "/ˈsɝkjəleɪt/",
+    "Rumours about the merger circulated for weeks before the announcement.",
+    "合併のうわさは発表の何週間も前から出回っていた。",
+    [
+      "circulate freely",
+      "blood circulates"
+    ],
+    "circle(輪)+ -ate。輪を描いて元に戻る動き。血液でも情報でも、回って広がるのが核。"
+  ],
+  [
+    "circulation",
+    "B2",
+    "名詞",
+    [
+      "循環",
+      "発行部数"
+    ],
+    "/ˈsɝkjəleɪʃən/",
+    "The magazine has a circulation of about forty thousand copies.",
+    "その雑誌は約4万部の発行部数がある。",
+    [
+      "in circulation",
+      "blood circulation"
+    ],
+    "circulate の名詞。回って行き渡っている量、が核。世に出回っている紙幣や新聞の部数を指す。"
+  ],
+  [
+    "citizenship",
+    "B2",
+    "名詞",
+    [
+      "市民権",
+      "国籍"
+    ],
+    "/ˈsɪtɪzənʃɪp/",
+    "She applied for citizenship after living in the country for ten years.",
+    "彼女はその国に10年住んだ後、市民権を申請した。",
+    [
+      "apply for citizenship",
+      "dual citizenship"
+    ],
+    "citizen(市民)+ -ship(身分)。city と同語根で、都市の一員である資格が原義。"
+  ],
+  [
+    "civic",
+    "B2",
+    "形容詞",
+    [
+      "市民の",
+      "都市の"
+    ],
+    "/ˈsɪvɪk/",
+    "Voting is often described as a basic civic duty.",
+    "投票はしばしば基本的な市民の義務と説明される。",
+    [
+      "civic duty",
+      "civic centre"
+    ],
+    "ラテン語 civis(市民)。city, civil と同じ家族。個人としてではなく、共同体の一員としての側面を指す。"
+  ],
+  [
+    "civilian",
+    "B2",
+    "形容詞・名詞",
+    [
+      "民間の",
+      "一般市民"
+    ],
+    "/səˈvɪljən/",
+    "Aid workers reported heavy civilian losses in the border area.",
+    "支援活動家は国境地帯で多くの民間人の被害を報告した。",
+    [
+      "civilian casualties",
+      "civilian clothes"
+    ],
+    "civil(市民の)+ -ian。軍人・警官と対比して「制服を着ていない側」を指すのが特徴。"
+  ],
+  [
+    "clarity",
+    "B2",
+    "名詞",
+    [
+      "明快さ",
+      "鮮明さ"
+    ],
+    "/ˈklɛrəti/",
+    "The report is valued for its clarity rather than its length.",
+    "その報告書は長さではなく明快さで評価されている。",
+    [
+      "clarity of thought",
+      "with great clarity"
+    ],
+    "ラテン語 clarus(澄んだ。clear)。濁りがなく向こうが見える状態。説明の分かりやすさにも音や映像の鮮明さにも使う。"
+  ],
+  [
+    "clash",
+    "B2",
+    "名詞",
+    [
+      "衝突",
+      "対立"
+    ],
+    "/klæʃ/",
+    "A clash between police and protesters blocked the main street.",
+    "警察と抗議者の衝突が大通りをふさいだ。",
+    [
+      "a clash between",
+      "clash with"
+    ],
+    "金属がぶつかる音からできた擬音語。実際の衝突にも、意見や色合いのぶつかり合いにも使う。"
+  ],
+  [
+    "classification",
+    "B2",
+    "名詞",
+    [
+      "分類",
+      "区分"
+    ],
+    "/klæsəfəˈkeɪʃən/",
+    "The classification of these plants has changed twice in ten years.",
+    "これらの植物の分類は10年で2度変わっている。",
+    [
+      "a classification system",
+      "the classification of"
+    ],
+    "classify の名詞。ラテン語 classis(等級)。同じ性質のものを組に分けて整理すること。"
+  ],
+  [
+    "cling",
+    "B2",
+    "動詞",
+    [
+      "しがみつく",
+      "くっつく"
+    ],
+    "/klɪŋ/",
+    "Small children often cling to a parent in unfamiliar places.",
+    "小さな子どもは慣れない場所ではよく親にしがみつく。",
+    [
+      "cling to",
+      "cling together"
+    ],
+    "古英語 clingan(縮んで固まる)。離すまいと縮こまってくっつく動き。cling to hope なら望みを手放さないこと。"
+  ],
+  [
+    "clinical",
+    "B2",
+    "形容詞",
+    [
+      "臨床の",
+      "冷静な"
+    ],
+    "/ˈklɪnəkəl/",
+    "The drug performed well in the first clinical trial.",
+    "その薬は最初の臨床試験で良好な成績を示した。",
+    [
+      "a clinical trial",
+      "clinical practice"
+    ],
+    "ギリシャ語 kline(寝台)。病床のそばで行うのが原義。感情を交えず観察する態度、の意味にも広がる。"
+  ],
+  [
+    "closure",
+    "B2",
+    "名詞",
+    [
+      "閉鎖",
+      "終結"
+    ],
+    "/ˈkloʊʒɚ/",
+    "The closure of the local hospital angered many residents.",
+    "地元の病院の閉鎖は多くの住民を怒らせた。",
+    [
+      "a factory closure",
+      "road closure"
+    ],
+    "close(閉じる)の名詞。施設をたたむことにも、気持ちに区切りをつけることにも使う。"
+  ],
+  [
+    "cluster",
+    "B2",
+    "名詞",
+    [
+      "集団",
+      "群れ",
+      "群がる"
+    ],
+    "/ˈklʌstɚ/",
+    "A cluster of small shops has grown up around the new station.",
+    "新しい駅の周りに小さな商店の一群ができた。",
+    [
+      "a cluster of",
+      "cluster around"
+    ],
+    "古英語 clyster(房)。ぶどうの房のように、近い場所に固まって並ぶこと。"
+  ],
+  [
+    "coalition",
+    "B2",
+    "名詞",
+    [
+      "連立",
+      "連合"
+    ],
+    "/koʊəˈlɪʃən/",
+    "Three parties formed a coalition to secure a majority.",
+    "3つの政党が過半数を確保するために連立を組んだ。",
+    [
+      "a coalition government",
+      "form a coalition"
+    ],
+    "co-(共に)+ alesc(育つ。adolescent と同語根)。別々のものが一緒に育って一つになる、が原義。"
+  ],
+  [
+    "coastal",
+    "B2",
+    "形容詞",
+    [
+      "沿岸の"
+    ],
+    "/ˈkoʊstəl/",
+    "Coastal towns are investing in higher sea walls.",
+    "沿岸の町はより高い防潮堤に投資している。",
+    [
+      "a coastal town",
+      "coastal erosion"
+    ],
+    "coast(海岸)の形容詞。coast はラテン語 costa(肋骨、脇腹)から、陸の縁という発想。"
+  ],
+  [
+    "cocktail",
+    "B2",
+    "名詞",
+    [
+      "カクテル",
+      "混合物"
+    ],
+    "/ˈkɑkteɪl/",
+    "The bar is known for cocktails made with local fruit.",
+    "そのバーは地元産の果物を使ったカクテルで知られている。",
+    [
+      "a cocktail party",
+      "a cocktail of drugs"
+    ],
+    "語源は諸説あるが、複数のものを混ぜた飲み物が核。薬の組み合わせなど、比喩でも使う。"
+  ],
+  [
+    "cognitive",
+    "B2",
+    "形容詞",
+    [
+      "認知の",
+      "認識の"
+    ],
+    "/ˈkɑgnɪtɪv/",
+    "Sleep loss has a clear effect on cognitive performance.",
+    "睡眠不足は認知能力に明らかな影響を与える。",
+    [
+      "cognitive ability",
+      "cognitive science"
+    ],
+    "ラテン語 cognoscere(知る)。recognize と同語根で、考える・覚える・判断するという頭の働き全般を指す。"
+  ],
+  [
+    "coincide",
+    "B2",
+    "動詞",
+    [
+      "同時に起こる",
+      "一致する"
+    ],
+    "/koʊɪnˈsaɪd/",
+    "Her visit happened to coincide with the town festival.",
+    "彼女の訪問はたまたま町の祭りと重なった。",
+    [
+      "coincide with",
+      "happen to coincide"
+    ],
+    "co-(共に)+ in-(上に)+ cid(落ちる。accident)。二つの出来事が同じ点に落ちること。"
+  ],
+  [
+    "collaborate",
+    "B2",
+    "動詞",
+    [
+      "協力する",
+      "共同で行う"
+    ],
+    "/kəˈlæbɚeɪt/",
+    "The two universities collaborated on a study of urban air.",
+    "その2つの大学は都市の大気に関する研究で協力した。",
+    [
+      "collaborate with",
+      "collaborate on"
+    ],
+    "co-(共に)+ labor(働く)。同じ仕事を一緒に担うのが核で、単に助ける help より対等な響き。"
+  ],
+  [
+    "collaboration",
+    "B2",
+    "名詞",
+    [
+      "協力",
+      "共同作業"
+    ],
+    "/kəlæbɚˈeɪʃən/",
+    "The exhibition was created in collaboration with local artists.",
+    "その展覧会は地元の芸術家との共同で作られた。",
+    [
+      "in collaboration with",
+      "close collaboration"
+    ],
+    "collaborate の名詞。in collaboration with の形で、誰と組んだかを示すのが定番。"
+  ],
+  [
+    "collective",
+    "B2",
+    "形容詞",
+    [
+      "集団の",
+      "共同の"
+    ],
+    "/kəˈlɛktɪv/",
+    "The decision was the result of a collective effort by the whole staff.",
+    "その決定は職員全体の共同の努力の結果だった。",
+    [
+      "collective effort",
+      "collective responsibility"
+    ],
+    "collect(集める)の形容詞。個人ではなく、集まった全体として、が核。"
+  ],
+  [
+    "collision",
+    "B2",
+    "名詞",
+    [
+      "衝突"
+    ],
+    "/kəˈlɪʒən/",
+    "Two ships avoided a collision thanks to a last-minute warning.",
+    "直前の警告のおかげで2隻の船は衝突を免れた。",
+    [
+      "a head-on collision",
+      "on a collision course"
+    ],
+    "col-(共に)+ lis(打つ)。互いに打ち合うことが原義。物理的な衝突にも、利害のぶつかりにも使う。"
+  ],
+  [
+    "colonial",
+    "B2",
+    "形容詞",
+    [
+      "植民地の",
+      "植民地時代の"
+    ],
+    "/kəˈloʊniəl/",
+    "The museum is housed in a colonial building from the 1890s.",
+    "その博物館は1890年代の植民地時代の建物に入っている。",
+    [
+      "colonial rule",
+      "colonial period"
+    ],
+    "colony(入植地)の形容詞。ラテン語 colere(耕す)から。他国が支配して人を住まわせた土地に関わること。"
+  ],
+  [
+    "columnist",
+    "B2",
+    "名詞",
+    [
+      "コラムニスト"
+    ],
+    "/ˈkɑləmnəst/",
+    "She works as a political columnist for a national newspaper.",
+    "彼女は全国紙の政治コラムニストとして働いている。",
+    [
+      "a newspaper columnist",
+      "a regular columnist"
+    ],
+    "column(柱、縦の欄)+ -ist。新聞の縦一列の枠を任され、定期的に意見を書く人。"
+  ],
+  [
+    "combat",
+    "B2",
+    "名詞・動詞",
+    [
+      "戦闘",
+      "闘う"
+    ],
+    "/ˈkɑmbæt/",
+    "New measures were introduced to combat online fraud.",
+    "ネット詐欺と闘うために新しい対策が導入された。",
+    [
+      "combat crime",
+      "hand-to-hand combat"
+    ],
+    "com-(共に)+ bat(打つ。battle, beat)。互いに打ち合うことが原義。動詞では病気や犯罪と闘う意味が多い。"
+  ],
+  [
+    "commence",
+    "B2",
+    "動詞",
+    [
+      "始まる",
+      "開始する"
+    ],
+    "/kəˈmɛns/",
+    "The ceremony will commence at ten sharp.",
+    "式典は10時ちょうどに始まる。",
+    [
+      "commence work",
+      "commence proceedings"
+    ],
+    "com-(共に)+ initiare(始める)。begin の硬い言い換えで、式典や法的手続きの告知文でよく見る。"
+  ],
+  [
+    "commentary",
+    "B2",
+    "名詞",
+    [
+      "解説",
+      "論評"
+    ],
+    "/ˈkɑməntɛri/",
+    "His live commentary made the match easy to follow.",
+    "彼の実況解説のおかげでその試合は分かりやすかった。",
+    [
+      "live commentary",
+      "social commentary"
+    ],
+    "comment の名詞。出来事に沿って言葉を添え続けること。running commentary なら実況中継。"
+  ],
+  [
+    "commentator",
+    "B2",
+    "名詞",
+    [
+      "解説者",
+      "評論家"
+    ],
+    "/ˈkɑmənteɪtɚ/",
+    "A political commentator explained the result on the evening news.",
+    "ある政治評論家が夕方のニュースでその結果を解説した。",
+    [
+      "a political commentator",
+      "a sports commentator"
+    ],
+    "comment(意見を添える)+ -ator(人)。当事者ではなく、外から意味づけをする立場の人。"
+  ],
+  [
+    "commerce",
+    "B2",
+    "名詞",
+    [
+      "商業",
+      "取引"
+    ],
+    "/ˈkɑmɚs/",
+    "Electronic commerce now accounts for a third of all retail sales.",
+    "電子商取引は今や小売売上高の3分の1を占める。",
+    [
+      "electronic commerce",
+      "chamber of commerce"
+    ],
+    "com-(共に)+ merc(商品。market, merchant)。人が集まって品物をやりとりすること全体を指す。"
+  ],
+  [
+    "commissioner",
+    "B2",
+    "名詞",
+    [
+      "委員",
+      "長官"
+    ],
+    "/kəˈmɪʃənɚ/",
+    "The police commissioner promised a full review of the case.",
+    "警察本部長はその事件の全面的な見直しを約束した。",
+    [
+      "a police commissioner",
+      "the commissioner for"
+    ],
+    "commission(任務を託すこと)+ -er。公的な任務を託された立場の人で、組織の長を指すことが多い。"
+  ],
+  [
+    "commodity",
+    "B2",
+    "名詞",
+    [
+      "商品",
+      "産物"
+    ],
+    "/kəˈmɑdəti/",
+    "Coffee remains one of the most traded commodities in the world.",
+    "コーヒーは世界で最も取引される産物のひとつであり続けている。",
+    [
+      "commodity prices",
+      "a valuable commodity"
+    ],
+    "ラテン語 commodus(都合のよい)。役に立つ品が原義で、今は原材料など大量に取引されるものを指す。"
+  ],
+  [
+    "communist",
+    "B2",
+    "形容詞",
+    [
+      "共産主義の",
+      "共産主義者"
+    ],
+    "/ˈkɑmjənəst/",
+    "The country was under communist rule for four decades.",
+    "その国は40年間、共産主義の支配下にあった。",
+    [
+      "a communist party",
+      "a communist state"
+    ],
+    "commune(共同体)+ -ist。common と同語根で「共有する」が芯。財産を共有する立場を指す。"
+  ],
+  [
+    "companion",
+    "B2",
+    "名詞",
+    [
+      "仲間",
+      "連れ"
+    ],
+    "/kəmˈpænjən/",
+    "A good book can be a fine companion on a long journey.",
+    "良い本は長い旅の良き友になり得る。",
+    [
+      "a travelling companion",
+      "a constant companion"
+    ],
+    "com-(共に)+ pan(パン)。同じパンを分け合う相手、が語源。日常をともに過ごす連れ、が核。"
+  ],
+  [
+    "comparable",
+    "B2",
+    "形容詞",
+    [
+      "匹敵する",
+      "比較できる"
+    ],
+    "/ˈkɑmpɚəbəl/",
+    "Their results are comparable to those of much larger teams.",
+    "彼らの成果はずっと大きなチームのものに匹敵する。",
+    [
+      "comparable to",
+      "comparable with"
+    ],
+    "compare + -able。並べて比べられる、つまり同じ土俵に乗る水準にあるということ。強勢は先頭に置く。"
+  ],
+  [
+    "compassion",
+    "B2",
+    "名詞",
+    [
+      "思いやり",
+      "同情"
+    ],
+    "/kəmˈpæʃən/",
+    "She treats every patient with genuine compassion.",
+    "彼女はどの患者にも心からの思いやりを持って接する。",
+    [
+      "show compassion",
+      "compassion for"
+    ],
+    "com-(共に)+ passion(苦しみ。passive, patient)。相手の苦しみを共に引き受ける気持ち。"
+  ],
+  [
+    "compel",
+    "B2",
+    "動詞",
+    [
+      "強制する",
+      "余儀なくさせる"
+    ],
+    "/kəmˈpɛl/",
+    "Bad weather compelled the organizers to cancel the parade.",
+    "悪天候が主催者にパレードの中止を余儀なくさせた。",
+    [
+      "compel someone to",
+      "feel compelled to"
+    ],
+    "com-(強め)+ pel(押す。propel, expel)。押し切って動かすこと。物理的な力にも状況の圧力にも使う。"
+  ],
+  [
+    "compelling",
+    "B2",
+    "形容詞",
+    [
+      "説得力のある",
+      "心を引きつける"
+    ],
+    "/kəmˈpɛlɪŋ/",
+    "The lawyer presented a compelling case for a retrial.",
+    "その弁護士は再審を求める説得力のある主張を示した。",
+    [
+      "a compelling argument",
+      "compelling evidence"
+    ],
+    "compel の形容詞。こちらの心を押して動かしてしまうほど強い、という理屈。"
+  ],
+  [
+    "compensate",
+    "B2",
+    "動詞",
+    [
+      "埋め合わせる",
+      "補償する"
+    ],
+    "/ˈkɑmpənseɪt/",
+    "The airline compensated passengers for the long delay.",
+    "その航空会社は長時間の遅延について乗客に補償した。",
+    [
+      "compensate for",
+      "compensate someone for"
+    ],
+    "com-(共に)+ pens(重さを量る。pension, expense)。天秤の傾きを元に戻すように、足りない分を釣り合わせる。"
+  ],
+  [
+    "compensation",
+    "B2",
+    "名詞",
+    [
+      "補償",
+      "賠償金"
+    ],
+    "/kɑmpənˈseɪʃən/",
+    "Workers received compensation for injuries caused by the accident.",
+    "労働者はその事故で負った負傷に対して補償を受けた。",
+    [
+      "claim compensation",
+      "compensation for"
+    ],
+    "compensate の名詞。釣り合いを取り戻すために渡される金や物。in compensation for の形も多い。"
+  ],
+  [
+    "competence",
+    "B2",
+    "名詞",
+    [
+      "能力",
+      "力量"
+    ],
+    "/ˈkɑmpətɪns/",
+    "Nobody doubted her competence as a project manager.",
+    "誰も彼女のプロジェクト管理者としての力量を疑わなかった。",
+    [
+      "professional competence",
+      "linguistic competence"
+    ],
+    "com-(共に)+ pet(求める。appetite, compete)。求められる水準に達している状態。才能ではなく職務遂行力を指す。"
+  ],
+  [
+    "competent",
+    "B2",
+    "形容詞",
+    [
+      "有能な",
+      "適格な"
+    ],
+    "/ˈkɑmpətɪnt/",
+    "We need a competent translator for the technical documents.",
+    "技術文書のために有能な翻訳者が必要だ。",
+    [
+      "a competent teacher",
+      "competent to"
+    ],
+    "competence の形容詞。突出した才ではなく「任せて問題ない水準」を表す、控えめなほめ言葉。"
+  ],
+  [
+    "compile",
+    "B2",
+    "動詞",
+    [
+      "編集する",
+      "まとめる"
+    ],
+    "/kəmˈpaɪl/",
+    "Researchers compiled data from more than fifty hospitals.",
+    "研究者は50を超える病院からデータをまとめた。",
+    [
+      "compile a list",
+      "compile a report"
+    ],
+    "com-(共に)+ pile(積む)。あちこちから集めて一つに積み上げること。一覧や報告書を作る場面で使う。"
+  ],
+  [
+    "complement",
+    "B2",
+    "動詞",
+    [
+      "補完する",
+      "引き立てる"
+    ],
+    "/ˈkɑmpləmənt/",
+    "The sauce complements the fish without overpowering it.",
+    "そのソースは魚の味を消さずに引き立てる。",
+    [
+      "complement each other",
+      "nicely complement"
+    ],
+    "complete と同語根で「満たす」。足りない部分を埋めて全体を完成させる。ほめる compliment と綴りが1字違い。"
+  ],
+  [
+    "complexity",
+    "B2",
+    "名詞",
+    [
+      "複雑さ"
+    ],
+    "/kəmpˈlɛksəti/",
+    "The complexity of the tax system discourages small businesses.",
+    "税制の複雑さは小規模事業者の意欲をそぐ。",
+    [
+      "the complexity of",
+      "growing complexity"
+    ],
+    "complex の名詞。com-(共に)+ plex(編む。plait)。多くの糸が編み合わさっている状態。"
+  ],
+  [
+    "compliance",
+    "B2",
+    "名詞",
+    [
+      "順守",
+      "法令遵守"
+    ],
+    "/kəmpˈlaɪəns/",
+    "Compliance with the new rules is checked twice a year.",
+    "新しい規則の順守は年2回確認される。",
+    [
+      "compliance with",
+      "in compliance with"
+    ],
+    "comply の名詞。求められた通りに従っている状態で、企業や役所の文書に頻出する。"
+  ],
+  [
+    "complication",
+    "B2",
+    "名詞",
+    [
+      "複雑にする要因",
+      "合併症"
+    ],
+    "/kɑmpləˈkeɪʃən/",
+    "An unexpected complication delayed the surgery by two hours.",
+    "予期しない問題が手術を2時間遅らせた。",
+    [
+      "a serious complication",
+      "medical complications"
+    ],
+    "complicate の名詞。話や状態をもつれさせる要素。医療では、もとの病気に伴って起きる別の症状。"
+  ],
+  [
+    "comply",
+    "B2",
+    "動詞",
+    [
+      "従う",
+      "応じる"
+    ],
+    "/kəmpˈlaɪ/",
+    "Restaurants that fail to comply face heavy fines.",
+    "従わない飲食店は高額の罰金に直面する。",
+    [
+      "comply with",
+      "refuse to comply"
+    ],
+    "com-(共に)+ ply(満たす。complete)。相手の求めを満たすこと。必ず comply with の形で使う。"
+  ],
+  [
+    "composition",
+    "B2",
+    "名詞",
+    [
+      "構成",
+      "作曲",
+      "作品"
+    ],
+    "/kɑmpəˈzɪʃən/",
+    "The composition of the committee changes every two years.",
+    "その委員会の構成は2年ごとに変わる。",
+    [
+      "the composition of",
+      "a musical composition"
+    ],
+    "com-(共に)+ pos(置く。position)。要素をどう置いたか、が核。並べ方そのものにも、その結果の作品にも使う。"
+  ],
+  [
+    "compromise",
+    "B2",
+    "名詞・動詞",
+    [
+      "妥協",
+      "歩み寄る",
+      "損なう"
+    ],
+    "/ˈkɑmprəmaɪz/",
+    "Both sides finally reached a compromise after long talks.",
+    "長い協議の末、双方はついに妥協に達した。",
+    [
+      "reach a compromise",
+      "compromise on"
+    ],
+    "com-(共に)+ promise(約束)。互いに譲る約束が原義。動詞には「安全や信用を損なう」という別の重要な意味もある。"
+  ],
+  [
+    "compute",
+    "B2",
+    "動詞",
+    [
+      "計算する",
+      "算出する"
+    ],
+    "/kəmpˈjut/",
+    "The software computes the total cost including all taxes.",
+    "そのソフトは税込みの総額を計算する。",
+    [
+      "compute a value",
+      "compute the average"
+    ],
+    "com-(共に)+ put(切りそろえる)。数を突き合わせて整えること。computer はこれをする機械。"
+  ],
+  [
+    "conceal",
+    "B2",
+    "動詞",
+    [
+      "隠す",
+      "秘密にする"
+    ],
+    "/kənˈsil/",
+    "He tried to conceal his disappointment behind a polite smile.",
+    "彼は礼儀正しい笑みの裏に落胆を隠そうとした。",
+    [
+      "conceal the truth",
+      "conceal a weapon"
+    ],
+    "com-(共に)+ ceal(覆う。cell, hell と同語根)。すっかり覆ってしまうこと。hide より意図的な響きが強い。"
+  ],
+  [
+    "concede",
+    "B2",
+    "動詞",
+    [
+      "認める",
+      "譲る"
+    ],
+    "/kənˈsid/",
+    "The candidate conceded defeat before all votes were counted.",
+    "その候補者は全票が数えられる前に敗北を認めた。",
+    [
+      "concede defeat",
+      "concede a point"
+    ],
+    "con-(共に)+ cede(譲る。proceed, recede)。押し合いをやめて一歩引くこと。負けや相手の言い分を認める場面で使う。"
+  ],
+  [
+    "conceive",
+    "B2",
+    "動詞",
+    [
+      "思いつく",
+      "想像する",
+      "身ごもる"
+    ],
+    "/kənˈsiv/",
+    "It is hard to conceive of a city without cars.",
+    "車のない都市を想像するのは難しい。",
+    [
+      "conceive of",
+      "conceive a plan"
+    ],
+    "con-(共に)+ ceive(取る。receive, perceive)。頭の中に取り込んで形にすること。concept は取り込まれたその形。"
+  ],
+  [
+    "conception",
+    "B2",
+    "名詞",
+    [
+      "考え",
+      "概念",
+      "着想"
+    ],
+    "/kənˈsɛpʃən/",
+    "Their conception of fairness differs from ours in important ways.",
+    "彼らの公正さの捉え方は重要な点で私たちのものと異なる。",
+    [
+      "a conception of",
+      "the popular conception"
+    ],
+    "conceive の名詞。頭の中に取り込んで作り上げた像。concept より、捉え方そのものに焦点がある。"
+  ],
+  [
+    "concession",
+    "B2",
+    "名詞",
+    [
+      "譲歩",
+      "認めること"
+    ],
+    "/kənˈsɛʃən/",
+    "The union won several concessions during the negotiations.",
+    "組合は交渉中にいくつかの譲歩を勝ち取った。",
+    [
+      "make a concession",
+      "a major concession"
+    ],
+    "concede の名詞。押し合いの中で相手に譲った具体的な中身を指す。"
+  ],
+  [
+    "condemn",
+    "B2",
+    "動詞",
+    [
+      "非難する",
+      "宣告する"
+    ],
+    "/kənˈdɛm/",
+    "World leaders condemned the attack on the aid convoy.",
+    "世界の指導者たちは支援物資の車列への攻撃を非難した。",
+    [
+      "strongly condemn",
+      "condemn as"
+    ],
+    "con-(強め)+ damn(罰する)。damage と同語根。強く責めて有罪と決めつけること。criticize よりずっと重い。"
+  ],
+  [
+    "confer",
+    "B2",
+    "動詞",
+    [
+      "授与する",
+      "協議する"
+    ],
+    "/kənˈfɝ/",
+    "The university conferred an honorary degree on the writer.",
+    "その大学はその作家に名誉学位を授与した。",
+    [
+      "confer a degree",
+      "confer with"
+    ],
+    "con-(共に)+ fer(運ぶ。transfer, refer)。相手のもとへ運んで渡せば授与、意見を持ち寄れば協議。"
+  ],
+  [
+    "confession",
+    "B2",
+    "名詞",
+    [
+      "告白",
+      "自白"
+    ],
+    "/kənˈfɛʃən/",
+    "The police obtained a full confession within two days.",
+    "警察は2日以内に完全な自白を得た。",
+    [
+      "make a confession",
+      "a full confession"
+    ],
+    "con-(すっかり)+ fess(話す。profess)。隠していたことをすっかり話すこと。宗教の告解にも法廷の自白にも使う。"
+  ],
+  [
+    "configuration",
+    "B2",
+    "名詞",
+    [
+      "構成",
+      "設定"
+    ],
+    "/kənfɪgjɚˈeɪʃən/",
+    "The default configuration works for most home networks.",
+    "初期設定はほとんどの家庭内ネットワークで機能する。",
+    [
+      "the default configuration",
+      "network configuration"
+    ],
+    "con-(共に)+ figure(形)。部品をどんな形に組んであるか、が核。機器の設定内容を指すのが今の主用法。"
+  ],
+  [
+    "confine",
+    "B2",
+    "動詞",
+    [
+      "限定する",
+      "閉じ込める"
+    ],
+    "/kənˈfaɪn/",
+    "The outbreak was confined to a single district.",
+    "その流行は1つの地区に限定されていた。",
+    [
+      "be confined to",
+      "confine oneself to"
+    ],
+    "con-(共に)+ fin(境。finish, final)。境の内側に押し込めること。be confined to の受け身で使うことが多い。"
+  ],
+  [
+    "confirmation",
+    "B2",
+    "名詞",
+    [
+      "確認",
+      "裏づけ"
+    ],
+    "/kɑnfɚˈmeɪʃən/",
+    "We are still waiting for written confirmation of the booking.",
+    "私たちはまだ予約の書面での確認を待っている。",
+    [
+      "await confirmation",
+      "confirmation of"
+    ],
+    "confirm の名詞。con-(強め)+ firm(固い)。ぐらついていた話を固めるもの。"
+  ],
+  [
+    "confront",
+    "B2",
+    "動詞",
+    [
+      "立ち向かう",
+      "直面する"
+    ],
+    "/kənfˈrʌnt/",
+    "She decided to confront her manager about the unfair schedule.",
+    "彼女は不公平な勤務予定について上司に直接掛け合うことにした。",
+    [
+      "confront a problem",
+      "be confronted with"
+    ],
+    "con-(共に)+ front(額、正面)。正面から向き合うこと。逃げずに向かう含みがあり、avoid の反対。"
+  ],
+  [
+    "confrontation",
+    "B2",
+    "名詞",
+    [
+      "対立",
+      "対決"
+    ],
+    "/kɑnfrənˈteɪʃən/",
+    "The meeting ended in an open confrontation between the two sides.",
+    "その会議は双方の公然たる対立で終わった。",
+    [
+      "a direct confrontation",
+      "avoid confrontation"
+    ],
+    "confront の名詞。正面からぶつかり合う場面そのもの。武力衝突にも口論にも使う。"
+  ],
+  [
+    "congratulate",
+    "B2",
+    "動詞",
+    [
+      "祝う",
+      "祝辞を述べる"
+    ],
+    "/kəngˈrætʃəleɪt/",
+    "Everyone congratulated her on passing the difficult exam.",
+    "みんなが難関試験の合格を彼女に祝った。",
+    [
+      "congratulate someone on",
+      "congratulate yourself"
+    ],
+    "con-(共に)+ grat(喜ばしい。grateful, grace)。喜びを共にすること。祝う理由は on で示す。"
+  ],
+  [
+    "congregation",
+    "B2",
+    "名詞",
+    [
+      "会衆",
+      "集まった人々"
+    ],
+    "/kɑŋgrəˈgeɪʃən/",
+    "The congregation sang together at the end of the service.",
+    "会衆は礼拝の最後に一緒に歌った。",
+    [
+      "a large congregation",
+      "address the congregation"
+    ],
+    "con-(共に)+ greg(群れ。gregarious, segregate)。群れとして集まった人々で、特に礼拝に集う人たちを指す。"
+  ],
+  [
+    "congressional",
+    "B2",
+    "形容詞",
+    [
+      "議会の"
+    ],
+    "/kəngˈrɛʃənəl/",
+    "The bill faces a difficult congressional vote next week.",
+    "その法案は来週、議会での厳しい採決に直面する。",
+    [
+      "a congressional hearing",
+      "congressional approval"
+    ],
+    "congress(集まって進む場)の形容詞。con-(共に)+ gress(進む)。主に米国の連邦議会について使う。"
+  ],
+  [
+    "conquer",
+    "B2",
+    "動詞",
+    [
+      "征服する",
+      "克服する"
+    ],
+    "/ˈkɑŋkɚ/",
+    "She finally conquered her fear of speaking in public.",
+    "彼女はついに人前で話す恐怖を克服した。",
+    [
+      "conquer a fear",
+      "conquer territory"
+    ],
+    "con-(強め)+ quer(求める。quest, require)。求めて追い詰め、手に入れること。土地にも自分の弱さにも使う。"
+  ],
+  [
+    "conscience",
+    "B2",
+    "名詞",
+    [
+      "良心"
+    ],
+    "/ˈkɑnʃəns/",
+    "His conscience would not let him keep the extra money.",
+    "良心が彼にその余分な金を持ち続けさせなかった。",
+    [
+      "a guilty conscience",
+      "a matter of conscience"
+    ],
+    "con-(共に)+ sci(知る。science)。自分の行いを自分が知っている、という感覚。意識 consciousness と混同しないこと。"
+  ],
+  [
+    "consciousness",
+    "B2",
+    "名詞",
+    [
+      "意識",
+      "自覚"
+    ],
+    "/ˈkɑnʃəsnəs/",
+    "He lost consciousness for a few seconds after the fall.",
+    "彼は転倒後、数秒間意識を失った。",
+    [
+      "lose consciousness",
+      "raise consciousness"
+    ],
+    "conscious(気づいている)の名詞。con-(共に)+ sci(知る)。気づいている状態そのもの。"
+  ],
+  [
+    "consecutive",
+    "B2",
+    "形容詞",
+    [
+      "連続した"
+    ],
+    "/kənˈsɛkjətɪv/",
+    "The team has won five consecutive matches at home.",
+    "そのチームはホームで5試合連続で勝っている。",
+    [
+      "consecutive days",
+      "the third consecutive year"
+    ],
+    "con-(共に)+ sec(follow。sequence, second)。間を空けずに続いて起こること。数詞の直後に置く形が多い。"
+  ],
+  [
+    "consensus",
+    "B2",
+    "名詞",
+    [
+      "合意",
+      "総意"
+    ],
+    "/kənˈsɛnsəs/",
+    "There is growing consensus among scientists on this point.",
+    "この点について科学者の間で合意が広がっている。",
+    [
+      "reach a consensus",
+      "a broad consensus"
+    ],
+    "con-(共に)+ sens(感じる。sense)。全員が同じ方向に感じている状態。多数決ではなく総意である点が要点。"
+  ],
+  [
+    "consent",
+    "B2",
+    "名詞・動詞",
+    [
+      "同意",
+      "承諾する"
+    ],
+    "/kənˈsɛnt/",
+    "Patients must give written consent before the procedure.",
+    "患者は処置の前に書面で同意しなければならない。",
+    [
+      "give consent",
+      "informed consent"
+    ],
+    "con-(共に)+ sent(感じる)。相手と同じ気持ちになること。動詞は consent to の形をとる。"
+  ],
+  [
+    "conserve",
+    "B2",
+    "動詞",
+    [
+      "保存する",
+      "節約する"
+    ],
+    "/kənˈsɝv/",
+    "Turning off unused lights helps conserve energy.",
+    "使っていない照明を消すことはエネルギーの節約に役立つ。",
+    [
+      "conserve energy",
+      "conserve water"
+    ],
+    "con-(すっかり)+ serve(保つ。preserve, reserve)。減らさずに保っておくこと。自然保護にも省エネにも使う。"
+  ],
+  [
+    "consistency",
+    "B2",
+    "名詞",
+    [
+      "一貫性",
+      "濃度"
+    ],
+    "/kənˈsɪstənsi/",
+    "What the team lacks is consistency rather than talent.",
+    "そのチームに欠けているのは才能ではなく一貫性だ。",
+    [
+      "lack consistency",
+      "the consistency of cream"
+    ],
+    "consist(共に立つ)の名詞。ぶれずに同じ状態で立ち続けること。料理では「とろみ具合」を指す。"
+  ],
+  [
+    "consolidate",
+    "B2",
+    "動詞",
+    [
+      "強化する",
+      "統合する"
+    ],
+    "/kənˈsɑlɪdeɪt/",
+    "The company consolidated three offices into a single site.",
+    "その会社は3つの事務所を1か所に統合した。",
+    [
+      "consolidate power",
+      "consolidate debts"
+    ],
+    "con-(共に)+ solid(固い)。ばらばらのものを固めて一つの強い塊にすること。"
+  ],
+  [
+    "constituency",
+    "B2",
+    "名詞",
+    [
+      "選挙区",
+      "支持層"
+    ],
+    "/kənsˈtɪtʃuənsi/",
+    "He has represented this constituency for over twenty years.",
+    "彼は20年以上この選挙区を代表してきた。",
+    [
+      "a safe constituency",
+      "a key constituency"
+    ],
+    "constitute(構成する)から。議員を立てる住民のまとまり、が核。支持基盤という比喩でも使う。"
+  ],
+  [
+    "constitute",
+    "B2",
+    "動詞",
+    [
+      "構成する",
+      "〜に当たる"
+    ],
+    "/ˈkɑnstətut/",
+    "Women constitute nearly half of the country's workforce.",
+    "女性はその国の労働力のほぼ半分を構成している。",
+    [
+      "constitute a majority",
+      "constitute an offence"
+    ],
+    "con-(共に)+ stitute(立てる。institute, statue)。組み合わさって全体を立ち上げること。「〜に相当する」の用法も重要。"
+  ],
+  [
+    "constitution",
+    "B2",
+    "名詞",
+    [
+      "憲法",
+      "体質",
+      "構成"
+    ],
+    "/kɑnstəˈtuʃən/",
+    "The constitution guarantees freedom of assembly.",
+    "その憲法は集会の自由を保障している。",
+    [
+      "a written constitution",
+      "a strong constitution"
+    ],
+    "constitute の名詞。国を組み立てている根本の決まりが憲法、体を組み立てている素地が体質。"
+  ],
+  [
+    "constitutional",
+    "B2",
+    "形容詞",
+    [
+      "憲法上の",
+      "体質の"
+    ],
+    "/kɑnstəˈtuʃənəl/",
+    "The court ruled that the new law was not constitutional.",
+    "裁判所はその新法が憲法に反すると判断した。",
+    [
+      "a constitutional right",
+      "constitutional reform"
+    ],
+    "constitution の形容詞。憲法に照らして認められるかどうかを論じるときに使う。"
+  ],
+  [
+    "constraint",
+    "B2",
+    "名詞",
+    [
+      "制約",
+      "制限"
+    ],
+    "/kənstˈreɪnt/",
+    "Time constraints forced the team to drop two experiments.",
+    "時間の制約がチームに2つの実験を断念させた。",
+    [
+      "budget constraints",
+      "under constraint"
+    ],
+    "con-(共に)+ strain(締める。strict, restrain)。ぎゅっと締めつけて動きを狭めるもの。"
+  ],
+  [
+    "consultation",
+    "B2",
+    "名詞",
+    [
+      "相談",
+      "協議"
+    ],
+    "/kɑnsəlˈteɪʃən/",
+    "The plan was drawn up in consultation with local residents.",
+    "その計画は地元住民との協議のうえで作成された。",
+    [
+      "in consultation with",
+      "public consultation"
+    ],
+    "consult(意見を求める)の名詞。ラテン語 consulere(熟慮する)。専門家に相談することにも公聴にも使う。"
+  ],
+  [
+    "contemplate",
+    "B2",
+    "動詞",
+    [
+      "熟考する",
+      "考える"
+    ],
+    "/ˈkɑntəmpleɪt/",
+    "She is contemplating a move to a smaller town.",
+    "彼女はより小さな町への引っ越しを考えている。",
+    [
+      "contemplate a change",
+      "contemplate doing"
+    ],
+    "con-(共に)+ templ(神殿、見定めた区画)。区切った空間をじっと見つめる、が原義で、腰を据えて考えること。"
+  ],
+  [
+    "contempt",
+    "B2",
+    "名詞",
+    [
+      "軽蔑",
+      "侮辱"
+    ],
+    "/kənˈtɛmpt/",
+    "Her voice carried a note of contempt for the whole process.",
+    "彼女の声には手続き全体への軽蔑の響きがあった。",
+    [
+      "contempt for",
+      "treat with contempt"
+    ],
+    "con-(強め)+ tempt(見下す、軽んじる)。相手を自分より下に置く態度。法廷侮辱罪 contempt of court でも使う。"
+  ],
+  [
+    "contend",
+    "B2",
+    "動詞",
+    [
+      "主張する",
+      "争う"
+    ],
+    "/kənˈtɛnd/",
+    "The author contends that the data has been misinterpreted.",
+    "著者はそのデータが誤って解釈されてきたと主張する。",
+    [
+      "contend that",
+      "contend with"
+    ],
+    "con-(共に)+ tend(伸ばす。extend, tension)。互いに張り合うこと。contend with なら困難と渡り合う。"
+  ],
+  [
+    "contender",
+    "B2",
+    "名詞",
+    [
+      "競争者",
+      "有力候補"
+    ],
+    "/kənˈtɛndɚ/",
+    "She is a serious contender for the leadership of the party.",
+    "彼女は党首の座の有力な候補だ。",
+    [
+      "a leading contender",
+      "a title contender"
+    ],
+    "contend(張り合う)+ -er。勝つ可能性を持って争いに加わっている人。"
+  ],
+  [
+    "contention",
+    "B2",
+    "名詞",
+    [
+      "主張",
+      "争点",
+      "争い"
+    ],
+    "/kənˈtɛnʃən/",
+    "His main contention is that the survey was poorly designed.",
+    "彼の主な主張は、その調査の設計が不十分だったということだ。",
+    [
+      "a point of contention",
+      "a bone of contention"
+    ],
+    "contend の名詞。張り合いの中で押し出された言い分、または張り合いそのもの。"
+  ],
+  [
+    "continually",
+    "B2",
+    "副詞",
+    [
+      "絶えず",
+      "何度も"
+    ],
+    "/kənˈtɪnjuəli/",
+    "The old printer continually jams during large print jobs.",
+    "その古いプリンターは大量印刷の途中で何度も紙詰まりを起こす。",
+    [
+      "continually changing",
+      "continually interrupted"
+    ],
+    "continual の副詞。continuously が「途切れなく」なのに対し、こちらは繰り返し起こる感じ。"
+  ],
+  [
+    "contractor",
+    "B2",
+    "名詞",
+    [
+      "請負業者"
+    ],
+    "/ˈkɑntræktɚ/",
+    "The city hired an outside contractor to repair the road.",
+    "市は道路を修復するために外部の請負業者を雇った。",
+    [
+      "a building contractor",
+      "an independent contractor"
+    ],
+    "contract(契約)+ -or。契約で仕事を請け負う側の人や会社。従業員ではない点が要点。"
+  ],
+  [
+    "contradiction",
+    "B2",
+    "名詞",
+    [
+      "矛盾",
+      "反論"
+    ],
+    "/kɑntrəˈdɪkʃən/",
+    "There is a clear contradiction between his words and his actions.",
+    "彼の言葉と行動の間には明らかな矛盾がある。",
+    [
+      "a contradiction between",
+      "a contradiction in terms"
+    ],
+    "contra(反対に)+ dict(言う。dictionary, predict)。逆のことを言ってしまっている状態。"
+  ],
+  [
+    "contrary",
+    "B2",
+    "形容詞・名詞",
+    [
+      "反対の",
+      "逆"
+    ],
+    "/ˈkɑntrɛri/",
+    "Contrary to expectations, sales rose during the rainy season.",
+    "予想に反して、雨季の間に売上が伸びた。",
+    [
+      "contrary to",
+      "on the contrary"
+    ],
+    "ラテン語 contra(反対に)。真逆であることが核。contrary to は「〜に反して」、on the contrary は前言を打ち消す返し方。"
+  ],
+  [
+    "contributor",
+    "B2",
+    "名詞",
+    [
+      "寄稿者",
+      "貢献者",
+      "要因"
+    ],
+    "/kəntˈrɪbjətɚ/",
+    "Poor sleep is a major contributor to daytime accidents.",
+    "睡眠不足は日中の事故の大きな要因だ。",
+    [
+      "a major contributor",
+      "a regular contributor"
+    ],
+    "contribute(共に与える)+ -or。何かを持ち寄って全体に加える側。良い貢献にも、悪い結果の一因にも使う。"
+  ],
+  [
+    "convict",
+    "B2",
+    "動詞",
+    [
+      "有罪を宣告する"
+    ],
+    "/ˈkɑnvɪkt/",
+    "He was convicted of fraud and sentenced to three years.",
+    "彼は詐欺で有罪となり、3年の刑を宣告された。",
+    [
+      "be convicted of",
+      "a convicted criminal"
+    ],
+    "con-(すっかり)+ vict(打ち負かす。victory, evident の vid とは別系統)。法廷で言い負かされ有罪と決まること。"
+  ],
+  [
+    "conviction",
+    "B2",
+    "名詞",
+    [
+      "有罪判決",
+      "確信"
+    ],
+    "/kənˈvɪkʃən/",
+    "She spoke with the quiet conviction of someone who had seen it.",
+    "彼女はそれを見た者の静かな確信をもって語った。",
+    [
+      "a criminal conviction",
+      "deep conviction"
+    ],
+    "convict の名詞。法廷で決着がついた結果が有罪判決、心の中で決着がついた状態が確信。"
+  ],
+  [
+    "cooperate",
+    "B2",
+    "動詞",
+    [
+      "協力する"
+    ],
+    "/koʊˈɑpɚeɪt/",
+    "Local groups cooperated closely during the flood.",
+    "洪水の間、地域の団体は緊密に協力した。",
+    [
+      "cooperate with",
+      "cooperate fully"
+    ],
+    "co-(共に)+ operate(働く)。同じ目的のために一緒に動くこと。collaborate より広く、日常的にも使う。"
+  ],
+  [
+    "cooperative",
+    "B2",
+    "形容詞",
+    [
+      "協力的な",
+      "共同の"
+    ],
+    "/koʊˈɑpɚeɪtɪv/",
+    "The witness was helpful and fully cooperative with police.",
+    "その証人は協力的で、警察に全面的に協力した。",
+    [
+      "a cooperative attitude",
+      "highly cooperative"
+    ],
+    "cooperate の形容詞。求めに応じて一緒に動いてくれる態度を指す。名詞なら協同組合。"
+  ],
+  [
+    "coordinate",
+    "B2",
+    "動詞",
+    [
+      "調整する",
+      "まとめる"
+    ],
+    "/koʊˈɔrdənət/",
+    "She coordinates volunteers across five different sites.",
+    "彼女は5つの異なる拠点のボランティアをとりまとめている。",
+    [
+      "coordinate efforts",
+      "closely coordinate"
+    ],
+    "co-(共に)+ ordin(順序。order)。ばらばらの動きを同じ順序に乗せること。上下ではなく横並びの調整。"
+  ],
+  [
+    "coordination",
+    "B2",
+    "名詞",
+    [
+      "調整",
+      "連携",
+      "協調運動"
+    ],
+    "/koʊɔrdəˈneɪʃən/",
+    "Better coordination between departments would save time.",
+    "部署間のより良い連携は時間の節約になるだろう。",
+    [
+      "hand-eye coordination",
+      "close coordination"
+    ],
+    "coordinate の名詞。組織の連携にも、体の動きの協調にも使う。"
+  ],
+  [
+    "coordinator",
+    "B2",
+    "名詞",
+    [
+      "まとめ役",
+      "調整担当者"
+    ],
+    "/koʊˈɔrdəneɪtɚ/",
+    "The project coordinator sends a short update every Friday.",
+    "そのプロジェクトの調整担当者は毎週金曜に短い報告を送る。",
+    [
+      "a project coordinator",
+      "an event coordinator"
+    ],
+    "coordinate + -or。指揮するのではなく、関係者の予定と作業をそろえる役目の人。"
+  ],
+  [
+    "cop",
+    "B2",
+    "名詞",
+    [
+      "警察官"
+    ],
+    "/kɑp/",
+    "A cop stopped us to ask about the accident.",
+    "警察官が事故について尋ねるために私たちを呼び止めた。",
+    [
+      "call the cops",
+      "a traffic cop"
+    ],
+    "copper(捕らえる者)の略とされる。くだけた会話向けで、公的な文書では police officer を使う。"
+  ],
+  [
+    "copper",
+    "B2",
+    "名詞",
+    [
+      "銅"
+    ],
+    "/ˈkɑpɚ/",
+    "Copper wire conducts electricity better than most metals.",
+    "銅線はほとんどの金属より電気をよく通す。",
+    [
+      "copper wire",
+      "a copper pipe"
+    ],
+    "キプロス島産の金属を指すラテン語 cuprum から。元素記号 Cu はこの語の名残。"
+  ],
+  [
+    "copyright",
+    "B2",
+    "名詞",
+    [
+      "著作権"
+    ],
+    "/ˈkɑpiraɪt/",
+    "The photographs are protected by copyright for seventy years.",
+    "それらの写真は70年間、著作権で保護される。",
+    [
+      "copyright law",
+      "breach of copyright"
+    ],
+    "copy(複製)+ right(権利)。文字どおり「複製する権利」で、誰が複製を許せるかを決める仕組み。"
+  ],
+  [
+    "correction",
+    "B2",
+    "名詞",
+    [
+      "訂正",
+      "修正"
+    ],
+    "/kɚˈɛkʃən/",
+    "The paper printed a correction the following morning.",
+    "その新聞は翌朝に訂正を掲載した。",
+    [
+      "make a correction",
+      "a minor correction"
+    ],
+    "correct(正しくする)の名詞。cor-(共に)+ rect(まっすぐ。direct)。曲がったものをまっすぐ直すこと。"
+  ],
+  [
+    "correlate",
+    "B2",
+    "動詞",
+    [
+      "相関する",
+      "関連づける"
+    ],
+    "/ˈkɔrəleɪt/",
+    "Income and life expectancy correlate strongly in most countries.",
+    "ほとんどの国で所得と平均寿命は強く相関する。",
+    [
+      "correlate with",
+      "closely correlate"
+    ],
+    "cor-(共に)+ relate(結びつける)。一方が動くともう一方も動く関係。因果とは限らない点が要点。"
+  ],
+  [
+    "correlation",
+    "B2",
+    "名詞",
+    [
+      "相関",
+      "関連"
+    ],
+    "/kɔrəˈleɪʃən/",
+    "The study found no correlation between the two factors.",
+    "その研究は2つの要因の間に相関を見いださなかった。",
+    [
+      "a strong correlation",
+      "correlation between"
+    ],
+    "correlate の名詞。二つの数値が一緒に動く度合いを指す統計の語。"
+  ],
+  [
+    "correspond",
+    "B2",
+    "動詞",
+    [
+      "一致する",
+      "文通する"
+    ],
+    "/kɔrəˈspɑnd/",
+    "The description does not correspond to what we actually saw.",
+    "その説明は私たちが実際に見たものと一致しない。",
+    [
+      "correspond to",
+      "correspond with"
+    ],
+    "cor-(共に)+ respond(応じる)。互いに呼応すること。手紙で呼応し合えば文通の意味になる。"
+  ],
+  [
+    "correspondence",
+    "B2",
+    "名詞",
+    [
+      "文通",
+      "書簡",
+      "一致"
+    ],
+    "/kɔrəˈspɑndəns/",
+    "All correspondence with the office should be kept on file.",
+    "事務所とのすべてのやり取りは記録として保管すること。",
+    [
+      "business correspondence",
+      "correspondence between"
+    ],
+    "correspond の名詞。やり取りされた手紙やメール全体、または二つの物事の対応関係。"
+  ],
+  [
+    "correspondent",
+    "B2",
+    "名詞",
+    [
+      "特派員",
+      "通信員"
+    ],
+    "/kɔrəˈspɑndənt/",
+    "Their Middle East correspondent has reported from the region for years.",
+    "彼らの中東特派員は何年もその地域から報道している。",
+    [
+      "a foreign correspondent",
+      "a war correspondent"
+    ],
+    "correspond + -ent(人)。本社と呼応して現地から便りを送る人、が原義。"
+  ],
+  [
+    "corresponding",
+    "B2",
+    "形容詞",
+    [
+      "対応する",
+      "それに応じた"
+    ],
+    "/kɔrəˈspɑndɪŋ/",
+    "Sales rose sharply, with a corresponding increase in staff.",
+    "売上が急増し、それに応じて人員も増えた。",
+    [
+      "the corresponding period",
+      "a corresponding rise"
+    ],
+    "correspond の形容詞。対になっている相手側の、という意味。前年同期は the corresponding period。"
+  ],
+  [
+    "corrupt",
+    "B2",
+    "形容詞",
+    [
+      "腐敗した",
+      "汚職の"
+    ],
+    "/kɚˈʌpt/",
+    "Several corrupt officials were removed from their posts.",
+    "数人の汚職役人が職を解かれた。",
+    [
+      "a corrupt official",
+      "corrupt practices"
+    ],
+    "cor-(すっかり)+ rupt(壊れる。interrupt, rupture)。中から壊れてしまった状態。データの破損にも同じ語を使う。"
+  ],
+  [
+    "corruption",
+    "B2",
+    "名詞",
+    [
+      "汚職",
+      "腐敗"
+    ],
+    "/kɚˈʌpʃən/",
+    "The new agency was set up to investigate corruption.",
+    "その新しい機関は汚職を調査するために設立された。",
+    [
+      "political corruption",
+      "fight corruption"
+    ],
+    "corrupt の名詞。地位や制度が内側から壊れ、私利のために使われる状態。"
+  ],
+  [
+    "costly",
+    "B2",
+    "形容詞",
+    [
+      "高くつく",
+      "犠牲の大きい"
+    ],
+    "/ˈkɑstli/",
+    "Replacing the whole system would be far too costly.",
+    "システム全体を交換するのはあまりに高くつくだろう。",
+    [
+      "a costly mistake",
+      "prove costly"
+    ],
+    "cost + -ly。-ly でも副詞ではなく形容詞である点に注意。金額だけでなく、失うものの大きさも表す。"
+  ],
+  [
+    "councillor",
+    "B2",
+    "名詞",
+    [
+      "議員",
+      "評議員"
+    ],
+    "/ˈkaʊnsəlɚ/",
+    "Local councillors voted to keep the library open.",
+    "地方議員たちは図書館の存続を可決した。",
+    [
+      "a local councillor",
+      "a city councillor"
+    ],
+    "council(協議会)+ -or。con-(共に)+ cil(呼ぶ)。呼び集められて協議する場の一員。米つづりは councilor。"
+  ],
+  [
+    "counselling",
+    "B2",
+    "名詞",
+    [
+      "カウンセリング",
+      "助言"
+    ],
+    "/ˈkaʊnsəlɪŋ/",
+    "The school offers free counselling to students under stress.",
+    "その学校はストレスを抱える生徒に無料のカウンセリングを提供している。",
+    [
+      "offer counselling",
+      "marriage counselling"
+    ],
+    "counsel(助言)+ -ing。council と混同しやすいが、こちらは助言の意味。米つづりは counseling。"
+  ],
+  [
+    "counsellor",
+    "B2",
+    "名詞",
+    [
+      "カウンセラー",
+      "相談員"
+    ],
+    "/ˈkaʊnsəlɚ/",
+    "A student counsellor is available every afternoon.",
+    "学生相談員は毎日午後に対応している。",
+    [
+      "a school counsellor",
+      "a career counsellor"
+    ],
+    "counsel(助言する)+ -or。助言を職業とする人。法律の分野では弁護士を指すこともある。"
+  ],
+  [
+    "counterpart",
+    "B2",
+    "名詞",
+    [
+      "対応する相手",
+      "同等の存在"
+    ],
+    "/ˈkaʊntɚpɑrt/",
+    "The minister met her Japanese counterpart in Tokyo.",
+    "その大臣は東京で日本側の同職者と会談した。",
+    [
+      "a foreign counterpart",
+      "meet one's counterpart"
+    ],
+    "counter(対になる)+ part(部分)。もとは割り符の片割れ。別の組織で同じ役割を担う人を指す。"
+  ],
+  [
+    "countless",
+    "B2",
+    "形容詞",
+    [
+      "数え切れない",
+      "無数の"
+    ],
+    "/ˈkaʊntləs/",
+    "Countless small shops closed during the long recession.",
+    "長い不況の間に数え切れないほどの小さな店が閉店した。",
+    [
+      "countless times",
+      "countless people"
+    ],
+    "count + -less。数える気にならないほど多い、が核。可算名詞の複数形と組む。"
+  ],
+  [
+    "coup",
+    "B2",
+    "名詞",
+    [
+      "クーデター",
+      "大成功"
+    ],
+    "/ku/",
+    "The government was overthrown in a bloodless coup.",
+    "その政府は無血クーデターで転覆させられた。",
+    [
+      "a military coup",
+      "stage a coup"
+    ],
+    "フランス語 coup(一撃)。coup d'etat の略で、最後の p は発音しない。ひと突きで政権を取ることから。"
+  ],
+  [
+    "courtesy",
+    "B2",
+    "名詞",
+    [
+      "礼儀",
+      "丁重さ"
+    ],
+    "/ˈkɝtəsi/",
+    "He answered every question with unfailing courtesy.",
+    "彼はどの質問にも変わらぬ丁重さで答えた。",
+    [
+      "common courtesy",
+      "courtesy of"
+    ],
+    "court(宮廷)から。宮廷にふさわしい振る舞いが原義。courtesy of なら「〜のご厚意により」。"
+  ],
+  [
+    "crawl",
+    "B2",
+    "動詞",
+    [
+      "はう",
+      "のろのろ進む"
+    ],
+    "/krɔl/",
+    "Traffic crawled along the motorway for over an hour.",
+    "車は1時間以上、高速道路をのろのろと進んだ。",
+    [
+      "crawl along",
+      "traffic crawls"
+    ],
+    "古ノルド語 krafla。地面に体をつけて進む動きが核で、渋滞や作業の遅さの比喩にも使う。"
+  ],
+  [
+    "creator",
+    "B2",
+    "名詞",
+    [
+      "創造者",
+      "制作者"
+    ],
+    "/kriˈeɪtɚ/",
+    "The creator of the series announced a fourth season.",
+    "そのシリーズの制作者は第4シーズンを発表した。",
+    [
+      "the creator of",
+      "content creator"
+    ],
+    "create + -or。ラテン語 creare(生み出す)。ゼロから形あるものを生んだ主体を指す。"
+  ],
+  [
+    "credibility",
+    "B2",
+    "名詞",
+    [
+      "信頼性",
+      "信憑性"
+    ],
+    "/krɛdəˈbɪlɪti/",
+    "Repeated errors damaged the newspaper's credibility.",
+    "度重なる誤りがその新聞の信頼性を損なった。",
+    [
+      "lose credibility",
+      "damage credibility"
+    ],
+    "credible の名詞。ラテン語 credere(信じる。credit, creed)。信じるに足るかどうかの度合い。"
+  ],
+  [
+    "credible",
+    "B2",
+    "形容詞",
+    [
+      "信頼できる",
+      "もっともらしい"
+    ],
+    "/ˈkrɛdəbəl/",
+    "No credible evidence has been produced so far.",
+    "これまでのところ信頼できる証拠は示されていない。",
+    [
+      "a credible witness",
+      "credible evidence"
+    ],
+    "cred(信じる)+ -ible。信じてよい水準にある、が核。信じやすい人を指す credulous とは別語なので注意。"
+  ],
+  [
+    "creep",
+    "B2",
+    "動詞",
+    [
+      "忍び寄る",
+      "じわじわ進む"
+    ],
+    "/krip/",
+    "Doubt began to creep into her mind during the long wait.",
+    "長い待ち時間の間に疑いが彼女の心に忍び込み始めた。",
+    [
+      "creep into",
+      "creep up on"
+    ],
+    "古英語 creopan(はう)。音を立てずにじりじり近づく動きが核。変化がいつのまにか進む比喩にも使う。"
+  ],
+  [
+    "critique",
+    "B2",
+    "名詞",
+    [
+      "批評",
+      "講評"
+    ],
+    "/krəˈtik/",
+    "The editor wrote a detailed critique of the opening chapter.",
+    "編集者は冒頭の章について詳細な批評を書いた。",
+    [
+      "a critique of",
+      "offer a critique"
+    ],
+    "critic と同語源のフランス語形。あら探しではなく、良い点も含めて筋道立てて論じる評のこと。"
+  ],
+  [
+    "crown",
+    "B2",
+    "名詞",
+    [
+      "王冠",
+      "王位",
+      "頂上"
+    ],
+    "/kraʊn/",
+    "The crown passed to his younger sister after the king died.",
+    "王の死後、王位は彼の妹に渡った。",
+    [
+      "wear a crown",
+      "the crown of a hill"
+    ],
+    "ラテン語 corona(輪)。頭に載せる輪から、王位そのものや、丘や歯の「いちばん上」へ広がった。"
+  ],
+  [
+    "crude",
+    "B2",
+    "形容詞",
+    [
+      "粗雑な",
+      "原油の"
+    ],
+    "/krud/",
+    "They built a crude shelter from branches and plastic sheets.",
+    "彼らは枝とビニールシートで粗末な避難所を作った。",
+    [
+      "crude oil",
+      "a crude estimate"
+    ],
+    "ラテン語 crudus(生の)。手を加えていない状態が核。精製前の石油も、洗練されていない作りも同じ語。"
+  ],
+  [
+    "crush",
+    "B2",
+    "動詞",
+    [
+      "押しつぶす",
+      "打ち砕く"
+    ],
+    "/krʌʃ/",
+    "The falling branch crushed the roof of the parked car.",
+    "落ちてきた枝が駐車中の車の屋根を押しつぶした。",
+    [
+      "crush a rebellion",
+      "be crushed by"
+    ],
+    "古フランス語 croissir(砕ける)。形が残らないほど押しつぶすこと。反乱や希望を打ち砕く比喩にも使う。"
+  ],
+  [
+    "crystal",
+    "B2",
+    "名詞",
+    [
+      "結晶",
+      "水晶"
+    ],
+    "/ˈkrɪstəl/",
+    "Salt crystals formed on the surface as the water dried.",
+    "水が乾くにつれて表面に塩の結晶ができた。",
+    [
+      "crystal clear",
+      "ice crystals"
+    ],
+    "ギリシャ語 krystallos(氷)。透き通って規則正しい形をしたもの。crystal clear は「透き通るほど明快な」。"
+  ],
+  [
+    "cult",
+    "B2",
+    "形容詞・名詞",
+    [
+      "カルトの",
+      "熱狂的支持"
+    ],
+    "/kʌlt/",
+    "The film flopped at first but later gained cult status.",
+    "その映画は当初振るわなかったが、後に熱狂的な支持を得た。",
+    [
+      "a cult film",
+      "a cult following"
+    ],
+    "ラテン語 colere(耕す、崇める)。culture と同語根。少数が熱心に崇める対象、が核。"
+  ],
+  [
+    "cultivate",
+    "B2",
+    "動詞",
+    [
+      "栽培する",
+      "育てる"
+    ],
+    "/ˈkʌltəveɪt/",
+    "He has cultivated close ties with suppliers over many years.",
+    "彼は長年かけて供給業者と緊密な関係を築いてきた。",
+    [
+      "cultivate land",
+      "cultivate a relationship"
+    ],
+    "ラテン語 colere(耕す)。土を耕して作物を育てるのが原義で、人間関係や才能を育てる比喩にも広く使う。"
+  ],
+  [
+    "curiosity",
+    "B2",
+    "名詞",
+    [
+      "好奇心",
+      "珍しいもの"
+    ],
+    "/kjʊriˈɑsəti/",
+    "Curiosity about how engines work led her to study mechanics.",
+    "エンジンの仕組みへの好奇心が彼女を機械工学の勉強へ導いた。",
+    [
+      "out of curiosity",
+      "arouse curiosity"
+    ],
+    "curious の名詞。ラテン語 cura(気にかける。cure, care)。気になって仕方がない状態。"
+  ],
+  [
+    "custody",
+    "B2",
+    "名詞",
+    [
+      "保護",
+      "親権",
+      "拘留"
+    ],
+    "/ˈkʌstədi/",
+    "The children remained in the custody of their grandmother.",
+    "子どもたちは祖母の保護下にとどまった。",
+    [
+      "in custody",
+      "take into custody"
+    ],
+    "ラテン語 custos(見張り)。預かって見張る責任が核。親が子を預かれば親権、警察が人を預かれば拘留。"
+  ],
+  [
+    "cutting",
+    "B2",
+    "名詞",
+    [
+      "切り抜き",
+      "挿し木"
+    ],
+    "/ˈkʌtɪŋ/",
+    "She keeps newspaper cuttings about her father's career.",
+    "彼女は父の経歴に関する新聞の切り抜きを保管している。",
+    [
+      "press cuttings",
+      "take a cutting"
+    ],
+    "cut の名詞形。切り取られたひとかけら、が核。植物なら挿し木用の枝、新聞なら記事の切り抜き。"
+  ],
+  [
+    "cynical",
+    "B2",
+    "形容詞",
+    [
+      "皮肉な",
+      "人を信じない"
+    ],
+    "/ˈsɪnɪkəl/",
+    "He has become cynical about political promises.",
+    "彼は政治家の約束に対して冷めた見方をするようになった。",
+    [
+      "cynical about",
+      "a cynical view"
+    ],
+    "古代ギリシャの犬儒派 kynikos(犬のような)から。人の善意を疑い、動機は打算だと決めてかかる態度。"
+  ],
+  [
+    "dam",
+    "B2",
+    "名詞",
+    [
+      "ダム",
+      "せき止める"
+    ],
+    "/dæm/",
+    "The dam supplies both drinking water and electricity.",
+    "そのダムは飲料水と電力の両方を供給している。",
+    [
+      "build a dam",
+      "a hydroelectric dam"
+    ],
+    "古い北欧語で「せき」。水をためて流れを止める構造物。動詞では流れをせき止めることを指す。"
+  ],
+  [
+    "damaging",
+    "B2",
+    "形容詞",
+    [
+      "有害な",
+      "打撃を与える"
+    ],
+    "/ˈdæmɪdʒɪŋ/",
+    "The report contained damaging evidence about the company.",
+    "その報告書には会社にとって打撃となる証拠が含まれていた。",
+    [
+      "damaging effects",
+      "highly damaging"
+    ],
+    "damage の形容詞。物を壊すというより、評判や立場に打撃を与える文脈で多く使う。"
+  ],
+  [
+    "dawn",
+    "B2",
+    "名詞",
+    [
+      "夜明け",
+      "始まり"
+    ],
+    "/dɔn/",
+    "We left the harbour just before dawn to reach the island by noon.",
+    "正午までに島に着くため、私たちは夜明け直前に港を出た。",
+    [
+      "at dawn",
+      "the dawn of"
+    ],
+    "古英語 dagian(日になる)。day と同語根。時代や変化の始まりを表す比喩にも使う。"
+  ],
+  [
+    "debris",
+    "B2",
+    "名詞",
+    [
+      "がれき",
+      "破片"
+    ],
+    "/dəˈbri/",
+    "Volunteers cleared debris from the streets after the storm.",
+    "ボランティアが嵐の後、通りからがれきを片づけた。",
+    [
+      "clear debris",
+      "scattered debris"
+    ],
+    "フランス語由来で語末の s は発音しない。壊れた後に散らばった破片の集合を指し、常に単数扱い。"
+  ],
+  [
+    "debut",
+    "B2",
+    "名詞",
+    [
+      "デビュー",
+      "初登場"
+    ],
+    "/deɪbˈju/",
+    "Her debut as a conductor was warmly received.",
+    "指揮者としての彼女のデビューは温かく迎えられた。",
+    [
+      "make one's debut",
+      "a debut album"
+    ],
+    "フランス語 debut(出だし)。語末の t は発音しない。公の場に初めて姿を見せることを指す。"
+  ],
+  [
+    "decision-making",
+    "B2",
+    "名詞",
+    [
+      "意思決定"
+    ],
+    "/dɪˈsɪʒənmeɪkɪŋ/",
+    "The new system speeds up decision-making at every level.",
+    "新しい制度はあらゆる階層での意思決定を速める。",
+    [
+      "decision-making process",
+      "shared decision-making"
+    ],
+    "decision + making。決めるという行為そのものを名詞にした語で、組織論の文脈で頻出する。"
+  ],
+  [
+    "decisive",
+    "B2",
+    "形容詞",
+    [
+      "決定的な",
+      "決断力のある"
+    ],
+    "/dɪˈsaɪsɪv/",
+    "Her decisive action prevented a much larger accident.",
+    "彼女の決断力ある行動がはるかに大きな事故を防いだ。",
+    [
+      "a decisive moment",
+      "a decisive victory"
+    ],
+    "decide(切って決める)の形容詞。de-(離して)+ cis(切る。scissors)。迷いを断ち切る感じが核。"
+  ],
+  [
+    "declaration",
+    "B2",
+    "名詞",
+    [
+      "宣言",
+      "申告"
+    ],
+    "/dɛklɚˈeɪʃən/",
+    "The two countries signed a joint declaration on trade.",
+    "両国は貿易に関する共同宣言に署名した。",
+    [
+      "a joint declaration",
+      "a customs declaration"
+    ],
+    "declare の名詞。de-(すっかり)+ clar(明らか。clear)。誰にでも分かるようはっきり示すこと。"
+  ],
+  [
+    "dedicated",
+    "B2",
+    "形容詞",
+    [
+      "献身的な",
+      "専用の"
+    ],
+    "/ˈdɛdəkeɪtəd/",
+    "The clinic has a dedicated team for childhood asthma.",
+    "その診療所には小児ぜんそくの専門チームがある。",
+    [
+      "a dedicated teacher",
+      "a dedicated server"
+    ],
+    "dedicate(捧げる)の形容詞。その目的だけに捧げられている、が核。人なら献身的、設備なら専用。"
+  ],
+  [
+    "dedication",
+    "B2",
+    "名詞",
+    [
+      "献身",
+      "専念"
+    ],
+    "/dɛdəˈkeɪʃən/",
+    "Years of quiet dedication finally produced results.",
+    "何年もの静かな献身がついに成果を生んだ。",
+    [
+      "dedication to",
+      "with dedication"
+    ],
+    "de-(すっかり)+ dic(告げる。dictate)。自分をその目的に差し出すと告げること。本の献辞にも使う。"
+  ],
+  [
+    "deed",
+    "B2",
+    "名詞",
+    [
+      "行為",
+      "証書"
+    ],
+    "/did/",
+    "Small deeds of kindness matter more than grand promises.",
+    "小さな親切な行為は大きな約束よりも大切だ。",
+    [
+      "a good deed",
+      "deeds not words"
+    ],
+    "do の名詞形にあたる古い語。行われたこと、が核。法律では権利を証する文書を指す。"
+  ],
+  [
+    "deem",
+    "B2",
+    "動詞",
+    [
+      "〜とみなす",
+      "判断する"
+    ],
+    "/dim/",
+    "The proposal was deemed too risky by the committee.",
+    "その提案は委員会によって危険すぎると判断された。",
+    [
+      "be deemed necessary",
+      "deem it appropriate"
+    ],
+    "doom と同語源で「判定する」。公的な判断を表す硬い語で、受け身の be deemed の形が多い。"
+  ],
+  [
+    "default",
+    "B2",
+    "名詞",
+    [
+      "初期設定",
+      "不履行"
+    ],
+    "/dɪˈfɔlt/",
+    "The program uses metric units by default.",
+    "そのプログラムは初期設定でメートル法の単位を使う。",
+    [
+      "by default",
+      "default settings"
+    ],
+    "de-(離れて)+ fault(欠ける。fail)。何もしなければそのまま、が核。支払いを欠けば債務不履行。"
+  ],
+  [
+    "defect",
+    "B2",
+    "名詞",
+    [
+      "欠陥",
+      "不良"
+    ],
+    "/ˈdifɛkt/",
+    "A manufacturing defect forced the company to recall the batch.",
+    "製造上の欠陥がその会社にその一群の回収を余儀なくさせた。",
+    [
+      "a design defect",
+      "a serious defect"
+    ],
+    "de-(離れて)+ fect(作る。perfect)。作りが完全から外れている点。fault より技術的で硬い響き。"
+  ],
+  [
+    "defensive",
+    "B2",
+    "形容詞",
+    [
+      "守りの",
+      "防御的な"
+    ],
+    "/dɪˈfɛnsɪv/",
+    "He became defensive as soon as the topic was raised.",
+    "その話題が出るとすぐに彼は身構えた。",
+    [
+      "a defensive attitude",
+      "on the defensive"
+    ],
+    "defend の形容詞。攻めではなく守り。人の態度に使うと「批判を恐れて身構えている」という含みになる。"
+  ],
+  [
+    "deficiency",
+    "B2",
+    "名詞",
+    [
+      "不足",
+      "欠乏"
+    ],
+    "/dɪˈfɪʃənsi/",
+    "A vitamin D deficiency is common in northern countries.",
+    "ビタミンDの欠乏は北方の国々でよく見られる。",
+    [
+      "a vitamin deficiency",
+      "a deficiency in"
+    ],
+    "de-(下に)+ fic(なす)。なすべき量に届いていない状態。特に栄養や機能の不足に使う。"
+  ],
+  [
+    "deficit",
+    "B2",
+    "名詞",
+    [
+      "赤字",
+      "不足"
+    ],
+    "/ˈdɛfəsət/",
+    "The government promised to cut the budget deficit by half.",
+    "政府は財政赤字を半分に減らすと約束した。",
+    [
+      "a trade deficit",
+      "reduce the deficit"
+    ],
+    "deficiency と同語根。入ってくるものが出ていくものに足りない差額、が核。surplus の反対。"
+  ],
+  [
+    "defy",
+    "B2",
+    "動詞",
+    [
+      "逆らう",
+      "寄せつけない"
+    ],
+    "/dɪˈfaɪ/",
+    "Soldiers who defy direct orders face a military court.",
+    "直接の命令に逆らう兵士は軍法会議にかけられる。",
+    [
+      "defy orders",
+      "defy description"
+    ],
+    "de-(離れて)+ fy(信をおく。fidelity)。信義を捨てて背くのが原義。defy description は「説明を寄せつけない」。"
+  ],
+  [
+    "delegate",
+    "B2",
+    "名詞",
+    [
+      "代表",
+      "代議員"
+    ],
+    "/ˈdɛləgeɪt/",
+    "Delegates from twelve countries attended the conference.",
+    "12か国からの代表が会議に出席した。",
+    [
+      "a delegate to",
+      "send a delegate"
+    ],
+    "de-(離れて)+ leg(送る。legate)。送り出された人。動詞なら仕事を人に任せることで、強勢の位置が変わる。"
+  ],
+  [
+    "delegation",
+    "B2",
+    "名詞",
+    [
+      "代表団",
+      "委任"
+    ],
+    "/dɛləˈgeɪʃən/",
+    "A trade delegation visited three factories in the region.",
+    "貿易代表団はその地域の3つの工場を訪れた。",
+    [
+      "a trade delegation",
+      "delegation of authority"
+    ],
+    "delegate の名詞。送り出された一団、または権限を人に預けること。"
+  ],
+  [
+    "demon",
+    "B2",
+    "名詞",
+    [
+      "悪霊",
+      "鬼"
+    ],
+    "/ˈdimən/",
+    "Old stories describe a demon living under the bridge.",
+    "古い話は橋の下に住む悪霊について語っている。",
+    [
+      "inner demons",
+      "a demon of"
+    ],
+    "ギリシャ語 daimon(神霊)。もとは善悪を問わない霊で、後に悪い霊に固まった。inner demons なら心の闇。"
+  ],
+  [
+    "denial",
+    "B2",
+    "名詞",
+    [
+      "否定",
+      "拒否"
+    ],
+    "/dɪˈnaɪəl/",
+    "Repeated denials failed to convince the public.",
+    "度重なる否定は世間を納得させられなかった。",
+    [
+      "a flat denial",
+      "in denial"
+    ],
+    "deny の名詞。事実そのものを認めないこと。in denial は現実を受け入れられずにいる状態。"
+  ],
+  [
+    "denounce",
+    "B2",
+    "動詞",
+    [
+      "糾弾する",
+      "公然と非難する"
+    ],
+    "/dɪˈnaʊns/",
+    "Several members denounced the plan as unfair.",
+    "数人の議員がその計画を不公平だと公然と非難した。",
+    [
+      "denounce as",
+      "publicly denounce"
+    ],
+    "de-(下に)+ nounce(告げる。announce, pronounce)。公の場で名指しして責めること。"
+  ],
+  [
+    "dense",
+    "B2",
+    "形容詞",
+    [
+      "密集した",
+      "濃い"
+    ],
+    "/dɛns/",
+    "Dense fog closed the airport for most of the morning.",
+    "濃い霧が午前中の大半、空港を閉鎖させた。",
+    [
+      "dense fog",
+      "densely populated"
+    ],
+    "ラテン語 densus(厚い)。すき間なく詰まっている状態。人口にも霧にも文章の内容にも使う。"
+  ],
+  [
+    "density",
+    "B2",
+    "名詞",
+    [
+      "密度",
+      "濃さ"
+    ],
+    "/ˈdɛnsəti/",
+    "The city has the highest population density in the country.",
+    "その都市は国内で最も人口密度が高い。",
+    [
+      "population density",
+      "high density"
+    ],
+    "dense の名詞。一定の広さや体積にどれだけ詰まっているか、を表す量。"
+  ],
+  [
+    "dependence",
+    "B2",
+    "名詞",
+    [
+      "依存"
+    ],
+    "/dɪˈpɛndəns/",
+    "The country is reducing its dependence on imported fuel.",
+    "その国は輸入燃料への依存を減らしている。",
+    [
+      "dependence on",
+      "drug dependence"
+    ],
+    "depend の名詞。de-(下に)+ pend(ぶら下がる。pendant)。相手にぶら下がって成り立っている状態。"
+  ],
+  [
+    "depict",
+    "B2",
+    "動詞",
+    [
+      "描く",
+      "描写する"
+    ],
+    "/dɪˈpɪkt/",
+    "The painting depicts a harbour at the end of the day.",
+    "その絵は一日の終わりの港を描いている。",
+    [
+      "depict as",
+      "vividly depict"
+    ],
+    "de-(すっかり)+ pict(描く。picture)。絵や言葉で対象の姿を写し取ること。"
+  ],
+  [
+    "deploy",
+    "B2",
+    "動詞",
+    [
+      "配備する",
+      "展開する"
+    ],
+    "/dɪˈplɔɪ/",
+    "Extra staff were deployed to handle the sudden demand.",
+    "急な需要に対応するため追加の人員が配置された。",
+    [
+      "deploy troops",
+      "deploy resources"
+    ],
+    "フランス語 deployer(広げる)。display と同語源で「たたんだものを広げる」。人や装備を必要な場所に広げること。"
+  ],
+  [
+    "deployment",
+    "B2",
+    "名詞",
+    [
+      "配備",
+      "展開"
+    ],
+    "/dɪˈplɔɪmənt/",
+    "The deployment of the new software took several weeks.",
+    "新しいソフトの展開には数週間かかった。",
+    [
+      "troop deployment",
+      "rapid deployment"
+    ],
+    "deploy の名詞。準備してあった人員や仕組みを実地に広げること、またその作業。"
+  ],
+  [
+    "deprive",
+    "B2",
+    "動詞",
+    [
+      "奪う",
+      "与えない"
+    ],
+    "/dɪˈpraɪv/",
+    "The illness deprived him of sleep for several weeks.",
+    "その病気は何週間も彼から睡眠を奪った。",
+    [
+      "deprive of",
+      "be deprived of"
+    ],
+    "de-(離れて)+ prive(自分のものにする。private)。持っていて当然のものを取り上げること。deprive A of B の形。"
+  ],
+  [
+    "deputy",
+    "B2",
+    "名詞",
+    [
+      "副〜",
+      "代理"
+    ],
+    "/ˈdɛpjəti/",
+    "The deputy head runs the school while the principal is away.",
+    "校長が不在の間、副校長が学校を運営する。",
+    [
+      "a deputy director",
+      "the deputy mayor"
+    ],
+    "フランス語 deputer(任命して送る)。上役の代わりを務めるよう指名された人。"
+  ],
+  [
+    "descend",
+    "B2",
+    "動詞",
+    [
+      "下る",
+      "降りる"
+    ],
+    "/dɪˈsɛnd/",
+    "The path descends sharply toward the river.",
+    "その小道は川に向かって急に下っている。",
+    [
+      "descend from",
+      "descend into"
+    ],
+    "de-(下に)+ scend(登る。ascend)。上下の向きは接頭辞だけで決まる。血筋をさかのぼる be descended from も重要。"
+  ],
+  [
+    "descent",
+    "B2",
+    "名詞",
+    [
+      "下降",
+      "家系"
+    ],
+    "/dɪˈsɛnt/",
+    "The plane began its descent twenty minutes before landing.",
+    "その飛行機は着陸の20分前に降下を始めた。",
+    [
+      "begin a descent",
+      "of Irish descent"
+    ],
+    "descend の名詞。下りていく動きが核で、系図をたどって下ってくれば「血筋」。"
+  ],
+  [
+    "designate",
+    "B2",
+    "動詞",
+    [
+      "指定する",
+      "任命する"
+    ],
+    "/ˈdɛzəgneɪt/",
+    "This area has been designated a national park.",
+    "この地域は国立公園に指定されている。",
+    [
+      "designate as",
+      "a designated area"
+    ],
+    "de-(はっきり)+ sign(印)。印をつけて「これだ」と定めること。designated driver は運転係に指名された人。"
+  ],
+  [
+    "desirable",
+    "B2",
+    "形容詞",
+    [
+      "望ましい",
+      "好ましい"
+    ],
+    "/dɪˈzaɪrəbəl/",
+    "Experience abroad is desirable but not essential for this post.",
+    "この職には海外経験があることが望ましいが必須ではない。",
+    [
+      "highly desirable",
+      "a desirable outcome"
+    ],
+    "desire + -able。「望むに値する」。求人票では「あれば有利」の意味で使われる決まり文句。"
+  ],
+  [
+    "desktop",
+    "B2",
+    "名詞",
+    [
+      "デスクトップ",
+      "卓上型"
+    ],
+    "/ˈdɛsktɑp/",
+    "Most staff still prefer a desktop to a laptop.",
+    "ほとんどの職員はいまだにノート型より卓上型を好む。",
+    [
+      "a desktop computer",
+      "on the desktop"
+    ],
+    "desk + top(上)。机の上に置く大きさの機械、が原義。画面上の作業空間の呼び名にも転用された。"
+  ],
+  [
+    "destructive",
+    "B2",
+    "形容詞",
+    [
+      "破壊的な",
+      "有害な"
+    ],
+    "/dɪˈstrʌktɪv/",
+    "The storm was the most destructive in fifty years.",
+    "その嵐は50年で最も破壊的だった。",
+    [
+      "destructive power",
+      "highly destructive"
+    ],
+    "destroy の形容詞。de-(逆に)+ struct(建てる。structure)。建てたものを崩す働き。"
+  ],
+  [
+    "detain",
+    "B2",
+    "動詞",
+    [
+      "拘束する",
+      "引き止める"
+    ],
+    "/dɪˈteɪn/",
+    "Two men were detained for questioning at the border.",
+    "2人の男が国境で取り調べのため拘束された。",
+    [
+      "be detained by police",
+      "detain someone"
+    ],
+    "de-(離して)+ tain(保つ。contain, retain)。行かせずに手元に留めること。警察の拘束にも、単に引き止めるにも使う。"
+  ],
+  [
+    "detection",
+    "B2",
+    "名詞",
+    [
+      "検出",
+      "発見"
+    ],
+    "/dɪˈtɛkʃən/",
+    "Early detection greatly improves the chance of recovery.",
+    "早期発見は回復の可能性を大きく高める。",
+    [
+      "early detection",
+      "the detection of"
+    ],
+    "detect の名詞。de-(取り去る)+ tect(覆う)。覆いを取り去って隠れていたものを見つけること。"
+  ],
+  [
+    "detention",
+    "B2",
+    "名詞",
+    [
+      "拘留",
+      "居残り"
+    ],
+    "/dɪˈtɛnʃən/",
+    "He spent two nights in detention before being released.",
+    "彼は釈放される前に2晩拘留された。",
+    [
+      "in detention",
+      "a detention centre"
+    ],
+    "detain の名詞。行動の自由を止めておく状態。学校では放課後の居残り罰を指す。"
+  ],
+  [
+    "deteriorate",
+    "B2",
+    "動詞",
+    [
+      "悪化する"
+    ],
+    "/dɪˈtɪriɚeɪt/",
+    "Her health deteriorated rapidly during the winter.",
+    "彼女の健康は冬の間に急速に悪化した。",
+    [
+      "deteriorate rapidly",
+      "conditions deteriorate"
+    ],
+    "ラテン語 deterior(より悪い)。時間とともに質が落ちていくこと。急変ではなく下り坂を進む感じ。"
+  ],
+  [
+    "devastate",
+    "B2",
+    "動詞",
+    [
+      "荒廃させる",
+      "打ちのめす"
+    ],
+    "/ˈdɛvəsteɪt/",
+    "The floods devastated farmland across the whole valley.",
+    "洪水は谷全体の農地を壊滅させた。",
+    [
+      "be devastated by",
+      "devastate a region"
+    ],
+    "ラテン語 vastus(荒れ果てた。vast, waste)。土地を空っぽにするのが原義で、心を打ちのめす意味にも使う。"
+  ],
+  [
+    "devil",
+    "B2",
+    "名詞",
+    [
+      "悪魔"
+    ],
+    "/ˈdɛvəl/",
+    "The old play features a devil who bargains for souls.",
+    "その古い劇には魂と取引する悪魔が登場する。",
+    [
+      "the devil",
+      "a devil of a job"
+    ],
+    "ギリシャ語 diabolos(中傷する者)。dia-(横切って)+ bol(投げる)。言葉を投げつけて仲を裂く者、が原義。"
+  ],
+  [
+    "devise",
+    "B2",
+    "動詞",
+    [
+      "考案する",
+      "工夫する"
+    ],
+    "/dɪˈvaɪz/",
+    "Engineers devised a simple way to test the material.",
+    "技術者たちはその素材を試験する簡単な方法を考案した。",
+    [
+      "devise a plan",
+      "devise a method"
+    ],
+    "ラテン語 dividere(分ける)。物事を分解して組み直すことから「工夫する」へ。device はその成果物。"
+  ],
+  [
+    "diagnose",
+    "B2",
+    "動詞",
+    [
+      "診断する"
+    ],
+    "/daɪəgˈnoʊs/",
+    "She was diagnosed with a rare blood disorder last year.",
+    "彼女は昨年、まれな血液の病気と診断された。",
+    [
+      "be diagnosed with",
+      "diagnose a fault"
+    ],
+    "dia-(通して)+ gno(知る。know, ignore)。症状を通して原因を見抜くこと。機械の故障診断にも使う。"
+  ],
+  [
+    "diagnosis",
+    "B2",
+    "名詞",
+    [
+      "診断"
+    ],
+    "/daɪəgˈnoʊsəs/",
+    "A second opinion confirmed the original diagnosis.",
+    "第二の意見が当初の診断を裏づけた。",
+    [
+      "make a diagnosis",
+      "an early diagnosis"
+    ],
+    "diagnose の名詞。複数形は diagnoses と綴りが変わる点に注意。"
+  ],
+  [
+    "dictate",
+    "B2",
+    "動詞",
+    [
+      "指示する",
+      "書き取らせる"
+    ],
+    "/dɪkˈteɪt/",
+    "Market conditions dictate how much we can charge.",
+    "市場の状況が私たちの設定できる価格を左右する。",
+    [
+      "dictate terms",
+      "dictate a letter"
+    ],
+    "dict(言う。dictionary)+ -ate。言葉で相手を動かすこと。状況が主語なら「〜を決めてしまう」。"
+  ],
+  [
+    "dictator",
+    "B2",
+    "名詞",
+    [
+      "独裁者"
+    ],
+    "/dɪkˈteɪtɚ/",
+    "The country was ruled by a military dictator for decades.",
+    "その国は何十年も軍事独裁者に支配されていた。",
+    [
+      "a brutal dictator",
+      "under a dictator"
+    ],
+    "dictate + -or。自分の言うことだけを通す人。もとはローマの非常時に任命された臨時の全権職。"
+  ],
+  [
+    "differentiate",
+    "B2",
+    "動詞",
+    [
+      "区別する",
+      "差をつける"
+    ],
+    "/dɪfɚˈɛnʃieɪt/",
+    "Customers cannot easily differentiate between the two brands.",
+    "顧客はその2つのブランドを簡単には区別できない。",
+    [
+      "differentiate between",
+      "differentiate from"
+    ],
+    "different + -iate。違いを見つけて分けること。商品を他社と差別化する意味でもよく使う。"
+  ],
+  [
+    "dignity",
+    "B2",
+    "名詞",
+    [
+      "尊厳",
+      "威厳"
+    ],
+    "/ˈdɪgnəti/",
+    "Everyone deserves to be treated with dignity at work.",
+    "誰もが職場で尊厳をもって扱われるに値する。",
+    [
+      "human dignity",
+      "with dignity"
+    ],
+    "ラテン語 dignus(価値がある)。人として値打ちがあることが核。おごりではなく、静かな品位を指す。"
+  ],
+  [
+    "dilemma",
+    "B2",
+    "名詞",
+    [
+      "板挟み",
+      "ジレンマ"
+    ],
+    "/dɪˈlɛmə/",
+    "Parents face a real dilemma when both options cost too much.",
+    "どちらの選択肢も高くつくとき、親は本当の板挟みに直面する。",
+    [
+      "face a dilemma",
+      "a moral dilemma"
+    ],
+    "ギリシャ語 di-(二つ)+ lemma(前提)。どちらを選んでも困る二択が原義で、単なる悩みには使わない。"
+  ],
+  [
+    "diminish",
+    "B2",
+    "動詞",
+    [
+      "減少する",
+      "弱める"
+    ],
+    "/dɪˈmɪnɪʃ/",
+    "Interest in the project diminished after the funding ended.",
+    "資金が尽きた後、その事業への関心は薄れた。",
+    [
+      "diminish rapidly",
+      "diminishing returns"
+    ],
+    "ラテン語 minus(より少ない。minimum, minor)。少しずつ小さくなること。"
+  ],
+  [
+    "dip",
+    "B2",
+    "動詞",
+    [
+      "浸す",
+      "少し下がる"
+    ],
+    "/dɪp/",
+    "Sales dipped slightly in the last quarter of the year.",
+    "売上は年度最終四半期にわずかに落ち込んだ。",
+    [
+      "dip into",
+      "a slight dip"
+    ],
+    "古英語 dyppan(浸す)。deep と同語根で「下へ入れる」。数値が一時的に下がる意味にも広く使う。"
+  ],
+  [
+    "diplomat",
+    "B2",
+    "名詞",
+    [
+      "外交官"
+    ],
+    "/ˈdɪpləmæt/",
+    "A retired diplomat was asked to lead the talks.",
+    "退任した外交官がその協議を主導するよう求められた。",
+    [
+      "a senior diplomat",
+      "a career diplomat"
+    ],
+    "ギリシャ語 diploma(二つ折りの公文書)。折りたたんだ公式書状を携えて交渉に行く人、が原義。"
+  ],
+  [
+    "diplomatic",
+    "B2",
+    "形容詞",
+    [
+      "外交の",
+      "如才ない"
+    ],
+    "/dɪpləˈmætɪk/",
+    "She found a diplomatic way to refuse the invitation.",
+    "彼女は角の立たない断り方を見つけた。",
+    [
+      "diplomatic relations",
+      "a diplomatic answer"
+    ],
+    "diplomat の形容詞。国家間の交渉を指すほか、人を傷つけずに立ち回る器用さも表す。"
+  ],
+  [
+    "directory",
+    "B2",
+    "名詞",
+    [
+      "名簿",
+      "ディレクトリ"
+    ],
+    "/dɚˈɛktɚi/",
+    "Her number is not listed in the company directory.",
+    "彼女の番号は社員名簿に載っていない。",
+    [
+      "a telephone directory",
+      "a root directory"
+    ],
+    "direct(向ける)+ -ory。目的の相手へ導くための一覧。コンピューターのフォルダー階層も同じ発想。"
+  ],
+  [
+    "disastrous",
+    "B2",
+    "形容詞",
+    [
+      "悲惨な",
+      "大失敗の"
+    ],
+    "/dɪˈzæstrəs/",
+    "The change in schedule proved disastrous for ticket sales.",
+    "予定の変更はチケット販売にとって大失敗だと分かった。",
+    [
+      "a disastrous decision",
+      "prove disastrous"
+    ],
+    "disaster の形容詞。dis-(悪い)+ aster(星)。星回りが悪いことが原義で、取り返しのつかない失敗を表す。"
+  ],
+  [
+    "discard",
+    "B2",
+    "動詞",
+    [
+      "捨てる",
+      "処分する"
+    ],
+    "/dɪˈskɑrd/",
+    "Please discard any food left in the fridge over the holiday.",
+    "休暇中に冷蔵庫に残った食べ物はすべて処分してください。",
+    [
+      "discard an idea",
+      "safely discard"
+    ],
+    "dis-(離して)+ card(トランプの札)。手札から不要な札を捨てるのが原義。考えを退ける意味にも使う。"
+  ],
+  [
+    "discharge",
+    "B2",
+    "動詞",
+    [
+      "放出する",
+      "解放する",
+      "退院させる"
+    ],
+    "/dɪsˈtʃɑrdʒ/",
+    "The factory was fined for discharging waste into the river.",
+    "その工場は川に廃棄物を放出したことで罰金を科された。",
+    [
+      "discharge waste",
+      "be discharged from hospital"
+    ],
+    "dis-(離して)+ charge(積む)。積み荷を降ろすのが原義。責任・患者・物質のいずれも「解き放つ」で通る。"
+  ],
+  [
+    "disclose",
+    "B2",
+    "動詞",
+    [
+      "明らかにする",
+      "開示する"
+    ],
+    "/dɪskˈloʊz/",
+    "The company refused to disclose the names of its investors.",
+    "その会社は投資家の名前を明かすことを拒んだ。",
+    [
+      "disclose information",
+      "fail to disclose"
+    ],
+    "dis-(逆に)+ close(閉じる)。閉じていたものを開くこと。reveal より公式で、法的な開示義務の文脈に多い。"
+  ],
+  [
+    "disclosure",
+    "B2",
+    "名詞",
+    [
+      "開示",
+      "暴露"
+    ],
+    "/dɪskˈloʊʒɚ/",
+    "Full disclosure of costs is required before signing.",
+    "署名の前に費用の全面開示が求められる。",
+    [
+      "full disclosure",
+      "public disclosure"
+    ],
+    "disclose の名詞。隠さず示すこと、または示された中身そのもの。"
+  ],
+  [
+    "discourse",
+    "B2",
+    "名詞",
+    [
+      "言説",
+      "論説"
+    ],
+    "/ˈdɪskɔrs/",
+    "Public discourse on the subject has become more polarized.",
+    "その主題に関する世間の議論はより二極化してきた。",
+    [
+      "public discourse",
+      "political discourse"
+    ],
+    "dis-(あちこち)+ course(走る)。話があちこち走り回ることが原義。ある領域で交わされる語り全体を指す。"
+  ],
+  [
+    "discretion",
+    "B2",
+    "名詞",
+    [
+      "裁量",
+      "思慮"
+    ],
+    "/dɪˈskrɛʃən/",
+    "Refunds are given at the manager's discretion.",
+    "払い戻しは責任者の裁量で行われる。",
+    [
+      "at one's discretion",
+      "use discretion"
+    ],
+    "dis-(離して)+ cret(分ける。secret, discern)。自分で見分けて決める権限。慎み深さの意味もある。"
+  ],
+  [
+    "discrimination",
+    "B2",
+    "名詞",
+    [
+      "差別",
+      "識別"
+    ],
+    "/dɪskrɪməˈneɪʃən/",
+    "The law prohibits discrimination on the basis of age.",
+    "その法律は年齢による差別を禁じている。",
+    [
+      "racial discrimination",
+      "discrimination against"
+    ],
+    "dis-(分けて)+ crimin(ふるい分ける)。見分けることが原義で、人を不当に分ければ差別。良い意味の「識別力」も残る。"
+  ],
+  [
+    "dismissal",
+    "B2",
+    "名詞",
+    [
+      "解雇",
+      "却下"
+    ],
+    "/dɪˈsmɪsəl/",
+    "She challenged her dismissal at an employment tribunal.",
+    "彼女は労働審判所で自身の解雇を争った。",
+    [
+      "unfair dismissal",
+      "the dismissal of a case"
+    ],
+    "dismiss の名詞。dis-(離して)+ miss(送る)。送り出して手を切ること。人なら解雇、訴えなら却下。"
+  ],
+  [
+    "displace",
+    "B2",
+    "動詞",
+    [
+      "立ち退かせる",
+      "取って代わる"
+    ],
+    "/dɪˈspleɪs/",
+    "The new dam displaced several thousand villagers.",
+    "その新しいダムは数千人の村人を立ち退かせた。",
+    [
+      "displaced people",
+      "displace workers"
+    ],
+    "dis-(離して)+ place(場所)。もといた場所から押し出すこと。人にも技術の置き換えにも使う。"
+  ],
+  [
+    "disposal",
+    "B2",
+    "名詞",
+    [
+      "処分",
+      "廃棄"
+    ],
+    "/dɪˈspoʊzəl/",
+    "The city introduced new rules for the disposal of electronics.",
+    "市は電子機器の廃棄に関する新しい規則を導入した。",
+    [
+      "waste disposal",
+      "at your disposal"
+    ],
+    "dispose の名詞。片づけて手放すこと。at your disposal は「自由に使ってよい」という別の定型表現。"
+  ],
+  [
+    "dispose",
+    "B2",
+    "動詞",
+    [
+      "処分する",
+      "配置する"
+    ],
+    "/dɪˈspoʊz/",
+    "Batteries must be disposed of at a collection point.",
+    "電池は回収場所で処分しなければならない。",
+    [
+      "dispose of",
+      "properly dispose"
+    ],
+    "dis-(離して)+ pos(置く。position)。置き場を別にすること。「処分する」の意味では必ず dispose of を使う。"
+  ],
+  [
+    "dispute",
+    "B2",
+    "名詞・動詞",
+    [
+      "論争",
+      "異議を唱える"
+    ],
+    "/dɪspˈjut/",
+    "The two countries have a long-running dispute over fishing rights.",
+    "両国は漁業権をめぐって長く続く紛争を抱えている。",
+    [
+      "a border dispute",
+      "dispute a claim"
+    ],
+    "dis-(別々に)+ pute(考える。compute)。互いに別々の考えをぶつけ合うこと。"
+  ],
+  [
+    "disrupt",
+    "B2",
+    "動詞",
+    [
+      "混乱させる",
+      "中断させる"
+    ],
+    "/dɪsˈrʌpt/",
+    "Heavy snow disrupted train services across the north.",
+    "大雪が北部一帯の列車の運行を混乱させた。",
+    [
+      "disrupt services",
+      "disrupt a meeting"
+    ],
+    "dis-(ばらばらに)+ rupt(壊す。interrupt)。流れていたものを断ち切って乱すこと。"
+  ],
+  [
+    "disruption",
+    "B2",
+    "名詞",
+    [
+      "混乱",
+      "途絶"
+    ],
+    "/dɪsˈrʌpʃən/",
+    "Passengers faced two days of disruption after the strike.",
+    "乗客はストの後、2日間の混乱に直面した。",
+    [
+      "cause disruption",
+      "major disruption"
+    ],
+    "disrupt の名詞。予定どおり進むはずのものが途切れて生じる混乱を指す。"
+  ],
+  [
+    "dissolve",
+    "B2",
+    "動詞",
+    [
+      "溶ける",
+      "解散する"
+    ],
+    "/dɪˈzɑlv/",
+    "Stir until the sugar dissolves completely in the warm water.",
+    "砂糖がぬるま湯に完全に溶けるまでかき混ぜなさい。",
+    [
+      "dissolve in water",
+      "dissolve a partnership"
+    ],
+    "dis-(ばらばらに)+ solve(解く)。まとまりをほどくこと。物なら溶解、組織なら解散。"
+  ],
+  [
+    "distinction",
+    "B2",
+    "名詞",
+    [
+      "区別",
+      "優秀さ"
+    ],
+    "/dɪˈstɪŋkʃən/",
+    "He drew a clear distinction between opinion and fact.",
+    "彼は意見と事実の間に明確な区別を引いた。",
+    [
+      "draw a distinction",
+      "with distinction"
+    ],
+    "distinguish の名詞。dis-(離して)+ sting(刺して印をつける)。線を引いて分けること。成績なら「優等」。"
+  ],
+  [
+    "distinctive",
+    "B2",
+    "形容詞",
+    [
+      "独特の",
+      "際立った"
+    ],
+    "/dɪˈstɪŋktɪv/",
+    "The bird has a distinctive call that carries for miles.",
+    "その鳥は数キロ先まで届く独特の鳴き声を持つ。",
+    [
+      "a distinctive style",
+      "distinctive features"
+    ],
+    "distinct の形容詞。他と混ざらない印を持っていること。特徴的で見分けがつく、という肯定的な響き。"
+  ],
+  [
+    "distort",
+    "B2",
+    "動詞",
+    [
+      "ゆがめる",
+      "曲げて伝える"
+    ],
+    "/dɪˈstɔrt/",
+    "The report distorts what the researchers actually said.",
+    "その報道は研究者が実際に述べたことをゆがめている。",
+    [
+      "distort the truth",
+      "distort an image"
+    ],
+    "dis-(ねじって)+ tort(ねじる。torture)。形をねじ曲げること。事実を都合よく曲げる意味でよく使う。"
+  ],
+  [
+    "distress",
+    "B2",
+    "名詞・動詞",
+    [
+      "苦悩",
+      "苦しめる"
+    ],
+    "/dɪˈstrɛs/",
+    "The family was in obvious distress after hearing the news.",
+    "その家族は知らせを聞いて明らかに苦しんでいた。",
+    [
+      "in distress",
+      "emotional distress"
+    ],
+    "dis-(離して)+ stress(締める。strict)。心を強く締めつける状態。船や人が「遭難して」の意味もある。"
+  ],
+  [
+    "disturbing",
+    "B2",
+    "形容詞",
+    [
+      "動揺させる",
+      "不穏な"
+    ],
+    "/dɪˈstɝbɪŋ/",
+    "The film contains scenes that some viewers may find disturbing.",
+    "その映画には一部の視聴者が不快に感じるかもしれない場面が含まれる。",
+    [
+      "deeply disturbing",
+      "a disturbing trend"
+    ],
+    "disturb(かき乱す)の形容詞。dis-(ばらばらに)+ turb(かき回す。turbulence)。心を乱してくるもの。"
+  ],
+  [
+    "divert",
+    "B2",
+    "動詞",
+    [
+      "そらす",
+      "迂回させる"
+    ],
+    "/daɪˈvɝt/",
+    "Police diverted traffic away from the flooded road.",
+    "警察は冠水した道路から車の流れを迂回させた。",
+    [
+      "divert attention",
+      "divert funds"
+    ],
+    "di-(離れて)+ vert(向ける。reverse, convert)。本来の向きから別方向へ向けること。"
+  ],
+  [
+    "divine",
+    "B2",
+    "形容詞",
+    [
+      "神の",
+      "神聖な"
+    ],
+    "/dɪˈvaɪn/",
+    "The temple was built to honour a divine protector of the sea.",
+    "その寺は海の守護神をたたえるために建てられた。",
+    [
+      "divine intervention",
+      "divine right"
+    ],
+    "ラテン語 divus(神)。神に属することが核。会話では「すばらしい」という誇張表現にも使われる。"
+  ],
+  [
+    "doctrine",
+    "B2",
+    "名詞",
+    [
+      "教義",
+      "主義"
+    ],
+    "/ˈdɑktrən/",
+    "The party has moved away from its founding doctrine.",
+    "その党は建党時の主義から離れてきた。",
+    [
+      "a political doctrine",
+      "religious doctrine"
+    ],
+    "ラテン語 docere(教える。doctor, document)。教えとして体系化された内容。"
+  ],
+  [
+    "documentation",
+    "B2",
+    "名詞",
+    [
+      "文書",
+      "記録",
+      "資料"
+    ],
+    "/dɑkjəmɛnˈteɪʃən/",
+    "Applicants must provide documentation of their qualifications.",
+    "申請者は資格を証明する書類を提出しなければならない。",
+    [
+      "supporting documentation",
+      "technical documentation"
+    ],
+    "document の名詞形。証拠として示せる書類一式、または製品の説明資料。"
+  ],
+  [
+    "domain",
+    "B2",
+    "名詞",
+    [
+      "領域",
+      "分野"
+    ],
+    "/doʊˈmeɪn/",
+    "The question falls outside the domain of medical science.",
+    "その問いは医学の領域の外にある。",
+    [
+      "a public domain",
+      "in the domain of"
+    ],
+    "ラテン語 dominus(主人)。主人が支配する土地が原義。専門分野やネット上の住所にも広がった。"
+  ],
+  [
+    "dominance",
+    "B2",
+    "名詞",
+    [
+      "優位",
+      "支配"
+    ],
+    "/ˈdɑmənəns/",
+    "The company lost its dominance in the smartphone market.",
+    "その会社はスマートフォン市場での優位を失った。",
+    [
+      "market dominance",
+      "male dominance"
+    ],
+    "dominate の名詞。dominus(主人)から。他を押さえて上に立っている状態。"
+  ],
+  [
+    "donor",
+    "B2",
+    "名詞",
+    [
+      "寄贈者",
+      "提供者"
+    ],
+    "/ˈdoʊnɚ/",
+    "An anonymous donor paid for the new hospital wing.",
+    "匿名の寄贈者が病院の新棟の費用を負担した。",
+    [
+      "a blood donor",
+      "a major donor"
+    ],
+    "ラテン語 donare(与える。donate)。差し出す側の人。臓器や血液の提供者にも使う。"
+  ],
+  [
+    "dose",
+    "B2",
+    "名詞",
+    [
+      "服用量",
+      "一回分"
+    ],
+    "/doʊs/",
+    "Take one dose in the morning and one before bed.",
+    "朝に1回分、就寝前に1回分を服用してください。",
+    [
+      "a high dose",
+      "a daily dose"
+    ],
+    "ギリシャ語 dosis(与えられたもの)。一度に与える量が核。皮肉や現実など、比喩の「一服」にも使う。"
+  ],
+  [
+    "drain",
+    "B2",
+    "動詞",
+    [
+      "排出する",
+      "消耗させる"
+    ],
+    "/dreɪn/",
+    "Long meetings drain the energy of the whole team.",
+    "長い会議はチーム全体の気力を奪う。",
+    [
+      "drain away",
+      "a brain drain"
+    ],
+    "古英語 dreahnian(乾かす)。水を抜き切ることが核で、体力や資金を吸い取る比喩へ広がった。"
+  ],
+  [
+    "drift",
+    "B2",
+    "動詞",
+    [
+      "漂う",
+      "ずれていく"
+    ],
+    "/drɪft/",
+    "The conversation drifted away from the original topic.",
+    "会話は本来の話題からそれていった。",
+    [
+      "drift apart",
+      "drift into"
+    ],
+    "drive と同語源で「押し流される」。自分の意思ではなく流れに任せて動くこと。"
+  ],
+  [
+    "drown",
+    "B2",
+    "動詞",
+    [
+      "おぼれる",
+      "溺死させる"
+    ],
+    "/draʊn/",
+    "Two swimmers nearly drowned in the strong current.",
+    "2人の泳ぎ手が強い流れでおぼれかけた。",
+    [
+      "drown in",
+      "drown out"
+    ],
+    "古英語 druncnian。水に沈んで息ができなくなること。drown out なら音がかき消されること。"
+  ],
+  [
+    "dual",
+    "B2",
+    "形容詞",
+    [
+      "二重の",
+      "二つの"
+    ],
+    "/ˈduəl/",
+    "She holds dual citizenship in Brazil and Portugal.",
+    "彼女はブラジルとポルトガルの二重国籍を持っている。",
+    [
+      "dual citizenship",
+      "a dual role"
+    ],
+    "ラテン語 duo(2)。二つが対になって同時に成り立っている状態。double が量、dual は組み合わせを指す。"
+  ],
+  [
+    "dub",
+    "B2",
+    "動詞",
+    [
+      "名づける",
+      "吹き替える"
+    ],
+    "/dʌb/",
+    "The press quickly dubbed the bridge the Iron Lady.",
+    "報道機関はすぐにその橋を鉄の貴婦人と名づけた。",
+    [
+      "dub someone",
+      "be dubbed into"
+    ],
+    "もとは剣で肩を打って騎士に叙する儀式。呼び名を与えるのが核で、そこから別の声を当てる意味へ。"
+  ],
+  [
+    "dumb",
+    "B2",
+    "形容詞",
+    [
+      "口がきけない",
+      "ばかげた"
+    ],
+    "/dʌm/",
+    "Standing there in silence, he felt completely dumb.",
+    "そこに黙って立ったまま、彼は完全に言葉を失った気がした。",
+    [
+      "dumb luck",
+      "struck dumb"
+    ],
+    "古英語 dumb(黙った)。もとは話せないこと。人に対して「ばかな」の意味で使うと侮辱になるので注意。"
+  ],
+  [
+    "duo",
+    "B2",
+    "名詞",
+    [
+      "二人組"
+    ],
+    "/ˈduoʊ/",
+    "The duo has performed together for more than a decade.",
+    "その二人組は10年以上一緒に演奏してきた。",
+    [
+      "a comedy duo",
+      "a musical duo"
+    ],
+    "イタリア語 duo(2)。二人で一組として活動する単位。三人なら trio。"
+  ],
+  [
+    "earnings",
+    "B2",
+    "名詞",
+    [
+      "収入",
+      "収益"
+    ],
+    "/ˈɝnɪŋz/",
+    "Company earnings fell sharply in the second half of the year.",
+    "その会社の収益は下半期に大きく落ち込んだ。",
+    [
+      "annual earnings",
+      "earnings growth"
+    ],
+    "earn(稼ぐ)の名詞。働いて得た分、が核。常に複数形で使い、income より「稼ぎ出した」感じが強い。"
+  ],
+  [
+    "ease",
+    "B2",
+    "名詞・動詞",
+    [
+      "容易さ",
+      "和らげる"
+    ],
+    "/iz/",
+    "New painkillers eased the discomfort within minutes.",
+    "新しい鎮痛剤は数分でその不快感を和らげた。",
+    [
+      "with ease",
+      "ease the pain"
+    ],
+    "easy の名詞・動詞。力まずにいられる状態が核。動詞では、きつさを取り除いて楽にすること。"
+  ],
+  [
+    "echo",
+    "B2",
+    "名詞・動詞",
+    [
+      "反響",
+      "繰り返す"
+    ],
+    "/ˈɛkoʊ/",
+    "Her words echoed through the empty hall.",
+    "彼女の言葉ががらんとした広間に響き渡った。",
+    [
+      "an echo of",
+      "echo a view"
+    ],
+    "ギリシャ神話の妖精エコーの名から。返ってくる音が核で、他人の意見をそのまま繰り返す意味にも使う。"
+  ],
+  [
+    "ecological",
+    "B2",
+    "形容詞",
+    [
+      "生態系の",
+      "環境の"
+    ],
+    "/ikəˈlɑdʒɪkəl/",
+    "Draining the marsh caused serious ecological damage.",
+    "湿地の排水は深刻な生態系への被害を引き起こした。",
+    [
+      "ecological damage",
+      "an ecological balance"
+    ],
+    "eco(家。ギリシャ語 oikos)+ logy(学)。生き物の住まい全体を扱う視点。economy の eco も同じ語根。"
+  ],
+  [
+    "educator",
+    "B2",
+    "名詞",
+    [
+      "教育者"
+    ],
+    "/ˈɛdʒəkeɪtɚ/",
+    "Educators are calling for smaller class sizes.",
+    "教育者たちはより少人数の学級を求めている。",
+    [
+      "a leading educator",
+      "educators and parents"
+    ],
+    "educate + -or。e-(外へ)+ duc(導く。conduct)。持っている力を外へ引き出す人、が原義。"
+  ],
+  [
+    "effectiveness",
+    "B2",
+    "名詞",
+    [
+      "有効性",
+      "効果"
+    ],
+    "/ɪˈfɛktɪvnəs/",
+    "The study measured the effectiveness of the new treatment.",
+    "その研究は新しい治療の有効性を測定した。",
+    [
+      "the effectiveness of",
+      "prove effectiveness"
+    ],
+    "effective の名詞。狙った結果をどれだけ生んだか。効率 efficiency とは別で、こちらは効き目そのもの。"
+  ],
+  [
+    "efficiency",
+    "B2",
+    "名詞",
+    [
+      "効率",
+      "能率"
+    ],
+    "/ɪˈfɪʃənsi/",
+    "Small changes to the layout improved efficiency by ten per cent.",
+    "配置のわずかな変更が効率を1割改善した。",
+    [
+      "energy efficiency",
+      "improve efficiency"
+    ],
+    "efficient の名詞。同じ結果をどれだけ少ない手間で出せるか。effectiveness と対にして覚える。"
+  ],
+  [
+    "ego",
+    "B2",
+    "名詞",
+    [
+      "自我",
+      "自尊心"
+    ],
+    "/ˈigoʊ/",
+    "Losing the match badly bruised his ego.",
+    "その試合に負けたことは彼の自尊心をひどく傷つけた。",
+    [
+      "a big ego",
+      "bruise someone's ego"
+    ],
+    "ラテン語 ego(私)。自分を自分と感じる部分が核で、日常では「うぬぼれ」寄りの意味で使われる。"
+  ],
+  [
+    "elaborate",
+    "B2",
+    "形容詞",
+    [
+      "手の込んだ",
+      "詳しく述べる"
+    ],
+    "/ɪˈlæbrət/",
+    "They prepared an elaborate meal for the anniversary.",
+    "彼らは記念日のために手の込んだ食事を用意した。",
+    [
+      "an elaborate plan",
+      "elaborate on"
+    ],
+    "e-(外へ)+ labor(働く)。手間をかけて作り込むこと。動詞では詳しく述べる意味で、発音の語尾が変わる。"
+  ],
+  [
+    "electoral",
+    "B2",
+    "形容詞",
+    [
+      "選挙の"
+    ],
+    "/ɪˈlɛktɚəl/",
+    "The electoral system favours large parties.",
+    "その選挙制度は大政党に有利に働く。",
+    [
+      "the electoral system",
+      "electoral reform"
+    ],
+    "elect(選ぶ)の形容詞。e-(外へ)+ lect(選ぶ。select)。選び出す仕組みに関わること。"
+  ],
+  [
+    "elevate",
+    "B2",
+    "動詞",
+    [
+      "高める",
+      "昇進させる"
+    ],
+    "/ˈɛləveɪt/",
+    "Regular exercise can elevate your mood for hours.",
+    "定期的な運動は何時間も気分を高めることがある。",
+    [
+      "elevate levels",
+      "elevate to"
+    ],
+    "e-(外へ)+ lev(軽い、持ち上げる。lift, lever)。持ち上げるのが核で、地位や数値にも使う。"
+  ],
+  [
+    "eligible",
+    "B2",
+    "形容詞",
+    [
+      "資格のある",
+      "適格な"
+    ],
+    "/ˈɛlədʒəbəl/",
+    "Only residents are eligible to vote in local elections.",
+    "住民だけが地方選挙で投票する資格がある。",
+    [
+      "eligible for",
+      "eligible to vote"
+    ],
+    "e-(外へ)+ lig(選ぶ。elect)。選ばれる側に入っている、が核。条件を満たしていること。"
+  ],
+  [
+    "elite",
+    "B2",
+    "名詞",
+    [
+      "エリート",
+      "精鋭"
+    ],
+    "/ɪˈlit/",
+    "The school trains a small elite of young dancers.",
+    "その学校は少数の若い精鋭ダンサーを育てている。",
+    [
+      "the ruling elite",
+      "an elite group"
+    ],
+    "フランス語 elire(選び出す)。elect と同語源。選び抜かれた少数、が核で、時に批判的にも響く。"
+  ],
+  [
+    "embark",
+    "B2",
+    "動詞",
+    [
+      "乗り込む",
+      "着手する"
+    ],
+    "/ɛmˈbɑrk/",
+    "She embarked on a new career at the age of fifty.",
+    "彼女は50歳で新しい職業に乗り出した。",
+    [
+      "embark on",
+      "embark upon"
+    ],
+    "em-(中へ)+ bark(小舟)。船に乗り込むのが原義。embark on で新しい事業や旅に出ること。"
+  ],
+  [
+    "embarrassment",
+    "B2",
+    "名詞",
+    [
+      "恥ずかしさ",
+      "当惑"
+    ],
+    "/ɪmˈbɛrəsmənt/",
+    "He turned red with embarrassment when his phone rang.",
+    "電話が鳴ったとき、彼は恥ずかしさで赤くなった。",
+    [
+      "cause embarrassment",
+      "to my embarrassment"
+    ],
+    "embarrass の名詞。もとはスペイン語で「縄で妨げる」。身動きが取れず気まずい状態、が核。"
+  ],
+  [
+    "embassy",
+    "B2",
+    "名詞",
+    [
+      "大使館"
+    ],
+    "/ˈɛmbəsi/",
+    "Applicants must submit their forms at the embassy in person.",
+    "申請者は大使館で直接書類を提出しなければならない。",
+    [
+      "the British embassy",
+      "at the embassy"
+    ],
+    "ambassador と同語源。派遣された使節と、その拠点となる建物の両方を指す。"
+  ],
+  [
+    "embed",
+    "B2",
+    "動詞",
+    [
+      "埋め込む"
+    ],
+    "/ɪmˈbɛd/",
+    "Small sensors are embedded in the surface of the road.",
+    "小さなセンサーが道路の表面に埋め込まれている。",
+    [
+      "embedded in",
+      "deeply embedded"
+    ],
+    "em-(中へ)+ bed(寝床)。中に寝かせて固定すること。習慣や価値観が深く根づく比喩にも使う。"
+  ],
+  [
+    "embody",
+    "B2",
+    "動詞",
+    [
+      "体現する",
+      "具体化する"
+    ],
+    "/ɪmˈbɑdi/",
+    "The building embodies the ideals of its architect.",
+    "その建物は設計者の理想を体現している。",
+    [
+      "embody a principle",
+      "embody values"
+    ],
+    "em-(中へ)+ body(体)。形のない理念に体を与えること。人にも物にも使う。"
+  ],
+  [
+    "emergence",
+    "B2",
+    "名詞",
+    [
+      "出現",
+      "台頭"
+    ],
+    "/ɪˈmɝdʒəns/",
+    "The emergence of online banking changed the industry.",
+    "ネット銀行の登場がその業界を変えた。",
+    [
+      "the emergence of",
+      "rapid emergence"
+    ],
+    "emerge の名詞。e-(外へ)+ merg(沈む。submerge)。沈んでいたものが水面に現れること。"
+  ],
+  [
+    "empirical",
+    "B2",
+    "形容詞",
+    [
+      "経験的な",
+      "実証的な"
+    ],
+    "/ɛmˈpɪrɪkəl/",
+    "The claim is not supported by empirical evidence.",
+    "その主張は実証的な証拠に裏づけられていない。",
+    [
+      "empirical evidence",
+      "empirical research"
+    ],
+    "ギリシャ語 empeiria(経験)。理屈ではなく実際の観察や実験に基づくこと。"
+  ],
+  [
+    "empower",
+    "B2",
+    "動詞",
+    [
+      "権限を与える",
+      "力づける"
+    ],
+    "/ɪmˈpaʊɚ/",
+    "The training aims to empower staff to make decisions.",
+    "その研修は職員が自分で判断できるようにすることを目指す。",
+    [
+      "empower people",
+      "empower someone to"
+    ],
+    "em-(〜にする)+ power。力を持たせること。制度上の権限にも、自信を与える意味にも使う。"
+  ],
+  [
+    "enact",
+    "B2",
+    "動詞",
+    [
+      "制定する",
+      "演じる"
+    ],
+    "/ɪˈnækt/",
+    "Parliament enacted the law within three months.",
+    "議会は3か月以内にその法律を制定した。",
+    [
+      "enact legislation",
+      "newly enacted"
+    ],
+    "en-(〜にする)+ act(行い)。行いとして通用する状態にすること。法案を法律にする手続きを指す。"
+  ],
+  [
+    "encompass",
+    "B2",
+    "動詞",
+    [
+      "含む",
+      "取り囲む"
+    ],
+    "/ɛnˈkʌmpəs/",
+    "The role encompasses both teaching and research.",
+    "その職は教育と研究の両方を含む。",
+    [
+      "encompass a range",
+      "encompass everything"
+    ],
+    "en-(中に)+ compass(囲む範囲)。ぐるりと囲んで内側に収めること。include より範囲の広さを強調する。"
+  ],
+  [
+    "encouragement",
+    "B2",
+    "名詞",
+    [
+      "励まし",
+      "後押し"
+    ],
+    "/ɛnˈkɝɪdʒmənt/",
+    "A word of encouragement from her coach changed everything.",
+    "コーチからの励ましの一言がすべてを変えた。",
+    [
+      "a word of encouragement",
+      "give encouragement"
+    ],
+    "encourage の名詞。en-(与える)+ courage(勇気)。相手の胸に勇気を入れること。"
+  ],
+  [
+    "encouraging",
+    "B2",
+    "形容詞",
+    [
+      "励みになる",
+      "有望な"
+    ],
+    "/ɛnˈkɝɪdʒɪŋ/",
+    "Early test results were encouraging but not conclusive.",
+    "初期の試験結果は有望だったが決定的ではなかった。",
+    [
+      "encouraging signs",
+      "an encouraging result"
+    ],
+    "encourage の形容詞。こちらに勇気を与えてくる、が核。数字や兆候にも使う。"
+  ],
+  [
+    "endeavour",
+    "B2",
+    "名詞",
+    [
+      "努力",
+      "試み"
+    ],
+    "/ɪnˈdɛvɚ/",
+    "Their endeavour to save the old theatre finally succeeded.",
+    "古い劇場を救おうという彼らの努力はついに実った。",
+    [
+      "a joint endeavour",
+      "human endeavour"
+    ],
+    "en-(〜にする)+ devoir(義務。フランス語)。義務として本気で取り組むこと。米つづりは endeavor。"
+  ],
+  [
+    "endless",
+    "B2",
+    "形容詞",
+    [
+      "終わりのない",
+      "果てしない"
+    ],
+    "/ˈɛndləs/",
+    "The meeting felt endless to everyone in the room.",
+    "その会議は部屋にいた全員にとって終わりがないように感じられた。",
+    [
+      "an endless supply",
+      "seem endless"
+    ],
+    "end + -less。本当に無限というより、うんざりするほど長い、という誇張で使うことが多い。"
+  ],
+  [
+    "endorse",
+    "B2",
+    "動詞",
+    [
+      "支持する",
+      "承認する"
+    ],
+    "/ɛnˈdɔrs/",
+    "Two former presidents endorsed the candidate publicly.",
+    "2人の元大統領が公にその候補者を支持した。",
+    [
+      "endorse a product",
+      "publicly endorse"
+    ],
+    "en-(上に)+ dors(背。dorsal)。書類の裏に署名して認めるのが原義。有名人の商品推奨にも使う。"
+  ],
+  [
+    "endorsement",
+    "B2",
+    "名詞",
+    [
+      "支持",
+      "推薦"
+    ],
+    "/ɛnˈdɔrsmənt/",
+    "The campaign gained momentum after a surprise endorsement.",
+    "意外な支持表明の後、その運動は勢いを得た。",
+    [
+      "a celebrity endorsement",
+      "win an endorsement"
+    ],
+    "endorse の名詞。裏書きにあたる公の後押し。広告の推薦も同じ語。"
+  ],
+  [
+    "endure",
+    "B2",
+    "動詞",
+    [
+      "耐える",
+      "持ちこたえる"
+    ],
+    "/ɛndˈjʊr/",
+    "The bridge has endured a century of harsh winters.",
+    "その橋は1世紀にわたる厳しい冬に耐えてきた。",
+    [
+      "endure hardship",
+      "endure for years"
+    ],
+    "en-(中で)+ dur(固い。durable, during)。硬さを保ったまま時間を通り抜けること。"
+  ],
+  [
+    "enforce",
+    "B2",
+    "動詞",
+    [
+      "施行する",
+      "守らせる"
+    ],
+    "/ɛnˈfɔrs/",
+    "The rules are difficult to enforce in rural areas.",
+    "その規則は農村部では守らせるのが難しい。",
+    [
+      "enforce a law",
+      "strictly enforce"
+    ],
+    "en-(〜にする)+ force(力)。決まりに力を持たせて実際に効かせること。作ること enact との違いに注意。"
+  ],
+  [
+    "enforcement",
+    "B2",
+    "名詞",
+    [
+      "施行",
+      "取り締まり"
+    ],
+    "/ɛnˈfɔrsmənt/",
+    "Stronger enforcement reduced speeding on the coast road.",
+    "より強い取り締まりが海岸道路での速度超過を減らした。",
+    [
+      "law enforcement",
+      "strict enforcement"
+    ],
+    "enforce の名詞。law enforcement は警察を含む法執行機関全体を指す決まり文句。"
+  ],
+  [
+    "engagement",
+    "B2",
+    "名詞",
+    [
+      "約束",
+      "関与",
+      "婚約"
+    ],
+    "/ɛnˈgeɪdʒmənt/",
+    "Her diary was full of speaking engagements that month.",
+    "その月、彼女の予定表は講演の約束で埋まっていた。",
+    [
+      "a prior engagement",
+      "public engagement"
+    ],
+    "engage の名詞。en-(中へ)+ gage(担保)。自分を差し出して結びつけること。約束・関与・婚約はすべてこの延長。"
+  ],
+  [
+    "engaging",
+    "B2",
+    "形容詞",
+    [
+      "魅力的な",
+      "引き込まれる"
+    ],
+    "/ɛnˈgeɪdʒɪŋ/",
+    "She has an engaging way of explaining difficult ideas.",
+    "彼女には難しい考えを引き込まれる形で説明する話し方がある。",
+    [
+      "an engaging speaker",
+      "highly engaging"
+    ],
+    "engage の形容詞。相手の注意をつかんで離さないこと。人柄にも話し方にも使う。"
+  ],
+  [
+    "enquire",
+    "B2",
+    "動詞",
+    [
+      "問い合わせる",
+      "尋ねる"
+    ],
+    "/ɪnkˈwaɪɚ/",
+    "Several readers enquired about the source of the data.",
+    "数人の読者がそのデータの出典について問い合わせた。",
+    [
+      "enquire about",
+      "enquire into"
+    ],
+    "in-(中へ)+ quire(求める。require, question)。中身を求めて尋ねること。米つづりは inquire。"
+  ],
+  [
+    "enrich",
+    "B2",
+    "動詞",
+    [
+      "豊かにする"
+    ],
+    "/ɛnˈrɪtʃ/",
+    "Volunteering enriched her understanding of the community.",
+    "ボランティア活動は地域社会への彼女の理解を豊かにした。",
+    [
+      "enrich the soil",
+      "greatly enrich"
+    ],
+    "en-(〜にする)+ rich。中身を増やして厚くすること。土壌にも人生にも食品の栄養強化にも使う。"
+  ],
+  [
+    "enrol",
+    "B2",
+    "動詞",
+    [
+      "登録する",
+      "入学する"
+    ],
+    "/ɛnˈroʊl/",
+    "More than four hundred students enrolled in the course.",
+    "400人を超える学生がその講座に登録した。",
+    [
+      "enrol in",
+      "enrol on a course"
+    ],
+    "en-(中へ)+ roll(名簿)。名簿の巻物に名前を書き入れるのが原義。米つづりは enroll。"
+  ],
+  [
+    "ensue",
+    "B2",
+    "動詞",
+    [
+      "続いて起こる"
+    ],
+    "/ɪnˈsu/",
+    "A long silence ensued after the announcement.",
+    "発表の後、長い沈黙が続いた。",
+    [
+      "ensue from",
+      "chaos ensued"
+    ],
+    "en-(後に)+ sue(追う。pursue, sequence)。前の出来事を追いかけて起こること。書き言葉向き。"
+  ],
+  [
+    "enterprise",
+    "B2",
+    "名詞",
+    [
+      "企業",
+      "事業",
+      "進取の気性"
+    ],
+    "/ˈɛntɚpraɪz/",
+    "Small enterprises employ most workers in the region.",
+    "小規模企業がその地域の大半の労働者を雇用している。",
+    [
+      "a state enterprise",
+      "free enterprise"
+    ],
+    "entre-(間に)+ prise(つかむ。フランス語)。手を出して事を起こすこと。会社にも冒険心にも使う。"
+  ],
+  [
+    "enthusiast",
+    "B2",
+    "名詞",
+    [
+      "愛好家",
+      "熱心な人"
+    ],
+    "/ɛnˈθuziæst/",
+    "The festival attracts railway enthusiasts from all over Europe.",
+    "その催しはヨーロッパ中から鉄道愛好家を引き寄せる。",
+    [
+      "a sports enthusiast",
+      "an enthusiast for"
+    ],
+    "ギリシャ語 enthousiasmos(神が中に入る)。en-(中に)+ theos(神)。取りつかれたように夢中な人。"
+  ],
+  [
+    "entitle",
+    "B2",
+    "動詞",
+    [
+      "権利を与える",
+      "題をつける"
+    ],
+    "/ɛnˈtaɪtəl/",
+    "This ticket entitles you to one free drink.",
+    "この券で無料の飲み物を1杯受け取ることができる。",
+    [
+      "be entitled to",
+      "entitled a book"
+    ],
+    "en-(与える)+ title(称号)。称号や資格を与えること。be entitled to で「〜する権利がある」。"
+  ],
+  [
+    "entity",
+    "B2",
+    "名詞",
+    [
+      "実体",
+      "組織"
+    ],
+    "/ˈɛntəti/",
+    "The two branches are treated as separate legal entities.",
+    "その2つの支部は別個の法人として扱われる。",
+    [
+      "a legal entity",
+      "a separate entity"
+    ],
+    "ラテン語 esse(ある)から。「あるもの」そのもの。中身より「一つの独立した存在」であることに焦点がある。"
+  ],
+  [
+    "epidemic",
+    "B2",
+    "名詞",
+    [
+      "流行",
+      "まん延"
+    ],
+    "/ɛpəˈdɛmɪk/",
+    "Health officials moved quickly to contain the epidemic.",
+    "保健当局はその流行を封じ込めるため迅速に動いた。",
+    [
+      "a flu epidemic",
+      "an epidemic of"
+    ],
+    "epi-(上に)+ dem(人々。democracy)。人々の間に広がること。国境を越えれば pandemic。"
+  ],
+  [
+    "equality",
+    "B2",
+    "名詞",
+    [
+      "平等"
+    ],
+    "/ɪkˈwɑləti/",
+    "The law was a major step toward equality at work.",
+    "その法律は職場における平等への大きな一歩だった。",
+    [
+      "gender equality",
+      "equality of opportunity"
+    ],
+    "equal(等しい)の名詞。ラテン語 aequus(平ら)。高さがそろっている状態が核。"
+  ],
+  [
+    "equation",
+    "B2",
+    "名詞",
+    [
+      "方程式",
+      "等式",
+      "要因"
+    ],
+    "/ɪkˈweɪʒən/",
+    "Cost is only one part of the equation.",
+    "費用はその問題の一部にすぎない。",
+    [
+      "a simple equation",
+      "part of the equation"
+    ],
+    "equal と同語根。左右を釣り合わせた式が原義で、比喩では「考えるべき要素の全体」を指す。"
+  ],
+  [
+    "erect",
+    "B2",
+    "動詞",
+    [
+      "建てる",
+      "直立させる"
+    ],
+    "/ɪˈrɛkt/",
+    "Volunteers erected a temporary shelter within hours.",
+    "ボランティアが数時間で仮設の避難所を建てた。",
+    [
+      "erect a building",
+      "erect a statue"
+    ],
+    "e-(外へ)+ rect(まっすぐ。direct, correct)。まっすぐ立てること。build より硬く、記念碑や仮設物に使う。"
+  ],
+  [
+    "escalate",
+    "B2",
+    "動詞",
+    [
+      "拡大する",
+      "悪化する"
+    ],
+    "/ˈɛskəleɪt/",
+    "A minor disagreement quickly escalated into a public row.",
+    "小さな意見の相違が急速に公然の口論に拡大した。",
+    [
+      "escalate into",
+      "escalate rapidly"
+    ],
+    "escalator(自動階段)からの逆成語。段を上るように段階的に激しくなること。"
+  ],
+  [
+    "essence",
+    "B2",
+    "名詞",
+    [
+      "本質",
+      "精髄"
+    ],
+    "/ˈɛsəns/",
+    "The essence of the argument is that costs outweigh benefits.",
+    "その議論の本質は、費用が利益を上回るということだ。",
+    [
+      "in essence",
+      "the essence of"
+    ],
+    "ラテン語 esse(ある)。そのものを「そのもの」たらしめている芯。in essence は「要するに」。"
+  ],
+  [
+    "establishment",
+    "B2",
+    "名詞",
+    [
+      "設立",
+      "施設",
+      "体制"
+    ],
+    "/ɪˈstæblɪʃmənt/",
+    "The establishment of the fund took nearly two years.",
+    "その基金の設立には2年近くかかった。",
+    [
+      "the establishment of",
+      "a small establishment"
+    ],
+    "establish の名詞。しっかり立てること、立てられた施設、そして既に立っている支配層のいずれも指す。"
+  ],
+  [
+    "eternal",
+    "B2",
+    "形容詞",
+    [
+      "永遠の",
+      "不変の"
+    ],
+    "/ɪˈtɝnəl/",
+    "The monument bears an inscription about eternal peace.",
+    "その記念碑には永遠の平和についての碑文が刻まれている。",
+    [
+      "eternal life",
+      "eternal truth"
+    ],
+    "ラテン語 aeternus(いつまでも)。時間の外にあることが核。誇張して「果てしない」の意味にも使う。"
+  ],
+  [
+    "evacuate",
+    "B2",
+    "動詞",
+    [
+      "避難させる",
+      "退避する"
+    ],
+    "/ɪˈvækjəeɪt/",
+    "Residents were evacuated before the river burst its banks.",
+    "川が堤防を越える前に住民は避難させられた。",
+    [
+      "evacuate a building",
+      "be evacuated from"
+    ],
+    "e-(外へ)+ vacu(空。vacant, vacuum)。中を空にすること。人を外へ出して空にする、が核。"
+  ],
+  [
+    "evoke",
+    "B2",
+    "動詞",
+    [
+      "呼び起こす",
+      "想起させる"
+    ],
+    "/ɪˈvoʊk/",
+    "The smell of the sea evoked memories of childhood summers.",
+    "海の匂いが子ども時代の夏の記憶を呼び起こした。",
+    [
+      "evoke memories",
+      "evoke a response"
+    ],
+    "e-(外へ)+ voc(呼ぶ。voice, invoke)。眠っていた感情や記憶を外へ呼び出すこと。"
+  ],
+  [
+    "evolutionary",
+    "B2",
+    "形容詞",
+    [
+      "進化の",
+      "漸進的な"
+    ],
+    "/ɛvəˈluʃənɛri/",
+    "The change was evolutionary rather than sudden.",
+    "その変化は突然というより漸進的だった。",
+    [
+      "evolutionary biology",
+      "an evolutionary process"
+    ],
+    "evolve(展開する)の形容詞。e-(外へ)+ volv(巻く。revolve)。巻物を少しずつ開くような、段階的な変化。"
+  ],
+  [
+    "exaggerate",
+    "B2",
+    "動詞",
+    [
+      "誇張する",
+      "大げさに言う"
+    ],
+    "/ɪgˈzædʒɚeɪt/",
+    "He tends to exaggerate the size of the problem.",
+    "彼は問題の大きさを誇張しがちだ。",
+    [
+      "exaggerate the risk",
+      "grossly exaggerated"
+    ],
+    "ex-(すっかり)+ agger(積み上げる)。実際より高く積み上げて見せること。"
+  ],
+  [
+    "excellence",
+    "B2",
+    "名詞",
+    [
+      "卓越",
+      "優秀さ"
+    ],
+    "/ˈɛksələns/",
+    "The prize recognizes excellence in science teaching.",
+    "その賞は理科教育における卓越を表彰するものだ。",
+    [
+      "academic excellence",
+      "a centre of excellence"
+    ],
+    "ex-(外へ)+ cel(高くそびえる。excel)。周りより頭一つ抜けていること。"
+  ],
+  [
+    "exceptional",
+    "B2",
+    "形容詞",
+    [
+      "例外的な",
+      "非常に優れた"
+    ],
+    "/ɪkˈsɛpʃənəl/",
+    "Her performance this season has been exceptional.",
+    "今季の彼女の成績は非常に優れている。",
+    [
+      "exceptional circumstances",
+      "an exceptional talent"
+    ],
+    "exception の形容詞。ex-(外へ)+ cept(取る)。並から取り出されるほど違う、が核。良い意味にも使う。"
+  ],
+  [
+    "excess",
+    "B2",
+    "形容詞・名詞",
+    [
+      "過剰",
+      "超過の"
+    ],
+    "/ˈɛksɛs/",
+    "Excess salt in the diet raises blood pressure.",
+    "食事中の過剰な塩分は血圧を上げる。",
+    [
+      "in excess of",
+      "excess baggage"
+    ],
+    "ex-(外へ)+ cess(行く。process)。決められた線を越えて出ていくこと。in excess of で「〜を超えて」。"
+  ],
+  [
+    "exclusion",
+    "B2",
+    "名詞",
+    [
+      "排除",
+      "除外"
+    ],
+    "/ɪkskˈluʒən/",
+    "The policy led to the exclusion of part-time staff.",
+    "その方針は非常勤職員の除外につながった。",
+    [
+      "social exclusion",
+      "the exclusion of"
+    ],
+    "ex-(外へ)+ clus(閉じる。close, include)。外に閉め出すこと。include の反対。"
+  ],
+  [
+    "exclusive",
+    "B2",
+    "形容詞",
+    [
+      "独占的な",
+      "高級な"
+    ],
+    "/ɪkskˈlusɪv/",
+    "The magazine ran an exclusive interview with the director.",
+    "その雑誌は監督への独占インタビューを掲載した。",
+    [
+      "an exclusive contract",
+      "mutually exclusive"
+    ],
+    "exclude の形容詞。ほかを閉め出しているのが核。独占取材にも、会員制の高級店にも使う。"
+  ],
+  [
+    "exclusively",
+    "B2",
+    "副詞",
+    [
+      "もっぱら",
+      "独占的に"
+    ],
+    "/ɪkskˈlusɪvli/",
+    "The shop sells exclusively organic produce.",
+    "その店はもっぱら有機農産物だけを売っている。",
+    [
+      "exclusively for",
+      "almost exclusively"
+    ],
+    "exclusive の副詞。ほかを締め出して「それだけ」であることを強調する。only の硬い言い換え。"
+  ],
+  [
+    "execute",
+    "B2",
+    "動詞",
+    [
+      "実行する",
+      "処刑する"
+    ],
+    "/ˈɛksəkjut/",
+    "The team executed the plan without a single error.",
+    "そのチームは計画を一つの誤りもなく実行した。",
+    [
+      "execute a plan",
+      "be executed"
+    ],
+    "ex-(すっかり)+ sequ(追う。sequence)。最後まで追い切ること。法の要求を最後まで追えば処刑の意味にもなる。"
+  ],
+  [
+    "execution",
+    "B2",
+    "名詞",
+    [
+      "実行",
+      "処刑"
+    ],
+    "/ɛksəkˈjuʃən/",
+    "The idea was good, but the execution was poor.",
+    "着想は良かったが、実行が不十分だった。",
+    [
+      "poor execution",
+      "the execution of"
+    ],
+    "execute の名詞。計画をどう形にしたか、という出来ばえを指すことが多い。"
+  ],
+  [
+    "exert",
+    "B2",
+    "動詞",
+    [
+      "行使する",
+      "及ぼす"
+    ],
+    "/ɪgˈzɝt/",
+    "The group exerts considerable influence on local policy.",
+    "その団体は地元の政策にかなりの影響力を行使している。",
+    [
+      "exert influence",
+      "exert pressure"
+    ],
+    "ex-(外へ)+ sert(つなぐ、押し出す。insert)。内にある力を外へ押し出すこと。exert oneself なら努力する。"
+  ],
+  [
+    "exile",
+    "B2",
+    "名詞",
+    [
+      "亡命",
+      "追放"
+    ],
+    "/ˈɛgzaɪl/",
+    "The poet spent the last decade of his life in exile.",
+    "その詩人は人生の最後の10年を亡命先で過ごした。",
+    [
+      "go into exile",
+      "live in exile"
+    ],
+    "ラテン語 exilium(国外へ出ること)。ex-(外へ)。強制的に故国の外に置かれる状態。"
+  ],
+  [
+    "expenditure",
+    "B2",
+    "名詞",
+    [
+      "支出",
+      "消費"
+    ],
+    "/ɪksˈpɛndətʃɚ/",
+    "Public expenditure on health has risen for five years.",
+    "医療への公的支出は5年連続で増加している。",
+    [
+      "public expenditure",
+      "capital expenditure"
+    ],
+    "expend(使い果たす)の名詞。ex-(外へ)+ pend(量る。pension)。外へ払い出した額。income の対。"
+  ],
+  [
+    "experimental",
+    "B2",
+    "形容詞",
+    [
+      "実験的な",
+      "試験段階の"
+    ],
+    "/ɪkspɛrɪˈmɛntəl/",
+    "The treatment is still experimental and not widely available.",
+    "その治療はまだ実験段階で、広くは受けられない。",
+    [
+      "an experimental study",
+      "experimental music"
+    ],
+    "experiment の形容詞。まだ確立していない、試している最中だ、という含みが常にある。"
+  ],
+  [
+    "expire",
+    "B2",
+    "動詞",
+    [
+      "期限が切れる",
+      "失効する"
+    ],
+    "/ɪksˈpaɪr/",
+    "Your membership expires at the end of March.",
+    "あなたの会員資格は3月末で期限が切れる。",
+    [
+      "expire soon",
+      "an expiry date"
+    ],
+    "ex-(外へ)+ spir(息。spirit, inspire)。息を吐き切ること。効力が尽きることにも、死ぬことにも使う。"
+  ],
+  [
+    "explicit",
+    "B2",
+    "形容詞",
+    [
+      "明確な",
+      "露骨な"
+    ],
+    "/ɪkspˈlɪsət/",
+    "The contract contains explicit rules about overtime.",
+    "その契約書には残業に関する明確な規定がある。",
+    [
+      "explicit instructions",
+      "make explicit"
+    ],
+    "ex-(外へ)+ plic(折る。complicated)。折りたたまれたものを開いて全部見せること。implicit の反対。"
+  ],
+  [
+    "explicitly",
+    "B2",
+    "副詞",
+    [
+      "明確に",
+      "はっきりと"
+    ],
+    "/ɪkspˈlɪsətli/",
+    "The guidelines explicitly forbid the use of personal devices.",
+    "その指針は私物端末の使用を明確に禁じている。",
+    [
+      "explicitly state",
+      "explicitly mention"
+    ],
+    "explicit の副詞。ほのめかしではなく言葉にして示す、という含み。implicitly と対で覚える。"
+  ],
+  [
+    "exploitation",
+    "B2",
+    "名詞",
+    [
+      "搾取",
+      "開発"
+    ],
+    "/ɛksplɔɪˈteɪʃən/",
+    "The report exposed the exploitation of migrant workers.",
+    "その報告書は移民労働者の搾取を明るみに出した。",
+    [
+      "labour exploitation",
+      "the exploitation of resources"
+    ],
+    "exploit の名詞。ex-(外へ)+ plic(折る)。開いて中身を取り出すこと。人に向けば搾取、資源なら開発。"
+  ],
+  [
+    "explosive",
+    "B2",
+    "形容詞・名詞",
+    [
+      "爆発的な",
+      "爆薬"
+    ],
+    "/ɪkspˈloʊsɪv/",
+    "The city has seen explosive growth over the last decade.",
+    "その都市はこの10年で爆発的な成長を遂げた。",
+    [
+      "explosive growth",
+      "a highly explosive"
+    ],
+    "explode の形容詞。ex-(外へ)+ plaud(たたく。applaud)。もとは舞台から拍手で追い出すこと。一気に外へ弾ける力。"
+  ],
+  [
+    "extremist",
+    "B2",
+    "名詞",
+    [
+      "過激派",
+      "過激主義者"
+    ],
+    "/ɛkstˈrimɪst/",
+    "A small group of extremists disrupted the peaceful march.",
+    "少数の過激派が平和な行進を妨害した。",
+    [
+      "a violent extremist",
+      "extremist groups"
+    ],
+    "extreme(端)+ -ist。中庸を捨てて端に立つ人。政治や宗教の文脈で批判的に使う。"
+  ],
+  [
+    "facilitate",
+    "B2",
+    "動詞",
+    [
+      "促進する",
+      "容易にする"
+    ],
+    "/fəˈsɪləteɪt/",
+    "A shared online space facilitates work between the two teams.",
+    "共有のオンライン空間が2つのチームの共同作業を容易にする。",
+    [
+      "facilitate communication",
+      "facilitate access"
+    ],
+    "ラテン語 facilis(たやすい。facility)。行く手の障害を減らして進みやすくすること。"
+  ],
+  [
+    "faction",
+    "B2",
+    "名詞",
+    [
+      "派閥"
+    ],
+    "/ˈfækʃən/",
+    "Two rival factions within the party blocked the reform.",
+    "党内の対立する2つの派閥がその改革を阻んだ。",
+    [
+      "a rival faction",
+      "factions within"
+    ],
+    "ラテン語 facere(なす)。fact と同語根で、共に事を行う一団が原義。今は内部対立の含みが強い。"
+  ],
+  [
+    "faculty",
+    "B2",
+    "名詞",
+    [
+      "学部",
+      "能力",
+      "教員"
+    ],
+    "/ˈfækəlti/",
+    "The faculty of medicine admits sixty students a year.",
+    "医学部は年に60人の学生を受け入れる。",
+    [
+      "a faculty member",
+      "the faculty of speech"
+    ],
+    "ラテン語 facultas(できる力)。facile と同語根。「できる力」が能力、その力を持つ人の集まりが学部・教員団。"
+  ],
+  [
+    "fade",
+    "B2",
+    "動詞",
+    [
+      "薄れる",
+      "色あせる"
+    ],
+    "/feɪd/",
+    "The curtains had faded after years in direct sunlight.",
+    "そのカーテンは何年も直射日光に当たって色あせていた。",
+    [
+      "fade away",
+      "fade into"
+    ],
+    "古フランス語 fade(味気ない)。色や音や記憶が徐々に弱まって消えていくこと。"
+  ],
+  [
+    "fairness",
+    "B2",
+    "名詞",
+    [
+      "公正さ",
+      "公平"
+    ],
+    "/ˈfɛrnəs/",
+    "Everyone accepted the result because of the fairness of the process.",
+    "手続きが公正だったので誰もが結果を受け入れた。",
+    [
+      "a sense of fairness",
+      "in fairness to"
+    ],
+    "fair(公正な)の名詞。もとは「美しい」で、そこから「偏りがなく整っている」へ。in fairness to は「〜の名誉のために言えば」。"
+  ],
+  [
+    "fatal",
+    "B2",
+    "形容詞",
+    [
+      "致命的な",
+      "命取りの"
+    ],
+    "/ˈfeɪtəl/",
+    "A single mistake in the calculation proved fatal to the design.",
+    "計算上のたった一つの誤りが設計にとって致命的だと分かった。",
+    [
+      "a fatal accident",
+      "prove fatal"
+    ],
+    "ラテン語 fatum(運命。fate)。運命が定めた終わりをもたらすこと。死に至る場合にも、決定的な失敗にも使う。"
+  ],
+  [
+    "fate",
+    "B2",
+    "名詞",
+    [
+      "運命",
+      "行く末"
+    ],
+    "/feɪt/",
+    "The fate of the old cinema will be decided next month.",
+    "その古い映画館の行く末は来月決まる。",
+    [
+      "decide the fate",
+      "by a twist of fate"
+    ],
+    "ラテン語 fari(語る)。神が語った言葉、が原義。自分では動かせない定めという含みがある。"
+  ],
+  [
+    "favourable",
+    "B2",
+    "形容詞",
+    [
+      "好意的な",
+      "有利な"
+    ],
+    "/ˈfeɪvɚəbəl/",
+    "The book received favourable reviews in several newspapers.",
+    "その本はいくつかの新聞で好意的な書評を受けた。",
+    [
+      "a favourable response",
+      "favourable conditions"
+    ],
+    "favour(好意)+ -able。こちらに味方する向きにある、が核。米つづりは favorable。"
+  ],
+  [
+    "feat",
+    "B2",
+    "名詞",
+    [
+      "偉業",
+      "離れ業"
+    ],
+    "/fit/",
+    "Crossing the desert on foot was a remarkable feat.",
+    "砂漠を徒歩で横断したことは驚くべき偉業だった。",
+    [
+      "a remarkable feat",
+      "no mean feat"
+    ],
+    "ラテン語 factum(なされたこと)。fact と同語源だが、こちらは「並でないことをやってのけた」という評価が入る。"
+  ],
+  [
+    "feminist",
+    "B2",
+    "形容詞・名詞",
+    [
+      "フェミニストの",
+      "女性解放運動の"
+    ],
+    "/ˈfɛmənɪst/",
+    "She writes from a clearly feminist perspective.",
+    "彼女は明確にフェミニストの立場から書いている。",
+    [
+      "a feminist movement",
+      "feminist theory"
+    ],
+    "ラテン語 femina(女性)+ -ist。性別による不平等をなくそうとする立場を指す。"
+  ],
+  [
+    "fibre",
+    "B2",
+    "名詞",
+    [
+      "繊維",
+      "食物繊維"
+    ],
+    "/ˈfaɪbɚ/",
+    "Whole grains are a good source of fibre.",
+    "全粒穀物は食物繊維の良い供給源だ。",
+    [
+      "dietary fibre",
+      "natural fibre"
+    ],
+    "ラテン語 fibra(糸状のもの)。細長い一本の筋が核。布の繊維にも、消化されにくい食物成分にも使う。米つづりは fiber。"
+  ],
+  [
+    "fierce",
+    "B2",
+    "形容詞",
+    [
+      "激しい",
+      "猛烈な"
+    ],
+    "/fɪrs/",
+    "Competition for the few places was fierce.",
+    "わずかな枠をめぐる競争は激しかった。",
+    [
+      "fierce competition",
+      "a fierce storm"
+    ],
+    "ラテン語 ferus(野生の)。手加減のない荒々しさが核。動物にも競争にも風にも使う。"
+  ],
+  [
+    "film-maker",
+    "B2",
+    "名詞",
+    [
+      "映画製作者"
+    ],
+    "/ˈfɪlmeɪkɚ/",
+    "The festival supports young film-makers from the region.",
+    "その映画祭は地域出身の若い映画製作者を支援している。",
+    [
+      "an independent film-maker",
+      "a documentary film-maker"
+    ],
+    "film + maker。監督だけでなく、作品を作り上げる立場の人全般を指す。米つづりは filmmaker。"
+  ],
+  [
+    "filter",
+    "B2",
+    "名詞・動詞",
+    [
+      "フィルター",
+      "こし取る"
+    ],
+    "/ˈfɪltɚ/",
+    "The system filters out most of the dust in the air.",
+    "その装置は空気中のほこりの大半を取り除く。",
+    [
+      "filter out",
+      "a water filter"
+    ],
+    "ラテン語 filtrum(フェルト)。フェルトで液体をこしたことに由来する。通すものと通さないものを分ける仕組み。"
+  ],
+  [
+    "fine",
+    "B2",
+    "名詞・動詞",
+    [
+      "罰金",
+      "罰金を科す"
+    ],
+    "/faɪn/",
+    "Drivers who park here face a fifty-pound fine.",
+    "ここに駐車する運転者は50ポンドの罰金に直面する。",
+    [
+      "pay a fine",
+      "a heavy fine"
+    ],
+    "ラテン語 finis(終わり。finish)。もとは争いを終わらせるために払う金。形容詞の fine とは別の意味の系統。"
+  ],
+  [
+    "firearm",
+    "B2",
+    "名詞",
+    [
+      "銃器"
+    ],
+    "/ˈfaɪɚɑrm/",
+    "The country has strict rules on owning a firearm.",
+    "その国は銃器の所持に厳しい規則を設けている。",
+    [
+      "a licensed firearm",
+      "firearm laws"
+    ],
+    "fire(火)+ arm(武器)。火薬で弾を飛ばす武器、が文字どおりの成り立ち。"
+  ],
+  [
+    "fixture",
+    "B2",
+    "名詞",
+    [
+      "備え付け設備",
+      "定例試合"
+    ],
+    "/ˈfɪkstʃɚ/",
+    "The old lamp is a permanent fixture in the hallway.",
+    "その古いランプは廊下に据え付けられたままだ。",
+    [
+      "a light fixture",
+      "a home fixture"
+    ],
+    "fix(固定する)+ -ure。動かせないほど据え付けられたもの。英国ではスポーツの日程が決まった試合も指す。"
+  ],
+  [
+    "flaw",
+    "B2",
+    "名詞",
+    [
+      "欠点",
+      "傷"
+    ],
+    "/flɔ/",
+    "The argument has one serious flaw that no one noticed.",
+    "その議論には誰も気づかなかった重大な欠点が一つある。",
+    [
+      "a fatal flaw",
+      "a design flaw"
+    ],
+    "古ノルド語 flaga(薄片、割れ目)。表面に走った割れ目が核。全体を台無しにしかねない一点の不備。"
+  ],
+  [
+    "flawed",
+    "B2",
+    "形容詞",
+    [
+      "欠陥のある",
+      "不完全な"
+    ],
+    "/flɔd/",
+    "The study was based on flawed assumptions.",
+    "その研究は欠陥のある前提に基づいていた。",
+    [
+      "fundamentally flawed",
+      "a flawed argument"
+    ],
+    "flaw の形容詞。全体が使えないというより、決定的な傷が入っているという含み。"
+  ],
+  [
+    "flee",
+    "B2",
+    "動詞",
+    [
+      "逃げる",
+      "避難する"
+    ],
+    "/fli/",
+    "Thousands fled the city as the fire spread.",
+    "火災が広がるにつれて何千人もが街から逃げた。",
+    [
+      "flee the country",
+      "flee from"
+    ],
+    "古英語 fleon。fly と同語源で、危険から急いで離れること。過去形は fled と形が変わる。"
+  ],
+  [
+    "fleet",
+    "B2",
+    "名詞",
+    [
+      "艦隊",
+      "車両群"
+    ],
+    "/flit/",
+    "The company runs a fleet of nearly two hundred trucks.",
+    "その会社は200台近いトラックの車両群を運用している。",
+    [
+      "a fishing fleet",
+      "a fleet of cars"
+    ],
+    "古英語 fleotan(浮かぶ。float)。まとまって動く船の群れが原義で、今は社用車の一群にも使う。"
+  ],
+  [
+    "flesh",
+    "B2",
+    "名詞",
+    [
+      "肉",
+      "果肉"
+    ],
+    "/flɛʃ/",
+    "The fruit has soft orange flesh under a thick skin.",
+    "その果物は厚い皮の下に柔らかいオレンジ色の果肉がある。",
+    [
+      "flesh and blood",
+      "in the flesh"
+    ],
+    "古英語 flaesc。骨や皮に対する柔らかい部分。食用の meat とは別で、体そのものの肉を指す。"
+  ],
+  [
+    "flexibility",
+    "B2",
+    "名詞",
+    [
+      "柔軟性",
+      "融通"
+    ],
+    "/flɛksəˈbɪləti/",
+    "The job offers real flexibility in working hours.",
+    "その仕事は勤務時間に本当の融通が利く。",
+    [
+      "offer flexibility",
+      "greater flexibility"
+    ],
+    "flexible の名詞。ラテン語 flectere(曲げる。reflect)。折れずに曲がれること。"
+  ],
+  [
+    "flourish",
+    "B2",
+    "動詞",
+    [
+      "栄える",
+      "繁茂する"
+    ],
+    "/ˈflɝɪʃ/",
+    "Small bookshops have flourished in the old quarter.",
+    "旧市街では小さな書店が栄えている。",
+    [
+      "flourish in",
+      "business flourishes"
+    ],
+    "ラテン語 flos(花。flower, flora)。花を咲かせるように勢いよく育つこと。"
+  ],
+  [
+    "fluid",
+    "B2",
+    "名詞",
+    [
+      "液体",
+      "流動的な"
+    ],
+    "/ˈfluəd/",
+    "Patients are asked to drink plenty of fluid after surgery.",
+    "患者は手術後に十分な水分をとるよう求められる。",
+    [
+      "bodily fluid",
+      "a fluid situation"
+    ],
+    "ラテン語 fluere(流れる。flow, influence)。形が決まらず流れるもの。状況が「流動的だ」の意味にも使う。"
+  ],
+  [
+    "footage",
+    "B2",
+    "名詞",
+    [
+      "映像",
+      "フィルム"
+    ],
+    "/ˈfʊtɪdʒ/",
+    "Security footage showed the van leaving at midnight.",
+    "防犯映像はそのバンが深夜に出ていくところを映していた。",
+    [
+      "security footage",
+      "archive footage"
+    ],
+    "foot(フィート)+ -age。フィルムの長さをフィートで数えたことに由来する。撮影された映像そのもの。"
+  ],
+  [
+    "foreigner",
+    "B2",
+    "名詞",
+    [
+      "外国人"
+    ],
+    "/ˈfɔrənɚ/",
+    "Foreigners now make up a tenth of the city's population.",
+    "外国人は今やその市の人口の1割を占めている。",
+    [
+      "a foreigner in",
+      "treat foreigners"
+    ],
+    "foreign(外の)+ -er。ラテン語 foris(戸外)。文脈によっては失礼に響くため、公式には非居住者などの表現が好まれる。"
+  ],
+  [
+    "forge",
+    "B2",
+    "動詞",
+    [
+      "築く",
+      "鍛造する",
+      "偽造する"
+    ],
+    "/fɔrdʒ/",
+    "The two countries forged a lasting trade partnership.",
+    "両国は長続きする貿易上の協力関係を築いた。",
+    [
+      "forge a relationship",
+      "forge a signature"
+    ],
+    "ラテン語 fabrica(工房)。金属を打って形を作るのが原義。関係を鍛え上げる意味と、偽物を作る意味に分かれた。"
+  ],
+  [
+    "formula",
+    "B2",
+    "名詞",
+    [
+      "公式",
+      "製法"
+    ],
+    "/ˈfɔrmjələ/",
+    "There is no simple formula for a successful negotiation.",
+    "交渉を成功させる簡単な公式はない。",
+    [
+      "a secret formula",
+      "a peace formula"
+    ],
+    "ラテン語 forma(形)の縮小形。小さくきちんと定めた形、が核。数式にも調合の処方にも使う。"
+  ],
+  [
+    "formulate",
+    "B2",
+    "動詞",
+    [
+      "練り上げる",
+      "明確に述べる"
+    ],
+    "/ˈfɔrmjəleɪt/",
+    "It took months to formulate a policy everyone could accept.",
+    "全員が受け入れられる方針を練り上げるのに数か月かかった。",
+    [
+      "formulate a plan",
+      "formulate a theory"
+    ],
+    "formula の動詞。ばらばらの考えをきちんとした形に整えること。"
+  ],
+  [
+    "forth",
+    "B2",
+    "副詞",
+    [
+      "前へ",
+      "外へ"
+    ],
+    "/fɔrθ/",
+    "New ideas came forth once people felt safe to speak.",
+    "人々が安心して話せるようになると新しい考えが次々に出てきた。",
+    [
+      "back and forth",
+      "set forth"
+    ],
+    "古英語 forth(前へ)。forward と同語根。単独ではまれで、back and forth や so forth の形で残っている。"
+  ],
+  [
+    "forthcoming",
+    "B2",
+    "形容詞",
+    [
+      "来たるべき",
+      "近づいている"
+    ],
+    "/ˈfɔrθˈkʌmɪŋ/",
+    "Details of the forthcoming exhibition will be announced soon.",
+    "来たるべき展覧会の詳細はまもなく発表される。",
+    [
+      "the forthcoming election",
+      "a forthcoming book"
+    ],
+    "forth(前へ)+ coming(来る)。こちらへ出てこようとしているもの。人について使えば「進んで話してくれる」。"
+  ],
+  [
+    "foster",
+    "B2",
+    "動詞",
+    [
+      "育てる",
+      "促進する"
+    ],
+    "/ˈfɑstɚ/",
+    "The programme fosters cooperation between schools and businesses.",
+    "その計画は学校と企業の協力を促進する。",
+    [
+      "foster growth",
+      "a foster child"
+    ],
+    "古英語 fostrian(食べさせて育てる)。food と同語根。自分の子でなくても育てること、また育つのを助けること。"
+  ],
+  [
+    "fragile",
+    "B2",
+    "形容詞",
+    [
+      "壊れやすい",
+      "もろい"
+    ],
+    "/ˈfrædʒəl/",
+    "The ceasefire remains fragile after months of fighting.",
+    "数か月の戦闘の後、停戦は依然としてもろいままだ。",
+    [
+      "a fragile peace",
+      "extremely fragile"
+    ],
+    "ラテン語 frangere(壊す。fracture, fragment)。少しの力で割れてしまう状態。平和や健康にも使う。"
+  ],
+  [
+    "franchise",
+    "B2",
+    "名詞",
+    [
+      "販売権",
+      "フランチャイズ",
+      "選挙権"
+    ],
+    "/ˈfræntʃaɪz/",
+    "The chain sells franchises to local business owners.",
+    "そのチェーンは地元の経営者に販売権を売っている。",
+    [
+      "a fast-food franchise",
+      "the right to franchise"
+    ],
+    "フランス語 franc(自由な)。free と同語根で、もとは特権を与えること。営業の特権と、投票の権利の両方を指す。"
+  ],
+  [
+    "frankly",
+    "B2",
+    "副詞",
+    [
+      "率直に言って"
+    ],
+    "/ˈfræŋkli/",
+    "Frankly, the current plan will never pay for itself.",
+    "率直に言って、現在の計画では決して採算が取れない。",
+    [
+      "frankly speaking",
+      "quite frankly"
+    ],
+    "frank(率直な)の副詞。もとはフランク族が自由民だったことから「遠慮のいらない」。文頭で断りを入れる形が定番。"
+  ],
+  [
+    "frustrated",
+    "B2",
+    "形容詞",
+    [
+      "いら立った",
+      "挫折した"
+    ],
+    "/ˈfrʌstreɪtəd/",
+    "Passengers grew frustrated as the delay stretched on.",
+    "遅延が長引くにつれて乗客はいら立ちを募らせた。",
+    [
+      "get frustrated",
+      "frustrated with"
+    ],
+    "ラテン語 frustra(むだに)。やろうとしたことが空回りする状態。怒りより「思い通りにならない」感じ。"
+  ],
+  [
+    "frustrating",
+    "B2",
+    "形容詞",
+    [
+      "もどかしい",
+      "いら立たせる"
+    ],
+    "/ˈfrʌstreɪtɪŋ/",
+    "It is frustrating to wait months for a simple answer.",
+    "簡単な回答を何か月も待つのはもどかしい。",
+    [
+      "a frustrating experience",
+      "deeply frustrating"
+    ],
+    "frustrate の形容詞。人を空回りさせる側にあるもの。frustrated が人、frustrating が原因、と対で覚える。"
+  ],
+  [
+    "frustration",
+    "B2",
+    "名詞",
+    [
+      "いら立ち",
+      "挫折感"
+    ],
+    "/frəˈstreɪʃən/",
+    "She could not hide her frustration at the slow progress.",
+    "彼女は進み方の遅さへのいら立ちを隠せなかった。",
+    [
+      "out of frustration",
+      "frustration with"
+    ],
+    "frustrate の名詞。努力が届かないときに生じる感情。in frustration で「もどかしさから」。"
+  ],
+  [
+    "functional",
+    "B2",
+    "形容詞",
+    [
+      "機能する",
+      "実用的な"
+    ],
+    "/ˈfʌŋkʃənəl/",
+    "The kitchen is small but perfectly functional.",
+    "その台所は小さいが十分に実用的だ。",
+    [
+      "fully functional",
+      "a functional design"
+    ],
+    "function(働き)の形容詞。飾りではなく、実際に役目を果たすこと。故障していない、の意味にもなる。"
+  ],
+  [
+    "fundraising",
+    "B2",
+    "名詞",
+    [
+      "資金集め"
+    ],
+    "/ˈfʌndreɪsɪŋ/",
+    "The school held a fundraising concert for new instruments.",
+    "その学校は新しい楽器のための資金集めの演奏会を開いた。",
+    [
+      "a fundraising event",
+      "fundraising efforts"
+    ],
+    "fund(資金)+ raise(集める)。寄付を募って活動資金を作ること。"
+  ],
+  [
+    "gallon",
+    "B2",
+    "名詞",
+    [
+      "ガロン"
+    ],
+    "/ˈgælən/",
+    "The tank holds about forty gallons of water.",
+    "そのタンクは約40ガロンの水を蓄える。",
+    [
+      "gallons of",
+      "miles per gallon"
+    ],
+    "古北フランス語 galon(容器)。米国では約3.8リットル、英国では約4.5リットルと量が違う点に注意。"
+  ],
+  [
+    "gambling",
+    "B2",
+    "名詞",
+    [
+      "賭博",
+      "ギャンブル"
+    ],
+    "/ˈgæmbəlɪŋ/",
+    "The city bans gambling within a mile of any school.",
+    "その市は学校から1マイル以内での賭博を禁じている。",
+    [
+      "gambling addiction",
+      "online gambling"
+    ],
+    "gamble(賭ける)の名詞。game と同語根。結果が分からないものに金を賭ける行為。"
+  ],
+  [
+    "gathering",
+    "B2",
+    "名詞",
+    [
+      "集まり",
+      "集会"
+    ],
+    "/ˈgæðɚɪŋ/",
+    "A small gathering of neighbours met to discuss the plan.",
+    "近隣住民の小さな集まりがその計画を話し合うために開かれた。",
+    [
+      "a family gathering",
+      "a social gathering"
+    ],
+    "gather(集める)の名詞。会議ほど堅くない、人が寄り合う場を指す。"
+  ],
+  [
+    "gaze",
+    "B2",
+    "名詞・動詞",
+    [
+      "じっと見る",
+      "視線"
+    ],
+    "/geɪz/",
+    "She gazed at the painting for several minutes without speaking.",
+    "彼女は何も言わずに数分間その絵をじっと見つめた。",
+    [
+      "gaze at",
+      "a steady gaze"
+    ],
+    "中英語 gasen。目を離さずに見続けること。一瞬見る glance と対にすると違いがはっきりする。"
+  ],
+  [
+    "gear",
+    "B2",
+    "名詞",
+    [
+      "装備",
+      "道具",
+      "ギア"
+    ],
+    "/gɪr/",
+    "Climbers checked their gear before setting out at dawn.",
+    "登山者は夜明けに出発する前に装備を確認した。",
+    [
+      "camping gear",
+      "change gear"
+    ],
+    "古ノルド語 gervi(支度)。目的のために整えた一式が核。機械の歯車もこの「かみ合う仕掛け」から。"
+  ],
+  [
+    "generic",
+    "B2",
+    "形容詞",
+    [
+      "一般的な",
+      "ノーブランドの"
+    ],
+    "/dʒəˈnɛrɪk/",
+    "Generic drugs cost far less than branded versions.",
+    "ジェネリック医薬品は先発品よりはるかに安い。",
+    [
+      "a generic term",
+      "a generic brand"
+    ],
+    "ラテン語 genus(種類)。特定の名ではなく種類全体を指すこと。商標の付かない同等品にも使う。"
+  ],
+  [
+    "genocide",
+    "B2",
+    "名詞",
+    [
+      "大量虐殺"
+    ],
+    "/ˈdʒɛnəsaɪd/",
+    "The court was set up to try crimes of genocide.",
+    "その法廷は大量虐殺の罪を裁くために設置された。",
+    [
+      "commit genocide",
+      "an act of genocide"
+    ],
+    "geno(人種。gene)+ cide(殺す。suicide)。民族そのものを消し去ろうとする行為を指す重い語。"
+  ],
+  [
+    "glance",
+    "B2",
+    "名詞・動詞",
+    [
+      "ちらりと見る",
+      "一瞥"
+    ],
+    "/glæns/",
+    "He glanced at his watch and hurried toward the exit.",
+    "彼は腕時計をちらりと見て出口へ急いだ。",
+    [
+      "glance at",
+      "at a glance"
+    ],
+    "古フランス語 glacier(滑る)。視線が表面を滑るように一瞬当たること。at a glance は「ひと目で」。"
+  ],
+  [
+    "glimpse",
+    "B2",
+    "名詞",
+    [
+      "ちらっと見えること"
+    ],
+    "/glɪmps/",
+    "We caught a glimpse of the castle through the trees.",
+    "木々の間から城がちらりと見えた。",
+    [
+      "catch a glimpse of",
+      "a brief glimpse"
+    ],
+    "中英語 glimsen(かすかに光る)。gleam と同語根。意図せず一瞬だけ目に入ること。"
+  ],
+  [
+    "glorious",
+    "B2",
+    "形容詞",
+    [
+      "輝かしい",
+      "見事な"
+    ],
+    "/ˈglɔriəs/",
+    "The team ended the season with a glorious victory.",
+    "そのチームは輝かしい勝利で今季を終えた。",
+    [
+      "a glorious day",
+      "a glorious victory"
+    ],
+    "glory の形容詞。光り輝いて称賛される様子。天気に使えば「見事に晴れた」。"
+  ],
+  [
+    "glory",
+    "B2",
+    "名詞",
+    [
+      "栄光",
+      "名誉"
+    ],
+    "/ˈglɔri/",
+    "He achieved lasting glory with a single record-breaking run.",
+    "彼は記録破りの一走で永続する栄光を手にした。",
+    [
+      "in all its glory",
+      "days of glory"
+    ],
+    "ラテン語 gloria(名声)。周囲が認めて輝かせる名誉が核。宗教的な栄光にも使う。"
+  ],
+  [
+    "governance",
+    "B2",
+    "名詞",
+    [
+      "統治",
+      "運営"
+    ],
+    "/ˈgʌvɚnəns/",
+    "Better governance would reduce waste in public spending.",
+    "より良い統治は公的支出の無駄を減らすだろう。",
+    [
+      "corporate governance",
+      "good governance"
+    ],
+    "govern の名詞。ギリシャ語 kybernan(舵を取る)。組織の舵取りの仕組みそのものを指す。"
+  ],
+  [
+    "grace",
+    "B2",
+    "名詞",
+    [
+      "優雅さ",
+      "恵み",
+      "猶予"
+    ],
+    "/greɪs/",
+    "She accepted the criticism with surprising grace.",
+    "彼女は驚くほど落ち着いてその批判を受け入れた。",
+    [
+      "with good grace",
+      "a grace period"
+    ],
+    "ラテン語 gratia(好意。grateful, congratulate)。ありがたいものが核。動きの優雅さにも、支払いの猶予にも使う。"
+  ],
+  [
+    "grasp",
+    "B2",
+    "名詞・動詞",
+    [
+      "つかむ",
+      "理解する"
+    ],
+    "/græsp/",
+    "It took me a while to grasp what he was proposing.",
+    "彼が何を提案しているのか理解するのに少し時間がかかった。",
+    [
+      "grasp an idea",
+      "within one's grasp"
+    ],
+    "中英語 graspen(つかむ)。手でしっかり握ることから、頭で内容を握る「理解する」へ広がった。"
+  ],
+  [
+    "grave",
+    "B2",
+    "形容詞・名詞",
+    [
+      "重大な",
+      "墓"
+    ],
+    "/greɪv/",
+    "The report raises grave concerns about water safety.",
+    "その報告書は水の安全性について重大な懸念を提起している。",
+    [
+      "a grave mistake",
+      "a grave concern"
+    ],
+    "形容詞はラテン語 gravis(重い。gravity)。名詞の「墓」は古英語 graf(掘る)で別系統。綴りが同じだけの他人同士。"
+  ],
+  [
+    "gravity",
+    "B2",
+    "名詞",
+    [
+      "重力",
+      "重大さ"
+    ],
+    "/ˈgrævəti/",
+    "Few people understood the gravity of the situation at first.",
+    "当初、その状況の重大さを理解していた人はほとんどいなかった。",
+    [
+      "the gravity of",
+      "the force of gravity"
+    ],
+    "ラテン語 gravis(重い)。物理の重力も、事態の重さも同じ「重い」から来ている。"
+  ],
+  [
+    "grid",
+    "B2",
+    "名詞",
+    [
+      "格子",
+      "送電網"
+    ],
+    "/grɪd/",
+    "The whole city was cut off from the electricity grid.",
+    "市全体が電力網から切り離された。",
+    [
+      "the national grid",
+      "a grid pattern"
+    ],
+    "gridiron(焼き網)の短縮形。縦横に走る線の網目が核で、送電網や地図の区画にも使う。"
+  ],
+  [
+    "grief",
+    "B2",
+    "名詞",
+    [
+      "深い悲しみ",
+      "悲嘆"
+    ],
+    "/grif/",
+    "She spoke openly about her grief after the loss.",
+    "彼女は喪失後の深い悲しみについて率直に語った。",
+    [
+      "overcome with grief",
+      "come to grief"
+    ],
+    "ラテン語 gravis(重い。grave, gravity)。心に重くのしかかる悲しみ。特に死別の悲しみに使う。"
+  ],
+  [
+    "grin",
+    "B2",
+    "名詞・動詞",
+    [
+      "にっと笑う",
+      "笑顔"
+    ],
+    "/grɪn/",
+    "He grinned when he saw the surprise on our faces.",
+    "私たちの驚いた顔を見て彼はにっと笑った。",
+    [
+      "grin broadly",
+      "a wide grin"
+    ],
+    "古英語 grennian(歯をむく)。歯を見せる大きな笑い。smile より子どもっぽく、いたずらっぽい響きがある。"
+  ],
+  [
+    "grind",
+    "B2",
+    "動詞",
+    [
+      "すりつぶす",
+      "削る"
+    ],
+    "/graɪnd/",
+    "The mill grinds local wheat into flour every morning.",
+    "その水車小屋は毎朝、地元の小麦を粉にひいている。",
+    [
+      "grind coffee",
+      "grind to a halt"
+    ],
+    "古英語 grindan。硬いものを押しつけて細かくすること。grind to a halt なら軋みながら止まること。"
+  ],
+  [
+    "grip",
+    "B2",
+    "名詞・動詞",
+    [
+      "握る",
+      "支配力"
+    ],
+    "/grɪp/",
+    "The climber lost her grip on the wet rock.",
+    "その登山者は濡れた岩をつかむ手を滑らせた。",
+    [
+      "lose one's grip",
+      "a firm grip"
+    ],
+    "古英語 gripan(つかむ)。しっかり握って離さない力。組織や感情が人を「つかんでいる」比喩にも使う。"
+  ],
+  [
+    "gross",
+    "B2",
+    "形容詞",
+    [
+      "総計の",
+      "ひどい"
+    ],
+    "/groʊs/",
+    "Gross income is calculated before tax and other deductions.",
+    "総所得は税やその他の控除の前に計算される。",
+    [
+      "gross income",
+      "gross negligence"
+    ],
+    "ラテン語 grossus(太い)。差し引き前の丸ごとの量が核。粗さから「ひどい、下品な」の意味も生じた。"
+  ],
+  [
+    "guerrilla",
+    "B2",
+    "名詞",
+    [
+      "ゲリラ",
+      "遊撃兵"
+    ],
+    "/gɚˈɪlə/",
+    "Guerrilla fighters controlled the mountain roads for years.",
+    "ゲリラ戦闘員が何年も山道を支配していた。",
+    [
+      "guerrilla warfare",
+      "a guerrilla group"
+    ],
+    "スペイン語 guerra(戦争)の縮小形で「小さな戦争」。正規軍でない少人数の戦い方を指す。"
+  ],
+  [
+    "guidance",
+    "B2",
+    "名詞",
+    [
+      "指導",
+      "助言"
+    ],
+    "/ˈgaɪdəns/",
+    "Students receive careful guidance when choosing their subjects.",
+    "学生は科目を選ぶ際に丁寧な指導を受ける。",
+    [
+      "under the guidance of",
+      "seek guidance"
+    ],
+    "guide の名詞。導いて方向を示すこと。命令ではなく、判断を助ける助言という含み。"
+  ],
+  [
+    "guilt",
+    "B2",
+    "名詞",
+    [
+      "罪悪感",
+      "有罪"
+    ],
+    "/gɪlt/",
+    "He was troubled by guilt long after the apology.",
+    "謝罪の後も長い間、彼は罪悪感に苦しんだ。",
+    [
+      "a sense of guilt",
+      "admit guilt"
+    ],
+    "古英語 gylt(罪)。法廷で認められる有罪と、心の中の後ろめたさの両方を指す。"
+  ],
+  [
+    "gut",
+    "B2",
+    "名詞",
+    [
+      "腸",
+      "直感"
+    ],
+    "/gʌt/",
+    "Trust your gut when the data is unclear.",
+    "データがはっきりしないときは直感を信じなさい。",
+    [
+      "gut feeling",
+      "gut instinct"
+    ],
+    "古英語 guttas(内臓)。体の奥という位置から、理屈以前の「腹で感じる」判断の比喩へ。"
+  ],
+  [
+    "hail",
+    "B2",
+    "動詞",
+    [
+      "たたえる",
+      "あられ"
+    ],
+    "/heɪl/",
+    "Critics hailed the novel as the best of the year.",
+    "批評家はその小説を年間最高作としてたたえた。",
+    [
+      "hail as",
+      "be hailed for"
+    ],
+    "古ノルド語 heill(健康であれ)。呼びかけの挨拶が原義で、そこから公に称賛する意味へ。氷の「あられ」は別系統の同綴語。"
+  ],
+  [
+    "halfway",
+    "B2",
+    "副詞",
+    [
+      "中間で",
+      "途中で"
+    ],
+    "/ˈhæfˈweɪ/",
+    "We stopped halfway up the hill to catch our breath.",
+    "私たちは息をつくために丘の中腹で立ち止まった。",
+    [
+      "halfway through",
+      "meet halfway"
+    ],
+    "half + way。距離にも時間にも使う。meet someone halfway なら互いに歩み寄ること。"
+  ],
+  [
+    "halt",
+    "B2",
+    "名詞・動詞",
+    [
+      "停止",
+      "止める"
+    ],
+    "/hɔlt/",
+    "Production halted for two days after the power failure.",
+    "停電の後、生産は2日間停止した。",
+    [
+      "come to a halt",
+      "halt production"
+    ],
+    "古高ドイツ語 halten(保つ)。動きを止めてその場に保つこと。stop より急で公式な響き。"
+  ],
+  [
+    "handful",
+    "B2",
+    "名詞",
+    [
+      "ひと握り",
+      "少数"
+    ],
+    "/ˈhændfʊl/",
+    "Only a handful of people attended the early session.",
+    "早朝の回にはほんの数人しか出席しなかった。",
+    [
+      "a handful of",
+      "only a handful"
+    ],
+    "hand + -ful。手のひらに乗る量、が核。数える必要もないほど少ない、という含みで使う。"
+  ],
+  [
+    "handling",
+    "B2",
+    "名詞",
+    [
+      "取り扱い",
+      "対応"
+    ],
+    "/ˈhændlɪŋ/",
+    "The company was criticized for its handling of the complaint.",
+    "その会社は苦情への対応を批判された。",
+    [
+      "the handling of",
+      "careful handling"
+    ],
+    "handle の名詞。物を扱う技術にも、問題への対処の仕方にも使う。"
+  ],
+  [
+    "handy",
+    "B2",
+    "形容詞",
+    [
+      "便利な",
+      "手先が器用な"
+    ],
+    "/ˈhændi/",
+    "A small torch is handy when the power goes out.",
+    "停電のとき小さな懐中電灯は便利だ。",
+    [
+      "come in handy",
+      "handy with"
+    ],
+    "hand + -y。手元にあってすぐ使える、が核。人について使えば手先が器用なこと。"
+  ],
+  [
+    "harassment",
+    "B2",
+    "名詞",
+    [
+      "嫌がらせ",
+      "ハラスメント"
+    ],
+    "/hɚˈæsmənt/",
+    "The company introduced clear rules against workplace harassment.",
+    "その会社は職場での嫌がらせに対する明確な規則を導入した。",
+    [
+      "sexual harassment",
+      "workplace harassment"
+    ],
+    "フランス語 harasser(疲れさせる)。繰り返し攻めて相手を消耗させること。一度きりの行為とは区別される。"
+  ],
+  [
+    "hardware",
+    "B2",
+    "名詞",
+    [
+      "ハードウェア",
+      "金物"
+    ],
+    "/ˈhɑrdwɛr/",
+    "The problem turned out to be hardware rather than software.",
+    "その問題はソフトではなくハードウェアの問題だと判明した。",
+    [
+      "computer hardware",
+      "a hardware store"
+    ],
+    "hard(硬い)+ ware(品物)。手で触れる金物が原義。触れる機械が hardware、触れない命令が software。"
+  ],
+  [
+    "harmony",
+    "B2",
+    "名詞",
+    [
+      "調和",
+      "和音"
+    ],
+    "/ˈhɑrməni/",
+    "The new wing was designed in harmony with the old building.",
+    "新しい棟は古い建物と調和するよう設計された。",
+    [
+      "in harmony with",
+      "live in harmony"
+    ],
+    "ギリシャ語 harmos(つなぎ目)。ぴったり合わさっている状態。音にも人間関係にも景観にも使う。"
+  ],
+  [
+    "harsh",
+    "B2",
+    "形容詞",
+    [
+      "厳しい",
+      "耳障りな"
+    ],
+    "/hɑrʃ/",
+    "Critics called the punishment unusually harsh.",
+    "批評家はその処罰を異常に厳しいと評した。",
+    [
+      "harsh conditions",
+      "harsh criticism"
+    ],
+    "中低地ドイツ語 harsch(ざらざらした)。手触りの粗さが原義で、そこから容赦のなさへ。"
+  ],
+  [
+    "hatred",
+    "B2",
+    "名詞",
+    [
+      "憎しみ",
+      "憎悪"
+    ],
+    "/ˈheɪtrəd/",
+    "The campaign aims to reduce hatred between the two communities.",
+    "その運動は二つの共同体の間の憎しみを減らすことを目指す。",
+    [
+      "racial hatred",
+      "hatred of"
+    ],
+    "hate + -red(状態を表す古い接尾辞)。一時の怒りではなく、根を張った強い嫌悪を指す。"
+  ],
+  [
+    "haunt",
+    "B2",
+    "動詞",
+    [
+      "つきまとう",
+      "出没する"
+    ],
+    "/hɔnt/",
+    "The memory of that night still haunts him.",
+    "その夜の記憶は今も彼につきまとっている。",
+    [
+      "be haunted by",
+      "haunt a place"
+    ],
+    "古フランス語 hanter(通いつめる)。同じ場所に繰り返し現れることが核。幽霊にも、消えない記憶にも使う。"
+  ],
+  [
+    "hazard",
+    "B2",
+    "名詞",
+    [
+      "危険",
+      "危険要因"
+    ],
+    "/ˈhæzɚd/",
+    "Loose wires on the floor are a serious hazard.",
+    "床に垂れた配線は重大な危険要因だ。",
+    [
+      "a health hazard",
+      "a fire hazard"
+    ],
+    "アラビア語のさいころ遊びの名から。運任せの危うさが原義で、今は事故につながる要因を指す。"
+  ],
+  [
+    "heighten",
+    "B2",
+    "動詞",
+    [
+      "高める",
+      "強める"
+    ],
+    "/ˈhaɪtən/",
+    "The delay only heightened the sense of unease.",
+    "遅れは不安感を強めるばかりだった。",
+    [
+      "heighten awareness",
+      "heighten tension"
+    ],
+    "height(高さ)+ -en(〜にする)。程度を引き上げること。感情や緊張について使うことが多い。"
+  ],
+  [
+    "heritage",
+    "B2",
+    "名詞",
+    [
+      "遺産",
+      "伝統"
+    ],
+    "/ˈhɛrətədʒ/",
+    "The old town was listed as a world heritage site.",
+    "その旧市街は世界遺産に登録された。",
+    [
+      "cultural heritage",
+      "a heritage site"
+    ],
+    "ラテン語 heres(相続人。inherit)。受け継いできたもの、が核。財産よりも文化的な継承物を指す。"
+  ],
+  [
+    "hierarchy",
+    "B2",
+    "名詞",
+    [
+      "階層",
+      "序列"
+    ],
+    "/ˈhaɪɚɑrki/",
+    "The company has flattened its management hierarchy.",
+    "その会社は管理職の階層を減らして平らにした。",
+    [
+      "a strict hierarchy",
+      "social hierarchy"
+    ],
+    "ギリシャ語 hieros(聖なる)+ arkhia(支配)。もとは天使の位階。上下に並んだ段の構造を指す。"
+  ],
+  [
+    "high-profile",
+    "B2",
+    "形容詞",
+    [
+      "注目度の高い",
+      "目立つ"
+    ],
+    "/haɪˈproʊfaɪl/",
+    "She took on a high-profile role in the campaign.",
+    "彼女はその運動で注目度の高い役割を引き受けた。",
+    [
+      "a high-profile case",
+      "a high-profile figure"
+    ],
+    "high + profile(横顔、輪郭)。輪郭がくっきり見える位置にある、が核。low-profile はその逆。"
+  ],
+  [
+    "hint",
+    "B2",
+    "名詞・動詞",
+    [
+      "ほのめかす",
+      "ヒント"
+    ],
+    "/hɪnt/",
+    "He hinted that he might leave the company next year.",
+    "彼は来年会社を辞めるかもしれないとほのめかした。",
+    [
+      "a subtle hint",
+      "hint at"
+    ],
+    "古英語 hentan(つかむ)。相手につかませる小さな手がかり。動詞は hint at の形をとる。"
+  ],
+  [
+    "homeland",
+    "B2",
+    "名詞",
+    [
+      "故国",
+      "祖国"
+    ],
+    "/ˈhoʊmlænd/",
+    "Many refugees hope to return to their homeland one day.",
+    "多くの難民はいつか故国に帰ることを望んでいる。",
+    [
+      "return to one's homeland",
+      "homeland security"
+    ],
+    "home + land。生まれ育った土地、が核。離れている人が使うことが多い語。"
+  ],
+  [
+    "hopeful",
+    "B2",
+    "形容詞",
+    [
+      "希望を持った",
+      "有望な"
+    ],
+    "/ˈhoʊpfəl/",
+    "Doctors are hopeful that the treatment will work.",
+    "医師たちはその治療が効くことに希望を持っている。",
+    [
+      "hopeful about",
+      "remain hopeful"
+    ],
+    "hope + -ful。まだ結果は出ていないが良い方に傾いている状態。optimistic より控えめ。"
+  ],
+  [
+    "horizon",
+    "B2",
+    "名詞",
+    [
+      "地平線",
+      "視野"
+    ],
+    "/hɚˈaɪzən/",
+    "The sun dropped below the horizon just after seven.",
+    "太陽は7時過ぎに地平線の下に沈んだ。",
+    [
+      "on the horizon",
+      "broaden one's horizons"
+    ],
+    "ギリシャ語 horizein(境を定める)。見える範囲の境目が核。broaden your horizons なら見識を広げること。"
+  ],
+  [
+    "horn",
+    "B2",
+    "名詞",
+    [
+      "角",
+      "警笛"
+    ],
+    "/hɔrn/",
+    "The driver sounded the horn twice before turning.",
+    "運転者は曲がる前に2度警笛を鳴らした。",
+    [
+      "sound the horn",
+      "a pair of horns"
+    ],
+    "古英語 horn。動物の角が原義で、角笛から楽器や車の警笛へ広がった。"
+  ],
+  [
+    "hostage",
+    "B2",
+    "名詞",
+    [
+      "人質"
+    ],
+    "/ˈhɑstɪdʒ/",
+    "The crew were held hostage for eleven days.",
+    "乗組員は11日間人質にされていた。",
+    [
+      "take hostage",
+      "hold hostage"
+    ],
+    "ラテン語 hospes(客)から。もとは保証として預けられた客人。今は力ずくで押さえられた人を指す。"
+  ],
+  [
+    "hostile",
+    "B2",
+    "形容詞",
+    [
+      "敵意のある",
+      "非友好的な"
+    ],
+    "/ˈhɑstəl/",
+    "The proposal met a hostile reception from residents.",
+    "その提案は住民から敵意ある反応を受けた。",
+    [
+      "a hostile takeover",
+      "hostile to"
+    ],
+    "ラテン語 hostis(敵)。相手を敵と見る態度が核。買収の hostile takeover は相手の同意なしに行うもの。"
+  ],
+  [
+    "hostility",
+    "B2",
+    "名詞",
+    [
+      "敵意",
+      "敵対"
+    ],
+    "/hɑˈstɪləti/",
+    "Open hostility between the two groups delayed the talks.",
+    "両集団の公然たる敵対が協議を遅らせた。",
+    [
+      "open hostility",
+      "hostility toward"
+    ],
+    "hostile の名詞。複数形 hostilities は戦闘行為そのものを指す。"
+  ],
+  [
+    "humanitarian",
+    "B2",
+    "形容詞",
+    [
+      "人道的な",
+      "人道支援の"
+    ],
+    "/hjumænəˈtɛriən/",
+    "Aid agencies warned of a growing humanitarian crisis.",
+    "援助機関は深刻化する人道危機を警告した。",
+    [
+      "humanitarian aid",
+      "a humanitarian crisis"
+    ],
+    "human + -itarian。人としての立場から助けること。政治的な立場を離れた支援を指す。"
+  ],
+  [
+    "humanity",
+    "B2",
+    "名詞",
+    [
+      "人類",
+      "人間性"
+    ],
+    "/hjuˈmænɪti/",
+    "He showed great humanity toward the people he had defeated.",
+    "彼は打ち負かした人々に対して大きな人間味を示した。",
+    [
+      "crimes against humanity",
+      "show humanity"
+    ],
+    "human の名詞。人類全体という意味と、人としての情け深さという意味を併せ持つ。"
+  ],
+  [
+    "humble",
+    "B2",
+    "形容詞",
+    [
+      "謙虚な",
+      "質素な"
+    ],
+    "/ˈhʌmbəl/",
+    "Despite his success he remained humble about his work.",
+    "成功にもかかわらず、彼は自分の仕事について謙虚なままだった。",
+    [
+      "a humble background",
+      "humble origins"
+    ],
+    "ラテン語 humus(土。human と同語根)。地面に近い低さが核。身分の低さにも、態度の低さにも使う。"
+  ],
+  [
+    "hydrogen",
+    "B2",
+    "名詞",
+    [
+      "水素"
+    ],
+    "/ˈhaɪdrədʒən/",
+    "Hydrogen burns cleanly and produces only water.",
+    "水素はきれいに燃えて水だけを生じる。",
+    [
+      "hydrogen fuel",
+      "a hydrogen atom"
+    ],
+    "ギリシャ語 hydor(水)+ gen(生む)。燃やすと水を生む元素、という命名がそのまま名前になっている。"
+  ],
+  [
+    "identification",
+    "B2",
+    "名詞",
+    [
+      "身分証明",
+      "識別"
+    ],
+    "/aɪdɛntəfəˈkeɪʃən/",
+    "Please bring photo identification to the interview.",
+    "面接には写真付きの身分証明書を持参してください。",
+    [
+      "photo identification",
+      "the identification of"
+    ],
+    "identify の名詞。同じものだと見分けること、またそれを示す書類。会話では ID と略す。"
+  ],
+  [
+    "ideological",
+    "B2",
+    "形容詞",
+    [
+      "思想上の",
+      "イデオロギーの"
+    ],
+    "/aɪdiəˈlɑdʒɪkəl/",
+    "The split was ideological rather than personal.",
+    "その分裂は個人的というより思想上のものだった。",
+    [
+      "ideological differences",
+      "an ideological divide"
+    ],
+    "ideology の形容詞。個々の意見ではなく、体系としての考え方に関わること。"
+  ],
+  [
+    "ideology",
+    "B2",
+    "名詞",
+    [
+      "思想体系",
+      "イデオロギー"
+    ],
+    "/aɪdiˈɑlədʒi/",
+    "The party has moved away from its founding ideology.",
+    "その党は結党時の思想から離れてきた。",
+    [
+      "political ideology",
+      "a dominant ideology"
+    ],
+    "idea + logy(学)。世界をどう見るかをひとまとまりに組んだ考え方。"
+  ],
+  [
+    "idiot",
+    "B2",
+    "名詞",
+    [
+      "ばか者"
+    ],
+    "/ˈɪdiət/",
+    "Calling a colleague an idiot is never acceptable at work.",
+    "職場で同僚をばか者と呼ぶことは決して許されない。",
+    [
+      "a complete idiot",
+      "an idiot for"
+    ],
+    "ギリシャ語 idiotes(公の場に出ない私人)。公の務めを知らない人が原義で、後に強い侮辱語になった。"
+  ],
+  [
+    "ignorance",
+    "B2",
+    "名詞",
+    [
+      "無知",
+      "知らないこと"
+    ],
+    "/ˈɪgnɚəns/",
+    "Much of the fear came from simple ignorance of the facts.",
+    "その恐れの多くは事実を知らないことから来ていた。",
+    [
+      "out of ignorance",
+      "ignorance of"
+    ],
+    "ignore と同語根。in-(否定)+ gno(知る。know)。知識がない状態で、愚かさとは別物である点が要点。"
+  ],
+  [
+    "imagery",
+    "B2",
+    "名詞",
+    [
+      "イメージ",
+      "比喩表現"
+    ],
+    "/ˈɪmədʒri/",
+    "The poem is full of imagery drawn from the sea.",
+    "その詩は海から取られた比喩表現に満ちている。",
+    [
+      "vivid imagery",
+      "religious imagery"
+    ],
+    "image + -ry。心に像を結ばせる表現の集まり、が核。文学批評や広告の分析でよく使う。"
+  ],
+  [
+    "immense",
+    "B2",
+    "形容詞",
+    [
+      "巨大な",
+      "計り知れない"
+    ],
+    "/ɪˈmɛns/",
+    "The project required an immense amount of preparation.",
+    "その事業は計り知れない量の準備を必要とした。",
+    [
+      "immense pressure",
+      "an immense amount"
+    ],
+    "im-(否定)+ mens(測る。measure, dimension)。測れないほど大きい、が語源そのまま。"
+  ],
+  [
+    "imminent",
+    "B2",
+    "形容詞",
+    [
+      "差し迫った"
+    ],
+    "/ˈɪmənənt/",
+    "Forecasters warned that heavy flooding was imminent.",
+    "予報官は大規模な洪水が差し迫っていると警告した。",
+    [
+      "imminent danger",
+      "imminent collapse"
+    ],
+    "im-(上に)+ min(突き出る。prominent, eminent)。頭上に迫り出している感じ。良くないことに使う。"
+  ],
+  [
+    "implementation",
+    "B2",
+    "名詞",
+    [
+      "実施",
+      "導入"
+    ],
+    "/ɪmpləmɛnˈteɪʃən/",
+    "The implementation of the new rules begins in April.",
+    "新しい規則の実施は4月に始まる。",
+    [
+      "the implementation of",
+      "full implementation"
+    ],
+    "implement(道具、実行する)の名詞。ラテン語 implere(満たす)。決めたことを実際に満たして形にすること。"
+  ],
+  [
+    "imprison",
+    "B2",
+    "動詞",
+    [
+      "投獄する",
+      "閉じ込める"
+    ],
+    "/ɪmpˈrɪzən/",
+    "He was imprisoned for two years for the offence.",
+    "彼はその罪で2年間投獄された。",
+    [
+      "be imprisoned for",
+      "falsely imprison"
+    ],
+    "im-(中へ)+ prison(牢)。牢の中に入れること。比喩で状況に閉じ込められる意味にも使う。"
+  ],
+  [
+    "imprisonment",
+    "B2",
+    "名詞",
+    [
+      "投獄",
+      "禁錮"
+    ],
+    "/ɪmpˈrɪzənmənt/",
+    "The court imposed a sentence of five years' imprisonment.",
+    "裁判所は5年の禁錮刑を言い渡した。",
+    [
+      "life imprisonment",
+      "a term of imprisonment"
+    ],
+    "imprison の名詞。刑としての自由の剥奪を指し、判決文でよく使う。"
+  ],
+  [
+    "inability",
+    "B2",
+    "名詞",
+    [
+      "できないこと",
+      "無能力"
+    ],
+    "/ɪnəˈbɪlɪti/",
+    "His inability to delegate slowed the whole project.",
+    "人に任せられない彼の性質が計画全体を遅らせた。",
+    [
+      "inability to",
+      "an inability to cope"
+    ],
+    "in-(否定)+ ability。後ろは必ず to do の形をとる。能力の欠如というより「できずにいること」。"
+  ],
+  [
+    "inadequate",
+    "B2",
+    "形容詞",
+    [
+      "不十分な",
+      "不適切な"
+    ],
+    "/ɪˈnædəkwət/",
+    "The lighting in the stairwell is clearly inadequate.",
+    "その階段室の照明は明らかに不十分だ。",
+    [
+      "inadequate funding",
+      "prove inadequate"
+    ],
+    "in-(否定)+ adequate(足りている)。ad-(〜へ)+ equ(等しい)。求められる水準に届いていないこと。"
+  ],
+  [
+    "inappropriate",
+    "B2",
+    "形容詞",
+    [
+      "不適切な",
+      "ふさわしくない"
+    ],
+    "/ɪnəˈproʊpriɪt/",
+    "The remark was inappropriate for a formal meeting.",
+    "その発言は公式の会議にはふさわしくなかった。",
+    [
+      "inappropriate behaviour",
+      "inappropriate for"
+    ],
+    "in-(否定)+ appropriate(ふさわしい)。ad-(〜へ)+ propri(自分のもの)。その場に属さない、が核。"
+  ],
+  [
+    "incidence",
+    "B2",
+    "名詞",
+    [
+      "発生率",
+      "発生"
+    ],
+    "/ˈɪnsədəns/",
+    "The incidence of the disease fell after vaccination began.",
+    "接種が始まってからその病気の発生率は下がった。",
+    [
+      "a high incidence of",
+      "the incidence of"
+    ],
+    "incident と同語根。in-(上に)+ cid(落ちる)。どれくらいの割合でふりかかるか、を表す統計の語。"
+  ],
+  [
+    "inclined",
+    "B2",
+    "形容詞",
+    [
+      "〜する傾向がある",
+      "傾いた"
+    ],
+    "/ɪnkˈlaɪnd/",
+    "I am inclined to agree with her reading of the data.",
+    "私は彼女のデータの読み方に賛成したい気持ちだ。",
+    [
+      "be inclined to",
+      "feel inclined"
+    ],
+    "in-(〜へ)+ clin(傾く。decline, lean)。心が一方へ傾いている状態。断定を避ける丁寧な言い方にも使う。"
+  ],
+  [
+    "inclusion",
+    "B2",
+    "名詞",
+    [
+      "包含",
+      "参加"
+    ],
+    "/ɪnkˈluʒən/",
+    "The report calls for greater inclusion of disabled workers.",
+    "その報告書は障害のある労働者のより広い参加を求めている。",
+    [
+      "social inclusion",
+      "the inclusion of"
+    ],
+    "include の名詞。in-(中へ)+ clud(閉じる)。締め出さずに中に入れること。exclusion の反対。"
+  ],
+  [
+    "incur",
+    "B2",
+    "動詞",
+    [
+      "被る",
+      "招く"
+    ],
+    "/ɪnˈkɝ/",
+    "Late payment will incur an additional charge.",
+    "支払いの遅れは追加料金を招く。",
+    [
+      "incur costs",
+      "incur a penalty"
+    ],
+    "in-(〜へ)+ cur(走る。current, occur)。自分から走り込んで引き受けてしまうこと。損失や費用に使う。"
+  ],
+  [
+    "indicator",
+    "B2",
+    "名詞",
+    [
+      "指標",
+      "示すもの"
+    ],
+    "/ˈɪndəkeɪtɚ/",
+    "Unemployment is a useful indicator of economic health.",
+    "失業率は経済の健全さを示す有用な指標だ。",
+    [
+      "a key indicator",
+      "an economic indicator"
+    ],
+    "indicate + -or。in-(〜へ)+ dic(示す。dictate)。数値そのものではなく、状態を指し示すもの。"
+  ],
+  [
+    "indictment",
+    "B2",
+    "名詞",
+    [
+      "起訴",
+      "告発"
+    ],
+    "/ɪnˈdaɪtmənt/",
+    "The failure of the scheme is an indictment of poor planning.",
+    "その計画の失敗は、ずさんな立案を示す証拠だ。",
+    [
+      "a criminal indictment",
+      "an indictment of"
+    ],
+    "in-(〜へ)+ dict(言う)。正式に罪を言い立てること。cは発音しない。比喩で「〜の欠陥を示すもの」。"
+  ],
+  [
+    "indigenous",
+    "B2",
+    "形容詞",
+    [
+      "先住の",
+      "固有の"
+    ],
+    "/ɪnˈdɪdʒənəs/",
+    "The valley is home to several indigenous plant species.",
+    "その谷にはいくつかの固有植物が生息している。",
+    [
+      "indigenous people",
+      "indigenous species"
+    ],
+    "ラテン語 indi-(内に)+ gen(生まれる)。その土地で生まれた、が核。人にも動植物にも使う。"
+  ],
+  [
+    "induce",
+    "B2",
+    "動詞",
+    [
+      "引き起こす",
+      "誘導する"
+    ],
+    "/ɪnˈdus/",
+    "Certain drugs can induce drowsiness within minutes.",
+    "ある種の薬は数分で眠気を引き起こすことがある。",
+    [
+      "induce sleep",
+      "induce someone to"
+    ],
+    "in-(中へ)+ duc(導く。conduct, produce)。ある状態へ導き入れること。医療や実験でよく使う。"
+  ],
+  [
+    "indulge",
+    "B2",
+    "動詞",
+    [
+      "ふける",
+      "甘やかす"
+    ],
+    "/ɪnˈdʌldʒ/",
+    "He indulges in a long bath every Sunday evening.",
+    "彼は毎週日曜の夕方に長い風呂を楽しんでいる。",
+    [
+      "indulge in",
+      "indulge oneself"
+    ],
+    "ラテン語 indulgere(親切にする)。自分や相手に歯止めをかけないこと。indulge in の形が多い。"
+  ],
+  [
+    "inequality",
+    "B2",
+    "名詞",
+    [
+      "不平等",
+      "格差"
+    ],
+    "/ɪnɪkˈwɑləti/",
+    "Income inequality has widened over the past decade.",
+    "所得格差はこの10年で拡大した。",
+    [
+      "income inequality",
+      "reduce inequality"
+    ],
+    "in-(否定)+ equality。等しくない状態。特に富や機会の差について使う。"
+  ],
+  [
+    "infamous",
+    "B2",
+    "形容詞",
+    [
+      "悪名高い"
+    ],
+    "/ˈɪnfəməs/",
+    "The road is infamous for its sharp bends.",
+    "その道路は急カーブで悪名高い。",
+    [
+      "infamous for",
+      "an infamous case"
+    ],
+    "in-(否定)+ famous ではなく、ラテン語 infamis(評判が悪い)。有名なだけでなく、悪い理由で知られていること。"
+  ],
+  [
+    "infant",
+    "B2",
+    "名詞",
+    [
+      "乳児",
+      "幼児"
+    ],
+    "/ˈɪnfənt/",
+    "The vaccine is given to infants at three months.",
+    "そのワクチンは生後3か月の乳児に接種される。",
+    [
+      "infant mortality",
+      "a newborn infant"
+    ],
+    "ラテン語 in-(否定)+ fant(話す。fantasy とは別)。まだ話せない年齢の子、が語源そのまま。"
+  ],
+  [
+    "infect",
+    "B2",
+    "動詞",
+    [
+      "感染させる",
+      "伝染する"
+    ],
+    "/ɪnˈfɛkt/",
+    "The virus can infect both birds and pigs.",
+    "そのウイルスは鳥と豚の両方に感染しうる。",
+    [
+      "be infected with",
+      "infect others"
+    ],
+    "in-(中へ)+ fect(なす。affect, perfect)。中に入り込んで作用すること。気分が伝わる比喩にも使う。"
+  ],
+  [
+    "inflict",
+    "B2",
+    "動詞",
+    [
+      "負わせる",
+      "与える"
+    ],
+    "/ɪnfˈlɪkt/",
+    "The storm inflicted serious damage on coastal villages.",
+    "その嵐は沿岸の村々に深刻な被害を与えた。",
+    [
+      "inflict damage",
+      "inflict pain"
+    ],
+    "in-(〜へ)+ flict(打つ。conflict, afflict)。打ちつけて苦痛や損害を与えること。inflict A on B の形。"
+  ],
+  [
+    "influential",
+    "B2",
+    "形容詞",
+    [
+      "影響力のある"
+    ],
+    "/ɪnfluˈɛnʃəl/",
+    "She became one of the most influential editors of her time.",
+    "彼女は同時代で最も影響力のある編集者の一人になった。",
+    [
+      "highly influential",
+      "an influential figure"
+    ],
+    "influence の形容詞。in-(中へ)+ flu(流れる。fluid, flow)。相手の中へ流れ込んで動かす力を持つこと。"
+  ],
+  [
+    "inherent",
+    "B2",
+    "形容詞",
+    [
+      "本来備わっている",
+      "固有の"
+    ],
+    "/ɪnˈhɪrənt/",
+    "There are inherent risks in any surgical procedure.",
+    "どんな外科手術にも本来伴う危険がある。",
+    [
+      "inherent in",
+      "an inherent risk"
+    ],
+    "in-(中に)+ her(くっつく。adhere)。外から付いたのではなく、中にくっついて離れない性質。"
+  ],
+  [
+    "inhibit",
+    "B2",
+    "動詞",
+    [
+      "妨げる",
+      "抑制する"
+    ],
+    "/ɪnˈhɪbət/",
+    "Cold weather inhibits the growth of these plants.",
+    "寒い天候はこれらの植物の成長を妨げる。",
+    [
+      "inhibit growth",
+      "inhibit the spread"
+    ],
+    "in-(中へ)+ hib(持つ。habit, exhibit)。押さえ込んで動かさないこと。prevent より「抑えて弱める」感じ。"
+  ],
+  [
+    "initiate",
+    "B2",
+    "動詞",
+    [
+      "始める",
+      "開始する"
+    ],
+    "/ɪˈnɪʃieɪt/",
+    "The council initiated a review of all school buildings.",
+    "議会は全校舎の見直しを開始した。",
+    [
+      "initiate a process",
+      "initiate talks"
+    ],
+    "ラテン語 initium(始まり。initial)。in-(中へ)+ it(行く)。中へ踏み込んで口火を切ること。"
+  ],
+  [
+    "inject",
+    "B2",
+    "動詞",
+    [
+      "注射する",
+      "注入する"
+    ],
+    "/ɪnˈdʒɛkt/",
+    "The government injected new funds into the health service.",
+    "政府は医療制度に新たな資金を注入した。",
+    [
+      "inject a drug",
+      "inject cash"
+    ],
+    "in-(中へ)+ ject(投げる。project, reject)。中へ投げ入れること。資金や活力を注ぎ込む比喩にも使う。"
+  ],
+  [
+    "injection",
+    "B2",
+    "名詞",
+    [
+      "注射",
+      "注入"
+    ],
+    "/ɪnˈdʒɛkʃən/",
+    "A single injection provides protection for a whole year.",
+    "1回の注射で1年間の予防効果が得られる。",
+    [
+      "a cash injection",
+      "give an injection"
+    ],
+    "inject の名詞。医療の注射のほか、資金の注入という経済記事の定番表現でも使う。"
+  ],
+  [
+    "injustice",
+    "B2",
+    "名詞",
+    [
+      "不公正",
+      "不正"
+    ],
+    "/ɪnˈdʒʌstɪs/",
+    "The film tells the story of a long-running injustice.",
+    "その映画は長く続いた不正の物語を語る。",
+    [
+      "a grave injustice",
+      "do someone an injustice"
+    ],
+    "in-(否定)+ justice。正しさが欠けている状態。制度上の不公正について使うことが多い。"
+  ],
+  [
+    "inmate",
+    "B2",
+    "名詞",
+    [
+      "収容者",
+      "受刑者"
+    ],
+    "/ˈɪnmeɪt/",
+    "The prison holds over a thousand inmates.",
+    "その刑務所は1000人を超える受刑者を収容している。",
+    [
+      "a former inmate",
+      "prison inmates"
+    ],
+    "in(中)+ mate(仲間)。同じ建物の中で暮らす人が原義。今は刑務所や施設の収容者を指す。"
+  ],
+  [
+    "insertion",
+    "B2",
+    "名詞",
+    [
+      "挿入",
+      "差し込み"
+    ],
+    "/ɪnˈsɝʃən/",
+    "The insertion of a single clause changed the whole contract.",
+    "たった1つの条項の挿入が契約全体を変えた。",
+    [
+      "the insertion of",
+      "insertion point"
+    ],
+    "insert の名詞。in-(中へ)+ sert(つなぐ。series)。既にある並びの中へ差し込むこと。"
+  ],
+  [
+    "insider",
+    "B2",
+    "名詞",
+    [
+      "内部の人",
+      "事情通"
+    ],
+    "/ɪnˈsaɪdɚ/",
+    "An insider leaked the plans to a local newspaper.",
+    "内部の人間がその計画を地元紙に漏らした。",
+    [
+      "an industry insider",
+      "insider trading"
+    ],
+    "inside + -er。組織の中にいて外からは見えない情報を持つ人。insider trading は内部情報を使った取引。"
+  ],
+  [
+    "inspect",
+    "B2",
+    "動詞",
+    [
+      "検査する",
+      "点検する"
+    ],
+    "/ɪnsˈpɛkt/",
+    "Officials inspect the kitchens twice a year.",
+    "担当官は年に2回その厨房を検査する。",
+    [
+      "inspect a building",
+      "carefully inspect"
+    ],
+    "in-(中を)+ spect(見る。spectacle, respect)。中まで目を入れて調べること。"
+  ],
+  [
+    "inspection",
+    "B2",
+    "名詞",
+    [
+      "検査",
+      "点検"
+    ],
+    "/ɪnsˈpɛkʃən/",
+    "The bridge failed its annual safety inspection.",
+    "その橋は年次の安全検査に不合格となった。",
+    [
+      "a routine inspection",
+      "on closer inspection"
+    ],
+    "inspect の名詞。on closer inspection は「よく見てみると」という書き言葉の定番。"
+  ],
+  [
+    "inspiration",
+    "B2",
+    "名詞",
+    [
+      "着想",
+      "ひらめき",
+      "刺激"
+    ],
+    "/ɪnspɚˈeɪʃən/",
+    "The coastline was the inspiration for most of her paintings.",
+    "その海岸線が彼女の絵の大半の着想源だった。",
+    [
+      "a source of inspiration",
+      "draw inspiration from"
+    ],
+    "in-(中へ)+ spir(息。spirit)。息を吹き込まれること。外から来た力で心が動く、が核。"
+  ],
+  [
+    "instinct",
+    "B2",
+    "名詞",
+    [
+      "本能",
+      "直感"
+    ],
+    "/ˈɪnstɪŋkt/",
+    "Her first instinct was to check whether anyone was hurt.",
+    "彼女の最初の直感は、誰かがけがをしていないか確かめることだった。",
+    [
+      "a natural instinct",
+      "follow one's instinct"
+    ],
+    "in-(中へ)+ stinct(突く。distinct, stimulate)。内側から突き動かされる衝動。学ばずに備わっている点が要点。"
+  ],
+  [
+    "institutional",
+    "B2",
+    "形容詞",
+    [
+      "制度上の",
+      "施設の"
+    ],
+    "/ɪnstɪˈtuʃənəl/",
+    "The problem is institutional rather than individual.",
+    "その問題は個人的というより制度上のものだ。",
+    [
+      "institutional racism",
+      "institutional reform"
+    ],
+    "institution の形容詞。in-(中に)+ stitute(立てる)。個人ではなく、立てられた仕組みの側にあること。"
+  ],
+  [
+    "instruct",
+    "B2",
+    "動詞",
+    [
+      "指示する",
+      "教える"
+    ],
+    "/ɪnstˈrʌkt/",
+    "Staff were instructed to lock all doors at closing time.",
+    "職員は閉店時にすべての扉を施錠するよう指示された。",
+    [
+      "instruct someone to",
+      "clearly instruct"
+    ],
+    "in-(中へ)+ struct(組み立てる。structure)。相手の中に手順を組み立ててやること。teach より一方向的。"
+  ],
+  [
+    "instrumental",
+    "B2",
+    "形容詞",
+    [
+      "重要な役割を果たす",
+      "器楽の"
+    ],
+    "/ɪnstrəˈmɛntəl/",
+    "She was instrumental in setting up the new department.",
+    "彼女は新しい部署の設立に重要な役割を果たした。",
+    [
+      "instrumental in",
+      "instrumental music"
+    ],
+    "instrument(道具)の形容詞。目的達成の道具として働いた、が核。be instrumental in の形が多い。"
+  ],
+  [
+    "insufficient",
+    "B2",
+    "形容詞",
+    [
+      "不十分な"
+    ],
+    "/ɪnsəˈfɪʃənt/",
+    "There was insufficient evidence to bring charges.",
+    "起訴するには証拠が不十分だった。",
+    [
+      "insufficient funds",
+      "insufficient evidence"
+    ],
+    "in-(否定)+ sufficient(足りる)。sub-(下から)+ fic(なす)。必要量に届いていないこと。"
+  ],
+  [
+    "insult",
+    "B2",
+    "名詞・動詞",
+    [
+      "侮辱",
+      "侮辱する"
+    ],
+    "/ɪnˈsʌlt/",
+    "He apologized for the insult but the damage was done.",
+    "彼はその侮辱を謝ったが、傷は残った。",
+    [
+      "a personal insult",
+      "add insult to injury"
+    ],
+    "in-(〜へ)+ sult(跳ぶ。assault, result)。相手に飛びかかるように言葉を投げること。名詞と動詞で強勢が変わる。"
+  ],
+  [
+    "intact",
+    "B2",
+    "形容詞",
+    [
+      "無傷の",
+      "そのままの"
+    ],
+    "/ɪnˈtækt/",
+    "The manuscript survived the fire completely intact.",
+    "その原稿は火災を完全に無傷で切り抜けた。",
+    [
+      "remain intact",
+      "survive intact"
+    ],
+    "in-(否定)+ tact(触れる。contact, tangible)。手が触れられていない状態、が語源そのまま。"
+  ],
+  [
+    "intake",
+    "B2",
+    "名詞",
+    [
+      "摂取量",
+      "受け入れ数"
+    ],
+    "/ˈɪnteɪk/",
+    "Doctors advise cutting your salt intake by half.",
+    "医師は塩分摂取量を半分に減らすよう助言している。",
+    [
+      "daily intake",
+      "reduce intake"
+    ],
+    "take in(取り込む)の名詞形。体に取り込む量にも、学校や組織が受け入れる人数にも使う。"
+  ],
+  [
+    "integral",
+    "B2",
+    "形容詞",
+    [
+      "不可欠な",
+      "統合された"
+    ],
+    "/ˈɪntəgrəl/",
+    "Regular feedback is an integral part of the course.",
+    "定期的な講評はその講座に不可欠な要素だ。",
+    [
+      "an integral part",
+      "integral to"
+    ],
+    "ラテン語 integer(欠けのない、全体)。それがないと全体が成り立たない、が核。an integral part of の形が多い。"
+  ],
+  [
+    "integrated",
+    "B2",
+    "形容詞",
+    [
+      "統合された",
+      "一体化した"
+    ],
+    "/ˈɪntəgreɪtəd/",
+    "The city has an integrated transport system.",
+    "その都市は一体化した交通体系を持っている。",
+    [
+      "fully integrated",
+      "an integrated approach"
+    ],
+    "integrate の形容詞。ばらばらだったものが欠けなく一つに組み込まれた状態。"
+  ],
+  [
+    "integration",
+    "B2",
+    "名詞",
+    [
+      "統合",
+      "融合"
+    ],
+    "/ɪntəˈgreɪʃən/",
+    "The integration of the two systems took a full year.",
+    "2つの体系の統合には丸1年かかった。",
+    [
+      "economic integration",
+      "social integration"
+    ],
+    "integrate の名詞。単に並べるのではなく、欠けなく一体にすること。"
+  ],
+  [
+    "integrity",
+    "B2",
+    "名詞",
+    [
+      "誠実さ",
+      "完全性"
+    ],
+    "/ɪnˈtɛgrəti/",
+    "Her integrity was never questioned by anyone who knew her.",
+    "彼女を知る者は誰も彼女の誠実さを疑わなかった。",
+    [
+      "personal integrity",
+      "structural integrity"
+    ],
+    "integer(欠けのない)から。割れ目がなく一貫していること。人なら言行一致、物なら構造が壊れていないこと。"
+  ],
+  [
+    "intensify",
+    "B2",
+    "動詞",
+    [
+      "強める",
+      "激化する"
+    ],
+    "/ɪnˈtɛnsəfaɪ/",
+    "The search intensified after new evidence appeared.",
+    "新しい証拠が出た後、捜索は激化した。",
+    [
+      "intensify efforts",
+      "intensify pressure"
+    ],
+    "intense + -ify。in-(中へ)+ tens(張る。tension)。張りをさらに強めること。"
+  ],
+  [
+    "intensity",
+    "B2",
+    "名詞",
+    [
+      "強さ",
+      "激しさ"
+    ],
+    "/ɪnˈtɛnsəti/",
+    "The intensity of the storm surprised even the forecasters.",
+    "その嵐の激しさは予報官さえ驚かせた。",
+    [
+      "the intensity of",
+      "with great intensity"
+    ],
+    "intense の名詞。量ではなく、単位あたりの強さを指す。光にも感情にも運動にも使う。"
+  ],
+  [
+    "intensive",
+    "B2",
+    "形容詞",
+    [
+      "集中的な",
+      "徹底した"
+    ],
+    "/ɪnˈtɛnsɪv/",
+    "She took an intensive language course over the summer.",
+    "彼女は夏の間に集中語学講座を受けた。",
+    [
+      "intensive care",
+      "labour-intensive"
+    ],
+    "intense の形容詞。短い期間や狭い範囲に力を集める、が核。intensive care は集中治療。"
+  ],
+  [
+    "intent",
+    "B2",
+    "名詞",
+    [
+      "意図",
+      "目的"
+    ],
+    "/ɪnˈtɛnt/",
+    "The letter makes their intent perfectly clear.",
+    "その手紙は彼らの意図を完全に明らかにしている。",
+    [
+      "with intent",
+      "criminal intent"
+    ],
+    "ラテン語 intendere(心を向ける)。in-(〜へ)+ tend(伸ばす)。心を一方向へ張ったもの。法律用語で「故意」。"
+  ],
+  [
+    "interactive",
+    "B2",
+    "形容詞",
+    [
+      "双方向の",
+      "対話型の"
+    ],
+    "/ɪntɚˈæktɪv/",
+    "The museum has an interactive display for children.",
+    "その博物館には子ども向けの体験型展示がある。",
+    [
+      "an interactive map",
+      "interactive learning"
+    ],
+    "inter-(間で)+ act(働く)。一方通行ではなく、互いに働きかけ合うこと。"
+  ],
+  [
+    "interface",
+    "B2",
+    "名詞",
+    [
+      "接点",
+      "インターフェース"
+    ],
+    "/ˈɪntɚfeɪs/",
+    "The software has a simple interface that anyone can learn.",
+    "そのソフトは誰でも覚えられる簡単な操作画面を持つ。",
+    [
+      "a user interface",
+      "the interface between"
+    ],
+    "inter-(間)+ face(面)。二つのものが接する面が核。人と機械の接点である操作画面にも使う。"
+  ],
+  [
+    "interfere",
+    "B2",
+    "動詞",
+    [
+      "干渉する",
+      "妨げる"
+    ],
+    "/ɪntɚˈfɪr/",
+    "Loud noise from the street interferes with our meetings.",
+    "通りからの大きな騒音が私たちの会議を妨げている。",
+    [
+      "interfere with",
+      "interfere in"
+    ],
+    "inter-(間に)+ fere(打つ。ferire)。間に割って入って邪魔すること。with は妨害、in は口出し。"
+  ],
+  [
+    "interference",
+    "B2",
+    "名詞",
+    [
+      "干渉",
+      "妨害"
+    ],
+    "/ɪntɚˈfɪrəns/",
+    "The radio suffered interference from nearby power lines.",
+    "そのラジオは近くの送電線からの干渉を受けた。",
+    [
+      "political interference",
+      "radio interference"
+    ],
+    "interfere の名詞。電波の混信にも、他人の領分への口出しにも使う。"
+  ],
+  [
+    "interim",
+    "B2",
+    "形容詞",
+    [
+      "暫定の",
+      "当面の"
+    ],
+    "/ˈɪntɚəm/",
+    "An interim report will be published before the summer.",
+    "中間報告は夏より前に公表される。",
+    [
+      "an interim report",
+      "an interim government"
+    ],
+    "ラテン語 interim(その間に)。本決まりまでのつなぎ、が核。in the interim なら「その間に」。"
+  ],
+  [
+    "interior",
+    "B2",
+    "形容詞・名詞",
+    [
+      "内部の",
+      "室内"
+    ],
+    "/ɪnˈtɪriɚ/",
+    "The interior of the church is much plainer than the front.",
+    "その教会の内部は正面よりずっと簡素だ。",
+    [
+      "interior design",
+      "the interior of"
+    ],
+    "ラテン語 inter(内)の比較級。より内側にある部分。exterior と対で覚える。"
+  ],
+  [
+    "intermediate",
+    "B2",
+    "形容詞",
+    [
+      "中級の",
+      "中間の"
+    ],
+    "/ɪntɚˈmidiɪt/",
+    "The course is aimed at intermediate learners of Spanish.",
+    "その講座はスペイン語の中級学習者を対象にしている。",
+    [
+      "intermediate level",
+      "an intermediate stage"
+    ],
+    "inter-(間に)+ medi(中間。medium)。二つの段の間にある位置。語学のレベル表示でおなじみ。"
+  ],
+  [
+    "intervene",
+    "B2",
+    "動詞",
+    [
+      "介入する",
+      "間に入る"
+    ],
+    "/ɪntɚˈvin/",
+    "A neighbour intervened before the argument grew worse.",
+    "口論がひどくなる前に近所の人が間に入った。",
+    [
+      "intervene in",
+      "intervene to stop"
+    ],
+    "inter-(間に)+ ven(来る。come, convention)。間に入ってきて流れを変えること。"
+  ],
+  [
+    "intervention",
+    "B2",
+    "名詞",
+    [
+      "介入",
+      "干渉"
+    ],
+    "/ɪntɚˈvɛnʃən/",
+    "Early intervention greatly improves the outcome.",
+    "早期の介入は結果を大きく改善する。",
+    [
+      "military intervention",
+      "early intervention"
+    ],
+    "intervene の名詞。医療の早期介入から国家の軍事介入まで、幅広く使う。"
+  ],
+  [
+    "intimate",
+    "B2",
+    "形容詞",
+    [
+      "親密な",
+      "私的な"
+    ],
+    "/ˈɪntəmət/",
+    "They held an intimate ceremony with only close family.",
+    "彼らは近親者だけの内輪の式を行った。",
+    [
+      "an intimate friend",
+      "intimate details"
+    ],
+    "ラテン語 intimus(最も内側の)。inter の最上級。心の最も内側まで入っている関係。"
+  ],
+  [
+    "intriguing",
+    "B2",
+    "形容詞",
+    [
+      "興味をそそる",
+      "不思議な"
+    ],
+    "/ɪntˈrigɪŋ/",
+    "The results raise an intriguing question about memory.",
+    "その結果は記憶についての興味深い疑問を投げかける。",
+    [
+      "an intriguing idea",
+      "highly intriguing"
+    ],
+    "intrigue(陰謀、興味を引く)の形容詞。イタリア語 intrico(もつれ)。もつれた謎に引き込まれる感じ。"
+  ],
+  [
+    "investigator",
+    "B2",
+    "名詞",
+    [
+      "捜査官",
+      "調査員"
+    ],
+    "/ɪnˈvɛstəgeɪtɚ/",
+    "Investigators found no sign of a mechanical fault.",
+    "捜査官は機械的な故障の形跡を見つけなかった。",
+    [
+      "a private investigator",
+      "lead investigator"
+    ],
+    "investigate + -or。ラテン語 vestigium(足跡)。足跡をたどって調べる人、が原義。"
+  ],
+  [
+    "invisible",
+    "B2",
+    "形容詞",
+    [
+      "目に見えない"
+    ],
+    "/ɪnˈvɪzəbəl/",
+    "Most of the damage is invisible from the outside.",
+    "被害の大半は外からは目に見えない。",
+    [
+      "invisible to",
+      "virtually invisible"
+    ],
+    "in-(否定)+ visible(見える)。見えないだけで存在しないわけではない、という含みで使うことが多い。"
+  ],
+  [
+    "invoke",
+    "B2",
+    "動詞",
+    [
+      "引き合いに出す",
+      "発動する"
+    ],
+    "/ɪnˈvoʊk/",
+    "The government invoked emergency powers to close the border.",
+    "政府は国境を閉鎖するために緊急権限を発動した。",
+    [
+      "invoke a law",
+      "invoke the name of"
+    ],
+    "in-(〜へ)+ voc(呼ぶ。voice, evoke)。権威や規則を呼び出して自分の側に立たせること。"
+  ],
+  [
+    "involvement",
+    "B2",
+    "名詞",
+    [
+      "関与",
+      "参加"
+    ],
+    "/ɪnˈvɑlvmənt/",
+    "His involvement in the scheme was never proved.",
+    "その計画への彼の関与は証明されなかった。",
+    [
+      "involvement in",
+      "active involvement"
+    ],
+    "involve の名詞。in-(中へ)+ volv(巻く。revolve)。物事に巻き込まれている度合い。"
+  ],
+  [
+    "ironic",
+    "B2",
+    "形容詞",
+    [
+      "皮肉な"
+    ],
+    "/aɪˈrɑnɪk/",
+    "It is ironic that the safety review caused the delay.",
+    "安全の見直しが遅れを招いたのは皮肉だ。",
+    [
+      "ironic that",
+      "deeply ironic"
+    ],
+    "irony の形容詞。意図と結果が食い違っている状況を指す。単に「運が悪い」だけでは ironic とは言わない。"
+  ],
+  [
+    "ironically",
+    "B2",
+    "副詞",
+    [
+      "皮肉なことに"
+    ],
+    "/aɪˈrɑnɪkli/",
+    "Ironically, the quietest applicant gave the best presentation.",
+    "皮肉なことに、最も無口な応募者が最良の発表をした。",
+    [
+      "ironically enough"
+    ],
+    "ironic の副詞。文頭に置いて「予想と逆のことが起きた」と読者に合図する使い方が多い。"
+  ],
+  [
+    "irony",
+    "B2",
+    "名詞",
+    [
+      "皮肉",
+      "反語"
+    ],
+    "/ˈaɪrəni/",
+    "The irony of the situation was lost on nobody.",
+    "その状況の皮肉は誰の目にも明らかだった。",
+    [
+      "the irony of",
+      "a sense of irony"
+    ],
+    "ギリシャ語 eironeia(とぼけること)。言葉と本心、または期待と現実がずれていること。"
+  ],
+  [
+    "irrelevant",
+    "B2",
+    "形容詞",
+    [
+      "関係のない",
+      "的外れな"
+    ],
+    "/ɪˈrɛləvənt/",
+    "His age is completely irrelevant to the decision.",
+    "彼の年齢はその決定とまったく関係がない。",
+    [
+      "irrelevant to",
+      "largely irrelevant"
+    ],
+    "ir-(否定)+ relevant(関係のある)。re-(再び)+ lev(持ち上げる)。議論を持ち上げる助けにならない、が核。"
+  ],
+  [
+    "isolation",
+    "B2",
+    "名詞",
+    [
+      "孤立",
+      "隔離"
+    ],
+    "/aɪsəˈleɪʃən/",
+    "Long periods of isolation affected their mental health.",
+    "長期間の孤立は彼らの精神的な健康に影響した。",
+    [
+      "in isolation",
+      "social isolation"
+    ],
+    "ラテン語 insula(島)。島のように周りから切り離された状態。in isolation なら「単独で」。"
+  ],
+  [
+    "judicial",
+    "B2",
+    "形容詞",
+    [
+      "司法の",
+      "裁判の"
+    ],
+    "/dʒuˈdɪʃəl/",
+    "The case is now subject to a judicial review.",
+    "その件は現在、司法審査の対象となっている。",
+    [
+      "a judicial system",
+      "judicial review"
+    ],
+    "ラテン語 judex(裁判官。judge, justice)。裁く働きに関わること。立法・行政と並ぶ三権の一つ。"
+  ],
+  [
+    "junction",
+    "B2",
+    "名詞",
+    [
+      "分岐点",
+      "交差点"
+    ],
+    "/ˈdʒʌŋkʃən/",
+    "Turn left at the next junction and follow the signs.",
+    "次の分岐点で左折して標識に従ってください。",
+    [
+      "a road junction",
+      "a railway junction"
+    ],
+    "ラテン語 jungere(つなぐ。join, joint)。道や線路がつながる点。"
+  ],
+  [
+    "jurisdiction",
+    "B2",
+    "名詞",
+    [
+      "管轄権",
+      "司法権"
+    ],
+    "/dʒʊrəsˈdɪkʃən/",
+    "The case falls outside the court's jurisdiction.",
+    "その事件はその裁判所の管轄外にある。",
+    [
+      "have jurisdiction over",
+      "outside the jurisdiction"
+    ],
+    "juris(法)+ dict(言う)。法を語る権限が及ぶ範囲、が語源そのまま。"
+  ],
+  [
+    "just",
+    "B2",
+    "形容詞",
+    [
+      "公正な",
+      "正当な"
+    ],
+    "/dʒʌst/",
+    "Many felt the sentence was not a just outcome.",
+    "多くの人がその判決を公正な結果ではないと感じた。",
+    [
+      "a just cause",
+      "a just society"
+    ],
+    "ラテン語 justus(正しい)。justice と同語根。副詞の just とは別で、こちらは「正義にかなった」という形容詞。"
+  ],
+  [
+    "justification",
+    "B2",
+    "名詞",
+    [
+      "正当化",
+      "正当な理由"
+    ],
+    "/dʒʌstəfəˈkeɪʃən/",
+    "There is no justification for withholding the report.",
+    "その報告書を伏せておく正当な理由はない。",
+    [
+      "no justification for",
+      "moral justification"
+    ],
+    "justify の名詞。just(正しい)+ fy(なす)。正しいと示すこと、またそのための根拠。"
+  ],
+  [
+    "kidnap",
+    "B2",
+    "動詞",
+    [
+      "誘拐する"
+    ],
+    "/ˈkɪdnæp/",
+    "Two aid workers were kidnapped near the border.",
+    "2人の援助活動家が国境近くで誘拐された。",
+    [
+      "be kidnapped",
+      "kidnap a child"
+    ],
+    "kid(子ども)+ nap(ひったくる)。もとは子どもをさらうこと。今は大人にも使う。"
+  ],
+  [
+    "kidney",
+    "B2",
+    "名詞",
+    [
+      "腎臓"
+    ],
+    "/ˈkɪdni/",
+    "He donated a kidney to his younger brother.",
+    "彼は弟に腎臓を提供した。",
+    [
+      "kidney failure",
+      "a kidney transplant"
+    ],
+    "中英語 kidenei。腰の左右に一対ある臓器で、血液から老廃物をこし取る役目を担う。"
+  ],
+  [
+    "kingdom",
+    "B2",
+    "名詞",
+    [
+      "王国",
+      "界"
+    ],
+    "/ˈkɪŋdəm/",
+    "The kingdom was divided among his three sons.",
+    "その王国は彼の3人の息子の間で分割された。",
+    [
+      "the animal kingdom",
+      "a united kingdom"
+    ],
+    "king + -dom(領域。freedom, wisdom)。王の治める領域が原義で、生物分類の「界」にも使う。"
+  ],
+  [
+    "lad",
+    "B2",
+    "名詞",
+    [
+      "若者",
+      "少年"
+    ],
+    "/læd/",
+    "The lads from the village helped clear the road.",
+    "村の若者たちが道路の片づけを手伝った。",
+    [
+      "a young lad",
+      "the lads"
+    ],
+    "中英語 ladde(若い男)。英国のくだけた話し言葉で、親しみを込めて若い男性を指す。"
+  ],
+  [
+    "landlord",
+    "B2",
+    "名詞",
+    [
+      "家主",
+      "大家"
+    ],
+    "/ˈlændlɔrd/",
+    "The landlord agreed to repair the roof before winter.",
+    "大家は冬までに屋根を修理することに同意した。",
+    [
+      "a private landlord",
+      "the landlord of"
+    ],
+    "land(土地)+ lord(主)。土地や建物を貸す側の人。借りる側は tenant。"
+  ],
+  [
+    "landmark",
+    "B2",
+    "名詞",
+    [
+      "目印",
+      "画期的な出来事"
+    ],
+    "/ˈlændmɑrk/",
+    "The tower has been a landmark for over a century.",
+    "その塔は1世紀以上にわたって目印となってきた。",
+    [
+      "a famous landmark",
+      "a landmark decision"
+    ],
+    "land + mark。土地の境を示す印が原義。遠くからでも分かる目印、そして歴史の節目となる出来事へ。"
+  ],
+  [
+    "lap",
+    "B2",
+    "名詞",
+    [
+      "ひざ",
+      "周回"
+    ],
+    "/læp/",
+    "The cat settled on her lap and fell asleep.",
+    "猫は彼女のひざに落ち着いて眠り込んだ。",
+    [
+      "sit on someone's lap",
+      "the final lap"
+    ],
+    "古英語 laeppa(垂れた布)。座ったときにできる平らな部分。競走路を一巡することも lap と呼ぶ。"
+  ],
+  [
+    "large-scale",
+    "B2",
+    "形容詞",
+    [
+      "大規模な"
+    ],
+    "/ˈlɑrdʒskeɪl/",
+    "The council approved a large-scale housing project.",
+    "議会は大規模な住宅計画を承認した。",
+    [
+      "large-scale production",
+      "a large-scale study"
+    ],
+    "large + scale(規模)。名詞の前に置いて使い、small-scale と対になる。"
+  ],
+  [
+    "laser",
+    "B2",
+    "名詞",
+    [
+      "レーザー"
+    ],
+    "/ˈleɪzɚ/",
+    "Surgeons used a laser to repair the damaged tissue.",
+    "外科医は損傷した組織を修復するのにレーザーを使った。",
+    [
+      "a laser beam",
+      "laser surgery"
+    ],
+    "light amplification by stimulated emission of radiation の頭字語。光を一点にそろえて強めた束。"
+  ],
+  [
+    "lawn",
+    "B2",
+    "名詞",
+    [
+      "芝生"
+    ],
+    "/lɔn/",
+    "He mows the lawn every second Saturday in summer.",
+    "彼は夏の間、隔週土曜に芝生を刈る。",
+    [
+      "mow the lawn",
+      "a front lawn"
+    ],
+    "古フランス語 launde(林間の空き地)。手入れされた平らな草地。庭の一部を指すのが普通。"
+  ],
+  [
+    "lawsuit",
+    "B2",
+    "名詞",
+    [
+      "訴訟"
+    ],
+    "/ˈlɔsut/",
+    "The company faces a lawsuit from former employees.",
+    "その会社は元従業員からの訴訟に直面している。",
+    [
+      "file a lawsuit",
+      "face a lawsuit"
+    ],
+    "law + suit(追求。pursue と同語根)。法に基づいて相手を追う手続き。file a lawsuit で「提訴する」。"
+  ],
+  [
+    "layout",
+    "B2",
+    "名詞",
+    [
+      "配置",
+      "レイアウト"
+    ],
+    "/ˈleɪaʊt/",
+    "The new layout makes the shop much easier to walk around.",
+    "新しい配置は店内をずっと歩きやすくしている。",
+    [
+      "the layout of",
+      "change the layout"
+    ],
+    "lay out(並べて置く)の名詞形。物や情報をどう並べたか、その配置全体を指す。"
+  ],
+  [
+    "leak",
+    "B2",
+    "名詞・動詞",
+    [
+      "漏れる",
+      "漏洩"
+    ],
+    "/lik/",
+    "Someone leaked the draft report to the press.",
+    "誰かが報告書の草稿を報道機関に漏らした。",
+    [
+      "a gas leak",
+      "leak information"
+    ],
+    "古ノルド語 leka(滴る)。水が漏れる動きから、秘密が外へ漏れる意味へ広がった。"
+  ],
+  [
+    "leap",
+    "B2",
+    "名詞・動詞",
+    [
+      "跳ぶ",
+      "飛躍"
+    ],
+    "/lip/",
+    "Sales took a big leap after the advertisement aired.",
+    "広告が流れた後、売上は大きく跳ね上がった。",
+    [
+      "a leap forward",
+      "leap over"
+    ],
+    "古英語 hleapan(跳ぶ)。助走なしに勢いよく跳ぶこと。技術や数値の一気の伸びにも使う。"
+  ],
+  [
+    "legacy",
+    "B2",
+    "名詞",
+    [
+      "遺産",
+      "名残"
+    ],
+    "/ˈlɛgəsi/",
+    "The reforms are the lasting legacy of her time in office.",
+    "それらの改革は彼女の在任期間の永続的な遺産だ。",
+    [
+      "a lasting legacy",
+      "leave a legacy"
+    ],
+    "ラテン語 legare(委ねる。delegate)。後の世代へ委ねられたもの。金銭より業績や影響を指すことが多い。"
+  ],
+  [
+    "legendary",
+    "B2",
+    "形容詞",
+    [
+      "伝説的な",
+      "名高い"
+    ],
+    "/ˈlɛdʒəndɛri/",
+    "The chef is legendary for her simple vegetable dishes.",
+    "そのシェフは素朴な野菜料理で名高い。",
+    [
+      "a legendary player",
+      "legendary status"
+    ],
+    "legend(読まれるべきもの。ラテン語 legere 読む)の形容詞。語り継がれるほど有名なこと。"
+  ],
+  [
+    "legislation",
+    "B2",
+    "名詞",
+    [
+      "法律",
+      "立法"
+    ],
+    "/lɛdʒəˈsleɪʃən/",
+    "New legislation on data privacy comes into force in June.",
+    "データ保護に関する新法が6月に施行される。",
+    [
+      "introduce legislation",
+      "under legislation"
+    ],
+    "leg(法。legal)+ lat(運ぶ)。法を運び出すこと、またその成果である法律。数えられない名詞。"
+  ],
+  [
+    "legislative",
+    "B2",
+    "形容詞",
+    [
+      "立法の"
+    ],
+    "/ˈlɛdʒəsleɪtɪv/",
+    "The legislative process took almost two years.",
+    "その立法過程はほぼ2年かかった。",
+    [
+      "legislative power",
+      "a legislative body"
+    ],
+    "legislation の形容詞。法律を作る働きに関わること。judicial や executive と並べて覚える。"
+  ],
+  [
+    "legislature",
+    "B2",
+    "名詞",
+    [
+      "立法府",
+      "議会"
+    ],
+    "/ˈlɛdʒəsleɪtʃɚ/",
+    "The state legislature meets for four months each year.",
+    "その州議会は毎年4か月間開かれる。",
+    [
+      "a state legislature",
+      "the national legislature"
+    ],
+    "法を作る機関そのもの。米国の州議会を指す文脈で特によく使う。"
+  ],
+  [
+    "legitimate",
+    "B2",
+    "形容詞",
+    [
+      "正当な",
+      "合法の"
+    ],
+    "/ləˈdʒɪtəmət/",
+    "Customers have a legitimate reason to expect a refund.",
+    "顧客には返金を期待する正当な理由がある。",
+    [
+      "a legitimate concern",
+      "entirely legitimate"
+    ],
+    "ラテン語 lex(法)。法にかなっている、が核。合法かどうかだけでなく、筋が通っているかにも使う。"
+  ],
+  [
+    "lengthy",
+    "B2",
+    "形容詞",
+    [
+      "長々しい",
+      "長期の"
+    ],
+    "/ˈlɛŋθi/",
+    "After lengthy discussions the two sides reached a deal.",
+    "長々とした協議の末、双方は合意に達した。",
+    [
+      "lengthy negotiations",
+      "a lengthy process"
+    ],
+    "length + -y。単に long と違い、長すぎて退屈だという評価が込もることが多い。"
+  ],
+  [
+    "lesbian",
+    "B2",
+    "形容詞",
+    [
+      "レズビアンの",
+      "同性愛の女性"
+    ],
+    "/ˈlɛzbiən/",
+    "The centre offers support for lesbian and gay students.",
+    "そのセンターはレズビアンやゲイの学生への支援を提供している。",
+    [
+      "a lesbian couple",
+      "lesbian and gay"
+    ],
+    "古代ギリシャの詩人サッポーが住んだレスボス島の名に由来する。女性の同性愛を指す語。"
+  ],
+  [
+    "lesser",
+    "B2",
+    "形容詞",
+    [
+      "より小さい",
+      "劣った"
+    ],
+    "/ˈlɛsɚ/",
+    "She was found guilty of the lesser of the two charges.",
+    "彼女は2つの罪状のうち軽い方で有罪となった。",
+    [
+      "to a lesser extent",
+      "the lesser of two evils"
+    ],
+    "little の比較級 less から作られた古い形。名詞の前でだけ使い、to a lesser extent の形が定番。"
+  ],
+  [
+    "lethal",
+    "B2",
+    "形容詞",
+    [
+      "致死の",
+      "命取りの"
+    ],
+    "/ˈliθəl/",
+    "The snake produces a lethal dose of venom in seconds.",
+    "そのヘビは数秒で致死量の毒を出す。",
+    [
+      "a lethal dose",
+      "lethal weapon"
+    ],
+    "ラテン語 letum(死)。死をもたらす力を持つ、が核。fatal が結果、lethal が力そのものに焦点。"
+  ],
+  [
+    "liable",
+    "B2",
+    "形容詞",
+    [
+      "責任がある",
+      "〜しがちな"
+    ],
+    "/ˈlaɪəbəl/",
+    "The driver is liable for any damage to the vehicle.",
+    "運転者は車両への損害について責任を負う。",
+    [
+      "liable for",
+      "liable to"
+    ],
+    "ラテン語 ligare(結ぶ。ally, ligament)。責任に結びつけられていること。liable to do なら「〜しがちだ」。"
+  ],
+  [
+    "liberal",
+    "B2",
+    "形容詞・名詞",
+    [
+      "自由主義の",
+      "寛大な"
+    ],
+    "/ˈlɪbɝəl/",
+    "The paper takes a liberal line on immigration.",
+    "その新聞は移民問題で自由主義的な立場をとる。",
+    [
+      "a liberal democracy",
+      "a liberal attitude"
+    ],
+    "ラテン語 liber(自由な)。しばらない、が核。政治の立場にも、量や態度の気前よさにも使う。"
+  ],
+  [
+    "liberation",
+    "B2",
+    "名詞",
+    [
+      "解放"
+    ],
+    "/lɪbɝˈeɪʃən/",
+    "The city celebrates its liberation every August.",
+    "その都市は毎年8月に解放を祝う。",
+    [
+      "the liberation of",
+      "a liberation movement"
+    ],
+    "liberate の名詞。liber(自由な)。押さえつけられていた状態から自由にすること。"
+  ],
+  [
+    "liberty",
+    "B2",
+    "名詞",
+    [
+      "自由"
+    ],
+    "/ˈlɪbɚti/",
+    "The constitution protects individual liberty against the power of the state.",
+    "その憲法は国家権力から個人の自由を守っている。",
+    [
+      "personal liberty",
+      "at liberty to"
+    ],
+    "ラテン語 libertas(自由)。freedom より制度的・法的な自由を指す傾向がある。at liberty to は「〜してよい」。"
+  ],
+  [
+    "lifelong",
+    "B2",
+    "形容詞",
+    [
+      "生涯の",
+      "一生涯の"
+    ],
+    "/ˈlaɪˈflɔŋ/",
+    "Reading became a lifelong habit for both of them.",
+    "読書は二人にとって生涯の習慣になった。",
+    [
+      "a lifelong friend",
+      "lifelong learning"
+    ],
+    "life + long。生まれてから終わりまで続く、が核。lifelong learning は生涯学習。"
+  ],
+  [
+    "likelihood",
+    "B2",
+    "名詞",
+    [
+      "可能性",
+      "見込み"
+    ],
+    "/ˈlaɪklihʊd/",
+    "There is little likelihood of snow before December.",
+    "12月より前に雪が降る可能性はほとんどない。",
+    [
+      "in all likelihood",
+      "the likelihood of"
+    ],
+    "likely + -hood(状態。childhood)。どれくらいありそうかの度合い。in all likelihood は「十中八九」。"
+  ],
+  [
+    "limb",
+    "B2",
+    "名詞",
+    [
+      "手足",
+      "大枝"
+    ],
+    "/lɪm/",
+    "The accident left him with an injured lower limb.",
+    "その事故で彼は下肢に負傷を負った。",
+    [
+      "upper limb",
+      "out on a limb"
+    ],
+    "古英語 lim。胴から突き出た部分が核で、木の大枝にも使う。b は発音しない。"
+  ],
+  [
+    "line-up",
+    "B2",
+    "名詞",
+    [
+      "顔ぶれ",
+      "出演者"
+    ],
+    "/ˈlaɪnʌp/",
+    "The festival announced an impressive line-up for August.",
+    "その音楽祭は8月の印象的な出演者を発表した。",
+    [
+      "a strong line-up",
+      "announce a line-up"
+    ],
+    "line up(並ぶ)の名詞形。並べて見せた顔ぶれ全体。米つづりは lineup。"
+  ],
+  [
+    "linear",
+    "B2",
+    "形容詞",
+    [
+      "直線的な",
+      "線形の"
+    ],
+    "/ˈlɪniɚ/",
+    "Progress in language learning is rarely linear.",
+    "語学学習の上達が直線的であることはめったにない。",
+    [
+      "a linear relationship",
+      "linear growth"
+    ],
+    "ラテン語 linea(線)。まっすぐ一本の線に沿って進むこと。行きつ戻りつを含まない、が要点。"
+  ],
+  [
+    "linger",
+    "B2",
+    "動詞",
+    [
+      "残る",
+      "居残る"
+    ],
+    "/ˈlɪŋgɚ/",
+    "The smell of smoke lingered in the room for days.",
+    "煙の匂いが何日もその部屋に残っていた。",
+    [
+      "linger on",
+      "linger over"
+    ],
+    "古英語 lengan(長引かせる)。long と同語根。消えるべきものがなかなか消えずに残ること。"
+  ],
+  [
+    "listing",
+    "B2",
+    "名詞",
+    [
+      "一覧",
+      "掲載"
+    ],
+    "/ˈlɪstɪŋ/",
+    "The property appears in this week's listing of new homes.",
+    "その物件は今週の新築住宅一覧に掲載されている。",
+    [
+      "a job listing",
+      "a stock listing"
+    ],
+    "list(一覧)+ -ing。載せる行為にも、載った項目そのものにも使う。"
+  ],
+  [
+    "literacy",
+    "B2",
+    "名詞",
+    [
+      "読み書き能力",
+      "リテラシー"
+    ],
+    "/ˈlɪtɚəsi/",
+    "Adult literacy rates have risen steadily since the 1990s.",
+    "成人の識字率は1990年代から着実に上昇している。",
+    [
+      "digital literacy",
+      "a literacy rate"
+    ],
+    "ラテン語 littera(文字。letter, literature)。文字を扱える力が核で、今は分野ごとの理解力にも使う。"
+  ],
+  [
+    "liver",
+    "B2",
+    "名詞",
+    [
+      "肝臓"
+    ],
+    "/ˈlɪvɚ/",
+    "Heavy drinking over many years damaged his liver.",
+    "長年の大量飲酒が彼の肝臓を損なった。",
+    [
+      "liver disease",
+      "liver function"
+    ],
+    "古英語 lifer。解毒と代謝を担う臓器で、live(生きる)と綴りが似ているのは偶然。"
+  ],
+  [
+    "lobby",
+    "B2",
+    "名詞・動詞",
+    [
+      "ロビー",
+      "圧力をかける"
+    ],
+    "/ˈlɑbi/",
+    "Farmers lobbied hard against the proposed tax.",
+    "農家は提案された税に強く反対運動を行った。",
+    [
+      "lobby for",
+      "the hotel lobby"
+    ],
+    "ラテン語 lobia(回廊)。議場前の廊下で議員に働きかけたことから、圧力活動の意味が生まれた。"
+  ],
+  [
+    "log",
+    "B2",
+    "名詞・動詞",
+    [
+      "記録",
+      "丸太",
+      "記録する"
+    ],
+    "/lɔg/",
+    "The captain logs the weather at noon every day.",
+    "船長は毎日正午に天候を記録する。",
+    [
+      "a log book",
+      "log in"
+    ],
+    "もとは丸太。速度測定に丸太を流して記録したことから、航海日誌そして記録一般へ広がった。"
+  ],
+  [
+    "logic",
+    "B2",
+    "名詞",
+    [
+      "論理",
+      "筋道"
+    ],
+    "/ˈlɑdʒɪk/",
+    "I could not follow the logic of his argument.",
+    "私は彼の議論の筋道についていけなかった。",
+    [
+      "sound logic",
+      "the logic behind"
+    ],
+    "ギリシャ語 logos(言葉、理)。言葉が筋道立って並んでいること。logo や -logy も同じ語根。"
+  ],
+  [
+    "long-standing",
+    "B2",
+    "形容詞",
+    [
+      "長年の",
+      "長く続く"
+    ],
+    "/ˈlɔŋstændɪŋ/",
+    "They have a long-standing agreement on shared water use.",
+    "彼らには水の共同利用に関する長年の取り決めがある。",
+    [
+      "a long-standing tradition",
+      "a long-standing problem"
+    ],
+    "long + standing(立ち続けている)。ずっと立ったまま続いてきた、が核。名詞の前で使う。"
+  ],
+  [
+    "long-time",
+    "B2",
+    "形容詞",
+    [
+      "長年の"
+    ],
+    "/ˈlɔŋtaɪm/",
+    "Her long-time colleague spoke at the retirement party.",
+    "彼女の長年の同僚が退職の会で挨拶した。",
+    [
+      "a long-time friend",
+      "a long-time resident"
+    ],
+    "long + time。名詞の前でのみ使い、人や関係が長く続いていることを表す。"
+  ],
+  [
+    "loom",
+    "B2",
+    "動詞",
+    [
+      "ぼんやり現れる",
+      "迫る"
+    ],
+    "/lum/",
+    "A deadline loomed over the whole team that week.",
+    "その週、締め切りがチーム全体にのしかかっていた。",
+    [
+      "loom large",
+      "loom over"
+    ],
+    "古英語由来で「ぼんやり現れる」。霧の中から大きな影が迫るイメージ。不安なものについて使う。"
+  ],
+  [
+    "loop",
+    "B2",
+    "名詞",
+    [
+      "輪",
+      "繰り返し"
+    ],
+    "/lup/",
+    "The programme fell into a loop and stopped responding.",
+    "そのプログラムは無限の繰り返しに陥って応答しなくなった。",
+    [
+      "in the loop",
+      "a feedback loop"
+    ],
+    "中英語 loupe(輪)。始めと終わりがつながった輪が核。in the loop なら情報の輪の中にいること。"
+  ],
+  [
+    "loyalty",
+    "B2",
+    "名詞",
+    [
+      "忠誠",
+      "愛着"
+    ],
+    "/ˈlɔɪəlti/",
+    "Customer loyalty matters more than a single sale.",
+    "顧客の愛着は一度の販売より重要だ。",
+    [
+      "brand loyalty",
+      "loyalty to"
+    ],
+    "古フランス語 loial(法にかなった)。legal と同語源。約束を守り続ける姿勢が核。"
+  ],
+  [
+    "machinery",
+    "B2",
+    "名詞",
+    [
+      "機械類",
+      "機構"
+    ],
+    "/məˈʃinɚi/",
+    "Farm machinery has become far more expensive to repair.",
+    "農業機械は修理費がはるかに高くなった。",
+    [
+      "heavy machinery",
+      "the machinery of government"
+    ],
+    "machine + -ry(集合)。機械のまとまり、が核。組織の仕組みという比喩でも使う。"
+  ],
+  [
+    "magical",
+    "B2",
+    "形容詞",
+    [
+      "魔法のような",
+      "不思議な"
+    ],
+    "/ˈmædʒɪkəl/",
+    "The old harbour looks magical when the lamps come on.",
+    "灯がともると、その古い港は魔法のように見える。",
+    [
+      "a magical moment",
+      "magical powers"
+    ],
+    "magic の形容詞。魔法そのものにも、説明がつかないほど心を打つ美しさにも使う。"
+  ],
+  [
+    "magistrate",
+    "B2",
+    "名詞",
+    [
+      "治安判事"
+    ],
+    "/ˈmædʒəstreɪt/",
+    "The case was heard by a local magistrate last Tuesday.",
+    "その事件は先週火曜に地元の治安判事によって審理された。",
+    [
+      "a local magistrate",
+      "appear before a magistrate"
+    ],
+    "ラテン語 magister(長。master, major)。地域の軽い事件を扱う下級の裁判官を指す。"
+  ],
+  [
+    "magnetic",
+    "B2",
+    "形容詞",
+    [
+      "磁気の",
+      "人を引きつける"
+    ],
+    "/mægˈnɛtɪk/",
+    "The speaker has a magnetic presence on stage.",
+    "その講演者は舞台で人を引きつける存在感がある。",
+    [
+      "a magnetic field",
+      "a magnetic personality"
+    ],
+    "磁鉄鉱を産したギリシャの地名マグネシアから。引き寄せる力が核で、人の魅力にも使う。"
+  ],
+  [
+    "magnitude",
+    "B2",
+    "名詞",
+    [
+      "大きさ",
+      "規模"
+    ],
+    "/ˈmægnətud/",
+    "Few people grasped the magnitude of the change at first.",
+    "当初、その変化の規模を理解していた人はほとんどいなかった。",
+    [
+      "the magnitude of",
+      "an order of magnitude"
+    ],
+    "ラテン語 magnus(大きい。major, magnify)。数値としての大きさが核。地震の規模にも使う。"
+  ],
+  [
+    "mainland",
+    "B2",
+    "名詞",
+    [
+      "本土"
+    ],
+    "/ˈmeɪnlænd/",
+    "Ferries link the islands to the mainland twice a day.",
+    "フェリーが1日2回、島々を本土と結んでいる。",
+    [
+      "the mainland",
+      "mainland Europe"
+    ],
+    "main(主な)+ land。付属の島に対して、主となる陸地を指す。"
+  ],
+  [
+    "mainstream",
+    "B2",
+    "形容詞・名詞",
+    [
+      "主流の",
+      "主流"
+    ],
+    "/ˈmeɪnstrim/",
+    "Electric cars have moved into the mainstream in a decade.",
+    "電気自動車は10年で主流になった。",
+    [
+      "mainstream media",
+      "enter the mainstream"
+    ],
+    "main + stream(流れ)。川の本流が核。少数派 fringe と対比して使う。"
+  ],
+  [
+    "maintenance",
+    "B2",
+    "名詞",
+    [
+      "維持",
+      "保守"
+    ],
+    "/ˈmeɪntənəns/",
+    "Regular maintenance keeps the machines running smoothly.",
+    "定期的な保守が機械を順調に動かし続ける。",
+    [
+      "routine maintenance",
+      "maintenance costs"
+    ],
+    "maintain の名詞。ラテン語 manu tenere(手で保つ)。手を添えて状態を保ち続けること。"
+  ],
+  [
+    "mandate",
+    "B2",
+    "名詞",
+    [
+      "権限",
+      "負託"
+    ],
+    "/ˈmændeɪt/",
+    "The new government claims a clear mandate for reform.",
+    "新政府は改革への明確な負託があると主張している。",
+    [
+      "a clear mandate",
+      "an electoral mandate"
+    ],
+    "manu(手)+ dat(与える。date, donate)。手渡された任務が核。選挙で与えられた権限を指すことが多い。"
+  ],
+  [
+    "mandatory",
+    "B2",
+    "形容詞",
+    [
+      "義務的な",
+      "必須の"
+    ],
+    "/ˈmændətɔri/",
+    "Helmets are mandatory for all riders on this course.",
+    "このコースではすべての走者にヘルメットが義務づけられている。",
+    [
+      "mandatory training",
+      "a mandatory requirement"
+    ],
+    "mandate の形容詞。命じられていて選択の余地がない、が核。voluntary の反対。"
+  ],
+  [
+    "manifest",
+    "B2",
+    "動詞",
+    [
+      "はっきり示す",
+      "現れる"
+    ],
+    "/ˈmænəfɛst/",
+    "Stress often manifests itself as poor sleep.",
+    "ストレスはしばしば睡眠の質の低下として現れる。",
+    [
+      "manifest itself",
+      "manifest in"
+    ],
+    "manu(手)+ fest(打つ)。手で触れられるほど明らかにすること。manifest itself as の形が多い。"
+  ],
+  [
+    "manipulate",
+    "B2",
+    "動詞",
+    [
+      "操る",
+      "巧みに扱う"
+    ],
+    "/məˈnɪpjəleɪt/",
+    "Critics accused the paper of manipulating public opinion.",
+    "批評家はその新聞が世論を操っていると非難した。",
+    [
+      "manipulate data",
+      "manipulate people"
+    ],
+    "ラテン語 manipulus(ひと握り)。manu(手)。手で自在に扱うのが核で、人に使うと批判的な響きになる。"
+  ],
+  [
+    "manipulation",
+    "B2",
+    "名詞",
+    [
+      "操作",
+      "操縦"
+    ],
+    "/mənɪpjəˈleɪʃən/",
+    "The report found clear evidence of market manipulation.",
+    "その報告書は市場操作の明確な証拠を見つけた。",
+    [
+      "market manipulation",
+      "the manipulation of"
+    ],
+    "manipulate の名詞。技術としての巧みな操作にも、裏で人を動かす不正にも使う。"
+  ],
+  [
+    "manuscript",
+    "B2",
+    "名詞",
+    [
+      "原稿",
+      "写本"
+    ],
+    "/ˈmænjəskrɪpt/",
+    "She sent the manuscript to three publishers at once.",
+    "彼女はその原稿を3社の出版社に同時に送った。",
+    [
+      "submit a manuscript",
+      "an original manuscript"
+    ],
+    "manu(手)+ script(書く)。印刷前の手書き原稿、が語源そのまま。"
+  ],
+  [
+    "march",
+    "B2",
+    "名詞・動詞",
+    [
+      "行進する",
+      "行進"
+    ],
+    "/mɑrtʃ/",
+    "Thousands marched through the capital demanding change.",
+    "何千人もが変化を求めて首都を行進した。",
+    [
+      "march on",
+      "a protest march"
+    ],
+    "ラテン語 marcus(ハンマー)由来とされる。足を踏み鳴らして進むこと。抗議のデモ行進にも使う。"
+  ],
+  [
+    "marginal",
+    "B2",
+    "形容詞",
+    [
+      "わずかな",
+      "周辺の"
+    ],
+    "/ˈmɑrdʒənəl/",
+    "The change had only a marginal effect on costs.",
+    "その変更は費用にわずかな影響しか与えなかった。",
+    [
+      "a marginal improvement",
+      "a marginal seat"
+    ],
+    "margin(余白、へり)の形容詞。中心から外れたへりの部分、が核。だから重要度も小さい。"
+  ],
+  [
+    "marine",
+    "B2",
+    "形容詞",
+    [
+      "海の",
+      "海洋の"
+    ],
+    "/mɚˈin/",
+    "Pollution threatens marine life along the whole coast.",
+    "汚染が海岸線全体の海洋生物を脅かしている。",
+    [
+      "marine life",
+      "a marine biologist"
+    ],
+    "ラテン語 mare(海。maritime, mermaid)。海に関わることすべて。名詞なら海兵隊員。"
+  ],
+  [
+    "marketplace",
+    "B2",
+    "名詞",
+    [
+      "市場",
+      "市場競争の場"
+    ],
+    "/ˈmɑrkətpleɪs/",
+    "Small firms struggle to survive in a crowded marketplace.",
+    "小規模企業は混み合った市場で生き残るのに苦労している。",
+    [
+      "a global marketplace",
+      "in the marketplace"
+    ],
+    "market + place。実際の市の広場が原義で、今は競争の場という抽象的な意味が中心。"
+  ],
+  [
+    "mask",
+    "B2",
+    "名詞",
+    [
+      "仮面",
+      "マスク",
+      "覆い隠す"
+    ],
+    "/mæsk/",
+    "A cheerful tone masked how tired she really was.",
+    "明るい口調が、彼女が本当はどれほど疲れているかを覆い隠していた。",
+    [
+      "wear a mask",
+      "mask the smell"
+    ],
+    "アラビア語 maskhara(道化)由来とされる。顔を覆うものが核で、感情や匂いを隠す動詞にも使う。"
+  ],
+  [
+    "massacre",
+    "B2",
+    "名詞",
+    [
+      "虐殺"
+    ],
+    "/ˈmæsəkɚ/",
+    "The village was the site of a massacre in the 1940s.",
+    "その村は1940年代の虐殺の現場だった。",
+    [
+      "a brutal massacre",
+      "the massacre of"
+    ],
+    "古フランス語 macecre(肉切り場)。無抵抗の多数を殺すこと。試合の大敗の比喩にも使われる。"
+  ],
+  [
+    "mathematical",
+    "B2",
+    "形容詞",
+    [
+      "数学の",
+      "数学的な"
+    ],
+    "/mæθəˈmætɪkəl/",
+    "The proof requires a high level of mathematical skill.",
+    "その証明には高度な数学の技能が必要だ。",
+    [
+      "a mathematical model",
+      "mathematical precision"
+    ],
+    "ギリシャ語 mathema(学ばれるもの)。学ぶこと一般を指した語が、数を扱う学問に固まった。"
+  ],
+  [
+    "mature",
+    "B2",
+    "形容詞・動詞",
+    [
+      "成熟した",
+      "成熟する"
+    ],
+    "/məˈtʃʊr/",
+    "The trees take twenty years to mature fully.",
+    "それらの木は完全に成熟するのに20年かかる。",
+    [
+      "a mature student",
+      "mature into"
+    ],
+    "ラテン語 maturus(熟した)。実が熟した状態が核。年齢だけでなく判断の落ち着きにも使う。"
+  ],
+  [
+    "maximize",
+    "B2",
+    "動詞",
+    [
+      "最大化する",
+      "最大限に生かす"
+    ],
+    "/ˈmæksəmaɪz/",
+    "Careful planning maximizes the value of a short trip.",
+    "入念な計画は短い旅の価値を最大限に高める。",
+    [
+      "maximize profits",
+      "maximize efficiency"
+    ],
+    "maximum + -ize。ラテン語 maximus(最大)。取れる限り大きくすること。minimize と対で覚える。"
+  ],
+  [
+    "meaningful",
+    "B2",
+    "形容詞",
+    [
+      "意味のある",
+      "有意義な"
+    ],
+    "/ˈminɪŋfəl/",
+    "They finally had a meaningful conversation about the future.",
+    "彼らはついに将来について意味のある会話をした。",
+    [
+      "meaningful work",
+      "a meaningful difference"
+    ],
+    "meaning + -ful。中身が伴っている、が核。形式だけのやり取りに対する反対語として使う。"
+  ],
+  [
+    "meantime",
+    "B2",
+    "名詞",
+    [
+      "その間"
+    ],
+    "/ˈmintaɪm/",
+    "The train is delayed, so in the meantime we can eat.",
+    "列車が遅れているので、その間に食事ができる。",
+    [
+      "in the meantime",
+      "for the meantime"
+    ],
+    "mean(中間の)+ time。ほぼ in the meantime の形でだけ使い、二つの出来事の間の時間を指す。"
+  ],
+  [
+    "medieval",
+    "B2",
+    "形容詞",
+    [
+      "中世の"
+    ],
+    "/mɪˈdivəl/",
+    "The town still has its medieval walls and gates.",
+    "その町には今も中世の城壁と門が残っている。",
+    [
+      "a medieval castle",
+      "the medieval period"
+    ],
+    "medi(中)+ ev(時代。age)。古代と近代の間の時代、が語源そのまま。おおむね5世紀から15世紀を指す。"
+  ],
+  [
+    "meditation",
+    "B2",
+    "名詞",
+    [
+      "瞑想",
+      "熟考"
+    ],
+    "/mɛdəˈteɪʃən/",
+    "Ten minutes of meditation each morning helped her focus.",
+    "毎朝10分の瞑想が彼女の集中を助けた。",
+    [
+      "daily meditation",
+      "meditation on"
+    ],
+    "ラテン語 meditari(じっくり考える)。心を一点に置いて静かに考えること。宗教にも健康法にも使う。"
+  ],
+  [
+    "melody",
+    "B2",
+    "名詞",
+    [
+      "旋律",
+      "メロディー"
+    ],
+    "/ˈmɛlədi/",
+    "The melody stayed in my head for the rest of the day.",
+    "その旋律は残りの一日中、私の頭から離れなかった。",
+    [
+      "a simple melody",
+      "a haunting melody"
+    ],
+    "ギリシャ語 melos(歌)+ oide(歌)。音の高低が作る一本の線。和音 harmony と対で覚える。"
+  ],
+  [
+    "memo",
+    "B2",
+    "名詞",
+    [
+      "メモ",
+      "社内通達"
+    ],
+    "/ˈmɛmoʊ/",
+    "She sent a short memo to all department heads.",
+    "彼女はすべての部長に短い通達を送った。",
+    [
+      "an internal memo",
+      "write a memo"
+    ],
+    "memorandum(覚え書き)の略。ラテン語 memor(覚えている)。組織内で回す短い文書を指す。"
+  ],
+  [
+    "memoir",
+    "B2",
+    "名詞",
+    [
+      "回想録"
+    ],
+    "/ˈmɛmwɑr/",
+    "His memoir describes twenty years as a foreign correspondent.",
+    "彼の回想録は特派員としての20年間を描いている。",
+    [
+      "write a memoir",
+      "a personal memoir"
+    ],
+    "フランス語 memoire(記憶)。自分の体験を振り返って書いたもの。一生を通して書く自伝より範囲が狭い。"
+  ],
+  [
+    "memorial",
+    "B2",
+    "名詞",
+    [
+      "記念碑",
+      "追悼の"
+    ],
+    "/məˈmɔriəl/",
+    "A small memorial stands where the old school once was.",
+    "かつて古い学校があった場所に小さな記念碑が立っている。",
+    [
+      "a war memorial",
+      "a memorial service"
+    ],
+    "memory の形容詞から名詞へ。亡くなった人や出来事を覚えておくためのもの。"
+  ],
+  [
+    "mentor",
+    "B2",
+    "名詞",
+    [
+      "助言者",
+      "指導者"
+    ],
+    "/ˈmɛntɔr/",
+    "A senior nurse acted as her mentor for the first year.",
+    "先輩の看護師が最初の1年、彼女の指導役を務めた。",
+    [
+      "a mentor to",
+      "find a mentor"
+    ],
+    "ホメロスの叙事詩で若者を導いた人物メントルの名から。経験を分けて育てる立場の人。"
+  ],
+  [
+    "merchant",
+    "B2",
+    "名詞",
+    [
+      "商人"
+    ],
+    "/ˈmɝtʃənt/",
+    "The old street was once lined with cloth merchants.",
+    "その古い通りにはかつて布地商が軒を連ねていた。",
+    [
+      "a wine merchant",
+      "a merchant ship"
+    ],
+    "ラテン語 merx(商品。commerce, market)。品物を売買して暮らす人。今は主に歴史的な文脈で使う。"
+  ],
+  [
+    "mercy",
+    "B2",
+    "名詞",
+    [
+      "慈悲",
+      "情け"
+    ],
+    "/ˈmɝsi/",
+    "The court showed mercy because of his age.",
+    "裁判所は彼の年齢を考慮して情けをかけた。",
+    [
+      "show mercy",
+      "at the mercy of"
+    ],
+    "ラテン語 merces(報酬、恩恵)。罰する力を持つ側が手を緩めること。at the mercy of は「なすがままに」。"
+  ],
+  [
+    "mere",
+    "B2",
+    "形容詞",
+    [
+      "ほんの",
+      "単なる"
+    ],
+    "/mɪr/",
+    "A mere ten minutes of delay caused the whole problem.",
+    "ほんの10分の遅れが問題全体を引き起こした。",
+    [
+      "a mere child",
+      "the mere thought"
+    ],
+    "ラテン語 merus(混じり気のない)。それだけしかない、が核。名詞の前でだけ使う。"
+  ],
+  [
+    "merely",
+    "B2",
+    "副詞",
+    [
+      "単に",
+      "ただ"
+    ],
+    "/ˈmɪrli/",
+    "He was merely repeating what he had read online.",
+    "彼はネットで読んだことをただ繰り返していただけだった。",
+    [
+      "merely a formality",
+      "not merely"
+    ],
+    "mere の副詞。それ以上のものではない、と価値を下げる働きをする。only の硬い言い換え。"
+  ],
+  [
+    "merge",
+    "B2",
+    "動詞",
+    [
+      "合併する",
+      "溶け合う"
+    ],
+    "/mɝdʒ/",
+    "The two banks merged after months of negotiation.",
+    "数か月の交渉の末、その2つの銀行は合併した。",
+    [
+      "merge with",
+      "merge into"
+    ],
+    "ラテン語 mergere(沈める。submerge, emerge)。中に沈み込んで一つになること。"
+  ],
+  [
+    "merger",
+    "B2",
+    "名詞",
+    [
+      "合併"
+    ],
+    "/ˈmɝdʒɚ/",
+    "The merger created the largest airline in the region.",
+    "その合併は地域最大の航空会社を生んだ。",
+    [
+      "a proposed merger",
+      "a merger between"
+    ],
+    "merge の名詞。二つの会社が一つになる企業行動を指す語で、買収 acquisition と並べて使う。"
+  ],
+  [
+    "merit",
+    "B2",
+    "名詞",
+    [
+      "長所",
+      "価値"
+    ],
+    "/ˈmɛrət/",
+    "Each proposal will be judged on its own merit.",
+    "それぞれの提案はそれ自体の価値で判断される。",
+    [
+      "on merit",
+      "the merits of"
+    ],
+    "ラテン語 merere(値する)。値打ちがあること。判断が公平だと示す on merit の形が定番。"
+  ],
+  [
+    "methodology",
+    "B2",
+    "名詞",
+    [
+      "方法論",
+      "手法"
+    ],
+    "/mɛθəˈdɑlədʒi/",
+    "The paper explains its methodology in careful detail.",
+    "その論文は自らの手法を丁寧に説明している。",
+    [
+      "research methodology",
+      "a sound methodology"
+    ],
+    "method + logy(学)。個々のやり方ではなく、やり方の選び方と組み立てを論じる語。"
+  ],
+  [
+    "midst",
+    "B2",
+    "名詞",
+    [
+      "真ん中",
+      "最中"
+    ],
+    "/mɪdst/",
+    "She kept working in the midst of all the noise.",
+    "彼女はその騒音のただ中で働き続けた。",
+    [
+      "in the midst of",
+      "in our midst"
+    ],
+    "middle と同語源の古い形。ほぼ in the midst of の形で使い、状況の真っただ中を指す。"
+  ],
+  [
+    "migration",
+    "B2",
+    "名詞",
+    [
+      "移住",
+      "渡り"
+    ],
+    "/maɪˈgreɪʃən/",
+    "The spring migration brings thousands of birds to the lake.",
+    "春の渡りが何千羽もの鳥をその湖に連れてくる。",
+    [
+      "bird migration",
+      "mass migration"
+    ],
+    "ラテン語 migrare(移る)。住む場所を変えることが核。人にも鳥にもデータの移行にも使う。"
+  ],
+  [
+    "militant",
+    "B2",
+    "形容詞・名詞",
+    [
+      "戦闘的な",
+      "過激な"
+    ],
+    "/ˈmɪlətənt/",
+    "The union took a more militant line after the pay cut.",
+    "賃下げの後、その組合はより戦闘的な路線をとった。",
+    [
+      "a militant group",
+      "militant action"
+    ],
+    "ラテン語 miles(兵士。military)。戦う構えを崩さない態度。必ずしも武力を伴うとは限らない。"
+  ],
+  [
+    "militia",
+    "B2",
+    "名詞",
+    [
+      "民兵組織"
+    ],
+    "/məˈlɪʃə/",
+    "Local militia guarded the bridges during the conflict.",
+    "紛争の間、地元の民兵が橋を守った。",
+    [
+      "an armed militia",
+      "a local militia"
+    ],
+    "ラテン語 miles(兵士)。正規軍ではなく、市民が組む武装集団を指す。"
+  ],
+  [
+    "mill",
+    "B2",
+    "名詞",
+    [
+      "工場",
+      "製粉所",
+      "ひく"
+    ],
+    "/mɪl/",
+    "The old paper mill closed after eighty years.",
+    "その古い製紙工場は80年の操業の後に閉鎖された。",
+    [
+      "a paper mill",
+      "a windmill"
+    ],
+    "ラテン語 molere(ひく。meal 挽き割り)。もとは粉をひく場所で、そこから原料を加工する工場一般へ。"
+  ],
+  [
+    "minimal",
+    "B2",
+    "形容詞",
+    [
+      "最小限の",
+      "ごくわずかな"
+    ],
+    "/ˈmɪnəməl/",
+    "The repair caused minimal disruption to services.",
+    "その修理は運行にごくわずかな支障しか与えなかった。",
+    [
+      "minimal impact",
+      "keep to a minimum"
+    ],
+    "ラテン語 minimus(最小)。あるにはあるが極めて小さい、が核。ゼロではない点が要点。"
+  ],
+  [
+    "minimize",
+    "B2",
+    "動詞",
+    [
+      "最小限に抑える"
+    ],
+    "/ˈmɪnəmaɪz/",
+    "Good design minimizes the risk of human error.",
+    "良い設計は人為的な誤りの危険を最小限に抑える。",
+    [
+      "minimize risk",
+      "minimize costs"
+    ],
+    "minimum + -ize。できる限り小さくすること。過小評価する、という別の意味もある。"
+  ],
+  [
+    "mining",
+    "B2",
+    "名詞",
+    [
+      "採掘",
+      "鉱業"
+    ],
+    "/ˈmaɪnɪŋ/",
+    "Coal mining once employed most men in the valley.",
+    "かつて石炭採掘はその谷の男性の大半を雇っていた。",
+    [
+      "coal mining",
+      "mining industry"
+    ],
+    "mine(坑道を掘る)の名詞。地中から資源を掘り出す産業。データを掘り出す data mining にも転用された。"
+  ],
+  [
+    "ministry",
+    "B2",
+    "名詞",
+    [
+      "省",
+      "聖職"
+    ],
+    "/ˈmɪnəstri/",
+    "The ministry of transport approved the new route.",
+    "運輸省はその新路線を承認した。",
+    [
+      "the ministry of education",
+      "enter the ministry"
+    ],
+    "ラテン語 minister(仕える者)。仕えて務めを果たす場が核。政府の省庁にも、宗教の聖職にも使う。"
+  ],
+  [
+    "minute",
+    "B2",
+    "形容詞",
+    [
+      "極小の",
+      "詳細な"
+    ],
+    "/ˈmɪnət/",
+    "The report contains minute details about every payment.",
+    "その報告書はすべての支払いについて詳細な記述を含む。",
+    [
+      "minute detail",
+      "a minute amount"
+    ],
+    "ラテン語 minutus(小さくされた)。時間の minute と同綴りだが発音が違い、maɪˈnjuːt となる点に注意。"
+  ],
+  [
+    "miracle",
+    "B2",
+    "名詞",
+    [
+      "奇跡"
+    ],
+    "/ˈmɪrəkəl/",
+    "It was a miracle that no one was seriously hurt.",
+    "誰も重傷を負わなかったのは奇跡だった。",
+    [
+      "a miracle cure",
+      "work a miracle"
+    ],
+    "ラテン語 mirari(驚く。admire, mirror)。目を見張るほどありえない出来事。"
+  ],
+  [
+    "misery",
+    "B2",
+    "名詞",
+    [
+      "惨めさ",
+      "苦痛"
+    ],
+    "/ˈmɪzɚi/",
+    "Years of drought brought misery to farming families.",
+    "何年もの干ばつが農家に苦難をもたらした。",
+    [
+      "cause misery",
+      "put out of misery"
+    ],
+    "ラテン語 miser(哀れな)。長く続く苦しさが核。一時の不幸ではなく、状態としての惨めさを指す。"
+  ],
+  [
+    "misleading",
+    "B2",
+    "形容詞",
+    [
+      "誤解を招く",
+      "紛らわしい"
+    ],
+    "/mɪˈslidɪŋ/",
+    "The label is misleading about the sugar content.",
+    "そのラベルは糖分の含有量について誤解を招く。",
+    [
+      "a misleading claim",
+      "highly misleading"
+    ],
+    "mislead の形容詞。mis-(誤って)+ lead(導く)。うそではないが、間違った方へ導いてしまうもの。"
+  ],
+  [
+    "missile",
+    "B2",
+    "名詞",
+    [
+      "ミサイル",
+      "飛び道具"
+    ],
+    "/ˈmɪsəl/",
+    "The system is designed to detect an incoming missile.",
+    "その装置は飛来するミサイルを探知するよう設計されている。",
+    [
+      "a guided missile",
+      "launch a missile"
+    ],
+    "ラテン語 mittere(送る。mission, transmit)。送り出される物、が核。"
+  ],
+  [
+    "mob",
+    "B2",
+    "名詞",
+    [
+      "暴徒",
+      "群衆"
+    ],
+    "/mɑb/",
+    "An angry mob gathered outside the courthouse.",
+    "怒った群衆が裁判所の外に集まった。",
+    [
+      "an angry mob",
+      "mob rule"
+    ],
+    "ラテン語 mobile vulgus(動きやすい群衆)の略。理性より勢いで動く集団という否定的な含みがある。"
+  ],
+  [
+    "mobility",
+    "B2",
+    "名詞",
+    [
+      "移動性",
+      "流動性"
+    ],
+    "/moʊˈbɪləti/",
+    "Poor transport limits mobility for older residents.",
+    "貧弱な交通は高齢の住民の移動を制限している。",
+    [
+      "social mobility",
+      "limited mobility"
+    ],
+    "mobile の名詞。ラテン語 movere(動く)。動ける度合い。社会階層を移る social mobility も重要。"
+  ],
+  [
+    "mobilize",
+    "B2",
+    "動詞",
+    [
+      "動員する",
+      "結集する"
+    ],
+    "/ˈmoʊbəlaɪz/",
+    "The charity mobilized hundreds of volunteers within days.",
+    "その慈善団体は数日で何百人ものボランティアを動員した。",
+    [
+      "mobilize support",
+      "mobilize troops"
+    ],
+    "mobile + -ize。動かせる状態にして実際に動かすこと。軍にも世論にも使う。"
+  ],
+  [
+    "moderate",
+    "B2",
+    "形容詞",
+    [
+      "適度な",
+      "穏健な"
+    ],
+    "/ˈmɑdɚət/",
+    "Moderate exercise three times a week is enough.",
+    "週3回の適度な運動で十分だ。",
+    [
+      "a moderate increase",
+      "moderate views"
+    ],
+    "ラテン語 modus(尺度。mode, modest)。度を越さない範囲に収まっていること。政治では穏健派。"
+  ],
+  [
+    "modification",
+    "B2",
+    "名詞",
+    [
+      "修正",
+      "変更"
+    ],
+    "/mɑdəfəˈkeɪʃən/",
+    "A small modification to the design solved the problem.",
+    "設計への小さな変更が問題を解決した。",
+    [
+      "a minor modification",
+      "genetic modification"
+    ],
+    "modify の名詞。modus(尺度)+ fic(なす)。全部を作り直さず、寸法を調整すること。"
+  ],
+  [
+    "momentum",
+    "B2",
+    "名詞",
+    [
+      "勢い",
+      "はずみ"
+    ],
+    "/moʊˈmɛntəm/",
+    "The campaign gained momentum after the televised debate.",
+    "その運動はテレビ討論の後に勢いを得た。",
+    [
+      "gain momentum",
+      "lose momentum"
+    ],
+    "ラテン語 movimentum(動き。move)。物理の運動量が原義で、比喩では止めにくい勢いを指す。"
+  ],
+  [
+    "monk",
+    "B2",
+    "名詞",
+    [
+      "修道士",
+      "僧"
+    ],
+    "/mʌŋk/",
+    "The monks have kept the same daily routine for centuries.",
+    "修道士たちは何世紀も同じ日課を守ってきた。",
+    [
+      "a Buddhist monk",
+      "a monastery of monks"
+    ],
+    "ギリシャ語 monos(ひとり)。俗世を離れて一人で暮らす人、が原義。女性なら nun。"
+  ],
+  [
+    "monopoly",
+    "B2",
+    "名詞",
+    [
+      "独占",
+      "専売"
+    ],
+    "/məˈnɑpəli/",
+    "The company held a virtual monopoly on rail freight.",
+    "その会社は鉄道貨物を事実上独占していた。",
+    [
+      "a monopoly on",
+      "break a monopoly"
+    ],
+    "monos(ひとつ)+ polein(売る)。売り手が一つしかない状態。ボードゲームの名もここから。"
+  ],
+  [
+    "morality",
+    "B2",
+    "名詞",
+    [
+      "道徳",
+      "倫理"
+    ],
+    "/mɚˈæləti/",
+    "The debate is about morality as much as about law.",
+    "その議論は法律と同じくらい道徳についてのものだ。",
+    [
+      "public morality",
+      "a question of morality"
+    ],
+    "moral の名詞。ラテン語 mos(習俗)。社会が正しいとしてきた行いの基準。"
+  ],
+  [
+    "motive",
+    "B2",
+    "名詞",
+    [
+      "動機"
+    ],
+    "/ˈmoʊtɪv/",
+    "Police could find no obvious motive for the crime.",
+    "警察はその犯罪の明白な動機を見つけられなかった。",
+    [
+      "a strong motive",
+      "an ulterior motive"
+    ],
+    "ラテン語 movere(動かす。move, motion)。人を動かす内側の力。motivation の元になる語。"
+  ],
+  [
+    "motorist",
+    "B2",
+    "名詞",
+    [
+      "自動車運転者"
+    ],
+    "/ˈmoʊtɚɪst/",
+    "Motorists were warned about ice on the mountain road.",
+    "運転者は山道の凍結について注意を促された。",
+    [
+      "warn motorists",
+      "a careless motorist"
+    ],
+    "motor + -ist。交通の記事で歩行者や自転車と区別して使う、やや硬い語。"
+  ],
+  [
+    "municipal",
+    "B2",
+    "形容詞",
+    [
+      "市の",
+      "地方自治体の"
+    ],
+    "/mjuˈnɪsəpəl/",
+    "Municipal services were cut after the budget shortfall.",
+    "予算不足の後、市のサービスは削減された。",
+    [
+      "a municipal building",
+      "municipal elections"
+    ],
+    "ラテン語 municipium(自治都市)。munus(務め)+ cap(取る)。務めを引き受ける都市、が原義。"
+  ],
+  [
+    "mutual",
+    "B2",
+    "形容詞",
+    [
+      "相互の",
+      "共通の"
+    ],
+    "/mˈjutʃuəl/",
+    "The agreement was based on mutual respect.",
+    "その合意は相互の尊重に基づいていた。",
+    [
+      "mutual respect",
+      "a mutual friend"
+    ],
+    "ラテン語 mutare(変える。change, mutual)。互いに向け合うことが核。a mutual friend は共通の友人。"
+  ],
+  [
+    "namely",
+    "B2",
+    "副詞",
+    [
+      "すなわち",
+      "つまり"
+    ],
+    "/ˈneɪmli/",
+    "Only one country objected, namely the host of the summit.",
+    "1か国だけが反対した。すなわち首脳会議の開催国だ。",
+    [
+      "namely that",
+      "two options, namely"
+    ],
+    "name + -ly。名前を挙げて具体的に示す働き。直前に述べたものの中身を特定するときに使う。"
+  ],
+  [
+    "nationwide",
+    "B2",
+    "形容詞",
+    [
+      "全国的な",
+      "全国で"
+    ],
+    "/ˈneɪʃənˈwaɪd/",
+    "The company launched a nationwide recall of the product.",
+    "その会社はその製品の全国的な回収を開始した。",
+    [
+      "a nationwide survey",
+      "go nationwide"
+    ],
+    "nation + wide。国の隅々まで広がっている、が核。形容詞にも副詞にも使える。"
+  ],
+  [
+    "naval",
+    "B2",
+    "形容詞",
+    [
+      "海軍の"
+    ],
+    "/ˈneɪvəl/",
+    "The port was once an important naval base.",
+    "その港はかつて重要な海軍基地だった。",
+    [
+      "a naval officer",
+      "a naval base"
+    ],
+    "ラテン語 navis(船。navy, navigate)。海軍に関わること。へその navel とは無関係の同音異義語。"
+  ],
+  [
+    "neglect",
+    "B2",
+    "名詞・動詞",
+    [
+      "怠る",
+      "放置",
+      "軽視"
+    ],
+    "/nəˈglɛkt/",
+    "Years of neglect left the building unsafe.",
+    "何年もの放置がその建物を危険な状態にした。",
+    [
+      "neglect a duty",
+      "fall into neglect"
+    ],
+    "neg-(否定)+ lect(選ぶ。select)。選び取らずに放っておくこと。義務にも建物にも使う。"
+  ],
+  [
+    "neighbouring",
+    "B2",
+    "形容詞",
+    [
+      "近隣の",
+      "隣接する"
+    ],
+    "/ˈneɪbɚɪŋ/",
+    "Residents from neighbouring villages joined the search.",
+    "近隣の村の住民が捜索に加わった。",
+    [
+      "a neighbouring country",
+      "neighbouring towns"
+    ],
+    "neighbour の形容詞。名詞の前でのみ使う。米つづりは neighboring。"
+  ],
+  [
+    "nest",
+    "B2",
+    "名詞",
+    [
+      "巣",
+      "巣を作る"
+    ],
+    "/nɛst/",
+    "A pair of swallows built a nest above the door.",
+    "つがいのツバメが扉の上に巣を作った。",
+    [
+      "build a nest",
+      "a nest egg"
+    ],
+    "古英語 nest。鳥が卵を育てる場所。a nest egg は将来のためにためた貯蓄という比喩。"
+  ],
+  [
+    "newsletter",
+    "B2",
+    "名詞",
+    [
+      "会報",
+      "ニュースレター"
+    ],
+    "/ˈnuzlɛtɚ/",
+    "The club sends a short newsletter to members each month.",
+    "そのクラブは毎月、会員に短い会報を送っている。",
+    [
+      "a monthly newsletter",
+      "subscribe to a newsletter"
+    ],
+    "news + letter。関係者だけに定期的に配る短い便り。"
+  ],
+  [
+    "niche",
+    "B2",
+    "名詞",
+    [
+      "すき間",
+      "適所"
+    ],
+    "/nɪtʃ/",
+    "The shop found a niche selling repaired bicycles.",
+    "その店は修理した自転車を売るという適所を見つけた。",
+    [
+      "a niche market",
+      "find one's niche"
+    ],
+    "フランス語 nicher(巣を作る)。壁のくぼみが原義で、そこにぴったり収まる小さな居場所という比喩へ。"
+  ],
+  [
+    "noble",
+    "B2",
+    "形容詞",
+    [
+      "高貴な",
+      "気高い"
+    ],
+    "/ˈnoʊbəl/",
+    "Saving the library was a noble but expensive aim.",
+    "図書館を守ることは気高いが費用のかかる目標だった。",
+    [
+      "a noble cause",
+      "noble birth"
+    ],
+    "ラテン語 nobilis(知られている。know と同語根)。世に知られた家柄が原義で、そこから精神の気高さへ。"
+  ],
+  [
+    "nod",
+    "B2",
+    "動詞",
+    [
+      "うなずく",
+      "うなずき"
+    ],
+    "/nɑd/",
+    "She nodded slowly as he explained the change.",
+    "彼が変更を説明する間、彼女はゆっくりうなずいた。",
+    [
+      "nod in agreement",
+      "give a nod"
+    ],
+    "中英語 nodden。頭を前に倒す動き。同意にも挨拶にも眠気にも使う。"
+  ],
+  [
+    "nominate",
+    "B2",
+    "動詞",
+    [
+      "指名する",
+      "推薦する"
+    ],
+    "/ˈnɑmənət/",
+    "The film was nominated for four awards.",
+    "その映画は4部門で候補に挙がった。",
+    [
+      "be nominated for",
+      "nominate someone as"
+    ],
+    "ラテン語 nomen(名。name, noun)。名を挙げて候補に立てること。"
+  ],
+  [
+    "nomination",
+    "B2",
+    "名詞",
+    [
+      "指名",
+      "推薦"
+    ],
+    "/nɑməˈneɪʃən/",
+    "Her nomination surprised nobody in the department.",
+    "彼女の指名は部内の誰も驚かせなかった。",
+    [
+      "win a nomination",
+      "a nomination for"
+    ],
+    "nominate の名詞。名を挙げる行為にも、挙げられた地位そのものにも使う。"
+  ],
+  [
+    "nominee",
+    "B2",
+    "名詞",
+    [
+      "被指名者",
+      "候補者"
+    ],
+    "/nɑməˈni/",
+    "The nominee will be announced at the end of the month.",
+    "候補者は月末に発表される。",
+    [
+      "a presidential nominee",
+      "the successful nominee"
+    ],
+    "nominate + -ee(される側)。employer と employee と同じ、-er と -ee の対の作り方。"
+  ],
+  [
+    "non-profit",
+    "B2",
+    "形容詞",
+    [
+      "非営利の"
+    ],
+    "/nɑnpˈrɔfɪt/",
+    "She left banking to work for a non-profit organization.",
+    "彼女は銀行を辞めて非営利団体で働くことにした。",
+    [
+      "a non-profit organization",
+      "the non-profit sector"
+    ],
+    "non + profit(利益)。利益を配らず活動目的に充てる組織を指す。英国では non-profit-making とも。"
+  ],
+  [
+    "nonetheless",
+    "B2",
+    "副詞",
+    [
+      "それにもかかわらず"
+    ],
+    "/nʌnðəˈlɛs/",
+    "The evidence is thin. Nonetheless, the theory deserves attention.",
+    "証拠は乏しい。それにもかかわらず、その理論は注目に値する。",
+    [
+      "nonetheless important",
+      "and nonetheless"
+    ],
+    "none the less(それだけ少なくはならない)が一語になった形。前文を認めたうえで逆を続ける。"
+  ],
+  [
+    "nonsense",
+    "B2",
+    "名詞",
+    [
+      "ばかげたこと",
+      "無意味"
+    ],
+    "/ˈnɑnsɛns/",
+    "The claim that the drug cures everything is nonsense.",
+    "その薬が何でも治すという主張はばかげている。",
+    [
+      "complete nonsense",
+      "talk nonsense"
+    ],
+    "non(否定)+ sense(意味)。意味をなさないこと。強く否定するときの日常表現。"
+  ],
+  [
+    "noon",
+    "B2",
+    "名詞",
+    [
+      "正午"
+    ],
+    "/nun/",
+    "The market closes at noon on Sundays.",
+    "その市場は日曜は正午に閉まる。",
+    [
+      "at noon",
+      "by noon"
+    ],
+    "ラテン語 nona hora(第9時)。もとは午後3時ごろを指したが、食事の時刻が早まって正午に移った。"
+  ],
+  [
+    "notable",
+    "B2",
+    "形容詞",
+    [
+      "注目すべき",
+      "著名な"
+    ],
+    "/ˈnoʊtəbəl/",
+    "The report contains one notable exception to the trend.",
+    "その報告書には傾向に対する注目すべき例外が一つある。",
+    [
+      "a notable exception",
+      "notable for"
+    ],
+    "note(気づく、印)+ -able。気づかれるに値する、が核。良い意味で目立つ場合に使う。"
+  ],
+  [
+    "notably",
+    "B2",
+    "副詞",
+    [
+      "特に",
+      "とりわけ"
+    ],
+    "/ˈnoʊtəbli/",
+    "Several countries, notably Japan, cut emissions sharply.",
+    "いくつかの国、とりわけ日本が排出を大きく削減した。",
+    [
+      "most notably",
+      "notably absent"
+    ],
+    "notable の副詞。例を一つ強調して挙げるときの決まった使い方。"
+  ],
+  [
+    "notify",
+    "B2",
+    "動詞",
+    [
+      "通知する",
+      "知らせる"
+    ],
+    "/ˈnoʊtəfaɪ/",
+    "Please notify the office if your address changes.",
+    "住所が変わった場合は事務所に通知してください。",
+    [
+      "notify someone of",
+      "be notified"
+    ],
+    "ラテン語 notus(知られた)+ fy(なす)。相手に知られた状態にすること。tell より公式。"
+  ],
+  [
+    "notorious",
+    "B2",
+    "形容詞",
+    [
+      "悪名高い"
+    ],
+    "/noʊˈtɔriəs/",
+    "The junction is notorious for accidents in wet weather.",
+    "その交差点は雨天時の事故で悪名高い。",
+    [
+      "notorious for",
+      "a notorious case"
+    ],
+    "notable と同語根だが、こちらは悪い理由で知られていること。famous との違いが要点。"
+  ],
+  [
+    "nursery",
+    "B2",
+    "名詞",
+    [
+      "保育園",
+      "苗床"
+    ],
+    "/ˈnɝsɚi/",
+    "The nursery takes children from six months old.",
+    "その保育園は生後6か月から子どもを預かる。",
+    [
+      "a day nursery",
+      "a garden nursery"
+    ],
+    "nurse(育てる)+ -ry(場所)。育てる場所が核。子どもにも植物の苗にも使う。"
+  ],
+  [
+    "objection",
+    "B2",
+    "名詞",
+    [
+      "異議",
+      "反対"
+    ],
+    "/əbˈdʒɛkʃən/",
+    "The lawyer raised an objection to the question.",
+    "弁護士はその質問に異議を唱えた。",
+    [
+      "raise an objection",
+      "have no objection"
+    ],
+    "object(反対する)の名詞。ob-(against)+ ject(投げる)。相手に向けて投げ返す言い分。"
+  ],
+  [
+    "oblige",
+    "B2",
+    "動詞",
+    [
+      "義務づける",
+      "恩恵を施す"
+    ],
+    "/əˈblaɪdʒ/",
+    "The law obliges employers to keep accurate records.",
+    "その法律は雇用主に正確な記録の保持を義務づけている。",
+    [
+      "be obliged to",
+      "much obliged"
+    ],
+    "ob-(〜へ)+ lig(縛る。ligament, ally)。相手に対して縛りつけること。be obliged to do の形が多い。"
+  ],
+  [
+    "obsess",
+    "B2",
+    "動詞",
+    [
+      "取りつく",
+      "頭から離れない"
+    ],
+    "/əbˈsɛs/",
+    "He became obsessed with finishing the project on time.",
+    "彼はその計画を期限内に終えることに取りつかれた。",
+    [
+      "be obsessed with",
+      "obsess over"
+    ],
+    "ob-(前に)+ sess(座る。session)。目の前に居座って離れないこと。be obsessed with の形が中心。"
+  ],
+  [
+    "obsession",
+    "B2",
+    "名詞",
+    [
+      "執着",
+      "強迫観念"
+    ],
+    "/əbˈsɛʃən/",
+    "Her obsession with detail slowed the whole team.",
+    "細部への彼女の執着がチーム全体を遅らせた。",
+    [
+      "an obsession with",
+      "a national obsession"
+    ],
+    "obsess の名詞。ずっと居座って頭から離れない考えや関心を指す。"
+  ],
+  [
+    "occasional",
+    "B2",
+    "形容詞",
+    [
+      "時折の",
+      "たまの"
+    ],
+    "/əˈkeɪʒənəl/",
+    "We get occasional visitors even in the winter months.",
+    "冬の間でさえ、たまに来訪者がある。",
+    [
+      "an occasional visitor",
+      "occasional showers"
+    ],
+    "occasion(機会)の形容詞。ときどき機会が巡ってくる程度の頻度。regular の反対側。"
+  ],
+  [
+    "occurrence",
+    "B2",
+    "名詞",
+    [
+      "出来事",
+      "発生"
+    ],
+    "/əˈkɝəns/",
+    "Flooding here is a rare occurrence in summer.",
+    "ここでは夏の洪水はまれな出来事だ。",
+    [
+      "a rare occurrence",
+      "a common occurrence"
+    ],
+    "occur の名詞。ob-(〜へ)+ cur(走る。current)。目の前に走り出てくること。r を2つ書く綴りに注意。"
+  ],
+  [
+    "odds",
+    "B2",
+    "名詞",
+    [
+      "可能性",
+      "見込み"
+    ],
+    "/ɑdz/",
+    "The odds of winning the top prize are very small.",
+    "最高賞を当てる見込みは非常に小さい。",
+    [
+      "the odds of",
+      "against all odds"
+    ],
+    "odd(不ぞろいの)の複数形。二つの側の不釣り合いの度合いが原義で、賭けの倍率から確率一般へ。"
+  ],
+  [
+    "offering",
+    "B2",
+    "名詞",
+    [
+      "提供物",
+      "供物"
+    ],
+    "/ˈɔfɚɪŋ/",
+    "The company expanded its offering of online courses.",
+    "その会社はオンライン講座の提供内容を拡充した。",
+    [
+      "a new offering",
+      "a religious offering"
+    ],
+    "offer の名詞。差し出されたもの、が核。商品の品ぞろえにも、宗教の供え物にも使う。"
+  ],
+  [
+    "offspring",
+    "B2",
+    "名詞",
+    [
+      "子",
+      "子孫"
+    ],
+    "/ˈɔfsprɪŋ/",
+    "The pair produced three offspring in a single season.",
+    "そのつがいは1つの季節に3匹の子を産んだ。",
+    [
+      "produce offspring",
+      "their offspring"
+    ],
+    "off(離れて)+ spring(跳ね出る)。親から生まれ出たもの。単複同形で、生物学の文脈でよく使う。"
+  ],
+  [
+    "operational",
+    "B2",
+    "形容詞",
+    [
+      "稼働中の",
+      "運用上の"
+    ],
+    "/ɑpɚˈeɪʃənəl/",
+    "The new terminal will be fully operational by spring.",
+    "新しいターミナルは春までに完全に稼働する。",
+    [
+      "fully operational",
+      "operational costs"
+    ],
+    "operation の形容詞。実際に動いている状態、または現場の運用に関わること。"
+  ],
+  [
+    "opt",
+    "B2",
+    "動詞",
+    [
+      "選ぶ"
+    ],
+    "/ɑpt/",
+    "Most families opted for the cheaper package.",
+    "ほとんどの家族はより安い商品を選んだ。",
+    [
+      "opt for",
+      "opt out"
+    ],
+    "ラテン語 optare(選ぶ。option, adopt)。複数の中から一つを選び取ること。opt for と opt out で覚える。"
+  ],
+  [
+    "optical",
+    "B2",
+    "形容詞",
+    [
+      "光学の",
+      "視覚の"
+    ],
+    "/ˈɑptɪkəl/",
+    "The lens is made of a special optical glass.",
+    "そのレンズは特殊な光学ガラスでできている。",
+    [
+      "an optical illusion",
+      "optical fibre"
+    ],
+    "ギリシャ語 optos(見える)。目や光の扱いに関わること。an optical illusion は錯覚。"
+  ],
+  [
+    "optimism",
+    "B2",
+    "名詞",
+    [
+      "楽観",
+      "楽観主義"
+    ],
+    "/ˈɑptəmɪzəm/",
+    "There is cautious optimism about the harvest this year.",
+    "今年の収穫については慎重ながら楽観がある。",
+    [
+      "cautious optimism",
+      "a mood of optimism"
+    ],
+    "ラテン語 optimus(最善)。ものごとは最善に向かうと見る構え。pessimism と対で覚える。"
+  ],
+  [
+    "oral",
+    "B2",
+    "形容詞",
+    [
+      "口頭の",
+      "口の"
+    ],
+    "/ˈɔrəl/",
+    "Students take a short oral exam at the end of term.",
+    "学生は学期末に短い口頭試験を受ける。",
+    [
+      "an oral exam",
+      "oral history"
+    ],
+    "ラテン語 os, oris(口)。書くのではなく口を使うこと。聴覚の aural と同音なので文脈で見分ける。"
+  ],
+  [
+    "organizational",
+    "B2",
+    "形容詞",
+    [
+      "組織の",
+      "組織上の"
+    ],
+    "/ɔrgənəˈzeɪʃənəl/",
+    "The failure was organizational, not technical.",
+    "その失敗は技術ではなく組織上のものだった。",
+    [
+      "organizational change",
+      "organizational skills"
+    ],
+    "organization の形容詞。ギリシャ語 organon(道具、器官)。部品が役割を持って組み合わさった仕組みに関わること。"
+  ],
+  [
+    "orientation",
+    "B2",
+    "名詞",
+    [
+      "方向づけ",
+      "新人研修"
+    ],
+    "/ɔriɛnˈteɪʃən/",
+    "New staff attend a two-day orientation before starting.",
+    "新入職員は勤務開始前に2日間の研修を受ける。",
+    [
+      "sexual orientation",
+      "an orientation programme"
+    ],
+    "ラテン語 oriens(日の出る東)。東を基準に向きを定めたのが原義。どちらを向いているかが核。"
+  ],
+  [
+    "originate",
+    "B2",
+    "動詞",
+    [
+      "始まる",
+      "由来する"
+    ],
+    "/ɚˈɪdʒəneɪt/",
+    "The custom originated in the fishing villages of the north.",
+    "その習慣は北部の漁村で始まった。",
+    [
+      "originate from",
+      "originate in"
+    ],
+    "origin(起こり)+ -ate。ラテン語 oriri(生じる)。どこから生まれたかをたどる語。"
+  ],
+  [
+    "outbreak",
+    "B2",
+    "名詞",
+    [
+      "発生",
+      "勃発"
+    ],
+    "/ˈaʊtbreɪk/",
+    "An outbreak of food poisoning closed the restaurant.",
+    "食中毒の発生がそのレストランを閉鎖させた。",
+    [
+      "an outbreak of",
+      "a disease outbreak"
+    ],
+    "out + break。内にたまっていたものが一気に外へ破れ出ること。病気や戦争など悪いことに使う。"
+  ],
+  [
+    "outing",
+    "B2",
+    "名詞",
+    [
+      "遠出",
+      "外出"
+    ],
+    "/ˈaʊtɪŋ/",
+    "The class went on an outing to the science museum.",
+    "そのクラスは科学館へ遠足に出かけた。",
+    [
+      "a family outing",
+      "go on an outing"
+    ],
+    "out + -ing。一日で帰ってくる程度の気軽な外出。旅行 trip より短く、楽しみが目的。"
+  ],
+  [
+    "outlet",
+    "B2",
+    "名詞",
+    [
+      "はけ口",
+      "直販店",
+      "コンセント"
+    ],
+    "/ˈaʊtlɛt/",
+    "Painting gave him an outlet for his frustration.",
+    "絵を描くことは彼にいら立ちのはけ口を与えた。",
+    [
+      "an outlet for",
+      "a retail outlet"
+    ],
+    "out + let(出す)。中のものを外へ出す口が核。感情のはけ口にも、商品を出す店にも使う。"
+  ],
+  [
+    "outlook",
+    "B2",
+    "名詞",
+    [
+      "見通し",
+      "考え方"
+    ],
+    "/ˈaʊtlʊk/",
+    "The economic outlook for next year remains uncertain.",
+    "来年の経済見通しは依然として不透明だ。",
+    [
+      "the outlook for",
+      "a positive outlook"
+    ],
+    "out + look。外を見渡した眺めが原義で、そこから将来の見通しや物の見方へ。"
+  ],
+  [
+    "outrage",
+    "B2",
+    "名詞・動詞",
+    [
+      "激怒",
+      "憤慨させる"
+    ],
+    "/ˈaʊtreɪdʒ/",
+    "The decision provoked outrage among local families.",
+    "その決定は地元の家族の間に激しい怒りを引き起こした。",
+    [
+      "public outrage",
+      "cause outrage"
+    ],
+    "フランス語 outre(度を越す)。out とは無関係で、限度を超えた行為とそれへの怒りを指す。"
+  ],
+  [
+    "outsider",
+    "B2",
+    "名詞",
+    [
+      "部外者",
+      "勝ち目の薄い者"
+    ],
+    "/aʊtˈsaɪdɚ/",
+    "As an outsider, she noticed things the staff had stopped seeing.",
+    "部外者として、彼女は職員が見なくなっていたことに気づいた。",
+    [
+      "a complete outsider",
+      "a rank outsider"
+    ],
+    "outside + -er。集団の外にいる人。競技では優勝候補でない側を指す。"
+  ],
+  [
+    "overlook",
+    "B2",
+    "動詞",
+    [
+      "見落とす",
+      "見渡す"
+    ],
+    "/ˈoʊvɚlʊk/",
+    "It is easy to overlook a small error in a long list.",
+    "長い一覧の中の小さな誤りは見落としやすい。",
+    [
+      "overlook a mistake",
+      "overlook the sea"
+    ],
+    "over(上を)+ look。上を通り過ぎて見てしまうから見落とし、高い所から見るから見渡す、と二つの意味が並ぶ。"
+  ],
+  [
+    "overly",
+    "B2",
+    "副詞",
+    [
+      "過度に",
+      "あまりに"
+    ],
+    "/ˈoʊvɚli/",
+    "The instructions are not overly complicated.",
+    "その説明はさほど複雑ではない。",
+    [
+      "overly cautious",
+      "not overly"
+    ],
+    "over + -ly。度を越して、が核。否定文に添えて「そこまで〜ではない」と和らげる使い方が多い。"
+  ],
+  [
+    "oversee",
+    "B2",
+    "動詞",
+    [
+      "監督する",
+      "統括する"
+    ],
+    "/ˈoʊvɚsi/",
+    "She oversees all building work across the region.",
+    "彼女は地域全体の建築工事を統括している。",
+    [
+      "oversee a project",
+      "oversee the work"
+    ],
+    "over(上から)+ see。上から目を配って全体を見ること。overlook の「見落とす」とは逆なので注意。"
+  ],
+  [
+    "overturn",
+    "B2",
+    "動詞",
+    [
+      "覆す",
+      "ひっくり返す"
+    ],
+    "/ˈoʊvɚtɝn/",
+    "The appeal court overturned the earlier decision.",
+    "控訴裁判所は以前の判決を覆した。",
+    [
+      "overturn a ruling",
+      "overturn a decision"
+    ],
+    "over + turn。ひっくり返すことが核。判決や結果をくつがえす文脈で特によく使う。"
+  ],
+  [
+    "overwhelm",
+    "B2",
+    "動詞",
+    [
+      "圧倒する",
+      "打ちのめす"
+    ],
+    "/oʊvɚˈwɛlm/",
+    "The small clinic was overwhelmed by the number of patients.",
+    "その小さな診療所は患者の数に圧倒された。",
+    [
+      "be overwhelmed by",
+      "overwhelm the system"
+    ],
+    "over + whelm(覆いかぶさる)。波がかぶさって身動きが取れなくなる感じ。"
+  ],
+  [
+    "overwhelming",
+    "B2",
+    "形容詞",
+    [
+      "圧倒的な",
+      "抗しがたい"
+    ],
+    "/oʊvɚˈwɛlmɪŋ/",
+    "The proposal passed with overwhelming support.",
+    "その提案は圧倒的な支持で可決された。",
+    [
+      "an overwhelming majority",
+      "overwhelming evidence"
+    ],
+    "overwhelm の形容詞。数や量が多すぎて抵抗できない、が核。"
+  ],
+  [
+    "pad",
+    "B2",
+    "名詞",
+    [
+      "当て物",
+      "パッド"
+    ],
+    "/pæd/",
+    "She put a soft pad under the heavy vase.",
+    "彼女は重い花瓶の下に柔らかい当て物を置いた。",
+    [
+      "a shoulder pad",
+      "a mouse pad"
+    ],
+    "低地ドイツ語 pad(足の裏)由来とされる。衝撃を受け止める柔らかい平たいもの。"
+  ],
+  [
+    "parameter",
+    "B2",
+    "名詞",
+    [
+      "要因",
+      "範囲",
+      "媒介変数"
+    ],
+    "/pɚˈæmətɚ/",
+    "The team worked within tight budget parameters.",
+    "そのチームは厳しい予算の枠内で作業した。",
+    [
+      "set the parameters",
+      "within the parameters"
+    ],
+    "para-(そばに)+ meter(測る)。測る際の基準となる値、が核。日常では「条件の枠」を指す。"
+  ],
+  [
+    "parental",
+    "B2",
+    "形容詞",
+    [
+      "親の",
+      "親としての"
+    ],
+    "/pɚˈɛntəl/",
+    "Parental consent is required for students under sixteen.",
+    "16歳未満の生徒には親の同意が必要だ。",
+    [
+      "parental leave",
+      "parental consent"
+    ],
+    "parent の形容詞。ラテン語 parere(産む)。親の立場や責任に関わること。"
+  ],
+  [
+    "parish",
+    "B2",
+    "名詞",
+    [
+      "教区"
+    ],
+    "/ˈpærɪʃ/",
+    "The village belongs to a parish of about two thousand people.",
+    "その村は約2000人の教区に属している。",
+    [
+      "a parish church",
+      "a rural parish"
+    ],
+    "ギリシャ語 paroikia(近隣の住まい)。教会を中心とした地域の単位で、英国では行政の最小単位でもある。"
+  ],
+  [
+    "parliamentary",
+    "B2",
+    "形容詞",
+    [
+      "議会の"
+    ],
+    "/pɑrləˈmɛntɚi/",
+    "A parliamentary committee will examine the evidence.",
+    "議会の委員会がその証拠を精査する。",
+    [
+      "a parliamentary election",
+      "parliamentary debate"
+    ],
+    "parliament の形容詞。フランス語 parler(話す)。話し合う場に関わること。"
+  ],
+  [
+    "partial",
+    "B2",
+    "形容詞",
+    [
+      "部分的な",
+      "偏った"
+    ],
+    "/ˈpɑrʃəl/",
+    "We only have a partial record of the meeting.",
+    "私たちはその会議の部分的な記録しか持っていない。",
+    [
+      "a partial refund",
+      "partial to"
+    ],
+    "ラテン語 pars(部分。part)。全体ではない、が核。人に対して使うと「えこひいきする」の意味になる。"
+  ],
+  [
+    "partially",
+    "B2",
+    "副詞",
+    [
+      "部分的に",
+      "一部"
+    ],
+    "/ˈpɑrʃəli/",
+    "The road is partially closed for repairs.",
+    "その道路は修理のため一部閉鎖されている。",
+    [
+      "partially blind",
+      "partially closed"
+    ],
+    "partial の副詞。完全ではないが少しはそうだ、という程度を表す。"
+  ],
+  [
+    "passing",
+    "B2",
+    "名詞",
+    [
+      "通り過ぎること",
+      "逝去"
+    ],
+    "/ˈpæsɪŋ/",
+    "He made only a passing reference to the earlier report.",
+    "彼は以前の報告に軽く触れただけだった。",
+    [
+      "a passing remark",
+      "in passing"
+    ],
+    "pass の名詞。通り過ぎるだけの短さが核。in passing で「ついでに」。死を婉曲に指す用法もある。"
+  ],
+  [
+    "passive",
+    "B2",
+    "形容詞",
+    [
+      "受動的な",
+      "消極的な"
+    ],
+    "/ˈpæsɪv/",
+    "She took a passive role in most of the discussions.",
+    "彼女はほとんどの議論で受け身の役割にとどまった。",
+    [
+      "a passive role",
+      "passive smoking"
+    ],
+    "ラテン語 pati(受ける。patient, passion)。自分から動かず受ける側に回ること。active の反対。"
+  ],
+  [
+    "pastor",
+    "B2",
+    "名詞",
+    [
+      "牧師"
+    ],
+    "/ˈpæstɚ/",
+    "The pastor visits elderly members of the congregation weekly.",
+    "その牧師は毎週、教会の高齢の信徒を訪ねている。",
+    [
+      "a local pastor",
+      "the pastor of"
+    ],
+    "ラテン語 pastor(羊飼い)。信徒を羊の群れに見立て、それを導く人という発想。"
+  ],
+  [
+    "patch",
+    "B2",
+    "名詞",
+    [
+      "継ぎ当て",
+      "区画",
+      "修正"
+    ],
+    "/pætʃ/",
+    "A small patch of blue appeared in the grey sky.",
+    "灰色の空に小さな青い部分が現れた。",
+    [
+      "a patch of grass",
+      "a rough patch"
+    ],
+    "古英語由来で、布の継ぎ当てが原義。地面の一区画にも、ソフトの修正プログラムにも使う。"
+  ],
+  [
+    "patent",
+    "B2",
+    "名詞",
+    [
+      "特許"
+    ],
+    "/ˈpætənt/",
+    "The company holds a patent on the folding mechanism.",
+    "その会社はその折りたたみ機構の特許を保有している。",
+    [
+      "apply for a patent",
+      "a patent holder"
+    ],
+    "ラテン語 patere(開いている)。公開状 letters patent が原義で、発明を公開する代わりに独占を認める仕組み。"
+  ],
+  [
+    "pathway",
+    "B2",
+    "名詞",
+    [
+      "経路",
+      "進路"
+    ],
+    "/ˈpæθweɪ/",
+    "The course offers a clear pathway into higher education.",
+    "その課程は高等教育への明確な道筋を用意している。",
+    [
+      "a career pathway",
+      "a pathway to"
+    ],
+    "path + way。ある地点へ至る道筋。進路や生化学の反応経路など、比喩で使うことが多い。"
+  ],
+  [
+    "patrol",
+    "B2",
+    "名詞・動詞",
+    [
+      "巡回する",
+      "パトロール"
+    ],
+    "/pəˈtroʊl/",
+    "Guards patrol the grounds twice each night.",
+    "警備員は毎晩2回、敷地内を巡回する。",
+    [
+      "on patrol",
+      "patrol the streets"
+    ],
+    "フランス語 patrouiller(泥の中を歩き回る)。決まった経路を繰り返し回ること。"
+  ],
+  [
+    "patron",
+    "B2",
+    "名詞",
+    [
+      "後援者",
+      "常連客"
+    ],
+    "/ˈpeɪtrən/",
+    "A wealthy patron paid for the restoration of the chapel.",
+    "裕福な後援者が礼拝堂の修復費用を負担した。",
+    [
+      "a patron of the arts",
+      "a regular patron"
+    ],
+    "ラテン語 pater(父。paternal)。父のように支える人。芸術の資金提供者にも、店の常連にも使う。"
+  ],
+  [
+    "peak",
+    "B2",
+    "名詞",
+    [
+      "頂点",
+      "最高点"
+    ],
+    "/pik/",
+    "Traffic reaches its peak between eight and nine.",
+    "交通量は8時から9時の間に最高になる。",
+    [
+      "reach a peak",
+      "peak hours"
+    ],
+    "pike(とがったもの)の変形。山の頂が核で、数値の最高点にも使う。"
+  ],
+  [
+    "peasant",
+    "B2",
+    "名詞",
+    [
+      "小作農",
+      "農民"
+    ],
+    "/ˈpɛzənt/",
+    "The novel describes the hard life of peasant families.",
+    "その小説は小作農の家族の厳しい暮らしを描いている。",
+    [
+      "a peasant farmer",
+      "peasant life"
+    ],
+    "ラテン語 pagus(田舎の地区)。歴史的な文脈で使う語で、現代の農家には farmer を使う。"
+  ],
+  [
+    "peculiar",
+    "B2",
+    "形容詞",
+    [
+      "奇妙な",
+      "特有の"
+    ],
+    "/pəkˈjuljɚ/",
+    "There was a peculiar smell coming from the cellar.",
+    "地下室から奇妙な匂いが漂ってきた。",
+    [
+      "peculiar to",
+      "a peculiar habit"
+    ],
+    "ラテン語 peculium(私有の家畜)。もとは自分だけのもの、が原義で、そこから「独特な、風変わりな」へ。"
+  ],
+  [
+    "persist",
+    "B2",
+    "動詞",
+    [
+      "持続する",
+      "固執する"
+    ],
+    "/pɚˈsɪst/",
+    "The pain persisted for several weeks after the injury.",
+    "負傷後、痛みは数週間続いた。",
+    [
+      "persist in",
+      "persist with"
+    ],
+    "per-(通して)+ sist(立つ。resist, assist)。ずっと立ち続けること。物事にも人の態度にも使う。"
+  ],
+  [
+    "persistent",
+    "B2",
+    "形容詞",
+    [
+      "粘り強い",
+      "しつこい"
+    ],
+    "/pɚˈsɪstənt/",
+    "Persistent rain delayed the start of the match.",
+    "降り続く雨が試合の開始を遅らせた。",
+    [
+      "persistent problems",
+      "a persistent cough"
+    ],
+    "persist の形容詞。やめずに続く、が核。人なら粘り強い、症状ならなかなか治らない。"
+  ],
+  [
+    "personnel",
+    "B2",
+    "名詞",
+    [
+      "人員",
+      "人事部"
+    ],
+    "/pɝsəˈnɛl/",
+    "The company cut personnel costs by a fifth.",
+    "その会社は人件費を5分の1削減した。",
+    [
+      "personnel costs",
+      "military personnel"
+    ],
+    "フランス語由来で、personal と綴りも意味も紛らわしい。組織で働く人々の集合を指し、複数扱い。"
+  ],
+  [
+    "petition",
+    "B2",
+    "名詞",
+    [
+      "請願",
+      "嘆願書"
+    ],
+    "/pəˈtɪʃən/",
+    "More than ten thousand people signed the petition.",
+    "1万人以上がその請願書に署名した。",
+    [
+      "sign a petition",
+      "a petition against"
+    ],
+    "ラテン語 petere(求める。appetite, compete)。公に願い出ること、またその文書。"
+  ],
+  [
+    "philosopher",
+    "B2",
+    "名詞",
+    [
+      "哲学者"
+    ],
+    "/fəˈlɑsəfɚ/",
+    "The philosopher argued that language shapes thought.",
+    "その哲学者は言語が思考を形づくると論じた。",
+    [
+      "a Greek philosopher",
+      "a moral philosopher"
+    ],
+    "ギリシャ語 philos(愛する)+ sophia(知)。知を愛する人、が語源そのまま。"
+  ],
+  [
+    "philosophical",
+    "B2",
+    "形容詞",
+    [
+      "哲学的な",
+      "達観した"
+    ],
+    "/fɪləˈsɑfɪkəl/",
+    "He was philosophical about losing the contract.",
+    "彼は契約を失ったことについて達観していた。",
+    [
+      "a philosophical question",
+      "philosophical about"
+    ],
+    "philosophy の形容詞。学問としての意味のほか、悪い結果を冷静に受け入れる態度も表す。"
+  ],
+  [
+    "physician",
+    "B2",
+    "名詞",
+    [
+      "内科医",
+      "医師"
+    ],
+    "/fəˈzɪʃən/",
+    "Her physician advised a complete rest for two weeks.",
+    "彼女の主治医は2週間の完全な休養を勧めた。",
+    [
+      "a family physician",
+      "consult a physician"
+    ],
+    "ギリシャ語 physis(自然)。自然の理から体を診る人、が原義。外科医 surgeon と対で使う硬い語。"
+  ],
+  [
+    "pioneer",
+    "B2",
+    "名詞・動詞",
+    [
+      "先駆者",
+      "切り開く"
+    ],
+    "/paɪəˈnɪr/",
+    "She pioneered the use of computers in language teaching.",
+    "彼女は語学教育でのコンピューター利用を切り開いた。",
+    [
+      "a pioneer in",
+      "pioneer a method"
+    ],
+    "フランス語 pionnier(工兵)。軍の前を進んで道を作る兵が原義。新しい分野を最初に開く人。"
+  ],
+  [
+    "pipeline",
+    "B2",
+    "名詞",
+    [
+      "パイプライン",
+      "進行中の計画"
+    ],
+    "/ˈpaɪplaɪn/",
+    "Several new products are already in the pipeline.",
+    "いくつかの新製品がすでに準備段階に入っている。",
+    [
+      "in the pipeline",
+      "an oil pipeline"
+    ],
+    "pipe + line。管でつないだ輸送路が原義で、in the pipeline なら「準備中」。"
+  ],
+  [
+    "pirate",
+    "B2",
+    "名詞",
+    [
+      "海賊",
+      "著作権侵害者"
+    ],
+    "/ˈpaɪrət/",
+    "Pirates once controlled the trade routes along this coast.",
+    "かつて海賊がこの海岸沿いの交易路を支配していた。",
+    [
+      "a pirate ship",
+      "software piracy"
+    ],
+    "ギリシャ語 peira(試みる、襲う)。船を襲う者が原義で、今は無断複製する者も指す。"
+  ],
+  [
+    "pit",
+    "B2",
+    "名詞",
+    [
+      "穴",
+      "くぼみ"
+    ],
+    "/pɪt/",
+    "Workers dug a deep pit for the foundations.",
+    "作業員は基礎のために深い穴を掘った。",
+    [
+      "a gravel pit",
+      "the pit of one's stomach"
+    ],
+    "古英語 pytt(穴)。地面のくぼみが核。炭鉱にも、競技場のピットにも使う。"
+  ],
+  [
+    "plea",
+    "B2",
+    "名詞",
+    [
+      "嘆願",
+      "申し立て"
+    ],
+    "/pli/",
+    "Her plea for more time was refused.",
+    "もっと時間をという彼女の願いは断られた。",
+    [
+      "a plea for help",
+      "enter a plea"
+    ],
+    "plead の名詞。ラテン語 placere(気に入る。please)。心を動かそうと差し出す言葉。法廷では答弁。"
+  ],
+  [
+    "plead",
+    "B2",
+    "動詞",
+    [
+      "嘆願する",
+      "申し立てる"
+    ],
+    "/plid/",
+    "He pleaded with the committee to reconsider.",
+    "彼は委員会に再考するよう懇願した。",
+    [
+      "plead with",
+      "plead guilty"
+    ],
+    "plea の動詞。相手の心を動かそうと必死に頼むこと。法廷では有罪か無罪かを表明すること。"
+  ],
+  [
+    "pledge",
+    "B2",
+    "名詞・動詞",
+    [
+      "誓約",
+      "約束する"
+    ],
+    "/plɛdʒ/",
+    "The government pledged to build ten thousand homes.",
+    "政府は1万戸の住宅を建設すると約束した。",
+    [
+      "pledge support",
+      "make a pledge"
+    ],
+    "ラテン語 plebium(保証)。担保を差し出すほど固い約束、が核。promise より公式で重い。"
+  ],
+  [
+    "plug",
+    "B2",
+    "名詞・動詞",
+    [
+      "差し込む",
+      "栓"
+    ],
+    "/plʌg/",
+    "Plug the cable into the socket on the left.",
+    "ケーブルを左側の差込口に差し込んでください。",
+    [
+      "plug in",
+      "pull the plug"
+    ],
+    "オランダ語 plugge(栓)。穴をふさぐものが核。電源のプラグも、宣伝を差し込む意味も同じ発想。"
+  ],
+  [
+    "plunge",
+    "B2",
+    "動詞",
+    [
+      "突っ込む",
+      "急落する"
+    ],
+    "/plʌndʒ/",
+    "Share prices plunged after the announcement.",
+    "発表の後、株価は急落した。",
+    [
+      "plunge into",
+      "a sharp plunge"
+    ],
+    "ラテン語 plumbum(鉛)。鉛のおもりのように一気に落ちること。数値の急落にもよく使う。"
+  ],
+  [
+    "pole",
+    "B2",
+    "名詞",
+    [
+      "棒",
+      "極"
+    ],
+    "/poʊl/",
+    "A tall pole marks the corner of the field.",
+    "高い棒がその畑の角を示している。",
+    [
+      "a telegraph pole",
+      "the North Pole"
+    ],
+    "ラテン語 palus(杭)と polus(軸)の二系統が同じ綴りになった語。細長い棒と、地球の南北の極。"
+  ],
+  [
+    "poll",
+    "B2",
+    "名詞",
+    [
+      "世論調査",
+      "投票"
+    ],
+    "/poʊl/",
+    "A recent poll suggests opinion is evenly divided.",
+    "最近の世論調査は意見が二分していることを示している。",
+    [
+      "an opinion poll",
+      "go to the polls"
+    ],
+    "中英語 polle(頭)。頭数を数えることが原義で、そこから投票と世論調査へ。"
+  ],
+  [
+    "pond",
+    "B2",
+    "名詞",
+    [
+      "池"
+    ],
+    "/pɑnd/",
+    "Ducks gather on the pond behind the school.",
+    "学校の裏の池にカモが集まる。",
+    [
+      "a garden pond",
+      "a duck pond"
+    ],
+    "pound(囲い)の変形。囲って水をためた場所が核。lake より小さく、人が作ったものも多い。"
+  ],
+  [
+    "portfolio",
+    "B2",
+    "名詞",
+    [
+      "作品集",
+      "資産構成"
+    ],
+    "/pɔrtˈfoʊlioʊ/",
+    "She brought a portfolio of her recent designs.",
+    "彼女は最近の設計をまとめた作品集を持参した。",
+    [
+      "an investment portfolio",
+      "a design portfolio"
+    ],
+    "イタリア語 portare(運ぶ)+ foglio(紙)。紙を運ぶ入れ物が原義。作品集にも保有資産の組み合わせにも使う。"
+  ],
+  [
+    "portray",
+    "B2",
+    "動詞",
+    [
+      "描く",
+      "演じる"
+    ],
+    "/pɔrtˈreɪ/",
+    "The film portrays the town as it was in the 1930s.",
+    "その映画は1930年代当時のその町を描いている。",
+    [
+      "portray as",
+      "accurately portray"
+    ],
+    "por-(前へ)+ tray(引く。trace, portrait)。線を引いて姿を写し取ること。"
+  ],
+  [
+    "post-war",
+    "B2",
+    "形容詞",
+    [
+      "戦後の"
+    ],
+    "/ˈpoʊstˈwɔr/",
+    "Post-war housing was built quickly and cheaply.",
+    "戦後の住宅は速く安く建てられた。",
+    [
+      "the post-war period",
+      "post-war reconstruction"
+    ],
+    "post(後)+ war。特に第二次世界大戦後を指すことが多い。pre-war と対で覚える。"
+  ],
+  [
+    "postpone",
+    "B2",
+    "動詞",
+    [
+      "延期する"
+    ],
+    "/poʊstˈpoʊn/",
+    "The concert was postponed until the following month.",
+    "その演奏会は翌月まで延期された。",
+    [
+      "postpone a meeting",
+      "be postponed until"
+    ],
+    "post(後に)+ pone(置く。position, component)。予定を後ろに置き直すこと。"
+  ],
+  [
+    "practitioner",
+    "B2",
+    "名詞",
+    [
+      "開業者",
+      "実践者"
+    ],
+    "/prækˈtɪʃənɚ/",
+    "The clinic employs three general practitioners.",
+    "その診療所は3人の一般開業医を雇っている。",
+    [
+      "a general practitioner",
+      "a legal practitioner"
+    ],
+    "practice + -er。理論ではなく実務を行う人。医療と法律の分野でよく使う。"
+  ],
+  [
+    "preach",
+    "B2",
+    "動詞",
+    [
+      "説教する",
+      "説く"
+    ],
+    "/pritʃ/",
+    "The book preaches patience above every other virtue.",
+    "その本は何よりも忍耐を説いている。",
+    [
+      "preach to",
+      "preach about"
+    ],
+    "ラテン語 praedicare(公に告げる)。pre-(前で)+ dic(言う)。人前で教えを述べること。"
+  ],
+  [
+    "precedent",
+    "B2",
+    "名詞",
+    [
+      "前例",
+      "先例"
+    ],
+    "/ˈprɛsɪdənt/",
+    "The ruling sets an important precedent for future cases.",
+    "その判決は今後の事件に重要な先例を残す。",
+    [
+      "set a precedent",
+      "without precedent"
+    ],
+    "pre-(前に)+ ced(行く。proceed)。先に行った例、が語源そのまま。法律と行政で特によく使う。"
+  ],
+  [
+    "precision",
+    "B2",
+    "名詞",
+    [
+      "正確さ",
+      "精密さ"
+    ],
+    "/priˈsɪʒən/",
+    "The parts are cut with great precision.",
+    "その部品は非常に高い精度で切り出されている。",
+    [
+      "with precision",
+      "precision engineering"
+    ],
+    "precise の名詞。pre-(前もって)+ cis(切る。scissors)。あらかじめきっちり切りそろえてある感じ。"
+  ],
+  [
+    "predator",
+    "B2",
+    "名詞",
+    [
+      "捕食者"
+    ],
+    "/ˈprɛdətɚ/",
+    "Wolves are the main predator of deer in this forest.",
+    "オオカミはこの森でシカの主な捕食者だ。",
+    [
+      "a natural predator",
+      "a top predator"
+    ],
+    "ラテン語 praeda(獲物)。他の動物を捕らえて食べる側。企業買収の比喩でも使う。"
+  ],
+  [
+    "predecessor",
+    "B2",
+    "名詞",
+    [
+      "前任者",
+      "前身"
+    ],
+    "/ˈprɛdəsɛsɚ/",
+    "Her predecessor had left the department in good order.",
+    "彼女の前任者はその部署を良好な状態で引き継いでいた。",
+    [
+      "my predecessor",
+      "a direct predecessor"
+    ],
+    "pre-(前に)+ decess(去る)。先に去った人、が語源。後任は successor。"
+  ],
+  [
+    "predominantly",
+    "B2",
+    "副詞",
+    [
+      "主に",
+      "大部分は"
+    ],
+    "/prɪˈdɑmənəntli/",
+    "The audience was predominantly made up of students.",
+    "聴衆は主に学生で構成されていた。",
+    [
+      "predominantly male",
+      "predominantly rural"
+    ],
+    "pre-(前に)+ domin(支配する)。他を押さえて目立っている、が核。mainly の硬い言い換え。"
+  ],
+  [
+    "pregnancy",
+    "B2",
+    "名詞",
+    [
+      "妊娠"
+    ],
+    "/ˈprɛgnənsi/",
+    "She continued working through most of her pregnancy.",
+    "彼女は妊娠期間の大半を通じて働き続けた。",
+    [
+      "during pregnancy",
+      "an unplanned pregnancy"
+    ],
+    "pre-(前に)+ gna(生まれる。genesis)。生まれる前の期間、が語源そのまま。"
+  ],
+  [
+    "prejudice",
+    "B2",
+    "名詞",
+    [
+      "偏見"
+    ],
+    "/ˈprɛdʒədɪs/",
+    "The training aims to reduce prejudice in hiring.",
+    "その研修は採用における偏見を減らすことを目指す。",
+    [
+      "racial prejudice",
+      "prejudice against"
+    ],
+    "pre-(前に)+ judice(判断。judge)。知る前に下してしまった判断、が語源そのまま。"
+  ],
+  [
+    "preliminary",
+    "B2",
+    "形容詞",
+    [
+      "予備の",
+      "予選の"
+    ],
+    "/prɪˈlɪmənɛri/",
+    "Preliminary results suggest the treatment is safe.",
+    "予備的な結果はその治療が安全であることを示している。",
+    [
+      "preliminary findings",
+      "a preliminary round"
+    ],
+    "pre-(前に)+ limin(敷居。eliminate)。敷居をまたぐ前の段階。本番の前に置かれるもの。"
+  ],
+  [
+    "premier",
+    "B2",
+    "形容詞",
+    [
+      "第一の",
+      "最高の"
+    ],
+    "/prɛˈmɪr/",
+    "The city hosts the country's premier film festival.",
+    "その都市は国内最高の映画祭を主催している。",
+    [
+      "a premier league",
+      "the premier event"
+    ],
+    "ラテン語 primus(第一の。prime, primary)。順位が一番であること。名詞では首相を指す。"
+  ],
+  [
+    "premise",
+    "B2",
+    "名詞",
+    [
+      "前提"
+    ],
+    "/ˈprɛmɪs/",
+    "The argument rests on a shaky premise.",
+    "その議論は不確かな前提の上に成り立っている。",
+    [
+      "a basic premise",
+      "on the premise that"
+    ],
+    "pre-(前に)+ mise(置く。mission)。議論の前に置く土台。複数形 premises は建物や敷地という別の意味。"
+  ],
+  [
+    "premium",
+    "B2",
+    "名詞",
+    [
+      "割増金",
+      "高級な"
+    ],
+    "/ˈprimiəm/",
+    "Customers pay a premium for next-day delivery.",
+    "顧客は翌日配送のために割増料金を払う。",
+    [
+      "a premium brand",
+      "at a premium"
+    ],
+    "ラテン語 praemium(褒賞)。上乗せされる分が核。保険料にも、高級品を指す形容詞にも使う。"
+  ],
+  [
+    "prescribe",
+    "B2",
+    "動詞",
+    [
+      "処方する",
+      "規定する"
+    ],
+    "/prəˈskraɪb/",
+    "The doctor prescribed a short course of antibiotics.",
+    "医師は抗生物質の短期の投与を処方した。",
+    [
+      "prescribe medicine",
+      "prescribe rules"
+    ],
+    "pre-(前に)+ scribe(書く。describe)。あらかじめ書いて指示すること。薬にも規則にも使う。"
+  ],
+  [
+    "prescription",
+    "B2",
+    "名詞",
+    [
+      "処方箋",
+      "規定"
+    ],
+    "/prəˈskrɪpʃən/",
+    "You need a prescription for this medicine.",
+    "この薬には処方箋が必要だ。",
+    [
+      "a repeat prescription",
+      "on prescription"
+    ],
+    "prescribe の名詞。医師が前もって書いた指示書。比喩で「解決の処方箋」にも使う。"
+  ],
+  [
+    "presently",
+    "B2",
+    "副詞",
+    [
+      "まもなく",
+      "現在"
+    ],
+    "/ˈprɛzəntli/",
+    "The manager will be with you presently.",
+    "責任者がまもなく参ります。",
+    [
+      "presently available",
+      "will presently"
+    ],
+    "present(その場にある)+ -ly。英国では「まもなく」、米国では「現在」の意味が優勢で、文脈で判断する。"
+  ],
+  [
+    "preservation",
+    "B2",
+    "名詞",
+    [
+      "保存",
+      "保護"
+    ],
+    "/prɛzɚˈveɪʃən/",
+    "The trust works for the preservation of old woodland.",
+    "そのトラストは古い森林の保護に取り組んでいる。",
+    [
+      "the preservation of",
+      "food preservation"
+    ],
+    "preserve の名詞。pre-(前もって)+ serve(保つ)。傷まないよう先手を打って守ること。"
+  ],
+  [
+    "preside",
+    "B2",
+    "動詞",
+    [
+      "議長を務める",
+      "統括する"
+    ],
+    "/prɪˈzaɪd/",
+    "A retired judge presided over the inquiry.",
+    "退任した裁判官がその調査の議長を務めた。",
+    [
+      "preside over",
+      "preside at"
+    ],
+    "pre-(前に)+ sid(座る。session, president)。前の席に座って場を仕切ること。president の元になる語。"
+  ],
+  [
+    "presidency",
+    "B2",
+    "名詞",
+    [
+      "大統領職",
+      "在任期間"
+    ],
+    "/ˈprɛzədənsi/",
+    "Major reforms began during her second presidency.",
+    "主要な改革は彼女の2期目の大統領任期中に始まった。",
+    [
+      "during his presidency",
+      "run for the presidency"
+    ],
+    "president + -cy(職)。地位そのものと、その職にあった期間の両方を指す。"
+  ],
+  [
+    "presidential",
+    "B2",
+    "形容詞",
+    [
+      "大統領の"
+    ],
+    "/prɛzəˈdɛnʃəl/",
+    "The presidential election takes place every four years.",
+    "大統領選挙は4年ごとに行われる。",
+    [
+      "a presidential candidate",
+      "a presidential election"
+    ],
+    "president の形容詞。大統領の職や、それに関わる選挙・演説などを修飾する。"
+  ],
+  [
+    "prestigious",
+    "B2",
+    "形容詞",
+    [
+      "名声のある",
+      "権威ある"
+    ],
+    "/prɛˈstɪdʒəs/",
+    "He was awarded a prestigious prize for the research.",
+    "彼はその研究で権威ある賞を授与された。",
+    [
+      "a prestigious university",
+      "a prestigious award"
+    ],
+    "ラテン語 praestigium(手品)。もとは目をくらませることで、そこから人目を引く名声へ変わった。"
+  ],
+  [
+    "presumably",
+    "B2",
+    "副詞",
+    [
+      "おそらく",
+      "たぶん"
+    ],
+    "/prəˈzuməbli/",
+    "Presumably the meeting was cancelled because of the storm.",
+    "おそらくその会議は嵐のために中止されたのだろう。",
+    [
+      "presumably because",
+      "presumably not"
+    ],
+    "presume の副詞。証拠はないが筋から言ってそうだろう、という推測を示す。"
+  ],
+  [
+    "presume",
+    "B2",
+    "動詞",
+    [
+      "推定する",
+      "思い込む"
+    ],
+    "/prɪˈzum/",
+    "I presume the office is closed on public holidays.",
+    "事務所は祝日は閉まっていると思う。",
+    [
+      "presume that",
+      "presume innocent"
+    ],
+    "pre-(前に)+ sume(取る。assume, consume)。確かめる前に取ってしまうこと。法の「推定無罪」もこれ。"
+  ],
+  [
+    "prevail",
+    "B2",
+    "動詞",
+    [
+      "広く行き渡る",
+      "勝つ"
+    ],
+    "/prɪˈveɪl/",
+    "Common sense finally prevailed in the debate.",
+    "その議論では最終的に良識が勝った。",
+    [
+      "prevail over",
+      "prevail upon"
+    ],
+    "pre-(前に)+ vail(強い。value, valid)。より強い方が前に出ること。優勢になる、行き渡るの両方を表す。"
+  ],
+  [
+    "prevalence",
+    "B2",
+    "名詞",
+    [
+      "普及",
+      "蔓延"
+    ],
+    "/ˈprɛvələns/",
+    "The prevalence of diabetes has risen sharply.",
+    "糖尿病の有病率は急激に上昇した。",
+    [
+      "the prevalence of",
+      "high prevalence"
+    ],
+    "prevail の名詞。どれくらい広く行き渡っているかの度合い。医学では有病率を指す。"
+  ],
+  [
+    "prevention",
+    "B2",
+    "名詞",
+    [
+      "予防",
+      "防止"
+    ],
+    "/priˈvɛnʃən/",
+    "Prevention is far cheaper than treatment.",
+    "予防は治療よりはるかに安くつく。",
+    [
+      "crime prevention",
+      "the prevention of"
+    ],
+    "prevent の名詞。pre-(前に)+ vent(来る)。悪いことが来る前に立ちふさがること。"
+  ],
+  [
+    "prey",
+    "B2",
+    "名詞",
+    [
+      "獲物",
+      "えじき"
+    ],
+    "/preɪ/",
+    "The owl hunts small prey after dark.",
+    "そのフクロウは日が暮れてから小さな獲物を狩る。",
+    [
+      "fall prey to",
+      "easy prey"
+    ],
+    "ラテン語 praeda(奪ったもの)。捕らえられる側が核。fall prey to なら悪い影響の犠牲になること。"
+  ],
+  [
+    "privatization",
+    "B2",
+    "名詞",
+    [
+      "民営化"
+    ],
+    "/ˈpraɪvətəˈzeɪʃən/",
+    "The privatization of the railways remains controversial.",
+    "鉄道の民営化は今なお議論を呼んでいる。",
+    [
+      "the privatization of",
+      "rail privatization"
+    ],
+    "private + -ize + -ation。公のものを私企業の手に移すこと。英つづりは privatisation。"
+  ],
+  [
+    "privilege",
+    "B2",
+    "名詞",
+    [
+      "特権",
+      "光栄"
+    ],
+    "/ˈprɪvlədʒ/",
+    "Access to the archive is a privilege, not a right.",
+    "その資料庫への立ち入りは権利ではなく特権だ。",
+    [
+      "a special privilege",
+      "it is a privilege to"
+    ],
+    "privi(個人の。private)+ leg(法)。特定の人だけに向けられた法、が語源そのまま。"
+  ],
+  [
+    "probe",
+    "B2",
+    "名詞・動詞",
+    [
+      "調査する",
+      "探る"
+    ],
+    "/proʊb/",
+    "Investigators probed the cause of the fire for months.",
+    "捜査官は何か月も火災の原因を調べた。",
+    [
+      "probe into",
+      "a police probe"
+    ],
+    "ラテン語 probare(試す。prove, probable)。細い器具を差し込んで中を探ることが原義。"
+  ],
+  [
+    "problematic",
+    "B2",
+    "形容詞",
+    [
+      "問題のある",
+      "厄介な"
+    ],
+    "/prɑbləˈmætɪk/",
+    "The wording of the clause is deeply problematic.",
+    "その条項の文言は大いに問題がある。",
+    [
+      "prove problematic",
+      "deeply problematic"
+    ],
+    "problem の形容詞。誤りだと断じるのではなく、扱いに困る点を含むと指摘する語。"
+  ],
+  [
+    "proceeding",
+    "B2",
+    "名詞",
+    [
+      "手続き",
+      "議事"
+    ],
+    "/prəˈsidɪŋ/",
+    "Legal proceedings began three months after the complaint.",
+    "法的手続きは苦情から3か月後に始まった。",
+    [
+      "legal proceedings",
+      "start proceedings"
+    ],
+    "proceed の名詞。pro-(前へ)+ ceed(行く)。順を追って進める公式な手続きを指し、複数形で使うことが多い。"
+  ],
+  [
+    "proceeds",
+    "B2",
+    "名詞",
+    [
+      "収益",
+      "売上金"
+    ],
+    "/prəˈsidz/",
+    "All proceeds from the concert go to the local hospital.",
+    "その演奏会の収益はすべて地元の病院に寄付される。",
+    [
+      "the proceeds of",
+      "donate the proceeds"
+    ],
+    "proceed の名詞。売上から出てきた金、が核。常に複数形で、経費を引く前の総額を指すことが多い。"
+  ],
+  [
+    "processing",
+    "B2",
+    "名詞",
+    [
+      "処理",
+      "加工"
+    ],
+    "/ˈprɑsɛsɪŋ/",
+    "Data processing takes place overnight on a separate server.",
+    "データ処理は夜間に別のサーバーで行われる。",
+    [
+      "data processing",
+      "food processing"
+    ],
+    "process の名詞。原料や情報に手順を通すこと。食品加工にも情報処理にも使う。"
+  ],
+  [
+    "processor",
+    "B2",
+    "名詞",
+    [
+      "処理装置",
+      "加工業者"
+    ],
+    "/ˈprɑsɛsɚ/",
+    "The new processor doubles the speed of the machine.",
+    "新しい処理装置は機械の速度を2倍にする。",
+    [
+      "a food processor",
+      "a fast processor"
+    ],
+    "process + -or。決まった手順を実行する装置や業者。台所の食品加工機も同じ語。"
+  ],
+  [
+    "proclaim",
+    "B2",
+    "動詞",
+    [
+      "宣言する",
+      "公表する"
+    ],
+    "/proʊˈkleɪm/",
+    "The council proclaimed the area a conservation zone.",
+    "議会はその地域を保全区域と宣言した。",
+    [
+      "proclaim independence",
+      "proclaim as"
+    ],
+    "pro-(前へ)+ claim(叫ぶ。exclaim)。人々の前で大きく告げること。announce より重々しい。"
+  ],
+  [
+    "productive",
+    "B2",
+    "形容詞",
+    [
+      "生産的な",
+      "実りある"
+    ],
+    "/prəˈdʌktɪv/",
+    "We had a short but productive meeting.",
+    "私たちは短いが実りある会議を持った。",
+    [
+      "a productive discussion",
+      "highly productive"
+    ],
+    "produce の形容詞。pro-(前へ)+ duc(導く)。成果を前に押し出す働きがあること。"
+  ],
+  [
+    "productivity",
+    "B2",
+    "名詞",
+    [
+      "生産性"
+    ],
+    "/proʊdəkˈtɪvəti/",
+    "New equipment raised productivity by a fifth.",
+    "新しい設備は生産性を5分の1高めた。",
+    [
+      "improve productivity",
+      "labour productivity"
+    ],
+    "productive の名詞。投入に対してどれだけ産出できるか。効率 efficiency と並べて使う。"
+  ],
+  [
+    "profitable",
+    "B2",
+    "形容詞",
+    [
+      "もうかる",
+      "有益な"
+    ],
+    "/ˈprɑfətəbəl/",
+    "The shop became profitable in its second year.",
+    "その店は2年目に黒字になった。",
+    [
+      "a profitable business",
+      "highly profitable"
+    ],
+    "profit + -able。pro-(前へ)+ fit(なす)。利益を生む力があること。金銭以外の実りにも使う。"
+  ],
+  [
+    "profound",
+    "B2",
+    "形容詞",
+    [
+      "深い",
+      "重大な"
+    ],
+    "/proʊˈfaʊnd/",
+    "The book had a profound effect on her thinking.",
+    "その本は彼女の考え方に深い影響を与えた。",
+    [
+      "a profound effect",
+      "profound changes"
+    ],
+    "pro-(前へ)+ found(底。fundamental)。底まで届いている深さ。deep より抽象的なものに使う。"
+  ],
+  [
+    "projection",
+    "B2",
+    "名詞",
+    [
+      "予測",
+      "投影"
+    ],
+    "/prəˈdʒɛkʃən/",
+    "Current projections show demand doubling by 2040.",
+    "現在の予測では2040年までに需要が倍増する。",
+    [
+      "a sales projection",
+      "a projection of"
+    ],
+    "project の名詞。pro-(前へ)+ ject(投げる)。今のデータを先へ投げて描いた像、が核。"
+  ],
+  [
+    "prominent",
+    "B2",
+    "形容詞",
+    [
+      "著名な",
+      "目立つ"
+    ],
+    "/ˈprɑmənənt/",
+    "She played a prominent role in the reform movement.",
+    "彼女はその改革運動で目立つ役割を果たした。",
+    [
+      "a prominent figure",
+      "prominent role"
+    ],
+    "pro-(前へ)+ min(突き出る。eminent, imminent)。前に突き出ていて目に入ること。"
+  ],
+  [
+    "pronounced",
+    "B2",
+    "形容詞",
+    [
+      "はっきりした",
+      "著しい"
+    ],
+    "/prəˈnaʊnst/",
+    "There was a pronounced difference between the two groups.",
+    "その2つの集団の間には著しい違いがあった。",
+    [
+      "a pronounced effect",
+      "pronounced difference"
+    ],
+    "pronounce(はっきり言う)の形容詞。pro-(前へ)+ nounce(告げる)。誰の目にもはっきり分かる程度であること。"
+  ],
+  [
+    "propaganda",
+    "B2",
+    "名詞",
+    [
+      "宣伝",
+      "プロパガンダ"
+    ],
+    "/prɑpəˈgændə/",
+    "Wartime posters are studied today as propaganda.",
+    "戦時中のポスターは今日、宣伝資料として研究されている。",
+    [
+      "political propaganda",
+      "a propaganda campaign"
+    ],
+    "ラテン語 propagare(広める)。もとは布教のための組織名。今は事実を偏らせて広める情報を指す。"
+  ],
+  [
+    "proposition",
+    "B2",
+    "名詞",
+    [
+      "提案",
+      "命題"
+    ],
+    "/prɑpəˈzɪʃən/",
+    "Running two shops at once is an expensive proposition.",
+    "2つの店を同時に営むのは費用のかかる話だ。",
+    [
+      "a business proposition",
+      "an attractive proposition"
+    ],
+    "propose の名詞。pro-(前へ)+ pos(置く)。前に置いて示す考え。論理学では真偽を問える命題。"
+  ],
+  [
+    "prosecute",
+    "B2",
+    "動詞",
+    [
+      "起訴する",
+      "訴追する"
+    ],
+    "/ˈprɑsəkjut/",
+    "The company was prosecuted for breaking safety rules.",
+    "その会社は安全規則違反で起訴された。",
+    [
+      "prosecute a case",
+      "be prosecuted for"
+    ],
+    "pro-(前へ)+ sec(追う。sequence, pursue)。法廷まで追いかけて責任を問うこと。"
+  ],
+  [
+    "prosecution",
+    "B2",
+    "名詞",
+    [
+      "起訴",
+      "検察側"
+    ],
+    "/prɑsəkˈjuʃən/",
+    "The prosecution called three witnesses on the first day.",
+    "検察側は初日に3人の証人を呼んだ。",
+    [
+      "face prosecution",
+      "the prosecution case"
+    ],
+    "prosecute の名詞。起訴という行為と、法廷で訴える側の当事者の両方を指す。弁護側は defence。"
+  ],
+  [
+    "prosecutor",
+    "B2",
+    "名詞",
+    [
+      "検察官"
+    ],
+    "/ˈprɑsɪkjutɚ/",
+    "The prosecutor argued that the evidence was overwhelming.",
+    "検察官は証拠が圧倒的だと主張した。",
+    [
+      "a public prosecutor",
+      "the chief prosecutor"
+    ],
+    "prosecute + -or。国を代表して罪を追及する立場の人。"
+  ],
+  [
+    "prospective",
+    "B2",
+    "形容詞",
+    [
+      "将来の",
+      "見込みの"
+    ],
+    "/prəˈspɛktɪv/",
+    "Prospective students can join a tour of the campus.",
+    "入学を考えている学生は構内見学に参加できる。",
+    [
+      "a prospective buyer",
+      "prospective students"
+    ],
+    "pro-(前を)+ spect(見る)。先を見越した、が核。まだ確定していない見込みの段階を指す。"
+  ],
+  [
+    "prosperity",
+    "B2",
+    "名詞",
+    [
+      "繁栄",
+      "成功"
+    ],
+    "/prɑˈspɛrəti/",
+    "The port brought decades of prosperity to the town.",
+    "その港は町に数十年の繁栄をもたらした。",
+    [
+      "economic prosperity",
+      "a period of prosperity"
+    ],
+    "ラテン語 prosperus(順調な)。物事が思う方へ進んで豊かになること。"
+  ],
+  [
+    "protective",
+    "B2",
+    "形容詞",
+    [
+      "保護する",
+      "守ろうとする"
+    ],
+    "/prəˈtɛktɪv/",
+    "Workers must wear protective clothing in the paint shop.",
+    "作業員は塗装場で保護服を着用しなければならない。",
+    [
+      "protective clothing",
+      "protective of"
+    ],
+    "protect の形容詞。pro-(前に)+ tect(覆う)。前に立って覆う働き。人に使えば過保護気味の含みも。"
+  ],
+  [
+    "protocol",
+    "B2",
+    "名詞",
+    [
+      "議定書",
+      "手順"
+    ],
+    "/ˈproʊtəkɑl/",
+    "Staff followed the emergency protocol without hesitation.",
+    "職員は迷わず緊急時の手順に従った。",
+    [
+      "follow protocol",
+      "a safety protocol"
+    ],
+    "ギリシャ語 protokollon(巻物の最初に貼る紙)。冒頭に定めた取り決めが原義。外交儀礼にも通信規約にも使う。"
+  ],
+  [
+    "province",
+    "B2",
+    "名詞",
+    [
+      "州",
+      "地方"
+    ],
+    "/ˈprɑvəns/",
+    "The province has its own tax and education systems.",
+    "その州は独自の税制と教育制度を持っている。",
+    [
+      "a Canadian province",
+      "in the provinces"
+    ],
+    "ラテン語 provincia(ローマの属州)。国の下位の行政区画。複数形で首都以外の地方を指すこともある。"
+  ],
+  [
+    "provincial",
+    "B2",
+    "形容詞",
+    [
+      "州の",
+      "地方の",
+      "垢抜けない"
+    ],
+    "/prəˈvɪnʃəl/",
+    "She began her career at a provincial newspaper.",
+    "彼女は地方紙で経歴を始めた。",
+    [
+      "a provincial town",
+      "a provincial government"
+    ],
+    "province の形容詞。地方に属することが核だが、都会と比べて狭量だという否定的な含みを持つこともある。"
+  ],
+  [
+    "provision",
+    "B2",
+    "名詞",
+    [
+      "供給",
+      "規定",
+      "備え"
+    ],
+    "/prəˈvɪʒən/",
+    "The contract includes a provision for early cancellation.",
+    "その契約には早期解約に関する規定が含まれている。",
+    [
+      "make provision for",
+      "the provision of"
+    ],
+    "pro-(前に)+ vis(見る。vision)。先を見越して用意すること。用意した中身が条文なら「規定」。"
+  ],
+  [
+    "provoke",
+    "B2",
+    "動詞",
+    [
+      "引き起こす",
+      "怒らせる"
+    ],
+    "/prəˈvoʊk/",
+    "The remark provoked an angry response from viewers.",
+    "その発言は視聴者から怒りの反応を引き起こした。",
+    [
+      "provoke a reaction",
+      "deliberately provoke"
+    ],
+    "pro-(前へ)+ voc(呼ぶ。voice, evoke)。相手から反応を呼び出すこと。怒りを呼ぶ場合に使うことが多い。"
+  ],
+  [
+    "psychiatric",
+    "B2",
+    "形容詞",
+    [
+      "精神医学の"
+    ],
+    "/saɪkiˈætrɪk/",
+    "He was referred to a psychiatric clinic for assessment.",
+    "彼は評価のために精神科の診療所へ紹介された。",
+    [
+      "a psychiatric hospital",
+      "psychiatric care"
+    ],
+    "ギリシャ語 psyche(心)+ iatros(医者)。心を治す医療に関わること。心理学 psychology とは別分野。"
+  ],
+  [
+    "pulse",
+    "B2",
+    "名詞",
+    [
+      "脈拍",
+      "鼓動"
+    ],
+    "/pʌls/",
+    "The nurse checked his pulse before the injection.",
+    "看護師は注射の前に彼の脈拍を確認した。",
+    [
+      "take someone's pulse",
+      "a steady pulse"
+    ],
+    "ラテン語 pellere(打つ。impulse, expel)。規則正しく打つ動きが核。音や光の周期的な信号にも使う。"
+  ],
+  [
+    "pump",
+    "B2",
+    "名詞・動詞",
+    [
+      "ポンプ",
+      "くみ上げる"
+    ],
+    "/pʌmp/",
+    "Volunteers pumped water out of the flooded cellar.",
+    "ボランティアが浸水した地下室から水をくみ出した。",
+    [
+      "pump water",
+      "a fuel pump"
+    ],
+    "中世オランダ語 pompe。押したり引いたりして液体を動かす仕掛け。資金を注ぎ込む比喩にも使う。"
+  ],
+  [
+    "punch",
+    "B2",
+    "名詞・動詞",
+    [
+      "殴る",
+      "パンチ"
+    ],
+    "/pʌntʃ/",
+    "He punched the wall in frustration and hurt his hand.",
+    "彼はいら立って壁を殴り、手をけがした。",
+    [
+      "throw a punch",
+      "punch a hole"
+    ],
+    "ラテン語 punctum(突き刺す。point, puncture)。こぶしで突くこと、また穴をあけること。"
+  ],
+  [
+    "query",
+    "B2",
+    "名詞",
+    [
+      "質問",
+      "問い合わせ"
+    ],
+    "/kˈwiri/",
+    "Please send any queries to the address below.",
+    "質問は下記の宛先までお送りください。",
+    [
+      "raise a query",
+      "answer a query"
+    ],
+    "ラテン語 quaerere(尋ねる。question, inquire)。確認のための短い問い。データベースへの検索指示も指す。"
+  ],
+  [
+    "quest",
+    "B2",
+    "名詞",
+    [
+      "探求",
+      "追求"
+    ],
+    "/kwɛst/",
+    "Their quest for cheaper energy has lasted decades.",
+    "より安い電力を求める彼らの探求は数十年続いている。",
+    [
+      "a quest for",
+      "in quest of"
+    ],
+    "ラテン語 quaerere(求める)。question と同語根。目的のものを求めて長く旅すること。"
+  ],
+  [
+    "quota",
+    "B2",
+    "名詞",
+    [
+      "割当量",
+      "ノルマ"
+    ],
+    "/kˈwoʊtə/",
+    "The country agreed to a strict fishing quota.",
+    "その国は厳しい漁獲割当に同意した。",
+    [
+      "a sales quota",
+      "meet a quota"
+    ],
+    "ラテン語 quota pars(いくつの部分)。全体を分けたときの取り分。上限にも下限にも使う。"
+  ],
+  [
+    "radar",
+    "B2",
+    "名詞",
+    [
+      "レーダー"
+    ],
+    "/ˈreɪdɑr/",
+    "The storm appeared on radar hours before it arrived.",
+    "その嵐は到達の数時間前にレーダーに現れた。",
+    [
+      "on the radar",
+      "a radar screen"
+    ],
+    "radio detection and ranging の頭字語。電波の反射で位置を測る仕組み。off the radar なら注目の外。"
+  ],
+  [
+    "radical",
+    "B2",
+    "形容詞",
+    [
+      "急進的な",
+      "根本的な"
+    ],
+    "/ˈrædəkəl/",
+    "The plan calls for radical changes to the tax system.",
+    "その計画は税制の根本的な変更を求めている。",
+    [
+      "a radical change",
+      "radical reform"
+    ],
+    "ラテン語 radix(根。radish, root)。根まで手を入れること。政治では急進派を指す。"
+  ],
+  [
+    "rage",
+    "B2",
+    "名詞",
+    [
+      "激怒",
+      "猛威"
+    ],
+    "/reɪdʒ/",
+    "He struggled to control his rage during the argument.",
+    "彼は口論の間、激しい怒りを抑えるのに苦労した。",
+    [
+      "fly into a rage",
+      "road rage"
+    ],
+    "ラテン語 rabies(狂乱)。抑えの利かない激しい怒り。嵐や炎が猛威をふるう意味にも使う。"
+  ],
+  [
+    "raid",
+    "B2",
+    "名詞・動詞",
+    [
+      "襲撃",
+      "手入れ"
+    ],
+    "/reɪd/",
+    "Police carried out a raid on the warehouse at dawn.",
+    "警察は夜明けにその倉庫を家宅捜索した。",
+    [
+      "a police raid",
+      "an air raid"
+    ],
+    "road と同語源の古い語で「馬で乗り込む」。不意に押し入ることが核。空襲にも捜査にも使う。"
+  ],
+  [
+    "rally",
+    "B2",
+    "名詞・動詞",
+    [
+      "集会",
+      "持ち直す"
+    ],
+    "/ˈræli/",
+    "Thousands attended the rally in the city square.",
+    "何千人もが市の広場での集会に参加した。",
+    [
+      "a political rally",
+      "rally support"
+    ],
+    "フランス語 rallier(再び集める)。散ったものを集め直すことが核。人を集めれば集会、勢いを取り戻せば回復。"
+  ],
+  [
+    "ranking",
+    "B2",
+    "名詞",
+    [
+      "順位",
+      "格付け"
+    ],
+    "/ˈræŋkɪŋ/",
+    "The university climbed ten places in the world ranking.",
+    "その大学は世界順位で10位上がった。",
+    [
+      "a world ranking",
+      "a ranking system"
+    ],
+    "rank(位)の名詞。順番に並べた序列そのもの。形容詞では「高位の」の意味になる。"
+  ],
+  [
+    "rape",
+    "B2",
+    "名詞・動詞",
+    [
+      "強姦",
+      "性暴力"
+    ],
+    "/reɪp/",
+    "The law on rape was reformed after years of campaigning.",
+    "性暴力に関する法律は長年の運動の後に改正された。",
+    [
+      "a rape case",
+      "report a rape"
+    ],
+    "ラテン語 rapere(奪う。rapid, rapture)。同意なく奪うことが核。重大な犯罪を指す法律用語。"
+  ],
+  [
+    "ratio",
+    "B2",
+    "名詞",
+    [
+      "比率",
+      "割合"
+    ],
+    "/ˈreɪʃioʊ/",
+    "The staff to student ratio is one to twelve.",
+    "職員と学生の比率は1対12だ。",
+    [
+      "a high ratio",
+      "the ratio of"
+    ],
+    "ラテン語 ratio(計算、理)。reason と同語源。二つの量を比べたときの割合を表す。"
+  ],
+  [
+    "rational",
+    "B2",
+    "形容詞",
+    [
+      "理性的な",
+      "合理的な"
+    ],
+    "/ˈræʃənəl/",
+    "There is a rational explanation for the strange readings.",
+    "その奇妙な測定値には合理的な説明がある。",
+    [
+      "a rational decision",
+      "rational thought"
+    ],
+    "ratio(理)+ -al。筋道が通っていること。感情に流されない判断を指す。"
+  ],
+  [
+    "ray",
+    "B2",
+    "名詞",
+    [
+      "光線",
+      "一筋"
+    ],
+    "/reɪ/",
+    "A ray of sunlight fell across the wooden floor.",
+    "一筋の日光が木の床を横切って差した。",
+    [
+      "a ray of light",
+      "a ray of hope"
+    ],
+    "ラテン語 radius(光の筋、車輪のスポーク)。中心から放たれる細い線。a ray of hope は一筋の希望。"
+  ],
+  [
+    "readily",
+    "B2",
+    "副詞",
+    [
+      "すぐに",
+      "快く"
+    ],
+    "/ˈrɛdəli/",
+    "The information is readily available on their website.",
+    "その情報は彼らのサイトですぐに入手できる。",
+    [
+      "readily available",
+      "readily accept"
+    ],
+    "ready + -ly。準備ができている状態から「手間なく、いやがらずに」へ。available と結びつくことが多い。"
+  ],
+  [
+    "realization",
+    "B2",
+    "名詞",
+    [
+      "実感",
+      "実現"
+    ],
+    "/ˈriləˈzeɪʃən/",
+    "The realization that she had missed the deadline came too late.",
+    "締め切りを逃したという実感は遅すぎた。",
+    [
+      "the realization that",
+      "the realization of"
+    ],
+    "realize の名詞。real(現実)から。頭で分かることと、計画を現実にすることの両方を指す。"
+  ],
+  [
+    "realm",
+    "B2",
+    "名詞",
+    [
+      "領域",
+      "王国"
+    ],
+    "/rɛlm/",
+    "The question belongs to the realm of ethics, not law.",
+    "その問いは法律ではなく倫理の領域に属する。",
+    [
+      "the realm of",
+      "in the realm of"
+    ],
+    "ラテン語 regimen(統治)。regal, royal と同語根。王の治める範囲が原義で、今は抽象的な領域を指す。"
+  ],
+  [
+    "rear",
+    "B2",
+    "形容詞・名詞",
+    [
+      "後部の",
+      "後ろ"
+    ],
+    "/rɪr/",
+    "Passengers should board through the rear door.",
+    "乗客は後部の扉から乗車してください。",
+    [
+      "the rear of",
+      "a rear window"
+    ],
+    "古英語 rere(後ろ)。前 front に対する後ろ側。動詞では子どもや動物を育てる意味になる。"
+  ],
+  [
+    "reasoning",
+    "B2",
+    "名詞",
+    [
+      "論法",
+      "推論"
+    ],
+    "/ˈrizənɪŋ/",
+    "I follow the conclusion but not the reasoning behind it.",
+    "結論は分かるが、その背後にある論法が分からない。",
+    [
+      "sound reasoning",
+      "the reasoning behind"
+    ],
+    "reason の名詞。ratio(理)から。結論に至るまでの筋道そのものを指す。"
+  ],
+  [
+    "reassure",
+    "B2",
+    "動詞",
+    [
+      "安心させる"
+    ],
+    "/riəˈʃʊr/",
+    "The doctor reassured her that the test was routine.",
+    "医師は、その検査は通常のものだと言って彼女を安心させた。",
+    [
+      "reassure someone that",
+      "try to reassure"
+    ],
+    "re-(再び)+ assure(確かにする)。ぐらついた気持ちをもう一度確かなものに戻すこと。"
+  ],
+  [
+    "rebel",
+    "B2",
+    "名詞",
+    [
+      "反乱者",
+      "反抗者"
+    ],
+    "/ˈrɛbəl/",
+    "Rebels controlled the northern half of the country.",
+    "反乱軍は国の北半分を支配していた。",
+    [
+      "a rebel group",
+      "a teenage rebel"
+    ],
+    "re-(逆に)+ bel(戦う。bellicose)。味方であるはずの側に戦いを挑む者。動詞は強勢が後ろに移る。"
+  ],
+  [
+    "rebellion",
+    "B2",
+    "名詞",
+    [
+      "反乱",
+      "反抗"
+    ],
+    "/rɪˈbɛljən/",
+    "The rebellion was crushed within a few weeks.",
+    "その反乱は数週間で鎮圧された。",
+    [
+      "crush a rebellion",
+      "an open rebellion"
+    ],
+    "rebel の名詞。組織的な武装蜂起にも、権威への強い反抗にも使う。"
+  ],
+  [
+    "recipient",
+    "B2",
+    "名詞",
+    [
+      "受取人",
+      "受賞者"
+    ],
+    "/rəˈsɪpiənt/",
+    "Each recipient of the grant reports twice a year.",
+    "助成金の各受給者は年に2回報告する。",
+    [
+      "a recipient of",
+      "an organ recipient"
+    ],
+    "ラテン語 recipere(受け取る。receive)。差し出されたものを受ける側の人。"
+  ],
+  [
+    "reconstruction",
+    "B2",
+    "名詞",
+    [
+      "再建",
+      "復元"
+    ],
+    "/rikənstˈrʌkʃən/",
+    "Reconstruction of the harbour took nearly ten years.",
+    "その港の再建には10年近くかかった。",
+    [
+      "post-war reconstruction",
+      "the reconstruction of"
+    ],
+    "re-(再び)+ construction。壊れたものを建て直すこと。事件の状況を再現する意味にも使う。"
+  ],
+  [
+    "recount",
+    "B2",
+    "動詞",
+    [
+      "詳しく語る"
+    ],
+    "/rɪˈkaʊnt/",
+    "He recounted the events of that night in careful detail.",
+    "彼はその夜の出来事を細かく語った。",
+    [
+      "recount a story",
+      "recount how"
+    ],
+    "re-(再び)+ count(数える)。順を追って数え上げるように語ること。数え直す意味もある。"
+  ],
+  [
+    "referendum",
+    "B2",
+    "名詞",
+    [
+      "国民投票"
+    ],
+    "/rɛfɚˈɛndəm/",
+    "The country held a referendum on the new constitution.",
+    "その国は新憲法について国民投票を行った。",
+    [
+      "hold a referendum",
+      "a national referendum"
+    ],
+    "ラテン語 referre(持ち帰る。refer)。判断を国民に持ち帰って問うこと。"
+  ],
+  [
+    "reflection",
+    "B2",
+    "名詞",
+    [
+      "反射",
+      "熟考",
+      "表れ"
+    ],
+    "/rɪˈflɛkʃən/",
+    "Low turnout is a reflection of public frustration.",
+    "低い投票率は国民のいら立ちの表れだ。",
+    [
+      "on reflection",
+      "a reflection of"
+    ],
+    "reflect の名詞。re-(戻して)+ flect(曲げる。flexible)。光も考えも、跳ね返って戻ってくること。"
+  ],
+  [
+    "refuge",
+    "B2",
+    "名詞",
+    [
+      "避難所",
+      "逃れ場"
+    ],
+    "/ˈrɛfjudʒ/",
+    "Families took refuge in the school during the flood.",
+    "洪水の間、家族は学校に避難した。",
+    [
+      "take refuge",
+      "a place of refuge"
+    ],
+    "re-(戻って)+ fug(逃げる。fugitive)。逃げ込む先が核。そこに逃げた人が refugee。"
+  ],
+  [
+    "refusal",
+    "B2",
+    "名詞",
+    [
+      "拒否",
+      "拒絶"
+    ],
+    "/rəfˈjuzəl/",
+    "His refusal to sign delayed the whole process.",
+    "彼が署名を拒んだことが手続き全体を遅らせた。",
+    [
+      "a flat refusal",
+      "a refusal to"
+    ],
+    "refuse の名詞。re-(逆に)+ fus(注ぐ。confuse)。差し出されたものを押し返すこと。"
+  ],
+  [
+    "regain",
+    "B2",
+    "動詞",
+    [
+      "取り戻す"
+    ],
+    "/rɪˈgeɪn/",
+    "She slowly regained her strength after the operation.",
+    "彼女は手術の後、ゆっくりと体力を取り戻した。",
+    [
+      "regain control",
+      "regain consciousness"
+    ],
+    "re-(再び)+ gain(得る)。一度失ったものを再び手にすること。"
+  ],
+  [
+    "regardless",
+    "B2",
+    "副詞",
+    [
+      "それでもなお",
+      "かまわず"
+    ],
+    "/rəˈgɑrdləs/",
+    "The weather was terrible, but they set out regardless.",
+    "天気はひどかったが、彼らはかまわず出発した。",
+    [
+      "regardless of",
+      "carry on regardless"
+    ],
+    "regard(気にかける)+ -less。気にかけない、が核。regardless of の形で「〜にかかわらず」。"
+  ],
+  [
+    "regime",
+    "B2",
+    "名詞",
+    [
+      "政権",
+      "体制"
+    ],
+    "/rəˈʒim/",
+    "The new regime promised free elections within a year.",
+    "新政権は1年以内の自由選挙を約束した。",
+    [
+      "a military regime",
+      "under the regime"
+    ],
+    "ラテン語 regimen(統治)。regular や royal と同語根。特に非民主的な政権を指すことが多い。"
+  ],
+  [
+    "regulator",
+    "B2",
+    "名詞",
+    [
+      "規制当局",
+      "調整装置"
+    ],
+    "/ˈrɛgjəleɪtɚ/",
+    "The financial regulator fined three banks last year.",
+    "金融規制当局は昨年3つの銀行に罰金を科した。",
+    [
+      "a financial regulator",
+      "an industry regulator"
+    ],
+    "regulate + -or。ラテン語 regula(定規)。基準に沿わせて整える側の機関や装置。"
+  ],
+  [
+    "regulatory",
+    "B2",
+    "形容詞",
+    [
+      "規制の",
+      "監督の"
+    ],
+    "/ˈrɛgjələtɔri/",
+    "The company faces a tough regulatory environment.",
+    "その会社は厳しい規制環境に直面している。",
+    [
+      "a regulatory body",
+      "regulatory approval"
+    ],
+    "regulate の形容詞。ルールで枠をはめ、それを守らせる働きに関わること。"
+  ],
+  [
+    "rehabilitation",
+    "B2",
+    "名詞",
+    [
+      "社会復帰",
+      "リハビリ"
+    ],
+    "/rihəbɪləˈteɪʃən/",
+    "The programme focuses on the rehabilitation of young offenders.",
+    "その計画は少年犯罪者の社会復帰に重点を置いている。",
+    [
+      "drug rehabilitation",
+      "a rehabilitation centre"
+    ],
+    "re-(再び)+ habilit(できる。ability)。再びできる状態に戻すこと。体にも人生にも建物にも使う。"
+  ],
+  [
+    "reign",
+    "B2",
+    "名詞・動詞",
+    [
+      "治世",
+      "君臨する"
+    ],
+    "/reɪn/",
+    "The queen reigned for more than fifty years.",
+    "その女王は50年以上君臨した。",
+    [
+      "during the reign of",
+      "reign supreme"
+    ],
+    "ラテン語 regnum(王国)。regal と同語根。統治する期間と行為。rain, rein と同音なので綴りに注意。"
+  ],
+  [
+    "rejection",
+    "B2",
+    "名詞",
+    [
+      "拒絶",
+      "不採用"
+    ],
+    "/rɪˈdʒɛkʃən/",
+    "After three rejections she finally found a publisher.",
+    "3度の不採用の後、彼女はついに出版社を見つけた。",
+    [
+      "a rejection letter",
+      "face rejection"
+    ],
+    "reject の名詞。re-(戻して)+ ject(投げる)。差し出されたものを投げ返すこと。"
+  ],
+  [
+    "relevance",
+    "B2",
+    "名詞",
+    [
+      "関連性",
+      "意義"
+    ],
+    "/ˈrɛləvəns/",
+    "The article questions the relevance of the old rules.",
+    "その記事は古い規則の意義に疑問を投げかけている。",
+    [
+      "have relevance",
+      "the relevance of"
+    ],
+    "relevant の名詞。re-(再び)+ lev(持ち上げる)。議論を持ち上げる助けになるかどうか。"
+  ],
+  [
+    "reliability",
+    "B2",
+    "名詞",
+    [
+      "信頼性",
+      "確実さ"
+    ],
+    "/rilaɪəˈbɪləti/",
+    "The reliability of the data has been questioned.",
+    "そのデータの信頼性は疑問視されてきた。",
+    [
+      "improve reliability",
+      "the reliability of"
+    ],
+    "reliable の名詞。re-(再び)+ ly(結ぶ。ally)。何度でも頼れる度合い。"
+  ],
+  [
+    "reluctant",
+    "B2",
+    "形容詞",
+    [
+      "気が進まない"
+    ],
+    "/rɪˈlʌktənt/",
+    "She was reluctant to leave the job she loved.",
+    "彼女は好きだった仕事を辞めることに気が進まなかった。",
+    [
+      "reluctant to",
+      "a reluctant hero"
+    ],
+    "re-(逆に)+ luct(もがく。struggle)。心の中で逆らってもがいている状態。willing の反対。"
+  ],
+  [
+    "remainder",
+    "B2",
+    "名詞",
+    [
+      "残り",
+      "余り"
+    ],
+    "/rɪˈmeɪndɚ/",
+    "The remainder of the money went into a savings account.",
+    "残りの金は貯蓄口座に入れられた。",
+    [
+      "the remainder of",
+      "for the remainder"
+    ],
+    "remain(残る)+ -der。re-(後に)+ main(とどまる)。取り分けた後に残った部分。算数の「余り」にも使う。"
+  ],
+  [
+    "remains",
+    "B2",
+    "名詞",
+    [
+      "遺跡",
+      "残骸",
+      "遺体"
+    ],
+    "/rɪˈmeɪnz/",
+    "Archaeologists uncovered the remains of a Roman bath.",
+    "考古学者はローマ時代の浴場の遺跡を発掘した。",
+    [
+      "human remains",
+      "the remains of"
+    ],
+    "remain の名詞。常に複数形で、失われた全体のうち残った部分を指す。"
+  ],
+  [
+    "remedy",
+    "B2",
+    "名詞",
+    [
+      "治療法",
+      "改善策"
+    ],
+    "/ˈrɛmədi/",
+    "There is no simple remedy for the housing shortage.",
+    "住宅不足に簡単な改善策はない。",
+    [
+      "a remedy for",
+      "a home remedy"
+    ],
+    "ラテン語 remedium(再び medi 癒す)。病気にも問題にも使い、法律では救済手段を指す。"
+  ],
+  [
+    "reminder",
+    "B2",
+    "名詞",
+    [
+      "思い出させるもの",
+      "催促状"
+    ],
+    "/riˈmaɪndɚ/",
+    "The photograph is a reminder of a very different time.",
+    "その写真はまったく違う時代を思い出させるものだ。",
+    [
+      "a gentle reminder",
+      "a reminder of"
+    ],
+    "remind(思い出させる)+ -er。re-(再び)+ mind(心)。心に戻してくれるもの。"
+  ],
+  [
+    "removal",
+    "B2",
+    "名詞",
+    [
+      "除去",
+      "撤去",
+      "引っ越し"
+    ],
+    "/rɪˈmuvəl/",
+    "The removal of the old bridge took three months.",
+    "古い橋の撤去には3か月かかった。",
+    [
+      "the removal of",
+      "removal costs"
+    ],
+    "remove の名詞。re-(離して)+ move(動かす)。その場から取り除くこと。英国では引っ越し業も指す。"
+  ],
+  [
+    "render",
+    "B2",
+    "動詞",
+    [
+      "〜にする",
+      "与える"
+    ],
+    "/ˈrɛndɚ/",
+    "The injury rendered him unable to work for months.",
+    "そのけがは彼を何か月も働けない状態にした。",
+    [
+      "render useless",
+      "render a service"
+    ],
+    "ラテン語 reddere(返す)。差し出す、変えて渡すが核。render A B で「AをBの状態にする」。"
+  ],
+  [
+    "renew",
+    "B2",
+    "動詞",
+    [
+      "更新する",
+      "再開する"
+    ],
+    "/rɪˈnu/",
+    "You can renew your library books online.",
+    "図書館の本はネットで貸出延長できる。",
+    [
+      "renew a contract",
+      "renew interest"
+    ],
+    "re-(再び)+ new。期限の切れたものを新しくすること。契約にも関心にも使う。"
+  ],
+  [
+    "renowned",
+    "B2",
+    "形容詞",
+    [
+      "名高い",
+      "著名な"
+    ],
+    "/rɪˈnaʊnd/",
+    "The region is renowned for its white wines.",
+    "その地域は白ワインで名高い。",
+    [
+      "renowned for",
+      "world-renowned"
+    ],
+    "re-(繰り返し)+ nown(名。name, noun)。名が繰り返し語られること。famous より格調が高い。"
+  ],
+  [
+    "rental",
+    "B2",
+    "名詞",
+    [
+      "賃貸",
+      "レンタル"
+    ],
+    "/ˈrɛntəl/",
+    "Car rental is cheaper if you book in advance.",
+    "レンタカーは前もって予約すれば安くなる。",
+    [
+      "a rental car",
+      "rental income"
+    ],
+    "rent(借りる)+ -al。貸し借りそのものと、その料金の両方を指す。"
+  ],
+  [
+    "replacement",
+    "B2",
+    "名詞",
+    [
+      "交代",
+      "後任",
+      "交換品"
+    ],
+    "/rɪˈpleɪsmənt/",
+    "Finding a replacement for her will not be easy.",
+    "彼女の後任を見つけるのは簡単ではないだろう。",
+    [
+      "a replacement for",
+      "hip replacement"
+    ],
+    "replace の名詞。re-(再び)+ place(置く)。抜けた場所に置き直すもの。"
+  ],
+  [
+    "reportedly",
+    "B2",
+    "副詞",
+    [
+      "伝えられるところでは"
+    ],
+    "/rɪˈpɔrtədli/",
+    "The two companies are reportedly in talks about a merger.",
+    "両社は合併について協議中と伝えられている。",
+    [
+      "reportedly said",
+      "reportedly plans"
+    ],
+    "report + -ly。報道による情報で、書き手が真偽を保証しないという合図。allegedly と近い働き。"
+  ],
+  [
+    "representation",
+    "B2",
+    "名詞",
+    [
+      "代表",
+      "表現"
+    ],
+    "/rɛprəzɛnˈteɪʃən/",
+    "The group demands better representation on the board.",
+    "その団体は理事会でのより良い代表性を求めている。",
+    [
+      "fair representation",
+      "a visual representation"
+    ],
+    "represent の名詞。re-(再び)+ present(示す)。代わって示すこと。人を代表することにも、絵や図で表すことにも使う。"
+  ],
+  [
+    "reproduce",
+    "B2",
+    "動詞",
+    [
+      "再現する",
+      "複製する",
+      "繁殖する"
+    ],
+    "/riprəˈdus/",
+    "Researchers could not reproduce the original results.",
+    "研究者たちは元の結果を再現できなかった。",
+    [
+      "reproduce results",
+      "reproduce an image"
+    ],
+    "re-(再び)+ produce(生み出す)。同じものをもう一度生み出すこと。生物なら繁殖。"
+  ],
+  [
+    "reproduction",
+    "B2",
+    "名詞",
+    [
+      "複製",
+      "繁殖"
+    ],
+    "/riprəˈdʌkʃən/",
+    "The poster is a cheap reproduction of a famous painting.",
+    "そのポスターは有名な絵画の安価な複製だ。",
+    [
+      "a faithful reproduction",
+      "sexual reproduction"
+    ],
+    "reproduce の名詞。作られた複製そのものにも、生物が子孫を残す働きにも使う。"
+  ],
+  [
+    "republic",
+    "B2",
+    "名詞",
+    [
+      "共和国"
+    ],
+    "/riˈpʌblək/",
+    "The country became a republic after the war.",
+    "その国は戦後に共和国となった。",
+    [
+      "a democratic republic",
+      "declare a republic"
+    ],
+    "ラテン語 res publica(公のもの)。国が王の私物ではなく公共のものである体制。"
+  ],
+  [
+    "resemble",
+    "B2",
+    "動詞",
+    [
+      "似ている"
+    ],
+    "/rɪˈzɛmbəl/",
+    "The building resembles a ship seen from the sea.",
+    "その建物は海から見ると船に似ている。",
+    [
+      "closely resemble",
+      "resemble each other"
+    ],
+    "re-(強め)+ simil(似た。similar)。見た目が重なること。進行形にせず、前置詞も取らない点が要点。"
+  ],
+  [
+    "reside",
+    "B2",
+    "動詞",
+    [
+      "居住する",
+      "存する"
+    ],
+    "/rɪˈzaɪd/",
+    "Fewer than five hundred people reside on the island.",
+    "その島に住んでいるのは500人に満たない。",
+    [
+      "reside in",
+      "reside with"
+    ],
+    "re-(後ろに)+ sid(座る。preside, session)。腰を据えていること。live の硬い言い換え。"
+  ],
+  [
+    "residence",
+    "B2",
+    "名詞",
+    [
+      "住居",
+      "居住"
+    ],
+    "/ˈrɛzɪdəns/",
+    "She has taken up residence in a small coastal town.",
+    "彼女は小さな海辺の町に居を構えた。",
+    [
+      "a place of residence",
+      "take up residence"
+    ],
+    "reside の名詞。住む行為にも、住まいそのものにも使う。公的な書類でよく見る語。"
+  ],
+  [
+    "residential",
+    "B2",
+    "形容詞",
+    [
+      "住宅の",
+      "居住用の"
+    ],
+    "/rɛzɪˈdɛnʃəl/",
+    "The factory was replaced by a residential area.",
+    "その工場は住宅地に置き換わった。",
+    [
+      "a residential area",
+      "residential care"
+    ],
+    "residence の形容詞。人が住むための、が核。商業地 commercial と対で使う。"
+  ],
+  [
+    "residue",
+    "B2",
+    "名詞",
+    [
+      "残留物",
+      "残り"
+    ],
+    "/ˈrɛzədu/",
+    "A sticky residue remained on the surface after cleaning.",
+    "清掃の後も表面にべたつく残留物が残った。",
+    [
+      "a chemical residue",
+      "leave a residue"
+    ],
+    "ラテン語 residuum(残ったもの)。reside と同語根。取り除いた後に居座って残るもの。"
+  ],
+  [
+    "resignation",
+    "B2",
+    "名詞",
+    [
+      "辞職",
+      "あきらめ"
+    ],
+    "/rɛzəgˈneɪʃən/",
+    "His resignation took the whole department by surprise.",
+    "彼の辞職は部署全体を驚かせた。",
+    [
+      "offer one's resignation",
+      "accept with resignation"
+    ],
+    "resign の名詞。re-(元へ)+ sign(印)。職の印を返すこと。運命を受け入れる「あきらめ」の意味もある。"
+  ],
+  [
+    "resistance",
+    "B2",
+    "名詞",
+    [
+      "抵抗",
+      "抵抗力"
+    ],
+    "/rɪˈzɪstəns/",
+    "The plan met strong resistance from local residents.",
+    "その計画は地元住民の強い抵抗に遭った。",
+    [
+      "meet resistance",
+      "resistance to"
+    ],
+    "resist の名詞。re-(逆に)+ sist(立つ)。押し返して立つこと。物理にも政治にも医学にも使う。"
+  ],
+  [
+    "respective",
+    "B2",
+    "形容詞",
+    [
+      "それぞれの"
+    ],
+    "/rɪˈspɛktɪv/",
+    "The two teams returned to their respective countries.",
+    "2つのチームはそれぞれの国へ戻った。",
+    [
+      "their respective roles",
+      "in their respective fields"
+    ],
+    "respect(振り返って見る)+ -ive。個々に見た場合の、が核。必ず複数のものについて使う。"
+  ],
+  [
+    "respectively",
+    "B2",
+    "副詞",
+    [
+      "それぞれ"
+    ],
+    "/rɪˈspɛktɪvli/",
+    "The prizes went to Ito and Nakamura respectively.",
+    "賞はそれぞれ伊藤と中村に贈られた。",
+    [
+      "rose respectively",
+      "are respectively"
+    ],
+    "respective の副詞。先に挙げた順と対応させて読ませる合図。順序が命の語。"
+  ],
+  [
+    "restoration",
+    "B2",
+    "名詞",
+    [
+      "修復",
+      "復元",
+      "復活"
+    ],
+    "/rɛstɚˈeɪʃən/",
+    "The restoration of the church took four years.",
+    "その教会の修復には4年かかった。",
+    [
+      "the restoration of",
+      "careful restoration"
+    ],
+    "restore の名詞。re-(再び)+ stor(立てる。store)。元の姿に戻すこと。"
+  ],
+  [
+    "restraint",
+    "B2",
+    "名詞",
+    [
+      "抑制",
+      "自制"
+    ],
+    "/rɪˈstreɪnt/",
+    "The police were praised for their restraint.",
+    "警察はその自制を称賛された。",
+    [
+      "show restraint",
+      "exercise restraint"
+    ],
+    "restrain の名詞。re-(後ろへ)+ strain(締める。strict)。手綱を引いて抑えること。"
+  ],
+  [
+    "resume",
+    "B2",
+    "動詞",
+    [
+      "再開する"
+    ],
+    "/rɪˈzum/",
+    "Talks will resume after the summer break.",
+    "協議は夏の休会の後に再開される。",
+    [
+      "resume work",
+      "resume talks"
+    ],
+    "re-(再び)+ sume(取る。assume, consume)。いったん置いたものをまた取り上げること。履歴書の resume とは発音が異なる。"
+  ],
+  [
+    "retreat",
+    "B2",
+    "名詞・動詞",
+    [
+      "退却する",
+      "隠れ家"
+    ],
+    "/riˈtrit/",
+    "The army retreated to higher ground before dawn.",
+    "軍は夜明け前に高台へ退却した。",
+    [
+      "a hasty retreat",
+      "a mountain retreat"
+    ],
+    "re-(後ろへ)+ treat(引く。tract, attract)。後ろへ引くこと。静かに引きこもる場所も指す。"
+  ],
+  [
+    "retrieve",
+    "B2",
+    "動詞",
+    [
+      "取り戻す",
+      "検索する"
+    ],
+    "/rɪˈtriv/",
+    "Divers retrieved the missing equipment from the lake.",
+    "潜水士が湖から紛失した装備を回収した。",
+    [
+      "retrieve data",
+      "retrieve information"
+    ],
+    "re-(再び)+ trieve(見つける。フランス語 trouver)。探して手元に取り戻すこと。犬種の retriever も同語源。"
+  ],
+  [
+    "revelation",
+    "B2",
+    "名詞",
+    [
+      "新事実",
+      "暴露"
+    ],
+    "/rɛvəˈleɪʃən/",
+    "The revelation about the accounts shocked investors.",
+    "会計に関する新事実は投資家に衝撃を与えた。",
+    [
+      "a shocking revelation",
+      "come as a revelation"
+    ],
+    "reveal の名詞。re-(逆に)+ vel(覆い。veil)。覆いを外して現すこと。"
+  ],
+  [
+    "revenge",
+    "B2",
+    "名詞",
+    [
+      "復讐"
+    ],
+    "/riˈvɛndʒ/",
+    "He spent years planning his revenge.",
+    "彼は何年もかけて復讐を計画した。",
+    [
+      "take revenge",
+      "in revenge for"
+    ],
+    "re-(返して)+ venge(罰する。vengeance, vindicate)。やられた分を返すこと。私的な報復を指す。"
+  ],
+  [
+    "reverse",
+    "B2",
+    "形容詞・名詞・動詞",
+    [
+      "逆の",
+      "逆転させる"
+    ],
+    "/rɪˈvɝs/",
+    "The court reversed its earlier decision last week.",
+    "裁判所は先週、以前の判断を覆した。",
+    [
+      "in reverse",
+      "reverse a decision"
+    ],
+    "re-(逆に)+ vers(向く。version, convert)。向きを正反対にすること。車の後退にも使う。"
+  ],
+  [
+    "revival",
+    "B2",
+    "名詞",
+    [
+      "復活",
+      "再興"
+    ],
+    "/rɪˈvaɪvəl/",
+    "The town has seen a revival of traditional crafts.",
+    "その町では伝統工芸の復活が見られる。",
+    [
+      "a revival of",
+      "an economic revival"
+    ],
+    "revive の名詞。re-(再び)+ viv(生きる。vivid, survive)。いったん衰えたものが息を吹き返すこと。"
+  ],
+  [
+    "revive",
+    "B2",
+    "動詞",
+    [
+      "生き返らせる",
+      "復活させる"
+    ],
+    "/rɪˈvaɪv/",
+    "Rain revived the gardens after weeks of drought.",
+    "数週間の干ばつの後、雨が庭を生き返らせた。",
+    [
+      "revive interest",
+      "revive a tradition"
+    ],
+    "re-(再び)+ viv(生きる)。命や勢いを取り戻すこと。人にも習慣にも景気にも使う。"
+  ],
+  [
+    "revolutionary",
+    "B2",
+    "形容詞",
+    [
+      "革命的な",
+      "画期的な"
+    ],
+    "/rɛvəˈluʃənɛri/",
+    "The technique was revolutionary when it first appeared.",
+    "その技法は初めて登場したとき画期的だった。",
+    [
+      "a revolutionary idea",
+      "a revolutionary change"
+    ],
+    "revolution の形容詞。re-(再び)+ volv(回る)。世の中がぐるりと回るほど大きな変化を指す。"
+  ],
+  [
+    "rhetoric",
+    "B2",
+    "名詞",
+    [
+      "修辞",
+      "美辞麗句"
+    ],
+    "/ˈrɛtɚɪk/",
+    "The speech was full of rhetoric but short on detail.",
+    "その演説は美辞麗句に満ちていたが具体性に欠けていた。",
+    [
+      "political rhetoric",
+      "empty rhetoric"
+    ],
+    "ギリシャ語 rhetor(弁論家)。人を動かす話術が原義。今は中身のない言葉という否定的な含みが強い。"
+  ],
+  [
+    "rifle",
+    "B2",
+    "名詞",
+    [
+      "ライフル銃"
+    ],
+    "/ˈraɪfəl/",
+    "The museum displays a hunting rifle from the last century.",
+    "その博物館は前世紀の狩猟用ライフルを展示している。",
+    [
+      "a hunting rifle",
+      "a rifle range"
+    ],
+    "銃身の内側に刻む溝 rifling から。溝で弾を回転させて狙いを安定させる仕組みが名前になった。"
+  ],
+  [
+    "riot",
+    "B2",
+    "名詞",
+    [
+      "暴動"
+    ],
+    "/ˈraɪət/",
+    "A riot broke out after the match was abandoned.",
+    "試合が中止になった後、暴動が起きた。",
+    [
+      "a riot broke out",
+      "riot police"
+    ],
+    "古フランス語 riote(騒ぎ)。群衆が制御を失って暴れること。a riot of colour なら色の氾濫という比喩。"
+  ],
+  [
+    "rip",
+    "B2",
+    "動詞",
+    [
+      "引き裂く"
+    ],
+    "/rɪp/",
+    "He ripped the letter in half without reading it.",
+    "彼はその手紙を読まずに真っ二つに引き裂いた。",
+    [
+      "rip up",
+      "rip off"
+    ],
+    "中英語 rippen。勢いよく裂くこと。tear より荒っぽい。rip off はぼったくる、という口語表現。"
+  ],
+  [
+    "ritual",
+    "B2",
+    "名詞",
+    [
+      "儀式",
+      "決まった手順"
+    ],
+    "/ˈrɪtʃuəl/",
+    "Morning coffee has become a daily ritual for her.",
+    "朝のコーヒーは彼女の日課の儀式になっている。",
+    [
+      "a religious ritual",
+      "a daily ritual"
+    ],
+    "ラテン語 ritus(定められた作法)。順序が決まっていて意味を持つ行為。宗教にも日常の習慣にも使う。"
+  ],
+  [
+    "robust",
+    "B2",
+    "形容詞",
+    [
+      "頑丈な",
+      "力強い"
+    ],
+    "/roʊˈbʌst/",
+    "The design is robust enough for daily outdoor use.",
+    "その設計は屋外での日常使用に十分耐えられる頑丈さがある。",
+    [
+      "a robust system",
+      "robust growth"
+    ],
+    "ラテン語 robur(樫の木、力)。樫のように丈夫なこと。物にも経済にも議論にも使う。"
+  ],
+  [
+    "rod",
+    "B2",
+    "名詞",
+    [
+      "棒",
+      "さお"
+    ],
+    "/rɑd/",
+    "He repaired the fence with a thin metal rod.",
+    "彼は細い金属の棒で柵を修理した。",
+    [
+      "a fishing rod",
+      "a metal rod"
+    ],
+    "古英語 rodd。細くまっすぐな棒。釣りざおや、機械の連結棒にも使う。"
+  ],
+  [
+    "rotate",
+    "B2",
+    "動詞",
+    [
+      "回転する",
+      "交代する"
+    ],
+    "/ˈroʊteɪt/",
+    "Staff rotate between the three sites every month.",
+    "職員は毎月3つの拠点を交代で回る。",
+    [
+      "rotate crops",
+      "rotate shifts"
+    ],
+    "ラテン語 rota(車輪)。round と同語根。軸を中心に回ることが核で、順番に交代する意味へ広がった。"
+  ],
+  [
+    "rotation",
+    "B2",
+    "名詞",
+    [
+      "回転",
+      "輪番"
+    ],
+    "/roʊˈteɪʃən/",
+    "Crop rotation keeps the soil healthy over many years.",
+    "輪作は長年にわたって土壌を健全に保つ。",
+    [
+      "crop rotation",
+      "in rotation"
+    ],
+    "rotate の名詞。ラテン語 rota(車輪)。ぐるりと一周すること、また順番が一巡すること。"
+  ],
+  [
+    "ruling",
+    "B2",
+    "名詞",
+    [
+      "判決",
+      "決定"
+    ],
+    "/ˈrulɪŋ/",
+    "The court's ruling surprised both sides.",
+    "裁判所の判決は双方を驚かせた。",
+    [
+      "a court ruling",
+      "overturn a ruling"
+    ],
+    "rule の名詞。裁判所や審判が下した公式の判断。形容詞では「支配している」の意味になる。"
+  ],
+  [
+    "rumour",
+    "B2",
+    "名詞",
+    [
+      "うわさ"
+    ],
+    "/ˈrumɚ/",
+    "Rumours about the closure spread quickly through the town.",
+    "閉鎖のうわさは町中に素早く広まった。",
+    [
+      "spread a rumour",
+      "rumour has it"
+    ],
+    "ラテン語 rumor(ざわめき)。出所のはっきりしない話。米つづりは rumor。"
+  ],
+  [
+    "sack",
+    "B2",
+    "動詞",
+    [
+      "解雇する",
+      "袋"
+    ],
+    "/sæk/",
+    "He was sacked after repeated warnings.",
+    "彼は度重なる警告の後に解雇された。",
+    [
+      "get the sack",
+      "sack an employee"
+    ],
+    "ギリシャ語 sakkos(袋)。私物を袋に詰めて出ていく姿から、英国口語で「解雇する」の意味になった。"
+  ],
+  [
+    "sacred",
+    "B2",
+    "形容詞",
+    [
+      "神聖な",
+      "侵しがたい"
+    ],
+    "/ˈseɪkrəd/",
+    "The mountain is sacred to the people who live below it.",
+    "その山はふもとに暮らす人々にとって神聖だ。",
+    [
+      "a sacred place",
+      "hold sacred"
+    ],
+    "ラテン語 sacer(神に捧げられた)。sacrifice と同語根。手を触れてはならない領域にあること。"
+  ],
+  [
+    "saint",
+    "B2",
+    "名詞",
+    [
+      "聖人"
+    ],
+    "/seɪnt/",
+    "The church is named after a local saint.",
+    "その教会は地元の聖人にちなんで名づけられている。",
+    [
+      "a patron saint",
+      "the patience of a saint"
+    ],
+    "ラテン語 sanctus(清められた)。sacred と同語根。信仰上、模範として認められた人。"
+  ],
+  [
+    "sake",
+    "B2",
+    "名詞",
+    [
+      "ため",
+      "目的"
+    ],
+    "/seɪk/",
+    "For the sake of clarity, let us take the simplest case.",
+    "分かりやすさのために、最も単純な例を取り上げよう。",
+    [
+      "for the sake of",
+      "for your own sake"
+    ],
+    "古英語 sacu(訴え、事柄)。ほぼ for the sake of の形で使い、何のためかを示す。"
+  ],
+  [
+    "sanction",
+    "B2",
+    "名詞",
+    [
+      "制裁",
+      "認可"
+    ],
+    "/ˈsæŋkʃən/",
+    "Trade sanctions were lifted after the agreement.",
+    "合意の後、貿易制裁は解除された。",
+    [
+      "economic sanctions",
+      "impose sanctions"
+    ],
+    "ラテン語 sancire(聖なるものと定める)。定めを守らせる働きから、複数形で「制裁」、単数で「公認」という逆向きの意味を持つ。"
+  ],
+  [
+    "say",
+    "B2",
+    "名詞",
+    [
+      "発言権"
+    ],
+    "/seɪ/",
+    "Staff had no say in how the office was arranged.",
+    "職員は事務所の配置について発言権がなかった。",
+    [
+      "have a say",
+      "the final say"
+    ],
+    "動詞の say が名詞化した語。意見を述べる権利、が核。have a say in の形で使う。"
+  ],
+  [
+    "scattered",
+    "B2",
+    "形容詞",
+    [
+      "散らばった",
+      "点在する"
+    ],
+    "/ˈskætɚd/",
+    "Scattered showers are expected in the afternoon.",
+    "午後はにわか雨が所々で見込まれる。",
+    [
+      "scattered showers",
+      "scattered across"
+    ],
+    "scatter の形容詞。まとまらずに離れて点在している状態。天気予報の定番表現。"
+  ],
+  [
+    "sceptical",
+    "B2",
+    "形容詞",
+    [
+      "懐疑的な"
+    ],
+    "/ˈskɛptəkəl/",
+    "Economists remain sceptical about the forecast.",
+    "経済学者はその予測に懐疑的なままだ。",
+    [
+      "sceptical about",
+      "deeply sceptical"
+    ],
+    "ギリシャ語 skeptesthai(よく見る)。うのみにせず確かめようとする態度。米つづりは skeptical。"
+  ],
+  [
+    "scope",
+    "B2",
+    "名詞",
+    [
+      "範囲",
+      "余地"
+    ],
+    "/skoʊp/",
+    "There is still scope for improvement in the design.",
+    "その設計にはまだ改善の余地がある。",
+    [
+      "the scope of",
+      "scope for"
+    ],
+    "ギリシャ語 skopos(的、見張り)。telescope と同語根。見渡せる範囲が核で、そこから活動の余地へ。"
+  ],
+  [
+    "screw",
+    "B2",
+    "名詞・動詞",
+    [
+      "ねじ",
+      "ねじで留める"
+    ],
+    "/skru/",
+    "Screw the bracket firmly to the wall.",
+    "金具を壁にしっかりねじで留めなさい。",
+    [
+      "a loose screw",
+      "screw in"
+    ],
+    "ラテン語 scrofa(雌豚)の尾のらせん形から。回して締める仕組みが核。"
+  ],
+  [
+    "scrutiny",
+    "B2",
+    "名詞",
+    [
+      "精査",
+      "監視"
+    ],
+    "/ˈskrutəni/",
+    "The accounts came under close scrutiny last year.",
+    "その会計は昨年、綿密な精査を受けた。",
+    [
+      "under scrutiny",
+      "close scrutiny"
+    ],
+    "ラテン語 scrutari(くず scruta をあさる)。細部まで探るように調べること。come under scrutiny の形が多い。"
+  ],
+  [
+    "secular",
+    "B2",
+    "形容詞",
+    [
+      "世俗の",
+      "非宗教的な"
+    ],
+    "/ˈsɛkjəlɚ/",
+    "The country has a secular system of education.",
+    "その国は非宗教的な教育制度を持っている。",
+    [
+      "a secular state",
+      "secular society"
+    ],
+    "ラテン語 saeculum(世代、この世)。宗教から切り離された、この世の営みに関わること。"
+  ],
+  [
+    "seemingly",
+    "B2",
+    "副詞",
+    [
+      "一見したところ",
+      "どうやら"
+    ],
+    "/ˈsimɪŋli/",
+    "The two problems are seemingly unrelated.",
+    "その2つの問題は一見無関係だ。",
+    [
+      "seemingly endless",
+      "seemingly simple"
+    ],
+    "seem + -ly。そう見えるが実際は違うかもしれない、という留保を添える語。"
+  ],
+  [
+    "segment",
+    "B2",
+    "名詞",
+    [
+      "部分",
+      "区分"
+    ],
+    "/ˈsɛgmənt/",
+    "The report divides the market into four segments.",
+    "その報告書は市場を4つの区分に分けている。",
+    [
+      "a market segment",
+      "a segment of"
+    ],
+    "ラテン語 secare(切る。section, sector)。切り分けられた一片。市場や層の区分にも使う。"
+  ],
+  [
+    "seize",
+    "B2",
+    "動詞",
+    [
+      "つかむ",
+      "押収する"
+    ],
+    "/siz/",
+    "Customs officers seized the goods at the airport.",
+    "税関職員は空港でその品物を押収した。",
+    [
+      "seize an opportunity",
+      "seize power"
+    ],
+    "ラテン語 sacire(所有を主張する)。素早く強く手に入れること。機会にも権力にも使う。"
+  ],
+  [
+    "seldom",
+    "B2",
+    "副詞",
+    [
+      "めったに〜ない"
+    ],
+    "/ˈsɛldəm/",
+    "She seldom speaks about her early career.",
+    "彼女は初期の経歴についてめったに話さない。",
+    [
+      "seldom seen",
+      "seldom if ever"
+    ],
+    "古英語 seldan(まれに)。rarely の硬い言い換えで、否定語なので not とは併用しない。"
+  ],
+  [
+    "selective",
+    "B2",
+    "形容詞",
+    [
+      "選択的な",
+      "えり好みする"
+    ],
+    "/səˈlɛktɪv/",
+    "The school is highly selective about who it admits.",
+    "その学校は入学者の選抜が非常に厳しい。",
+    [
+      "highly selective",
+      "selective about"
+    ],
+    "select の形容詞。全部ではなく選んで取ること。人に使えば好みがうるさいという含み。"
+  ],
+  [
+    "senator",
+    "B2",
+    "名詞",
+    [
+      "上院議員"
+    ],
+    "/ˈsɛnətɚ/",
+    "Two senators voted against the party line.",
+    "2人の上院議員が党の方針に反対票を投じた。",
+    [
+      "a US senator",
+      "a senior senator"
+    ],
+    "ラテン語 senex(老人。senior)。もとは長老の集まりだったローマ元老院の議員。"
+  ],
+  [
+    "sensation",
+    "B2",
+    "名詞",
+    [
+      "感覚",
+      "大評判"
+    ],
+    "/sɛnˈseɪʃən/",
+    "He lost all sensation in his left hand.",
+    "彼は左手の感覚をすべて失った。",
+    [
+      "a burning sensation",
+      "cause a sensation"
+    ],
+    "ラテン語 sentire(感じる。sense)。体で感じる感覚と、世間を騒がせる出来事の両方を指す。"
+  ],
+  [
+    "sensitivity",
+    "B2",
+    "名詞",
+    [
+      "敏感さ",
+      "配慮"
+    ],
+    "/sɛnsɪˈtɪvɪti/",
+    "The subject requires great sensitivity from the interviewer.",
+    "その主題は聞き手に大きな配慮を求める。",
+    [
+      "sensitivity to",
+      "with sensitivity"
+    ],
+    "sensitive の名詞。感じ取る力が核で、機器の感度にも人の心配りにも使う。"
+  ],
+  [
+    "sentiment",
+    "B2",
+    "名詞",
+    [
+      "感情",
+      "意見"
+    ],
+    "/ˈsɛntəmənt/",
+    "Public sentiment turned against the plan.",
+    "世論はその計画に反対へ傾いた。",
+    [
+      "public sentiment",
+      "a similar sentiment"
+    ],
+    "ラテン語 sentire(感じる)。理屈ではなく感じ方に根ざした意見。市場の空気を指す使い方も多い。"
+  ],
+  [
+    "separation",
+    "B2",
+    "名詞",
+    [
+      "分離",
+      "別居"
+    ],
+    "/sɛpɚˈeɪʃən/",
+    "The separation of the two departments took effect in April.",
+    "2つの部署の分離は4月に発効した。",
+    [
+      "the separation of",
+      "a trial separation"
+    ],
+    "separate の名詞。se-(離れて)+ par(用意する)。切り分けて別々にすること。"
+  ],
+  [
+    "serial",
+    "B2",
+    "形容詞",
+    [
+      "連続の",
+      "シリーズの"
+    ],
+    "/ˈsɪriəl/",
+    "The magazine published the story in serial form.",
+    "その雑誌はその物語を連載の形で掲載した。",
+    [
+      "a serial number",
+      "a serial killer"
+    ],
+    "series と同語根のラテン語 serere(つなぐ)。順に並んで続くこと。通し番号にも連続殺人にも使う。"
+  ],
+  [
+    "settlement",
+    "B2",
+    "名詞",
+    [
+      "和解",
+      "集落",
+      "決済"
+    ],
+    "/ˈsɛtəlmənt/",
+    "The two sides reached a settlement out of court.",
+    "双方は法廷外で和解に達した。",
+    [
+      "reach a settlement",
+      "a rural settlement"
+    ],
+    "settle の名詞。腰を落ち着けること。争いが落ち着けば和解、人が落ち着けば集落。"
+  ],
+  [
+    "sexuality",
+    "B2",
+    "名詞",
+    [
+      "性のあり方",
+      "性的指向"
+    ],
+    "/sɛkʃuˈæləti/",
+    "The novel deals openly with questions of sexuality.",
+    "その小説は性のあり方の問題を率直に扱っている。",
+    [
+      "human sexuality",
+      "explore sexuality"
+    ],
+    "sexual の名詞。性に関わる自己のあり方全般を指す語で、中立的に使われる。"
+  ],
+  [
+    "shareholder",
+    "B2",
+    "名詞",
+    [
+      "株主"
+    ],
+    "/ˈʃɛrhoʊldɚ/",
+    "Shareholders voted against the proposed merger.",
+    "株主は提案された合併に反対票を投じた。",
+    [
+      "a major shareholder",
+      "shareholder value"
+    ],
+    "share(株)+ holder(保持者)。会社の持ち分を持つ人。米国では stockholder とも言う。"
+  ],
+  [
+    "shatter",
+    "B2",
+    "動詞",
+    [
+      "粉々に砕く",
+      "打ち砕く"
+    ],
+    "/ˈʃætɚ/",
+    "The news shattered any hope of an early release.",
+    "その知らせは早期釈放の望みを打ち砕いた。",
+    [
+      "shatter a window",
+      "shatter hopes"
+    ],
+    "中英語 scateren(散らす)。破片が飛び散るほど壊れること。希望や自信にも使う。"
+  ],
+  [
+    "shed",
+    "B2",
+    "動詞",
+    [
+      "落とす",
+      "流す",
+      "小屋"
+    ],
+    "/ʃɛd/",
+    "The company shed two hundred jobs last year.",
+    "その会社は昨年200人分の職を削減した。",
+    [
+      "shed light on",
+      "shed tears"
+    ],
+    "古英語 sceadan(分ける)。体から切り離して落とすこと。shed light on は「解明する」。"
+  ],
+  [
+    "sheer",
+    "B2",
+    "形容詞",
+    [
+      "まったくの",
+      "切り立った"
+    ],
+    "/ʃɪr/",
+    "It was sheer luck that no one was in the building.",
+    "建物に誰もいなかったのはまったくの幸運だった。",
+    [
+      "sheer luck",
+      "a sheer drop"
+    ],
+    "古ノルド語 skaerr(澄んだ)。混じり気がないことが核。純粋な、そして垂直に切り立った、の両方に使う。"
+  ],
+  [
+    "shipping",
+    "B2",
+    "名詞",
+    [
+      "輸送",
+      "海運"
+    ],
+    "/ˈʃɪpɪŋ/",
+    "Shipping costs have risen sharply this year.",
+    "輸送費は今年急激に上昇した。",
+    [
+      "shipping costs",
+      "free shipping"
+    ],
+    "ship の名詞。もとは船による輸送だが、今は陸送や配送一般にも使う。"
+  ],
+  [
+    "shrink",
+    "B2",
+    "動詞",
+    [
+      "縮む",
+      "減少する"
+    ],
+    "/ʃrɪŋk/",
+    "The market for printed maps has shrunk steadily.",
+    "紙の地図の市場は着実に縮小してきた。",
+    [
+      "shrink from",
+      "shrink in size"
+    ],
+    "古英語 scrincan。物が小さくなることが核。数量の減少にも、尻込みする意味にも使う。"
+  ],
+  [
+    "shrug",
+    "B2",
+    "動詞",
+    [
+      "肩をすくめる"
+    ],
+    "/ʃrʌg/",
+    "He shrugged and said it was not his decision.",
+    "彼は肩をすくめ、自分が決めることではないと言った。",
+    [
+      "shrug off",
+      "shrug one's shoulders"
+    ],
+    "中英語 schruggen。関心のなさや当惑を表す身ぶり。shrug off なら軽く受け流すこと。"
+  ],
+  [
+    "sigh",
+    "B2",
+    "名詞・動詞",
+    [
+      "ため息をつく"
+    ],
+    "/saɪ/",
+    "She sighed and put the letter back in the drawer.",
+    "彼女はため息をついて手紙を引き出しに戻した。",
+    [
+      "a deep sigh",
+      "sigh with relief"
+    ],
+    "古英語 sican。息を長く吐く動作。安堵にも落胆にも使う点が要点。"
+  ],
+  [
+    "simulate",
+    "B2",
+    "動詞",
+    [
+      "模擬する",
+      "まねる"
+    ],
+    "/ˈsɪmjələt/",
+    "The software simulates traffic flow across the whole city.",
+    "そのソフトは市全体の交通の流れを模擬する。",
+    [
+      "simulate conditions",
+      "computer simulated"
+    ],
+    "ラテン語 similis(似た。similar)。似た状態を作って本物の代わりにすること。"
+  ],
+  [
+    "simulation",
+    "B2",
+    "名詞",
+    [
+      "模擬実験",
+      "シミュレーション"
+    ],
+    "/sɪmjəˈleɪʃən/",
+    "Pilots train on a flight simulation before flying.",
+    "操縦士は飛行前に模擬装置で訓練する。",
+    [
+      "a computer simulation",
+      "run a simulation"
+    ],
+    "simulate の名詞。実物を使わずに条件を再現して試すこと。"
+  ],
+  [
+    "simultaneously",
+    "B2",
+    "副詞",
+    [
+      "同時に"
+    ],
+    "/saɪməlˈteɪniəsli/",
+    "The two films were released simultaneously in ten countries.",
+    "その2本の映画は10か国で同時に公開された。",
+    [
+      "happen simultaneously",
+      "simultaneously with"
+    ],
+    "ラテン語 simul(同時に)。similar と同語根。二つ以上が同じ瞬間に起きること。"
+  ],
+  [
+    "sin",
+    "B2",
+    "名詞",
+    [
+      "罪"
+    ],
+    "/sɪn/",
+    "In the story, pride is treated as the worst sin.",
+    "その物語では、高慢が最悪の罪として扱われる。",
+    [
+      "commit a sin",
+      "a deadly sin"
+    ],
+    "古英語 synn。宗教や道徳の上での罪。法律上の罪 crime とは区別される。"
+  ],
+  [
+    "situated",
+    "B2",
+    "形容詞",
+    [
+      "位置している"
+    ],
+    "/ˈsɪtʃueɪtɪd/",
+    "The hotel is situated on a quiet side street.",
+    "そのホテルは静かな脇道に位置している。",
+    [
+      "be situated in",
+      "conveniently situated"
+    ],
+    "ラテン語 situs(場所。site)。ある場所に置かれていること。be situated の受け身の形で使う。"
+  ],
+  [
+    "sketch",
+    "B2",
+    "名詞",
+    [
+      "下絵",
+      "概略"
+    ],
+    "/skɛtʃ/",
+    "He made a quick sketch of the bridge in pencil.",
+    "彼は鉛筆で橋の素早い下絵を描いた。",
+    [
+      "a rough sketch",
+      "sketch out"
+    ],
+    "ギリシャ語 skhedios(即席の)。細部を詰めない大まかな描写。計画の概略にも使う。"
+  ],
+  [
+    "slam",
+    "B2",
+    "動詞",
+    [
+      "たたきつける",
+      "酷評する"
+    ],
+    "/slæm/",
+    "She slammed the door and walked out.",
+    "彼女は扉をたたきつけて出ていった。",
+    [
+      "slam the door",
+      "slam a decision"
+    ],
+    "擬音語由来。勢いよくぶつける動作が核。報道では激しく非難する意味でも使う。"
+  ],
+  [
+    "slap",
+    "B2",
+    "動詞",
+    [
+      "平手で打つ",
+      "ぴしゃりと置く"
+    ],
+    "/slæp/",
+    "He slapped the papers down on the desk.",
+    "彼は書類を机にぴしゃりと置いた。",
+    [
+      "a slap in the face",
+      "slap down"
+    ],
+    "擬音語由来。平らな面でぴしゃりと打つこと。a slap in the face は「侮辱」。"
+  ],
+  [
+    "slash",
+    "B2",
+    "動詞",
+    [
+      "大幅に削減する",
+      "切りつける"
+    ],
+    "/slæʃ/",
+    "The company slashed prices to clear old stock.",
+    "その会社は古い在庫を処分するため価格を大幅に下げた。",
+    [
+      "slash prices",
+      "slash costs"
+    ],
+    "擬音語由来。刃で勢いよく切ることが核。見出しで「大幅削減」を表す定番の語。"
+  ],
+  [
+    "slavery",
+    "B2",
+    "名詞",
+    [
+      "奴隷制",
+      "奴隷状態"
+    ],
+    "/ˈsleɪvɚi/",
+    "The museum documents the long history of slavery.",
+    "その博物館は奴隷制の長い歴史を記録している。",
+    [
+      "abolish slavery",
+      "the slave trade"
+    ],
+    "slave + -ry。人を所有物として扱う制度。slave はスラブ人を指す語に由来する。"
+  ],
+  [
+    "slot",
+    "B2",
+    "名詞",
+    [
+      "すき間",
+      "枠"
+    ],
+    "/slɑt/",
+    "We managed to get a slot in the afternoon session.",
+    "私たちは午後の部に何とか枠を確保した。",
+    [
+      "a time slot",
+      "a slot machine"
+    ],
+    "古フランス語 esclot(くぼみ)。細長い差し込み口が核。予定表の一区切りにも使う。"
+  ],
+  [
+    "smash",
+    "B2",
+    "動詞",
+    [
+      "粉砕する",
+      "たたき割る"
+    ],
+    "/smæʃ/",
+    "The storm smashed windows along the seafront.",
+    "その嵐は海沿いの窓を次々に割った。",
+    [
+      "smash a window",
+      "smash a record"
+    ],
+    "擬音語由来。強くぶつけて粉々にすること。記録を大きく破る意味にも使う。"
+  ],
+  [
+    "snap",
+    "B2",
+    "動詞",
+    [
+      "ぽきりと折れる",
+      "かみつくように言う"
+    ],
+    "/snæp/",
+    "The branch snapped under the weight of the snow.",
+    "その枝は雪の重みでぽきりと折れた。",
+    [
+      "snap in half",
+      "snap at"
+    ],
+    "擬音語由来。短く鋭い音とともに起こる動きが核。人に当たり散らす意味にも使う。"
+  ],
+  [
+    "soak",
+    "B2",
+    "動詞",
+    [
+      "浸す",
+      "びしょぬれにする"
+    ],
+    "/soʊk/",
+    "Soak the beans overnight before cooking them.",
+    "豆は調理する前に一晩水に浸しなさい。",
+    [
+      "soak up",
+      "be soaked through"
+    ],
+    "古英語 socian。液体にたっぷりつけること。soak up なら吸い上げる、知識を吸収する。"
+  ],
+  [
+    "soar",
+    "B2",
+    "動詞",
+    [
+      "急上昇する",
+      "舞い上がる"
+    ],
+    "/sɔr/",
+    "Fuel prices soared after the supply was cut.",
+    "供給が絶たれた後、燃料価格は急騰した。",
+    [
+      "soar to",
+      "prices soar"
+    ],
+    "古フランス語 essorer(空へ出す)。鳥が羽ばたかずに高く舞う様子が核。数値の急騰にも使う。"
+  ],
+  [
+    "socialist",
+    "B2",
+    "形容詞",
+    [
+      "社会主義の"
+    ],
+    "/ˈsoʊʃələst/",
+    "The party has moved away from its socialist roots.",
+    "その党は社会主義的な出自から離れてきた。",
+    [
+      "a socialist party",
+      "socialist policies"
+    ],
+    "social + -ist。生産手段の社会的な所有を重んじる立場。communist より幅広い考え方を含む。"
+  ],
+  [
+    "sole",
+    "B2",
+    "形容詞",
+    [
+      "唯一の",
+      "足の裏"
+    ],
+    "/soʊl/",
+    "She was the sole survivor of the accident.",
+    "彼女はその事故の唯一の生存者だった。",
+    [
+      "the sole purpose",
+      "sole responsibility"
+    ],
+    "ラテン語 solus(ひとりの。solitary, solo)。ほかにないことが核。靴底や足裏の sole は別語源の同綴語。"
+  ],
+  [
+    "solely",
+    "B2",
+    "副詞",
+    [
+      "もっぱら",
+      "ただ〜だけ"
+    ],
+    "/ˈsoʊəli/",
+    "The decision was based solely on cost.",
+    "その決定はもっぱら費用に基づいていた。",
+    [
+      "solely responsible",
+      "solely because"
+    ],
+    "sole の副詞。ほかの要素を完全に除いて、が核。only より書き言葉向き。"
+  ],
+  [
+    "solicitor",
+    "B2",
+    "名詞",
+    [
+      "事務弁護士"
+    ],
+    "/səˈlɪsətɚ/",
+    "Her solicitor prepared the contract in two days.",
+    "彼女の事務弁護士は2日で契約書を作成した。",
+    [
+      "consult a solicitor",
+      "a family solicitor"
+    ],
+    "ラテン語 sollicitare(動かす、頼む)。英国で書類作成や相談を担う弁護士。法廷弁護士は barrister。"
+  ],
+  [
+    "solidarity",
+    "B2",
+    "名詞",
+    [
+      "連帯"
+    ],
+    "/sɑləˈdɛrəti/",
+    "Workers in other cities marched in solidarity.",
+    "他の都市の労働者も連帯して行進した。",
+    [
+      "in solidarity with",
+      "show solidarity"
+    ],
+    "ラテン語 solidus(固い。solid)。互いに固く結びつくこと。労働運動でよく使う語。"
+  ],
+  [
+    "solo",
+    "B2",
+    "形容詞・名詞",
+    [
+      "単独の",
+      "独奏"
+    ],
+    "/ˈsoʊloʊ/",
+    "She flew solo across the channel at nineteen.",
+    "彼女は19歳で単独で海峡を飛んだ。",
+    [
+      "a solo album",
+      "go solo"
+    ],
+    "イタリア語 solo(ひとりの)。sole と同語根。ほかに誰もいない状態で行うこと。"
+  ],
+  [
+    "sound",
+    "B2",
+    "形容詞",
+    [
+      "健全な",
+      "しっかりした"
+    ],
+    "/saʊnd/",
+    "The building is structurally sound despite its age.",
+    "その建物は古いにもかかわらず構造的に健全だ。",
+    [
+      "sound advice",
+      "structurally sound"
+    ],
+    "古英語 gesund(健康な)。ドイツ語 gesund と同じ語。音の sound とは別語源で、傷んでいないことが核。"
+  ],
+  [
+    "sovereignty",
+    "B2",
+    "名詞",
+    [
+      "主権"
+    ],
+    "/ˈsɑvrənti/",
+    "The dispute is really about sovereignty over the islands.",
+    "その争いは実際にはそれらの島の主権をめぐるものだ。",
+    [
+      "national sovereignty",
+      "sovereignty over"
+    ],
+    "ラテン語 super(上に)。上に立つ者としての最終的な支配権。国家の独立を語る場面で使う。"
+  ],
+  [
+    "spam",
+    "B2",
+    "名詞",
+    [
+      "迷惑メール"
+    ],
+    "/spæm/",
+    "Most spam is filtered out before it reaches your inbox.",
+    "迷惑メールの大半は受信箱に届く前に取り除かれる。",
+    [
+      "spam filter",
+      "block spam"
+    ],
+    "缶詰肉の商品名を使ったコント番組の反復ネタから。同じものが大量に押し寄せる感じが名前になった。"
+  ],
+  [
+    "span",
+    "B2",
+    "名詞・動詞",
+    [
+      "及ぶ",
+      "期間"
+    ],
+    "/spæn/",
+    "Her career spanned more than forty years.",
+    "彼女の経歴は40年以上に及んだ。",
+    [
+      "a short attention span",
+      "span a period"
+    ],
+    "古英語 spann(手を広げた幅)。端から端までの広がりが核。時間にも橋にも使う。"
+  ],
+  [
+    "spark",
+    "B2",
+    "動詞",
+    [
+      "火花",
+      "引き起こす"
+    ],
+    "/spɑrk/",
+    "The announcement sparked a lively debate.",
+    "その発表は活発な議論を引き起こした。",
+    [
+      "spark a debate",
+      "a spark of interest"
+    ],
+    "中英語 sparke(火の粉)。小さな火花が大きな火をつける、という比喩で使うことが多い。"
+  ],
+  [
+    "specialized",
+    "B2",
+    "形容詞",
+    [
+      "専門の",
+      "特化した"
+    ],
+    "/ˈspɛʃəlaɪzd/",
+    "The clinic offers specialized care for rare conditions.",
+    "その診療所はまれな病気に特化した医療を提供している。",
+    [
+      "specialized knowledge",
+      "highly specialized"
+    ],
+    "specialize の形容詞。species(種)と同語根。範囲を狭めて深く扱うこと。英つづりは specialised。"
+  ],
+  [
+    "specification",
+    "B2",
+    "名詞",
+    [
+      "仕様",
+      "明細"
+    ],
+    "/spɛsɪfɪˈkeɪʃən/",
+    "The parts did not match the original specification.",
+    "その部品は元の仕様と合っていなかった。",
+    [
+      "technical specification",
+      "meet the specification"
+    ],
+    "specify の名詞。species(種)から。どの種のものかを細かく特定した記述。略して spec。"
+  ],
+  [
+    "specimen",
+    "B2",
+    "名詞",
+    [
+      "標本",
+      "見本"
+    ],
+    "/ˈspɛsəmən/",
+    "The museum holds a rare specimen of the plant.",
+    "その博物館はその植物のまれな標本を所蔵している。",
+    [
+      "a rare specimen",
+      "a blood specimen"
+    ],
+    "ラテン語 specere(見る。spectacle)。調べるために取っておく一例。"
+  ],
+  [
+    "spectacle",
+    "B2",
+    "名詞",
+    [
+      "光景",
+      "見せ物"
+    ],
+    "/ˈspɛktəkəl/",
+    "The festival is a spectacle worth travelling for.",
+    "その祭りは旅する価値のある見ものだ。",
+    [
+      "a great spectacle",
+      "make a spectacle of"
+    ],
+    "ラテン語 spectare(見る)。目を奪う眺め。複数形 spectacles は眼鏡という別の意味。"
+  ],
+  [
+    "spectrum",
+    "B2",
+    "名詞",
+    [
+      "範囲",
+      "スペクトル"
+    ],
+    "/ˈspɛktrəm/",
+    "Opinions cover the whole spectrum from support to hostility.",
+    "意見は支持から敵意まで全域にわたっている。",
+    [
+      "a broad spectrum",
+      "across the spectrum"
+    ],
+    "ラテン語 spectrum(像)。光を分けて並べた帯が原義で、そこから連続した幅広い範囲へ。"
+  ],
+  [
+    "spell",
+    "B2",
+    "名詞",
+    [
+      "期間",
+      "呪文"
+    ],
+    "/spɛl/",
+    "There was a long spell of dry weather in June.",
+    "6月には長い乾燥した天候が続いた。",
+    [
+      "a dry spell",
+      "under a spell"
+    ],
+    "古英語 spell(話、物語)。唱える言葉が呪文、続く一区切りが期間。綴りを言う動詞とは別系統。"
+  ],
+  [
+    "sphere",
+    "B2",
+    "名詞",
+    [
+      "領域",
+      "球"
+    ],
+    "/sfɪr/",
+    "The two ministers have separate spheres of responsibility.",
+    "その2人の大臣は別々の責任範囲を持つ。",
+    [
+      "a sphere of influence",
+      "in the public sphere"
+    ],
+    "ギリシャ語 sphaira(球)。丸い立体が原義で、そこから活動が及ぶ範囲へ。"
+  ],
+  [
+    "spin",
+    "B2",
+    "名詞・動詞",
+    [
+      "回転させる",
+      "印象操作"
+    ],
+    "/spɪn/",
+    "The wheel spins freely once the brake is released.",
+    "ブレーキを外すと車輪は自由に回る。",
+    [
+      "spin around",
+      "put a spin on"
+    ],
+    "古英語 spinnan(糸を紡ぐ)。軸を中心に回すことが核。事実に都合のよい解釈を加える意味にも使う。"
+  ],
+  [
+    "spine",
+    "B2",
+    "名詞",
+    [
+      "背骨",
+      "背"
+    ],
+    "/spaɪn/",
+    "A fall damaged two bones in his spine.",
+    "転倒で彼の背骨の2つの骨が損傷した。",
+    [
+      "the spine of",
+      "spine of a book"
+    ],
+    "ラテン語 spina(とげ、背骨)。体を支える軸となる骨。本の背も同じ語で呼ぶ。"
+  ],
+  [
+    "spotlight",
+    "B2",
+    "名詞",
+    [
+      "脚光",
+      "スポットライト"
+    ],
+    "/ˈspɑtlaɪt/",
+    "The report put the issue back in the spotlight.",
+    "その報告書はその問題を再び脚光の下に置いた。",
+    [
+      "in the spotlight",
+      "the media spotlight"
+    ],
+    "spot(一点)+ light。一点を照らす照明が原義で、注目が集まることの比喩になった。"
+  ],
+  [
+    "spouse",
+    "B2",
+    "名詞",
+    [
+      "配偶者"
+    ],
+    "/spaʊs/",
+    "The form asks for the name of your spouse.",
+    "その用紙は配偶者の名前を尋ねている。",
+    [
+      "a surviving spouse",
+      "spouse and children"
+    ],
+    "ラテン語 sponsus(約束された人。sponsor, respond)。性別を問わず配偶者を指せる、書類向きの語。"
+  ],
+  [
+    "spy",
+    "B2",
+    "名詞・動詞",
+    [
+      "スパイ",
+      "こっそり見る"
+    ],
+    "/spaɪ/",
+    "He was arrested on suspicion of working as a spy.",
+    "彼はスパイとして働いていた疑いで逮捕された。",
+    [
+      "a foreign spy",
+      "spy on"
+    ],
+    "古フランス語 espier(見張る)。相手に知られずに情報を集めること。spy on の形が多い。"
+  ],
+  [
+    "squad",
+    "B2",
+    "名詞",
+    [
+      "分隊",
+      "チーム"
+    ],
+    "/skwɑd/",
+    "The manager named a squad of twenty players.",
+    "監督は20人の選手からなる登録メンバーを発表した。",
+    [
+      "a bomb squad",
+      "the first-team squad"
+    ],
+    "ラテン語 quadra(四角)。もとは四角い隊形。少人数で動く一団を指し、警察やスポーツで使う。"
+  ],
+  [
+    "stab",
+    "B2",
+    "動詞",
+    [
+      "刺す",
+      "刺し傷"
+    ],
+    "/stæb/",
+    "He was stabbed in the arm during the robbery.",
+    "彼は強盗の際に腕を刺された。",
+    [
+      "stab in the back",
+      "a stab wound"
+    ],
+    "中英語 stabbe。とがったもので突くこと。stab in the back は「裏切る」という比喩。"
+  ],
+  [
+    "stability",
+    "B2",
+    "名詞",
+    [
+      "安定",
+      "安定性"
+    ],
+    "/stəˈbɪlɪti/",
+    "Political stability over many years attracted foreign investment.",
+    "長年にわたる政治的な安定が外国からの投資を引き寄せた。",
+    [
+      "economic stability",
+      "financial stability"
+    ],
+    "stable の名詞。ラテン語 stare(立つ)。ぐらつかずに立ち続けている状態。"
+  ],
+  [
+    "stabilize",
+    "B2",
+    "動詞",
+    [
+      "安定させる"
+    ],
+    "/ˈsteɪbəlaɪz/",
+    "The medicine stabilized his heart rate within an hour.",
+    "その薬は1時間以内に彼の心拍を安定させた。",
+    [
+      "stabilize prices",
+      "stabilize a patient"
+    ],
+    "stable + -ize。揺れている状態を止めて一定に保つこと。英つづりは stabilise。"
+  ],
+  [
+    "stake",
+    "B2",
+    "名詞",
+    [
+      "出資分",
+      "賭け",
+      "杭"
+    ],
+    "/steɪk/",
+    "The company sold its stake in the airline.",
+    "その会社はその航空会社の持ち分を売却した。",
+    [
+      "at stake",
+      "a controlling stake"
+    ],
+    "古英語 staca(杭)。賭け金を杭に留めたことから。at stake は「危険にさらされて」。"
+  ],
+  [
+    "standing",
+    "B2",
+    "形容詞",
+    [
+      "長年の",
+      "常設の"
+    ],
+    "/ˈstændɪŋ/",
+    "The club has a standing invitation to use the hall.",
+    "そのクラブは会館を使う常時の招待を受けている。",
+    [
+      "a standing committee",
+      "long standing"
+    ],
+    "stand の形容詞。立ったまま続いていることが核。名詞では地位や評判を指す。"
+  ],
+  [
+    "stark",
+    "B2",
+    "形容詞",
+    [
+      "厳しい",
+      "はっきりした"
+    ],
+    "/stɑrk/",
+    "The photographs show the stark reality of life there.",
+    "その写真はそこでの暮らしの厳しい現実を示している。",
+    [
+      "a stark contrast",
+      "stark reality"
+    ],
+    "古英語 stearc(硬い)。飾りがなくむき出しであること。stark contrast は際立った対比。"
+  ],
+  [
+    "statistical",
+    "B2",
+    "形容詞",
+    [
+      "統計上の"
+    ],
+    "/stəˈtɪstɪkəl/",
+    "The difference is not statistical significant in this sample.",
+    "この標本では、その差は統計的に有意ではない。",
+    [
+      "statistical analysis",
+      "statistical evidence"
+    ],
+    "statistics の形容詞。もとは国家 state の情報を扱う学問。数として集めた事実に基づくこと。"
+  ],
+  [
+    "steer",
+    "B2",
+    "動詞",
+    [
+      "操縦する",
+      "導く"
+    ],
+    "/stɪr/",
+    "She steered the discussion back to the main point.",
+    "彼女は議論を本題へ戻した。",
+    [
+      "steer a course",
+      "steer clear of"
+    ],
+    "古英語 stieran(舵を取る)。向きを決めて進ませること。話や人を導く比喩にも使う。"
+  ],
+  [
+    "stem",
+    "B2",
+    "名詞・動詞",
+    [
+      "茎",
+      "生じる"
+    ],
+    "/stɛm/",
+    "Most of the delays stem from a shortage of parts.",
+    "遅れの大半は部品不足に起因する。",
+    [
+      "stem from",
+      "the stem of"
+    ],
+    "古英語 stemn(幹)。根から伸びる部分が核。stem from で「〜に由来する」。"
+  ],
+  [
+    "stereotype",
+    "B2",
+    "名詞",
+    [
+      "固定観念",
+      "型にはめる"
+    ],
+    "/ˈstɛriətaɪp/",
+    "The film challenges old stereotypes about rural life.",
+    "その映画は田舎暮らしについての古い固定観念に異議を唱える。",
+    [
+      "a negative stereotype",
+      "break a stereotype"
+    ],
+    "印刷の鉛版 stereotype から。同じ版で刷ったように画一的な見方を指すようになった。"
+  ],
+  [
+    "stimulus",
+    "B2",
+    "名詞",
+    [
+      "刺激",
+      "景気刺激策"
+    ],
+    "/ˈstɪmjələs/",
+    "The government announced a stimulus for small businesses.",
+    "政府は中小企業向けの景気刺激策を発表した。",
+    [
+      "an economic stimulus",
+      "respond to a stimulus"
+    ],
+    "ラテン語 stimulus(突き棒)。突いて動かすものが核。複数形は stimuli と形が変わる。"
+  ],
+  [
+    "straightforward",
+    "B2",
+    "形容詞",
+    [
+      "わかりやすい",
+      "率直な"
+    ],
+    "/ˈstreɪtˈfɔrwɚd/",
+    "The instructions are straightforward enough for a beginner.",
+    "その説明は初心者にも十分わかりやすい。",
+    [
+      "a straightforward answer",
+      "fairly straightforward"
+    ],
+    "straight + forward。まっすぐ前へ進む道筋のように、ひねりがないこと。"
+  ],
+  [
+    "strain",
+    "B2",
+    "名詞",
+    [
+      "負担",
+      "緊張",
+      "種"
+    ],
+    "/streɪn/",
+    "Long shifts put a strain on the whole team.",
+    "長時間勤務はチーム全体に負担をかけた。",
+    [
+      "put a strain on",
+      "under strain"
+    ],
+    "ラテン語 stringere(締める。strict, stress)。引っ張られて張りつめること。細菌の系統も strain と呼ぶ。"
+  ],
+  [
+    "strand",
+    "B2",
+    "名詞",
+    [
+      "糸",
+      "一筋"
+    ],
+    "/strænd/",
+    "A single strand of hair was found on the coat.",
+    "上着から髪の毛が1本見つかった。",
+    [
+      "a strand of hair",
+      "a strand of the story"
+    ],
+    "中英語で「より糸の一本」。細長い一本が核。物語や議論の「一筋の流れ」にも使う。"
+  ],
+  [
+    "strategic",
+    "B2",
+    "形容詞",
+    [
+      "戦略的な"
+    ],
+    "/strəˈtidʒɪk/",
+    "The port has great strategic importance for the region.",
+    "その港は地域にとって大きな戦略的重要性を持つ。",
+    [
+      "a strategic decision",
+      "strategic planning"
+    ],
+    "ギリシャ語 strategos(将軍)。全体を見て長い目で決めること。目先の tactical と対で覚える。"
+  ],
+  [
+    "striking",
+    "B2",
+    "形容詞",
+    [
+      "目立つ",
+      "印象的な"
+    ],
+    "/ˈstraɪkɪŋ/",
+    "There is a striking similarity between the two cases.",
+    "その2つの事例には目を引く類似がある。",
+    [
+      "a striking difference",
+      "striking similarity"
+    ],
+    "strike(打つ)の形容詞。目を打ってくるほど際立っていること。良くも悪くも印象が強い。"
+  ],
+  [
+    "strip",
+    "B2",
+    "名詞・動詞",
+    [
+      "はぎ取る",
+      "細長い一片"
+    ],
+    "/strɪp/",
+    "Workers stripped the old paint from the walls.",
+    "作業員は壁から古い塗装をはぎ取った。",
+    [
+      "a strip of land",
+      "strip away"
+    ],
+    "古英語由来で「はぎ取る」。覆いを取り去ることと、細長く切った一片の両方を指す。"
+  ],
+  [
+    "strive",
+    "B2",
+    "動詞",
+    [
+      "努力する",
+      "励む"
+    ],
+    "/straɪv/",
+    "The charity strives to reach every village in the area.",
+    "その慈善団体は地域の全村に届くよう努めている。",
+    [
+      "strive for",
+      "strive to"
+    ],
+    "古フランス語 estriver(争う)。困難に逆らって力を尽くすこと。try よりずっと強い。"
+  ],
+  [
+    "structural",
+    "B2",
+    "形容詞",
+    [
+      "構造上の"
+    ],
+    "/ˈstrʌktʃɚəl/",
+    "The cracks turned out to be structural, not cosmetic.",
+    "そのひび割れは見た目だけでなく構造上のものだと判明した。",
+    [
+      "structural damage",
+      "structural change"
+    ],
+    "structure の形容詞。ラテン語 struere(積む)。表面ではなく骨組みに関わること。"
+  ],
+  [
+    "stumble",
+    "B2",
+    "動詞",
+    [
+      "つまずく",
+      "口ごもる"
+    ],
+    "/ˈstʌmbəl/",
+    "He stumbled on the loose step in the dark.",
+    "彼は暗がりでぐらついた段につまずいた。",
+    [
+      "stumble over",
+      "stumble across"
+    ],
+    "中英語 stumblen。足を取られてよろけること。stumble across なら偶然出くわすこと。"
+  ],
+  [
+    "stun",
+    "B2",
+    "動詞",
+    [
+      "驚かせる",
+      "気絶させる"
+    ],
+    "/stʌn/",
+    "The result stunned everyone watching at home.",
+    "その結果は自宅で見ていた全員を驚かせた。",
+    [
+      "be stunned by",
+      "stun the crowd"
+    ],
+    "古フランス語 estoner(雷で打つ)。astonish と同語源。一瞬動けなくなるほどの衝撃。"
+  ],
+  [
+    "submission",
+    "B2",
+    "名詞",
+    [
+      "提出",
+      "服従"
+    ],
+    "/səbˈmɪʃən/",
+    "The deadline for submission is the end of the month.",
+    "提出期限は月末だ。",
+    [
+      "a late submission",
+      "submission to"
+    ],
+    "submit の名詞。sub-(下に)+ mit(送る)。下位の立場で差し出すこと。書類の提出にも服従にも使う。"
+  ],
+  [
+    "subscriber",
+    "B2",
+    "名詞",
+    [
+      "加入者",
+      "購読者"
+    ],
+    "/səbskˈraɪbɚ/",
+    "The service passed one million subscribers last spring.",
+    "そのサービスは昨春100万人の加入者を超えた。",
+    [
+      "a paying subscriber",
+      "subscriber numbers"
+    ],
+    "subscribe + -er。sub-(下に)+ scribe(書く)。契約書の下に署名した人、が原義。"
+  ],
+  [
+    "subscription",
+    "B2",
+    "名詞",
+    [
+      "定期購読",
+      "加入"
+    ],
+    "/səbskˈrɪpʃən/",
+    "A yearly subscription costs less than monthly payments.",
+    "年間購読は月払いより安くつく。",
+    [
+      "a monthly subscription",
+      "cancel a subscription"
+    ],
+    "subscribe の名詞。署名して継続的に払う取り決め。今は動画や音楽の定額利用も指す。"
+  ],
+  [
+    "subsidy",
+    "B2",
+    "名詞",
+    [
+      "補助金"
+    ],
+    "/ˈsʌbsɪdi/",
+    "Farmers receive a subsidy for planting hedges.",
+    "農家は生け垣を植えることで補助金を受け取る。",
+    [
+      "a government subsidy",
+      "cut subsidies"
+    ],
+    "ラテン語 subsidium(予備兵、援助)。sub-(下から)+ sid(座る)。下から支える金。"
+  ],
+  [
+    "substantial",
+    "B2",
+    "形容詞",
+    [
+      "かなりの",
+      "実質的な"
+    ],
+    "/səbsˈtænʃəl/",
+    "The repairs required a substantial amount of money.",
+    "その修理にはかなりの額の金が必要だった。",
+    [
+      "a substantial increase",
+      "substantial evidence"
+    ],
+    "substance(中身)の形容詞。sub-(下に)+ stant(立つ)。中身が詰まっていて軽くないこと。"
+  ],
+  [
+    "substantially",
+    "B2",
+    "副詞",
+    [
+      "大幅に",
+      "実質的に"
+    ],
+    "/səbsˈtænʃəli/",
+    "Costs have fallen substantially since last year.",
+    "費用は昨年から大幅に下がった。",
+    [
+      "substantially higher",
+      "substantially the same"
+    ],
+    "substantial の副詞。程度が大きいことと、細かい違いを除けば実質同じであること、両方に使う。"
+  ],
+  [
+    "substitution",
+    "B2",
+    "名詞",
+    [
+      "代用",
+      "交代"
+    ],
+    "/sʌbstɪˈtuʃən/",
+    "The substitution of oil for butter changes the texture.",
+    "バターの代わりに油を使うと食感が変わる。",
+    [
+      "a substitution for",
+      "make a substitution"
+    ],
+    "substitute の名詞。sub-(下に)+ stitut(立てる)。代わりに立てること。競技の選手交代にも使う。"
+  ],
+  [
+    "subtle",
+    "B2",
+    "形容詞",
+    [
+      "微妙な",
+      "繊細な"
+    ],
+    "/ˈsʌtəl/",
+    "There is a subtle difference between the two shades.",
+    "その2つの色合いには微妙な違いがある。",
+    [
+      "a subtle difference",
+      "subtle changes"
+    ],
+    "ラテン語 subtilis(細かく織られた)。目を凝らさないと分からない細かさ。b は発音しない。"
+  ],
+  [
+    "suburban",
+    "B2",
+    "形容詞",
+    [
+      "郊外の"
+    ],
+    "/səˈbɝbən/",
+    "Most of the new housing is suburban rather than urban.",
+    "新しい住宅の大半は都市部ではなく郊外にある。",
+    [
+      "a suburban area",
+      "suburban life"
+    ],
+    "sub-(近くに)+ urban(都市の)。都市のすぐ外側にある住宅地域。"
+  ],
+  [
+    "succession",
+    "B2",
+    "名詞",
+    [
+      "連続",
+      "継承"
+    ],
+    "/səkˈsɛʃən/",
+    "The team lost four games in succession.",
+    "そのチームは4試合連続で負けた。",
+    [
+      "in succession",
+      "the line of succession"
+    ],
+    "succeed の名詞。sub-(下に)+ cess(行く)。すぐ後に続くこと。地位を継ぐ意味もある。"
+  ],
+  [
+    "successive",
+    "B2",
+    "形容詞",
+    [
+      "連続する",
+      "続けざまの"
+    ],
+    "/səkˈsɛsɪv/",
+    "Prices rose for three successive months.",
+    "価格は3か月連続で上昇した。",
+    [
+      "successive years",
+      "successive governments"
+    ],
+    "succession の形容詞。間を空けずに続く、が核。consecutive とほぼ同じ意味で使う。"
+  ],
+  [
+    "successor",
+    "B2",
+    "名詞",
+    [
+      "後継者",
+      "後任"
+    ],
+    "/səkˈsɛsɚ/",
+    "Her successor inherited a well-run department.",
+    "彼女の後任は運営の行き届いた部署を引き継いだ。",
+    [
+      "a successor to",
+      "name a successor"
+    ],
+    "succeed + -or。後から来る人。前任者は predecessor で、対にして覚える。"
+  ],
+  [
+    "suck",
+    "B2",
+    "動詞",
+    [
+      "吸う",
+      "吸い込む"
+    ],
+    "/sʌk/",
+    "The pump sucks water from the well below.",
+    "そのポンプは下の井戸から水を吸い上げる。",
+    [
+      "suck up",
+      "suck in"
+    ],
+    "古英語 sucan。口や装置で引き入れること。口語では「ひどい」という意味の俗な用法もある。"
+  ],
+  [
+    "sue",
+    "B2",
+    "動詞",
+    [
+      "訴える"
+    ],
+    "/su/",
+    "They sued the builder for faulty work.",
+    "彼らは欠陥工事について建設業者を訴えた。",
+    [
+      "sue for damages",
+      "threaten to sue"
+    ],
+    "ラテン語 sequi(追う。pursue, sequence)。法廷まで追いかけること。sue someone for の形をとる。"
+  ],
+  [
+    "suicide",
+    "B2",
+    "名詞",
+    [
+      "自殺"
+    ],
+    "/ˈsuəsaɪd/",
+    "The charity runs a helpline for suicide prevention.",
+    "その慈善団体は自殺予防のための相談電話を運営している。",
+    [
+      "suicide prevention",
+      "commit suicide"
+    ],
+    "sui(自分)+ cide(殺す。genocide)。自分の命を絶つこと。報道では慎重な表現が求められる語。"
+  ],
+  [
+    "suite",
+    "B2",
+    "名詞",
+    [
+      "ひと続きの部屋",
+      "組"
+    ],
+    "/swit/",
+    "They booked a small suite overlooking the harbour.",
+    "彼らは港を見下ろす小さなスイートを予約した。",
+    [
+      "a hotel suite",
+      "a suite of rooms"
+    ],
+    "フランス語 suite(続き)。sequence と同語源。ひと続きにまとまったもの。発音は sweet と同じ。"
+  ],
+  [
+    "summit",
+    "B2",
+    "名詞",
+    [
+      "首脳会議",
+      "頂上"
+    ],
+    "/ˈsʌmət/",
+    "Leaders met for a two-day summit in Vienna.",
+    "首脳たちはウィーンで2日間の会議のため集まった。",
+    [
+      "a summit meeting",
+      "reach the summit"
+    ],
+    "ラテン語 summus(最高の。sum)。山の頂が原義で、最高位の人同士の会談を指すようになった。"
+  ],
+  [
+    "superb",
+    "B2",
+    "形容詞",
+    [
+      "見事な",
+      "非常に優れた"
+    ],
+    "/sʊˈpɝb/",
+    "The orchestra gave a superb performance last night.",
+    "そのオーケストラは昨夜、見事な演奏を披露した。",
+    [
+      "a superb view",
+      "absolutely superb"
+    ],
+    "ラテン語 superbus(誇り高い)。super(上)から。並より一段上にあること。"
+  ],
+  [
+    "superior",
+    "B2",
+    "形容詞",
+    [
+      "優れた",
+      "上位の"
+    ],
+    "/suˈpɪriɚ/",
+    "This model is clearly superior to the older version.",
+    "この型は旧型より明らかに優れている。",
+    [
+      "superior to",
+      "a superior product"
+    ],
+    "ラテン語 super(上)の比較級。than ではなく to をとる点が要点。人に使うと「偉そうな」の含みも。"
+  ],
+  [
+    "supervise",
+    "B2",
+    "動詞",
+    [
+      "監督する",
+      "指導する"
+    ],
+    "/ˈsupɚvaɪz/",
+    "A qualified nurse supervises the whole ward.",
+    "有資格の看護師が病棟全体を監督している。",
+    [
+      "supervise staff",
+      "closely supervise"
+    ],
+    "super(上から)+ vis(見る。vision)。上から目を配って進め方を見ること。"
+  ],
+  [
+    "supervision",
+    "B2",
+    "名詞",
+    [
+      "監督",
+      "指導"
+    ],
+    "/supɚˈvɪʒən/",
+    "Children use the equipment under adult supervision.",
+    "子どもは大人の監督のもとでその器具を使う。",
+    [
+      "under supervision",
+      "close supervision"
+    ],
+    "supervise の名詞。under supervision の形で「監督を受けて」。"
+  ],
+  [
+    "supervisor",
+    "B2",
+    "名詞",
+    [
+      "監督者",
+      "指導教員"
+    ],
+    "/ˈsupɚvaɪzɚ/",
+    "Her supervisor read three drafts of the thesis.",
+    "彼女の指導教員は論文の草稿を3回読んだ。",
+    [
+      "a site supervisor",
+      "a research supervisor"
+    ],
+    "supervise + -or。現場を見る立場の人。大学では研究を指導する教員を指す。"
+  ],
+  [
+    "supplement",
+    "B2",
+    "名詞・動詞",
+    [
+      "補う",
+      "補足"
+    ],
+    "/ˈsʌpləmənt/",
+    "She supplements her income by teaching in the evenings.",
+    "彼女は夜に教えることで収入を補っている。",
+    [
+      "a dietary supplement",
+      "supplement income"
+    ],
+    "ラテン語 supplere(満たす。supply, complete)。足りない分を後から満たすもの。"
+  ],
+  [
+    "supportive",
+    "B2",
+    "形容詞",
+    [
+      "支えとなる",
+      "協力的な"
+    ],
+    "/səˈpɔrtɪv/",
+    "Her family was supportive throughout the illness.",
+    "彼女の家族は病気の間ずっと支えとなった。",
+    [
+      "supportive of",
+      "a supportive environment"
+    ],
+    "support の形容詞。下から支える姿勢を持っていること。人にも制度にも使う。"
+  ],
+  [
+    "supposedly",
+    "B2",
+    "副詞",
+    [
+      "〜とされている",
+      "たぶん"
+    ],
+    "/səˈpoʊzədli/",
+    "The building is supposedly the oldest in the town.",
+    "その建物は町で最も古いとされている。",
+    [
+      "supposedly safe",
+      "supposedly because"
+    ],
+    "suppose の副詞。人がそう言っているだけで確かではない、という書き手の距離感を示す。"
+  ],
+  [
+    "suppress",
+    "B2",
+    "動詞",
+    [
+      "抑圧する",
+      "抑える"
+    ],
+    "/səˈprɛs/",
+    "She could not suppress a smile at the question.",
+    "彼女はその質問に笑みを抑えきれなかった。",
+    [
+      "suppress a revolt",
+      "suppress information"
+    ],
+    "sub-(下に)+ press(押す)。押さえつけて出させないこと。感情にも情報にも反乱にも使う。"
+  ],
+  [
+    "supreme",
+    "B2",
+    "形容詞",
+    [
+      "最高の",
+      "至上の"
+    ],
+    "/səˈprim/",
+    "The case went all the way to the supreme court.",
+    "その事件は最高裁判所まで持ち込まれた。",
+    [
+      "supreme court",
+      "supreme power"
+    ],
+    "ラテン語 supremus(最も上の)。super の最上級。これより上がない位置を指す。"
+  ],
+  [
+    "surge",
+    "B2",
+    "名詞・動詞",
+    [
+      "急増",
+      "押し寄せる"
+    ],
+    "/sɝdʒ/",
+    "Demand for tickets surged after the announcement.",
+    "発表の後、チケットの需要が急増した。",
+    [
+      "a surge in",
+      "a power surge"
+    ],
+    "ラテン語 surgere(立ち上がる。resource, insurgent)。波が立ち上がって押し寄せる感じ。"
+  ],
+  [
+    "surgical",
+    "B2",
+    "形容詞",
+    [
+      "外科の",
+      "手術の"
+    ],
+    "/ˈsɝdʒɪkəl/",
+    "The wound required a simple surgical procedure.",
+    "その傷には簡単な外科処置が必要だった。",
+    [
+      "surgical treatment",
+      "surgical precision"
+    ],
+    "ギリシャ語 kheir(手)+ ergon(仕事)。手で行う医療、が語源。狙いを外さない正確さの比喩にも使う。"
+  ],
+  [
+    "surplus",
+    "B2",
+    "名詞",
+    [
+      "余剰",
+      "黒字"
+    ],
+    "/ˈsɝpləs/",
+    "The country recorded a trade surplus for the third year.",
+    "その国は3年連続で貿易黒字を記録した。",
+    [
+      "a budget surplus",
+      "surplus stock"
+    ],
+    "sur-(上に)+ plus(より多い)。必要量を上回った分。deficit の反対。"
+  ],
+  [
+    "surrender",
+    "B2",
+    "動詞",
+    [
+      "降伏する",
+      "明け渡す"
+    ],
+    "/sɚˈɛndɚ/",
+    "The garrison surrendered after a week without supplies.",
+    "守備隊は補給なしの1週間の後に降伏した。",
+    [
+      "surrender to",
+      "surrender a passport"
+    ],
+    "sur-(上に)+ render(渡す)。相手に渡し切ること。降伏にも、権利や書類の引き渡しにも使う。"
+  ],
+  [
+    "surveillance",
+    "B2",
+    "名詞",
+    [
+      "監視"
+    ],
+    "/sɚˈveɪləns/",
+    "The whole site is under constant surveillance.",
+    "その敷地全体が常時監視下にある。",
+    [
+      "under surveillance",
+      "surveillance camera"
+    ],
+    "フランス語 sur-(上から)+ veiller(見張る。vigil)。上から見張り続けること。"
+  ],
+  [
+    "suspension",
+    "B2",
+    "名詞",
+    [
+      "停止",
+      "つり下げ"
+    ],
+    "/səˈspɛnʃən/",
+    "The player faces a three-match suspension.",
+    "その選手は3試合の出場停止に直面している。",
+    [
+      "a temporary suspension",
+      "suspension bridge"
+    ],
+    "suspend の名詞。sub-(下に)+ pend(つるす。pendant)。宙づりにして止めること。"
+  ],
+  [
+    "suspicion",
+    "B2",
+    "名詞",
+    [
+      "疑い",
+      "容疑"
+    ],
+    "/səˈspɪʃən/",
+    "He was arrested on suspicion of theft.",
+    "彼は窃盗の容疑で逮捕された。",
+    [
+      "on suspicion of",
+      "arouse suspicion"
+    ],
+    "ラテン語 suspicere(下から見上げる)。疑いの目で見ること。まだ証拠が固まっていない段階を指す。"
+  ],
+  [
+    "suspicious",
+    "B2",
+    "形容詞",
+    [
+      "疑わしい",
+      "怪しむ"
+    ],
+    "/səˈspɪʃəs/",
+    "Neighbours reported a suspicious van in the street.",
+    "近所の人が通りの怪しいバンについて通報した。",
+    [
+      "suspicious of",
+      "look suspicious"
+    ],
+    "suspicion の形容詞。疑いを持つ側にも、疑われる側にも使える点が要点。"
+  ],
+  [
+    "swing",
+    "B2",
+    "名詞・動詞",
+    [
+      "揺れる",
+      "振れ幅"
+    ],
+    "/swɪŋ/",
+    "The heavy door swings open whenever the wind rises.",
+    "風が強まるたびにその重い扉が開いて揺れる。",
+    [
+      "swing open",
+      "a swing in opinion"
+    ],
+    "古英語 swingan。支点を中心に往復すること。世論や気分の振れにも使う。"
+  ],
+  [
+    "sword",
+    "B2",
+    "名詞",
+    [
+      "剣"
+    ],
+    "/sɔrd/",
+    "The museum displays a sword from the twelfth century.",
+    "その博物館は12世紀の剣を展示している。",
+    [
+      "draw a sword",
+      "a double-edged sword"
+    ],
+    "古英語 sweord。w は発音しない。a double-edged sword は良い面と悪い面を併せ持つもの。"
+  ],
+  [
+    "symbolic",
+    "B2",
+    "形容詞",
+    [
+      "象徴的な"
+    ],
+    "/sɪmˈbɑlɪk/",
+    "The gesture was symbolic rather than practical.",
+    "その行為は実際的というより象徴的だった。",
+    [
+      "symbolic of",
+      "a symbolic gesture"
+    ],
+    "symbol の形容詞。ギリシャ語 symbolon(割り符)。実質より意味を示すためのもの。"
+  ],
+  [
+    "syndrome",
+    "B2",
+    "名詞",
+    [
+      "症候群"
+    ],
+    "/ˈsɪndroʊm/",
+    "Doctors described the condition as a rare syndrome.",
+    "医師たちはその状態をまれな症候群と説明した。",
+    [
+      "a rare syndrome",
+      "suffer from a syndrome"
+    ],
+    "ギリシャ語 syn-(共に)+ drome(走る)。いくつもの症状が一緒に走り出てくること。"
+  ],
+  [
+    "synthesis",
+    "B2",
+    "名詞",
+    [
+      "統合",
+      "合成"
+    ],
+    "/ˈsɪnθəsəs/",
+    "The book offers a synthesis of two rival theories.",
+    "その本は対立する2つの理論の統合を示している。",
+    [
+      "a synthesis of",
+      "chemical synthesis"
+    ],
+    "syn-(共に)+ thesis(置く)。別々の要素を組み合わせて一つにすること。analysis の反対。"
+  ],
+  [
+    "systematic",
+    "B2",
+    "形容詞",
+    [
+      "体系的な",
+      "組織的な"
+    ],
+    "/sɪstəˈmætɪk/",
+    "They carried out a systematic review of all the records.",
+    "彼らはすべての記録の体系的な精査を行った。",
+    [
+      "a systematic approach",
+      "systematic errors"
+    ],
+    "system の形容詞。思いつきではなく、決めた手順に沿って漏れなく進めること。"
+  ],
+  [
+    "tactic",
+    "B2",
+    "名詞",
+    [
+      "戦術",
+      "手口"
+    ],
+    "/ˈtæktɪk/",
+    "Delaying the vote was a deliberate tactic.",
+    "採決を遅らせることは意図的な戦術だった。",
+    [
+      "a delaying tactic",
+      "change tactics"
+    ],
+    "ギリシャ語 taktikos(並べる)。その場での並べ方が核。長期の strategy と対で覚える。"
+  ],
+  [
+    "tactical",
+    "B2",
+    "形容詞",
+    [
+      "戦術的な",
+      "駆け引きの"
+    ],
+    "/ˈtæktɪkəl/",
+    "The withdrawal was a tactical move, not a defeat.",
+    "その撤退は敗北ではなく戦術的な動きだった。",
+    [
+      "a tactical error",
+      "tactical voting"
+    ],
+    "tactic の形容詞。目の前の局面をどう有利にするか、に関わること。"
+  ],
+  [
+    "taxpayer",
+    "B2",
+    "名詞",
+    [
+      "納税者"
+    ],
+    "/ˈtækspeɪɚ/",
+    "The scheme will cost taxpayers millions of pounds.",
+    "その計画は納税者に何百万ポンドもの負担を強いる。",
+    [
+      "taxpayers' money",
+      "the average taxpayer"
+    ],
+    "tax + payer。公費の使い方を論じるときに「誰の金か」を示す語として使われる。"
+  ],
+  [
+    "tempt",
+    "B2",
+    "動詞",
+    [
+      "誘惑する",
+      "そそる"
+    ],
+    "/tɛmpt/",
+    "The low price tempted her to buy two.",
+    "安さが彼女に2つ買う気を起こさせた。",
+    [
+      "be tempted to",
+      "tempt fate"
+    ],
+    "ラテン語 temptare(試す。attempt)。試すように誘いをかけること。tempt someone to do の形。"
+  ],
+  [
+    "tenant",
+    "B2",
+    "名詞",
+    [
+      "借家人",
+      "賃借人"
+    ],
+    "/ˈtɛnənt/",
+    "The tenant is responsible for minor repairs.",
+    "借家人は小さな修理の責任を負う。",
+    [
+      "a new tenant",
+      "evict a tenant"
+    ],
+    "ラテン語 tenere(保つ。contain, tenure)。借りて占有している人。貸す側は landlord。"
+  ],
+  [
+    "tender",
+    "B2",
+    "形容詞",
+    [
+      "優しい",
+      "柔らかい"
+    ],
+    "/ˈtɛndɚ/",
+    "She spoke in a tender voice to the frightened child.",
+    "彼女はおびえた子どもに優しい声で話しかけた。",
+    [
+      "a tender moment",
+      "tender meat"
+    ],
+    "ラテン語 tener(柔らかい)。押せばへこむ柔らかさが核。心づかいの優しさにも肉の柔らかさにも使う。"
+  ],
+  [
+    "tenure",
+    "B2",
+    "名詞",
+    [
+      "在職期間",
+      "終身在職権"
+    ],
+    "/ˈtɛnjɚ/",
+    "During her tenure the department doubled in size.",
+    "彼女の在職期間中に、その学科は規模が2倍になった。",
+    [
+      "during his tenure",
+      "be granted tenure"
+    ],
+    "ラテン語 tenere(保つ)。地位を保っている期間。大学では身分保障を意味する。"
+  ],
+  [
+    "terminate",
+    "B2",
+    "動詞",
+    [
+      "終了する",
+      "打ち切る"
+    ],
+    "/ˈtɝməneɪt/",
+    "The company terminated the contract without warning.",
+    "その会社は予告なく契約を打ち切った。",
+    [
+      "terminate a contract",
+      "terminate employment"
+    ],
+    "ラテン語 terminus(境、終点)。terminal と同語根。終わりの線を引くこと。end より公式。"
+  ],
+  [
+    "terrain",
+    "B2",
+    "名詞",
+    [
+      "地形",
+      "地勢"
+    ],
+    "/tɚˈeɪn/",
+    "The rescue was slowed by difficult terrain.",
+    "救助は険しい地形によって遅らされた。",
+    [
+      "rough terrain",
+      "difficult terrain"
+    ],
+    "ラテン語 terra(土地。territory, terrace)。歩いたり進んだりする側から見た土地の形。"
+  ],
+  [
+    "terrific",
+    "B2",
+    "形容詞",
+    [
+      "素晴らしい",
+      "ものすごい"
+    ],
+    "/tɚˈɪfɪk/",
+    "She did a terrific job with very little time.",
+    "彼女はごくわずかな時間で素晴らしい仕事をした。",
+    [
+      "a terrific idea",
+      "absolutely terrific"
+    ],
+    "ラテン語 terrere(おびえさせる。terror)。もとは恐ろしいという意味で、強調から良い意味へ逆転した語。"
+  ],
+  [
+    "testify",
+    "B2",
+    "動詞",
+    [
+      "証言する"
+    ],
+    "/ˈtɛstəfaɪ/",
+    "Two neighbours testified at the trial.",
+    "2人の近所の人が裁判で証言した。",
+    [
+      "testify against",
+      "testify that"
+    ],
+    "ラテン語 testis(証人)+ fy(なす)。法廷で見聞きしたことを述べること。"
+  ],
+  [
+    "testimony",
+    "B2",
+    "名詞",
+    [
+      "証言",
+      "証拠"
+    ],
+    "/ˈtɛstəmoʊni/",
+    "Her testimony changed the direction of the case.",
+    "彼女の証言は事件の流れを変えた。",
+    [
+      "give testimony",
+      "a testimony to"
+    ],
+    "testify の名詞。法廷での証言のほか、a testimony to で「〜を物語るもの」という比喩に使う。"
+  ],
+  [
+    "texture",
+    "B2",
+    "名詞",
+    [
+      "質感",
+      "手触り"
+    ],
+    "/ˈtɛkstʃɚ/",
+    "The bread has a light texture and a thin crust.",
+    "そのパンは軽い食感と薄い皮を持つ。",
+    [
+      "a smooth texture",
+      "the texture of"
+    ],
+    "ラテン語 texere(織る。textile, text)。織り目の細かさが原義で、触れたときの感じ全般へ。"
+  ],
+  [
+    "thankfully",
+    "B2",
+    "副詞",
+    [
+      "ありがたいことに"
+    ],
+    "/ˈθæŋkfəli/",
+    "Thankfully, no one was hurt in the collision.",
+    "ありがたいことに、その衝突で誰もけがをしなかった。",
+    [
+      "thankfully no one",
+      "thankfully the"
+    ],
+    "thankful + -ly。文頭に置いて、書き手が安堵していることを示す。fortunately と近い働き。"
+  ],
+  [
+    "theatrical",
+    "B2",
+    "形容詞",
+    [
+      "演劇の",
+      "芝居がかった"
+    ],
+    "/θiˈætrɪkəl/",
+    "His theatrical style makes lectures memorable.",
+    "彼の芝居がかった話し方は講義を印象深くする。",
+    [
+      "a theatrical performance",
+      "overly theatrical"
+    ],
+    "theatre の形容詞。ギリシャ語 theatron(見る場所)。舞台に関わること、また大げさな振る舞い。"
+  ],
+  [
+    "theology",
+    "B2",
+    "名詞",
+    [
+      "神学"
+    ],
+    "/θiˈɑlədʒi/",
+    "She studied theology before training as a teacher.",
+    "彼女は教師の訓練を受ける前に神学を学んだ。",
+    [
+      "study theology",
+      "a theology degree"
+    ],
+    "theos(神)+ logy(学)。神と信仰について体系的に論じる学問。"
+  ],
+  [
+    "theoretical",
+    "B2",
+    "形容詞",
+    [
+      "理論上の",
+      "机上の"
+    ],
+    "/θiɚˈɛtɪkəl/",
+    "The risk is theoretical rather than actual.",
+    "その危険は実際というより理論上のものだ。",
+    [
+      "theoretical physics",
+      "purely theoretical"
+    ],
+    "theory の形容詞。ギリシャ語 theoria(観察、考察)。実地ではなく考えの上での、が核。"
+  ],
+  [
+    "thereafter",
+    "B2",
+    "副詞",
+    [
+      "その後"
+    ],
+    "/ðɛˈræftɚ/",
+    "The factory closed in 1998 and stood empty thereafter.",
+    "その工場は1998年に閉鎖され、その後は空いたままだった。",
+    [
+      "shortly thereafter",
+      "and thereafter"
+    ],
+    "there + after。その時点より後を指す書き言葉。日付や出来事の直後に置く。"
+  ],
+  [
+    "thereby",
+    "B2",
+    "副詞",
+    [
+      "それによって"
+    ],
+    "/ˈðɛrˈbaɪ/",
+    "The bridge shortens the route, thereby saving fuel.",
+    "その橋は経路を短くし、それによって燃料を節約する。",
+    [
+      "thereby reducing",
+      "thereby avoiding"
+    ],
+    "there + by。前に述べた行為が原因となって、が核。直後に -ing 形を続ける形が多い。"
+  ],
+  [
+    "thought-provoking",
+    "B2",
+    "形容詞",
+    [
+      "考えさせる",
+      "示唆に富む"
+    ],
+    "/θɔt prəˈvoʊkɪŋ/",
+    "The film raises thought-provoking questions about memory.",
+    "その映画は記憶について考えさせる問いを投げかける。",
+    [
+      "a thought-provoking book",
+      "deeply thought-provoking"
+    ],
+    "thought + provoke(呼び起こす)。読み手の思考を引き出してくるもの。"
+  ],
+  [
+    "thoughtful",
+    "B2",
+    "形容詞",
+    [
+      "思いやりのある",
+      "思慮深い"
+    ],
+    "/ˈθɔtfəl/",
+    "It was thoughtful of her to send a note.",
+    "手紙を送るとは彼女は気が利いていた。",
+    [
+      "a thoughtful gift",
+      "a thoughtful reply"
+    ],
+    "thought + -ful。相手のことを考えている、あるいはよく考えている、の両方を表す。"
+  ],
+  [
+    "thread",
+    "B2",
+    "名詞",
+    [
+      "糸",
+      "筋道"
+    ],
+    "/θrɛd/",
+    "It is hard to follow the thread of his argument.",
+    "彼の議論の筋道を追うのは難しい。",
+    [
+      "lose the thread",
+      "a common thread"
+    ],
+    "古英語 thraed(より合わせたもの)。一本につながる細い線が核。話の筋にも掲示板の連なりにも使う。"
+  ],
+  [
+    "threshold",
+    "B2",
+    "名詞",
+    [
+      "敷居",
+      "境目"
+    ],
+    "/ˈθrɛʃoʊld/",
+    "Incomes just below the tax threshold rose fastest.",
+    "課税基準のすぐ下の所得層が最も速く伸びた。",
+    [
+      "a pain threshold",
+      "cross the threshold"
+    ],
+    "古英語 therscold(踏み台)。戸口の敷居が原義で、そこを超えると状態が変わる境目を指す。"
+  ],
+  [
+    "thrilled",
+    "B2",
+    "形容詞",
+    [
+      "わくわくした",
+      "大喜びの"
+    ],
+    "/θrɪld/",
+    "She was thrilled to be offered the position.",
+    "彼女はその職を提示されて大喜びだった。",
+    [
+      "thrilled to",
+      "absolutely thrilled"
+    ],
+    "thrill(貫く)の形容詞。古英語 thyrlian(穴をあける)。体を貫くような喜びの震え。"
+  ],
+  [
+    "thrive",
+    "B2",
+    "動詞",
+    [
+      "栄える",
+      "よく育つ"
+    ],
+    "/θraɪv/",
+    "These plants thrive in poor, dry soil.",
+    "これらの植物は痩せた乾いた土でよく育つ。",
+    [
+      "thrive on",
+      "thrive in"
+    ],
+    "古ノルド語 thrifa(つかむ)。しっかりつかんで伸びること。厳しい条件で伸びる含みがある。"
+  ],
+  [
+    "tide",
+    "B2",
+    "名詞",
+    [
+      "潮",
+      "風潮"
+    ],
+    "/taɪd/",
+    "The boat can only leave at high tide.",
+    "その船は満潮時にしか出られない。",
+    [
+      "high tide",
+      "turn the tide"
+    ],
+    "古英語 tid(時)。time と同語根で、決まった時に満ち引きするもの。世の流れの比喩にも使う。"
+  ],
+  [
+    "tighten",
+    "B2",
+    "動詞",
+    [
+      "締める",
+      "強化する"
+    ],
+    "/ˈtaɪtən/",
+    "The government tightened the rules on late payment.",
+    "政府は支払い遅延に関する規則を強化した。",
+    [
+      "tighten a screw",
+      "tighten controls"
+    ],
+    "tight + -en。緩みを取ってきつくすること。規制を厳しくする意味でよく使う。"
+  ],
+  [
+    "timber",
+    "B2",
+    "名詞",
+    [
+      "木材",
+      "材木"
+    ],
+    "/ˈtɪmbɚ/",
+    "The roof is supported by heavy oak timber.",
+    "その屋根は重いオーク材で支えられている。",
+    [
+      "a timber frame",
+      "softwood timber"
+    ],
+    "古英語 timbre(建材)。建てるための木材。米国では lumber を使うことが多い。"
+  ],
+  [
+    "timely",
+    "B2",
+    "形容詞",
+    [
+      "時宜を得た",
+      "折よい"
+    ],
+    "/ˈtaɪmli/",
+    "Her timely warning prevented a serious accident.",
+    "彼女の時宜を得た警告が重大な事故を防いだ。",
+    [
+      "a timely reminder",
+      "timely intervention"
+    ],
+    "time + -ly。-ly でも形容詞である点に注意。ちょうどよい時に来る、が核。"
+  ],
+  [
+    "tobacco",
+    "B2",
+    "名詞",
+    [
+      "たばこ"
+    ],
+    "/təˈbækoʊ/",
+    "The shop no longer sells tobacco products.",
+    "その店はもうたばこ製品を売っていない。",
+    [
+      "tobacco industry",
+      "chew tobacco"
+    ],
+    "カリブ海の先住民の語をスペイン語が取り入れた語。植物とその葉から作る製品の両方を指す。"
+  ],
+  [
+    "tolerance",
+    "B2",
+    "名詞",
+    [
+      "寛容",
+      "耐性"
+    ],
+    "/ˈtɑlɚəns/",
+    "The country has a long tradition of religious tolerance.",
+    "その国には宗教的寛容の長い伝統がある。",
+    [
+      "zero tolerance",
+      "a high tolerance"
+    ],
+    "ラテン語 tolerare(耐える)。受け入れて耐える幅が核。心の寛容にも、体や機械の許容差にも使う。"
+  ],
+  [
+    "tolerate",
+    "B2",
+    "動詞",
+    [
+      "我慢する",
+      "大目に見る"
+    ],
+    "/ˈtɑlɚeɪt/",
+    "The school does not tolerate any form of bullying.",
+    "その学校はいかなる形のいじめも許さない。",
+    [
+      "refuse to tolerate",
+      "tolerate pain"
+    ],
+    "ラテン語 tolerare(耐える)。好むわけではないが受け入れること。accept より消極的。"
+  ],
+  [
+    "toll",
+    "B2",
+    "名詞",
+    [
+      "犠牲",
+      "通行料"
+    ],
+    "/toʊl/",
+    "The storm took a heavy toll on the fishing fleet.",
+    "その嵐は漁船団に大きな犠牲をもたらした。",
+    [
+      "a death toll",
+      "take a toll on"
+    ],
+    "古英語 toll(税)。もとは通行に課す料金で、そこから「支払わされた代償」つまり犠牲者数へ。"
+  ],
+  [
+    "torture",
+    "B2",
+    "名詞・動詞",
+    [
+      "拷問",
+      "苦痛を与える"
+    ],
+    "/ˈtɔrtʃɚ/",
+    "The report documents the torture of prisoners.",
+    "その報告書は囚人への拷問を記録している。",
+    [
+      "under torture",
+      "mental torture"
+    ],
+    "ラテン語 torquere(ねじる。distort, torque)。体をねじり苦しめること。強い苦痛の比喩にも使う。"
+  ],
+  [
+    "toss",
+    "B2",
+    "動詞",
+    [
+      "軽く投げる"
+    ],
+    "/tɔs/",
+    "He tossed the keys onto the kitchen table.",
+    "彼は鍵を台所のテーブルに放り投げた。",
+    [
+      "toss a coin",
+      "toss aside"
+    ],
+    "古ノルド語由来。狙いを定めず軽く投げること。toss a coin なら決め方としてのコイン投げ。"
+  ],
+  [
+    "toxic",
+    "B2",
+    "形容詞",
+    [
+      "有毒な",
+      "害のある"
+    ],
+    "/ˈtɑksɪk/",
+    "The paint releases toxic fumes when heated.",
+    "その塗料は熱すると有毒な煙を出す。",
+    [
+      "toxic waste",
+      "a toxic environment"
+    ],
+    "ギリシャ語 toxikon(矢に塗る毒)。体に害を与えること。人間関係が悪影響を及ぼす意味にも広がった。"
+  ],
+  [
+    "trademark",
+    "B2",
+    "名詞",
+    [
+      "商標",
+      "特徴"
+    ],
+    "/ˈtreɪdmɑrk/",
+    "The name is a registered trademark of the company.",
+    "その名称はその会社の登録商標だ。",
+    [
+      "a registered trademark",
+      "his trademark style"
+    ],
+    "trade + mark。商品を見分ける印が核。その人らしさを示す特徴という比喩にも使う。"
+  ],
+  [
+    "trail",
+    "B2",
+    "名詞・動詞",
+    [
+      "小道",
+      "跡",
+      "追跡する"
+    ],
+    "/treɪl/",
+    "We followed a narrow trail through the woods.",
+    "私たちは森を抜ける細い小道をたどった。",
+    [
+      "a hiking trail",
+      "leave a trail"
+    ],
+    "ラテン語 tragula(引き網)。引きずった跡が核。踏み跡の道にも、追いかける動詞にも使う。"
+  ],
+  [
+    "trailer",
+    "B2",
+    "名詞",
+    [
+      "予告編",
+      "けん引車"
+    ],
+    "/ˈtreɪlɚ/",
+    "The trailer gives away too much of the plot.",
+    "その予告編は筋を明かしすぎている。",
+    [
+      "a film trailer",
+      "a lorry trailer"
+    ],
+    "trail(引く)+ -er。後ろに引かれる車が原義。もとは本編の後に流したことから予告編の意味に。"
+  ],
+  [
+    "transaction",
+    "B2",
+    "名詞",
+    [
+      "取引"
+    ],
+    "/trænˈzækʃən/",
+    "Every transaction in the shop is recorded automatically.",
+    "その店でのすべての取引は自動的に記録される。",
+    [
+      "a financial transaction",
+      "complete a transaction"
+    ],
+    "trans-(越えて)+ act(行う)。当事者の間をまたいで成立する一件の行為。"
+  ],
+  [
+    "transcript",
+    "B2",
+    "名詞",
+    [
+      "記録",
+      "成績証明書"
+    ],
+    "/ˈtrænskrɪpt/",
+    "A full transcript of the hearing was published online.",
+    "その公聴会の全記録がネットで公開された。",
+    [
+      "an official transcript",
+      "a transcript of"
+    ],
+    "trans-(移して)+ script(書く)。話された言葉を書き写したもの。大学の成績証明も指す。"
+  ],
+  [
+    "transformation",
+    "B2",
+    "名詞",
+    [
+      "変容",
+      "大きな変化"
+    ],
+    "/trænsfɚˈmeɪʃən/",
+    "The town has undergone a complete transformation.",
+    "その町は完全な変容を遂げた。",
+    [
+      "a complete transformation",
+      "undergo a transformation"
+    ],
+    "transform の名詞。trans-(越えて)+ form(形)。形が別のものに変わること。"
+  ],
+  [
+    "transit",
+    "B2",
+    "名詞",
+    [
+      "輸送",
+      "通過"
+    ],
+    "/ˈtrænzɪt/",
+    "The goods were damaged in transit.",
+    "その品物は輸送中に損傷した。",
+    [
+      "in transit",
+      "public transit"
+    ],
+    "trans-(越えて)+ it(行く)。ある地点から別の地点へ移る途中。米国では公共交通そのものを指す。"
+  ],
+  [
+    "transmission",
+    "B2",
+    "名詞",
+    [
+      "伝達",
+      "送信",
+      "感染"
+    ],
+    "/trænsˈmɪʃən/",
+    "The virus spreads by airborne transmission.",
+    "そのウイルスは空気を介した感染で広がる。",
+    [
+      "data transmission",
+      "the transmission of"
+    ],
+    "transmit の名詞。trans-(越えて)+ mit(送る)。境を越えて送り届けること。"
+  ],
+  [
+    "transparency",
+    "B2",
+    "名詞",
+    [
+      "透明性",
+      "透明さ"
+    ],
+    "/trænsˈpɛrənsi/",
+    "Voters are demanding greater transparency in spending.",
+    "有権者は支出のより高い透明性を求めている。",
+    [
+      "financial transparency",
+      "a lack of transparency"
+    ],
+    "transparent の名詞。中が見えるようにしておくこと。政治や経営で「情報公開」を意味する。"
+  ],
+  [
+    "transparent",
+    "B2",
+    "形容詞",
+    [
+      "透明な",
+      "明白な"
+    ],
+    "/trænsˈpɛrənt/",
+    "The process must be transparent to everyone involved.",
+    "その手続きは関係者全員にとって明白でなければならない。",
+    [
+      "a transparent process",
+      "completely transparent"
+    ],
+    "trans-(通して)+ par(現れる。appear)。向こう側が透けて見えること。"
+  ],
+  [
+    "trauma",
+    "B2",
+    "名詞",
+    [
+      "心的外傷",
+      "外傷"
+    ],
+    "/ˈtrɔmə/",
+    "Many survivors still live with the trauma of that night.",
+    "多くの生存者はいまだにあの夜の心的外傷を抱えて生きている。",
+    [
+      "emotional trauma",
+      "head trauma"
+    ],
+    "ギリシャ語 trauma(傷)。もとは体の傷で、今は心に残る深い傷を指すことが多い。"
+  ],
+  [
+    "treaty",
+    "B2",
+    "名詞",
+    [
+      "条約"
+    ],
+    "/ˈtriti/",
+    "The two countries signed a peace treaty in 1954.",
+    "両国は1954年に平和条約に署名した。",
+    [
+      "sign a treaty",
+      "a peace treaty"
+    ],
+    "ラテン語 tractare(扱う。treat, tract)。交渉して扱いを決めた結果の文書。"
+  ],
+  [
+    "tremendous",
+    "B2",
+    "形容詞",
+    [
+      "ものすごい",
+      "莫大な"
+    ],
+    "/trəˈmɛndəs/",
+    "The team made a tremendous effort in the last month.",
+    "そのチームは最後の1か月にものすごい努力をした。",
+    [
+      "a tremendous amount",
+      "tremendous success"
+    ],
+    "ラテン語 tremere(震える。tremble)。震え上がるほどの、が原義で、今は良い意味の強調にも使う。"
+  ],
+  [
+    "tribal",
+    "B2",
+    "形容詞",
+    [
+      "部族の"
+    ],
+    "/ˈtraɪbəl/",
+    "Tribal elders were invited to the discussions.",
+    "部族の長老たちが協議に招かれた。",
+    [
+      "tribal leaders",
+      "tribal land"
+    ],
+    "tribe の形容詞。ラテン語 tribus(ローマの三区分)。血縁でまとまった集団に関わること。"
+  ],
+  [
+    "tribunal",
+    "B2",
+    "名詞",
+    [
+      "審判所",
+      "法廷"
+    ],
+    "/trəbˈjunəl/",
+    "The case was heard by an employment tribunal.",
+    "その件は労働審判所で審理された。",
+    [
+      "an employment tribunal",
+      "before a tribunal"
+    ],
+    "ラテン語 tribunal(裁判官の壇)。tribe と同語根。通常の裁判所とは別に設けられた審理の場。"
+  ],
+  [
+    "tribute",
+    "B2",
+    "名詞",
+    [
+      "賛辞",
+      "貢ぎ物"
+    ],
+    "/ˈtrɪbjut/",
+    "The concert was a tribute to the late composer.",
+    "その演奏会は亡き作曲家への賛辞だった。",
+    [
+      "pay tribute to",
+      "a fitting tribute"
+    ],
+    "ラテン語 tribuere(割り当てる。attribute, contribute)。差し出すものが核。貢ぎ物から敬意の表明へ。"
+  ],
+  [
+    "trio",
+    "B2",
+    "名詞",
+    [
+      "三人組",
+      "三重奏"
+    ],
+    "/ˈtrioʊ/",
+    "The trio has recorded together for fifteen years.",
+    "その三人組は15年一緒に録音してきた。",
+    [
+      "a jazz trio",
+      "a trio of"
+    ],
+    "イタリア語 tre(3)。二人なら duo、三人なら trio。音楽以外の三点セットにも使う。"
+  ],
+  [
+    "triumph",
+    "B2",
+    "名詞",
+    [
+      "勝利",
+      "大成功"
+    ],
+    "/ˈtraɪəmf/",
+    "The bridge was a triumph of engineering.",
+    "その橋は工学の大成功だった。",
+    [
+      "a triumph over",
+      "a personal triumph"
+    ],
+    "ラテン語 triumphus(凱旋)。困難を越えて得た輝かしい勝利。単なる win より重い。"
+  ],
+  [
+    "trophy",
+    "B2",
+    "名詞",
+    [
+      "トロフィー",
+      "戦利品"
+    ],
+    "/ˈtroʊfi/",
+    "The winning team lifted the trophy at the final whistle.",
+    "優勝チームは終了の笛とともにトロフィーを掲げた。",
+    [
+      "lift the trophy",
+      "a trophy cabinet"
+    ],
+    "ギリシャ語 tropaion(敵を退けた場所の記念)。勝った証として持ち帰るもの。"
+  ],
+  [
+    "troubled",
+    "B2",
+    "形容詞",
+    [
+      "悩んでいる",
+      "問題を抱えた"
+    ],
+    "/ˈtrʌbəld/",
+    "The company had a troubled history before the takeover.",
+    "その会社は買収前に問題を抱えた歴史を持っていた。",
+    [
+      "a troubled past",
+      "deeply troubled"
+    ],
+    "trouble の形容詞。心が乱れている人にも、問題続きの組織や時代にも使う。"
+  ],
+  [
+    "trustee",
+    "B2",
+    "名詞",
+    [
+      "受託者",
+      "理事"
+    ],
+    "/trʌˈsti/",
+    "The trustees meet four times a year.",
+    "理事たちは年に4回集まる。",
+    [
+      "a board of trustees",
+      "act as trustee"
+    ],
+    "trust + -ee(される側)。財産や運営を託された立場の人。"
+  ],
+  [
+    "tuition",
+    "B2",
+    "名詞",
+    [
+      "授業料",
+      "指導"
+    ],
+    "/tjuˈɪʃən/",
+    "Tuition has risen faster than average incomes.",
+    "授業料は平均所得より速く上昇してきた。",
+    [
+      "tuition fees",
+      "private tuition"
+    ],
+    "ラテン語 tueri(見守る)。tutor と同語根。英国では指導そのもの、米国では授業料を指す傾向がある。"
+  ],
+  [
+    "turnout",
+    "B2",
+    "名詞",
+    [
+      "参加者数",
+      "投票率"
+    ],
+    "/ˈtɝnaʊt/",
+    "Turnout at the local election was unusually low.",
+    "その地方選挙の投票率は異常に低かった。",
+    [
+      "voter turnout",
+      "a high turnout"
+    ],
+    "turn out(出てくる)の名詞。実際に足を運んで現れた人の数。"
+  ],
+  [
+    "turnover",
+    "B2",
+    "名詞",
+    [
+      "売上高",
+      "離職率"
+    ],
+    "/ˈtɝnoʊvɚ/",
+    "Staff turnover has fallen since the pay rise.",
+    "昇給以来、職員の離職率は下がっている。",
+    [
+      "annual turnover",
+      "high turnover"
+    ],
+    "turn over(ひっくり返す)の名詞。入れ替わる量が核。人なら離職、商売なら回転した金額。"
+  ],
+  [
+    "twist",
+    "B2",
+    "名詞・動詞",
+    [
+      "ねじる",
+      "意外な展開"
+    ],
+    "/twɪst/",
+    "The story has an unexpected twist at the end.",
+    "その物語は最後に意外な展開がある。",
+    [
+      "a plot twist",
+      "twist an ankle"
+    ],
+    "古英語由来で「二本をより合わせる」。ねじる動きが核。まっすぐ進まない展開の比喩にも使う。"
+  ],
+  [
+    "undergraduate",
+    "B2",
+    "名詞",
+    [
+      "学部生"
+    ],
+    "/ʌndɚˈgrædʒəwət/",
+    "The lecture is open to undergraduates in any subject.",
+    "その講義はどの専攻の学部生にも開かれている。",
+    [
+      "an undergraduate course",
+      "undergraduate students"
+    ],
+    "under(下の)+ graduate(卒業生)。学位を得る前の段階の学生。大学院生は postgraduate。"
+  ],
+  [
+    "underlying",
+    "B2",
+    "形容詞",
+    [
+      "根底にある",
+      "潜在的な"
+    ],
+    "/ʌndɚˈlaɪɪŋ/",
+    "The underlying cause of the delay was poor planning.",
+    "その遅れの根底にある原因はずさんな計画だった。",
+    [
+      "an underlying cause",
+      "underlying problems"
+    ],
+    "under + lying(横たわる)。表に出ている症状の下に横たわっているもの。原因を論じるときの定番語。"
+  ],
+  [
+    "undermine",
+    "B2",
+    "動詞",
+    [
+      "徐々に弱める",
+      "損なう"
+    ],
+    "/ˈʌndɚmaɪn/",
+    "Repeated changes of plan undermined trust in the leadership.",
+    "度重なる計画変更が指導部への信頼を損なった。",
+    [
+      "undermine confidence",
+      "undermine authority"
+    ],
+    "under + mine(坑道を掘る)。城壁の下に穴を掘って崩す戦法が原義。正面からではなく足元から崩すこと。"
+  ],
+  [
+    "undoubtedly",
+    "B2",
+    "副詞",
+    [
+      "疑いなく",
+      "確かに"
+    ],
+    "/ənˈdaʊtɪdli/",
+    "She is undoubtedly the strongest candidate.",
+    "彼女は疑いなく最有力の候補だ。",
+    [
+      "undoubtedly true",
+      "undoubtedly the best"
+    ],
+    "un-(否定)+ doubt + -ly。疑う余地がない、が語源そのまま。書き手の強い確信を示す。"
+  ],
+  [
+    "unify",
+    "B2",
+    "動詞",
+    [
+      "統一する",
+      "まとめる"
+    ],
+    "/ˈjunəfaɪ/",
+    "A common goal unified the two rival departments.",
+    "共通の目標が対立していた2つの部署をまとめた。",
+    [
+      "unify a country",
+      "a unified system"
+    ],
+    "ラテン語 unus(一つ)+ fy(なす)。ばらばらのものを一つにすること。"
+  ],
+  [
+    "unprecedented",
+    "B2",
+    "形容詞",
+    [
+      "前例のない"
+    ],
+    "/ənpˈrɛsɪdɛntɪd/",
+    "The scheme attracted an unprecedented number of applicants.",
+    "その制度は前例のない数の応募者を集めた。",
+    [
+      "unprecedented levels",
+      "an unprecedented step"
+    ],
+    "un-(否定)+ precedent(先例)。先を行く例がない、が語源そのまま。規模や事態の異例さを強調する。"
+  ],
+  [
+    "unveil",
+    "B2",
+    "動詞",
+    [
+      "発表する",
+      "除幕する"
+    ],
+    "/ənˈveɪl/",
+    "The company unveiled its new model at the show.",
+    "その会社は展示会で新型を発表した。",
+    [
+      "unveil a plan",
+      "unveil a statue"
+    ],
+    "un-(取り去る)+ veil(覆い)。覆いを外して初めて見せること。新製品や計画の公表に使う。"
+  ],
+  [
+    "upcoming",
+    "B2",
+    "形容詞",
+    [
+      "来たるべき",
+      "近づいている"
+    ],
+    "/ˈʌpkʌmɪŋ/",
+    "Details of the upcoming season will appear next week.",
+    "来たるべき季節の詳細は来週発表される。",
+    [
+      "the upcoming election",
+      "an upcoming event"
+    ],
+    "up + coming。こちらへ上がってくる、が核。forthcoming とほぼ同じで、より日常的。"
+  ],
+  [
+    "upgrade",
+    "B2",
+    "名詞・動詞",
+    [
+      "改良する",
+      "格上げ"
+    ],
+    "/əpgˈreɪd/",
+    "The airline upgraded her to a better seat.",
+    "その航空会社は彼女をより良い座席に格上げした。",
+    [
+      "upgrade a system",
+      "a free upgrade"
+    ],
+    "up + grade(等級)。段を一つ上げること。設備にも座席にも技能にも使う。downgrade はその逆。"
+  ],
+  [
+    "uphold",
+    "B2",
+    "動詞",
+    [
+      "支持する",
+      "維持する"
+    ],
+    "/əpˈhoʊld/",
+    "The court upheld the original verdict.",
+    "裁判所は元の評決を支持した。",
+    [
+      "uphold a decision",
+      "uphold the law"
+    ],
+    "up + hold。倒れないように上に持ち続けること。判断や原則を保つ、という硬い文脈で使う。"
+  ],
+  [
+    "utility",
+    "B2",
+    "名詞",
+    [
+      "公共事業",
+      "実用性"
+    ],
+    "/juˈtɪləti/",
+    "Utility bills rose sharply over the winter.",
+    "光熱費は冬の間に急激に上がった。",
+    [
+      "a utility bill",
+      "public utility"
+    ],
+    "ラテン語 utilis(役に立つ。use)。役立つことが核で、電気やガスなど生活に欠かせない事業も指す。"
+  ],
+  [
+    "utilize",
+    "B2",
+    "動詞",
+    [
+      "利用する",
+      "活用する"
+    ],
+    "/ˈjutəlaɪz/",
+    "The building utilizes rainwater for its toilets.",
+    "その建物はトイレに雨水を利用している。",
+    [
+      "utilize resources",
+      "fully utilize"
+    ],
+    "utility の動詞。use の硬い言い換えで、資源や設備をうまく生かす文脈で使う。英つづりは utilise。"
+  ],
+  [
+    "utterly",
+    "B2",
+    "副詞",
+    [
+      "まったく",
+      "完全に"
+    ],
+    "/ˈʌtɚli/",
+    "The plan was utterly unrealistic from the start.",
+    "その計画は初めからまったく非現実的だった。",
+    [
+      "utterly different",
+      "utterly impossible"
+    ],
+    "utter(全くの)+ -ly。out と同語根で「外まで届く」。否定的な形容詞と組むことが多い。"
+  ],
+  [
+    "vacuum",
+    "B2",
+    "名詞",
+    [
+      "真空",
+      "空白"
+    ],
+    "/ˈvækjum/",
+    "His departure left a vacuum in the department.",
+    "彼の退職は部署に空白を残した。",
+    [
+      "a power vacuum",
+      "a vacuum cleaner"
+    ],
+    "ラテン語 vacuus(空の。vacant, evacuate)。何もない状態。権力の空白という比喩でも使う。"
+  ],
+  [
+    "vague",
+    "B2",
+    "形容詞",
+    [
+      "あいまいな",
+      "ぼんやりした"
+    ],
+    "/veɪg/",
+    "He gave a vague answer and changed the subject.",
+    "彼はあいまいな返事をして話題を変えた。",
+    [
+      "a vague idea",
+      "remain vague"
+    ],
+    "ラテン語 vagus(さまよう。vagrant)。輪郭が定まらずさまよっている感じ。"
+  ],
+  [
+    "validity",
+    "B2",
+    "名詞",
+    [
+      "妥当性",
+      "有効性"
+    ],
+    "/vəˈlɪdəti/",
+    "Experts questioned the validity of the survey.",
+    "専門家はその調査の妥当性に疑問を呈した。",
+    [
+      "question the validity",
+      "the validity of"
+    ],
+    "valid の名詞。ラテン語 valere(強い。value, prevail)。中身が強く筋が通っていること。"
+  ],
+  [
+    "vanish",
+    "B2",
+    "動詞",
+    [
+      "消える",
+      "姿を消す"
+    ],
+    "/ˈvænɪʃ/",
+    "The path vanished into thick fog.",
+    "その小道は濃い霧の中に消えた。",
+    [
+      "vanish without trace",
+      "vanish into"
+    ],
+    "ラテン語 vanescere(空になる。vain, vacuum)。跡形もなく消えること。disappear より劇的。"
+  ],
+  [
+    "variable",
+    "B2",
+    "形容詞・名詞",
+    [
+      "変わりやすい",
+      "変数"
+    ],
+    "/ˈvɛriəbəl/",
+    "Rainfall in the region is highly variable.",
+    "その地域の降水量は非常に変わりやすい。",
+    [
+      "a variable rate",
+      "highly variable"
+    ],
+    "vary + -able。変わりうること。数学や統計では値の決まっていない量を指す。"
+  ],
+  [
+    "varied",
+    "B2",
+    "形容詞",
+    [
+      "変化に富んだ",
+      "多様な"
+    ],
+    "/ˈvɛrid/",
+    "She has had a long and varied career.",
+    "彼女は長く変化に富んだ経歴を持っている。",
+    [
+      "a varied diet",
+      "varied experience"
+    ],
+    "vary の形容詞。中身が一様でなく、いろいろ含まれていること。various より「幅がある」感じ。"
+  ],
+  [
+    "vein",
+    "B2",
+    "名詞",
+    [
+      "静脈",
+      "脈",
+      "調子"
+    ],
+    "/veɪn/",
+    "The doctor found a vein on the back of his hand.",
+    "医師は彼の手の甲に静脈を見つけた。",
+    [
+      "a vein of",
+      "in the same vein"
+    ],
+    "ラテン語 vena(血管)。体内を通る筋が核。鉱脈にも、話の調子にも使う。"
+  ],
+  [
+    "venture",
+    "B2",
+    "名詞・動詞",
+    [
+      "事業",
+      "思い切ってする"
+    ],
+    "/ˈvɛntʃɚ/",
+    "She ventured into publishing after twenty years in law.",
+    "彼女は法律の世界で20年働いた後、出版業に乗り出した。",
+    [
+      "a joint venture",
+      "venture into"
+    ],
+    "adventure の頭が落ちた形。危険を承知で踏み出すこと。新規事業を指す名詞でよく使う。"
+  ],
+  [
+    "verbal",
+    "B2",
+    "形容詞",
+    [
+      "口頭の",
+      "言葉の"
+    ],
+    "/ˈvɝbəl/",
+    "They had only a verbal agreement, not a contract.",
+    "彼らには契約書ではなく口約束しかなかった。",
+    [
+      "a verbal agreement",
+      "verbal abuse"
+    ],
+    "ラテン語 verbum(言葉。verb, proverb)。言葉に関わること。特に書面ではなく口で伝えることを指す。"
+  ],
+  [
+    "verdict",
+    "B2",
+    "名詞",
+    [
+      "評決",
+      "判断"
+    ],
+    "/ˈvɝdɪkt/",
+    "The jury returned a verdict of not guilty.",
+    "陪審は無罪の評決を下した。",
+    [
+      "reach a verdict",
+      "a guilty verdict"
+    ],
+    "ラテン語 vere(真実に)+ dict(言う)。真実を述べること、が語源そのまま。評価一般の比喩にも使う。"
+  ],
+  [
+    "verify",
+    "B2",
+    "動詞",
+    [
+      "確認する",
+      "検証する"
+    ],
+    "/ˈvɛrəfaɪ/",
+    "Please verify your address before submitting the form.",
+    "用紙を提出する前に住所を確認してください。",
+    [
+      "verify a claim",
+      "verify identity"
+    ],
+    "ラテン語 verus(真の。very, verdict)+ fy(なす)。本当かどうかを確かめること。"
+  ],
+  [
+    "verse",
+    "B2",
+    "名詞",
+    [
+      "詩",
+      "韻文",
+      "節"
+    ],
+    "/vɝs/",
+    "The song has three verses and a short chorus.",
+    "その歌は3つの節と短いサビからなる。",
+    [
+      "a verse of",
+      "blank verse"
+    ],
+    "ラテン語 versus(すきの折り返し)。行を折り返して書くことから、詩の一連や歌の一節へ。"
+  ],
+  [
+    "versus",
+    "B2",
+    "前置詞",
+    [
+      "対",
+      "〜に対する"
+    ],
+    "/ˈvɝsəs/",
+    "The final was Japan versus Australia.",
+    "決勝は日本対オーストラリアだった。",
+    [
+      "versus the alternative",
+      "A versus B"
+    ],
+    "ラテン語 vertere(向く。reverse)。向かい合わせに置くこと。vs. または v. と略す。"
+  ],
+  [
+    "vessel",
+    "B2",
+    "名詞",
+    [
+      "船",
+      "血管",
+      "容器"
+    ],
+    "/ˈvɛsəl/",
+    "Several fishing vessels sheltered in the bay.",
+    "数隻の漁船が湾に避難した。",
+    [
+      "a fishing vessel",
+      "a blood vessel"
+    ],
+    "ラテン語 vas(容器)。何かを入れる器が核。船も、血を通す管も同じ発想。"
+  ],
+  [
+    "veteran",
+    "B2",
+    "名詞",
+    [
+      "退役軍人",
+      "経験豊かな人"
+    ],
+    "/ˈvɛtɚən/",
+    "The club honours veterans at its annual dinner.",
+    "そのクラブは年次の会食で退役軍人をたたえる。",
+    [
+      "a war veteran",
+      "a veteran teacher"
+    ],
+    "ラテン語 vetus(古い)。長く務めた人が核。米国では特に元軍人を指すことが多い。"
+  ],
+  [
+    "viable",
+    "B2",
+    "形容詞",
+    [
+      "実行可能な",
+      "存続できる"
+    ],
+    "/ˈvaɪəbəl/",
+    "The plan is only viable if costs fall further.",
+    "その計画は費用がさらに下がって初めて実行可能になる。",
+    [
+      "a viable option",
+      "commercially viable"
+    ],
+    "ラテン語 vita(命。vital)+ -able。生きていける、が核。案がやっていけるかどうかを問う語。"
+  ],
+  [
+    "vibrant",
+    "B2",
+    "形容詞",
+    [
+      "活気のある",
+      "鮮やかな"
+    ],
+    "/ˈvaɪbrənt/",
+    "The old market district is vibrant again on weekends.",
+    "その古い市場地区は週末になると再び活気づく。",
+    [
+      "a vibrant city",
+      "vibrant colours"
+    ],
+    "ラテン語 vibrare(震える。vibrate)。震えるほど生き生きしていること。色にも街にも使う。"
+  ],
+  [
+    "vice",
+    "B2",
+    "名詞",
+    [
+      "悪徳",
+      "副〜"
+    ],
+    "/vaɪs/",
+    "The film explores both virtue and vice.",
+    "その映画は美徳と悪徳の両方を描く。",
+    [
+      "vice versa",
+      "a vice president"
+    ],
+    "ラテン語 vitium(欠陥)。道徳上の欠点が核。別語源の vice-(代わりの)は副社長などの接頭辞。"
+  ],
+  [
+    "vicious",
+    "B2",
+    "形容詞",
+    [
+      "悪意のある",
+      "ひどい"
+    ],
+    "/ˈvɪʃəs/",
+    "The dog had never shown vicious behaviour before.",
+    "その犬はそれまで凶暴な振る舞いを見せたことがなかった。",
+    [
+      "a vicious attack",
+      "a vicious circle"
+    ],
+    "vice(悪徳)の形容詞。害を与えようとする強い悪意。a vicious circle は悪循環。"
+  ],
+  [
+    "villager",
+    "B2",
+    "名詞",
+    [
+      "村人"
+    ],
+    "/ˈvɪlɪdʒɚ/",
+    "Villagers built a footbridge across the stream themselves.",
+    "村人たちは自分たちで小川に歩道橋を架けた。",
+    [
+      "local villagers",
+      "a group of villagers"
+    ],
+    "village + -er。ラテン語 villa(田舎の家)。村に住む人。"
+  ],
+  [
+    "violate",
+    "B2",
+    "動詞",
+    [
+      "違反する",
+      "侵害する"
+    ],
+    "/ˈvaɪəleɪt/",
+    "The company violated several safety regulations.",
+    "その会社は複数の安全規則に違反した。",
+    [
+      "violate a rule",
+      "violate rights"
+    ],
+    "ラテン語 violare(力ずくで扱う。violence)。決まりや権利を力ずくで踏みにじること。"
+  ],
+  [
+    "violation",
+    "B2",
+    "名詞",
+    [
+      "違反",
+      "侵害"
+    ],
+    "/vaɪəˈleɪʃən/",
+    "Parking here is a violation of city rules.",
+    "ここへの駐車は市の規則違反だ。",
+    [
+      "a human rights violation",
+      "in violation of"
+    ],
+    "violate の名詞。in violation of の形で「〜に違反して」。"
+  ],
+  [
+    "virtue",
+    "B2",
+    "名詞",
+    [
+      "美徳",
+      "長所"
+    ],
+    "/ˈvɝtʃu/",
+    "Patience is a virtue in this kind of work.",
+    "この種の仕事では忍耐が美徳だ。",
+    [
+      "by virtue of",
+      "a virtue of"
+    ],
+    "ラテン語 virtus(男らしさ、力)。優れた性質が核。by virtue of は「〜のおかげで」。"
+  ],
+  [
+    "vocal",
+    "B2",
+    "形容詞",
+    [
+      "声の",
+      "声高な"
+    ],
+    "/ˈvoʊkəl/",
+    "She has been vocal about the need for change.",
+    "彼女は変化の必要性について声高に主張してきた。",
+    [
+      "vocal support",
+      "a vocal critic"
+    ],
+    "ラテン語 vox(声。voice, vocation)。声に関わること。意見をはっきり言う人にも使う。"
+  ],
+  [
+    "vow",
+    "B2",
+    "動詞",
+    [
+      "誓う",
+      "誓い"
+    ],
+    "/vaʊ/",
+    "He vowed never to return to the sport.",
+    "彼は二度とその競技に戻らないと誓った。",
+    [
+      "vow to",
+      "marriage vows"
+    ],
+    "ラテン語 votum(誓願。vote, devote)。神に立てる誓いが原義で、今は固い決意の表明。"
+  ],
+  [
+    "vulnerability",
+    "B2",
+    "名詞",
+    [
+      "もろさ",
+      "脆弱性"
+    ],
+    "/vʌlnɚəˈbɪlɪti/",
+    "The report highlights the vulnerability of coastal towns.",
+    "その報告書は沿岸の町のもろさを浮き彫りにしている。",
+    [
+      "a security vulnerability",
+      "the vulnerability of"
+    ],
+    "vulnerable の名詞。攻撃や被害を受けやすい点。情報分野では欠陥そのものを指す。"
+  ],
+  [
+    "vulnerable",
+    "B2",
+    "形容詞",
+    [
+      "傷つきやすい",
+      "弱い立場の"
+    ],
+    "/ˈvʌlnɚəbəl/",
+    "Older residents are especially vulnerable to the heat.",
+    "高齢の住民は特に暑さの影響を受けやすい。",
+    [
+      "vulnerable to",
+      "vulnerable groups"
+    ],
+    "ラテン語 vulnus(傷)。傷を負いやすい、が核。人にも仕組みにも使う。"
+  ],
+  [
+    "ward",
+    "B2",
+    "名詞",
+    [
+      "病棟",
+      "区"
+    ],
+    "/wɔrd/",
+    "She spent two nights in the children's ward.",
+    "彼女は小児病棟で2晩過ごした。",
+    [
+      "a hospital ward",
+      "an electoral ward"
+    ],
+    "古英語 weard(守り)。guard と同語源。守るために区切られた場所が核。病棟にも選挙区にも使う。"
+  ],
+  [
+    "warehouse",
+    "B2",
+    "名詞",
+    [
+      "倉庫"
+    ],
+    "/ˈwɛrhaʊs/",
+    "The goods are stored in a warehouse near the port.",
+    "その品物は港近くの倉庫に保管されている。",
+    [
+      "a warehouse worker",
+      "store in a warehouse"
+    ],
+    "ware(商品)+ house。売り物を置いておく建物。hardware, software の ware と同じ語。"
+  ],
+  [
+    "warfare",
+    "B2",
+    "名詞",
+    [
+      "戦争",
+      "戦い方"
+    ],
+    "/ˈwɔrfɛr/",
+    "The book examines how warfare changed after 1914.",
+    "その本は1914年以降に戦い方がどう変わったかを検証する。",
+    [
+      "modern warfare",
+      "chemical warfare"
+    ],
+    "war + fare(進む。fare, welfare)。戦いの進め方が核。war が出来事、warfare が方法を指す。"
+  ],
+  [
+    "warrant",
+    "B2",
+    "名詞・動詞",
+    [
+      "令状",
+      "正当化する"
+    ],
+    "/ˈwɔrənt/",
+    "Police obtained a warrant to search the property.",
+    "警察はその物件を捜索する令状を得た。",
+    [
+      "a search warrant",
+      "warrant attention"
+    ],
+    "古フランス語 warant(保証)。guarantee と同語源。裏づけとなるもの、が核。動詞では値するの意味。"
+  ],
+  [
+    "warrior",
+    "B2",
+    "名詞",
+    [
+      "戦士"
+    ],
+    "/ˈwɔriɚ/",
+    "The statue honours warriors who died defending the city.",
+    "その像は町を守って死んだ戦士たちをたたえる。",
+    [
+      "a fearless warrior",
+      "warrior culture"
+    ],
+    "war + -ior(人)。戦うことを役割とする人。現代の soldier より古めかしく、比喩的に使うことも多い。"
+  ],
+  [
+    "weaken",
+    "B2",
+    "動詞",
+    [
+      "弱める",
+      "弱まる"
+    ],
+    "/ˈwikən/",
+    "The storm weakened as it moved inland.",
+    "その嵐は内陸へ進むにつれて弱まった。",
+    [
+      "weaken support",
+      "weaken over time"
+    ],
+    "weak + -en(〜にする)。強さを削ぐこと。自動詞にも他動詞にも使える。"
+  ],
+  [
+    "weave",
+    "B2",
+    "動詞",
+    [
+      "織る",
+      "編む"
+    ],
+    "/wiv/",
+    "Local artisans weave baskets from river reeds.",
+    "地元の職人は川辺の葦でかごを編む。",
+    [
+      "weave cloth",
+      "weave together"
+    ],
+    "古英語 wefan。糸を交差させて布にすること。話や要素を組み合わせる比喩にも使う。"
+  ],
+  [
+    "weed",
+    "B2",
+    "名詞",
+    [
+      "雑草",
+      "草を取る"
+    ],
+    "/wid/",
+    "Weeds took over the garden during the wet summer.",
+    "雨の多かった夏の間に雑草が庭を覆った。",
+    [
+      "pull up weeds",
+      "weed out"
+    ],
+    "古英語 weod。育てたい植物の邪魔になる草。weed out なら不要なものをふるい落とすこと。"
+  ],
+  [
+    "well",
+    "B2",
+    "名詞",
+    [
+      "井戸"
+    ],
+    "/wɛl/",
+    "The village still draws water from an old well.",
+    "その村は今も古い井戸から水をくんでいる。",
+    [
+      "dig a well",
+      "an oil well"
+    ],
+    "古英語 wella(湧き出る)。水が湧く縦穴。副詞の well とは別語源の同綴語。"
+  ],
+  [
+    "well-being",
+    "B2",
+    "名詞",
+    [
+      "幸福",
+      "健康"
+    ],
+    "/wɛlˈbiɪŋ/",
+    "The programme aims to improve the well-being of staff.",
+    "その計画は職員の心身の健康を高めることを目指す。",
+    [
+      "mental well-being",
+      "a sense of well-being"
+    ],
+    "well + being(あること)。心も体も良い状態にあること。health より幅が広い。"
+  ],
+  [
+    "whatsoever",
+    "B2",
+    "副詞",
+    [
+      "まったく〜ない"
+    ],
+    "/wʌtsoʊˈɛvɚ/",
+    "There was no evidence whatsoever to support the claim.",
+    "その主張を裏づける証拠はまったくなかった。",
+    [
+      "no doubt whatsoever",
+      "none whatsoever"
+    ],
+    "whatever を強めた形。否定語のあとに置いて「かけらもない」と強調する。"
+  ],
+  [
+    "whereby",
+    "B2",
+    "副詞",
+    [
+      "それによって",
+      "〜する"
+    ],
+    "/wɛrˈbaɪ/",
+    "They agreed a system whereby costs are shared equally.",
+    "彼らは費用を均等に分担する仕組みに合意した。",
+    [
+      "a scheme whereby",
+      "an arrangement whereby"
+    ],
+    "where + by。それを手段として、が核。契約書や規約でよく使う書き言葉。"
+  ],
+  [
+    "whilst",
+    "B2",
+    "接続詞",
+    [
+      "〜する間",
+      "〜である一方"
+    ],
+    "/waɪlst/",
+    "Whilst the results are encouraging, more work is needed.",
+    "結果は有望である一方、さらなる作業が必要だ。",
+    [
+      "whilst still",
+      "whilst working"
+    ],
+    "while の英国式の変種。意味は while と同じで、やや硬く書き言葉向き。"
+  ],
+  [
+    "whip",
+    "B2",
+    "動詞",
+    [
+      "むち打つ",
+      "あわ立てる"
+    ],
+    "/wɪp/",
+    "Whip the cream until it holds its shape.",
+    "形が保てるまでクリームをあわ立てなさい。",
+    [
+      "whip cream",
+      "a whipping"
+    ],
+    "中英語 wippen(素早く動かす)。素早く振る動きが核。料理でも政治の院内幹事の呼び名でも使う。"
+  ],
+  [
+    "wholly",
+    "B2",
+    "副詞",
+    [
+      "完全に",
+      "まったく"
+    ],
+    "/ˈhoʊli/",
+    "The decision was wholly unexpected and caught everyone by surprise.",
+    "その決定はまったく予想外で、全員の不意を突いた。",
+    [
+      "wholly owned",
+      "wholly different"
+    ],
+    "whole + -ly。l を2つ重ねる綴りに注意。entirely の硬い言い換え。"
+  ],
+  [
+    "widen",
+    "B2",
+    "動詞",
+    [
+      "広げる",
+      "広がる"
+    ],
+    "/ˈwaɪdən/",
+    "The council plans to widen the road next year.",
+    "議会は来年その道路を広げる計画だ。",
+    [
+      "widen a gap",
+      "widen the road"
+    ],
+    "wide + -en(〜にする)。幅を広くすること。格差が広がる意味にも使う。"
+  ],
+  [
+    "widow",
+    "B2",
+    "名詞",
+    [
+      "未亡人"
+    ],
+    "/ˈwɪdoʊ/",
+    "The house was left to his widow.",
+    "その家は彼の妻に残された。",
+    [
+      "a young widow",
+      "a war widow"
+    ],
+    "古英語 widuwe(引き離された)。divide と同語根。夫を亡くした女性。男性なら widower。"
+  ],
+  [
+    "width",
+    "B2",
+    "名詞",
+    [
+      "幅"
+    ],
+    "/wɪdθ/",
+    "Measure the width of the doorway before you order.",
+    "注文する前に戸口の幅を測ってください。",
+    [
+      "the width of",
+      "shoulder width"
+    ],
+    "wide の名詞。length(長さ)と対にして使う。d を挟む綴りに注意。"
+  ],
+  [
+    "willingness",
+    "B2",
+    "名詞",
+    [
+      "意欲",
+      "進んでする気持ち"
+    ],
+    "/ˈwɪlɪŋnəs/",
+    "Her willingness to listen made her a good manager.",
+    "耳を傾ける姿勢が彼女を良い管理職にしていた。",
+    [
+      "a willingness to",
+      "show willingness"
+    ],
+    "willing(進んで〜する)の名詞。強制ではなく自ら動く気持ちがどれだけあるか。"
+  ],
+  [
+    "wipe",
+    "B2",
+    "動詞",
+    [
+      "ふく",
+      "拭き取る"
+    ],
+    "/waɪp/",
+    "He wiped the table before setting out the plates.",
+    "彼は皿を並べる前にテーブルをふいた。",
+    [
+      "wipe out",
+      "wipe clean"
+    ],
+    "古英語 wipian。表面をこすって取り去ること。wipe out なら全滅させる。"
+  ],
+  [
+    "wit",
+    "B2",
+    "名詞",
+    [
+      "機知",
+      "才知"
+    ],
+    "/wɪt/",
+    "Her speech was full of wit and warmth.",
+    "彼女の演説は機知と温かみに満ちていた。",
+    [
+      "dry wit",
+      "a battle of wits"
+    ],
+    "古英語 witan(知る)。頭の働きが核。特に、その場で気の利いたことを言える鋭さ。"
+  ],
+  [
+    "withdrawal",
+    "B2",
+    "名詞",
+    [
+      "撤退",
+      "引き出し",
+      "離脱"
+    ],
+    "/wɪðdˈrɔəl/",
+    "The withdrawal of funding closed the centre.",
+    "資金提供の打ち切りがそのセンターを閉鎖に追い込んだ。",
+    [
+      "a cash withdrawal",
+      "troop withdrawal"
+    ],
+    "withdraw の名詞。with(離れて)+ draw(引く)。引いて手を戻すこと。金にも軍にも使う。"
+  ],
+  [
+    "workout",
+    "B2",
+    "名詞",
+    [
+      "運動",
+      "トレーニング"
+    ],
+    "/ˈwɝkaʊt/",
+    "A short workout before breakfast helps her focus.",
+    "朝食前の短い運動が彼女の集中を助ける。",
+    [
+      "a hard workout",
+      "a daily workout"
+    ],
+    "work out(体を動かす)の名詞。決まった時間に体を動かす一回分の練習。"
+  ],
+  [
+    "worship",
+    "B2",
+    "名詞・動詞",
+    [
+      "崇拝する",
+      "礼拝"
+    ],
+    "/ˈwɝʃəp/",
+    "People still worship at the small hilltop shrine.",
+    "人々は今も丘の上の小さな社で礼拝している。",
+    [
+      "a place of worship",
+      "worship God"
+    ],
+    "古英語 weorthscipe(価値ある状態)。worth と同語根。値打ちを認めてあがめること。"
+  ],
+  [
+    "worthwhile",
+    "B2",
+    "形容詞",
+    [
+      "価値のある",
+      "やりがいのある"
+    ],
+    "/ˈwɝθˈwaɪl/",
+    "The extra training proved worthwhile in the end.",
+    "その追加の訓練は結局、価値があると分かった。",
+    [
+      "worthwhile doing",
+      "a worthwhile cause"
+    ],
+    "worth + while(時間)。かけた時間に見合う、が語源そのまま。"
+  ],
+  [
+    "worthy",
+    "B2",
+    "形容詞",
+    [
+      "値する",
+      "立派な"
+    ],
+    "/ˈwɝði/",
+    "The project is worthy of wider support.",
+    "その事業はより広い支援に値する。",
+    [
+      "worthy of",
+      "a worthy cause"
+    ],
+    "worth + -y。値打ちがあること。worthy of の形で「〜に値する」。"
+  ],
+  [
+    "yell",
+    "B2",
+    "動詞",
+    [
+      "叫ぶ",
+      "どなる"
+    ],
+    "/jɛl/",
+    "He yelled across the yard to get her attention.",
+    "彼は彼女の注意を引くために庭の向こうへ叫んだ。",
+    [
+      "yell at",
+      "yell for help"
+    ],
+    "古英語 giellan(甲高く鳴く)。腹から大声を出すこと。shout より感情的な響き。"
+  ],
+  [
+    "yield",
+    "B2",
+    "名詞・動詞",
+    [
+      "産出する",
+      "屈する",
+      "収量"
+    ],
+    "/jild/",
+    "The field yields about four tonnes of wheat a year.",
+    "その畑は年に約4トンの小麦を産出する。",
+    [
+      "yield results",
+      "yield to pressure"
+    ],
+    "古英語 gieldan(支払う)。差し出すことが核。作物を差し出せば収量、力に差し出せば屈服。"
+  ],
+  [
+    "youngster",
+    "B2",
+    "名詞",
+    [
+      "若者",
+      "子ども"
+    ],
+    "/ˈjʌŋstɚ/",
+    "The club runs football sessions for local youngsters.",
+    "そのクラブは地元の子ども向けにサッカー教室を開いている。",
+    [
+      "local youngsters",
+      "a group of youngsters"
+    ],
+    "young + -ster(人)。子どもや十代を親しみを込めて呼ぶ、やや古風な語。"
+  ],
+  [
+    "back up",
+    "B1",
+    "句動詞",
+    [
+      "支持する",
+      "裏づける",
+      "バックアップを取る"
+    ],
+    "/bæk ʌp/",
+    "Always back up your files before updating the system.",
+    "システムを更新する前に必ずファイルの控えを取りなさい。",
+    [
+      "back up a claim",
+      "back someone up"
+    ],
+    "back(後ろ)+ up。後ろから支える、が核。人を支持することも、データの控えを取ることも同じ発想。"
+  ],
+  [
+    "blow up",
+    "B1",
+    "句動詞",
+    [
+      "爆発する",
+      "ふくらませる"
+    ],
+    "/bloʊ ʌp/",
+    "We blow up the balloons an hour before every party.",
+    "私たちは毎回パーティーの1時間前に風船をふくらませる。",
+    [
+      "blow up a bridge",
+      "blow up a photo"
+    ],
+    "blow(吹く)+ up。息や力で一気に大きくすること。ふくらませる、爆破する、写真を引き伸ばす、が並ぶ。"
+  ],
+  [
+    "break into",
+    "B2",
+    "句動詞",
+    [
+      "押し入る",
+      "突然〜し始める"
+    ],
+    "/breɪk ˈɪntu/",
+    "Thieves were caught breaking into the shop through a back window.",
+    "泥棒が裏の窓から店に押し入ろうとして捕まった。",
+    [
+      "break into a house",
+      "break into a run"
+    ],
+    "break(破る)+ into(中へ)。壁を破って中へ入ること。突然その状態に入り込む用法もある。"
+  ],
+  [
+    "break out",
+    "B2",
+    "句動詞",
+    [
+      "突発する",
+      "脱出する"
+    ],
+    "/breɪk aʊt/",
+    "Fighting is likely to break out again near the border.",
+    "国境近くで再び戦闘が起こりそうだ。",
+    [
+      "war breaks out",
+      "break out of"
+    ],
+    "break + out(外へ)。抑えていたものが外へ破れ出ること。戦争や火事、病気に使う。"
+  ],
+  [
+    "break up",
+    "B1",
+    "句動詞",
+    [
+      "解散する",
+      "別れる"
+    ],
+    "/breɪk ʌp/",
+    "The band decided to break up after their third album.",
+    "そのバンドは3枚目のアルバムの後に解散することを決めた。",
+    [
+      "break up with",
+      "break up a fight"
+    ],
+    "break + up(すっかり)。まとまりが割れてばらばらになること。恋人にも組織にも学期にも使う。"
+  ],
+  [
+    "bring about",
+    "B2",
+    "句動詞",
+    [
+      "引き起こす",
+      "もたらす"
+    ],
+    "/brɪŋ əˈbaʊt/",
+    "New technology can bring about big changes in farming.",
+    "新しい技術は農業に大きな変化をもたらしうる。",
+    [
+      "bring about change",
+      "bring about a result"
+    ],
+    "bring + about(向きを変えて)。船の向きを変える航海用語が原義で、状況を変えて別の結果を生むこと。"
+  ],
+  [
+    "bring up",
+    "B1",
+    "句動詞",
+    [
+      "育てる",
+      "話題に出す"
+    ],
+    "/brɪŋ ʌp/",
+    "Her grandparents helped bring up all four children in the countryside.",
+    "彼女の祖父母は田舎で4人の子ども全員を育てるのを助けた。",
+    [
+      "bring up a child",
+      "bring up a topic"
+    ],
+    "bring + up(上へ)。子どもを一人前まで引き上げること。話題を場に持ち上げる意味もある。"
+  ],
+  [
+    "build up",
+    "B1",
+    "句動詞",
+    [
+      "築き上げる",
+      "強化する"
+    ],
+    "/bɪld ʌp/",
+    "He built up the business from a single small shop.",
+    "彼は小さな店1軒から事業を築き上げた。",
+    [
+      "build up strength",
+      "build up a reputation"
+    ],
+    "build + up。少しずつ積み上げて大きくすること。信用にも体力にも在庫にも使う。"
+  ],
+  [
+    "call back",
+    "A2",
+    "句動詞",
+    [
+      "折り返し電話する"
+    ],
+    "/kɔl bæk/",
+    "I will call back as soon as the meeting ends.",
+    "会議が終わり次第、折り返し電話します。",
+    [
+      "call back later",
+      "call someone back"
+    ],
+    "call + back(戻して)。かかってきた電話を相手に返すこと。"
+  ],
+  [
+    "call for",
+    "B2",
+    "句動詞",
+    [
+      "必要とする",
+      "求める"
+    ],
+    "/kɔl fɔr/",
+    "The situation calls for a calm and careful response.",
+    "その状況は落ち着いた慎重な対応を必要とする。",
+    [
+      "call for action",
+      "call for help"
+    ],
+    "call + for(求めて)。声を上げて求めること。状況が主語なら「〜が必要だ」。"
+  ],
+  [
+    "call off",
+    "B1",
+    "句動詞",
+    [
+      "中止する"
+    ],
+    "/kɔl ɔf/",
+    "The match was called off because of heavy rain.",
+    "その試合は大雨のため中止された。",
+    [
+      "call off a search",
+      "call off a strike"
+    ],
+    "call + off(離して)。予定していたものを取り下げること。cancel の口語的な言い方。"
+  ],
+  [
+    "calm down",
+    "B1",
+    "句動詞",
+    [
+      "落ち着く",
+      "なだめる"
+    ],
+    "/kɑm daʊn/",
+    "Take a deep breath and calm down before you speak.",
+    "話す前に深呼吸をして落ち着きなさい。",
+    [
+      "calm down a bit",
+      "try to calm down"
+    ],
+    "calm + down(下へ)。高ぶった気持ちを下げること。自分にも相手にも使える。"
+  ],
+  [
+    "carry on",
+    "B1",
+    "句動詞",
+    [
+      "続ける"
+    ],
+    "/ˈkæri ɑn/",
+    "Please carry on with your work while I make a call.",
+    "私が電話をかける間、作業を続けてください。",
+    [
+      "carry on working",
+      "carry on regardless"
+    ],
+    "carry + on(続けて)。手にしたものを持って進み続けること。continue の日常的な言い方。"
+  ],
+  [
+    "carry out",
+    "B2",
+    "句動詞",
+    [
+      "実行する",
+      "遂行する"
+    ],
+    "/ˈkæri aʊt/",
+    "Engineers carried out a full inspection of the bridge.",
+    "技術者は橋の全面的な点検を実施した。",
+    [
+      "carry out a plan",
+      "carry out research"
+    ],
+    "carry + out(最後まで外へ)。計画を最後まで運び切ること。実施や実行の定番表現。"
+  ],
+  [
+    "catch up",
+    "B1",
+    "句動詞",
+    [
+      "追いつく"
+    ],
+    "/kætʃ ʌp/",
+    "She missed a week and had to catch up quickly.",
+    "彼女は1週間休んだので急いで追いつかねばならなかった。",
+    [
+      "catch up with",
+      "catch up on"
+    ],
+    "catch + up。先を行くものに追いついて並ぶこと。catch up on なら遅れを取り戻すこと。"
+  ],
+  [
+    "check in",
+    "A2",
+    "句動詞",
+    [
+      "搭乗手続きをする",
+      "チェックインする"
+    ],
+    "/tʃɛk ɪn/",
+    "We checked in two hours before the flight.",
+    "私たちは搭乗の2時間前に手続きを済ませた。",
+    [
+      "check in at",
+      "check in online"
+    ],
+    "check(確認する)+ in(中へ)。中に入る際に名前を確認してもらうこと。"
+  ],
+  [
+    "check out",
+    "A2",
+    "句動詞",
+    [
+      "精算して出る",
+      "確認する"
+    ],
+    "/tʃɛk aʊt/",
+    "Guests must check out before eleven in the morning.",
+    "宿泊客は午前11時前に精算して出なければならない。",
+    [
+      "check out of",
+      "check something out"
+    ],
+    "check + out(外へ)。出るときの確認が原義。調べる、見てみる、という口語用法も広い。"
+  ],
+  [
+    "cheer up",
+    "B1",
+    "句動詞",
+    [
+      "元気づける",
+      "元気を出す"
+    ],
+    "/tʃɪr ʌp/",
+    "A short walk in the sun cheered her up.",
+    "日なたでの短い散歩が彼女を元気づけた。",
+    [
+      "cheer up a friend",
+      "cheer up soon"
+    ],
+    "cheer(喜ばせる)+ up。沈んだ気分を上へ持ち上げること。"
+  ],
+  [
+    "clean up",
+    "A2",
+    "句動詞",
+    [
+      "きれいに片づける"
+    ],
+    "/klin ʌp/",
+    "We cleaned up the kitchen before the guests arrived.",
+    "客が来る前に私たちは台所をきれいに片づけた。",
+    [
+      "clean up a mess",
+      "clean up after"
+    ],
+    "clean + up(すっかり)。汚れや散らかりを残さず片づけること。"
+  ],
+  [
+    "come along",
+    "B2",
+    "句動詞",
+    [
+      "やってくる",
+      "うまく進む"
+    ],
+    "/kʌm əˈlɔŋ/",
+    "The garden is coming along nicely this year.",
+    "今年の庭はうまく育っている。",
+    [
+      "come along well",
+      "come along with"
+    ],
+    "come + along(沿って)。一緒に進んでくること。進み具合が良いことを表す用法も多い。"
+  ],
+  [
+    "come back",
+    "A2",
+    "句動詞",
+    [
+      "戻る",
+      "返り咲く"
+    ],
+    "/kʌm bæk/",
+    "He plans to come back to the village next spring.",
+    "彼は来春その村に戻る予定だ。",
+    [
+      "come back home",
+      "come back to"
+    ],
+    "come + back。元の場所や状態に戻ること。名詞の comeback は返り咲き。"
+  ],
+  [
+    "come out",
+    "A2",
+    "句動詞",
+    [
+      "出る",
+      "明らかになる",
+      "公表する"
+    ],
+    "/kʌm aʊt/",
+    "The truth about the accounts will come out sooner or later.",
+    "会計についての真実は遅かれ早かれ明らかになる。",
+    [
+      "come out of",
+      "a book comes out"
+    ],
+    "come + out(外へ)。中にあったものが外に現れること。出版にも、事実の露見にも使う。"
+  ],
+  [
+    "come up",
+    "B1",
+    "句動詞",
+    [
+      "持ち上がる",
+      "近づく"
+    ],
+    "/kʌm ʌp/",
+    "If something urgent comes up, she will call you at once.",
+    "急な用件が持ち上がれば、彼女はすぐに電話してくる。",
+    [
+      "come up in conversation",
+      "come up soon"
+    ],
+    "come + up(上へ)。話題や問題が表面に上がってくること。予定が近づく意味もある。"
+  ],
+  [
+    "come up with",
+    "B1",
+    "句動詞",
+    [
+      "思いつく",
+      "考え出す"
+    ],
+    "/kʌm ʌp wɪð/",
+    "The team needs to come up with a cheaper solution.",
+    "そのチームはより安価な解決策を考え出す必要がある。",
+    [
+      "come up with an idea",
+      "come up with a plan"
+    ],
+    "come up(上がってくる)+ with(携えて)。手に何かを携えて浮かび上がってくる感じ。"
+  ],
+  [
+    "count on",
+    "B2",
+    "句動詞",
+    [
+      "頼りにする",
+      "当てにする"
+    ],
+    "/kaʊnt ɑn/",
+    "You can count on her to finish what she starts.",
+    "彼女は始めたことを必ず終えるので当てにできる。",
+    [
+      "count on someone",
+      "count on support"
+    ],
+    "count(数える)+ on(上に)。計算に入れてよい相手、が核。rely on とほぼ同じ意味。"
+  ],
+  [
+    "cut off",
+    "B1",
+    "句動詞",
+    [
+      "断つ",
+      "遮断する"
+    ],
+    "/kʌt ɔf/",
+    "The storm cut off power to the whole island.",
+    "その嵐は島全体の電力を遮断した。",
+    [
+      "cut off supplies",
+      "be cut off"
+    ],
+    "cut + off(離して)。つながりを切って離すこと。電気にも交通にも人間関係にも使う。"
+  ],
+  [
+    "cut out",
+    "B1",
+    "句動詞",
+    [
+      "切り取る",
+      "やめる"
+    ],
+    "/kʌt aʊt/",
+    "She cut out sugar completely for a month.",
+    "彼女は1か月間、砂糖を完全にやめた。",
+    [
+      "cut out a picture",
+      "cut it out"
+    ],
+    "cut + out(外へ)。全体から切り離して取り除くこと。習慣をやめる意味にも使う。"
+  ],
+  [
+    "do without",
+    "B2",
+    "句動詞",
+    [
+      "なしで済ます"
+    ],
+    "/du wɪˈθaʊt/",
+    "We had to do without hot water for two days.",
+    "私たちは2日間お湯なしで過ごさねばならなかった。",
+    [
+      "do without help",
+      "can do without"
+    ],
+    "do + without(なしで)。ないものはないままやり過ごすこと。can do without の形が多い。"
+  ],
+  [
+    "drop off",
+    "B1",
+    "句動詞",
+    [
+      "届ける",
+      "降ろす",
+      "うとうとする"
+    ],
+    "/drɑp ɔf/",
+    "I can drop off the parcel on my way to work.",
+    "出勤の途中でその小包を届けられます。",
+    [
+      "drop off a package",
+      "drop off to sleep"
+    ],
+    "drop(落とす)+ off(離して)。目的地に置いて自分は離れること。眠りに落ちる意味もある。"
+  ],
+  [
+    "drop out",
+    "B2",
+    "句動詞",
+    [
+      "中退する",
+      "脱落する"
+    ],
+    "/drɑp aʊt/",
+    "He dropped out of college in his second year.",
+    "彼は2年目に大学を中退した。",
+    [
+      "drop out of school",
+      "drop out of a race"
+    ],
+    "drop + out(外へ)。続いていた流れから外へ落ちること。学業にも競技にも使う。"
+  ],
+  [
+    "eat out",
+    "A2",
+    "句動詞",
+    [
+      "外食する"
+    ],
+    "/it aʊt/",
+    "We eat out about once a month.",
+    "私たちは月に1回ほど外食する。",
+    [
+      "eat out often",
+      "prefer to eat out"
+    ],
+    "eat + out(外で)。家の外で食事すること。家で食べるのは eat in。"
+  ],
+  [
+    "fall apart",
+    "B2",
+    "句動詞",
+    [
+      "ばらばらになる",
+      "崩れる"
+    ],
+    "/fɔl əˈpɑrt/",
+    "Cheap furniture tends to fall apart within a couple of years.",
+    "安い家具は2年ほどでばらばらになりがちだ。",
+    [
+      "fall apart at the seams",
+      "start to fall apart"
+    ],
+    "fall + apart(離れて)。つなぎ目が持たずに分解すること。計画や関係が破綻する意味にも使う。"
+  ],
+  [
+    "fall behind",
+    "B2",
+    "句動詞",
+    [
+      "遅れをとる"
+    ],
+    "/fɔl bɪˈhaɪnd/",
+    "Several students fall behind when the pace increases.",
+    "進度が上がると何人かの生徒は遅れをとる。",
+    [
+      "fall behind schedule",
+      "fall behind with work"
+    ],
+    "fall + behind(後ろに)。列から落ちて後ろになること。学業にも支払いにも使う。"
+  ],
+  [
+    "fill in",
+    "B1",
+    "句動詞",
+    [
+      "記入する",
+      "代理を務める"
+    ],
+    "/fɪl ɪn/",
+    "Please fill in the form using block capitals.",
+    "活字体の大文字で用紙に記入してください。",
+    [
+      "fill in a form",
+      "fill in for someone"
+    ],
+    "fill + in(中に)。空欄の中を埋めること。人の穴を埋める「代理」の用法も重要。"
+  ],
+  [
+    "fill out",
+    "B1",
+    "句動詞",
+    [
+      "記入する"
+    ],
+    "/fɪl aʊt/",
+    "You need to fill out this form before the interview.",
+    "面接の前にこの用紙に記入する必要がある。",
+    [
+      "fill out an application",
+      "fill out a questionnaire"
+    ],
+    "fill + out(すっかり)。書類の全体を埋め尽くすこと。米国では fill in より一般的。"
+  ],
+  [
+    "get across",
+    "B2",
+    "句動詞",
+    [
+      "伝わる",
+      "理解させる"
+    ],
+    "/gɛt əˈkrɔs/",
+    "He struggled to get his message across to the audience.",
+    "彼は聴衆に自分の主張を伝えるのに苦労した。",
+    [
+      "get a point across",
+      "get an idea across"
+    ],
+    "get + across(向こう側へ)。考えを相手の側まで渡すこと。伝達の成否に焦点がある。"
+  ],
+  [
+    "get along",
+    "B1",
+    "句動詞",
+    [
+      "うまくやっていく",
+      "仲良くする"
+    ],
+    "/gɛt əˈlɔŋ/",
+    "The two teams get along surprisingly well.",
+    "その2つのチームは驚くほどうまくやっている。",
+    [
+      "get along with",
+      "get along fine"
+    ],
+    "get + along(沿って)。並んで一緒に進めること。人間関係にも状況にも使う。"
+  ],
+  [
+    "get around",
+    "B2",
+    "句動詞",
+    [
+      "動き回る",
+      "広まる",
+      "回避する"
+    ],
+    "/gɛt ɚˈaʊnd/",
+    "It is easy to get around the city by bicycle.",
+    "自転車でその街を動き回るのは簡単だ。",
+    [
+      "get around a problem",
+      "news gets around"
+    ],
+    "get + around(周りを)。あちこち回ること。障害の周りを回れば「回避する」。"
+  ],
+  [
+    "get away",
+    "B1",
+    "句動詞",
+    [
+      "逃げる",
+      "離れる"
+    ],
+    "/gɛt əˈweɪ/",
+    "We try to get away for a few days each summer.",
+    "私たちは毎年夏に数日出かけるようにしている。",
+    [
+      "get away with",
+      "get away from"
+    ],
+    "get + away(離れて)。その場を離れること。get away with なら罰を受けずに済むこと。"
+  ],
+  [
+    "get back",
+    "A2",
+    "句動詞",
+    [
+      "戻る",
+      "取り戻す"
+    ],
+    "/gɛt bæk/",
+    "Call me as soon as you get back from the trip.",
+    "旅行から戻ったらすぐ電話してください。",
+    [
+      "get back home",
+      "get something back"
+    ],
+    "get + back。元の場所や状態に戻ること。物なら取り返すこと。"
+  ],
+  [
+    "get by",
+    "B2",
+    "句動詞",
+    [
+      "何とかやっていく"
+    ],
+    "/gɛt baɪ/",
+    "They get by on one modest salary.",
+    "彼らはささやかな一つの給料で何とかやっている。",
+    [
+      "get by on",
+      "just get by"
+    ],
+    "get + by(そばを通って)。かろうじて通り抜けること。十分ではないが足りている状態。"
+  ],
+  [
+    "get into",
+    "B1",
+    "句動詞",
+    [
+      "入る",
+      "興味を持つ"
+    ],
+    "/gɛt ˈɪntu/",
+    "She began to get into photography while studying abroad.",
+    "彼女は留学中に写真に興味を持ち始めた。",
+    [
+      "get into trouble",
+      "get into a habit"
+    ],
+    "get + into(中へ)。中へ入り込むこと。状態にも趣味にもはまり込む意味で使う。"
+  ],
+  [
+    "get off",
+    "A2",
+    "句動詞",
+    [
+      "降りる",
+      "出発する"
+    ],
+    "/gɛt ɔf/",
+    "Get off at the third stop and turn right.",
+    "3つ目の停留所で降りて右に曲がってください。",
+    [
+      "get off a bus",
+      "get off work"
+    ],
+    "get + off(離れて)。乗り物から離れること。仕事から離れれば退勤。"
+  ],
+  [
+    "get on",
+    "A2",
+    "句動詞",
+    [
+      "乗る",
+      "うまくやる"
+    ],
+    "/gɛt ɑn/",
+    "Passengers get on at the front of the bus.",
+    "乗客はバスの前方から乗る。",
+    [
+      "get on a train",
+      "get on with"
+    ],
+    "get + on(上に)。乗り物に乗ること。英国では get on with で「仲良くやる」。"
+  ],
+  [
+    "get out",
+    "A2",
+    "句動詞",
+    [
+      "出る",
+      "外に出す"
+    ],
+    "/gɛt aʊt/",
+    "Everyone must get out of the building within three minutes.",
+    "全員が3分以内に建物から出なければならない。",
+    [
+      "get out of",
+      "get out quickly"
+    ],
+    "get + out(外へ)。中から外へ移ること。get out of なら義務を逃れる意味にもなる。"
+  ],
+  [
+    "get through",
+    "B2",
+    "句動詞",
+    [
+      "やり抜く",
+      "通じる"
+    ],
+    "/gɛt θru/",
+    "It took hours to get through all the paperwork.",
+    "すべての書類仕事をやり抜くのに何時間もかかった。",
+    [
+      "get through to",
+      "get through a test"
+    ],
+    "get + through(通して)。最後まで通り抜けること。電話が通じる意味にも使う。"
+  ],
+  [
+    "get together",
+    "B1",
+    "句動詞",
+    [
+      "集まる"
+    ],
+    "/gɛt təˈgɛðɚ/",
+    "The whole family gets together every New Year.",
+    "家族全員が毎年正月に集まる。",
+    [
+      "get together with",
+      "a get-together"
+    ],
+    "get + together(一緒に)。人が一か所に集まること。名詞の a get-together は気軽な集まり。"
+  ],
+  [
+    "get up",
+    "A2",
+    "句動詞",
+    [
+      "起きる",
+      "立ち上がる"
+    ],
+    "/gɛt ʌp/",
+    "She gets up at five to go running.",
+    "彼女は走りに行くために5時に起きる。",
+    [
+      "get up early",
+      "get up from"
+    ],
+    "get + up(上へ)。横になった状態から体を起こすこと。wake up が目覚め、get up が起き上がり。"
+  ],
+  [
+    "give away",
+    "B1",
+    "句動詞",
+    [
+      "ただで与える",
+      "うっかり漏らす"
+    ],
+    "/gɪv əˈweɪ/",
+    "They give away hundreds of books to local schools each year.",
+    "彼らは毎年何百冊もの本を地元の学校に寄贈している。",
+    [
+      "give away a secret",
+      "give away free samples"
+    ],
+    "give + away(離れて)。手放して相手に渡すこと。秘密を手放せば「漏らす」。"
+  ],
+  [
+    "give back",
+    "A2",
+    "句動詞",
+    [
+      "返す"
+    ],
+    "/gɪv bæk/",
+    "Please give back the key when you leave.",
+    "出るときに鍵を返してください。",
+    [
+      "give back a book",
+      "give something back"
+    ],
+    "give + back(戻して)。借りたものを持ち主に戻すこと。return の日常的な言い方。"
+  ],
+  [
+    "give in",
+    "B2",
+    "句動詞",
+    [
+      "屈する",
+      "提出する"
+    ],
+    "/gɪv ɪn/",
+    "He refused to give in despite hours of argument.",
+    "何時間もの議論にもかかわらず彼は折れることを拒んだ。",
+    [
+      "give in to",
+      "refuse to give in"
+    ],
+    "give + in(中へ)。押されて内側に折れること。相手の要求に負けること。"
+  ],
+  [
+    "give off",
+    "B2",
+    "句動詞",
+    [
+      "放つ",
+      "発する"
+    ],
+    "/gɪv ɔf/",
+    "The flowers give off a strong scent at night.",
+    "その花は夜に強い香りを放つ。",
+    [
+      "give off heat",
+      "give off a smell"
+    ],
+    "give + off(離れて)。中から外へ出すこと。においや熱、光など、目に見えないものに使う。"
+  ],
+  [
+    "give out",
+    "B1",
+    "句動詞",
+    [
+      "配る",
+      "尽きる"
+    ],
+    "/gɪv aʊt/",
+    "Volunteers give out blankets at the shelter.",
+    "ボランティアが避難所で毛布を配っている。",
+    [
+      "give out leaflets",
+      "supplies give out"
+    ],
+    "give + out(外へ)。多くの相手に配ること。力や在庫が尽きる意味にも使う。"
+  ],
+  [
+    "go ahead",
+    "B1",
+    "句動詞",
+    [
+      "先に進む",
+      "進める"
+    ],
+    "/goʊ əˈhɛd/",
+    "The council decided to go ahead with the project.",
+    "議会はその計画を進めることを決めた。",
+    [
+      "go ahead with",
+      "go ahead and"
+    ],
+    "go + ahead(前へ)。ためらわず前へ進むこと。許可を与える返事にも使う。"
+  ],
+  [
+    "go back",
+    "A2",
+    "句動詞",
+    [
+      "戻る",
+      "さかのぼる"
+    ],
+    "/goʊ bæk/",
+    "The tradition goes back more than four hundred years.",
+    "その伝統は400年以上さかのぼる。",
+    [
+      "go back to",
+      "go back home"
+    ],
+    "go + back。元の場所や時代に戻ること。歴史の古さを表す用法も多い。"
+  ],
+  [
+    "go down",
+    "A2",
+    "句動詞",
+    [
+      "下がる",
+      "沈む"
+    ],
+    "/goʊ daʊn/",
+    "Prices go down sharply after the holiday season.",
+    "休暇シーズンの後、価格は大きく下がる。",
+    [
+      "go down well",
+      "go down in history"
+    ],
+    "go + down(下へ)。数値や太陽が下がること。go down well なら受けが良いこと。"
+  ],
+  [
+    "go off",
+    "B1",
+    "句動詞",
+    [
+      "鳴る",
+      "爆発する",
+      "傷む"
+    ],
+    "/goʊ ɔf/",
+    "My alarm goes off at half past six every day.",
+    "私の目覚ましは毎日6時半に鳴る。",
+    [
+      "go off suddenly",
+      "milk goes off"
+    ],
+    "go + off(離れて)。急に作動して離れること。警報にも爆弾にも、食べ物が傷む意味にも使う。"
+  ],
+  [
+    "go on",
+    "A2",
+    "句動詞",
+    [
+      "続く",
+      "起こる"
+    ],
+    "/goʊ ɑn/",
+    "The discussion will go on for another two hours.",
+    "議論はさらに2時間続くだろう。",
+    [
+      "go on doing",
+      "what is going on"
+    ],
+    "go + on(続けて)。そのまま進み続けること。what is going on は「何が起きているのか」。"
+  ],
+  [
+    "go out",
+    "A2",
+    "句動詞",
+    [
+      "外出する",
+      "消える"
+    ],
+    "/goʊ aʊt/",
+    "They go out for dinner every Friday evening.",
+    "彼らは毎週金曜の夕方に食事に出かける。",
+    [
+      "go out with",
+      "the lights go out"
+    ],
+    "go + out(外へ)。家の外に出ること。火や明かりが消える意味にも使う。"
+  ],
+  [
+    "go over",
+    "B1",
+    "句動詞",
+    [
+      "見直す",
+      "復習する"
+    ],
+    "/goʊ ˈoʊvɚ/",
+    "Let us go over the figures once more before sending.",
+    "送る前にもう一度数字を見直そう。",
+    [
+      "go over a plan",
+      "go over notes"
+    ],
+    "go + over(上を)。上をなぞるように全体を見返すこと。復習や点検に使う。"
+  ],
+  [
+    "go through",
+    "B1",
+    "句動詞",
+    [
+      "経験する",
+      "通り抜ける"
+    ],
+    "/goʊ θru/",
+    "She had to go through a difficult year after the move.",
+    "引っ越しの後、彼女はつらい1年を過ごさねばならなかった。",
+    [
+      "go through a phase",
+      "go through papers"
+    ],
+    "go + through(通して)。中を通り抜けること。つらい時期を通り抜ける意味でよく使う。"
+  ],
+  [
+    "go up",
+    "A2",
+    "句動詞",
+    [
+      "上がる",
+      "建てられる"
+    ],
+    "/goʊ ʌp/",
+    "Rents go up every spring in this district.",
+    "この地区では毎春、家賃が上がる。",
+    [
+      "prices go up",
+      "a building goes up"
+    ],
+    "go + up(上へ)。数値や建物が上へ動くこと。go down と対で覚える。"
+  ],
+  [
+    "grow up",
+    "A2",
+    "句動詞",
+    [
+      "成長する",
+      "大人になる"
+    ],
+    "/groʊ ʌp/",
+    "She was lucky to grow up in a small fishing town.",
+    "彼女は小さな漁師町で育つことができて幸運だった。",
+    [
+      "grow up in",
+      "when I grow up"
+    ],
+    "grow + up(上へ)。子どもから大人へ伸びること。育った場所を語るときの定番表現。"
+  ],
+  [
+    "hand in",
+    "B1",
+    "句動詞",
+    [
+      "提出する"
+    ],
+    "/hænd ɪn/",
+    "All essays must be handed in by Friday.",
+    "すべての小論文は金曜までに提出しなければならない。",
+    [
+      "hand in homework",
+      "hand in a resignation"
+    ],
+    "hand(手)+ in(中へ)。手から先方の手へ渡すこと。学校や職場の提出に使う。"
+  ],
+  [
+    "hand out",
+    "B1",
+    "句動詞",
+    [
+      "配る"
+    ],
+    "/hænd aʊt/",
+    "Staff handed out programmes at the door.",
+    "職員は入り口でプログラムを配った。",
+    [
+      "hand out leaflets",
+      "hand out advice"
+    ],
+    "hand + out(外へ)。手から多くの人へ広げて渡すこと。名詞の handout は配布物。"
+  ],
+  [
+    "hand over",
+    "B2",
+    "句動詞",
+    [
+      "引き渡す",
+      "譲る"
+    ],
+    "/hænd ˈoʊvɚ/",
+    "He handed over the keys and left without a word.",
+    "彼は鍵を引き渡し、何も言わずに去った。",
+    [
+      "hand over power",
+      "hand over control"
+    ],
+    "hand + over(向こうへ)。責任や物を相手側へ移すこと。権限の移譲にも使う。"
+  ],
+  [
+    "hang on",
+    "B1",
+    "句動詞",
+    [
+      "待つ",
+      "しっかりつかまる"
+    ],
+    "/hæŋ ɑn/",
+    "Hang on a moment while I check the list.",
+    "一覧を確認する間、少し待ってください。",
+    [
+      "hang on to",
+      "hang on tight"
+    ],
+    "hang(ぶら下がる)+ on。手を離さずにいること。電話や会話で「ちょっと待って」。"
+  ],
+  [
+    "hang out",
+    "B1",
+    "句動詞",
+    [
+      "ぶらぶら過ごす"
+    ],
+    "/hæŋ aʊt/",
+    "They hang out at the café after school.",
+    "彼らは放課後にそのカフェでぶらぶら過ごす。",
+    [
+      "hang out with",
+      "hang out together"
+    ],
+    "hang + out。特に目的なく一緒に時間を過ごすこと。くだけた話し言葉。"
+  ],
+  [
+    "hang up",
+    "A2",
+    "句動詞",
+    [
+      "電話を切る"
+    ],
+    "/hæŋ ʌp/",
+    "Please do not hang up before the recorded message finishes.",
+    "録音メッセージが終わる前に電話を切らないでください。",
+    [
+      "hang up on",
+      "hang up the phone"
+    ],
+    "hang + up。受話器を掛けて戻す動作が原義。今も電話を終える意味で使う。"
+  ],
+  [
+    "hold back",
+    "B2",
+    "句動詞",
+    [
+      "抑える",
+      "ためらう"
+    ],
+    "/hoʊld bæk/",
+    "He tried to hold back his anger until the meeting ended.",
+    "彼は会議が終わるまで怒りを抑えようとした。",
+    [
+      "hold back tears",
+      "hold back information"
+    ],
+    "hold + back(後ろへ)。前に出ようとするものを引き留めること。感情にも情報にも使う。"
+  ],
+  [
+    "hold on",
+    "B1",
+    "句動詞",
+    [
+      "待つ",
+      "持ちこたえる"
+    ],
+    "/hoʊld ɑn/",
+    "Hold on until the rescue team arrives.",
+    "救助隊が着くまで持ちこたえてください。",
+    [
+      "hold on tight",
+      "hold on a minute"
+    ],
+    "hold + on。手を離さずに保つこと。電話で「切らずにお待ちください」の定番。"
+  ],
+  [
+    "hold up",
+    "B2",
+    "句動詞",
+    [
+      "遅らせる",
+      "支える"
+    ],
+    "/hoʊld ʌp/",
+    "Roadworks often hold up traffic for over an hour.",
+    "道路工事はしばしば1時間以上、交通を滞らせる。",
+    [
+      "hold up a queue",
+      "hold up well"
+    ],
+    "hold + up(上へ)。上で押しとどめること。進行を止める意味と、支える意味が並ぶ。"
+  ],
+  [
+    "keep on",
+    "B1",
+    "句動詞",
+    [
+      "し続ける"
+    ],
+    "/kip ɑn/",
+    "She will keep on working despite the noise.",
+    "騒音にもかかわらず彼女は働き続けるだろう。",
+    [
+      "keep on doing",
+      "keep on at"
+    ],
+    "keep + on(続けて)。やめずに同じことを続けること。後ろは -ing 形が来る。"
+  ],
+  [
+    "keep up",
+    "B1",
+    "句動詞",
+    [
+      "遅れずについていく",
+      "維持する"
+    ],
+    "/kip ʌp/",
+    "It is hard to keep up with all the changes.",
+    "すべての変化についていくのは難しい。",
+    [
+      "keep up with",
+      "keep up the good work"
+    ],
+    "keep + up(上に)。落ちずに同じ高さを保つこと。keep up with で「遅れずについていく」。"
+  ],
+  [
+    "knock down",
+    "B1",
+    "句動詞",
+    [
+      "打ち倒す",
+      "取り壊す"
+    ],
+    "/nɑk daʊn/",
+    "The old cinema was knocked down last year.",
+    "その古い映画館は昨年取り壊された。",
+    [
+      "knock down a wall",
+      "be knocked down"
+    ],
+    "knock(打つ)+ down(下へ)。打って倒すこと。建物にも人にも使う。"
+  ],
+  [
+    "lay off",
+    "B2",
+    "句動詞",
+    [
+      "一時解雇する"
+    ],
+    "/leɪ ɔf/",
+    "The factory plans to lay off two hundred workers.",
+    "その工場は200人の労働者を一時解雇する計画だ。",
+    [
+      "lay off staff",
+      "be laid off"
+    ],
+    "lay(置く)+ off(離して)。仕事から一時的に離しておくこと。業績悪化による解雇を指す。"
+  ],
+  [
+    "leave out",
+    "B1",
+    "句動詞",
+    [
+      "省く",
+      "除外する"
+    ],
+    "/liv aʊt/",
+    "You can leave out the last two paragraphs.",
+    "最後の2段落は省いてかまわない。",
+    [
+      "leave out a detail",
+      "feel left out"
+    ],
+    "leave + out(外へ)。中に入れずに外に置くこと。人を仲間外れにする意味にも使う。"
+  ],
+  [
+    "let down",
+    "B2",
+    "句動詞",
+    [
+      "失望させる"
+    ],
+    "/lɛt daʊn/",
+    "He promised to help and then let us down.",
+    "彼は手伝うと約束しておいて私たちを失望させた。",
+    [
+      "let someone down",
+      "feel let down"
+    ],
+    "let + down(下へ)。相手を下に落とすこと。期待に応えられないときに使う。"
+  ],
+  [
+    "live up to",
+    "B2",
+    "句動詞",
+    [
+      "応える",
+      "恥じない"
+    ],
+    "/laɪv ʌp tu/",
+    "The film did not live up to the hype.",
+    "その映画は前評判に応えられなかった。",
+    [
+      "live up to expectations",
+      "live up to a reputation"
+    ],
+    "live + up to(その高さまで)。期待という高さまで届く生き方をすること。"
+  ],
+  [
+    "look back",
+    "B1",
+    "句動詞",
+    [
+      "振り返る",
+      "回想する"
+    ],
+    "/lʊk bæk/",
+    "Looking back, the decision seems obvious.",
+    "振り返ってみると、その決定は明らかに思える。",
+    [
+      "look back on",
+      "never look back"
+    ],
+    "look + back。過去へ視線を戻すこと。look back on の形で回想を表す。"
+  ],
+  [
+    "look down on",
+    "B2",
+    "句動詞",
+    [
+      "見下す"
+    ],
+    "/lʊk daʊn ɑn/",
+    "Nobody should look down on manual work.",
+    "誰も肉体労働を見下すべきではない。",
+    [
+      "look down on others",
+      "be looked down on"
+    ],
+    "look + down on(下を)。相手を自分より下に置いて見ること。look up to の反対。"
+  ],
+  [
+    "look into",
+    "B2",
+    "句動詞",
+    [
+      "調査する"
+    ],
+    "/lʊk ˈɪntu/",
+    "The council promised to look into the complaints.",
+    "議会はその苦情を調査すると約束した。",
+    [
+      "look into a matter",
+      "look into a problem"
+    ],
+    "look + into(中へ)。中をのぞき込んで調べること。investigate の日常的な言い方。"
+  ],
+  [
+    "look out",
+    "A2",
+    "句動詞",
+    [
+      "気をつける"
+    ],
+    "/lʊk aʊt/",
+    "Look out for ice on the path this morning.",
+    "今朝は小道の凍結に気をつけてください。",
+    [
+      "look out for",
+      "look out below"
+    ],
+    "look + out(外へ)。外に目を向けて危険を察すること。警告の呼びかけに使う。"
+  ],
+  [
+    "look through",
+    "B1",
+    "句動詞",
+    [
+      "ざっと目を通す"
+    ],
+    "/lʊk θru/",
+    "I looked through the report on the train.",
+    "私は電車の中でその報告書にざっと目を通した。",
+    [
+      "look through a file",
+      "look through papers"
+    ],
+    "look + through(通して)。端から端まで視線を通すこと。細かく読むのではない点が要点。"
+  ],
+  [
+    "look up",
+    "A2",
+    "句動詞",
+    [
+      "調べる",
+      "上向く"
+    ],
+    "/lʊk ʌp/",
+    "Look up the word if you are not sure.",
+    "自信がなければその語を調べなさい。",
+    [
+      "look up a word",
+      "things are looking up"
+    ],
+    "look + up(上へ)。辞書の上のほうから探した名残。things look up なら状況が良くなること。"
+  ],
+  [
+    "look up to",
+    "B2",
+    "句動詞",
+    [
+      "尊敬する"
+    ],
+    "/lʊk ʌp tu/",
+    "Younger players look up to her as a role model.",
+    "若い選手たちは彼女を手本として尊敬している。",
+    [
+      "look up to a teacher",
+      "be looked up to"
+    ],
+    "look + up to(上を)。相手を自分より上に置いて見ること。look down on の反対。"
+  ],
+  [
+    "make out",
+    "B2",
+    "句動詞",
+    [
+      "見分ける",
+      "理解する"
+    ],
+    "/meɪk aʊt/",
+    "I could just make out a figure in the fog.",
+    "霧の中にかろうじて人影を見分けることができた。",
+    [
+      "make out a shape",
+      "make out a cheque"
+    ],
+    "make + out(外へ)。はっきりしないものから形を取り出すこと。判読や理解に使う。"
+  ],
+  [
+    "make up",
+    "B1",
+    "句動詞",
+    [
+      "作り上げる",
+      "構成する",
+      "仲直りする"
+    ],
+    "/meɪk ʌp/",
+    "Women make up two thirds of the workforce.",
+    "女性がその労働力の3分の2を構成している。",
+    [
+      "make up a story",
+      "make up with"
+    ],
+    "make + up(すっかり)。要素を組み上げること。話を組み上げれば「でっち上げる」、仲を組み直せば「仲直り」。"
+  ],
+  [
+    "make up for",
+    "B2",
+    "句動詞",
+    [
+      "埋め合わせる"
+    ],
+    "/meɪk ʌp fɔr/",
+    "Extra practice can make up for a late start.",
+    "追加の練習は出遅れを埋め合わせられる。",
+    [
+      "make up for lost time",
+      "make up for it"
+    ],
+    "make up(補う)+ for(〜の分)。足りなかった分をあとから補うこと。"
+  ],
+  [
+    "move in",
+    "B1",
+    "句動詞",
+    [
+      "引っ越してくる"
+    ],
+    "/muv ɪn/",
+    "A young family moved in next door last month.",
+    "先月、若い一家が隣に引っ越してきた。",
+    [
+      "move in with",
+      "move in together"
+    ],
+    "move + in(中へ)。新しい住まいの中に入ること。move out と対で覚える。"
+  ],
+  [
+    "move on",
+    "B1",
+    "句動詞",
+    [
+      "先へ進む",
+      "次へ移る"
+    ],
+    "/muv ɑn/",
+    "Let us move on to the next item.",
+    "次の項目へ進みましょう。",
+    [
+      "move on to",
+      "time to move on"
+    ],
+    "move + on(続けて)。今の場所や話題を離れて先へ進むこと。気持ちの切り替えにも使う。"
+  ],
+  [
+    "move out",
+    "B1",
+    "句動詞",
+    [
+      "引っ越して出る"
+    ],
+    "/muv aʊt/",
+    "They moved out at the end of the lease.",
+    "彼らは賃貸契約の満了時に引っ越して出た。",
+    [
+      "move out of",
+      "move out quickly"
+    ],
+    "move + out(外へ)。今の住まいから出ていくこと。"
+  ],
+  [
+    "pass away",
+    "B2",
+    "句動詞",
+    [
+      "亡くなる"
+    ],
+    "/pæs əˈweɪ/",
+    "Her grandfather passed away peacefully at home.",
+    "彼女の祖父は自宅で安らかに亡くなった。",
+    [
+      "pass away quietly",
+      "pass away at home"
+    ],
+    "pass(過ぎる)+ away(去って)。この世を去ることの婉曲表現。die より配慮のある言い方。"
+  ],
+  [
+    "pass on",
+    "B1",
+    "句動詞",
+    [
+      "伝える",
+      "次へ渡す"
+    ],
+    "/pæs ɑn/",
+    "Please pass on my thanks to the whole team.",
+    "チーム全員に私の感謝を伝えてください。",
+    [
+      "pass on a message",
+      "pass on knowledge"
+    ],
+    "pass + on(次へ)。受け取ったものを次の人へ渡すこと。技能や情報の継承にも使う。"
+  ],
+  [
+    "pay back",
+    "B1",
+    "句動詞",
+    [
+      "返済する",
+      "報いる"
+    ],
+    "/peɪ bæk/",
+    "She hopes to pay back the loan within two years.",
+    "彼女は2年以内にその借金を返済したいと考えている。",
+    [
+      "pay back a debt",
+      "pay someone back"
+    ],
+    "pay + back(戻して)。借りた分を返すこと。仕返しをする意味にも使う。"
+  ],
+  [
+    "pay off",
+    "B2",
+    "句動詞",
+    [
+      "報われる",
+      "完済する"
+    ],
+    "/peɪ ɔf/",
+    "Years of steady practice should pay off at the audition.",
+    "何年もの地道な練習はオーディションで報われるはずだ。",
+    [
+      "pay off a mortgage",
+      "hard work pays off"
+    ],
+    "pay + off(すっかり)。払い終えることが核。努力が結果として返ってくる意味でも使う。"
+  ],
+  [
+    "pick out",
+    "B1",
+    "句動詞",
+    [
+      "選び出す",
+      "見分ける"
+    ],
+    "/pɪk aʊt/",
+    "She picked out three photographs for the exhibition.",
+    "彼女は展覧会のために写真を3枚選び出した。",
+    [
+      "pick out a colour",
+      "pick out a face"
+    ],
+    "pick + out(外へ)。多くの中から取り出すこと。人混みから見分ける意味にも使う。"
+  ],
+  [
+    "pull out",
+    "B2",
+    "句動詞",
+    [
+      "撤退する",
+      "引き抜く"
+    ],
+    "/pʊl aʊt/",
+    "The company pulled out of the deal at the last minute.",
+    "その会社は土壇場でその取引から手を引いた。",
+    [
+      "pull out of",
+      "pull out a tooth"
+    ],
+    "pull + out(外へ)。引いて外へ出すこと。関わりから手を引く意味でよく使う。"
+  ],
+  [
+    "pull over",
+    "B2",
+    "句動詞",
+    [
+      "道路脇に寄せる"
+    ],
+    "/pʊl ˈoʊvɚ/",
+    "The driver pulled over to check the map.",
+    "運転者は地図を確認するために車を道路脇に寄せた。",
+    [
+      "pull over safely",
+      "be pulled over"
+    ],
+    "pull + over(横へ)。車を車線の外へ寄せて止めること。警察に止められる意味にも使う。"
+  ],
+  [
+    "put away",
+    "A2",
+    "句動詞",
+    [
+      "片づける",
+      "しまう"
+    ],
+    "/pʊt əˈweɪ/",
+    "Put away your tools before you leave the workshop.",
+    "作業場を出る前に道具を片づけなさい。",
+    [
+      "put away clothes",
+      "put money away"
+    ],
+    "put + away(離れて)。定位置に戻してしまうこと。金を貯めておく意味にも使う。"
+  ],
+  [
+    "put back",
+    "A2",
+    "句動詞",
+    [
+      "元に戻す",
+      "遅らせる"
+    ],
+    "/pʊt bæk/",
+    "Please put the books back on the right shelf.",
+    "本は正しい棚に戻してください。",
+    [
+      "put back a meeting",
+      "put it back"
+    ],
+    "put + back(戻して)。元の場所や時刻に戻すこと。予定を後ろにずらす意味もある。"
+  ],
+  [
+    "put down",
+    "B1",
+    "句動詞",
+    [
+      "下に置く",
+      "書き留める",
+      "鎮圧する"
+    ],
+    "/pʊt daʊn/",
+    "She put down the phone and stared at the wall.",
+    "彼女は電話を置いて壁を見つめた。",
+    [
+      "put down a deposit",
+      "put down a rebellion"
+    ],
+    "put + down(下へ)。手にしたものを下ろすこと。書き留める、押さえつける、と用法が広い。"
+  ],
+  [
+    "put on",
+    "A2",
+    "句動詞",
+    [
+      "身につける",
+      "上演する"
+    ],
+    "/pʊt ɑn/",
+    "Put on a coat before you go outside.",
+    "外に出る前に上着を着なさい。",
+    [
+      "put on weight",
+      "put on a play"
+    ],
+    "put + on(上に)。体の上に載せること。体重が載れば「太る」、舞台に載せれば「上演する」。"
+  ],
+  [
+    "put out",
+    "B1",
+    "句動詞",
+    [
+      "消す",
+      "外に出す"
+    ],
+    "/pʊt aʊt/",
+    "Firefighters put out the blaze within an hour.",
+    "消防士は1時間以内にその火災を消し止めた。",
+    [
+      "put out a fire",
+      "put out the rubbish"
+    ],
+    "put + out(外へ)。外へ出して終わらせること。火を消す意味で特によく使う。"
+  ],
+  [
+    "put together",
+    "B1",
+    "句動詞",
+    [
+      "組み立てる",
+      "まとめる"
+    ],
+    "/pʊt təˈgɛðɚ/",
+    "It took a weekend to put the shelves together.",
+    "その棚を組み立てるのに週末いっぱいかかった。",
+    [
+      "put together a plan",
+      "put together a team"
+    ],
+    "put + together(一緒に)。部品や要素を寄せて一つにすること。計画やチームにも使う。"
+  ],
+  [
+    "put up",
+    "B1",
+    "句動詞",
+    [
+      "立てる",
+      "掲げる",
+      "泊める"
+    ],
+    "/pʊt ʌp/",
+    "They put up a tent close to the river.",
+    "彼らは川の近くにテントを張った。",
+    [
+      "put up a poster",
+      "put up prices"
+    ],
+    "put + up(上へ)。上に立てて掲げること。人を泊める、値段を上げる意味にも広がる。"
+  ],
+  [
+    "rule out",
+    "B2",
+    "句動詞",
+    [
+      "除外する",
+      "否定する"
+    ],
+    "/rul aʊt/",
+    "Police have not ruled out an accident.",
+    "警察は事故の可能性を排除していない。",
+    [
+      "rule out a possibility",
+      "cannot be ruled out"
+    ],
+    "rule(線を引く)+ out(外へ)。線を引いて候補の外へ出すこと。可能性を消す意味で使う。"
+  ],
+  [
+    "run into",
+    "B1",
+    "句動詞",
+    [
+      "偶然出会う",
+      "ぶつかる"
+    ],
+    "/rʌn ˈɪntu/",
+    "I sometimes run into an old classmate at the station.",
+    "私は駅で昔の同級生に偶然出会うことがある。",
+    [
+      "run into trouble",
+      "run into a problem"
+    ],
+    "run + into(中へ)。走っていて相手にぶつかること。問題にぶつかる意味にも使う。"
+  ],
+  [
+    "run over",
+    "B2",
+    "句動詞",
+    [
+      "ひく",
+      "ざっと確認する"
+    ],
+    "/rʌn ˈoʊvɚ/",
+    "Let us run over the schedule one more time.",
+    "もう一度予定をざっと確認しましょう。",
+    [
+      "run over the details",
+      "be run over"
+    ],
+    "run + over(上を)。上を通り過ぎること。車が人をひく意味と、内容をさっと見る意味が並ぶ。"
+  ],
+  [
+    "sell out",
+    "B1",
+    "句動詞",
+    [
+      "売り切れる",
+      "裏切る"
+    ],
+    "/sɛl aʊt/",
+    "Tickets for the final always sell out within minutes.",
+    "決勝のチケットはいつも数分で売り切れる。",
+    [
+      "sell out quickly",
+      "be sold out"
+    ],
+    "sell + out(すっかり)。在庫を出し切ること。信念を売り渡すという批判的な用法もある。"
+  ],
+  [
+    "set aside",
+    "B2",
+    "句動詞",
+    [
+      "取っておく",
+      "脇に置く"
+    ],
+    "/sɛt əˈsaɪd/",
+    "She sets aside an hour each day for reading.",
+    "彼女は毎日1時間を読書のために取っている。",
+    [
+      "set aside money",
+      "set aside differences"
+    ],
+    "set + aside(脇へ)。使わずに別に確保しておくこと。意見の違いを一旦脇に置く意味にも使う。"
+  ],
+  [
+    "set off",
+    "B1",
+    "句動詞",
+    [
+      "出発する",
+      "作動させる"
+    ],
+    "/sɛt ɔf/",
+    "We set off before sunrise to avoid the heat.",
+    "私たちは暑さを避けるため日の出前に出発した。",
+    [
+      "set off early",
+      "set off an alarm"
+    ],
+    "set + off(離れて)。その場を離れて動き出すこと。警報を作動させる意味にも使う。"
+  ],
+  [
+    "set out",
+    "B2",
+    "句動詞",
+    [
+      "出発する",
+      "述べる"
+    ],
+    "/sɛt aʊt/",
+    "The report sets out three options for the council.",
+    "その報告書は議会に3つの選択肢を示している。",
+    [
+      "set out to do",
+      "set out clearly"
+    ],
+    "set + out(外へ)。外へ踏み出すこと。考えを外に並べて示す意味にも広がる。"
+  ],
+  [
+    "settle down",
+    "B2",
+    "句動詞",
+    [
+      "落ち着く",
+      "身を固める"
+    ],
+    "/ˈsɛtəl daʊn/",
+    "The class settled down once the teacher arrived.",
+    "教師が来ると学級は落ち着いた。",
+    [
+      "settle down to work",
+      "settle down with"
+    ],
+    "settle(据える)+ down(下へ)。腰を落ち着けること。定住や結婚にも使う。"
+  ],
+  [
+    "shut down",
+    "B1",
+    "句動詞",
+    [
+      "閉鎖する",
+      "停止する"
+    ],
+    "/ʃʌt daʊn/",
+    "The plant shut down for two weeks of maintenance.",
+    "その工場は2週間の保守のため操業を停止した。",
+    [
+      "shut down a factory",
+      "shut down a computer"
+    ],
+    "shut + down(下へ)。動きを止めて閉じること。工場にも機械にも使う。"
+  ],
+  [
+    "slow down",
+    "A2",
+    "句動詞",
+    [
+      "速度を落とす"
+    ],
+    "/sloʊ daʊn/",
+    "Please slow down as you approach the school.",
+    "学校に近づいたら速度を落としてください。",
+    [
+      "slow down a bit",
+      "slow down growth"
+    ],
+    "slow + down(下へ)。速さを下げること。仕事の無理を減らす意味にも使う。"
+  ],
+  [
+    "speak up",
+    "B2",
+    "句動詞",
+    [
+      "はっきり話す",
+      "声を上げる"
+    ],
+    "/spik ʌp/",
+    "Someone had to speak up about the unsafe conditions.",
+    "誰かが危険な状況について声を上げる必要があった。",
+    [
+      "speak up for",
+      "speak up please"
+    ],
+    "speak + up(上へ)。声を張り上げること。不正に対して意見を述べる意味にも使う。"
+  ],
+  [
+    "stand by",
+    "B2",
+    "句動詞",
+    [
+      "待機する",
+      "味方する"
+    ],
+    "/stænd baɪ/",
+    "Her colleagues will stand by her throughout the inquiry.",
+    "同僚たちは調査の間ずっと彼女を支持するだろう。",
+    [
+      "stand by someone",
+      "stand by an agreement"
+    ],
+    "stand + by(そばに)。そばに立っていること。支持することにも、動かず待つことにも使う。"
+  ],
+  [
+    "stand for",
+    "B2",
+    "句動詞",
+    [
+      "表す",
+      "容認する"
+    ],
+    "/stænd fɔr/",
+    "The letters stand for the name of the founder.",
+    "その文字は創業者の名前を表している。",
+    [
+      "stand for something",
+      "will not stand for"
+    ],
+    "stand + for(代わりに)。代わりに立って示すこと。否定文では「我慢しない」の意味になる。"
+  ],
+  [
+    "stand out",
+    "B1",
+    "句動詞",
+    [
+      "際立つ",
+      "目立つ"
+    ],
+    "/stænd aʊt/",
+    "Her essay stands out for its clear structure.",
+    "彼女の小論文は構成の明快さで際立っている。",
+    [
+      "stand out from",
+      "really stand out"
+    ],
+    "stand + out(外へ)。周りより前に立ち出ること。良い意味で目を引く場合に多く使う。"
+  ],
+  [
+    "stay up",
+    "A2",
+    "句動詞",
+    [
+      "夜更かしする"
+    ],
+    "/steɪ ʌp/",
+    "He stayed up late finishing the report.",
+    "彼は報告書を仕上げるため遅くまで起きていた。",
+    [
+      "stay up late",
+      "stay up all night"
+    ],
+    "stay + up(起きた状態で)。寝ずに起きたままでいること。"
+  ],
+  [
+    "stick to",
+    "B1",
+    "句動詞",
+    [
+      "守り通す",
+      "こだわる"
+    ],
+    "/stɪk tu/",
+    "Try to stick to the original plan.",
+    "当初の計画を守り通すようにしなさい。",
+    [
+      "stick to the rules",
+      "stick to a diet"
+    ],
+    "stick(くっつく)+ to。決めたものから離れないこと。計画や規則を守る意味で使う。"
+  ],
+  [
+    "take after",
+    "B2",
+    "句動詞",
+    [
+      "似ている"
+    ],
+    "/teɪk ˈæftɚ/",
+    "She takes after her mother in both looks and manner.",
+    "彼女は容姿も物腰も母親に似ている。",
+    [
+      "take after a parent",
+      "clearly take after"
+    ],
+    "take + after(後を追って)。親の後を継いだ形質を受け取ること。血縁者にだけ使う。"
+  ],
+  [
+    "take back",
+    "B1",
+    "句動詞",
+    [
+      "返す",
+      "撤回する"
+    ],
+    "/teɪk bæk/",
+    "He should take back the remark and apologize at once.",
+    "彼はその発言を撤回してすぐに謝るべきだ。",
+    [
+      "take back words",
+      "take back an item"
+    ],
+    "take + back(戻して)。渡したものを引き取ること。言葉を引き取れば「撤回」。"
+  ],
+  [
+    "take down",
+    "B1",
+    "句動詞",
+    [
+      "下ろす",
+      "書き留める"
+    ],
+    "/teɪk daʊn/",
+    "The officer will take down your name and address.",
+    "警官はあなたの氏名と住所を書き留めます。",
+    [
+      "take down notes",
+      "take down a poster"
+    ],
+    "take + down(下へ)。上にあるものを下ろすこと。話を紙に下ろせば「書き留める」。"
+  ],
+  [
+    "take in",
+    "B2",
+    "句動詞",
+    [
+      "理解する",
+      "受け入れる"
+    ],
+    "/teɪk ɪn/",
+    "There was too much information to take in at once.",
+    "一度に理解するには情報が多すぎた。",
+    [
+      "take in a lesson",
+      "take in a stray"
+    ],
+    "take + in(中へ)。中に取り込むこと。知識にも人にも使う。だます意味の受け身もある。"
+  ],
+  [
+    "take on",
+    "B2",
+    "句動詞",
+    [
+      "引き受ける",
+      "雇う"
+    ],
+    "/teɪk ɑn/",
+    "She agreed to take on the extra work without complaint.",
+    "彼女は文句も言わずに追加の仕事を引き受けることに同意した。",
+    [
+      "take on a challenge",
+      "take on staff"
+    ],
+    "take + on(上に)。自分の上に載せること。責任や人員を新たに抱えること。"
+  ],
+  [
+    "take out",
+    "A2",
+    "句動詞",
+    [
+      "取り出す",
+      "持ち帰る"
+    ],
+    "/teɪk aʊt/",
+    "Take out the batteries before storing the device.",
+    "その機器を保管する前に電池を取り出しなさい。",
+    [
+      "take out a loan",
+      "take out insurance"
+    ],
+    "take + out(外へ)。中から外へ出すこと。契約を結ぶ take out a loan の用法も重要。"
+  ],
+  [
+    "take up",
+    "B1",
+    "句動詞",
+    [
+      "始める",
+      "占める"
+    ],
+    "/teɪk ʌp/",
+    "He wants to take up cycling after moving to the coast.",
+    "彼は海辺に引っ越したら自転車を始めたいと思っている。",
+    [
+      "take up space",
+      "take up a hobby"
+    ],
+    "take + up(上へ)。手に取り上げて始めること。場所や時間を占める意味にもなる。"
+  ],
+  [
+    "throw away",
+    "A2",
+    "句動詞",
+    [
+      "捨てる"
+    ],
+    "/θroʊ əˈweɪ/",
+    "Do not throw away the packaging until you check the parts.",
+    "部品を確認するまで包装を捨てないでください。",
+    [
+      "throw away rubbish",
+      "throw away a chance"
+    ],
+    "throw + away(離れて)。手から放して処分すること。機会を無駄にする意味にも使う。"
+  ],
+  [
+    "try on",
+    "A2",
+    "句動詞",
+    [
+      "試着する"
+    ],
+    "/traɪ ɑn/",
+    "You can try on three items at a time.",
+    "一度に3点まで試着できます。",
+    [
+      "try on shoes",
+      "try on a jacket"
+    ],
+    "try + on(身につけて)。体に載せて具合を試すこと。衣類や靴に使う。"
+  ],
+  [
+    "try out",
+    "B1",
+    "句動詞",
+    [
+      "試す",
+      "試験する"
+    ],
+    "/traɪ aʊt/",
+    "We plan to try out the new software for a month.",
+    "私たちはその新しいソフトを1か月試す予定だ。",
+    [
+      "try out a recipe",
+      "try out for a team"
+    ],
+    "try + out(すっかり)。実際に使って良し悪しを確かめること。米国では入団テストを受ける意味も。"
+  ],
+  [
+    "turn around",
+    "B1",
+    "句動詞",
+    [
+      "向きを変える",
+      "好転させる"
+    ],
+    "/tɝn ɚˈaʊnd/",
+    "New management turned the company around in two years.",
+    "新しい経営陣は2年でその会社を立て直した。",
+    [
+      "turn a business around",
+      "turn around quickly"
+    ],
+    "turn + around(周りを)。向きを180度変えること。不振の事業を好転させる意味でよく使う。"
+  ],
+  [
+    "turn down",
+    "B1",
+    "句動詞",
+    [
+      "断る",
+      "音量を下げる"
+    ],
+    "/tɝn daʊn/",
+    "She turned down the offer without hesitating.",
+    "彼女はためらわずにその申し出を断った。",
+    [
+      "turn down a job",
+      "turn down the volume"
+    ],
+    "turn + down(下へ)。つまみを下げること。差し出されたものを下げて退ける意味にもなる。"
+  ],
+  [
+    "turn into",
+    "B1",
+    "句動詞",
+    [
+      "〜に変わる"
+    ],
+    "/tɝn ˈɪntu/",
+    "The old warehouse has turned into a popular café.",
+    "その古い倉庫は人気のカフェに変わった。",
+    [
+      "turn into a problem",
+      "turn into water"
+    ],
+    "turn + into(中へ)。向きを変えて別のものの中に入ること。姿かたちが変わること。"
+  ],
+  [
+    "turn off",
+    "A2",
+    "句動詞",
+    [
+      "消す",
+      "止める"
+    ],
+    "/tɝn ɔf/",
+    "Please turn off the lights when you leave.",
+    "出るときに明かりを消してください。",
+    [
+      "turn off the tap",
+      "turn off a machine"
+    ],
+    "turn + off(離して)。スイッチを回して切り離すこと。turn on と対で覚える。"
+  ],
+  [
+    "turn on",
+    "A2",
+    "句動詞",
+    [
+      "つける",
+      "作動させる"
+    ],
+    "/tɝn ɑn/",
+    "Turn on the heater if the room feels cold.",
+    "部屋が寒く感じたら暖房をつけてください。",
+    [
+      "turn on a light",
+      "turn on the tap"
+    ],
+    "turn + on(接続して)。スイッチを回してつなぐこと。"
+  ],
+  [
+    "turn out",
+    "B2",
+    "句動詞",
+    [
+      "判明する",
+      "結局〜になる"
+    ],
+    "/tɝn aʊt/",
+    "The rumour turned out to be completely false.",
+    "そのうわさは完全に誤りだと判明した。",
+    [
+      "turn out well",
+      "as it turns out"
+    ],
+    "turn + out(外へ)。結果が外に現れること。turn out to be の形が最も多い。"
+  ],
+  [
+    "turn up",
+    "B1",
+    "句動詞",
+    [
+      "現れる",
+      "音量を上げる"
+    ],
+    "/tɝn ʌp/",
+    "He turned up an hour late without apologizing.",
+    "彼は謝りもせず1時間遅れて現れた。",
+    [
+      "turn up late",
+      "turn up the volume"
+    ],
+    "turn + up(上へ)。表に現れ出ること。つまみを上げれば音量が上がる。"
+  ],
+  [
+    "use up",
+    "B2",
+    "句動詞",
+    [
+      "使い果たす"
+    ],
+    "/jus ʌp/",
+    "We used up the last of the paint yesterday.",
+    "私たちは昨日、塗料の最後の分を使い果たした。",
+    [
+      "use up supplies",
+      "use up energy"
+    ],
+    "use + up(すっかり)。残らず使い切ること。up が「完了」を表す典型例。"
+  ],
+  [
+    "wake up",
+    "A2",
+    "句動詞",
+    [
+      "目を覚ます"
+    ],
+    "/weɪk ʌp/",
+    "I wake up before the alarm most mornings.",
+    "私はたいていの朝、目覚ましより先に目を覚ます。",
+    [
+      "wake up early",
+      "wake someone up"
+    ],
+    "wake + up。眠りから意識が浮上すること。起き上がる get up とは段階が違う。"
+  ],
+  [
+    "warm up",
+    "B1",
+    "句動詞",
+    [
+      "温める",
+      "準備運動をする"
+    ],
+    "/wɔrm ʌp/",
+    "Players warm up for twenty minutes before the match.",
+    "選手は試合前に20分間、準備運動をする。",
+    [
+      "warm up the engine",
+      "warm up properly"
+    ],
+    "warm + up。温度や調子を上げること。体を動かして本番に備える意味でも使う。"
+  ],
+  [
+    "wear out",
+    "B2",
+    "句動詞",
+    [
+      "すり減らす",
+      "疲れ果てさせる"
+    ],
+    "/wɛr aʊt/",
+    "These shoes wear out after about a year.",
+    "この靴は1年ほどで履きつぶれる。",
+    [
+      "wear out quickly",
+      "be worn out"
+    ],
+    "wear(すり減る)+ out(すっかり)。使い切って役に立たなくなること。人が疲れ果てる意味にも使う。"
+  ],
+  [
+    "work out",
+    "B1",
+    "句動詞",
+    [
+      "うまくいく",
+      "算出する",
+      "運動する"
+    ],
+    "/wɝk aʊt/",
+    "I am sure things will work out in the end.",
+    "最後にはうまくいくと確信している。",
+    [
+      "work out a problem",
+      "work out the cost"
+    ],
+    "work + out(外へ)。手を動かして答えを外に出すこと。解決にも計算にも運動にも使う。"
+  ],
+  [
+    "write down",
+    "A2",
+    "句動詞",
+    [
+      "書き留める"
+    ],
+    "/raɪt daʊn/",
+    "Write down the number before you forget it.",
+    "忘れないうちにその番号を書き留めなさい。",
+    [
+      "write down an address",
+      "write down notes"
+    ],
+    "write + down(下へ)。頭の中のものを紙に下ろすこと。"
+  ],
+  [
+    "in terms of",
+    "B2",
+    "前置詞",
+    [
+      "〜の観点では",
+      "〜に関して"
+    ],
+    "/ɪn tɝmz ʌv/",
+    "In terms of cost, the second option is much better.",
+    "費用の観点では2つ目の案のほうがずっと良い。",
+    [
+      "in terms of quality",
+      "in terms of size"
+    ],
+    "term(条件、用語)の複数形を使った定型句。どの物差しで見るかを示す。書き言葉で頻出。"
+  ],
+  [
+    "on behalf of",
+    "B2",
+    "前置詞",
+    [
+      "〜を代表して",
+      "〜のために"
+    ],
+    "/ɑn bɪˈhæf ʌv/",
+    "She accepted the prize on behalf of the whole team.",
+    "彼女はチーム全体を代表してその賞を受け取った。",
+    [
+      "on behalf of a client",
+      "speak on behalf of"
+    ],
+    "behalf(側)を使った定型句。本人に代わってその側に立つこと。公式な場面で使う。"
+  ],
+  [
+    "in spite of",
+    "B1",
+    "前置詞",
+    [
+      "〜にもかかわらず"
+    ],
+    "/ɪn spaɪt ʌv/",
+    "In spite of the rain, the market stayed open.",
+    "雨にもかかわらず、その市場は開いたままだった。",
+    [
+      "in spite of everything",
+      "in spite of himself"
+    ],
+    "spite(悪意)を使った定型句。逆らってくるものを押しのけて、が核。despite とほぼ同じ意味。"
+  ],
+  [
+    "due to",
+    "B1",
+    "前置詞",
+    [
+      "〜が原因で"
+    ],
+    "/du tu/",
+    "The delay was due to a signal failure.",
+    "その遅れは信号故障が原因だった。",
+    [
+      "due to illness",
+      "due to bad weather"
+    ],
+    "due(支払われるべき)から。原因が「そこに帰せられる」感じ。be動詞の後に置く形が本来の用法。"
+  ],
+  [
+    "apart from",
+    "B1",
+    "前置詞",
+    [
+      "〜を除いて",
+      "〜に加えて"
+    ],
+    "/əˈpɑrt frʌm/",
+    "Apart from one small error, the report is excellent.",
+    "小さな誤りが1つあるほかは、その報告書は優れている。",
+    [
+      "apart from that",
+      "quite apart from"
+    ],
+    "apart(離れて)+ from。全体から切り離して考えること。除外にも追加にも使える点が要点。"
+  ],
+  [
+    "regardless of",
+    "B2",
+    "前置詞",
+    [
+      "〜にかかわらず"
+    ],
+    "/rəˈgɑrdləs ʌv/",
+    "The rule applies regardless of age or experience.",
+    "その規則は年齢や経験にかかわらず適用される。",
+    [
+      "regardless of cost",
+      "regardless of the result"
+    ],
+    "regard(気にかける)+ -less。気にかけずに、が核。条件を無視して同じ扱いをすること。"
+  ],
+  [
+    "in addition to",
+    "B1",
+    "前置詞",
+    [
+      "〜に加えて"
+    ],
+    "/ɪn əˈdɪʃən tu/",
+    "In addition to English, she speaks Thai and Korean.",
+    "英語に加えて、彼女はタイ語と韓国語を話す。",
+    [
+      "in addition to that",
+      "in addition to work"
+    ],
+    "addition(追加)を使った定型句。後ろは名詞か動名詞が来る点に注意。"
+  ],
+  [
+    "rather than",
+    "B1",
+    "接続詞",
+    [
+      "〜よりむしろ"
+    ],
+    "/ˈræðɚ ðæn/",
+    "We took the train rather than drive in the snow.",
+    "雪の中を運転するより、私たちは電車を使った。",
+    [
+      "rather than that",
+      "would rather than"
+    ],
+    "rather(むしろ)+ than。二つを比べて一方を選ぶこと。前後の形をそろえるのが原則。"
+  ],
+  [
+    "as well as",
+    "A2",
+    "接続詞",
+    [
+      "〜だけでなく",
+      "〜と同様に"
+    ],
+    "/æz wɛl æz/",
+    "The centre offers classes as well as free advice.",
+    "そのセンターは無料相談だけでなく講座も提供している。",
+    [
+      "as well as that",
+      "as well as usual"
+    ],
+    "as ... as の比較の形が定型句になったもの。中心はあくまで前半にある点が and との違い。"
+  ],
+  [
+    "in charge of",
+    "B1",
+    "前置詞",
+    [
+      "〜を担当して"
+    ],
+    "/ɪn tʃɑrdʒ ʌv/",
+    "She is in charge of the whole northern region.",
+    "彼女は北部地域全体を担当している。",
+    [
+      "put in charge of",
+      "be in charge of"
+    ],
+    "charge(責任、荷)を使った定型句。その荷を背負っている状態。in the charge of とは意味が逆になる。"
+  ],
+  [
+    "in advance",
+    "B1",
+    "副詞",
+    [
+      "前もって",
+      "事前に"
+    ],
+    "/ɪn ədˈvæns/",
+    "Please book your seat at least a week in advance.",
+    "少なくとも1週間前に座席を予約してください。",
+    [
+      "pay in advance",
+      "in advance of"
+    ],
+    "advance(前進)を使った定型句。時間の上で先に進んで、が核。"
+  ],
+  [
+    "on purpose",
+    "B1",
+    "副詞",
+    [
+      "わざと",
+      "故意に"
+    ],
+    "/ɑn ˈpɝpəs/",
+    "He knocked the glass over on purpose.",
+    "彼はわざとグラスを倒した。",
+    [
+      "do it on purpose",
+      "not on purpose"
+    ],
+    "purpose(目的)を使った定型句。目的を持ってやった、つまり偶然ではないこと。by accident の反対。"
+  ],
+  [
+    "at least",
+    "A2",
+    "副詞",
+    [
+      "少なくとも",
+      "せめて"
+    ],
+    "/æt list/",
+    "At least thirty people were waiting outside.",
+    "少なくとも30人が外で待っていた。",
+    [
+      "at least once",
+      "at least try"
+    ],
+    "least(最小)を使った定型句。下限を示すことと、悪い中でのせめてもの点を示すこと、両方に使う。"
+  ],
+  [
+    "at last",
+    "A2",
+    "副詞",
+    [
+      "ついに",
+      "やっと"
+    ],
+    "/æt læst/",
+    "At last the results were published.",
+    "ついに結果が公表された。",
+    [
+      "at last we can",
+      "come at last"
+    ],
+    "last(最後)を使った定型句。長く待った末に、という安堵の気持ちがこもる。"
+  ],
+  [
+    "no longer",
+    "B1",
+    "副詞",
+    [
+      "もはや〜ない"
+    ],
+    "/noʊ ˈlɔŋgɚ/",
+    "The old bridge is no longer safe for lorries.",
+    "その古い橋はもはやトラックには安全ではない。",
+    [
+      "no longer available",
+      "can no longer"
+    ],
+    "no + longer(より長く)。それ以上は続かない、が核。be動詞や助動詞の後ろに置く。"
+  ],
+  [
+    "as far as",
+    "B1",
+    "接続詞",
+    [
+      "〜の限りでは",
+      "〜まで"
+    ],
+    "/æz fɑr æz/",
+    "As far as I know, the office opens at nine.",
+    "私の知る限り、その事務所は9時に開く。",
+    [
+      "as far as possible",
+      "as far as the eye can see"
+    ],
+    "far(遠く)を使った定型句。届く範囲の限界を示す。as far as I know は定番の前置き。"
+  ],
+  [
+    "as long as",
+    "B1",
+    "接続詞",
+    [
+      "〜する限り",
+      "〜さえすれば"
+    ],
+    "/æz lɔŋ æz/",
+    "You can borrow it as long as you return it tomorrow.",
+    "明日返してくれさえすれば、それを借りていい。",
+    [
+      "as long as possible",
+      "as long as you like"
+    ],
+    "long(長く)を使った定型句。時間の長さと、条件の両方を表す。条件では if に近い。"
+  ],
+  [
+    "in general",
+    "B1",
+    "副詞",
+    [
+      "一般に",
+      "概して"
+    ],
+    "/ɪn ˈdʒɛnɚəl/",
+    "In general, older buildings need more maintenance.",
+    "一般に、古い建物ほど手入れが必要だ。",
+    [
+      "people in general",
+      "in general terms"
+    ],
+    "general(全体の)を使った定型句。細かい例外を脇に置いて全体の傾向を述べる。"
+  ],
+  [
+    "in particular",
+    "B1",
+    "副詞",
+    [
+      "特に",
+      "とりわけ"
+    ],
+    "/ɪn pɚˈtɪkjəlɚ/",
+    "She enjoys all sports, tennis in particular.",
+    "彼女はすべてのスポーツ、とりわけテニスを楽しむ。",
+    [
+      "nothing in particular",
+      "in particular cases"
+    ],
+    "particular(個別の)を使った定型句。全体の中から一つを取り出して強調する。"
+  ],
+  [
+    "in fact",
+    "A2",
+    "副詞",
+    [
+      "実際は",
+      "それどころか"
+    ],
+    "/ɪn fækt/",
+    "It looks difficult but in fact the method is simple.",
+    "難しそうに見えるが、実際その方法は単純だ。",
+    [
+      "in fact quite",
+      "as a matter of fact"
+    ],
+    "fact(事実)を使った定型句。前の内容を訂正したり、さらに強めたりする働きがある。"
+  ],
+  [
+    "for instance",
+    "B1",
+    "副詞",
+    [
+      "例えば"
+    ],
+    "/fɔr ˈɪnstəns/",
+    "Some fruits, for instance bananas, ripen after picking.",
+    "一部の果物、例えばバナナは収穫後に熟す。",
+    [
+      "for instance when",
+      "as for instance"
+    ],
+    "instance(実例)を使った定型句。ラテン語 instare(そばに立つ)。for example とほぼ同じ。"
+  ],
+  [
+    "on the whole",
+    "B2",
+    "副詞",
+    [
+      "全体として",
+      "概して"
+    ],
+    "/ɑn ðə hoʊl/",
+    "On the whole, the changes have been welcomed.",
+    "全体として、その変更は歓迎されてきた。",
+    [
+      "on the whole good",
+      "on the whole better"
+    ],
+    "whole(全体)を使った定型句。個々の良し悪しをならして見ればどうか、を述べる。"
+  ],
+  [
+    "in the meantime",
+    "B2",
+    "副詞",
+    [
+      "その間に"
+    ],
+    "/ɪn ðə ˈmintaɪm/",
+    "The report is delayed. In the meantime, use the old figures.",
+    "報告書は遅れています。その間は古い数字を使ってください。",
+    [
+      "in the meantime we",
+      "in the meantime please"
+    ],
+    "meantime(中間の時)を使った定型句。二つの出来事の間の期間を指す。"
+  ],
+  [
+    "by no means",
+    "B2",
+    "副詞",
+    [
+      "決して〜ない"
+    ],
+    "/baɪ noʊ minz/",
+    "The outcome is by no means certain.",
+    "その結果は決して確実ではない。",
+    [
+      "by no means all",
+      "by no means easy"
+    ],
+    "means(手段)を使った定型句。どんな手段によっても、が核。強い否定を表す。"
+  ],
+  [
+    "as a result",
+    "B1",
+    "副詞",
+    [
+      "その結果"
+    ],
+    "/æz ə rɪˈzʌlt/",
+    "Costs rose and, as a result, prices went up.",
+    "費用が上がり、その結果、価格も上昇した。",
+    [
+      "as a result of",
+      "and as a result"
+    ],
+    "result(結果)を使った定型句。前に述べたことが原因であることを示す。as a result of なら後ろに原因が来る。"
+  ],
+  [
+    "in return",
+    "B1",
+    "副詞",
+    [
+      "お返しに",
+      "見返りに"
+    ],
+    "/ɪn rɪˈtɝn/",
+    "He helped with the harvest and got vegetables in return.",
+    "彼は収穫を手伝い、お返しに野菜をもらった。",
+    [
+      "in return for",
+      "ask nothing in return"
+    ],
+    "return(返す)を使った定型句。受けた分を返す、あるいは返してもらう関係を示す。"
+  ],
+  [
+    "on average",
+    "B1",
+    "副詞",
+    [
+      "平均して"
+    ],
+    "/ɑn ˈævɚɪdʒ/",
+    "On average, the journey takes about forty minutes.",
+    "平均して、その移動には約40分かかる。",
+    [
+      "on average per day",
+      "slightly above average"
+    ],
+    "average(平均)を使った定型句。個々の差をならした値を述べるときの決まった形。"
+  ],
+  [
+    "at random",
+    "B2",
+    "副詞",
+    [
+      "無作為に",
+      "手当たり次第に"
+    ],
+    "/æt ˈrændəm/",
+    "Names were drawn at random from a list.",
+    "名前は一覧から無作為に選ばれた。",
+    [
+      "chosen at random",
+      "at random intervals"
+    ],
+    "random(でたらめ)を使った定型句。規則や意図を持たずに選ぶこと。調査や抽選で使う。"
+  ],
+  [
+    "in common",
+    "B1",
+    "副詞",
+    [
+      "共通して"
+    ],
+    "/ɪn ˈkɑmən/",
+    "The two writers have more in common than you might think.",
+    "その2人の作家は思うより多くの共通点を持つ。",
+    [
+      "have in common",
+      "in common with"
+    ],
+    "common(共通の)を使った定型句。have ... in common の形で共通点の量を述べる。"
+  ],
+  [
+    "out of date",
+    "B1",
+    "形容詞",
+    [
+      "時代遅れの",
+      "期限切れの"
+    ],
+    "/aʊt ʌv deɪt/",
+    "The safety guidelines are badly out of date.",
+    "その安全指針はひどく時代遅れだ。",
+    [
+      "go out of date",
+      "an out-of-date map"
+    ],
+    "out(外)+ date(日付)。今の日付の外に出てしまったもの。名詞の前ではハイフンでつなぐ。"
+  ],
+  [
+    "up to date",
+    "B1",
+    "形容詞",
+    [
+      "最新の",
+      "最新にする"
+    ],
+    "/ʌp tu deɪt/",
+    "Please keep your contact details up to date.",
+    "連絡先の情報は最新の状態に保ってください。",
+    [
+      "bring up to date",
+      "an up-to-date list"
+    ],
+    "up to(〜まで)+ date。今日の日付まで追いついていること。out of date の反対。"
+  ],
+  [
+    "allergic",
+    "B2",
+    "形容詞",
+    [
+      "アレルギーの"
+    ],
+    "/əˈlɝdʒɪk/",
+    "She is allergic to nuts and carries medicine everywhere.",
+    "彼女はナッツにアレルギーがあり、どこにでも薬を持ち歩いている。",
+    [
+      "allergic to",
+      "an allergic reaction"
+    ],
+    "ギリシャ語 allos(別の)+ ergon(働き)。体が普通とは別の反応を起こすこと。allergic to の形で使う。"
+  ],
+  [
+    "bilingual",
+    "B2",
+    "形容詞",
+    [
+      "二言語を話す"
+    ],
+    "/baɪˈlɪŋgwəl/",
+    "The school offers a bilingual programme in English and Spanish.",
+    "その学校は英語とスペイン語の二言語課程を提供している。",
+    [
+      "bilingual education",
+      "fully bilingual"
+    ],
+    "bi-(二つ)+ lingua(言語。language, linguistic)。二つの言語を同じように使えること。"
+  ],
+  [
+    "clumsy",
+    "B2",
+    "形容詞",
+    [
+      "不器用な",
+      "ぎこちない"
+    ],
+    "/ˈklʌmzi/",
+    "His clumsy apology only made things worse.",
+    "彼のぎこちない謝罪は事態を悪くしただけだった。",
+    [
+      "a clumsy attempt",
+      "feel clumsy"
+    ],
+    "古ノルド語 klumsa(かじかむ)。手がかじかんで思うように動かない感じ。動作にも言葉づかいにも使う。"
+  ],
+  [
+    "commute",
+    "B2",
+    "動詞・名詞",
+    [
+      "通勤する",
+      "通勤"
+    ],
+    "/kəmˈjut/",
+    "She commutes two hours each way by train.",
+    "彼女は電車で片道2時間かけて通勤している。",
+    [
+      "a long commute",
+      "commute to work"
+    ],
+    "ラテン語 com-(共に)+ mut(変える。mutual)。回数券で運賃を「置き換えた」ことに由来する。"
+  ],
+  [
+    "compliment",
+    "B2",
+    "名詞・動詞",
+    [
+      "褒め言葉",
+      "褒める"
+    ],
+    "/ˈkɑmpləmɛnt/",
+    "He paid her a genuine compliment about the design.",
+    "彼はその設計について彼女に心からの褒め言葉を贈った。",
+    [
+      "pay a compliment",
+      "take it as a compliment"
+    ],
+    "complete と同語根で「相手を満たす言葉」。補う complement と綴りが1字違いなので注意。"
+  ],
+  [
+    "considerate",
+    "B2",
+    "形容詞",
+    [
+      "思いやりのある"
+    ],
+    "/kənˈsɪdɚət/",
+    "It was considerate of him to call ahead.",
+    "前もって電話をくれるとは彼は思いやりがあった。",
+    [
+      "considerate of",
+      "a considerate neighbour"
+    ],
+    "consider(よく考える)+ -ate。相手の立場をよく考えていること。considerable(かなりの)とは別語。"
+  ],
+  [
+    "courageous",
+    "B2",
+    "形容詞",
+    [
+      "勇敢な"
+    ],
+    "/kɚˈeɪdʒəs/",
+    "It was a courageous decision to speak out.",
+    "声を上げたのは勇敢な決断だった。",
+    [
+      "a courageous act",
+      "courageous enough"
+    ],
+    "courage(勇気)の形容詞。ラテン語 cor(心)。心から出てくる強さ。brave より格調が高い。"
+  ],
+  [
+    "discomfort",
+    "B2",
+    "名詞",
+    [
+      "不快",
+      "不調"
+    ],
+    "/dɪˈskʌmfɚt/",
+    "Patients may feel some discomfort for a day or two.",
+    "患者は1日か2日、多少の不快感を覚えることがある。",
+    [
+      "cause discomfort",
+      "mild discomfort"
+    ],
+    "dis-(否定)+ comfort(快適さ)。痛みとまではいかない、気持ちの悪さや違和感。"
+  ],
+  [
+    "dizzy",
+    "B2",
+    "形容詞",
+    [
+      "めまいがする"
+    ],
+    "/ˈdɪzi/",
+    "She felt dizzy after standing up too quickly.",
+    "彼女は急に立ち上がってめまいを感じた。",
+    [
+      "feel dizzy",
+      "a dizzy spell"
+    ],
+    "古英語 dysig(愚かな)。頭がふらつく感じが核。高さや速さについて「目がくらむような」の意味にも使う。"
+  ],
+  [
+    "downside",
+    "B2",
+    "名詞",
+    [
+      "不利な面",
+      "欠点"
+    ],
+    "/ˈdaʊnsaɪd/",
+    "The main downside of the plan is the cost.",
+    "その計画の主な不利点は費用だ。",
+    [
+      "the downside of",
+      "a serious downside"
+    ],
+    "down(下)+ side(側)。物事の下側、つまり良くない面。upside と対で覚える。"
+  ],
+  [
+    "drawback",
+    "B2",
+    "名詞",
+    [
+      "欠点",
+      "難点"
+    ],
+    "/ˈdrɔbæk/",
+    "The only drawback is the long journey to work.",
+    "唯一の難点は通勤の長さだ。",
+    [
+      "a major drawback",
+      "the main drawback"
+    ],
+    "draw(引く)+ back(後ろ)。前に進むのを後ろへ引くもの、が核。計画の弱点を述べるときに使う。"
+  ],
+  [
+    "endurance",
+    "B2",
+    "名詞",
+    [
+      "持久力",
+      "忍耐"
+    ],
+    "/ˈɛndɚəns/",
+    "Long-distance running builds both strength and endurance.",
+    "長距離走は筋力と持久力の両方を鍛える。",
+    [
+      "physical endurance",
+      "beyond endurance"
+    ],
+    "endure の名詞。en-(中で)+ dur(固い。durable)。硬さを保ったまま耐え続ける力。"
+  ],
+  [
+    "eyesight",
+    "B2",
+    "名詞",
+    [
+      "視力"
+    ],
+    "/ˈaɪsaɪt/",
+    "Her eyesight has weakened over the last few years.",
+    "彼女の視力はここ数年で弱まった。",
+    [
+      "poor eyesight",
+      "lose one's eyesight"
+    ],
+    "eye + sight(見えること)。どれだけよく見えるかという能力。vision より日常的な語。"
+  ],
+  [
+    "faithful",
+    "B2",
+    "形容詞",
+    [
+      "忠実な",
+      "誠実な"
+    ],
+    "/ˈfeɪθfəl/",
+    "The translation is faithful to the original text.",
+    "その翻訳は原文に忠実だ。",
+    [
+      "faithful to",
+      "a faithful friend"
+    ],
+    "faith(信)+ -ful。ラテン語 fides(信頼。confide, fidelity)。約束や原型から離れないこと。"
+  ],
+  [
+    "feasible",
+    "B2",
+    "形容詞",
+    [
+      "実行可能な"
+    ],
+    "/ˈfizəbəl/",
+    "The timetable is tight but still feasible.",
+    "その日程は厳しいが、それでも実行可能だ。",
+    [
+      "technically feasible",
+      "a feasible plan"
+    ],
+    "ラテン語 facere(なす。fact, factory)+ -ible。実際にやってのけられること。viable より技術面に寄る。"
+  ],
+  [
+    "forgetful",
+    "B2",
+    "形容詞",
+    [
+      "忘れっぽい"
+    ],
+    "/fɔrˈgɛtfəl/",
+    "He has become forgetful about small appointments.",
+    "彼は小さな約束を忘れがちになった。",
+    [
+      "forgetful of",
+      "increasingly forgetful"
+    ],
+    "forget + -ful。忘れることで満ちている、が形の上での成り立ち。年齢や疲れの文脈で使う。"
+  ],
+  [
+    "generosity",
+    "B2",
+    "名詞",
+    [
+      "寛大さ",
+      "気前のよさ"
+    ],
+    "/dʒɛnɚˈɑsəti/",
+    "The library was built through the generosity of one family.",
+    "その図書館は一家族の寛大さによって建てられた。",
+    [
+      "show generosity",
+      "the generosity of"
+    ],
+    "ラテン語 generosus(生まれのよい)。gene と同語根。もとは高貴さで、そこから惜しみなく与える心へ。"
+  ],
+  [
+    "gratitude",
+    "B2",
+    "名詞",
+    [
+      "感謝"
+    ],
+    "/ˈgrætətud/",
+    "She expressed her gratitude in a short handwritten note.",
+    "彼女は短い手書きの手紙で感謝を表した。",
+    [
+      "express gratitude",
+      "a debt of gratitude"
+    ],
+    "ラテン語 gratus(ありがたい。grateful, grace)。受けた恩を認める気持ち。thanks より重い。"
+  ],
+  [
+    "greeting",
+    "B1",
+    "名詞",
+    [
+      "挨拶"
+    ],
+    "/ˈgritɪŋ/",
+    "A warm greeting at the door sets the tone.",
+    "玄関での温かい挨拶がその場の空気を決める。",
+    [
+      "a friendly greeting",
+      "exchange greetings"
+    ],
+    "greet(声をかける)+ -ing。出会いの初めに交わす言葉や動作。複数形で年賀の挨拶も指す。"
+  ],
+  [
+    "hardship",
+    "B2",
+    "名詞",
+    [
+      "苦難",
+      "困窮"
+    ],
+    "/ˈhɑrdʃɪp/",
+    "The family faced real hardship after the factory closed.",
+    "工場が閉鎖した後、その一家は本当の困窮に直面した。",
+    [
+      "financial hardship",
+      "endure hardship"
+    ],
+    "hard + -ship(状態)。生活が立ち行かないほどの厳しさを指し、単なる不便には使わない。"
+  ],
+  [
+    "hesitation",
+    "B2",
+    "名詞",
+    [
+      "ためらい"
+    ],
+    "/hɛzəˈteɪʃən/",
+    "She agreed without a moment's hesitation.",
+    "彼女は一瞬のためらいもなく同意した。",
+    [
+      "without hesitation",
+      "a slight hesitation"
+    ],
+    "ラテン語 haerere(くっつく。adhere)。足が地面に貼りついて動けない感じが原義。"
+  ],
+  [
+    "homesick",
+    "B1",
+    "形容詞",
+    [
+      "ホームシックの"
+    ],
+    "/ˈhoʊmsɪk/",
+    "He felt homesick during his first month abroad.",
+    "彼は海外での最初の1か月、ホームシックを感じた。",
+    [
+      "feel homesick",
+      "badly homesick"
+    ],
+    "home + sick(病んだ)。家が恋しくて具合が悪くなること、が語源そのまま。"
+  ],
+  [
+    "imaginative",
+    "B2",
+    "形容詞",
+    [
+      "想像力に富んだ"
+    ],
+    "/ɪˈmædʒənətɪv/",
+    "The children produced imaginative solutions to the puzzle.",
+    "子どもたちはその難問に想像力に富んだ解決策を出した。",
+    [
+      "an imaginative approach",
+      "highly imaginative"
+    ],
+    "imagine の形容詞。ラテン語 imago(像)。頭の中に像を作り出す力があること。"
+  ],
+  [
+    "immature",
+    "B2",
+    "形容詞",
+    [
+      "未熟な",
+      "大人げない"
+    ],
+    "/ɪmətˈjʊr/",
+    "His reaction to the criticism was rather immature.",
+    "批判への彼の反応はやや大人げなかった。",
+    [
+      "immature behaviour",
+      "emotionally immature"
+    ],
+    "im-(否定)+ mature(熟した)。まだ熟していないこと。年齢だけでなく態度にも使う。"
+  ],
+  [
+    "inconvenience",
+    "B2",
+    "名詞・動詞",
+    [
+      "不便",
+      "迷惑をかける"
+    ],
+    "/ɪnkənˈvinjəns/",
+    "We apologize for any inconvenience during the works.",
+    "工事中のご不便をお詫び申し上げます。",
+    [
+      "cause inconvenience",
+      "apologize for the inconvenience"
+    ],
+    "in-(否定)+ convenience(便利さ)。con-(共に)+ ven(来る)。都合が合わないこと。"
+  ],
+  [
+    "indifferent",
+    "B2",
+    "形容詞",
+    [
+      "無関心な",
+      "平凡な"
+    ],
+    "/ɪnˈdɪfrənt/",
+    "Voters seemed indifferent to the whole campaign.",
+    "有権者はその運動全体に無関心に見えた。",
+    [
+      "indifferent to",
+      "largely indifferent"
+    ],
+    "in-(否定)+ different。違いを感じない、つまりどちらでもよいという態度。"
+  ],
+  [
+    "informative",
+    "B2",
+    "形容詞",
+    [
+      "有益な",
+      "ためになる"
+    ],
+    "/ɪnˈfɔrmətɪv/",
+    "The talk was short but highly informative.",
+    "その講演は短いが非常にためになった。",
+    [
+      "an informative session",
+      "highly informative"
+    ],
+    "inform(知らせる)の形容詞。中身が情報として役に立つこと。単に面白いだけとは違う。"
+  ],
+  [
+    "jealousy",
+    "B2",
+    "名詞",
+    [
+      "嫉妬",
+      "ねたみ"
+    ],
+    "/ˈdʒɛləsi/",
+    "Jealousy slowly damaged the friendship between the two colleagues.",
+    "嫉妬がその2人の同僚の友情を少しずつ損なった。",
+    [
+      "out of jealousy",
+      "professional jealousy"
+    ],
+    "ギリシャ語 zelos(熱意。zeal)。もとは強い思い入れで、そこから他人が持つものへのねたみへ。"
+  ],
+  [
+    "laziness",
+    "B1",
+    "名詞",
+    [
+      "怠惰",
+      "無精"
+    ],
+    "/ˈleɪzinəs/",
+    "Their delay was caused by poor planning, not laziness.",
+    "彼らの遅れは怠惰ではなく計画の甘さが原因だった。",
+    [
+      "sheer laziness",
+      "out of laziness"
+    ],
+    "lazy の名詞。やるべきことを避けて動かない性質。tiredness とは区別される。"
+  ],
+  [
+    "leftover",
+    "B1",
+    "名詞・形容詞",
+    [
+      "残り物",
+      "残った"
+    ],
+    "/ˈlɛftoʊvɚ/",
+    "We ate leftover soup for lunch the next day.",
+    "翌日、私たちは昼食に残ったスープを食べた。",
+    [
+      "leftover food",
+      "use up leftovers"
+    ],
+    "left over(残された)が一語になった形。使い切らずに残った分。名詞は複数形で使うことが多い。"
+  ],
+  [
+    "loneliness",
+    "B2",
+    "名詞",
+    [
+      "孤独",
+      "寂しさ"
+    ],
+    "/ˈloʊnlinəs/",
+    "The study looked at loneliness among older people.",
+    "その研究は高齢者の孤独を調べた。",
+    [
+      "feelings of loneliness",
+      "combat loneliness"
+    ],
+    "lonely の名詞。alone(一人)とは違い、望まずに一人でいるつらさを指す。"
+  ],
+  [
+    "misunderstanding",
+    "B1",
+    "名詞",
+    [
+      "誤解",
+      "行き違い"
+    ],
+    "/mɪsəndɚˈstændɪŋ/",
+    "A simple misunderstanding delayed the delivery by a week.",
+    "単純な行き違いが配達を1週間遅らせた。",
+    [
+      "clear up a misunderstanding",
+      "a slight misunderstanding"
+    ],
+    "mis-(誤って)+ understanding。受け取り方が食い違うこと。争いではなく行き違いを指す。"
+  ],
+  [
+    "nervousness",
+    "B1",
+    "名詞",
+    [
+      "緊張",
+      "不安"
+    ],
+    "/ˈnɝvəsnəs/",
+    "Her nervousness disappeared once she started speaking.",
+    "話し始めると彼女の緊張は消えた。",
+    [
+      "hide one's nervousness",
+      "a sign of nervousness"
+    ],
+    "nervous の名詞。ラテン語 nervus(筋、神経)。神経が張りつめている状態。"
+  ],
+  [
+    "nostalgia",
+    "B2",
+    "名詞",
+    [
+      "郷愁",
+      "懐かしさ"
+    ],
+    "/nɔˈstældʒə/",
+    "The old photographs filled him with nostalgia.",
+    "その古い写真は彼を懐かしさで満たした。",
+    [
+      "a wave of nostalgia",
+      "nostalgia for"
+    ],
+    "ギリシャ語 nostos(帰郷)+ algos(痛み)。故郷を思う痛みが原義で、今は過去への懐かしさ全般。"
+  ],
+  [
+    "obedient",
+    "B2",
+    "形容詞",
+    [
+      "従順な",
+      "素直な"
+    ],
+    "/oʊˈbidiənt/",
+    "The dog is obedient and easy to handle.",
+    "その犬は従順で扱いやすい。",
+    [
+      "an obedient child",
+      "obedient to"
+    ],
+    "ラテン語 ob-(〜へ)+ aud(聞く。audio)。相手の言うことをよく聞くこと、が語源そのまま。"
+  ],
+  [
+    "outgoing",
+    "B2",
+    "形容詞",
+    [
+      "社交的な",
+      "退任する"
+    ],
+    "/ˈaʊtgoʊɪŋ/",
+    "Her outgoing manner puts new members at ease.",
+    "彼女の社交的な物腰は新しい会員を安心させる。",
+    [
+      "an outgoing personality",
+      "the outgoing president"
+    ],
+    "out + going。外へ向かっていく性質。役職から出ていく側、つまり退任する人にも使う。"
+  ],
+  [
+    "overtime",
+    "B1",
+    "名詞・副詞",
+    [
+      "残業",
+      "時間外に"
+    ],
+    "/ˈoʊvɚtaɪm/",
+    "Staff were paid extra for working overtime.",
+    "職員は時間外労働に対して割増賃金を受け取った。",
+    [
+      "work overtime",
+      "overtime pay"
+    ],
+    "over(超えて)+ time。決められた時間を超えた分。名詞にも副詞にも使える。"
+  ],
+  [
+    "paperwork",
+    "B2",
+    "名詞",
+    [
+      "事務書類",
+      "書類仕事"
+    ],
+    "/ˈpeɪpɚwɝk/",
+    "Most of the delay was caused by paperwork.",
+    "遅れの大半は書類仕事が原因だった。",
+    [
+      "do the paperwork",
+      "endless paperwork"
+    ],
+    "paper + work。本来の仕事に付随する書類処理。うんざりする響きを伴うことが多い。"
+  ],
+  [
+    "persuasive",
+    "B2",
+    "形容詞",
+    [
+      "説得力のある"
+    ],
+    "/pɚˈsweɪsɪv/",
+    "She made a persuasive case for more funding.",
+    "彼女はさらなる資金提供を求める説得力のある主張をした。",
+    [
+      "a persuasive argument",
+      "highly persuasive"
+    ],
+    "persuade の形容詞。per-(すっかり)+ suad(勧める。sweet と同語根)。相手を気持ちよく納得させる力。"
+  ],
+  [
+    "pessimistic",
+    "B2",
+    "形容詞",
+    [
+      "悲観的な"
+    ],
+    "/pɛsəˈmɪstɪk/",
+    "Analysts are pessimistic about next year's harvest.",
+    "分析家は来年の収穫について悲観的だ。",
+    [
+      "pessimistic about",
+      "deeply pessimistic"
+    ],
+    "ラテン語 pessimus(最悪)。悪いほうを見る構え。optimistic と対で覚える。"
+  ],
+  [
+    "politeness",
+    "B1",
+    "名詞",
+    [
+      "礼儀正しさ"
+    ],
+    "/pəˈlaɪtnəs/",
+    "He said yes out of politeness rather than interest.",
+    "彼は関心からではなく礼儀からはいと言った。",
+    [
+      "out of politeness",
+      "common politeness"
+    ],
+    "polite の名詞。ラテン語 polire(磨く。polish)。角を磨いてなめらかにした振る舞い。"
+  ],
+  [
+    "punctual",
+    "B2",
+    "形容詞",
+    [
+      "時間を守る"
+    ],
+    "/ˈpʌŋktʃuəl/",
+    "She is always punctual for morning meetings.",
+    "彼女は朝の会議にいつも時間どおりに来る。",
+    [
+      "punctual for",
+      "scrupulously punctual"
+    ],
+    "ラテン語 punctum(点。point)。時刻という一点をきちんと押さえること。"
+  ],
+  [
+    "refund",
+    "B1",
+    "名詞・動詞",
+    [
+      "返金",
+      "払い戻す"
+    ],
+    "/rɪˈfʌnd/",
+    "The shop refunded the full price without argument.",
+    "その店は文句も言わずに全額を払い戻した。",
+    [
+      "a full refund",
+      "ask for a refund"
+    ],
+    "re-(戻して)+ fund(注ぐ。found, fuse)。受け取った金を注ぎ戻すこと。"
+  ],
+  [
+    "reluctance",
+    "B2",
+    "名詞",
+    [
+      "気の進まなさ",
+      "しぶしぶ"
+    ],
+    "/rɪˈlʌktəns/",
+    "He agreed to the change with obvious reluctance.",
+    "彼は明らかにしぶしぶその変更に同意した。",
+    [
+      "with reluctance",
+      "reluctance to"
+    ],
+    "reluctant の名詞。re-(逆に)+ luct(もがく)。心の中で逆らっている度合い。"
+  ],
+  [
+    "resemblance",
+    "B2",
+    "名詞",
+    [
+      "類似",
+      "似ていること"
+    ],
+    "/rɪˈzɛmbləns/",
+    "There is a striking resemblance between the two sisters.",
+    "その2人の姉妹には驚くほどの類似がある。",
+    [
+      "a strong resemblance",
+      "bear a resemblance to"
+    ],
+    "resemble の名詞。re-(強め)+ simil(似た)。見た目が重なること。bear a resemblance to の形が多い。"
+  ],
+  [
+    "resentment",
+    "B2",
+    "名詞",
+    [
+      "恨み",
+      "憤り"
+    ],
+    "/rɪˈzɛntmənt/",
+    "Years of unfair treatment built up deep resentment.",
+    "何年もの不公平な扱いが深い恨みを積み上げた。",
+    [
+      "feel resentment",
+      "deep resentment"
+    ],
+    "re-(繰り返し)+ sent(感じる。sense)。同じ嫌な思いを何度も感じ直すこと。"
+  ],
+  [
+    "reunion",
+    "B2",
+    "名詞",
+    [
+      "再会",
+      "同窓会"
+    ],
+    "/riˈunjən/",
+    "The school holds a reunion every five years.",
+    "その学校は5年ごとに同窓会を開いている。",
+    [
+      "a family reunion",
+      "a class reunion"
+    ],
+    "re-(再び)+ union(結合)。離れていた者がもう一度集まること。"
+  ],
+  [
+    "scenery",
+    "B1",
+    "名詞",
+    [
+      "風景",
+      "景色"
+    ],
+    "/ˈsinɚi/",
+    "The train passes through spectacular mountain scenery.",
+    "その列車は壮大な山の風景の中を通る。",
+    [
+      "beautiful scenery",
+      "enjoy the scenery"
+    ],
+    "scene(場面)+ -ry(集合)。目に入る景色全体を指し、数えられない名詞である点が要点。"
+  ],
+  [
+    "self-esteem",
+    "B2",
+    "名詞",
+    [
+      "自尊心"
+    ],
+    "/sɛlf əˈstim/",
+    "Praise from her coach improved her self-esteem.",
+    "コーチからの称賛が彼女の自尊心を高めた。",
+    [
+      "low self-esteem",
+      "boost self-esteem"
+    ],
+    "self(自分)+ esteem(評価する)。ラテン語 aestimare(値をつける)。自分に自分でつける値打ち。"
+  ],
+  [
+    "sincerity",
+    "B2",
+    "名詞",
+    [
+      "誠実さ",
+      "真心"
+    ],
+    "/sɪnˈsɛrəti/",
+    "Nobody doubted the sincerity of his apology.",
+    "誰も彼の謝罪の誠実さを疑わなかった。",
+    [
+      "question someone's sincerity",
+      "with sincerity"
+    ],
+    "ラテン語 sincerus(混じり気のない)。裏表がないことが核。演技ではない本心を指す。"
+  ],
+  [
+    "sociable",
+    "B2",
+    "形容詞",
+    [
+      "社交的な",
+      "人づきあいの良い"
+    ],
+    "/ˈsoʊʃəbəl/",
+    "He is more sociable than he appears at first.",
+    "彼は最初に見えるよりずっと社交的だ。",
+    [
+      "a sociable person",
+      "sociable by nature"
+    ],
+    "ラテン語 socius(仲間。social, associate)。人と一緒にいることを好む性質。"
+  ],
+  [
+    "stubborn",
+    "B2",
+    "形容詞",
+    [
+      "頑固な",
+      "しつこい"
+    ],
+    "/ˈstʌbɚn/",
+    "He is too stubborn to admit a simple mistake.",
+    "彼は頑固すぎて単純な誤りを認められない。",
+    [
+      "stubborn refusal",
+      "a stubborn stain"
+    ],
+    "中英語 stiborn(意志の強い)。てこでも動かないこと。落ちない汚れにも使う。"
+  ],
+  [
+    "superiority",
+    "B2",
+    "名詞",
+    [
+      "優位",
+      "優越"
+    ],
+    "/supɪriˈɔrɪti/",
+    "Their superiority in the air decided the battle.",
+    "彼らの空での優位がその戦いを決した。",
+    [
+      "air superiority",
+      "a sense of superiority"
+    ],
+    "superior の名詞。ラテン語 super(上)。上に立っている状態。優越感という意味でも使う。"
+  ],
+  [
+    "trustworthy",
+    "B2",
+    "形容詞",
+    [
+      "信頼できる"
+    ],
+    "/ˈtrʌstwɝði/",
+    "We need a trustworthy person to hold the keys.",
+    "鍵を預かる信頼できる人が必要だ。",
+    [
+      "a trustworthy source",
+      "entirely trustworthy"
+    ],
+    "trust + worthy(値する)。信用を預けるに値すること。人にも情報源にも使う。"
+  ],
+  [
+    "warmth",
+    "B2",
+    "名詞",
+    [
+      "温かさ",
+      "思いやり"
+    ],
+    "/wɔrmθ/",
+    "She welcomed the visitors with genuine warmth.",
+    "彼女は心からの温かさで来訪者を迎えた。",
+    [
+      "the warmth of",
+      "human warmth"
+    ],
+    "warm の名詞。温度としての暖かさと、人柄の温かみの両方を指す。"
+  ],
+  [
+    "workload",
+    "B2",
+    "名詞",
+    [
+      "仕事量",
+      "作業負荷"
+    ],
+    "/ˈwɝkloʊd/",
+    "Her workload doubled after two colleagues left.",
+    "2人の同僚が辞めた後、彼女の仕事量は倍になった。",
+    [
+      "a heavy workload",
+      "reduce the workload"
+    ],
+    "work + load(荷)。背負っている仕事の量。多い少ないを heavy や light で表す。"
+  ],
+  [
+    "dependable",
+    "B2",
+    "形容詞",
+    [
+      "頼りになる",
+      "信頼できる"
+    ],
+    "/dɪˈpɛndəbəl/",
+    "We need a dependable supplier for the winter months.",
+    "冬の間、頼りになる供給業者が必要だ。",
+    [
+      "a dependable friend",
+      "highly dependable"
+    ],
+    "depend(頼る)+ -able。de-(下に)+ pend(ぶら下がる。pendant)。ぶら下がっても大丈夫なだけの確かさがあること。"
+  ]
+]
+
+export const extendedVocabulary: VocabularyEntry[] = rows.map((row) => ({
+  id: row[0],
+  word: row[0],
+  level: row[1],
+  partOfSpeech: row[2],
+  meaningsJa: row[3],
+  pronunciation: row[4],
+  exampleSentence: row[5],
+  exampleTranslationJa: row[6],
+  ...(row[7] ? { collocations: row[7] } : {}),
+  mnemonic: row[8],
+}))

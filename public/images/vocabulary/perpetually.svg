@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="水車が止まることなく回り続け、水が絶えず流れ落ちる">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1l8 4-8 4z" fill="#2f4055"/></marker></defs>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 306h600v94H0z" class="ground"/>
+  <g transform="translate(280 220)">
+  <circle r="130" fill="none" stroke="#8b6437" stroke-width="14"/>
+  <g transform="rotate(0)"><path d="M-18-130h36v-34h-36z" fill="#c9a464" class="o"/><path d="M0 0v-130" stroke="#8b6437" stroke-width="8" fill="none"/></g><g transform="rotate(45)"><path d="M-18-130h36v-34h-36z" fill="#c9a464" class="o"/><path d="M0 0v-130" stroke="#8b6437" stroke-width="8" fill="none"/></g><g transform="rotate(90)"><path d="M-18-130h36v-34h-36z" fill="#c9a464" class="o"/><path d="M0 0v-130" stroke="#8b6437" stroke-width="8" fill="none"/></g><g transform="rotate(135)"><path d="M-18-130h36v-34h-36z" fill="#c9a464" class="o"/><path d="M0 0v-130" stroke="#8b6437" stroke-width="8" fill="none"/></g><g transform="rotate(180)"><path d="M-18-130h36v-34h-36z" fill="#c9a464" class="o"/><path d="M0 0v-130" stroke="#8b6437" stroke-width="8" fill="none"/></g><g transform="rotate(225)"><path d="M-18-130h36v-34h-36z" fill="#c9a464" class="o"/><path d="M0 0v-130" stroke="#8b6437" stroke-width="8" fill="none"/></g><g transform="rotate(270)"><path d="M-18-130h36v-34h-36z" fill="#c9a464" class="o"/><path d="M0 0v-130" stroke="#8b6437" stroke-width="8" fill="none"/></g><g transform="rotate(315)"><path d="M-18-130h36v-34h-36z" fill="#c9a464" class="o"/><path d="M0 0v-130" stroke="#8b6437" stroke-width="8" fill="none"/></g>
+  <circle r="18" fill="#8b6437" class="o"/></g>
+<path d="M40 90h180" fill="none" stroke="#4e86c6" stroke-width="18" stroke-linecap="round"/>
+<path d="M220 110c8.8 8.8 8.8 16.5 0 20.900000000000002c-8.8-4.4-8.8-12.100000000000001 0-20.900000000000002z" class="blue o"/><path d="M232 136c8.8 8.8 8.8 16.5 0 20.900000000000002c-8.8-4.4-8.8-12.100000000000001 0-20.900000000000002z" class="blue o"/><path d="M244 162c8.8 8.8 8.8 16.5 0 20.900000000000002c-8.8-4.4-8.8-12.100000000000001 0-20.900000000000002z" class="blue o"/>
+<path d="M280 360h280" fill="none" stroke="#4e86c6" stroke-width="18" stroke-linecap="round"/>
+<g transform="translate(500 140)"><path d="M-44 0a44 44 0 1 1 16 34" fill="none" stroke="#80909d" stroke-width="6" stroke-dasharray="10 9" marker-end="url(#ar)"/></g>
+</svg>

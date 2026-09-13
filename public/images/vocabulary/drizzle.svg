@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="細かい霧雨が静かに降り続いている">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 0h600v400H0z" fill="#cfd8e0"/>
+<path d="M0 340h600v60H0z" fill="#c9d6c0"/><path d="M0 340h600" stroke="#2f4055" stroke-width="2.5" fill="none"/>
+<g transform="translate(300 86) scale(1.5)"><path d="M-52 16q-5-25 19-31 8-31 39-20 17 2 22 20 28-3 30 22 1 22-24 24h-66q-17-1-20-15z" class="bluep o"/></g>
+<g fill="none" stroke="#4e86c6" stroke-width="2" stroke-linecap="round" opacity="0.9">
+<path d="M50 170v14"/><path d="M76 204v14"/><path d="M102 238v14"/><path d="M128 272v14"/><path d="M154 306v14"/><path d="M180 170v14"/><path d="M206 204v14"/><path d="M232 238v14"/><path d="M258 272v14"/><path d="M284 306v14"/><path d="M310 170v14"/><path d="M336 204v14"/><path d="M362 238v14"/><path d="M388 272v14"/><path d="M414 306v14"/><path d="M440 170v14"/><path d="M466 204v14"/><path d="M492 238v14"/><path d="M518 272v14"/><path d="M544 306v14"/><path d="M570 170v14"/><path d="M62 240v12"/><path d="M88 270v12"/><path d="M114 300v12"/><path d="M140 330v12"/><path d="M166 240v12"/><path d="M192 270v12"/><path d="M218 300v12"/><path d="M244 330v12"/><path d="M270 240v12"/><path d="M296 270v12"/><path d="M322 300v12"/><path d="M348 330v12"/><path d="M374 240v12"/><path d="M400 270v12"/><path d="M426 300v12"/><path d="M452 330v12"/><path d="M478 240v12"/><path d="M504 270v12"/><path d="M530 300v12"/><path d="M556 330v12"/>
+</g>
+<g transform="translate(300 340) scale(0.8 0.8)"><path d="M-12-8l-7 35M12-8l7 35" fill="none" stroke="#315f98" stroke-width="11" stroke-linecap="round"/><path d="M-25-78q25-13 50 0l-8 72h-34z" fill="#e86452" class="o"/><path d="M-22-70l-16 45M22-70l16 45" fill="none" stroke="#f2c29d" stroke-width="10" stroke-linecap="round"/><circle cx="0" cy="-108" r="24" fill="#f2c29d" stroke="#a86f55" stroke-width="2.5"/><path d="M-29-108q1-31 29-31t30 31v23l-11-9v-18q-20 9-40 0v20l-8 8z" fill="#34475a" stroke="#34475a" stroke-width="2"/><circle cx="-8" cy="-104" r="2.2" class="ink"/><circle cx="8" cy="-104" r="2.2" class="ink"/><path d="M-7-92h14" fill="none" stroke="#2f4055" stroke-width="2"/></g>
+<g>
+  <path d="M240 210q0-60 60-60t60 60q-30-20-60-20t-60 20z" class="teal o"/>
+  <path d="M300 210v80" stroke="#2f4055" stroke-width="5" stroke-linecap="round" fill="none"/>
+</g>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="好きな模型を並べて、夢中になっている人のイラスト。">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 306h600v94H0z" class="ground"/>
+  <g transform="translate(160 346) scale(1.15 1.15)"><path d="M-12-8l-7 35M12-8l7 35" fill="none" stroke="#315f98" stroke-width="11" stroke-linecap="round"/><path d="M-25-78q25-13 50 0l-8 72h-34z" fill="#e86452" class="o"/><path d="M-22-70l-14 44M22-70l44 5" fill="none" stroke="#f2c29d" stroke-width="10" stroke-linecap="round"/><circle cx="0" cy="-108" r="24" fill="#f2c29d" stroke="#a86f55" stroke-width="2.5"/><path d="M-26-111q3-28 27-28 22 0 27 27-15-13-28-3-12-9-26 4z" fill="#34475a" stroke="#34475a" stroke-width="2"/><circle cx="-8" cy="-104" r="2.2" class="ink"/><circle cx="8" cy="-104" r="2.2" class="ink"/><path d="M-8-94q8 8 16 0" fill="none" stroke="#2f4055" stroke-width="2"/></g>
+<g transform="translate(400 280)">
+  <path d="M-140-20h280v20h-280z" class="goldp o"/>
+  <g transform="translate(-80 -40) scale(0.4)"><g transform="translate(0 0) scale(1.0) rotate(-8)"><path d="M-30-14L-96-92h30l86 78zM-30 14l-66 78h30l86-78z" class="tealp o"/><path d="M-120-2q0-18 24-20h150l44-30h22l-16 30h30q22 0 22 22t-22 22h-30l16 30h-22l-44-30H-96q-24-2-24-24z" class="teal o"/><g fill="#fffdf6" stroke="#2f4055" stroke-width="2"><circle cx="30" cy="-2" r="7"/><circle cx="56" cy="-2" r="7"/><circle cx="82" cy="-2" r="7"/></g></g></g>
+  <g transform="translate(30 -40) scale(0.35)"><g transform="translate(0 0) scale(1.0) rotate(6)"><path d="M-30-14L-96-92h30l86 78zM-30 14l-66 78h30l86-78z" class="coralp o"/><path d="M-120-2q0-18 24-20h150l44-30h22l-16 30h30q22 0 22 22t-22 22h-30l16 30h-22l-44-30H-96q-24-2-24-24z" class="coral o"/><g fill="#fffdf6" stroke="#2f4055" stroke-width="2"><circle cx="30" cy="-2" r="7"/><circle cx="56" cy="-2" r="7"/><circle cx="82" cy="-2" r="7"/></g></g></g>
+</g>
+<g class="golds" style="stroke-width:4"><path d="M250 200l24-24M240 250h-26"/></g>
+<path d="M60 366h480" class="a"/>
+</svg>
