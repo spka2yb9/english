@@ -27,11 +27,6 @@ jobs:
         with:
           node-version: 22
           cache: npm
-      # Pages の Source が「GitHub Actions」になっていないと deploy-pages が 404 になる。
-      # enablement: true で未設定時にこのステップが有効化する(既に有効なら何もしない)。
-      - uses: actions/configure-pages@v5
-        with:
-          enablement: true
       - run: npm ci
       - run: npm test
       - run: npm run build
