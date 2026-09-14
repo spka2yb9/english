@@ -23,6 +23,8 @@ describe('Illustration', () => {
     }
   })
 
+  // 全セクションの図を順に描画する統合テスト。総描画量が多いため、CIの遅いランナーでも
+  // 既定の5秒を超えないよう余裕を持ったタイムアウトを指定する。
   it('全セクションの全段階を表示でき、図と説明を読み上げられる', () => {
     for (const [sceneId, animation] of Object.entries(LESSON_ANIMATIONS)) {
       const { container, unmount } = renderLesson(sceneId)
@@ -35,7 +37,7 @@ describe('Illustration', () => {
       }
       unmount()
     }
-  })
+  }, 30_000)
 
   it('既定では停止しており、再生を一時停止・再開し、最後で停止して再生し直せる', () => {
     vi.useFakeTimers()
