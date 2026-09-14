@@ -1,9 +1,6 @@
 // タイプ入力の採点。表記ゆれ(大小文字・句読点・短縮形・全角記号)を吸収し、
 // 内容が合っていれば正解として扱う。ディクテーション・和文英訳・語彙産出で共用する。
 
-/** TTSの開始キュー(speech.ts の LEADING_CUE_TEXT)。聞こえたまま入力されても無視する。 */
-const LEADING_CUE = /^\s*ready[\s.,]*/i
-
 const CONTRACTIONS: [RegExp, string][] = [
   [/\bcan't\b/g, 'cannot'],
   [/\bwon't\b/g, 'will not'],
@@ -27,7 +24,6 @@ const CONTRACTIONS: [RegExp, string][] = [
 /** 比較用の正規化。大小文字・句読点・短縮形・空白の違いを消す。 */
 export function normalizeAnswer(text: string): string {
   let s = text.toLowerCase().replace(/[’‘]/g, "'").replace(/[“”]/g, '"')
-  s = s.replace(LEADING_CUE, '')
   for (const [pattern, replacement] of CONTRACTIONS) s = s.replace(pattern, replacement)
   // 's は所有格(the boy's book)なので残し、それ以外の記号を落とす
   s = s.replace(/[.,!?;:"“”()[\]—–-]/g, ' ')

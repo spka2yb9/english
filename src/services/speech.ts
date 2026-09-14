@@ -5,11 +5,6 @@ export type SpeechOptions = {
   locale?: string
   rate?: number
   volume?: number
-  /**
-   * 同じ発話内に短い開始キューを置き、教材英文の先頭が欠けるのを防ぐ。
-   * モバイル幅ではキューを付けず、教材英文だけを読む。
-   */
-  leadingPause?: boolean
 }
 
 export interface SpeechService {
@@ -24,17 +19,6 @@ export const NORMAL_RATE = 1.0
 export const SLOW_RATE = 0.5
 // SpeechSynthesisUtterance の音量範囲は 0.0〜1.0。常に上限で再生する。
 export const DEFAULT_VOLUME = 1.0
-
-const LEADING_CUE_TEXT = 'Ready. '
-
-// 開始キューを省く画面幅。デスクトップのサイドバーが消える境界(App.css)に合わせる。
-const MOBILE_MEDIA_QUERY = '(max-width: 879px)'
-
-/** モバイル相当の画面幅か。判定できない環境はデスクトップ扱いにする。 */
-function isMobileViewport(): boolean {
-  if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') return false
-  return window.matchMedia(MOBILE_MEDIA_QUERY).matches
-}
 
 class WebSpeechService implements SpeechService {
   private current: { utterance: SpeechSynthesisUtterance; finish: () => void } | null = null
@@ -59,21 +43,11 @@ class WebSpeechService implements SpeechService {
 
   speak(text: string, options: SpeechOptions = {}): Promise<void> {
     if (!this.isSupported()) return Promise.resolve()
-    const {
-      locale = DEFAULT_LOCALE,
-      rate = NORMAL_RATE,
-      volume = DEFAULT_VOLUME,
-      leadingPause = true,
-    } = options
-    // ページ間で残ったキューや一時停止状態を毎回リセットする。
-    // 直後の冒頭が欠けても開始キュー側だけになるため、教材本文は保護される。
+    const { locale = DEFAULT_LOCALE, rate = NORMAL_RATE, volume = DEFAULT_VOLUME } = options
+    // ページ間で残った一時停止状態を毎回リセットする。
     this.stop()
-    // モバイル幅では開始キューを付けず、教材本文だけを読む。
-    const useLeadingCue = leadingPause && !isMobileViewport()
     return new Promise((resolve) => {
-      // 開始キューと教材本文を一つの発話にする。発話間で出力経路が
-      // 閉じる環境でも、欠ける可能性があるのは開始キュー側だけになる。
-      const utterance = new SpeechSynthesisUtterance(useLeadingCue ? `${LEADING_CUE_TEXT}${text}` : text)
+      const utterance = new SpeechSynthesisUtterance(text)
       utterance.lang = locale
       utterance.rate = rate
       utterance.volume = Math.min(1, Math.max(0, volume))

@@ -140,8 +140,8 @@ export function ReadingPassagePage() {
             <p lang="en">
               {paragraph}
               <span className="example-audio">
-                <AudioButton text={paragraph} leadingPause />
-                <AudioButton text={paragraph} slow leadingPause />
+                <AudioButton text={paragraph} />
+                <AudioButton text={paragraph} slow />
               </span>
             </p>
             {showJa && <p className="reading-ja">{passage.paragraphsJa[i]}</p>}

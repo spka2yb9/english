@@ -72,8 +72,8 @@ export function Quiz({ questions, onComplete, onAnswer }: Props) {
         {question.promptAudio && (
           <>
             {' '}
-            <AudioButton text={question.promptAudio} leadingPause />{' '}
-            <AudioButton text={question.promptAudio} slow leadingPause />
+            <AudioButton text={question.promptAudio} />{' '}
+            <AudioButton text={question.promptAudio} slow />
           </>
         )}
       </p>
@@ -119,8 +119,8 @@ export function Quiz({ questions, onComplete, onAnswer }: Props) {
           )}
           {question.audioEn && (
             <p className="quiz-audio" lang="en">
-              {question.audioEn} <AudioButton text={question.audioEn} leadingPause />{' '}
-              <AudioButton text={question.audioEn} slow leadingPause />
+              {question.audioEn} <AudioButton text={question.audioEn} />{' '}
+              <AudioButton text={question.audioEn} slow />
             </p>
           )}
           <button type="button" className="btn-primary quiz-next" onClick={next}>

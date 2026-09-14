@@ -11,10 +11,6 @@ describe('normalizeAnswer', () => {
     expect(normalizeAnswer("She can't swim")).toBe(normalizeAnswer('She cannot swim'))
   })
 
-  it('TTSの開始キュー Ready を取り除く', () => {
-    expect(normalizeAnswer('Ready. This room is not cold.')).toBe('this room is not cold')
-  })
-
   it('所有格の s は残す', () => {
     expect(normalizeAnswer("the boy's book")).toBe("the boy's book")
   })

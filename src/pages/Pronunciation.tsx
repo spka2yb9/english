@@ -58,7 +58,7 @@ export function Pronunciation() {
                       <td className="ipa-examples">
                         {entry.examples.map((word) => (
                           <span key={word} className="ipa-example" lang="en">
-                            {word} <AudioButton text={word} leadingPause />
+                            {word} <AudioButton text={word} />
                           </span>
                         ))}
                       </td>
@@ -82,14 +82,14 @@ export function Pronunciation() {
               <div className="pair-words">
                 <span className="pair-word" lang="en">
                   {pair.a.word} <span className="pair-ipa">{pair.a.ipa}</span>{' '}
-                  <AudioButton text={pair.a.word} leadingPause />
+                  <AudioButton text={pair.a.word} />
                 </span>
                 <span className="pair-vs" aria-hidden="true">
                   vs
                 </span>
                 <span className="pair-word" lang="en">
                   {pair.b.word} <span className="pair-ipa">{pair.b.ipa}</span>{' '}
-                  <AudioButton text={pair.b.word} leadingPause />
+                  <AudioButton text={pair.b.word} />
                 </span>
               </div>
               <p className="pair-tip">{pair.tip}</p>
@@ -128,7 +128,6 @@ export function Pronunciation() {
                 translation={ex.ja}
                 highlight={ex.highlight}
                 note={ex.note}
-                leadingPause
               />
             ))}
           </details>

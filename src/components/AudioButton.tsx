@@ -6,15 +6,13 @@ type Props = {
   text: string
   /** スロー再生ボタンとして表示 */
   slow?: boolean
-  /** 発話内の先頭に短い開始キューを追加(モバイル幅では付かない) */
-  leadingPause?: boolean
   className?: string
 }
 
 const supported = speechService.isSupported()
 
 /** 英文の音声再生ボタン。既存の再生は自動的に停止・置き換えられる。 */
-export function AudioButton({ text, slow = false, leadingPause = false, className }: Props) {
+export function AudioButton({ text, slow = false, className }: Props) {
   const [playing, setPlaying] = useState(false)
   const mounted = useRef(true)
   const active = useRef(false)
@@ -37,10 +35,7 @@ export function AudioButton({ text, slow = false, leadingPause = false, classNam
     setPlaying(true)
     active.current = true
     try {
-      await speechService.speak(text, {
-        rate: slow ? SLOW_RATE : NORMAL_RATE,
-        ...(leadingPause ? { leadingPause: true } : {}),
-      })
+      await speechService.speak(text, { rate: slow ? SLOW_RATE : NORMAL_RATE })
     } catch {
       // 音声エンジンが実行時に失敗しても教材の閲覧を妨げない。
     } finally {

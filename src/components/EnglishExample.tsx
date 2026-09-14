@@ -9,19 +9,17 @@ type Props = {
   note?: string
   /** スロー再生ボタンも表示 */
   slow?: boolean
-  /** 発話内の先頭に短い開始キューを追加(モバイル幅では付かない) */
-  leadingPause?: boolean
 }
 
 /** 学習用英文の標準表示: 英文 + 音声 + 和訳 + ハイライト */
-export function EnglishExample({ text, translation, highlight, note, slow = true, leadingPause = false }: Props) {
+export function EnglishExample({ text, translation, highlight, note, slow = true }: Props) {
   return (
     <div className="example">
       <p className="example-en" lang="en">
         {renderHighlighted(text, highlight)}
         <span className="example-audio">
-          <AudioButton text={text} leadingPause={leadingPause} />
-          {slow && <AudioButton text={text} slow leadingPause={leadingPause} />}
+          <AudioButton text={text} />
+          {slow && <AudioButton text={text} slow />}
         </span>
       </p>
       {translation && <p className="example-ja">{translation}</p>}

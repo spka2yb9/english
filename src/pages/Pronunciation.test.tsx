@@ -23,10 +23,10 @@ beforeEach(() => {
 })
 
 describe('Pronunciation', () => {
-  it('発音表の例語を先頭保護付きで再生する', () => {
+  it('発音表の例語の音声を再生する', () => {
     render(<Pronunciation />)
     fireEvent.click(screen.getByRole('button', { name: '音声を再生: see' }))
-    expect(speakMock).toHaveBeenCalledWith('see', { rate: 1.0, leadingPause: true })
+    expect(speakMock).toHaveBeenCalledWith('see', { rate: 1.0 })
   })
 })
 
@@ -43,7 +43,7 @@ describe('発音記号の穴埋め演習', () => {
     )!
 
     fireEvent.click(quiz.getByRole('button', { name: `音声を再生: ${word}` }))
-    expect(speakMock).toHaveBeenCalledWith(word, { rate: 1.0, leadingPause: true })
+    expect(speakMock).toHaveBeenCalledWith(word, { rate: 1.0 })
 
     fireEvent.click(quiz.getByRole('button', { name: quizModule.blankSymbol(item.ipa) }))
 

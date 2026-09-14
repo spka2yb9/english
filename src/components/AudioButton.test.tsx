@@ -37,12 +37,6 @@ describe('AudioButton', () => {
     expect(speakMock).toHaveBeenCalledWith('Hello.', { rate: 0.5 })
   })
 
-  it('先頭保護を speech service に渡す', () => {
-    render(<AudioButton text="I am a student." leadingPause />)
-    fireEvent.click(screen.getByRole('button'))
-    expect(speakMock).toHaveBeenCalledWith('I am a student.', { rate: 1.0, leadingPause: true })
-  })
-
   it('再生中にもう一度押すと停止する', () => {
     render(<AudioButton text="Hello." />)
     const button = screen.getByRole('button')

@@ -35,7 +35,6 @@ function Block({ block }: { block: LessonBlock }) {
               translation={ex.ja}
               highlight={ex.highlight}
               note={ex.note}
-              leadingPause
             />
           ))}
         </section>
@@ -132,7 +131,6 @@ function ContrastPanel({ side }: { side: ContrastSide }) {
           translation={ex.ja}
           highlight={ex.highlight}
           note={ex.note}
-          leadingPause
         />
       ))}
       {side.pointJa && <p className="contrast-point">{side.pointJa}</p>}

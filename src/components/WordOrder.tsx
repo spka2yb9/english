@@ -96,8 +96,8 @@ export function WordOrder({ lesson }: { lesson: GrammarLesson }) {
           <div className={`quiz-feedback ${correct ? 'ok' : 'ng'}`} role="status">
             <p className="quiz-verdict">{correct ? '正解!' : '不正解'}</p>
             <p className="practice-answer" lang="en">
-              {item.answer} <AudioButton text={item.answer} leadingPause />{' '}
-              <AudioButton text={item.answer} slow leadingPause />
+              {item.answer} <AudioButton text={item.answer} />{' '}
+              <AudioButton text={item.answer} slow />
             </p>
             <p className="practice-ja">{item.ja}</p>
             <button type="button" className="btn-primary quiz-next" onClick={next}>

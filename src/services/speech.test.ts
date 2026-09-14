@@ -19,23 +19,10 @@ const speakMock = vi.fn()
 const cancelMock = vi.fn()
 const resumeMock = vi.fn()
 
-/** matchMedia を画面幅だけ返すスタブに差し替える。 */
-function stubViewport(isMobile: boolean) {
-  Object.defineProperty(window, 'matchMedia', {
-    configurable: true,
-    value: vi.fn(() => ({
-      matches: isMobile,
-      addEventListener: vi.fn(),
-      removeEventListener: vi.fn(),
-    })),
-  })
-}
-
 beforeEach(() => {
   speakMock.mockReset()
   cancelMock.mockReset()
   resumeMock.mockReset()
-  stubViewport(false)
   vi.stubGlobal('SpeechSynthesisUtterance', FakeUtterance)
   Object.defineProperty(window, 'speechSynthesis', {
     configurable: true,
@@ -52,15 +39,14 @@ afterEach(() => {
   vi.unstubAllGlobals()
   // @ts-expect-error テスト用に注入したモックを除去
   delete window.speechSynthesis
-  Reflect.deleteProperty(window, 'matchMedia')
 })
 
 describe('speechService', () => {
-  it('開始キューと英文を一つの発話として TTS に渡す', async () => {
+  it('教材英文をそのまま一つの発話として TTS に渡す', async () => {
     const promise = speechService.speak('I have lived here for five years.')
     const utterance = speakMock.mock.calls[0][0] as FakeUtterance
     expect(speakMock).toHaveBeenCalledTimes(1)
-    expect(utterance.text).toBe('Ready. I have lived here for five years.')
+    expect(utterance.text).toBe('I have lived here for five years.')
     expect(utterance.lang).toBe(DEFAULT_LOCALE)
     expect(utterance.rate).toBe(NORMAL_RATE)
     expect(utterance.volume).toBe(DEFAULT_VOLUME)
@@ -76,30 +62,6 @@ describe('speechService', () => {
     expect(utterance.rate).toBe(SLOW_RATE)
     utterance.onend?.()
     await promise
-  })
-
-  it('先頭保護を指定すると開始キューと教材英文を同じ発話にする', async () => {
-    const promise = speechService.speak('I am a student.', { leadingPause: true })
-    const utterance = speakMock.mock.calls[0][0] as FakeUtterance
-    expect(speakMock).toHaveBeenCalledTimes(1)
-    expect(utterance.text).toBe('Ready. I am a student.')
-    utterance.onend?.()
-    await promise
-  })
-
-  it('モバイル幅では開始キューを付けず、教材英文だけを渡す', async () => {
-    stubViewport(true)
-    const explicit = speechService.speak('I am a student.', { leadingPause: true })
-    const first = speakMock.mock.calls[0][0] as FakeUtterance
-    expect(first.text).toBe('I am a student.')
-    first.onend?.()
-    await explicit
-
-    const byDefault = speechService.speak('I have lived here for five years.')
-    const second = speakMock.mock.calls[1][0] as FakeUtterance
-    expect(second.text).toBe('I have lived here for five years.')
-    second.onend?.()
-    await byDefault
   })
 
   it('音量は Web Speech API の有効範囲に収める', async () => {

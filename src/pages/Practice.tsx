@@ -129,8 +129,8 @@ function SentenceSession({ mode, onRestart }: { mode: PracticeMode; onRestart: (
           </p>
           <p className="practice-ja">{sentence.ja}</p>
           <p className="practice-audio">
-            <AudioButton text={sentence.en} leadingPause />
-            <AudioButton text={sentence.en} slow leadingPause />
+            <AudioButton text={sentence.en} />
+            <AudioButton text={sentence.en} slow />
           </p>
           <p className="practice-hint">音声を聞き、同じ速さで声に出して繰り返してください（2〜3回）。</p>
           <button type="button" className="btn-primary" onClick={shadowingDone}>
@@ -141,8 +141,8 @@ function SentenceSession({ mode, onRestart }: { mode: PracticeMode; onRestart: (
         <div className="practice-card">
           <p className="practice-hint">音声を聞いて、英文を書き取ってください。何度でも再生できます。</p>
           <p className="practice-audio">
-            <AudioButton text={sentence.en} leadingPause />
-            <AudioButton text={sentence.en} slow leadingPause />
+            <AudioButton text={sentence.en} />
+            <AudioButton text={sentence.en} slow />
           </p>
 
           <label className="practice-input-label">
@@ -166,7 +166,7 @@ function SentenceSession({ mode, onRestart }: { mode: PracticeMode; onRestart: (
             <div className={`quiz-feedback ${correct ? 'ok' : 'ng'}`} role="status">
               <p className="quiz-verdict">{correct ? '正解!' : '不正解'}</p>
               <p className="practice-answer" lang="en">
-                {sentence.en} <AudioButton text={sentence.en} leadingPause />
+                {sentence.en} <AudioButton text={sentence.en} />
               </p>
               <p className="practice-ja">{sentence.ja}</p>
               {!correct && (
