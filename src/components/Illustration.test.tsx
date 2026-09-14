@@ -12,7 +12,7 @@ function renderLesson(sceneId = 'u01-l1') {
 afterEach(() => { vi.useRealTimers(); vi.unstubAllGlobals() })
 
 describe('Illustration', () => {
-  it('全117セクションに内容に合った3段階のアニメーションがある', () => {
+  it('全118セクションに内容に合った3段階のアニメーションがある', () => {
     expect(Object.keys(LESSON_ANIMATIONS).sort()).toEqual(allLessons.map((lesson) => lesson.id).sort())
     for (const animation of Object.values(LESSON_ANIMATIONS)) {
       expect(animation.steps).toHaveLength(3)

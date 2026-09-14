@@ -25,6 +25,11 @@ export const grammarLessonSummaries: GrammarLessonSummary[] = [
     "minutes": 10
   },
   {
+    "id": "u01-l5",
+    "title": "5文型で文の骨組みを見る",
+    "minutes": 12
+  },
+  {
     "id": "u02-l1",
     "title": "現在進行形",
     "minutes": 10
@@ -595,11 +600,11 @@ export const vocabularyCount = 8000
 
 export const readingPassageCount = 108
 
-export const grammarQuestionCount = 672
+export const grammarQuestionCount = 676
 
 /** can-do 記述子ID → 対応するコンテンツ件数 */
 export const canDoCoverage: Record<string, number> = {
-  "G-A2-1": 21,
+  "G-A2-1": 22,
   "G-A2-2": 18,
   "G-B1-2": 31,
   "G-B1-1": 14,
@@ -614,7 +619,7 @@ export const canDoCoverage: Record<string, number> = {
   "R-B1-1": 31,
   "R-B2-1": 50,
   "R-B2-2": 46,
-  "L-A2-1": 1477,
+  "L-A2-1": 1491,
   "L-B1-1": 2180,
   "L-B2-1": 5531
 }

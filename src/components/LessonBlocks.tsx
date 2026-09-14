@@ -35,6 +35,8 @@ function Block({ block }: { block: LessonBlock }) {
               translation={ex.ja}
               highlight={ex.highlight}
               note={ex.note}
+              pattern={ex.pattern}
+              patternNote={ex.patternNote}
             />
           ))}
         </section>
@@ -131,6 +133,8 @@ function ContrastPanel({ side }: { side: ContrastSide }) {
           translation={ex.ja}
           highlight={ex.highlight}
           note={ex.note}
+          pattern={ex.pattern}
+          patternNote={ex.patternNote}
         />
       ))}
       {side.pointJa && <p className="contrast-point">{side.pointJa}</p>}

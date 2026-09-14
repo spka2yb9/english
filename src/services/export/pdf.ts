@@ -2,6 +2,7 @@
 
 import { jsPDF } from 'jspdf'
 import { illustrationAlt } from '../../content/illustrations'
+import { PATTERN_LABELS } from '../../content/grammar/patterns/types'
 import type { GrammarExample, GrammarLesson, GrammarUnit, LessonBlock } from '../../content/types'
 
 const FONT_NAME = 'IPAexGothic'
@@ -76,8 +77,10 @@ class PdfWriter {
 }
 
 function writeExample(w: PdfWriter, ex: GrammarExample) {
-  w.text(ex.en, 11, { indent: 4, gapAfter: 0.5 })
+  const label = ex.pattern ? `[${PATTERN_LABELS[ex.pattern]}] ` : ''
+  w.text(label + ex.en, 11, { indent: 4, gapAfter: 0.5 })
   if (ex.ja) w.text(ex.ja, 9.5, { indent: 4, gapAfter: 0.5, color: [90, 90, 90] })
+  if (ex.patternNote) w.text(ex.patternNote, 9, { indent: 4, gapAfter: 0.5, color: [40, 110, 120] })
   if (ex.note) w.text(`※ ${ex.note}`, 9, { indent: 4, gapAfter: 0.5, color: [120, 120, 120] })
   w.gap(2)
 }

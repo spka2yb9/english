@@ -4,6 +4,7 @@
 import { describe, expect, it } from 'vitest'
 import { allLessons, grammarUnits } from './grammar'
 import { EXAMPLES_PER_LESSON, lessonExpansions } from './grammar/expansions'
+import { PATTERN_FOCUS_TITLE, examplePatterns } from './grammar/patterns'
 import { lessonIllustrations } from './grammar/illustrations'
 import { ILLUSTRATIONS } from './illustrations'
 import { allVocabulary } from './vocabulary'
@@ -92,7 +93,7 @@ describe('文法コンテンツの検証', () => {
 
   it('全レッスンが15分以内・クイズとまとめを持つ', () => {
     expect(grammarUnits).toHaveLength(33)
-    expect(allLessons).toHaveLength(117)
+    expect(allLessons).toHaveLength(118)
     for (const lesson of allLessons) {
       expect(lesson.minutes, lesson.id).toBeGreaterThanOrEqual(3)
       expect(lesson.minutes, lesson.id).toBeLessThanOrEqual(15)
@@ -128,7 +129,7 @@ describe('文法コンテンツの検証', () => {
     }
   })
 
-  it('全110レッスンに補強解説と追加例文3つがある', () => {
+  it('全118レッスンに補強解説と追加例文3つがある', () => {
     const lessonIds = allLessons.map((lesson) => lesson.id).sort()
     const expansionIds = Object.keys(lessonExpansions).sort()
     expect(expansionIds).toEqual(lessonIds)
@@ -203,6 +204,47 @@ describe('文法コンテンツの検証', () => {
             expect(item.en.includes(item.highlight), `${lesson.id}: ${item.en} / ${item.highlight}`).toBe(true)
           }
         }
+      }
+    }
+  })
+})
+
+describe('5文型の検証', () => {
+  const PATTERNS = new Set(['SV', 'SVC', 'SVO', 'SVOO', 'SVOC'])
+
+  it('文型表の全エントリが有効な文型と注記を持つ', () => {
+    for (const [en, entry] of Object.entries(examplePatterns)) {
+      expect(PATTERNS.has(entry.pattern), `${en}: ${entry.pattern}`).toBe(true)
+      expect(entry.note.length, `${en} の注記`).toBeGreaterThan(0)
+    }
+  })
+
+  it('全例文と対比の英文に文型と注記が付く', () => {
+    for (const lesson of allLessons) {
+      for (const block of lesson.blocks) {
+        const items =
+          block.type === 'examples'
+            ? block.items
+            : block.type === 'contrast'
+              ? [...block.left.items, ...block.right.items]
+              : []
+        for (const item of items) {
+          expect(item.pattern, `${lesson.id}: ${item.en}`).toBeTruthy()
+          expect(PATTERNS.has(item.pattern!), `${lesson.id}: ${item.en} / ${item.pattern}`).toBe(true)
+          expect(item.patternNote?.length, `${lesson.id}: ${item.en} の文型注記`).toBeGreaterThan(0)
+        }
+      }
+    }
+  })
+
+  it('各レッスンに「文型の視点」ブロックが1つある', () => {
+    for (const lesson of allLessons) {
+      const focusBlocks = lesson.blocks.filter(
+        (block) => block.type === 'explanation' && block.title === PATTERN_FOCUS_TITLE,
+      )
+      expect(focusBlocks.length, `${lesson.id} の文型の視点`).toBe(1)
+      if (focusBlocks[0]?.type === 'explanation') {
+        expect(focusBlocks[0].body.length, `${lesson.id} の文型の視点の本文`).toBeGreaterThan(20)
       }
     }
   })

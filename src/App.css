@@ -743,6 +743,26 @@
   font-size: 0.82rem;
 }
 
+/* 例文ごとの5文型バッジと文型注記(合成時に patterns から付与) */
+.example-pattern {
+  flex: 0 0 auto;
+  padding: 0.08rem 0.45rem;
+  color: var(--teal);
+  background: var(--teal-soft);
+  border-radius: 999px;
+  font-family: var(--english);
+  font-size: 0.7rem;
+  font-weight: 750;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+}
+
+.example-pattern-note {
+  margin: 0.35rem 0 0;
+  color: var(--ink-650);
+  font-size: 0.85rem;
+}
+
 .hl {
   padding-inline: 0.08em;
   color: inherit;

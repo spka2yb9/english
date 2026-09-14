@@ -38,6 +38,11 @@ export const LESSON_ANIMATIONS: Record<string, LessonAnimation> = {
     'I|read|a book. :: 動詞のあとに「何を」を足します。',
     'I|read|a book|at home. :: 場所は、主語・動詞・目的語のあとに足せます。',
   ]),
+  'u01-l5': scene('動詞のあとを見て文型を決める', 'sentence', [
+    'Birds|fly|in the sky. :: 第1文型(SV)。目的語も補語もない骨組みです。',
+    'I|bought|a new bike. :: 第3文型(SVO)。動詞のあとに動作の対象を置きます。',
+    'They|named|the baby|Emma. :: 第5文型(SVOC)。the baby = Emma の関係です。',
+  ]),
   'u02-l1': scene('今を切り取る進行形', 'timeline', [
     'She|starts|cooking. :: 料理を始めました。',
     'She|is cooking|now. :: 今は動作の途中。be動詞 + -ing で表します。',

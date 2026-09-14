@@ -12,6 +12,7 @@
     "preview": "vite preview",
     "notes": "node --experimental-strip-types --no-warnings scripts/notes.mjs",
     "summary": "node --experimental-strip-types --no-warnings scripts/summary.mjs",
+    "check:patterns": "node --experimental-strip-types --no-warnings scripts/check-patterns.mjs",
     "validate:batch": "node --experimental-strip-types --no-warnings scripts/validate-batch.mjs",
     "vocab4500": "node --experimental-strip-types --no-warnings scripts/vocab4500.mjs",
     "collocations": "node --experimental-strip-types --no-warnings scripts/collocations.mjs",

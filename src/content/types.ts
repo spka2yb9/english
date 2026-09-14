@@ -3,6 +3,12 @@
 
 export type CefrLevel = 'A2' | 'A2+' | 'B1' | 'B1+' | 'B2'
 
+/**
+ * 5文型。文の骨組みを S / V / O / C の並びで表す。
+ * 疑問文・命令文・受動態などは、平叙文に戻してから判定する(patterns の規約を参照)。
+ */
+export type SentencePattern = 'SV' | 'SVC' | 'SVO' | 'SVOO' | 'SVOC'
+
 /** 英語例文。en は TTS にそのまま渡せるクリーンな英文にする(記号・注記を含めない)。 */
 export type GrammarExample = {
   en: string
@@ -11,6 +17,10 @@ export type GrammarExample = {
   highlight?: string
   /** 短い日本語注記 */
   note?: string
+  /** 5文型のどれか。合成時に patterns から付与する(教材ファイルには書かない)。 */
+  pattern?: SentencePattern
+  /** 文型についての短い日本語注記。合成時に patterns から付与する。 */
+  patternNote?: string
 }
 
 /** タイムライン図。軸は 0(過去)〜100(現在)。100超は未来。 */

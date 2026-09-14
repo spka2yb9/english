@@ -1,6 +1,7 @@
 // レッスンデータ → 人間可読な Markdown。UI と同一のコンテンツソースから生成する。
 
 import { illustrationAlt } from '../../content/illustrations'
+import { PATTERN_LABELS } from '../../content/grammar/patterns/types'
 import type { GrammarExample, GrammarLesson, GrammarUnit, LessonBlock, TimelineSpec } from '../../content/types'
 
 export function lessonToMarkdown(lesson: GrammarLesson): string {
@@ -34,8 +35,10 @@ export function lessonToMarkdown(lesson: GrammarLesson): string {
 }
 
 function exampleToMarkdown(ex: GrammarExample): string {
-  const lines = [`> **${ex.en}**`]
+  const label = ex.pattern ? `【${PATTERN_LABELS[ex.pattern]}】` : ''
+  const lines = [`> ${label}**${ex.en}**`]
   if (ex.ja) lines.push(`> ${ex.ja}`)
+  if (ex.patternNote) lines.push(`> ${ex.patternNote}`)
   if (ex.note) lines.push(`> ※ ${ex.note}`)
   return lines.join('\n')
 }

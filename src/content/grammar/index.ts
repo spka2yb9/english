@@ -37,6 +37,7 @@ import { u32 } from './b2/u32.ts'
 import { u33 } from './b2/u33.ts'
 import { applyLessonExpansions } from './expansions/index.ts'
 import { applyLessonIllustrations } from './illustrations.ts'
+import { applyLessonPatterns } from './patterns/index.ts'
 
 const baseGrammarUnits: GrammarUnit[] = [
   u01, u02, u03, u04, u05, u06,
@@ -46,7 +47,9 @@ const baseGrammarUnits: GrammarUnit[] = [
   u23, u24, u25, u26, u27, u28, u29, u30, u31, u32, u33,
 ]
 
-export const grammarUnits: GrammarUnit[] = applyLessonIllustrations(applyLessonExpansions(baseGrammarUnits))
+export const grammarUnits: GrammarUnit[] = applyLessonIllustrations(
+  applyLessonPatterns(applyLessonExpansions(baseGrammarUnits)),
+)
 
 export const LEVEL_ORDER: CefrLevel[] = ['A2', 'A2+', 'B1', 'B1+', 'B2']
 
