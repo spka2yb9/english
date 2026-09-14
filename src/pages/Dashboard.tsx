@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { LearningIcon } from '../components/LearningIcon'
 import { grammarLessonSummaries, readingPassageCount, vocabularyCount } from '../content/summary'
 import { getCompletedLessons, getTodayVocabCount, getVocabStats } from '../services/progress'
+import { SESSION_SIZE } from '../services/vocabSelection'
 
 /**
  * ホーム。次に学習すべきものを明確に示すシンプルなダッシュボード。
@@ -52,7 +53,7 @@ export function Dashboard() {
             <li>学習済み: {studiedWords} / {vocabularyCount}語</li>
             <li>苦手な単語: {difficultWords}語</li>
           </ul>
-          <p className="dash-next">10語のクイズでボキャブラリーを増やしましょう。</p>
+          <p className="dash-next">{SESSION_SIZE}語のクイズでボキャブラリーを増やしましょう。</p>
         </Link>
 
         <Link to="/practice" className="dash-card">

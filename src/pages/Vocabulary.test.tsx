@@ -25,7 +25,7 @@ beforeEach(() => localStorage.clear())
 describe('Vocabulary memory illustration', () => {
   it('回答後に該当単語の絵を覚えるヒント内へ表示する', () => {
     render(<Vocabulary />)
-    fireEvent.click(screen.getByRole('button', { name: '10語クイズを始める' }))
+    fireEvent.click(screen.getByRole('button', { name: '5語クイズを始める' }))
     expect(screen.queryByRole('img')).not.toBeInTheDocument()
     fireEvent.click(screen.getByRole('button', { name: 'わからない' }))
     const image = screen.getByRole('img', { name: /植物の根が/ })
@@ -41,7 +41,7 @@ describe('Vocabulary memory illustration', () => {
 
   it('画像を読めなくても文章のヒントと次へ進む操作を残す', () => {
     render(<Vocabulary />)
-    fireEvent.click(screen.getByRole('button', { name: '10語クイズを始める' }))
+    fireEvent.click(screen.getByRole('button', { name: '5語クイズを始める' }))
     fireEvent.click(screen.getByRole('button', { name: 'わかる' }))
     fireEvent.error(screen.getByRole('img', { name: /植物の根が/ }))
     expect(screen.queryByRole('img')).not.toBeInTheDocument()
@@ -54,7 +54,7 @@ describe('Vocabulary keyboard', () => {
   it('A/D で選択して F で決定、解説中の F で次の語に進む', async () => {
     const user = userEvent.setup()
     render(<Vocabulary />)
-    fireEvent.click(screen.getByRole('button', { name: '10語クイズを始める' }))
+    fireEvent.click(screen.getByRole('button', { name: '5語クイズを始める' }))
 
     await user.keyboard('d')
     expect(screen.getByRole('button', { name: 'わからない' })).toHaveFocus()
@@ -72,7 +72,7 @@ describe('Vocabulary keyboard', () => {
   it('選択していない F は何も決定しない', async () => {
     const user = userEvent.setup()
     render(<Vocabulary />)
-    fireEvent.click(screen.getByRole('button', { name: '10語クイズを始める' }))
+    fireEvent.click(screen.getByRole('button', { name: '5語クイズを始める' }))
 
     await user.keyboard('f')
     expect(screen.getByRole('button', { name: 'わかる' })).toBeInTheDocument()

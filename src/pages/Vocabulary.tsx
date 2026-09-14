@@ -80,7 +80,7 @@ export function Vocabulary() {
         </p>
         <MasteryChart stats={getVocabStats()} history={getVocabHistory()} />
         <button type="button" className="btn-primary btn-large" onClick={start}>
-          10語クイズを始める
+          {SESSION_SIZE}語クイズを始める
         </button>
       </div>
     )
@@ -98,7 +98,7 @@ export function Vocabulary() {
               : '1周目ですべての語がわかりました。素晴らしい!'}
           </p>
           <button type="button" className="btn-primary btn-large" onClick={start}>
-            もう一度10語に挑戦する
+            もう一度{SESSION_SIZE}語に挑戦する
           </button>
         </div>
       </div>

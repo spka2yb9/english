@@ -21,7 +21,7 @@ export type WordStat = {
 
 export type WordStats = Record<string, WordStat>
 
-export const SESSION_SIZE = 10
+export const SESSION_SIZE = 5
 
 const DAY = 86_400_000
 const FIRST_INTERVAL_DAYS = 1
