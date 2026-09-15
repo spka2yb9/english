@@ -2,10 +2,10 @@ import { useState } from 'react'
 import { AudioButton } from '../components/AudioButton'
 import { diffAnswer, isAnswerCorrect } from '../services/answerCheck'
 import {
-  PRACTICE_SIZE,
+  drawPracticeSentence,
+  getPracticeStats,
   poolFor,
   recordPracticeAnswer,
-  selectPracticeSentences,
   type PracticeMode,
 } from '../services/practice'
 import type { BankSentence } from '../services/sentenceBank'
@@ -18,24 +18,19 @@ const MODES: { id: PracticeMode; label: string; description: string }[] = [
 
 /**
  * 音声練習。学んだ英文を「聞く」「声に出す」「書き取る」で仕上げる。
+ * 出題は実施回数の少ない文から順に全体を1周ずつ回し、問題数も終わりも決めない。
  * モードが2つだけなので一覧画面は挟まず、切り替えは上部のトグルで行う。
  */
 export function Practice() {
   const [mode, setMode] = useState<PracticeMode>('shadowing')
-  // セッションを組み直すためのカウンタ。リロードせずに新しい8問を引く。
-  const [round, setRound] = useState(0)
   const current = MODES.find((m) => m.id === mode) as (typeof MODES)[number]
-
-  const choose = (next: PracticeMode) => {
-    setMode(next)
-    setRound(0)
-  }
 
   return (
     <div className="page">
       <h1>音声練習</h1>
       <p className="page-lead">
-        学んだ英文を、音でも使えるようにします。1セッション{PRACTICE_SIZE}問です。
+        学んだ英文を、音でも使えるようにします。実施回数の少ない文から順に、全体を1周ずつ回します。
+        終わりはないので、やめるときはモードを切り替えるか、ほかのページへ移動してください。
       </p>
 
       <div className="mode-switch" role="group" aria-label="練習の種類">
@@ -44,7 +39,7 @@ export function Practice() {
             key={m.id}
             type="button"
             className={`mode-switch-btn${m.id === mode ? ' selected' : ''}`}
-            onClick={() => choose(m.id)}
+            onClick={() => setMode(m.id)}
             aria-pressed={m.id === mode}
           >
             {m.label}
@@ -54,7 +49,7 @@ export function Practice() {
 
       <p className="mode-desc">
         {current.description}
-        <span className="mode-count">（{poolFor(mode).length.toLocaleString()}文から出題）</span>
+        <span className="mode-count">（{poolFor(mode).length.toLocaleString()}文を1周ずつ）</span>
       </p>
 
       {!speechService.isSupported() && (
@@ -63,55 +58,46 @@ export function Practice() {
         </p>
       )}
 
-      <SentenceSession key={`${mode}-${round}`} mode={mode} onRestart={() => setRound((r) => r + 1)} />
+      {/* モードを切り替えたら出題を引き直す(key で作り直す) */}
+      <SentenceSession key={mode} mode={mode} />
     </div>
   )
 }
 
-function SentenceSession({ mode, onRestart }: { mode: PracticeMode; onRestart: () => void }) {
-  const [sentences] = useState<BankSentence[]>(() => selectPracticeSentences(mode))
+function SentenceSession({ mode }: { mode: PracticeMode }) {
+  const [sentence, setSentence] = useState<BankSentence | undefined>(() =>
+    drawPracticeSentence(mode, getPracticeStats(mode)),
+  )
   const [index, setIndex] = useState(0)
   const [input, setInput] = useState('')
   const [checked, setChecked] = useState(false)
+  // この練習で採点した文の数と、そのうち正解した数。終わりがないので分母(問題数)は持たない。
+  const [graded, setGraded] = useState(0)
   const [correctCount, setCorrectCount] = useState(0)
-  const sentence = sentences[index] as BankSentence | undefined
 
-  if (sentences.length === 0) {
+  if (!sentence) {
     return <p>この練習に使える文がまだありません。</p>
   }
-
-  if (index >= sentences.length) {
-    return (
-      <div className="vocab-complete" role="status">
-        <p className="vocab-complete-title">
-          <span aria-hidden="true">✓ </span>
-          {mode === 'shadowing' ? `${sentences.length}文を音読しました` : `${sentences.length}問中 ${correctCount}問正解`}
-        </p>
-        <button type="button" className="btn-primary btn-large" onClick={onRestart}>
-          次の{PRACTICE_SIZE}問へ
-        </button>
-      </div>
-    )
-  }
-
-  if (!sentence) return null
 
   const correct = checked && isAnswerCorrect(input, sentence.en)
 
   const check = () => {
     const ok = isAnswerCorrect(input, sentence.en)
     setChecked(true)
+    setGraded((n) => n + 1)
     if (ok) setCorrectCount((c) => c + 1)
-    recordPracticeAnswer(mode, sentence.id, ok)
+    recordPracticeAnswer(mode, sentence.id)
   }
 
   const shadowingDone = () => {
-    recordPracticeAnswer(mode, sentence.id, true)
+    recordPracticeAnswer(mode, sentence.id)
     next()
   }
 
   const next = () => {
-    setIndex(index + 1)
+    // 記録した実施回数を読んで、まだその周で出していない文から引く
+    setSentence(drawPracticeSentence(mode, getPracticeStats(mode)))
+    setIndex((i) => i + 1)
     setInput('')
     setChecked(false)
   }
@@ -119,7 +105,8 @@ function SentenceSession({ mode, onRestart }: { mode: PracticeMode; onRestart: (
   return (
     <div className="practice">
       <p className="quiz-progress">
-        {index + 1} / {sentences.length}問
+        {index + 1}問目
+        {mode === 'dictation' && graded > 0 && `（正解 ${correctCount} / ${graded}）`}
       </p>
 
       {mode === 'shadowing' ? (
@@ -134,7 +121,7 @@ function SentenceSession({ mode, onRestart }: { mode: PracticeMode; onRestart: (
           </p>
           <p className="practice-hint">音声を聞き、同じ速さで声に出して繰り返してください（2〜3回）。</p>
           <button type="button" className="btn-primary" onClick={shadowingDone}>
-            次へ
+            次の文へ
           </button>
         </div>
       ) : (
@@ -182,7 +169,7 @@ function SentenceSession({ mode, onRestart }: { mode: PracticeMode; onRestart: (
                 </>
               )}
               <button type="button" className="btn-primary quiz-next" onClick={next}>
-                {index + 1 >= sentences.length ? '結果を見る' : '次の問題へ'}
+                次の問題へ
               </button>
             </div>
           )}

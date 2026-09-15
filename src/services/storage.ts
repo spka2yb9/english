@@ -42,7 +42,7 @@ export const KEYS = {
   vocabStats: 'eng.vocab.stats', // Record<wordId, WordStat>
   vocabDaily: 'eng.vocab.daily', // VocabDay[] 1日1行の学習ログ(旧形式は { date, count })
   grammarItemStats: 'eng.grammar.items', // Record<questionId, WordStat> 文法問題のSRS
-  practiceStats: 'eng.practice.stats', // Record<sentenceId, WordStat> 音声練習の文のSRS
+  practiceStats: 'eng.practice.stats', // Record<sentenceId, number> 音声練習の文の実施回数(周回の位置を兼ねる)
   readingDone: 'eng.reading.done', // string[] 読了した本文ID
   readingOpen: 'eng.reading.open', // string[] 多読一覧で開いているレベル
 } as const

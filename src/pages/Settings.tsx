@@ -37,7 +37,7 @@ function savedGroups() {
       label: '音声練習',
       prefixes: [KEYS.practiceStats],
       count: sentences,
-      detail: `正誤を記録した ${sentences}文`,
+      detail: `実施した ${sentences}文`,
     },
     {
       id: 'reading',

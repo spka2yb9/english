@@ -60,7 +60,7 @@ describe('Settings', () => {
   it('選んだエリアだけを消し、ほかのエリアと同期の設定は残す', () => {
     saveJson(KEYS.grammarProgress, ['u01-l1'])
     saveJson(KEYS.grammarItemStats, { 'u01-l1-q1': { seen: 1 } })
-    saveJson(`${KEYS.practiceStats}.dictation`, { s1: { seen: 1 } }) // 動的キーも消える
+    saveJson(`${KEYS.practiceStats}.dictation`, { s1: 1 }) // 動的キーも消える
     saveJson(KEYS.vocabStats, { apple: { seen: 1 } })
     saveJson(KEYS.readingDone, ['r01'])
     localStorage.setItem('eng.sync.token', 'ghp_dummy')
