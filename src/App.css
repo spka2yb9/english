@@ -40,12 +40,19 @@
   gap: 0.9rem;
   min-height: 126px;
   padding: 1.65rem 1.45rem;
+  color: #eef6f8;
   border-bottom: 1px solid rgb(255 255 255 / 11%);
   font-family: var(--english);
   font-size: 1.14rem;
   font-weight: 750;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: background 150ms ease;
+}
+
+.sidebar-brand:hover {
+  background: rgb(255 255 255 / 6%);
 }
 
 .sidebar-brand small {
@@ -79,7 +86,8 @@
   margin: 0;
 }
 
-.sidebar a {
+/* ナビゲーションのリンク。ブランド(ホームへのリンク)には適用しない。 */
+.sidebar ul a {
   display: flex;
   align-items: center;
   gap: 0.85rem;
@@ -92,12 +100,12 @@
   transition: color 150ms ease, background 150ms ease;
 }
 
-.sidebar a:hover {
+.sidebar ul a:hover {
   color: #fff;
   background: rgb(255 255 255 / 8%);
 }
 
-.sidebar a.active {
+.sidebar ul a.active {
   color: #fff;
   background: #23657f;
   box-shadow: inset 3px 0 #82d4cc;
@@ -2836,10 +2844,12 @@
   }
 
   .topbar-title {
+    color: inherit;
     font-family: var(--english);
     font-size: 0.94rem;
     font-weight: 730;
     letter-spacing: 0.025em;
+    text-decoration: none;
   }
 
   .sidebar {

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { NavLink, Outlet, useLocation } from 'react-router-dom'
+import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
 import { LearningIcon } from './LearningIcon'
 
 const NAV_ITEMS = [
@@ -51,13 +51,15 @@ export function Layout() {
         >
           <span aria-hidden="true">☰</span>
         </button>
-        <span className="topbar-title">English Reach B2</span>
+        <Link className="topbar-title" to="/" onClick={() => setDrawerOpen(false)}>
+          English Reach B2
+        </Link>
       </header>
 
       {drawerOpen && <div className="drawer-backdrop" onClick={() => setDrawerOpen(false)} aria-hidden="true" />}
 
       <nav className={`sidebar${drawerOpen ? ' open' : ''}`} aria-label="メインナビゲーション">
-        <div className="sidebar-brand">
+        <Link className="sidebar-brand" to="/" onClick={() => setDrawerOpen(false)}>
           <span className="sidebar-logo" aria-hidden="true">
             <LearningIcon kind="grammar" size={25} />
           </span>
@@ -66,7 +68,7 @@ export function Layout() {
             <br />
             <small>Reach B2</small>
           </span>
-        </div>
+        </Link>
         <ul>
           {NAV_ITEMS.map((item) => (
             <li key={item.to}>

@@ -54,4 +54,31 @@ describe('Layout', () => {
     expect(screen.getByText('発音記号コンテンツ')).toBeInTheDocument()
     expect(scrollTo).toHaveBeenCalledWith({ top: 0, left: 0, behavior: 'instant' })
   })
+
+  it('上部のブランドをクリックするとホームへ戻る', () => {
+    renderLayout()
+    fireEvent.click(screen.getByRole('link', { name: '発音記号' }))
+    expect(screen.getByText('発音記号コンテンツ')).toBeInTheDocument()
+
+    const brandLinks = screen.getAllByRole('link', { name: /English\s*Reach B2/ })
+    expect(brandLinks.map((link) => link.className)).toEqual(['topbar-title', 'sidebar-brand'])
+
+    fireEvent.click(brandLinks[0])
+    expect(screen.getByText('学習コンテンツ')).toBeInTheDocument()
+
+    fireEvent.click(screen.getByRole('link', { name: '発音記号' }))
+    fireEvent.click(screen.getAllByRole('link', { name: /English\s*Reach B2/ })[1])
+    expect(screen.getByText('学習コンテンツ')).toBeInTheDocument()
+  })
+
+  it('ドロワー内のブランドをクリックするとホームへ戻りドロワーが閉じる', () => {
+    renderLayout()
+    fireEvent.click(screen.getByRole('button', { name: 'メニューを開く' }))
+    expect(screen.getByRole('navigation', { name: 'メインナビゲーション' })).toHaveClass('open')
+
+    fireEvent.click(screen.getAllByRole('link', { name: /English\s*Reach B2/ })[1])
+
+    expect(screen.getByText('学習コンテンツ')).toBeInTheDocument()
+    expect(screen.getByRole('navigation', { name: 'メインナビゲーション' })).not.toHaveClass('open')
+  })
 })
