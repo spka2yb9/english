@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { grammarRoadmap } from '../content/grammar/roadmap'
-import { LEVEL_ORDER, allLessons, grammarUnits, unitsByLevel } from '../content/grammar'
+import { LEVEL_ORDER, allLessons, unitsByLevel } from '../content/grammar'
 import { getCompletedLessons } from '../services/progress'
 import { downloadAllMarkdown, downloadAllPdf } from '../services/export'
 
@@ -34,11 +34,6 @@ export function GrammarIndex() {
   return (
     <div className="page">
       <h1>英文法</h1>
-      <p className="page-lead">
-        英文法は B2まで {grammarUnits.length} ユニット・{allLessons.length} セクション。
-        文法事項を個別に覚えるのではなく、<strong>英文がどう組み上がっているか</strong>を追いながら進めるのがおすすめです。
-        迷ったら、先に「英文の作られ方」で学習の順番を確かめてください。
-      </p>
       <p className="grammar-progress-line">
         英文法 {completedCount} / {allLessons.length} セクション完了
       </p>
