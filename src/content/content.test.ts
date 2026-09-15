@@ -6,6 +6,25 @@ import { allLessons, grammarUnits } from './grammar'
 import { EXAMPLES_PER_LESSON, lessonExpansions } from './grammar/expansions'
 import { PATTERN_FOCUS_TITLE, examplePatterns } from './grammar/patterns'
 import { lessonIllustrations } from './grammar/illustrations'
+import { grammarRoadmap } from './grammar/roadmap'
+import {
+  lessonStructures,
+  patternAnimations,
+  patternBlocks,
+  patternExamples,
+  patternQuiz,
+  patternShowcases,
+  roleBlocks,
+  roleExampleSentence,
+  roleGuides,
+  skeletonAnimation,
+  wordOrderAnimation,
+  wordOrderBlocks,
+  wordOrderExamples,
+  wordOrderQuiz,
+} from './grammar/structures'
+import { PATTERN_LABELS, PATTERN_ORDER } from './grammar/patterns/types'
+import { ROLE_LABELS, ROLE_MEANINGS, ROLE_ORDER } from './grammar/structures/roles'
 import { ILLUSTRATIONS } from './illustrations'
 import { allVocabulary } from './vocabulary'
 import { ipaEntries, minimalPairs, pronunciationTopics } from './pronunciation/data'
@@ -22,6 +41,77 @@ import {
   unknownWordRatio,
 } from './validation'
 import { canDoCoverage, grammarLessonSummaries, readingPassageCount, vocabularyCount } from './summary'
+import type { BreakdownPart, GrammarExample, LessonBlock, QuizQuestion, SentencePattern } from './types'
+
+const PATTERN_SET = new Set<SentencePattern>(PATTERN_ORDER)
+const ROLE_SET = new Set(ROLE_ORDER)
+
+/** 構造図の区画が英文を過不足なく分けているか(区画を連結すると元の英文に戻るか)。 */
+function checkBreakdownParts(parts: BreakdownPart[], sentence: string, where: string): void {
+  expect(parts.length, `${where}: 区画の数`).toBeGreaterThan(1)
+  expect(parts.map((part) => part.text).join(' '), `${where}: 区画の連結`).toBe(sentence)
+  for (const part of parts) {
+    expect(ROLE_SET.has(part.role), `${where}: ${part.text} / ${part.role}`).toBe(true)
+    expect(part.text.trim().length, `${where}: 空の区画`).toBeGreaterThan(0)
+  }
+}
+
+/** breakdown / expansion のブロックを検査する。使えるブロック種別をここで限定する。 */
+function checkStructureBlock(block: LessonBlock, where: string, patterns: SentencePattern[]): void {
+  switch (block.type) {
+    case 'breakdown':
+      expect(checkAudioText(block.sentence, `${where}:${block.title ?? ''}`), block.sentence).toEqual([])
+      checkBreakdownParts(block.parts, block.sentence, `${where}:${block.sentence}`)
+      if (block.pattern) patterns.push(block.pattern)
+      if (block.skeleton) {
+        expect(checkAudioText(block.skeleton, `${where}:骨格`), block.skeleton).toEqual([])
+      }
+      if (block.skeletonPattern) patterns.push(block.skeletonPattern)
+      // 骨格は修飾語(M)を外した形なので、骨格があるなら文型も付ける。
+      if (block.skeletonPattern && !block.pattern) {
+        expect(block.skeleton, `${where}: 骨格のある文型`).toBeTruthy()
+      }
+      break
+    case 'expansion':
+      expect(block.steps.length, `${where}: 段階の数`).toBeGreaterThan(1)
+      for (const step of block.steps) {
+        expect(checkAudioText(step.en, `${where}:${step.en}`), step.en).toEqual([])
+        expect(step.ja?.length, `${where}: ${step.en} の和訳`).toBeGreaterThan(0)
+        // focus は強調表示に使うため、対象の英文に実在する部分文字列でなければならない。
+        if (step.focus) {
+          expect(step.en.includes(step.focus), `${where}: ${step.en} / ${step.focus}`).toBe(true)
+        }
+      }
+      break
+    default:
+      throw new Error(`${where}: 構造データに使えないブロック種別です(${block.type})`)
+  }
+  for (const pattern of patterns) expect(PATTERN_SET.has(pattern), `${where}: ${pattern}`).toBe(true)
+}
+
+/** 例文1文の検査(文型バッジ・注記・ハイライト)。 */
+function checkExample(example: GrammarExample, where: string): void {
+  expect(example.ja?.length, `${where} の和訳`).toBeGreaterThan(0)
+  expect(example.pattern, `${where} の文型`).toBeTruthy()
+  expect(PATTERN_SET.has(example.pattern!), `${where}: ${example.pattern}`).toBe(true)
+  expect(example.patternNote?.length, `${where} の文型注記`).toBeGreaterThan(0)
+  if (example.highlight) {
+    expect(example.en.includes(example.highlight), `${where}: ${example.highlight}`).toBe(true)
+  }
+}
+
+/** 選択問題の検査(構造検査 + 音声 + 記録先のID衝突なし)。 */
+function checkQuiz(questions: readonly QuizQuestion[], where: string): void {
+  const lessonQuizIds = new Set(allLessons.flatMap((lesson) => lesson.quiz.map((q) => q.id)))
+  const ids: string[] = []
+  for (const question of questions) {
+    ids.push(question.id)
+    expect(checkQuestion(question, where), `${where}: ${question.id}`).toEqual([])
+    expect(question.audioEn, question.id).toBeTruthy()
+    expect(lessonQuizIds.has(question.id), `${question.id} がレッスンのクイズIDと衝突`).toBe(false)
+  }
+  expect(new Set(ids).size, `${where}: 問題IDの重複`).toBe(ids.length)
+}
 
 describe('ダッシュボード用サマリーの検証', () => {
   // summary.ts はホームが教材本体を読み込まないための生成ファイル。
@@ -93,7 +183,7 @@ describe('文法コンテンツの検証', () => {
 
   it('全レッスンが15分以内・クイズとまとめを持つ', () => {
     expect(grammarUnits).toHaveLength(33)
-    expect(allLessons).toHaveLength(118)
+    expect(allLessons).toHaveLength(116)
     for (const lesson of allLessons) {
       expect(lesson.minutes, lesson.id).toBeGreaterThanOrEqual(3)
       expect(lesson.minutes, lesson.id).toBeLessThanOrEqual(15)
@@ -247,6 +337,195 @@ describe('5文型の検証', () => {
         expect(focusBlocks[0].body.length, `${lesson.id} の文型の視点の本文`).toBeGreaterThan(20)
       }
     }
+  })
+})
+
+describe('英文の構造データの検証', () => {
+  it('構造データの参照先レッスンが実在し、差し込み後も本文が残っている', () => {
+    const lessonIds = new Set(allLessons.map((lesson) => lesson.id))
+    for (const id of Object.keys(lessonStructures)) {
+      expect(lessonIds.has(id), `構造データの参照先 ${id}`).toBe(true)
+    }
+
+    for (const lesson of allLessons) {
+      const structure = lessonStructures[lesson.id]
+      if (!structure) continue
+      // 差し込み後も「文型の視点」は1つだけ・元の例文10文もそのまま残る。
+      const focus = lesson.blocks.filter((block) => block.type === 'explanation' && block.title === PATTERN_FOCUS_TITLE)
+      expect(focus.length, `${lesson.id}: 差し込み後の文型の視点`).toBe(1)
+      const examples = lesson.blocks.filter((block) => block.type === 'examples')
+      expect(examples[0]?.type === 'examples' ? examples[0].items.length : 0, `${lesson.id}: 例文数`).toBe(
+        EXAMPLES_PER_LESSON,
+      )
+      for (const block of structure.blocks) {
+        checkStructureBlock(block, lesson.id, [])
+      }
+    }
+  })
+
+  it('構造データの追加問題が構造検査(選択肢・正解位置・誤答注記・音声)を通る', () => {
+    const ids: string[] = []
+    for (const [lessonId, structure] of Object.entries(lessonStructures)) {
+      for (const question of structure.quiz ?? []) {
+        ids.push(question.id)
+        const issues = checkQuestion(question, lessonId)
+        expect(issues, `${lessonId}: ${question.id}`).toEqual([])
+        expect(question.audioEn, question.id).toBeTruthy()
+      }
+    }
+    expect(ids.length, '構造チェック問題の総数').toBeGreaterThan(0)
+    // 既存の理解度チェックと同じ記録先(選択問題の正誤)に乗るため、IDは全体で一意にする。
+    expect(new Set(ids).size, '構造チェック問題IDの重複').toBe(ids.length)
+    const lessonQuizIds = new Set(allLessons.flatMap((lesson) => lesson.quiz.map((q) => q.id)))
+    for (const id of ids) expect(lessonQuizIds.has(id), `${id} が既存クイズと衝突`).toBe(false)
+  })
+
+  it('学習導線の各ステップが既存セクションを指し、番号が1から連番になっている', () => {
+    const lessonIds = new Set(allLessons.map((lesson) => lesson.id))
+    expect(grammarRoadmap.length).toBeGreaterThanOrEqual(7)
+    grammarRoadmap.forEach((step, index) => {
+      expect(step.number, `${step.id} の番号`).toBe(index + 1)
+      expect(step.title.length, step.id).toBeGreaterThan(0)
+      expect(step.lead.length, `${step.id} の導入文`).toBeGreaterThan(20)
+      expect(step.points.length, `${step.id} の到達点`).toBeGreaterThanOrEqual(2)
+      expect(step.lessonIds.length, `${step.id} のリンク`).toBeGreaterThan(0)
+      for (const id of step.lessonIds) expect(lessonIds.has(id), `${step.id} → ${id}`).toBe(true)
+      for (const block of step.blocks ?? []) checkStructureBlock(block, step.id, [])
+    })
+  })
+
+  it('構造図で使う役割の凡例がすべて定義されている', () => {
+    for (const role of ROLE_ORDER) {
+      expect(ROLE_MEANINGS[role]?.length, role).toBeGreaterThan(0)
+    }
+    // S / V / O / C が骨格、M が修飾語。凡例の順序を固定する。
+    expect(ROLE_ORDER).toEqual(['S', 'V', 'O', 'C', 'M'])
+  })
+
+  it('全レッスンの構造図が表示できる形になっている', () => {
+    // UIがブロック種別ごとに描画するため、未知の種別が混ざると何も出ないまま終わる。
+    const renderable = new Set(['breakdown', 'expansion'])
+    for (const lesson of allLessons) {
+      for (const block of lesson.blocks) {
+        if (block.type === 'breakdown' || block.type === 'expansion') {
+          expect(renderable.has(block.type), `${lesson.id}: ${block.type}`).toBe(true)
+          checkStructureBlock(block, lesson.id, [])
+        }
+      }
+    }
+  })
+
+  it('構造図の文型ラベルが5文型の表記でそろう', () => {
+    // バッジは PATTERN_LABELS の短い名称を出すため、未定義の文型があると読み上げも崩れる。
+    for (const lesson of allLessons) {
+      for (const block of lesson.blocks) {
+        if (block.type !== 'breakdown') continue
+        for (const pattern of [block.pattern, block.skeletonPattern]) {
+          if (pattern) expect(PATTERN_LABELS[pattern], `${lesson.id}: ${pattern}`).toBeTruthy()
+        }
+      }
+    }
+  })
+})
+
+describe('英文の作られ方ページの検証', () => {
+  // 旧 u01-l4(英語の語順 SVO)と旧 u01-l5(5文型)を統合したページの内容。
+  // レッスンではないため lesson の合成を通らず、文型バッジはデータ側で付けている。
+  const GUIDE_BLOCK_TYPES = new Set(['explanation', 'examples', 'structure', 'contrast', 'breakdown', 'expansion'])
+
+  function checkGuideBlock(block: LessonBlock, where: string): void {
+    expect(GUIDE_BLOCK_TYPES.has(block.type), `${where}: 未知のブロック種別 ${block.type}`).toBe(true)
+    switch (block.type) {
+      case 'breakdown':
+      case 'expansion':
+        checkStructureBlock(block, where, [])
+        break
+      case 'explanation':
+        expect(block.body.length, `${where} の本文`).toBeGreaterThan(20)
+        break
+      case 'examples':
+        for (const item of block.items) checkExample(item, `${where}: ${item.en}`)
+        break
+      case 'contrast':
+        for (const item of [...block.left.items, ...block.right.items]) checkExample(item, `${where}: ${item.en}`)
+        break
+      default:
+        break
+    }
+  }
+
+  it('統合した2セクションがレッスンから削除されている', () => {
+    // 内容はページへ移したので、カリキュラムには残さない。
+    const ids = new Set(allLessons.map((lesson) => lesson.id))
+    expect(ids.has('u01-l4')).toBe(false)
+    expect(ids.has('u01-l5')).toBe(false)
+    expect(ids.has('u01-l3')).toBe(true)
+  })
+
+  it('S / V / O / C / M の意味をページの先頭で説明している', () => {
+    expect(new Set(roleGuides.map((guide) => guide.role))).toEqual(new Set(ROLE_ORDER))
+    expect(roleGuides.length).toBe(5)
+    for (const guide of roleGuides) {
+      expect(ROLE_LABELS[guide.role]?.length, guide.role).toBeGreaterThan(0)
+      expect(ROLE_MEANINGS[guide.role]?.length, guide.role).toBeGreaterThan(0)
+      expect(guide.note.length, `${guide.role} の説明`).toBeGreaterThan(10)
+      // 例は、その役割を実際に担っている語句を英文から抜き出したもの。
+      // O は2つあるので「me / a book」のように並べて示す。
+      for (const part of guide.example.split(' / ')) {
+        expect(guide.sentence.includes(part), `${guide.role}: ${part}`).toBe(true)
+      }
+    }
+    expect(roleExampleSentence).toContain('gave')
+  })
+
+  it('ページの本文ブロックが構造検査を通る', () => {
+    for (const block of [roleBlocks, wordOrderBlocks, patternBlocks]) {
+      for (const item of block) checkGuideBlock(item, item.type)
+    }
+  })
+
+  it('語順と5文型の例文が、文型バッジと注記を持って並ぶ', () => {
+    expect(wordOrderExamples.length).toBeGreaterThanOrEqual(10)
+    expect(patternExamples.length).toBeGreaterThanOrEqual(10)
+    for (const example of [...wordOrderExamples, ...patternExamples]) checkExample(example, example.en)
+    // 5文型の例文は SV / SVC / SVO / SVOO / SVOC を網羅する。
+    const covered = new Set(patternExamples.map((example) => example.pattern))
+    expect(covered).toEqual(new Set(PATTERN_ORDER))
+  })
+
+  it('5文型それぞれに、代表例と図解用の2Dアニメーションがある', () => {
+    expect(patternShowcases.map((showcase) => showcase.pattern)).toEqual(PATTERN_ORDER)
+    for (const showcase of patternShowcases) {
+      expect(showcase.skeleton.length, showcase.pattern).toBeGreaterThan(0)
+      expect(showcase.example.ja.length, showcase.pattern).toBeGreaterThan(0)
+      expect(showcase.example.note.length, `${showcase.pattern} の説明`).toBeGreaterThan(10)
+    }
+    // アニメーションは全5文型にあり、既存のレッスン挿絵と同じ3段階の形式で作る。
+    expect(Object.keys(patternAnimations).sort()).toEqual([...PATTERN_ORDER].sort())
+    for (const [pattern, animation] of Object.entries(patternAnimations)) {
+      expect(animation.title.length, pattern).toBeGreaterThan(0)
+      expect(animation.mode, pattern).toBe('sentence')
+      expect(animation.steps, pattern).toHaveLength(3)
+      for (const step of animation.steps) {
+        expect(step.sentence.includes('|'), `${pattern}: ${step.sentence}`).toBe(true)
+        expect(step.note.length, `${pattern} の注記`).toBeGreaterThan(5)
+      }
+    }
+    for (const animation of [wordOrderAnimation, skeletonAnimation]) {
+      expect(animation.steps).toHaveLength(3)
+      for (const step of animation.steps) {
+        expect(step.sentence.includes('|'), step.sentence).toBe(true)
+        expect(step.note.length).toBeGreaterThan(5)
+      }
+    }
+  })
+
+  it('統合した理解度チェックが構造検査を通る', () => {
+    // 旧セクションの問題(IDを roadmap-* に付け替え)を削らずに引き継ぐ。
+    expect(wordOrderQuiz.length).toBeGreaterThanOrEqual(8)
+    expect(patternQuiz.length).toBeGreaterThanOrEqual(8)
+    checkQuiz(wordOrderQuiz, 'roadmap-page')
+    checkQuiz(patternQuiz, 'roadmap-page')
   })
 })
 

@@ -14,7 +14,7 @@ export const u08: GrammarUnit = {
       title: '時間の前置詞 at / on / in',
       objective: 'at / on / in を使い分けて、時刻・曜日・月・年などの時間を正しく表せるようになります。',
       minutes: 10,
-      prereqs: ['u01-l4'],
+      prereqs: ['u01-l3'],
       blocks: [
         {
           type: 'explanation',

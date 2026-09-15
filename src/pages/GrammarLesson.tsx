@@ -81,6 +81,21 @@ function GrammarLessonContent({ lesson }: { lesson: GrammarLesson }) {
 
       <LessonBlocks blocks={lesson.blocks} />
 
+      {lesson.structureQuiz && lesson.structureQuiz.length > 0 && (
+        <section className="lesson-quiz lesson-structure-quiz">
+          <h2>構造チェック</h2>
+          <p className="section-lead">
+            英文の骨格(S / V / O / C)と、修飾語(M)を自分で見分けられるか確かめます。
+          </p>
+          <Quiz
+            questions={lesson.structureQuiz}
+            onAnswer={(question, correct) => {
+              recordGrammarItemAnswer(question.id, correct)
+            }}
+          />
+        </section>
+      )}
+
       <section className="lesson-quiz">
         <h2>理解度チェック</h2>
         {/* 正誤を残しておくと、設定ページの進捗集計とGist同期にそのまま乗る。 */}

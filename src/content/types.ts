@@ -97,6 +97,53 @@ export type LessonBlock =
   | { type: 'structure'; title?: string; parts: { label: string; text: string }[]; caption?: string }
   /** 挿絵。sceneId ごとに固有のSVG構図を持ち、labels は図の中に描き込む。 */
   | { type: 'illustration'; sceneId: string; kind: IllustrationKind; labels: string[]; alt: string; caption?: string }
+  /**
+   * 英文を S / V / O / C / M に分けて見せる構造図。
+   * skeleton を添えると「修飾語を外すと骨格はこれだけ」を示せる。
+   */
+  | {
+      type: 'breakdown'
+      title?: string
+      sentence: string
+      ja?: string
+      /** この文全体の5文型。 */
+      pattern?: SentencePattern
+      /** 文を順に区切ったもの。結合すると sentence に戻る形で並べる。 */
+      parts: BreakdownPart[]
+      /** 「the book = very useful」のような意味上の関係 */
+      relation?: string
+      /** 修飾語(M)を外した骨格。長い文でも中心は単純だと示すために使う。 */
+      skeleton?: string
+      skeletonPattern?: SentencePattern
+      caption?: string
+    }
+  /** 短文が段階的に長くなる過程。骨格が変わらないことを体感させる。 */
+  | { type: 'expansion'; title?: string; steps: ExpansionStep[]; caption?: string }
+
+/**
+ * 文の中での語句の役割。S / V / O / C が文の骨格、M は骨格に情報を足す修飾語。
+ * 「長いか短いか」ではなく「文の中で何をしているか」で決まる。
+ */
+export type SentenceRole = 'S' | 'V' | 'O' | 'C' | 'M'
+
+/** 構造図の1区画。英文から抜き出した語句と、その役割。 */
+export type BreakdownPart = {
+  /** 英文からの抜き出し(そのまま英文に現れる形にする) */
+  text: string
+  role: SentenceRole
+  /** この部分についての短い注記 */
+  note?: string
+}
+
+/** 段階的に長くなる英文の1歩。骨格から修飾・句・節を足していく過程を示す。 */
+export type ExpansionStep = {
+  en: string
+  ja?: string
+  /** この段階で注目する語句(en に含まれる部分文字列)。強調表示する。 */
+  focus?: string
+  /** この段階で何が起きたか */
+  note?: string
+}
 
 export type QuizQuestion = {
   id: string
@@ -131,6 +178,11 @@ export type GrammarLesson = {
   quiz: QuizQuestion[]
   /** まとめ 2〜5点 */
   summary: string[]
+  /**
+   * 構造を判断する追加問題(合成時に structures から付与)。
+   * 既存のクイズは書き換えず、レッスン末尾に「構造チェック」として別に出す。
+   */
+  structureQuiz?: QuizQuestion[]
 }
 
 export type GrammarUnit = {

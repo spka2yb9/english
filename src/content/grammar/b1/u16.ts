@@ -15,7 +15,7 @@ export const u16: GrammarUnit = {
       title: 'because / so / although',
       objective: 'because / so / although を使って2つの文を1つに結合し、理由・結果・譲歩の関係を正しく伝えられるようになります。',
       minutes: 10,
-      prereqs: ['u01-l4'],
+      prereqs: ['u01-l3'],
       blocks: [
         {
           type: 'explanation',

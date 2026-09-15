@@ -2,7 +2,7 @@
 
 import { illustrationAlt } from '../../content/illustrations'
 import { PATTERN_LABELS } from '../../content/grammar/patterns/types'
-import type { GrammarExample, GrammarLesson, GrammarUnit, LessonBlock, TimelineSpec } from '../../content/types'
+import type { GrammarExample, GrammarLesson, GrammarUnit, LessonBlock, QuizQuestion, TimelineSpec } from '../../content/types'
 
 export function lessonToMarkdown(lesson: GrammarLesson): string {
   const parts: string[] = []
@@ -14,8 +14,18 @@ export function lessonToMarkdown(lesson: GrammarLesson): string {
     parts.push(blockToMarkdown(block))
   }
 
-  parts.push('## 理解度チェック')
-  lesson.quiz.forEach((q, i) => {
+  if (lesson.structureQuiz && lesson.structureQuiz.length > 0) {
+    parts.push(quizToMarkdown('構造チェック', lesson.structureQuiz))
+  }
+  parts.push(quizToMarkdown('理解度チェック', lesson.quiz))
+
+  parts.push(`## まとめ\n\n${lesson.summary.map((s) => `- ${s}`).join('\n')}`)
+  return parts.join('\n\n')
+}
+
+function quizToMarkdown(title: string, questions: QuizQuestion[]): string {
+  const parts: string[] = [`## ${title}`]
+  questions.forEach((q, i) => {
     const lines: string[] = [`### 問題${i + 1}`, q.prompt]
     if (q.sentence) lines.push(`> ${q.sentence}${q.sentenceJa ? `\n> ${q.sentenceJa}` : ''}`)
     lines.push(q.choices.map((c, j) => `${j + 1}. ${c}`).join('\n'))
@@ -29,8 +39,6 @@ export function lessonToMarkdown(lesson: GrammarLesson): string {
     }
     parts.push(lines.join('\n\n'))
   })
-
-  parts.push(`## まとめ\n\n${lesson.summary.map((s) => `- ${s}`).join('\n')}`)
   return parts.join('\n\n')
 }
 
@@ -104,6 +112,34 @@ function blockToMarkdown(block: LessonBlock): string {
     case 'structure': {
       const row = block.parts.map((p) => `[${p.label}] ${p.text}`).join(' → ')
       return [block.title ? `## ${block.title}` : null, '```', row, '```', block.caption ?? null].filter(Boolean).join('\n\n')
+    }
+    case 'breakdown': {
+      const lines: string[] = [
+        `> ${block.pattern ? `【${PATTERN_LABELS[block.pattern]}】` : ''}**${block.sentence}**`,
+      ]
+      if (block.ja) lines.push(`> ${block.ja}`)
+      lines.push('', block.parts.map((p) => `[${p.role}] ${p.text}`).join(' / '))
+      if (block.relation) lines.push(`意味の関係: ${block.relation}`)
+      if (block.skeleton) {
+        const pattern = block.skeletonPattern ? `(${PATTERN_LABELS[block.skeletonPattern]})` : ''
+        lines.push(`骨格: ${block.skeleton}${pattern}`)
+      }
+      if (block.caption) lines.push(`※ ${block.caption}`)
+      return [block.title ? `## ${block.title}` : null, lines.join('\n')].filter(Boolean).join('\n\n')
+    }
+    case 'expansion': {
+      const steps = block.steps.map((step, i) =>
+        [
+          `${i + 1}. **${step.en}**${step.focus ? `(注目: ${step.focus})` : ''}`,
+          step.ja ? `   ${step.ja}` : null,
+          step.note ? `   ${step.note}` : null,
+        ]
+          .filter(Boolean)
+          .join('\n'),
+      )
+      return [block.title ? `## ${block.title}` : null, steps.join('\n'), block.caption ? `※ ${block.caption}` : null]
+        .filter(Boolean)
+        .join('\n\n')
     }
     case 'illustration':
       return [

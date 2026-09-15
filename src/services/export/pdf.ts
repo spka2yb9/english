@@ -3,7 +3,7 @@
 import { jsPDF } from 'jspdf'
 import { illustrationAlt } from '../../content/illustrations'
 import { PATTERN_LABELS } from '../../content/grammar/patterns/types'
-import type { GrammarExample, GrammarLesson, GrammarUnit, LessonBlock } from '../../content/types'
+import type { GrammarExample, GrammarLesson, GrammarUnit, LessonBlock, QuizQuestion } from '../../content/types'
 
 const FONT_NAME = 'IPAexGothic'
 const FONT_FILE = 'ipaexg.ttf'
@@ -140,6 +140,34 @@ function writeBlock(w: PdfWriter, block: LessonBlock) {
       w.text(block.parts.map((p) => `[${p.label}] ${p.text}`).join(' → '), 10.5, { indent: 2, gapAfter: 1.5 })
       if (block.caption) w.text(block.caption, 9.5, { indent: 2, gapAfter: 2, color: [90, 90, 90] })
       break
+    case 'breakdown': {
+      if (block.title) w.heading(block.title, 13)
+      const label = block.pattern ? `[${PATTERN_LABELS[block.pattern]}] ` : ''
+      w.text(label + block.sentence, 11, { indent: 2, gapAfter: 0.5 })
+      if (block.ja) w.text(block.ja, 9.5, { indent: 2, gapAfter: 0.5, color: [90, 90, 90] })
+      w.text(block.parts.map((p) => `[${p.role}] ${p.text}`).join(' / '), 10, {
+        indent: 2,
+        gapAfter: 0.5,
+        color: [20, 60, 120],
+      })
+      if (block.relation) w.text(`意味の関係: ${block.relation}`, 10, { indent: 2, gapAfter: 0.5 })
+      if (block.skeleton) {
+        const skeletonPattern = block.skeletonPattern ? `(${PATTERN_LABELS[block.skeletonPattern]})` : ''
+        w.text(`骨格: ${block.skeleton}${skeletonPattern}`, 10, { indent: 2, gapAfter: 0.5 })
+      }
+      if (block.caption) w.text(block.caption, 9.5, { indent: 2, gapAfter: 2, color: [90, 90, 90] })
+      break
+    }
+    case 'expansion':
+      if (block.title) w.heading(block.title, 13)
+      block.steps.forEach((step, i) => {
+        const focus = step.focus ? ` (注目: ${step.focus})` : ''
+        w.text(`${i + 1}. ${step.en}${focus}`, 10.5, { indent: 2, gapAfter: 0.5 })
+        if (step.ja) w.text(step.ja, 9.5, { indent: 6, gapAfter: 0.5, color: [90, 90, 90] })
+        if (step.note) w.text(step.note, 9, { indent: 6, gapAfter: 0.5, color: [120, 120, 120] })
+      })
+      if (block.caption) w.text(block.caption, 9.5, { indent: 2, gapAfter: 2, color: [90, 90, 90] })
+      break
     case 'illustration':
       w.text(`図: ${block.alt || illustrationAlt(block.kind, block.labels)}`, 10, {
         indent: 2,
@@ -151,14 +179,9 @@ function writeBlock(w: PdfWriter, block: LessonBlock) {
   }
 }
 
-function writeLesson(w: PdfWriter, lesson: GrammarLesson) {
-  w.heading(`${lesson.title}(${lesson.level}・約${lesson.minutes}分)`, 16)
-  w.text(`目標: ${lesson.objective}`, 10.5, { gapAfter: 3 })
-
-  lesson.blocks.forEach((b) => writeBlock(w, b))
-
-  w.heading('理解度チェック', 13)
-  lesson.quiz.forEach((q, i) => {
+function writeQuestions(w: PdfWriter, title: string, questions: QuizQuestion[]) {
+  w.heading(title, 13)
+  questions.forEach((q, i) => {
     w.text(`問題${i + 1}: ${q.prompt}`, 10.5, { gapAfter: 1 })
     if (q.sentence) w.text(q.sentence, 10.5, { indent: 4, gapAfter: 1 })
     if (q.sentenceJa) w.text(q.sentenceJa, 9.5, { indent: 4, gapAfter: 1, color: [90, 90, 90] })
@@ -166,6 +189,18 @@ function writeLesson(w: PdfWriter, lesson: GrammarLesson) {
     w.text(`正解: ${q.correctIndex + 1}. ${q.choices[q.correctIndex]}`, 10, { indent: 4, gapAfter: 0.5, color: [20, 100, 60] })
     w.text(`解説: ${q.explanation}`, 9.5, { indent: 4, gapAfter: 2, color: [90, 90, 90] })
   })
+}
+
+function writeLesson(w: PdfWriter, lesson: GrammarLesson) {
+  w.heading(`${lesson.title}(${lesson.level}・約${lesson.minutes}分)`, 16)
+  w.text(`目標: ${lesson.objective}`, 10.5, { gapAfter: 3 })
+
+  lesson.blocks.forEach((b) => writeBlock(w, b))
+
+  if (lesson.structureQuiz && lesson.structureQuiz.length > 0) {
+    writeQuestions(w, '構造チェック', lesson.structureQuiz)
+  }
+  writeQuestions(w, '理解度チェック', lesson.quiz)
 
   w.heading('まとめ', 13)
   lesson.summary.forEach((s) => w.text(`・${s}`, 10.5, { indent: 2, gapAfter: 1 }))

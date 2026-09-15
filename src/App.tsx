@@ -6,6 +6,9 @@ import { Layout } from './components/Layout'
 const Dashboard = lazy(() => import('./pages/Dashboard').then((module) => ({ default: module.Dashboard })))
 const Pronunciation = lazy(() => import('./pages/Pronunciation').then((module) => ({ default: module.Pronunciation })))
 const GrammarIndex = lazy(() => import('./pages/GrammarIndex').then((module) => ({ default: module.GrammarIndex })))
+const GrammarRoadmapPage = lazy(() =>
+  import('./pages/GrammarRoadmapPage').then((module) => ({ default: module.GrammarRoadmapPage })),
+)
 const GrammarLessonPage = lazy(() =>
   import('./pages/GrammarLesson').then((module) => ({ default: module.GrammarLessonPage })),
 )
@@ -49,6 +52,8 @@ function App() {
             <Route index element={<Dashboard />} />
             <Route path="pronunciation" element={<Pronunciation />} />
             <Route path="grammar" element={<GrammarIndex />} />
+            {/* 静的な roadmap を :lessonId より先に置き、レッスンIDと紛れないようにする。 */}
+            <Route path="grammar/roadmap" element={<GrammarRoadmapPage />} />
             <Route path="grammar/:lessonId" element={<GrammarLessonPage />} />
             <Route path="vocabulary" element={<Vocabulary />} />
             <Route path="practice" element={<Practice />} />

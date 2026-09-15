@@ -15,7 +15,7 @@ export const u14: GrammarUnit = {
       title: '主格の関係代名詞 who/which/that',
       objective: '人や物のあとに who / which / that で説明を続けて、「〜する人」「〜する物」を1文で表せるようになります。',
       minutes: 10,
-      prereqs: ['u01-l4'],
+      prereqs: ['u01-l3'],
       blocks: [
         {
           type: 'explanation',

@@ -96,38 +96,6 @@ export const A2_SCENES = {
     </>
   ),
 
-  'u01-l4': (l) => (
-    <>
-      <Backdrop tone="coral" variant={2} />
-      <path d="M32 236h576" className="ill-muted-stroke ill-floor" />
-      <g transform="translate(82 185)">
-        <circle cx="0" cy="46" r="17" className="ill-ink-fill" />
-        <circle cx="0" cy="46" r="8" className="ill-paper" />
-        <path d="M-47-23h75l27 30v39H-47z" className="ill-coral ill-pale ill-panel" filter="url(#ill-shadow)" />
-        <path d="M14-22v29h40" className="ill-muted-stroke ill-fine" />
-        <path d="M-30-9h26M-30 4h30" className="ill-muted-stroke ill-fine" />
-      </g>
-      <Label x={83} y={123} width={82} text={l[0]} tone="coral" />
-      <g transform="translate(288 190)">
-        <rect x="-75" y="-38" width="150" height="84" rx="14" className="ill-teal ill-pale ill-panel" filter="url(#ill-shadow)" />
-        <Book x={0} y={2} scale={0.55} color="teal" open />
-        <circle cx="-48" cy="50" r="15" className="ill-ink-fill" />
-        <circle cx="48" cy="50" r="15" className="ill-ink-fill" />
-      </g>
-      <Label x={287} y={102} width={104} text={l[1]} tone="teal" />
-      <g transform="translate(505 188)">
-        <rect x="-78" y="-40" width="156" height="88" rx="14" className="ill-blue ill-pale ill-panel" filter="url(#ill-shadow)" />
-        <Book x={0} y={4} scale={0.62} color="blue" />
-        <circle cx="-50" cy="52" r="15" className="ill-ink-fill" />
-        <circle cx="50" cy="52" r="15" className="ill-ink-fill" />
-      </g>
-      <Label x={505} y={102} width={142} text={l[2]} tone="blue" />
-      <Arrow d="M147 196h54" tone="coral" />
-      <Arrow d="M368 196h54" tone="coral" />
-      <PlainText x={320} y={52} text="S  →  V  →  O" width={250} size={22} tone="coral" />
-    </>
-  ),
-
   'u02-l1': (l) => (
     <>
       <Backdrop tone="coral" variant={3} />

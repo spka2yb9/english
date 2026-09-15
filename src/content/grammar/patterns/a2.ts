@@ -47,34 +47,6 @@ export const a2Patterns: PatternMap = {
   "She doesn't teach English.": { pattern: 'SVO', note: 'teach の対象 English が目的語(O)。' },
   'Does she teach English?': { pattern: 'SVO', note: '平叙文に戻すと English が目的語(O)。' },
 
-  // u01-l4 英語の語順 SVO
-  'My sister plays the piano.': { pattern: 'SVO', note: 'play の対象 the piano が目的語(O)。' },
-  'We eat lunch at noon.': { pattern: 'SVO', note: 'eat の対象 lunch が目的語(O)。' },
-  'Ken met his friend at the station yesterday.': { pattern: 'SVO', note: 'meet の対象 his friend が目的語(O)。' },
-  'I always drink tea in the morning.': { pattern: 'SVO', note: 'drink の対象 tea が目的語(O)。' },
-  'My father washes the car every Sunday.': { pattern: 'SVO', note: 'wash の対象 the car が目的語(O)。' },
-  'The manager sent the team an update yesterday.': { pattern: 'SVOO', note: 'the team と an update の2つの目的語。' },
-  'The children played soccer in the park after school.': { pattern: 'SVO', note: 'play の対象 soccer が目的語(O)。' },
-  'I usually read the news on the train.': { pattern: 'SVO', note: 'read の対象 the news が目的語(O)。' },
-  'She writes emails at the office every morning.': { pattern: 'SVO', note: 'write の対象 emails が目的語(O)。' },
-  'My uncle grows vegetables in his garden.': { pattern: 'SVO', note: 'grow の対象 vegetables が目的語(O)。' },
-
-  // u01-l5 5文型で文の骨組みを見る
-  'He gave me a book.': { pattern: 'SVOO', note: 'me と a book の2つの目的語。' },
-  'She sent her friend a postcard.': { pattern: 'SVOO', note: 'her friend と a postcard の2つの目的語。' },
-  'He gave a book to me.': { pattern: 'SVO', note: 'to me は副詞句。a book だけが目的語(O)。' },
-  'She sent a postcard to her friend.': { pattern: 'SVO', note: 'to her friend は副詞句。postcard が目的語(O)。' },
-  'Birds fly high in the sky.': { pattern: 'SV', note: 'fly は目的語を取らない。' },
-  'My sister is a nurse.': { pattern: 'SVC', note: 'be動詞のあとの名詞 a nurse が補語(C)。' },
-  'She became a famous singer.': { pattern: 'SVC', note: 'become + 名詞は補語(C)をとる SVC。' },
-  'I bought a new bike yesterday.': { pattern: 'SVO', note: 'buy の対象 a new bike が目的語(O)。' },
-  'My father gave me a camera.': { pattern: 'SVOO', note: 'me と a camera の2つの目的語。' },
-  'They named the baby Emma.': { pattern: 'SVOC', note: 'the baby = Emma で Emma が補語(C)。' },
-  'The news made everyone happy.': { pattern: 'SVOC', note: 'everyone = happy で happy が補語(C)。' },
-  'My uncle taught me the guitar.': { pattern: 'SVOO', note: 'me と the guitar の2つの目的語。' },
-  'The teacher left the door open.': { pattern: 'SVOC', note: 'the door = open で open が補語(C)。' },
-  'Can you send me the report?': { pattern: 'SVOO', note: 'me と the report の2つの目的語。' },
-
   // u02-l1 現在進行形
   'I am cooking dinner now.': { pattern: 'SVO', note: 'cook の対象 dinner が目的語(O)。' },
   'She is talking on the phone.': { pattern: 'SV', note: 'talk は目的語を取らない。' },
@@ -359,10 +331,6 @@ export const a2Focus: PatternFocusMap = {
     '一般動詞の現在形は、動作の対象があれば第3文型(SVO)、なければ第1文型(SV)です。works や goes、sleeps のように目的語を取らない動詞は、前置詞句が続いても SV のままです。',
   'u01-l3':
     '否定文・疑問文も平叙文に戻して考えると文型は同じです。do/does のあとの動詞が目的語を取れば SVO、取らなければ SV、be動詞なら補語(C)をとって SVC です。',
-  'u01-l4':
-    'このセクションの中心は「行為 → 対象」の語順で、動詞のあとの名詞が目的語(O)になり第3文型(SVO)を作ります。時や場所の句は要素に数えないので、長い文でも骨組みは SVO のままです。',
-  'u01-l5':
-    '5文型をまとめて見分けます。目的語が1つなら SVO、2つなら SVOO、目的語とその状態を説明する補語なら SVOC です。「O = C」の関係が成り立つかが SVOC の目印です。',
   'u02-l1':
     '現在進行形は be + -ing で「〜している最中」を表します。動作の対象があれば第3文型(SVO)、なければ第1文型(SV)です。talk や wait は目的語を取らないので SV になります。',
   'u02-l2':

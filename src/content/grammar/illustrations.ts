@@ -30,16 +30,6 @@ export const lessonIllustrations: Record<string, LessonIllustration> = {
     labels: ['Does', 'play', 'plays'],
     caption: '疑問文・否定文では does が時制と三単現を引き受けるので、動詞は原形に戻ります。',
   },
-  'u01-l4': {
-    kind: 'action',
-    labels: ['I', 'read', 'a book'],
-    caption: '英語は「誰が → する → 何を」の順。場所や時間はそのあとに足します。',
-  },
-  'u01-l5': {
-    kind: 'swap-cards',
-    labels: ['gave me a book', 'gave a book to me'],
-    caption: '第4文型(SVOO)は「人 → もの」の順。同じ内容を第3文型で言うと「もの → to + 人」になります。',
-  },
 
   // U02 時制の基礎
   'u02-l1': {

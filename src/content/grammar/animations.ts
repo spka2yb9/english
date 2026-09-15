@@ -10,7 +10,11 @@ export type LessonAnimation = {
   axis?: [string, string, string]
 }
 
-function scene(title: string, mode: AnimationMode, frames: [string, string, string], axis?: LessonAnimation['axis']): LessonAnimation {
+/**
+ * 3段階の2Dアニメーションを組み立てる。
+ * レッスンの挿絵と、文型の図解(patternAnimations.ts)が同じ形式を使う。
+ */
+export function scene(title: string, mode: AnimationMode, frames: [string, string, string], axis?: LessonAnimation['axis']): LessonAnimation {
   return { title, mode, axis, steps: frames.map((frame) => {
     const [sentence, note] = frame.split(' :: ')
     return { sentence, note }
@@ -32,16 +36,6 @@ export const LESSON_ANIMATIONS: Record<string, LessonAnimation> = {
     'He|plays|tennis. :: 肯定文では、動詞 plays が -s を持っています。',
     'Does|he|play|tennis? :: Does が前へ出ると、plays は原形 play に戻ります。',
     'He|does|not|play|tennis. :: 否定文でも does が働くので、動詞は play です。',
-  ]),
-  'u01-l4': scene('英語の語順を組み立てる', 'sentence', [
-    'I|read. :: まず「誰が」→「する」の順に置きます。',
-    'I|read|a book. :: 動詞のあとに「何を」を足します。',
-    'I|read|a book|at home. :: 場所は、主語・動詞・目的語のあとに足せます。',
-  ]),
-  'u01-l5': scene('動詞のあとを見て文型を決める', 'sentence', [
-    'Birds|fly|in the sky. :: 第1文型(SV)。目的語も補語もない骨組みです。',
-    'I|bought|a new bike. :: 第3文型(SVO)。動詞のあとに動作の対象を置きます。',
-    'They|named|the baby|Emma. :: 第5文型(SVOC)。the baby = Emma の関係です。',
   ]),
   'u02-l1': scene('今を切り取る進行形', 'timeline', [
     'She|starts|cooking. :: 料理を始めました。',

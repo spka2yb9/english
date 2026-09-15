@@ -507,7 +507,7 @@
   box-shadow: var(--shadow-sm);
 }
 
-.unit-card h3 {
+.unit-card h4 {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -906,6 +906,558 @@
 .structure-text {
   color: var(--ink-950);
   font-weight: 650;
+}
+
+/* 構造図: 英文を S / V / O / C / M に分けて見せる */
+
+.block-breakdown,
+.block-expansion {
+  background: #f8fbfc;
+  border-color: #cddfe5;
+}
+
+.breakdown-sentence {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-bottom: 0.25rem;
+  color: var(--ink-950);
+  font-size: 1.05rem;
+  font-weight: 620;
+  line-height: 1.55;
+}
+
+.breakdown-sentence .example-audio {
+  margin-left: auto;
+}
+
+.breakdown-parts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.9rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breakdown-parts > li {
+  margin-top: 0;
+}
+
+.breakdown-part {
+  display: grid;
+  min-width: 0;
+  gap: 0.15rem;
+  padding: 0.5rem 0.7rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--line-strong);
+  border-radius: 9px;
+  box-shadow: var(--shadow-sm);
+}
+
+.breakdown-part .role-badge {
+  justify-self: start;
+}
+
+/* 骨格の要素(S / V / O / C)は色で区別し、修飾語(M)は控えめにする。 */
+.role-S {
+  border-left-color: var(--blue);
+}
+
+.role-V {
+  border-left-color: var(--coral);
+}
+
+.role-O {
+  border-left-color: var(--teal);
+}
+
+.role-C {
+  border-left-color: var(--gold);
+}
+
+.role-M {
+  background: var(--canvas-warm);
+  border-left-color: var(--line-strong);
+  border-style: dashed;
+  border-left-style: solid;
+}
+
+.role-badge {
+  padding: 0.02rem 0.42rem;
+  color: var(--ink-650);
+  background: #eceff1;
+  border-radius: 999px;
+  font-family: var(--english);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+
+.role-S .role-badge {
+  color: var(--blue);
+  background: var(--blue-soft);
+}
+
+.role-V .role-badge {
+  color: var(--coral-deep);
+  background: var(--coral-soft);
+}
+
+.role-O .role-badge {
+  color: var(--teal);
+  background: var(--teal-soft);
+}
+
+.role-C .role-badge {
+  color: var(--gold);
+  background: var(--gold-soft);
+}
+
+.breakdown-text {
+  color: var(--ink-950);
+  font-weight: 650;
+}
+
+.breakdown-note {
+  color: var(--ink-500);
+  font-size: 0.72rem;
+  line-height: 1.45;
+}
+
+.breakdown-relation,
+.breakdown-skeleton {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.85rem 0 0;
+  padding: 0.55rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 650;
+}
+
+.breakdown-relation {
+  color: var(--ink-800);
+  background: var(--gold-soft);
+}
+
+.breakdown-skeleton {
+  color: var(--navy);
+  background: var(--blue-soft);
+}
+
+.breakdown-label {
+  flex: 0 0 auto;
+  padding: 0.05rem 0.42rem;
+  color: var(--ink-650);
+  background: var(--paper);
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 750;
+}
+
+.breakdown-caption,
+.expansion-caption {
+  margin: 0.85rem 0 0;
+  color: var(--ink-500);
+  font-size: 0.84rem;
+}
+
+.expansion-steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: expansion-step;
+}
+
+.expansion-steps > li {
+  margin-top: 0;
+}
+
+.expansion-step {
+  position: relative;
+  padding-left: 2.1rem;
+  counter-increment: expansion-step;
+}
+
+.expansion-step + .expansion-step {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--line);
+}
+
+.expansion-step::before {
+  position: absolute;
+  top: 0.15rem;
+  left: 0;
+  display: grid;
+  width: 1.5rem;
+  height: 1.5rem;
+  place-items: center;
+  color: var(--teal);
+  background: var(--teal-soft);
+  border-radius: 50%;
+  font-family: var(--english);
+  font-size: 0.75rem;
+  font-weight: 800;
+  content: counter(expansion-step);
+}
+
+.expansion-en {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-bottom: 0.2rem;
+  color: var(--ink-950);
+  font-size: 1.02rem;
+  font-weight: 620;
+  line-height: 1.5;
+}
+
+.expansion-en .example-audio {
+  margin-left: auto;
+}
+
+.expansion-note {
+  margin: 0.3rem 0 0;
+  color: var(--ink-500);
+  font-size: 0.82rem;
+}
+
+.expansion-caption {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--line);
+  color: var(--ink-650);
+  font-size: 0.85rem;
+}
+
+/* 学習導線: 英文の作られ方(STEP 1〜7) */
+
+/* 「英文の作られ方」ページのセクション見出し(ページ自身の h2) */
+.block > h2 {
+  margin-bottom: 1rem;
+  color: var(--navy);
+  font-size: 1.3rem;
+}
+
+.pattern-intro-lead {
+  margin-bottom: 1.15rem;
+  color: var(--ink-650);
+  font-size: 0.95rem;
+}
+
+/* S / V / O / C / M の意味を示すカード列 */
+.role-guide {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.role-guide > li {
+  margin-top: 0;
+}
+
+.role-guide-item {
+  display: grid;
+  align-content: start;
+  gap: 0.3rem;
+  padding: 0.8rem 0.9rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--line-strong);
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+}
+
+.role-guide-head {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.role-guide-name {
+  color: var(--ink-800);
+  font-size: 0.86rem;
+  font-weight: 750;
+}
+
+.role-guide-meaning {
+  margin: 0;
+  color: var(--ink-800);
+  font-size: 0.85rem;
+}
+
+.role-guide-example {
+  margin: 0;
+  color: var(--ink-950);
+  font-size: 1.02rem;
+  font-weight: 650;
+}
+
+.role-guide-note {
+  margin: 0;
+  color: var(--ink-500);
+  font-size: 0.78rem;
+}
+
+.role-guide-sentence {
+  margin: 0.2rem 0 0;
+  padding-top: 0.4rem;
+  color: var(--ink-500);
+  border-top: 1px dashed var(--line);
+  font-size: 0.8rem;
+}
+
+/* 5文型のカード(2Dアニメーション + 代表例) */
+.pattern-cards {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.15rem;
+}
+
+.pattern-card {
+  padding: clamp(1rem, 3vw, 1.5rem);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.pattern-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-bottom: 0.9rem;
+}
+
+.pattern-card-name {
+  color: var(--navy);
+  font-size: 1.05rem;
+  font-weight: 750;
+}
+
+.pattern-card-skeleton {
+  padding: 0.15rem 0.6rem;
+  color: var(--teal);
+  background: var(--teal-soft);
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.pattern-card .example {
+  margin-top: 1rem;
+}
+
+.pattern-card-relation {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.85rem 0 0;
+  padding: 0.55rem 0.75rem;
+  color: var(--ink-800);
+  background: var(--gold-soft);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 650;
+}
+
+.roadmap-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.4rem 0 0;
+  padding: clamp(1.15rem, 3vw, 1.6rem);
+  color: inherit;
+  background: var(--paper);
+  border: 1px solid #cddfe5;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  transition:
+    background 130ms ease,
+    border-color 130ms ease,
+    box-shadow 130ms ease;
+}
+
+.roadmap-cta:hover {
+  color: inherit;
+  background: #f8fbfc;
+  border-color: var(--teal);
+  box-shadow: var(--shadow-md);
+}
+
+.roadmap-cta-body {
+  display: block;
+  min-width: 0;
+  flex: 1 1 22rem;
+}
+
+.roadmap-cta .eyebrow {
+  display: block;
+}
+
+.roadmap-cta h2 {
+  margin-bottom: 0.5rem;
+  color: var(--navy);
+  font-size: 1.25rem;
+}
+
+.roadmap-cta-text {
+  display: block;
+  color: var(--ink-650);
+  font-size: 0.92rem;
+}
+
+.roadmap-cta-arrow {
+  flex: 0 0 auto;
+  color: var(--teal);
+  font-size: 1.4rem;
+  font-weight: 800;
+  line-height: 1;
+  transition: transform 130ms ease;
+}
+
+.roadmap-cta:hover .roadmap-cta-arrow {
+  transform: translateX(4px);
+}
+
+.roadmap-header-lead {
+  margin-top: 0.6rem;
+  margin-bottom: 0;
+  color: var(--ink-650);
+  font-size: 1.02rem;
+}
+
+.roadmap-intro {
+  max-width: 820px;
+  color: var(--ink-650);
+  font-size: 0.95rem;
+}
+
+.roadmap-steps {
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.roadmap-steps > li {
+  margin-top: 0;
+}
+
+.roadmap-step {
+  margin-top: 0.85rem;
+  padding: clamp(1.1rem, 3vw, 1.6rem);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.roadmap-step-head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.roadmap-number {
+  padding: 0.1rem 0.55rem;
+  color: var(--teal);
+  background: var(--teal-soft);
+  border-radius: 999px;
+  font-family: var(--english);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.roadmap-step-head h2 {
+  margin: 0;
+  color: var(--navy);
+  font-size: 1.12rem;
+}
+
+.roadmap-lead {
+  margin-bottom: 0.75rem;
+  color: var(--ink-800);
+  font-size: 0.95rem;
+}
+
+.roadmap-points {
+  margin: 0 0 0.5rem;
+  padding-left: 1.25rem;
+  color: var(--ink-650);
+  font-size: 0.88rem;
+}
+
+.roadmap-figure {
+  margin: 0.9rem 0;
+}
+
+.roadmap-figure .block {
+  margin-top: 0;
+  background: var(--canvas-warm);
+  border-color: var(--line);
+  box-shadow: none;
+}
+
+.roadmap-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0;
+  padding-top: 0.85rem;
+  border-top: 1px dashed var(--line);
+  font-size: 0.85rem;
+}
+
+.roadmap-links-label {
+  color: var(--ink-500);
+  font-weight: 650;
+}
+
+.roadmap-link {
+  padding: 0.22rem 0.68rem;
+  color: var(--navy);
+  background: var(--blue-soft);
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.roadmap-link:hover {
+  background: #d7e9f0;
+  color: var(--navy-deep);
+}
+
+.level-list-heading {
+  margin-bottom: 0.75rem;
+  color: var(--navy);
+  font-size: 1.3rem;
+}
+
+.section-lead {
+  margin-bottom: 1.1rem;
+  color: var(--ink-650);
+  font-size: 0.9rem;
 }
 
 /* Illustrations */
@@ -2394,6 +2946,26 @@
 
   .structure-row {
     justify-content: flex-start;
+  }
+
+  /* 構造図は横に広がるため、狭い画面では語句を縦に積む。 */
+  .breakdown-parts {
+    flex-direction: column;
+  }
+
+  .breakdown-part {
+    align-content: start;
+  }
+
+  .breakdown-sentence,
+  .breakdown-relation,
+  .breakdown-skeleton {
+    align-items: flex-start;
+  }
+
+  .breakdown-sentence .example-audio,
+  .expansion-en .example-audio {
+    margin-left: 0;
   }
 
   .export-row {

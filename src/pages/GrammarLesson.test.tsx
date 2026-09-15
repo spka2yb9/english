@@ -54,4 +54,35 @@ describe('GrammarLessonPage', () => {
     // 記録が落ちると、設定ページの進捗集計とGist同期から文法クイズの実績が消える。
     expect(Object.keys(getGrammarItemStats())).toEqual(['u01-l1-q1'])
   })
+
+  it('構造データのあるセクションは構造図と「構造チェック」を、既存の理解度チェックと分けて出す', () => {
+    render(
+      <MemoryRouter initialEntries={['/grammar/u05-l1']}>
+        <Routes>
+          <Route path="/grammar/:lessonId" element={<GrammarLessonPage />} />
+        </Routes>
+      </MemoryRouter>,
+    )
+
+    expect(screen.getByRole('heading', { level: 1, name: '形容詞の位置と使い方' })).toBeInTheDocument()
+    // 構造図(S / V / O / C / M の区画)が本文に入る。
+    expect(document.querySelectorAll('.breakdown-parts').length).toBeGreaterThan(0)
+    // 既存のクイズを置き換えず、構造チェックを別セクションとして追加する。
+    expect(screen.getByRole('heading', { level: 2, name: '構造チェック' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { level: 2, name: '理解度チェック' })).toBeInTheDocument()
+    expect(screen.getAllByRole('group', { name: '選択肢' })).toHaveLength(2)
+  })
+
+  it('構造データのないセクションには構造チェックを出さない', () => {
+    render(
+      <MemoryRouter initialEntries={['/grammar/u01-l1']}>
+        <Routes>
+          <Route path="/grammar/:lessonId" element={<GrammarLessonPage />} />
+        </Routes>
+      </MemoryRouter>,
+    )
+
+    expect(screen.queryByRole('heading', { level: 2, name: '構造チェック' })).toBeNull()
+    expect(screen.getAllByRole('group', { name: '選択肢' })).toHaveLength(1)
+  })
 })

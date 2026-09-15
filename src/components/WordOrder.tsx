@@ -2,14 +2,19 @@ import { useMemo, useState } from 'react'
 import type { GrammarLesson } from '../content/types'
 import { isAnswerCorrect } from '../services/answerCheck'
 import { buildWordOrderItem, lessonWordOrderSentences } from '../services/derivedItems'
+import type { WordOrderSentence } from '../services/derivedItems'
 import { AudioButton } from './AudioButton'
 
 /**
- * セクション末尾の並べ替え演習。そのセクションの例文8文を語順から組み立て直す。
+ * セクション末尾の並べ替え演習。例文から作った10文を語順から組み立て直す。
  * 選択肢を選ぶクイズが「見て分かる」段階なら、こちらは「自分で並べられる」段階を確かめる。
+ * レッスンを持たない解説ページでは、例文の列を sentences で直接渡せる。
  */
-export function WordOrder({ lesson }: { lesson: GrammarLesson }) {
-  const sentences = useMemo(() => lessonWordOrderSentences(lesson), [lesson])
+export function WordOrder({ lesson, sentences: provided }: { lesson?: GrammarLesson; sentences?: WordOrderSentence[] }) {
+  const sentences = useMemo(
+    () => provided ?? (lesson ? lessonWordOrderSentences(lesson) : []),
+    [lesson, provided],
+  )
   const [index, setIndex] = useState(0)
   const [picked, setPicked] = useState<number[]>([])
   const [checked, setChecked] = useState(false)

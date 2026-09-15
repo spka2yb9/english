@@ -17,10 +17,6 @@ export const extraExamples: Record<string, GrammarExample[]> = {
     { en: 'Does your father cook on weekends?', ja: 'お父さんは週末に料理をしますか。', highlight: 'Does' },
     { en: "They don't live near the station.", ja: '彼らは駅の近くには住んでいません。', highlight: "don't live" },
   ],
-  'u01-l4': [
-    { en: 'She writes emails at the office every morning.', ja: '彼女は毎朝オフィスでメールを書きます。', highlight: 'at the office every morning' },
-    { en: 'My uncle grows vegetables in his garden.', ja: 'おじは庭で野菜を育てています。', highlight: 'grows vegetables' },
-  ],
   'u02-l1': [
     { en: 'They are building a new library near the park.', ja: '公園の近くに新しい図書館が建てられています。', highlight: 'are building' },
     { en: 'My phone is charging in the kitchen.', ja: '私の携帯は台所で充電中です。', highlight: 'is charging' },

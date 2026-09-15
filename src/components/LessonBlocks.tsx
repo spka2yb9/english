@@ -2,6 +2,8 @@ import type { ContrastSide, LessonBlock } from '../content/types'
 import { EnglishExample } from './EnglishExample'
 import { Illustration } from './Illustration'
 import { RichText } from './RichText'
+import { SentenceBreakdown } from './SentenceBreakdown'
+import { SentenceExpansion } from './SentenceExpansion'
 import { Timeline } from './Timeline'
 
 /** レッスンのコンテンツブロック列を描画する。 */
@@ -118,6 +120,29 @@ function Block({ block }: { block: LessonBlock }) {
           <Illustration sceneId={block.sceneId} kind={block.kind} labels={block.labels} alt={block.alt} />
           {block.caption && <figcaption className="illustration-caption">{block.caption}</figcaption>}
         </figure>
+      )
+    case 'breakdown':
+      return (
+        <section className="block block-breakdown">
+          {block.title && <h3>{block.title}</h3>}
+          <SentenceBreakdown
+            sentence={block.sentence}
+            ja={block.ja}
+            pattern={block.pattern}
+            parts={block.parts}
+            relation={block.relation}
+            skeleton={block.skeleton}
+            skeletonPattern={block.skeletonPattern}
+            caption={block.caption}
+          />
+        </section>
+      )
+    case 'expansion':
+      return (
+        <section className="block block-expansion">
+          {block.title && <h3>{block.title}</h3>}
+          <SentenceExpansion steps={block.steps} caption={block.caption} />
+        </section>
       )
   }
 }

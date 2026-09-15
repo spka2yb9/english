@@ -14,7 +14,7 @@ describe('並べ替え問題', () => {
 })
 
 describe('セクションごとの並べ替え出題', () => {
-  it('全118セクションが10問ぶんの例文を出せる', () => {
+  it('全セクションが10問ぶんの例文を出せる', () => {
     for (const lesson of allLessons) {
       expect(lessonWordOrderSentences(lesson), lesson.id).toHaveLength(LESSON_WORD_ORDER_SIZE)
     }

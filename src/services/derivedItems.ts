@@ -42,31 +42,36 @@ export function buildWordOrderItem(
 }
 
 /**
- * セクション1つぶんの並べ替え問題に使う英文を、そのセクション自身の例文から選ぶ。
- * 出題順は教材の掲載順のままにして、学んだ流れでそのまま産出練習へ移れるようにする。
- * 文バンク(語彙4,500語を含む)を経由しないので、文法ページのチャンクは軽いままになる。
+ * 例文の列から、並べ替えに出せる文だけを掲載順に選ぶ。
+ * 4語未満の文は並べ替えにならないので除き、重複した英文は一度だけ出す。
  */
-export function lessonWordOrderSentences(lesson: GrammarLesson): WordOrderSentence[] {
+export function wordOrderSentencesFromExamples(items: GrammarExample[]): WordOrderSentence[] {
   const seen = new Set<string>()
   const candidates: WordOrderSentence[] = []
 
-  for (const block of lesson.blocks) {
-    const items: GrammarExample[] =
-      block.type === 'examples'
-        ? block.items
-        : block.type === 'contrast'
-          ? [...block.left.items, ...block.right.items]
-          : []
-    for (const item of items) {
-      const key = item.en.toLowerCase()
-      if (!item.ja || seen.has(key) || tokenCount(item.en) < MIN_TOKENS) continue
-      seen.add(key)
-      candidates.push({ en: item.en, ja: item.ja })
-    }
+  for (const item of items) {
+    const key = item.en.toLowerCase()
+    if (!item.ja || seen.has(key) || tokenCount(item.en) < MIN_TOKENS) continue
+    seen.add(key)
+    candidates.push({ en: item.en, ja: item.ja })
   }
 
   return [
     ...candidates.filter((s) => tokenCount(s.en) <= COMFORTABLE_MAX_TOKENS),
     ...candidates.filter((s) => tokenCount(s.en) > COMFORTABLE_MAX_TOKENS),
   ].slice(0, LESSON_WORD_ORDER_SIZE)
+}
+
+/**
+ * セクション1つぶんの並べ替え問題に使う英文を、そのセクション自身の例文から選ぶ。
+ * 出題順は教材の掲載順のままにして、学んだ流れでそのまま産出練習へ移れるようにする。
+ * 文バンク(語彙4,500語を含む)を経由しないので、文法ページのチャンクは軽いままになる。
+ */
+export function lessonWordOrderSentences(lesson: GrammarLesson): WordOrderSentence[] {
+  const items: GrammarExample[] = []
+  for (const block of lesson.blocks) {
+    if (block.type === 'examples') items.push(...block.items)
+    else if (block.type === 'contrast') items.push(...block.left.items, ...block.right.items)
+  }
+  return wordOrderSentencesFromExamples(items)
 }

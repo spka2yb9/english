@@ -31,26 +31,6 @@ export const a2Expansions = {
       { en: 'Why does this machine make that noise?', ja: 'なぜこの機械はあの音を立てるのですか。', highlight: 'does this machine make' },
     ],
   },
-  'u01-l4': {
-    explanationTitle: '長い文も骨組みから組み立てる',
-    explanationBody:
-      '英語では、まず **誰が・どうする・何を** という骨組みを完成させ、そのあとに場所や時間を足します。日本語の語順につられて Yesterday at the office I the report finished. のようにせず、I finished the report を先に作るのがコツです。\n\n頻度を表す usually などは一般動詞の前、場所と時間は多くの場合「場所 → 時間」の順に置きます。ただし最も強調したい時間は Yesterday, ... のように文頭へ出せます。語順は単語の役割を示すため、位置を変えると意味も変わり得ます。',
-    examples: [
-      { en: 'The manager sent the team an update yesterday.', ja: 'マネージャーは昨日チームに最新情報を送りました。', highlight: 'The manager sent the team an update' },
-      { en: 'The children played soccer in the park after school.', ja: '子どもたちは放課後、公園でサッカーをしました。', highlight: 'played soccer in the park after school' },
-      { en: 'I usually read the news on the train.', ja: '私はたいてい電車でニュースを読みます。', highlight: 'usually read' },
-    ],
-  },
-  'u01-l5': {
-    explanationTitle: '第4文型の書き換えと、日本語とのずれ',
-    explanationBody:
-      '第4文型(SVOO)は「人 → もの」の順ですが、もののほうが長いときは第3文型(SVO)+to / for に置き換えます。give・send・show・teach などは to、buy・make・get・cook などは for を使うのが目安です。\n\nもう一つの注意点は、日本語の「〜を」に引かれないことです。日本語では「彼をケンと呼ぶ」の「彼を」が目的語に見えますが、英語では him のあとに補語 Ken が続き、him = Ken の関係になります。動詞ごとに「あとに何が続くか」を覚えると、第4文型と第5文型を取り違えにくくなります。',
-    examples: [
-      { en: 'My uncle taught me the guitar.', ja: 'おじは私にギターを教えてくれました。', highlight: 'taught me the guitar' },
-      { en: 'The teacher left the door open.', ja: '先生はドアを開けたままにしました。', highlight: 'left the door open' },
-      { en: 'Can you send me the report?', ja: '私にその報告書を送ってもらえますか。', highlight: 'send me the report' },
-    ],
-  },
   'u02-l1': {
     explanationTitle: '進行形は一時的な場面を切り取る',
     explanationBody:
