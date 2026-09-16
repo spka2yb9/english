@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="ベッドに横になって、気持ちよさそうに眠っているイラスト。">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 306h600v94H0z" class="ground"/>
+  <g transform="translate(300 330)">
+  <path d="M-196 0h392v16h-392z" fill="#8b6437"/>
+  <path d="M-190 16v34M182 16v34" fill="none" stroke="#8b6437" stroke-width="14" stroke-linecap="round"/>
+  <path d="M-196-108h24v108h-24z" fill="#8b6437"/>
+  <rect x="-170" y="-44" width="352" height="46" rx="12" fill="#fffefd" class="o"/>
+  <rect x="-150" y="-32" width="300" height="44" rx="16" class="teal o"/>
+  <rect x="-164" y="-66" width="80" height="32" rx="15" fill="#fffefd" class="o"/>
+  <circle cx="-118" cy="-76" r="28" fill="#f2c29d" stroke="#a86f55" stroke-width="3"/>
+  <path d="M-136-86q18-20 36-2" fill="none" stroke="#34475a" stroke-width="8"/>
+  <path d="M-128-72q10-8 20 0" fill="none" stroke="#2f4055" stroke-width="3" stroke-linecap="round"/>
+</g>
+<g fill="none" stroke="#80909d" stroke-width="4" stroke-linecap="round"><path d="M180 186q22-22 0-44M212 166q18-18 0-36"/></g>
+<path d="M60 386h480" class="a"/>
+</svg>

@@ -12,7 +12,6 @@ export const batch02: VocabularyEntry[] = [
     exampleTranslationJa: 'あなたにとって成功とは何を意味するのか、定義できますか。',
     collocations: ['define a term', 'clearly defined', 'define a goal'],
     wordFormation: 'de-(完全に)+ fin(境界・終わり)。「境界を定める」が原義。',
-    etymology: 'ラテン語 definire(境界を定める)から。fin は final, finish と同語源。',
     relatedWords: ['definition', 'definite', 'definitely'],
   },
   {
@@ -198,7 +197,6 @@ export const batch02: VocabularyEntry[] = [
     exampleTranslationJa: 'ハイキングに行くかどうかは明日の天気次第だ。',
     collocations: ['depend on', 'it depends', 'depend heavily on'],
     wordFormation: 'de-(下に)+ pend(ぶら下がる)。「ぶら下がって支えられる」→「頼る」。',
-    etymology: 'ラテン語 pendere(ぶら下がる)から。pend は suspend, pendant と同語源。',
     relatedWords: ['dependent', 'independent', 'dependence'],
   },
   {
@@ -251,7 +249,6 @@ export const batch02: VocabularyEntry[] = [
     exampleTranslationJa: '駅で見た男の特徴を説明してもらえますか。',
     collocations: ['describe in detail', 'accurately describe', 'describe A as B'],
     wordFormation: 'de-(下へ)+ scribe(書く)。「書き記す」が原義。',
-    etymology: 'ラテン語 scribere(書く)から。script, subscribe と同語源。',
     relatedWords: ['description', 'descriptive', 'explain'],
   },
   {
@@ -338,7 +335,6 @@ export const batch02: VocabularyEntry[] = [
     exampleTranslationJa: 'その火事で地域の何百もの家が焼失した。',
     collocations: ['completely destroy', 'destroy evidence'],
     wordFormation: 'de-(逆・否定)+ stroy(建てる:struct の変形)。「建てたものを壊す」。',
-    etymology: 'ラテン語 destruere から。struct(建てる)は construct, structure と同語源。',
     relatedWords: ['destruction', 'destructive', 'ruin'],
   },
   {
@@ -364,7 +360,6 @@ export const batch02: VocabularyEntry[] = [
     exampleTranslationJa: 'このアプリは文章の誤りを自動的に検出できる。',
     collocations: ['detect a problem', 'detect changes', 'early detection'],
     wordFormation: 'de-(取り除く)+ tect(覆う)。「覆いを取って見つけ出す」。',
-    etymology: 'ラテン語 detegere(覆いを取る)から。tect は protect(前を覆う=守る)と同語源。',
     relatedWords: ['detective', 'detection', 'detector'],
   },
   {
@@ -462,7 +457,6 @@ export const batch02: VocabularyEntry[] = [
     exampleSentence: 'Most people now take photos with a digital camera or a phone.',
     exampleTranslationJa: '今ではほとんどの人がデジタルカメラかスマートフォンで写真を撮る。',
     collocations: ['digital technology', 'the digital age', 'digital devices'],
-    etymology: 'ラテン語 digitus(指)から。指で数を数えたことから「数字の」の意味になった。',
     relatedWords: ['digit', 'electronic', 'online'],
   },
   {
@@ -550,7 +544,6 @@ export const batch02: VocabularyEntry[] = [
     exampleSentence: "The earthquake was the worst natural disaster in the country's history.",
     exampleTranslationJa: 'その地震は国の歴史上最悪の自然災害だった。',
     collocations: ['a natural disaster', 'end in disaster'],
-    etymology: 'イタリア語 disastro から。dis-(悪い)+ astro(星)で「悪い星回り」が原義。astro は astronomy(天文学)と同語源。',
     relatedWords: ['disastrous', 'catastrophe', 'emergency'],
   },
   {
@@ -615,7 +608,6 @@ export const batch02: VocabularyEntry[] = [
     exampleTranslationJa: '部長は議論すらせずにその案を退けた。',
     collocations: ['dismiss an idea', 'dismiss an employee', 'dismiss the claim'],
     wordFormation: 'dis-(離れて)+ miss(送る)。「送り出す」が原義。',
-    etymology: 'ラテン語 mittere(送る)から。miss/mit は submit, permit と同語源。',
     relatedWords: ['dismissal', 'reject', 'fire'],
   },
   {
@@ -677,7 +669,6 @@ export const batch02: VocabularyEntry[] = [
     exampleTranslationJa: '勉強しているとき、大きな音楽は気が散る。',
     collocations: ['distract attention from', 'get distracted', 'distract someone from work'],
     wordFormation: 'dis-(別の方向へ)+ tract(引く)。「注意を別の方向へ引っ張る」。',
-    etymology: 'ラテン語 trahere(引く)から。tract は attract, extract と同語源。',
     relatedWords: ['distraction', 'attract', 'focus'],
   },
   {
@@ -691,7 +682,6 @@ export const batch02: VocabularyEntry[] = [
     exampleTranslationJa: 'ボランティアたちは被災者に食料と水を配った。',
     collocations: ['distribute evenly', 'widely distributed', 'distribute leaflets'],
     wordFormation: 'dis-(別々に)+ tribute(与える)。「別々に分け与える」。',
-    etymology: 'ラテン語 tribuere(割り当てる)から。contribute(貢献する)と同語源。',
     relatedWords: ['distribution', 'contribute', 'deliver'],
   },
   {
@@ -765,7 +755,6 @@ export const batch02: VocabularyEntry[] = [
     exampleSentence: 'Domestic flights are usually cheaper than international ones.',
     exampleTranslationJa: '国内線はたいてい国際線より安い。',
     collocations: ['a domestic flight', 'the domestic market', 'domestic violence'],
-    etymology: 'ラテン語 domus(家)から。「家の中の」→「国内の」へ意味が広がった。',
     relatedWords: ['international', 'household', 'domestically'],
   },
   {
@@ -778,7 +767,6 @@ export const batch02: VocabularyEntry[] = [
     exampleSentence: 'A few large companies dominate the smartphone market.',
     exampleTranslationJa: '少数の大企業がスマートフォン市場を支配している。',
     collocations: ['dominate the market', 'dominate the conversation'],
-    etymology: 'ラテン語 dominus(主人)から。domain(領域)と同語源。',
     relatedWords: ['dominant', 'dominance', 'domain'],
   },
   {
@@ -865,7 +853,6 @@ export const batch02: VocabularyEntry[] = [
     exampleSentence: 'The long drought destroyed most of the corn crop.',
     exampleTranslationJa: '長い干ばつでトウモロコシの収穫の大半がだめになった。',
     collocations: ['a severe drought', 'suffer from drought'],
-    etymology: '古英語で dry(乾いた)と同語源。「乾き切った状態」が原義。',
     relatedWords: ['dry', 'flood', 'famine'],
   },
   {
@@ -975,7 +962,6 @@ export const batch02: VocabularyEntry[] = [
     exampleSentence: 'The global economy is slowly recovering from the crisis.',
     exampleTranslationJa: '世界経済は危機からゆっくりと回復しつつある。',
     collocations: ['the global economy', 'boost the economy', 'economy class'],
-    etymology: 'ギリシャ語 oikonomia(家の管理)から。oikos(家)+ nomos(管理)。',
     relatedWords: ['economic', 'economist', 'finance'],
   },
   {
@@ -1025,7 +1011,6 @@ export const batch02: VocabularyEntry[] = [
     exampleSentence: 'The program educates young people about healthy eating.',
     exampleTranslationJa: 'そのプログラムは健康的な食生活について若者を啓発している。',
     collocations: ['educate children', 'well educated'],
-    etymology: 'ラテン語 educare(育てる)から。duc(導く)は conduct, introduce と同語源。',
     relatedWords: ['education', 'educational', 'educator'],
   },
   {
@@ -1089,7 +1074,6 @@ export const batch02: VocabularyEntry[] = [
     exampleTranslationJa: '市民は先週、新しい市長を選出した。',
     collocations: ['elect a president', 'be elected to office'],
     wordFormation: 'e-(外へ)+ lect(選ぶ)。「選び出す」が原義。',
-    etymology: 'ラテン語 eligere(選び出す)から。lect は select, collect と同語源。',
     relatedWords: ['election', 'voter', 'select'],
   },
   {
@@ -1139,7 +1123,6 @@ export const batch02: VocabularyEntry[] = [
     exampleSentence: 'The new process eliminates the need for paper documents.',
     exampleTranslationJa: '新しい手順により、紙の書類の必要がなくなる。',
     collocations: ['eliminate the need for', 'eliminate errors', 'be eliminated from'],
-    etymology: 'ラテン語 eliminare(敷居の外へ出す)から。e-(外へ)+ limen(敷居)。',
     relatedWords: ['elimination', 'remove', 'get rid of'],
   },
   {
@@ -1177,7 +1160,6 @@ export const batch02: VocabularyEntry[] = [
     exampleTranslationJa: '太陽が雲の後ろから現れた。',
     collocations: ['emerge from', 'emerge as', 'new evidence emerged'],
     wordFormation: 'e-(外へ)+ merge(浸す・沈める)。「水中から外へ出てくる」が原義。',
-    etymology: 'ラテン語 emergere から。merge は submerge(水没させる)と同語源。',
     relatedWords: ['emerging', 'emergence', 'appear'],
   },
   {
@@ -1202,7 +1184,6 @@ export const batch02: VocabularyEntry[] = [
     exampleSentence: 'Music has the power to express deep emotions.',
     exampleTranslationJa: '音楽には深い感情を表現する力がある。',
     collocations: ['express emotions', 'control your emotions', 'mixed emotions'],
-    etymology: 'ラテン語 emovere(外へ動かす)から。e-(外へ)+ movere(動かす)。move と同語源。',
     relatedWords: ['emotional', 'feeling', 'motion'],
   },
   {
@@ -1390,7 +1371,6 @@ export const batch02: VocabularyEntry[] = [
     exampleSentence: 'The new stadium is enormous and can hold eighty thousand people.',
     exampleTranslationJa: '新しいスタジアムは巨大で、8万人を収容できる。',
     collocations: ['an enormous amount of', 'enormous pressure'],
-    etymology: 'ラテン語 enormis から。e-(外)+ norma(基準)で「基準を外れた」→「並外れて大きい」。',
     relatedWords: ['huge', 'massive', 'enormously'],
   },
   {
@@ -1416,7 +1396,6 @@ export const batch02: VocabularyEntry[] = [
     exampleSentence: 'The new coach brought great enthusiasm to the team.',
     exampleTranslationJa: '新しいコーチはチームに大きな熱意をもたらした。',
     collocations: ['with enthusiasm', 'enthusiasm for', 'lose enthusiasm'],
-    etymology: 'ギリシャ語 enthousiasmos(神が内に宿ること)から。en-(中に)+ theos(神)。',
     relatedWords: ['enthusiastic', 'passion', 'energy'],
   },
   {
@@ -1543,7 +1522,6 @@ export const batch02: VocabularyEntry[] = [
     exampleTranslationJa: '1マイルは約1.6キロメートルに相当する。',
     collocations: ['equivalent to', 'the equivalent of'],
     wordFormation: 'equi-(等しい)+ val(価値)+ -ent。「等しい価値の」。',
-    etymology: 'ラテン語 aequus(等しい)+ valere(価値がある)から。equal, value と同語源。',
     relatedWords: ['equal', 'value', 'comparable'],
   },
   {
@@ -1605,7 +1583,6 @@ export const batch02: VocabularyEntry[] = [
     exampleSentence: 'The university was established more than a hundred years ago.',
     exampleTranslationJa: 'その大学は100年以上前に設立された。',
     collocations: ['establish a company', 'establish a relationship', 'well established'],
-    etymology: 'ラテン語 stabilire(安定させる)から。stable(安定した)と同語源。',
     relatedWords: ['establishment', 'found', 'stable'],
   },
   {
@@ -1631,7 +1608,6 @@ export const batch02: VocabularyEntry[] = [
     exampleTranslationJa: '実験に動物を使うことは深刻な倫理的問題を提起する。',
     collocations: ['ethical issues', 'ethical standards'],
     wordFormation: 'ethic(倫理)+ -al(形容詞化)。',
-    etymology: 'ギリシャ語 ethos(性格・習慣)から。',
     relatedWords: ['ethics', 'moral', 'unethical'],
   },
   {
@@ -1645,7 +1621,6 @@ export const batch02: VocabularyEntry[] = [
     exampleTranslationJa: '教師は学期末に各生徒の進歩を評価する。',
     collocations: ['evaluate performance', 'carefully evaluate'],
     wordFormation: 'e-(外へ)+ valu(価値)+ -ate(動詞化)。「価値を測り出す」。',
-    etymology: 'ラテン語 valere(価値がある)から。value と同語源。',
     relatedWords: ['evaluation', 'assess', 'value'],
   },
 ]

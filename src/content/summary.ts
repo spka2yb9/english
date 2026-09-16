@@ -586,7 +586,7 @@ export const grammarLessonSummaries: GrammarLessonSummary[] = [
   }
 ]
 
-export const vocabularyCount = 8000
+export const vocabularyCount = 8800
 
 export const readingPassageCount = 108
 
@@ -601,15 +601,15 @@ export const canDoCoverage: Record<string, number> = {
   "G-B2-2": 9,
   "G-B2-1": 34,
   "V-B2-1": 5269,
-  "V-B1-1": 1700,
-  "V-A2-1": 1031,
+  "V-B1-1": 1781,
+  "V-A2-1": 1750,
   "R-A2-1": 36,
   "R-A2-2": 23,
   "R-B1-2": 30,
   "R-B1-1": 31,
   "R-B2-1": 50,
   "R-B2-2": 46,
-  "L-A2-1": 1467,
-  "L-B1-1": 2180,
+  "L-A2-1": 2179,
+  "L-B1-1": 2261,
   "L-B2-1": 5531
 }

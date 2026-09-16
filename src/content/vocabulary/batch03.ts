@@ -282,7 +282,6 @@ export const batch03: VocabularyEntry[] = [
     exampleSentence: 'A gas pipe exploded, but fortunately no one was hurt.',
     exampleTranslationJa: 'ガス管が爆発したが、幸いけが人はいなかった。',
     collocations: ['a bomb explodes', 'explode with anger'],
-    etymology: 'ラテン語 explodere(拍手やヤジで役者を舞台から追い出す)から。ex-=外へ + plaudere=拍手する。「大きな音とともに外へ出す」イメージが爆発の意味につながった。',
     relatedWords: ['explosion', 'explosive', 'burst'],
   },
   {
@@ -424,7 +423,6 @@ export const batch03: VocabularyEntry[] = [
     exampleSentence: 'Extreme weather events are becoming more common around the world.',
     exampleTranslationJa: '極端な気象現象が世界中でますます一般的になっている。',
     collocations: ['extreme weather', 'extreme sports', 'in extreme cases'],
-    etymology: 'ラテン語 extremus(「外の」を意味する exter の最上級)から。「一番外側の」→極端な。',
     relatedWords: ['extremely', 'excessive', 'moderate'],
   },
   {
@@ -501,7 +499,6 @@ export const batch03: VocabularyEntry[] = [
     exampleSentence: "She never lost faith in her son's ability to succeed.",
     exampleTranslationJa: '彼女は息子が成功する力を信じ続けた。',
     collocations: ['have faith in', 'lose faith', 'religious faith'],
-    etymology: 'ラテン語 fides(信頼)に由来する。faithful や confident に含まれる fid- と同じ語根。',
     relatedWords: ['faithful', 'belief', 'trust'],
   },
   {
@@ -526,7 +523,6 @@ export const batch03: VocabularyEntry[] = [
     exampleSentence: 'Are you familiar with the rules of baseball?',
     exampleTranslationJa: '野球のルールをよくご存じですか。',
     collocations: ['be familiar with', 'look familiar', 'a familiar face'],
-    etymology: 'ラテン語 familia(家族)から。「家族のようによく知っている」が原義。',
     relatedWords: ['family', 'unfamiliar', 'well-known'],
   },
   {
@@ -539,7 +535,6 @@ export const batch03: VocabularyEntry[] = [
     exampleSentence: 'They celebrated their anniversary at a fancy restaurant downtown.',
     exampleTranslationJa: '彼らは繁華街の高級レストランで記念日を祝った。',
     collocations: ['a fancy restaurant', 'a fancy hotel', 'fancy clothes'],
-    etymology: 'fantasy(空想)が短縮してできた語。「空想的な・凝った」→「しゃれた・高級な」。',
     relatedWords: ['fantasy', 'luxurious', 'plain'],
   },
   {
@@ -552,7 +547,6 @@ export const batch03: VocabularyEntry[] = [
     exampleSentence: 'The documentary about deep sea creatures was absolutely fascinating.',
     exampleTranslationJa: '深海生物についてのドキュメンタリーは実に興味深かった。',
     collocations: ['a fascinating story', 'absolutely fascinating', 'find it fascinating'],
-    etymology: 'ラテン語 fascinare(魔法をかける)から。魔法にかけられたように心を奪う、というイメージ。',
     relatedWords: ['fascinate', 'fascinated', 'intriguing'],
   },
   {
@@ -591,7 +585,6 @@ export const batch03: VocabularyEntry[] = [
     exampleSentence: 'It was my fault that we missed the train.',
     exampleTranslationJa: '私たちが電車に乗り遅れたのは私のせいだった。',
     collocations: ["it's my fault", 'find fault with', 'through no fault of your own'],
-    etymology: 'fail と同じくラテン語 fallere(しくじる・欺く)に由来する。',
     relatedWords: ['fail', 'failure', 'mistake'],
   },
   {
@@ -604,7 +597,6 @@ export const batch03: VocabularyEntry[] = [
     exampleSentence: 'Could you do me a favor and water my plants this weekend?',
     exampleTranslationJa: 'お願いがあるんだけど、今週末うちの植物に水をやってくれない?',
     collocations: ['do me a favor', 'ask a favor', 'in favor of'],
-    etymology: 'ラテン語 favere(好意を示す)に由来する。favorite(お気に入り)と同族。',
     relatedWords: ['favorite', 'favorable', 'kindness'],
   },
   {
@@ -667,7 +659,6 @@ export const batch03: VocabularyEntry[] = [
     exampleSentence: 'We built a wooden fence around the garden to keep dogs out.',
     exampleTranslationJa: '犬が入らないように、私たちは庭の周りに木の柵を作った。',
     collocations: ['build a fence', 'a wooden fence', 'climb over a fence'],
-    etymology: 'defense(防御)の語頭が取れてできた語。「囲って守るもの」が原義。',
     relatedWords: ['defense', 'wall', 'gate'],
   },
   {
@@ -692,7 +683,6 @@ export const batch03: VocabularyEntry[] = [
     exampleSentence: 'The latest sales figures show that business is improving.',
     exampleTranslationJa: '最新の売上数値は業績が上向いていることを示している。',
     collocations: ['sales figures', 'a public figure', 'official figures'],
-    etymology: 'ラテン語 figura(形)に由来する。「形」→「姿・人物」→「数字の字形」と意味が広がった。',
     relatedWords: ['number', 'statistic', 'shape'],
   },
   {
@@ -718,7 +708,6 @@ export const batch03: VocabularyEntry[] = [
     exampleSentence: 'She studied finance in college and now works at a bank.',
     exampleTranslationJa: '彼女は大学で金融を学び、今は銀行で働いている。',
     collocations: ['personal finance', 'public finances', 'finance a project'],
-    etymology: '古フランス語 finer(支払いを終える)から。fin-=終わり(finish と同根)。「支払いを済ませること」→財政。',
     relatedWords: ['financial', 'fund', 'budget'],
   },
   {
@@ -756,7 +745,6 @@ export const batch03: VocabularyEntry[] = [
     exampleSentence: 'He works as a lawyer at a large law firm in Chicago.',
     exampleTranslationJa: '彼はシカゴの大手法律事務所で弁護士として働いている。',
     collocations: ['a law firm', 'a firm mattress', 'a firm decision'],
-    etymology: 'ラテン語 firmus(堅固な)から。confirm(確認して固める)と同根。会社の意味はイタリア語 firma(署名)を経由して生まれた。',
     relatedWords: ['company', 'confirm', 'solid'],
   },
   {
@@ -769,7 +757,6 @@ export const batch03: VocabularyEntry[] = [
     exampleSentence: 'My dad fixed the washing machine without calling a repair service.',
     exampleTranslationJa: '父は修理業者を呼ばずに洗濯機を直した。',
     collocations: ['fix a car', 'fix a problem', 'fix a date'],
-    etymology: 'ラテン語 figere(固定する)の過去分詞 fixus から。「固定する」が原義で、「直して正常な状態に留める」→修理する。',
     relatedWords: ['repair', 'mend', 'solve'],
   },
   {
@@ -845,7 +832,6 @@ export const batch03: VocabularyEntry[] = [
     exampleSentence: 'I turned off my phone so I could focus on my homework.',
     exampleTranslationJa: '宿題に集中できるように携帯の電源を切った。',
     collocations: ['focus on', 'the main focus of', 'stay focused'],
-    etymology: 'ラテン語 focus(炉・かまど)から。家の中心である炉→光や注意が集まる点→焦点。',
     relatedWords: ['concentrate', 'attention', 'focused'],
   },
   {
@@ -884,7 +870,6 @@ export const batch03: VocabularyEntry[] = [
     exampleSentence: 'The police had to use force to open the door.',
     exampleTranslationJa: '警察はドアを開けるために力ずくでやらざるを得なかった。',
     collocations: ['use force', 'the police force', 'force someone to do'],
-    etymology: 'ラテン語 fortis(強い)から。effort や comfort にも同じ語根が含まれる。',
     relatedWords: ['strength', 'power', 'effort'],
   },
   {
@@ -948,7 +933,6 @@ export const batch03: VocabularyEntry[] = [
     exampleSentence: 'He made a fortune by investing in technology companies.',
     exampleTranslationJa: '彼はテクノロジー企業への投資でひと財産を築いた。',
     collocations: ['make a fortune', 'cost a fortune', 'good fortune'],
-    etymology: 'ラテン語 fortuna(運命・運命の女神)から。「運」→「運がもたらす富」と意味が広がった。',
     relatedWords: ['fortunate', 'unfortunately', 'wealth'],
   },
   {
@@ -1188,7 +1172,6 @@ export const batch03: VocabularyEntry[] = [
     exampleSentence: 'A large crowd gathered in front of the station to watch the parade.',
     exampleTranslationJa: 'パレードを見ようと大勢の人が駅前に集まった。',
     collocations: ['gather information', 'a crowd gathers', 'gather around'],
-    etymology: 'together(一緒に)と同じゲルマン語の語根から。「一つに集める」が原義。',
     relatedWords: ['collect', 'assemble', 'together'],
   },
   {
@@ -1240,7 +1223,6 @@ export const batch03: VocabularyEntry[] = [
     exampleSentence: "It was generous of him to pay for everyone's dinner.",
     exampleTranslationJa: '全員の夕食代を払うとは彼は気前がよかった。',
     collocations: ['generous with', 'a generous offer', 'generous support'],
-    etymology: 'ラテン語 generosus(高貴な生まれの)から。gen=生まれ。「良家の生まれ」→「気前がよい」と意味が変化した。',
     relatedWords: ['generosity', 'kind', 'selfish'],
   },
   {
@@ -1253,7 +1235,6 @@ export const batch03: VocabularyEntry[] = [
     exampleSentence: 'The nurse was very gentle with the frightened child.',
     exampleTranslationJa: 'その看護師はおびえた子どもにとても優しく接した。',
     collocations: ['a gentle voice', 'a gentle breeze', 'be gentle with'],
-    etymology: 'ラテン語 gentilis(同じ一族の→良家の)から。gentleman の gentle も同じで、「上品な→優しい」と意味が変化した。',
     relatedWords: ['gentleman', 'gently', 'mild'],
   },
   {
@@ -1340,7 +1321,6 @@ export const batch03: VocabularyEntry[] = [
     exampleSentence: 'The country was governed by the same party for thirty years.',
     exampleTranslationJa: 'その国は30年間同じ政党によって統治された。',
     collocations: ['govern a country', 'the rules governing'],
-    etymology: 'ギリシャ語 kybernan(船の舵を取る)がラテン語 gubernare を経て英語に入った。「国という船の舵を取る」イメージ。',
     relatedWords: ['government', 'governor', 'rule'],
   },
   {
@@ -1480,7 +1460,6 @@ export const batch03: VocabularyEntry[] = [
     exampleSentence: 'Farmers were busy with the rice harvest all through October.',
     exampleTranslationJa: '農家の人々は10月の間ずっと稲の収穫で忙しかった。',
     collocations: ['a good harvest', 'the harvest season', 'harvest crops'],
-    etymology: '古英語で「秋」を意味した hærfest が、秋に行う収穫そのものを指すようになった。',
     relatedWords: ['crop', 'agriculture', 'farming'],
   },
   {
@@ -1570,7 +1549,6 @@ export const batch03: VocabularyEntry[] = [
     exampleSentence: 'She watched in horror as the car slid off the road.',
     exampleTranslationJa: '彼女は車が道路から滑り落ちるのを恐怖の中で見つめた。',
     collocations: ['a horror movie', 'in horror', 'to my horror'],
-    etymology: 'ラテン語 horrere(毛が逆立つ)から。「身の毛もよだつ」恐怖を表す。',
     relatedWords: ['horrible', 'terror', 'fear'],
   },
   {
@@ -1620,7 +1598,6 @@ export const batch03: VocabularyEntry[] = [
     exampleSentence: 'A good sense of humor helps in stressful situations.',
     exampleTranslationJa: '優れたユーモアのセンスはストレスの多い状況で役に立つ。',
     collocations: ['a sense of humor', 'dark humor'],
-    etymology: 'ラテン語 humor(体液)から。かつては体液のバランスが気質や気分を決めると考えられ、「気分」→「おかしさ」へと意味が変化した。',
     relatedWords: ['humorous', 'funny', 'joke'],
   },
   {
@@ -1645,7 +1622,6 @@ export const batch03: VocabularyEntry[] = [
     exampleSentence: 'The hurricane destroyed hundreds of homes along the coast.',
     exampleTranslationJa: 'そのハリケーンは沿岸の何百もの家屋を破壊した。',
     collocations: ['a powerful hurricane', 'hurricane season'],
-    etymology: 'カリブ海の先住民タイノ族の嵐の神フラカン(Huracán)に由来し、スペイン語 huracán を経て英語に入った。',
     relatedWords: ['storm', 'typhoon', 'tornado'],
   },
   {

@@ -213,9 +213,7 @@ export type VocabularyEntry = {
   collocations?: string[]
   /** 語形成(接頭辞・接尾辞・語根)の日本語解説 */
   wordFormation?: string
-  /** 確実な場合のみ記載する語源 */
-  etymology?: string
-  /** 記憶フック(語源とは明確に区別する) */
+  /** 記憶フック(思い出すための手がかり) */
   mnemonic?: string
   relatedWords?: string[]
 }

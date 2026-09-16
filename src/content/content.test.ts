@@ -530,10 +530,10 @@ describe('英文の作られ方ページの検証', () => {
 })
 
 describe('語彙データセットの検証', () => {
-  // B2到達には6,500〜7,500語が要る。4,500語から増補し、8,000語で区切りとした。
+  // B2到達には6,500〜7,500語が要る。4,500語から増補し、8,000語を経て、A1相当の基礎語を足して8,800語とした。
   // 語を足したらこの数も一緒に上げる(減っていないことを見張るための数)。
   it('見出し語がそろい、IDと見出し語が一意である', () => {
-    expect(allVocabulary).toHaveLength(8000)
+    expect(allVocabulary).toHaveLength(8800)
     expect(new Set(allVocabulary.map((e) => e.id)).size).toBe(allVocabulary.length)
     expect(new Set(allVocabulary.map((e) => e.word.toLowerCase())).size).toBe(allVocabulary.length)
   })

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="海の上で渦を巻く雲から激しい雨が降り、木が風にしなっているイラスト。">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#eef3fa"/>
+  <path d="M0 306h600v94H0z" class="ground"/>
+  <g transform="translate(300 40)"><path d="M0 0L3 1L5 5L5 9L2 14L-3 17L-11 18L-19 15L-26 9L-31 -0L-33 -12L-29 -25L-20 -37L-7 -45L10 -48L27 -45L44 -35L56 -19L63 2L62 25L52 47L34 65L11 76L-17 78L-45 71L-69 53L-86 27L-94 -4L-90 -38L-74 -69L-48 -93L-13 -107L25 -109L63 -96L95 -71L117 -35L125 7L118 51L96 91L60 122L15 139L-34 139L-82 122L-121 88" fill="none" stroke="#816eb2" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g stroke="#4e86c6" stroke-width="6" stroke-linecap="round">
+  <path d="M96 180l-20 44"/><path d="M160 236l-20 44"/><path d="M232 150l-20 44"/><path d="M376 170l-20 44"/><path d="M440 226l-20 44"/><path d="M508 166l-20 44"/><path d="M300 120l-20 44"/><path d="M120 300l-20 44"/><path d="M420 318l-20 44"/>
+</g>
+<g transform="translate(120 352) rotate(-26)">
+  <path d="M-8 0h16v-86h-16z" class="goldd"/>
+  <path d="M-4-70q-54-14-66-56 58 6 70 46z" class="greenp o"/>
+  <path d="M4-70q54-14 66-56-58 6-70 46z" class="greenp o"/>
+  <circle cy="-98" r="34" class="greenp o"/>
+</g>
+<path d="M30 392q60-26 120 0t120 0 120 0 120 0" fill="none" stroke="#4e86c6"
+  stroke-width="6" stroke-linecap="round"/>
+</svg>

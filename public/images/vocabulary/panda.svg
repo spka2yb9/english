@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="竹を持って座っているパンダのイラスト。">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 306h600v94H0z" class="ground"/>
+  <g transform="translate(300 250)">
+  <ellipse cy="66" rx="88" ry="78" fill="#fffefd" class="o"/>
+  <ellipse cx="-72" cy="118" rx="36" ry="26" class="ink"/>
+  <ellipse cx="72" cy="118" rx="36" ry="26" class="ink"/>
+  <ellipse cx="-80" cy="40" rx="32" ry="46" transform="rotate(-18 -80 40)" class="ink"/>
+  <ellipse cx="80" cy="40" rx="32" ry="46" transform="rotate(18 80 40)" class="ink"/>
+  <circle cy="-42" r="72" fill="#fffefd" class="o"/>
+  <circle cx="-58" cy="-92" r="27" class="ink"/>
+  <circle cx="58" cy="-92" r="27" class="ink"/>
+  <ellipse cx="-28" cy="-46" rx="21" ry="27" transform="rotate(-16 -28 -46)" class="ink"/>
+  <ellipse cx="28" cy="-46" rx="21" ry="27" transform="rotate(16 28 -46)" class="ink"/>
+  <circle cx="-28" cy="-46" r="7" fill="#fffefd"/><circle cx="28" cy="-46" r="7" fill="#fffefd"/>
+  <ellipse cy="-14" rx="15" ry="11" fill="#fffefd" class="o"/>
+  <path d="M0-4q-14 16-4 24" fill="none" stroke="#2f4055" stroke-width="3"/>
+</g>
+<g transform="translate(150 210) rotate(12)">
+  <path d="M0-150v300" fill="none" stroke="#4e986a" stroke-width="17" stroke-linecap="round"/>
+  <path d="M-9-80h18M-9-16h18M-9 48h18M-9 112h18" fill="none" stroke="#34734d" stroke-width="5"/>
+  <path d="M0-124q-52-16-66-58 46-6 66 58z" class="greenp o"/>
+  <path d="M0-92q52-16 66-58-46-6-66 58z" class="greenp o"/>
+</g>
+<path d="M60 386h480" class="a"/>
+</svg>

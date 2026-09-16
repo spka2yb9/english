@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="10のまとまりと9つのボールが並んでいるイラスト。">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 306h600v94H0z" class="ground"/>
+  <g transform="translate(180 220)">
+  <rect x="-172" y="-72" width="344" height="154" rx="14" fill="#fffdf6" class="o"/>
+  <g fill="none" stroke="#80909d" stroke-width="3">
+    <path d="M-69 -72v154"/><path d="M0 -72v154"/><path d="M69 -72v154"/><path d="M138 -72v154"/>
+    <path d="M-172 5h344"/>
+  </g>
+  <circle cx="-138" cy="-36" r="24" class="coral o"/><circle cx="-69" cy="-36" r="24" class="gold o"/><circle cx="0" cy="-36" r="24" class="teal o"/><circle cx="69" cy="-36" r="24" class="violet o"/><circle cx="138" cy="-36" r="24" class="blue o"/><circle cx="-138" cy="42" r="24" class="green o"/><circle cx="-69" cy="42" r="24" class="coral o"/><circle cx="0" cy="42" r="24" class="gold o"/><circle cx="69" cy="42" r="24" class="teal o"/><circle cx="138" cy="42" r="24" class="violet o"/>
+</g>
+<circle cx="432" cy="160" r="25" class="coral o"/><circle cx="494" cy="160" r="25" class="gold o"/><circle cx="556" cy="160" r="25" class="teal o"/><circle cx="432" cy="222" r="25" class="violet o"/><circle cx="494" cy="222" r="25" class="blue o"/><circle cx="556" cy="222" r="25" class="green o"/><circle cx="432" cy="284" r="25" class="coral o"/><circle cx="494" cy="284" r="25" class="gold o"/><circle cx="556" cy="284" r="25" class="teal o"/>
+</svg>

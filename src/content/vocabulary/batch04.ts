@@ -11,7 +11,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'She decided to ignore the rude comment and keep walking.',
     exampleTranslationJa: '彼女は失礼なコメントを無視して歩き続けることにした。',
     collocations: ['ignore advice', 'ignore a warning', 'completely ignore'],
-    etymology: 'ラテン語 ignorare「知らない」(in-=否定 + 「知る」を表す語根)に由来。',
     relatedWords: ['ignorance', 'ignorant', 'overlook'],
   },
   {
@@ -37,7 +36,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'The teacher used a simple diagram to illustrate her point.',
     exampleTranslationJa: '先生は簡単な図を使って自分の言いたいことを説明した。',
     collocations: ['illustrate a point', 'clearly illustrate', 'illustrate with examples'],
-    etymology: 'ラテン語 illustrare「照らす、明らかにする」(in-=上に + lustrare=照らす)に由来。',
     relatedWords: ['illustration', 'demonstrate', 'example'],
   },
   {
@@ -50,7 +48,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'The company wants to improve its public image.',
     exampleTranslationJa: 'その会社は世間でのイメージを良くしたいと考えている。',
     collocations: ['public image', 'brand image', 'create an image'],
-    etymology: 'ラテン語 imago「像、似姿」に由来。imagine と同語源。',
     relatedWords: ['imagine', 'imagination', 'picture'],
   },
   {
@@ -231,7 +228,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'The price of the tour includes lunch and museum tickets.',
     exampleTranslationJa: 'ツアーの料金には昼食と美術館のチケットが含まれている。',
     collocations: ['include in', 'prices include'],
-    etymology: 'ラテン語 includere「閉じ込める」(in-=中に + claudere=閉じる)に由来。',
     relatedWords: ['including', 'inclusive', 'exclude', 'contain'],
   },
   {
@@ -348,7 +344,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'Recent studies indicate that regular exercise improves sleep.',
     exampleTranslationJa: '最近の研究は、定期的な運動が睡眠を改善することを示している。',
     collocations: ['research indicates', 'clearly indicate', 'indicate that'],
-    etymology: 'ラテン語 indicare「指し示す」に由来。dict(言う・示す)系の語根を含む。',
     relatedWords: ['indication', 'indicator', 'suggest'],
   },
   {
@@ -425,7 +420,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: "Parents have a strong influence on their children's habits.",
     exampleTranslationJa: '親は子どもの習慣に強い影響を与える。',
     collocations: ['have an influence on', 'under the influence of', 'strong influence'],
-    etymology: 'ラテン語 influere「流れ込む」(in-=中へ + fluere=流れる)に由来。星から流れ込む力が人を左右するという占星術の考えから。',
     relatedWords: ['influential', 'impact', 'affect'],
   },
   {
@@ -438,7 +432,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'Please inform the office if you change your address.',
     exampleTranslationJa: '住所を変更した場合は事務所に知らせてください。',
     collocations: ['inform somebody of', 'keep somebody informed'],
-    etymology: 'ラテン語 informare「形づくる」(in- + forma=形)に由来。「心に形を与える」→教える、知らせる。',
     relatedWords: ['information', 'informative', 'notify'],
   },
   {
@@ -501,7 +494,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'Two players were injured during the soccer match.',
     exampleTranslationJa: 'サッカーの試合中に2人の選手が負傷した。',
     collocations: ['be seriously injured', 'be injured in an accident'],
-    etymology: 'ラテン語 injuria「不正、侵害」(in-=否定 + jus=法・正義)に由来。',
     relatedWords: ['injury', 'injured', 'hurt', 'wound'],
   },
   {
@@ -592,7 +584,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'Her speech inspired many young people to start their own businesses.',
     exampleTranslationJa: '彼女のスピーチは多くの若者を起業へと奮い立たせた。',
     collocations: ['inspire somebody to do', 'be inspired by'],
-    etymology: 'ラテン語 inspirare「息を吹き込む」(in-=中へ + spirare=息をする)に由来。',
     relatedWords: ['inspiration', 'inspiring', 'motivate'],
   },
   {
@@ -681,7 +672,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'The piano is one of the most popular instruments to learn.',
     exampleTranslationJa: 'ピアノは習い事として最も人気のある楽器の一つだ。',
     collocations: ['musical instrument', 'play an instrument', 'precision instrument'],
-    etymology: 'ラテン語 instruere「備え付ける」に由来。instruct と同じ語根。',
     relatedWords: ['instrumental', 'tool', 'device'],
   },
   {
@@ -733,7 +723,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'We intend to open a second store next year.',
     exampleTranslationJa: '私たちは来年2号店を開く つもりだ。',
     collocations: ['intend to do', 'be intended for'],
-    etymology: 'ラテン語 intendere「〜へ(心を)向ける、伸ばす」(in-=〜へ + tendere=伸ばす)に由来。',
     relatedWords: ['intention', 'intended', 'plan'],
   },
   {
@@ -746,7 +735,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'The heat was so intense that we stayed inside all day.',
     exampleTranslationJa: '暑さがあまりに激しかったので、私たちは一日中屋内にいた。',
     collocations: ['intense heat', 'intense pressure', 'intense competition'],
-    etymology: 'ラテン語 intensus「張りつめた」(intendere「伸ばす」の過去分詞)に由来。',
     relatedWords: ['intensity', 'intensive', 'extreme'],
   },
   {
@@ -811,7 +799,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'People can interpret the same painting in very different ways.',
     exampleTranslationJa: '人は同じ絵をまったく異なる仕方で解釈することがある。',
     collocations: ['interpret as', 'interpret data', 'widely interpreted'],
-    etymology: 'ラテン語 interpres「仲介者、通訳者」に由来。inter-=間 →「両者の間に立って意味を伝える」。',
     relatedWords: ['interpretation', 'interpreter', 'translate'],
   },
   {
@@ -850,7 +837,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'They decided to invest their savings in a small restaurant.',
     exampleTranslationJa: '彼らは貯金を小さなレストランに投資することにした。',
     collocations: ['invest in', 'invest money', 'invest time'],
-    etymology: 'ラテン語 investire「衣を着せる」(in- + vestis=衣服)に由来。のちにイタリア語で「資金を投じる」の意味が生まれた。',
     relatedWords: ['investment', 'investor', 'fund'],
   },
   {
@@ -863,7 +849,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'The police are investigating the cause of the fire.',
     exampleTranslationJa: '警察は火事の原因を調査している。',
     collocations: ['investigate a crime', 'thoroughly investigate', 'investigate a complaint'],
-    etymology: 'ラテン語 investigare「跡をたどる」(vestigium=足跡)に由来。',
     relatedWords: ['investigation', 'investigator', 'examine'],
   },
   {
@@ -902,7 +887,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'The job involves traveling to other countries several times a year.',
     exampleTranslationJa: 'その仕事には年に数回の海外出張が含まれる。',
     collocations: ['involve doing', 'be involved in', 'get involved'],
-    etymology: 'ラテン語 involvere「巻き込む」(in-=中へ + volvere=回す・巻く)に由来。',
     relatedWords: ['involved', 'involvement', 'include'],
   },
   {
@@ -928,7 +912,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'Climate change is one of the most important issues of our time.',
     exampleTranslationJa: '気候変動は現代の最も重要な問題の一つだ。',
     collocations: ['raise an issue', 'social issues', 'deal with an issue'],
-    etymology: '古フランス語 issir「外へ出る」(ラテン語 exire)に由来。「出てくるもの」→発行物、論点。',
     relatedWords: ['problem', 'matter', 'topic'],
   },
   {
@@ -941,7 +924,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'Please check that every item on the list is packed.',
     exampleTranslationJa: 'リストのすべての品物が荷造りされているか確認してください。',
     collocations: ['item on the list', 'luxury item', 'news item'],
-    etymology: 'ラテン語 item「同様に」に由来。リストで各項目の前に置かれた語がそのまま名詞になった。',
     relatedWords: ['list', 'article', 'goods'],
   },
   {
@@ -954,7 +936,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'Her research was published in a famous medical journal.',
     exampleTranslationJa: '彼女の研究は有名な医学雑誌に掲載された。',
     collocations: ['academic journal', 'scientific journal', 'keep a journal'],
-    etymology: 'ラテン語 diurnalis「毎日の」に由来。もとは「日々の記録」の意味。journey と同語源。',
     relatedWords: ['journalist', 'journalism', 'magazine', 'diary'],
   },
   {
@@ -967,7 +948,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'The journey from the airport to the hotel takes about an hour.',
     exampleTranslationJa: '空港からホテルまでの道のりは約1時間かかる。',
     collocations: ['long journey', 'safe journey', 'journey to'],
-    etymology: '古フランス語 journee「一日(の旅)」に由来。ラテン語 diurnus「日の」から。',
     relatedWords: ['trip', 'travel', 'voyage'],
   },
   {
@@ -980,7 +960,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: "You shouldn't judge people by their appearance.",
     exampleTranslationJa: '人を見た目で判断すべきではない。',
     collocations: ['judge by', 'judge a competition', 'federal judge'],
-    etymology: 'ラテン語 judex「裁判官」(jus=法 + dicere=言う)に由来。「法を告げる人」。',
     relatedWords: ['judgment', 'justice', 'court'],
   },
   {
@@ -1006,7 +985,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'She started as a junior member of the design team.',
     exampleTranslationJa: '彼女はデザインチームの若手メンバーとしてスタートした。',
     collocations: ['junior staff', 'junior high school'],
-    etymology: 'ラテン語 junior「より若い」(juvenis「若い」の比較級)に由来。',
     relatedWords: ['senior', 'youth'],
   },
   {
@@ -1094,7 +1072,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'The cost of labor has risen sharply in recent years.',
     exampleTranslationJa: '近年、人件費が急激に上昇している。',
     collocations: ['labor costs', 'labor market', 'manual labor'],
-    etymology: 'ラテン語 labor「労働、骨折り」に由来。イギリス英語では labour とつづる。',
     relatedWords: ['laborer', 'laboratory', 'work', 'employment'],
   },
   {
@@ -1184,7 +1161,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'Between tea and coffee, I prefer the latter.',
     exampleTranslationJa: '紅茶とコーヒーなら、私は後者の方が好きだ。',
     collocations: ['the latter half', 'the former and the latter'],
-    etymology: 'late の古い比較級。「あとの方の」が原義。',
     mnemonic: 'former(前者)とペアで「フォーマー前・ラター後」とセットで覚える。',
     relatedWords: ['former', 'later', 'last'],
   },
@@ -1198,7 +1174,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'The company will launch its new smartphone in October.',
     exampleTranslationJa: 'その会社は10月に新しいスマートフォンを発売する。',
     collocations: ['launch a product', 'launch a campaign', 'launch a rocket'],
-    etymology: '古フランス語 lancier「槍を投げる」に由来。lance(槍)と同語源。',
     relatedWords: ['release', 'start', 'introduce'],
   },
   {
@@ -1273,7 +1248,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'The professor gave an interesting lecture on modern art.',
     exampleTranslationJa: 'その教授は現代美術について興味深い講義を行った。',
     collocations: ['give a lecture', 'attend a lecture', 'lecture on'],
-    etymology: 'ラテン語 legere「読む」の語根 lect から。「読んで聞かせること」が原義。',
     relatedWords: ['lecturer', 'seminar', 'presentation'],
   },
   {
@@ -1362,7 +1336,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'There is a speed limit of thirty miles per hour in this area.',
     exampleTranslationJa: 'この地域には時速30マイルの速度制限がある。',
     collocations: ['speed limit', 'time limit', 'set a limit'],
-    etymology: 'ラテン語 limes「境界」に由来。',
     relatedWords: ['limited', 'limitation', 'restrict'],
   },
   {
@@ -1400,7 +1373,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'Drink plenty of liquids when you have a fever.',
     exampleTranslationJa: '熱があるときは水分をたっぷりとりなさい。',
     collocations: ['clear liquid', 'liquid soap'],
-    etymology: 'ラテン語 liquidus「流れる、澄んだ」に由来。',
     relatedWords: ['solid', 'gas', 'fluid'],
   },
   {
@@ -1426,7 +1398,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'She is studying English literature at university.',
     exampleTranslationJa: '彼女は大学で英文学を勉強している。',
     collocations: ['English literature', 'classic literature', 'scientific literature'],
-    etymology: 'ラテン語 littera「文字」に由来。',
     relatedWords: ['literary', 'novel', 'poetry'],
   },
   {
@@ -1552,7 +1523,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'The castle once belonged to a powerful lord.',
     exampleTranslationJa: 'その城はかつて有力な領主のものだった。',
     collocations: ['the House of Lords', 'lord of the castle'],
-    etymology: '古英語 hlaford「パンを守る者」(hlaf=パン + weard=番人)に由来。',
     relatedWords: ['lady', 'noble', 'master'],
   },
   {
@@ -1591,7 +1561,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: "The team's loyal fans supported them even after the defeat.",
     exampleTranslationJa: 'そのチームの忠実なファンは、敗北の後でさえチームを支え続けた。',
     collocations: ['loyal customer', 'loyal friend', 'remain loyal to'],
-    etymology: '古フランス語を経てラテン語 legalis「法にかなった」に由来。legal と同語源。',
     relatedWords: ['loyalty', 'faithful', 'devoted'],
   },
   {
@@ -1604,7 +1573,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'For most people, eating out every day is a luxury.',
     exampleTranslationJa: 'ほとんどの人にとって、毎日外食することはぜいたくだ。',
     collocations: ['luxury hotel', 'luxury goods', 'live in luxury'],
-    etymology: 'ラテン語 luxus「過剰、ぜいたく」に由来。',
     relatedWords: ['luxurious', 'comfort', 'expensive'],
   },
   {
@@ -1630,7 +1598,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'Regular exercise helps you maintain a healthy weight.',
     exampleTranslationJa: '定期的な運動は健康的な体重を維持するのに役立つ。',
     collocations: ['maintain a relationship', 'maintain standards', 'maintain equipment'],
-    etymology: 'ラテン語 manu tenere「手で保持する」(manus=手 + tenere=保つ)に由来。',
     relatedWords: ['maintenance', 'keep', 'preserve'],
   },
   {
@@ -1643,7 +1610,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'Traffic is a major problem in most big cities.',
     exampleTranslationJa: '交通渋滞はほとんどの大都市で重大な問題だ。',
     collocations: ['major problem', 'major role', 'major in economics'],
-    etymology: 'ラテン語 major「より大きい」(magnus「大きい」の比較級)に由来。',
     relatedWords: ['majority', 'minor', 'main', 'significant'],
   },
   {
@@ -1669,7 +1635,6 @@ export const batch04: VocabularyEntry[] = [
     exampleSentence: 'She manages a small team of five designers.',
     exampleTranslationJa: '彼女は5人のデザイナーからなる小さなチームを管理している。',
     collocations: ['manage to do', 'manage a company', 'manage time'],
-    etymology: 'イタリア語 maneggiare「(馬を)扱う」に由来。ラテン語 manus「手」が語根。',
     relatedWords: ['management', 'manager', 'handle'],
   },
   {

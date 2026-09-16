@@ -49,6 +49,14 @@ import { plus36 } from './plus36.ts'
 import { plus37 } from './plus37.ts'
 import { plus38 } from './plus38.ts'
 import { plus39 } from './plus39.ts'
+import { plus40 } from './plus40.ts'
+import { plus41 } from './plus41.ts'
+import { plus42 } from './plus42.ts'
+import { plus43 } from './plus43.ts'
+import { plus44 } from './plus44.ts'
+import { plus45 } from './plus45.ts'
+import { plus46 } from './plus46.ts'
+import { plus47 } from './plus47.ts'
 import { expandedVocabulary } from './expanded.ts'
 import { extendedVocabulary } from './extended.ts'
 import { supplementalVocabulary } from './supplemental.ts'
@@ -106,6 +114,14 @@ export const allVocabulary: VocabularyEntry[] = [
   ...plus37,
   ...plus38,
   ...plus39,
+  ...plus40,
+  ...plus41,
+  ...plus42,
+  ...plus43,
+  ...plus44,
+  ...plus45,
+  ...plus46,
+  ...plus47,
 ].map((entry) => ({
   ...entry,
   ...(vocabularyNotes[entry.id] ? { mnemonic: vocabularyNotes[entry.id] } : {}),

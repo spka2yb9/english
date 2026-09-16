@@ -61,7 +61,6 @@ export const batch06: VocabularyEntry[] = [
     exampleSentence: 'Global warming is a phenomenon that affects the whole planet.',
     exampleTranslationJa: '地球温暖化は、地球全体に影響を及ぼす現象だ。',
     collocations: ['a natural phenomenon', 'a social phenomenon'],
-    etymology: 'ギリシャ語 phainomenon(現れるもの)から。複数形は phenomena。',
     relatedWords: ['event', 'occurrence', 'trend'],
   },
   {
@@ -74,7 +73,6 @@ export const batch06: VocabularyEntry[] = [
     exampleSentence: 'She studied philosophy at university in London.',
     exampleTranslationJa: '彼女はロンドンの大学で哲学を学んだ。',
     collocations: ['a philosophy of life', 'study philosophy'],
-    etymology: 'ギリシャ語 philo-(愛する)+ sophia(知恵)から。「知を愛すること」が原義。',
     relatedWords: ['philosopher', 'philosophical', 'theory'],
   },
   {
@@ -221,7 +219,6 @@ export const batch06: VocabularyEntry[] = [
     exampleSentence: 'My father never talks about politics at dinner.',
     exampleTranslationJa: '父は夕食の席では決して政治の話をしない。',
     collocations: ['local politics', 'go into politics'],
-    etymology: 'ギリシャ語 polis(都市国家)に由来。',
     relatedWords: ['political', 'politician', 'policy'],
   },
   {
@@ -247,7 +244,6 @@ export const batch06: VocabularyEntry[] = [
     exampleSentence: 'The population of the city has doubled in twenty years.',
     exampleTranslationJa: 'その都市の人口は20年で2倍になった。',
     collocations: ['a large population', 'the aging population'],
-    etymology: 'ラテン語 populus(人々)から。popular と同語源。',
     relatedWords: ['popular', 'inhabitant', 'resident'],
   },
   {
@@ -260,7 +256,6 @@ export const batch06: VocabularyEntry[] = [
     exampleSentence: 'The ship arrived at the port early in the morning.',
     exampleTranslationJa: '船は早朝に港に到着した。',
     collocations: ['a fishing port', 'leave port'],
-    etymology: 'ラテン語 portus(港)から。airport, transport にも port が含まれる。',
     relatedWords: ['harbor', 'airport', 'dock'],
   },
   {
@@ -383,7 +378,6 @@ export const batch06: VocabularyEntry[] = [
     exampleSentence: 'Millions of people around the world live in poverty.',
     exampleTranslationJa: '世界中で何百万人もの人々が貧困の中で暮らしている。',
     collocations: ['live in poverty', 'reduce poverty', 'the poverty line'],
-    etymology: 'ラテン語 pauper(貧しい)に由来。poor と同語源。',
     relatedWords: ['poor', 'wealth', 'hunger'],
   },
   {
@@ -646,7 +640,6 @@ export const batch06: VocabularyEntry[] = [
     exampleSentence: 'Safety is our primary concern at this factory.',
     exampleTranslationJa: 'この工場では安全が最優先事項だ。',
     collocations: ['the primary reason', 'primary school'],
-    etymology: 'ラテン語 primus(第一の)から。prime と同語源。',
     relatedWords: ['prime', 'primarily', 'secondary'],
   },
   {
@@ -1085,7 +1078,6 @@ export const batch06: VocabularyEntry[] = [
     exampleSentence: 'She is studying psychology to understand human behavior.',
     exampleTranslationJa: '彼女は人間の行動を理解するために心理学を学んでいる。',
     collocations: ['study psychology', 'child psychology'],
-    etymology: 'ギリシャ語 psyche(魂・心)+ logos(学問)から。語頭の p は発音しない。',
     relatedWords: ['psychologist', 'psychological', 'mental'],
   },
   {
@@ -1483,7 +1475,6 @@ export const batch06: VocabularyEntry[] = [
     exampleSentence: 'Keep your receipt in case you want to return the item.',
     exampleTranslationJa: '商品を返品したくなったときのために、レシートを取っておきなさい。',
     collocations: ['keep the receipt', 'ask for a receipt'],
-    etymology: 'ラテン語 recipere(受け取る)から。receive と同語源。p は発音しない。',
     relatedWords: ['receive', 'invoice', 'refund'],
   },
   {

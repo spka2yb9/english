@@ -10,10 +10,12 @@ import {
 } from './vocabSelection'
 
 function seededRng(seed: number): () => number {
-  let s = seed
+  let s = seed >>> 0
   return () => {
-    s = (s * 1664525 + 1013904223) % 4294967296
-    return s / 4294967296
+    s = (s + 0x6d2b79f5) >>> 0
+    let t = Math.imul(s ^ (s >>> 15), 1 | s)
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
   }
 }
 
@@ -61,6 +63,79 @@ describe('selectSessionWords', () => {
     const result = selectSessionWords(POOL, stats, NOW, 10, seededRng(1))
     const unseenPicked = result.filter((id) => !stats[id])
     expect(unseenPicked.length).toBeGreaterThan(0)
+  })
+})
+
+describe('レベルの重み付け', () => {
+  const levelOf = (id: string) => (id.startsWith('a') ? 'A2' : id.startsWith('b') ? 'B1' : 'B2')
+  const A2 = Array.from({ length: 30 }, (_, i) => `a${i}`)
+  const B2 = Array.from({ length: 30 }, (_, i) => `c${i}`)
+
+  it('未出題語はレベルの低い語ほど選ばれやすい', () => {
+    let a2 = 0
+    let b2 = 0
+    for (let seed = 1; seed <= 100; seed++) {
+      const picked = selectSessionWords([...A2, ...B2], {}, NOW, 5, seededRng(seed), levelOf)
+      a2 += picked.filter((id) => levelOf(id) === 'A2').length
+      b2 += picked.filter((id) => levelOf(id) === 'B2').length
+    }
+    // 同数のプールでも、重み 3:1 の A2 の方が多く出る
+    expect(a2).toBeGreaterThan(b2 * 1.5)
+  })
+
+  it('予定日を過ぎた語はレベルの低い語から先に出す', () => {
+    const stats: WordStats = {}
+    // 全語が同じ条件で延滞している状態
+    for (const id of [...A2, ...B2]) {
+      stats[id] = { seen: 1, known: 0, unknown: 1, lastAt: NOW - 3 * DAY, streak: 0 }
+    }
+    const picked = selectSessionWords([...A2, ...B2], stats, NOW, 5, seededRng(1), levelOf)
+    expect(picked).toHaveLength(5)
+    expect(picked.every((id) => levelOf(id) === 'A2')).toBe(true)
+  })
+
+  it('再学習中の語はレベルに関係なく最優先で戻る', () => {
+    let stats: WordStats = {}
+    stats = recordAnswer(stats, 'c0', false, NOW) // B2 を間違えた
+    for (let i = 0; i < 10; i++) {
+      stats[`a${i}`] = { seen: 4, known: 4, unknown: 0, lastAt: NOW, streak: 4 } // A2 は予定日前
+    }
+    const picked = selectSessionWords([...A2.slice(0, 10), 'c0'], stats, NOW, 5, seededRng(1), levelOf)
+    expect(picked).toContain('c0')
+  })
+
+  it('再学習中が枠を超えるときは、レベルの低い語と古い取りこぼしが優先される', () => {
+    // A2 3語と B2 10語は1日前、B2 1語は30日前に間違えた状態
+    const fresh = [...A2.slice(0, 3), ...B2.slice(0, 10)]
+    let stats: WordStats = {}
+    for (const id of fresh) stats = recordAnswer(stats, id, false, NOW - DAY)
+    stats = recordAnswer(stats, 'c10', false, NOW - 30 * DAY)
+
+    const appearances = new Map<string, number>()
+    const sessions = 200
+    for (let seed = 1; seed <= sessions; seed++) {
+      const picked = selectSessionWords([...fresh, 'c10'], stats, NOW, 5, seededRng(seed), levelOf)
+      for (const id of picked) appearances.set(id, (appearances.get(id) ?? 0) + 1)
+    }
+    const rate = (id: string) => appearances.get(id) ?? 0
+    const a2PerWord = A2.slice(0, 3).reduce((sum, id) => sum + rate(id), 0) / 3
+    const b2PerWord = B2.slice(0, 10).reduce((sum, id) => sum + rate(id), 0) / 10
+    // 同じ経過日数なら A2 の方が出やすい
+    expect(a2PerWord).toBeGreaterThan(b2PerWord * 2)
+    // 古い取りこぼしは、新しい B2 より優先して戻る
+    expect(rate('c10')).toBeGreaterThan(b2PerWord)
+  })
+
+  it('levelOf を渡さなければ従来どおりレベルを見ない(音声練習の互換)', () => {
+    let a2 = 0
+    let b2 = 0
+    for (let seed = 1; seed <= 200; seed++) {
+      const picked = selectSessionWords([...A2, ...B2], {}, NOW, 5, seededRng(seed))
+      a2 += picked.filter((id) => levelOf(id) === 'A2').length
+      b2 += picked.filter((id) => levelOf(id) === 'B2').length
+    }
+    // 同数のプールなので偏らない
+    expect(Math.abs(a2 - b2) / (a2 + b2)).toBeLessThan(0.15)
   })
 })
 

@@ -4,8 +4,11 @@
 //   - 「わからない」と答えた語は再学習中(lapsed)になり、日をまたがず次のセッションで最優先に戻る。
 //     セッション内で「わかる」に変わっても、次のセッションでもう一度正解するまで再学習中のまま
 //   - 予定日を過ぎた語だけを復習候補にし、残りは未出題語から補う
+//   - 選ぶときにレベルを見て重み付けする(A2 → B1 → B2 の順に優先。`LEVEL_WEIGHTS`)
+//     復習の必要性(再学習中・予定日超過)はレベルより常に優先する
 
-import { shuffle, sample } from './shuffle'
+// node のスクリプト(--experimental-strip-types)からも読み込めるよう、拡張子を明示する。
+import { shuffle, weightedSample } from './shuffle.ts'
 
 export type WordStat = {
   seen: number
@@ -22,6 +25,15 @@ export type WordStat = {
 export type WordStats = Record<string, WordStat>
 
 export const SESSION_SIZE = 5
+
+/**
+ * 出題のレベル重み。レベルの低い語ほど大きく、優先して出題される。
+ * 対象プールの大半が B2 なので、語数差を打ち消す意図で A2 を B2 の3倍にしてある。
+ */
+export const LEVEL_WEIGHTS: Record<string, number> = { A2: 3, B1: 2, B2: 1 }
+
+/** レベルが分からない語の重み。既存の均等抽選と同じ扱いになる。 */
+const UNKNOWN_LEVEL_WEIGHT = 1
 
 const DAY = 86_400_000
 const FIRST_INTERVAL_DAYS = 1
@@ -69,8 +81,10 @@ export function reviewScore(stat: WordStat, now: number): number {
 
 /**
  * セッションの語を選択する。
- * 再学習中の語を上限なしで先に入れ、予定日を過ぎた語で半分まで埋め、残りを未出題語から選ぶ。
- * 未出題語が尽きたら、予定日前の語も延滞順に補充する。
+ * 再学習中の語を先に入れ、予定日を過ぎた語で半分まで埋め、残りを未出題語から選ぶ。
+ * 未出題語が尽きたら、予定日前の語も補充する。
+ * levelOf を渡すと、すべての段階でレベルの低い語(A2 → B1 → B2)が優先される。
+ * 再学習中の語だけは、レベルに経過日数を掛けた重みで選ぶ(古い取りこぼしも戻るようにするため)。
  */
 export function selectSessionWords(
   allIds: readonly string[],
@@ -78,28 +92,45 @@ export function selectSessionWords(
   now: number = Date.now(),
   count: number = SESSION_SIZE,
   rng: () => number = Math.random,
+  levelOf?: (id: string) => string | undefined,
 ): string[] {
+  const weightOf = (id: string) => {
+    const level = levelOf?.(id)
+    return (level !== undefined ? LEVEL_WEIGHTS[level] : undefined) ?? UNKNOWN_LEVEL_WEIGHT
+  }
   const seen = allIds.filter((id) => stats[id])
   const unseen = allIds.filter((id) => !stats[id])
 
   // 同点候補を Fisher–Yates で先に混ぜてからスコア順にする。
   // sort の比較関数内で乱数を使うと推移律を壊し、偏りや実装依存の結果を生む。
   const scored = shuffle(seen, rng)
-    .map((id) => ({ id, score: reviewScore(stats[id], now) }))
+    .map((id) => ({
+      id,
+      score: reviewScore(stats[id], now),
+      weight: weightOf(id),
+      days: Math.max(0, (now - stats[id].lastAt) / DAY),
+    }))
     .sort((a, b) => b.score - a.score)
 
-  // 再学習中(直近で「わからない」と答えた)語は、新出語の枠を削ってでも次のセッションに戻す
-  const picked = scored
-    .filter((c) => isLapsed(stats[c.id]))
-    .slice(0, count)
-    .map((c) => c.id)
-  const due = scored.filter((c) => c.score >= 1 && !isLapsed(stats[c.id]))
+  // 再学習中(直近で「わからない」と答えた)語は、新出語の枠を削ってでも次のセッションに戻す。
+  // 枠に全員収まるなら全員を戻す。収まらないときだけ、レベル重みに経過日数を掛けた抽選にする。
+  const lapsed = scored.filter((c) => isLapsed(stats[c.id]))
+  const picked =
+    lapsed.length <= count
+      ? lapsed.map((c) => c.id)
+      : weightedSample(lapsed, (c) => c.weight * (1 + c.days), count, rng).map((c) => c.id)
+  // 予定日を過ぎた語は、レベルの低い語から先に出す。
+  const due = scored
+    .filter((c) => c.score >= 1 && !isLapsed(stats[c.id]))
+    .sort((a, b) => b.weight - a.weight || b.score - a.score)
   picked.push(...due.slice(0, Math.max(0, Math.ceil(count / 2) - picked.length)).map((c) => c.id))
-  picked.push(...sample(unseen, Math.max(0, count - picked.length), rng))
+  // 未出題語はレベルの低い語ほど選ばれやすくする。
+  picked.push(...weightedSample(unseen, weightOf, Math.max(0, count - picked.length), rng))
 
-  // まだ足りなければ、予定日前の語も延滞している順に補充する
+  // まだ足りなければ、予定日前の語もレベルの低い語から、延滞している順に補充する
   const pickedIds = new Set(picked)
-  for (const candidate of scored) {
+  const surplus = [...scored].sort((a, b) => b.weight - a.weight || b.score - a.score)
+  for (const candidate of surplus) {
     if (picked.length >= count) break
     if (pickedIds.has(candidate.id)) continue
     picked.push(candidate.id)

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="電源タップに三つのプラグが差され、コードが伸びているイラスト。">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 306h600v94H0z" class="ground"/>
+  <g transform="translate(300 300) rotate(-4)">
+  <rect x="-196" y="-58" width="392" height="116" rx="18" class="green o"/>
+  <g class="greenp o"><rect x="-158" y="-32" width="56" height="64" rx="12"/><rect x="-78" y="-32" width="56" height="64" rx="12"/><rect x="2" y="-32" width="56" height="64" rx="12"/><rect x="82" y="-32" width="56" height="64" rx="12"/><rect x="162" y="-32" width="56" height="64" rx="12"/></g>
+  <g fill="#2f4055"><circle cx="-130" cy="-14" r="6"/><circle cx="-130" cy="14" r="6"/><circle cx="-50" cy="-14" r="6"/><circle cx="-50" cy="14" r="6"/><circle cx="30" cy="-14" r="6"/><circle cx="30" cy="14" r="6"/><circle cx="110" cy="-14" r="6"/><circle cx="110" cy="14" r="6"/><circle cx="190" cy="-14" r="6"/><circle cx="190" cy="14" r="6"/></g>
+</g>
+<g class="gold o"><rect x="130" y="186" width="52" height="56" rx="8"/>
+  <rect x="290" y="186" width="52" height="56" rx="8"/><rect x="450" y="186" width="52" height="56" rx="8"/></g>
+<g fill="#fffdf6" stroke="#2f4055" stroke-width="3">
+  <circle cx="146" cy="242" r="6"/><circle cx="166" cy="242" r="6"/>
+  <circle cx="306" cy="242" r="6"/><circle cx="326" cy="242" r="6"/>
+  <circle cx="466" cy="242" r="6"/><circle cx="486" cy="242" r="6"/>
+</g>
+<g fill="none" stroke="#2f4055" stroke-width="7" stroke-linecap="round">
+  <path d="M156 186q-24-52 12-84M316 186q-4-56 34-86M476 186q22-50 46-72"/>
+</g>
+</svg>

@@ -40007,4 +40007,4004 @@ export const vocabularyIllustrations: Readonly<Record<string, VocabularyIllustra
     alt: '亜鉛のめっきをした波形の板が、さびを防ぐ',
     caption: '亜鉛＝zinc。',
   },
+  a: {
+    src: 'images/vocabulary/a.svg',
+    alt: '1匹の犬が点線の輪で囲まれているイラスト。',
+    caption: '「ある〜、1つの〜」。たくさんある中のどれか1つを指す冠詞。',
+  },
+  about: {
+    src: 'images/vocabulary/about.svg',
+    alt: '二人が向かい合い、間の吹き出しの中の物について話しているイラスト。',
+    caption: '「〜について」。話題をぐるりと取り囲むのが原義で、話の対象を示す。',
+  },
+  above: {
+    src: 'images/vocabulary/above.svg',
+    alt: '飛行機が雲のずっと上の空を飛んでいるイラスト。',
+    caption: '「〜の上に(離れて)」。接している on と違い、間があいた上の位置を表す。',
+  },
+  across: {
+    src: 'images/vocabulary/across.svg',
+    alt: '人が橋を端から端へ渡りきっていくイラスト。',
+    caption: '「〜を横切って」。線を横に越えて、向こう側まで届く動き。',
+  },
+  adapter: {
+    src: 'images/vocabulary/adapter.svg',
+    alt: '形の違うプラグとコンセントの間に、変換アダプターが入っているイラスト。',
+    caption: '「変換アダプター」。規格の違うものを間に立ってつなぐ道具。',
+  },
+  advice: {
+    src: 'images/vocabulary/advice.svg',
+    alt: '大人が指さして助言し、聞き手の頭の上に電球がともっているイラスト。',
+    caption: '「助言、忠告」。相手のためになる言葉をかけて、気づかせること。',
+  },
+  afraid: {
+    src: 'images/vocabulary/afraid.svg',
+    alt: '犬から逃げようと、両手を上げて後ずさる人のイラスト。',
+    caption: '「恐れて、怖がって」。こわい物から身を引く気持ち。',
+  },
+  afternoon: {
+    src: 'images/vocabulary/afternoon.svg',
+    alt: '時計が午後3時をさし、太陽が西へ傾いてきたイラスト。',
+    caption: '「午後」。正午を過ぎて日が傾き、夕方へ向かう時間帯。',
+  },
+  again: {
+    src: 'images/vocabulary/again.svg',
+    alt: 'かごに入らず戻ってきたボールを、もう一度投げようとしているイラスト。',
+    caption: '「もう一度、また」。同じことを繰り返す動きを表す。',
+  },
+  ago: {
+    src: 'images/vocabulary/ago.svg',
+    alt: '歩いてきた道をふり返り、後方に時計が置かれているイラスト。',
+    caption: '「〜前に」。今からさかのぼった、過去の時点を示す。',
+  },
+  'air conditioner': {
+    src: 'images/vocabulary/air-conditioner.svg',
+    alt: '壁につけた室内機から、冷たい風と雪の印が出ているイラスト。',
+    caption: '「エアコン、空調機」。部屋の空気を冷やしたり温めたりする装置。',
+  },
+  aloud: {
+    src: 'images/vocabulary/aloud.svg',
+    alt: '本を手に持ち、声に出して読み上げているイラスト。',
+    caption: '「声に出して」。心の中でなく、耳に届く声で読むこと。',
+  },
+  also: {
+    src: 'images/vocabulary/also.svg',
+    alt: '同じりんごが二つ並び、両方に印がついているイラスト。',
+    caption: '「〜もまた」。前のものに同じものが加わることを示す。',
+  },
+  always: {
+    src: 'images/vocabulary/always.svg',
+    alt: '時計の周りを矢印が何度も回り続けているイラスト。',
+    caption: '「いつも、常に」。いつ何度見ても変わらない様子。',
+  },
+  am: {
+    src: 'images/vocabulary/am.svg',
+    alt: '自分自身の胸を指さしているイラスト。',
+    caption: '「〜である、〜にいる」。主語が I のときにつかう be動詞。',
+  },
+  an: {
+    src: 'images/vocabulary/an.svg',
+    alt: '手のひらにのせたりんごが点線で囲まれているイラスト。',
+    caption: '「ある〜、1つの〜」。母音で始まる語の前では an をつかう。',
+  },
+  and: {
+    src: 'images/vocabulary/and.svg',
+    alt: 'りんごとバナナがひもで結ばれて一つになっているイラスト。',
+    caption: '「〜と、そして」。二つのものを並べて結びつけることば。',
+  },
+  angry: {
+    src: 'images/vocabulary/angry.svg',
+    alt: '顔をしかめて両腕を上げ、頭の横に怒りの印が出ているイラスト。',
+    caption: '「怒った、腹を立てた」。かっとなって感情が高ぶった様子。',
+  },
+  animal: {
+    src: 'images/vocabulary/animal.svg',
+    alt: '草地に四つ足のけものと小鳥がいるイラスト。',
+    caption: '「動物」。人以外の生きものをまとめて指すことば。',
+  },
+  another: {
+    src: 'images/vocabulary/another.svg',
+    alt: '手に取ったりんごとは別のもう1つが、点線で囲まれているイラスト。',
+    caption: '「もう1つの、別の」。同じ種類で、別の1つを指す。',
+  },
+  answer: {
+    src: 'images/vocabulary/answer.svg',
+    alt: '手を挙げて答えようとする人と、正解を示す丸い印のイラスト。',
+    caption: '「答え、返事」。問いに対して、正しい内容を返すこと。',
+  },
+  antique: {
+    src: 'images/vocabulary/antique.svg',
+    alt: 'ひびの入った古い意が台の上に置かれ、隅にほこりがたまっているイラスト。',
+    caption: '「骨董の、骨董品」。作られてから、長い年月がたった古い品。',
+  },
+  anyone: {
+    src: 'images/vocabulary/anyone.svg',
+    alt: '三人のうち、だれか一人が点線で囲まれているイラスト。',
+    caption: '「だれか、だれでも」。人を特定せずに指すことば。',
+  },
+  anything: {
+    src: 'images/vocabulary/anything.svg',
+    alt: '箱からいろいろな物が出てきて、1つが点線で囲まれているイラスト。',
+    caption: '「何か、何でも」。物を特定せずに指すことば。',
+  },
+  apartment: {
+    src: 'images/vocabulary/apartment.svg',
+    alt: '窓の並んだ集合住宅の、1室が点線で囲まれているイラスト。',
+    caption: '「アパート、マンションの1室」。人が暮らす、住まいの1区画。',
+  },
+  apple: {
+    src: 'images/vocabulary/apple.svg',
+    alt: '葉のついた赤いりんごが一つ置かれているイラスト。',
+    caption: '「りんご」。丸い実と、へたにつく葉が目印の果物。',
+  },
+  herring: {
+    src: 'images/vocabulary/herring.svg',
+    alt: '細長い銀色のニシンが群れになって泳いでいるイラスト。',
+    caption: '「ニシン」。冷たい海でよくとれる、細長い青い魚。',
+  },
+  archery: {
+    src: 'images/vocabulary/archery.svg',
+    alt: '弓から放たれた矢が、的の真ん中に突きささっているイラスト。',
+    caption: '「アーチェリー、弓術」。弓で矢を射て、的にあてる競技。',
+  },
+  are: {
+    src: 'images/vocabulary/are.svg',
+    alt: '二人が並んで点線で囲まれ、上に印がついているイラスト。',
+    caption: '「〜である、〜にいる」。you や複数の主語につく be動詞。',
+  },
+  area: {
+    src: 'images/vocabulary/area.svg',
+    alt: '地図の一部が境界で区切られ、内側の広さが示されているイラスト。',
+    caption: '「地域、区域」と「面積」。区切られた場所と、その広さ。',
+  },
+  around: {
+    src: 'images/vocabulary/around.svg',
+    alt: '家の周りを、人がぐるりと回って歩いているイラスト。',
+    caption: '「〜の周りに」。あるものの周囲を囲むように動くこと。',
+  },
+  arrive: {
+    src: 'images/vocabulary/arrive.svg',
+    alt: '荷物を持った人が、目印の旗のところへたどり着いたイラスト。',
+    caption: '「到着する、着く」。目指していた場所にたどりつくこと。',
+  },
+  art: {
+    src: 'images/vocabulary/art.svg',
+    alt: 'イーゼルに立てたカンバスに絵を描き、そばにパレットが置かれているイラスト。',
+    caption: '「芸術、美術」。絵や彫刻など、形や色で表す表現。',
+  },
+  ask: {
+    src: 'images/vocabulary/ask.svg',
+    alt: '一方が手を上げてたずね、相手がそれに応じているイラスト。',
+    caption: '「たずねる、頼む」。知りたいことや、してほしいことを相手に言う。',
+  },
+  at: {
+    src: 'images/vocabulary/at.svg',
+    alt: '家の戸口の一点が、点線の輪と矢印で示されているイラスト。',
+    caption: '「〜に」。場所や時刻の一点を、ぴたりと指す前置詞。',
+  },
+  aubergine: {
+    src: 'images/vocabulary/aubergine.svg',
+    alt: 'つやのある紫のナスと、その切り口のイラスト。',
+    caption: '「ナス」。むらさき色の皮と、へたが特徴の野菜(英)。',
+  },
+  mackerel: {
+    src: 'images/vocabulary/mackerel.svg',
+    alt: '皿の上に、背中にしま模様のあるサバがのっているイラスト。',
+    caption: '「サバ」。背中のしま模様が目印の、青い海の魚。',
+  },
+  autumn: {
+    src: 'images/vocabulary/autumn.svg',
+    alt: '木の葉が赤や黄色に色づいて、散りはじめているイラスト。',
+    caption: '「秋」。葉が色づき、実りの季節になる頃(英)。',
+  },
+  avalanche: {
+    src: 'images/vocabulary/avalanche.svg',
+    alt: '山の斜面の雪が、大きなかたまりになって落ちてくるイラスト。',
+    caption: '「雪崩」。山の斜面の雪が、急に崩れて落ちること。',
+  },
+  avocado: {
+    src: 'images/vocabulary/avocado.svg',
+    alt: 'アボカドが一つまるごとと、種の見える半割りで並んでいるイラスト。',
+    caption: '「アボカド」。緑色の皮と、大きな種をもつ果実。',
+  },
+  away: {
+    src: 'images/vocabulary/away.svg',
+    alt: '家から離れて、遠くへ歩き去っていく人のイラスト。',
+    caption: '「離れて、向こうへ」。手もとや元いた場所から遠ざかること。',
+  },
+  axe: {
+    src: 'images/vocabulary/axe.svg',
+    alt: '丸太に斧の刃を打ちこみ、木くずが飛んでいるイラスト。',
+    caption: '「おの、斧」。木を割るための、重い刃のついた道具。',
+  },
+  baby: {
+    src: 'images/vocabulary/baby.svg',
+    alt: 'ガラガラを持った赤ちゃんが、おむつをして座っているイラスト。',
+    caption: '「赤ちゃん、乳児」。生まれてまもない、小さな子。',
+  },
+  babysit: {
+    src: 'images/vocabulary/babysit.svg',
+    alt: '大人が小さな子と手をつなぎ、そばで見守っているイラスト。',
+    caption: '「(留守中の)子どもの世話をする」。親の代わりに子を見守ること。',
+  },
+  bad: {
+    src: 'images/vocabulary/bad.svg',
+    alt: '虫に食われて傷んだりんごと、その横にばつの印があるイラスト。',
+    caption: '「悪い、ひどい」。状態や質が、よくないこと。',
+  },
+  bag: {
+    src: 'images/vocabulary/bag.svg',
+    alt: '取っ手のついたかばんに、パンとりんごが入っているイラスト。',
+    caption: '「かばん、袋」。物を入れて持ち運ぶ、入れもの。',
+  },
+  ball: {
+    src: 'images/vocabulary/ball.svg',
+    alt: 'ボールが床ではずみながら、弾んでいくイラスト。',
+    caption: '「ボール、球」。投げたり蹴ったりして遊ぶ、丸いもの。',
+  },
+  banana: {
+    src: 'images/vocabulary/banana.svg',
+    alt: '房になったバナナと、皮をむいた1本が並んでいるイラスト。',
+    caption: '「バナナ」。細長く曲がった、黄色い果物。',
+  },
+  banjo: {
+    src: 'images/vocabulary/banjo.svg',
+    alt: '丸い胴と長い棹をもつバンジョーを、手で弾いているイラスト。',
+    caption: '「バンジョー」。丸い胴に弦を張った、弦楽器。',
+  },
+  bank: {
+    src: 'images/vocabulary/bank.svg',
+    alt: '柱の並んだ銀行の建物と、その前に置かれた硬貨のイラスト。',
+    caption: '「銀行」。お金を預けたり借りたりする、金融の機関。',
+  },
+  barber: {
+    src: 'images/vocabulary/barber.svg',
+    alt: 'いすに座った客の髪を、理髪師がはさみで切っているイラスト。',
+    caption: '「理髪師、床屋」。髪を切ったり、整えたりする人。',
+  },
+  bath: {
+    src: 'images/vocabulary/bath.svg',
+    alt: '湯を張った浴槽に人がつかり、泡が浮いているイラスト。',
+    caption: '「入浴、浴槽」。湯につかって体を洗うこと、その容器。',
+  },
+  batter: {
+    src: 'images/vocabulary/batter.svg',
+    alt: 'ボウルに入った衣と、そばの泡立て器と具のイラスト。',
+    caption: '「(料理の)衣、生地」。粉と水分を混ぜた、揚げ物につけるとろみ。',
+  },
+  be: {
+    src: 'images/vocabulary/be.svg',
+    alt: '木とベンチのある場所に人が立ち、足もとが点線で囲まれているイラスト。',
+    caption: '「〜である、〜にいる」。主語の状態や居場所を表す be動詞の原形。',
+  },
+  beach: {
+    src: 'images/vocabulary/beach.svg',
+    alt: '砂浜にパラソルとビーチボールがあり、海が広がっているイラスト。',
+    caption: '「浜辺、ビーチ」。海や湖に面した、砂の平地。',
+  },
+  beautiful: {
+    src: 'images/vocabulary/beautiful.svg',
+    alt: '大きな花が咲き、光のきらめきとちょうちょが集まっているイラスト。',
+    caption: '「美しい、きれいな」。見て心が引かれるほど、すばらしい様子。',
+  },
+  because: {
+    src: 'images/vocabulary/because.svg',
+    alt: '雨雲から雨が降り、その下で人が傘をさしているイラスト。',
+    caption: '「〜だから、〜なので」。理由と結果をつなぐことば。',
+  },
+  become: {
+    src: 'images/vocabulary/become.svg',
+    alt: '青虫が、矢印の先でちょうちょに変わっているイラスト。',
+    caption: '「〜になる」。ある状態から、別の状態へ変わること。',
+  },
+  bed: {
+    src: 'images/vocabulary/bed.svg',
+    alt: 'ベッドに横になって、気持ちよさそうに眠っているイラスト。',
+    caption: '「ベッド、寝床」。横になって眠るための家具。',
+  },
+  beer: {
+    src: 'images/vocabulary/beer.svg',
+    alt: '泡のあふれたビールのジョッキが、机の上に置かれているイラスト。',
+    caption: '「ビール」。麦から作られる、泡の出る苦い酒。',
+  },
+  beetroot: {
+    src: 'images/vocabulary/beetroot.svg',
+    alt: '丸くふくらんだ赤紫の根と、青々とした葉のイラスト。',
+    caption: '「ビート、テンサイの根」。濃い赤紫色をした、根の野菜(英)。',
+  },
+  begin: {
+    src: 'images/vocabulary/begin.svg',
+    alt: 'スタートラインに立ち、前方へ走り出そうとしているイラスト。',
+    caption: '「始める、始まる」。物事の、最初の一歩を踏み出すこと。',
+  },
+  beginner: {
+    src: 'images/vocabulary/beginner.svg',
+    alt: '補助輪のついた自転車にまたがり、おそるおそる進むイラスト。',
+    caption: '「初心者」。習い始めて、まだ間もない人。',
+  },
+  behind: {
+    src: 'images/vocabulary/behind.svg',
+    alt: '大きな箱の後ろに隠れて、頭と手だけのぞかせているイラスト。',
+    caption: '「〜の後ろに」。ある物を隔てて、見えない側にあること。',
+  },
+  believe: {
+    src: 'images/vocabulary/believe.svg',
+    alt: '書類を見て、頭の上に正しいという印が浮かんでいるイラスト。',
+    caption: '「信じる、〜だと思う」。本当だとして、受け入れること。',
+  },
+  below: {
+    src: 'images/vocabulary/below.svg',
+    alt: '水面の下を魚が泳ぎ、水面には小舟が浮かんでいるイラスト。',
+    caption: '「〜より下に、以下の」。基準より低い位置を表す。',
+  },
+  big: {
+    src: 'images/vocabulary/big.svg',
+    alt: '大きな箱と、その脇に小さな箱が並んでいるイラスト。',
+    caption: '「大きい」と「重要な」。かさや程度が、はなはだしいこと。',
+  },
+  bike: {
+    src: 'images/vocabulary/bike.svg',
+    alt: 'かごのついた自転車が、走っているイラスト。',
+    caption: '「自転車」。ペダルをこいで進む、二輪の乗り物(口語)。',
+  },
+  bikini: {
+    src: 'images/vocabulary/bikini.svg',
+    alt: 'ハンガーにかけた上下2枚の水着と、そばのビーチボールのイラスト。',
+    caption: '「ビキニ(水着)」。上下2枚に分かれた、女性用の水着。',
+  },
+  bird: {
+    src: 'images/vocabulary/bird.svg',
+    alt: '枝にとまった小鳥が、さえずっているイラスト。',
+    caption: '「鳥」。羽とくちばしをもち、空を飛ぶ生きもの。',
+  },
+  birthday: {
+    src: 'images/vocabulary/birthday.svg',
+    alt: 'ろうそくの火のついたケーキと、浮かんだ風船のイラスト。',
+    caption: '「誕生日」。生まれた日を祝う、毎年めぐってくる日。',
+  },
+  black: {
+    src: 'images/vocabulary/black.svg',
+    alt: '絵の具の缶と筆で、黒い色面が塗られているイラスト。',
+    caption: '「黒い、黒」。光をほとんど反射しない、いちばん暗い色。',
+  },
+  blackboard: {
+    src: 'images/vocabulary/blackboard.svg',
+    alt: '黒板にチョークの線が書かれ、チョークと黒板消しが置かれているイラスト。',
+    caption: '「黒板」。教室でチョークをつかって書く、黒い板。',
+  },
+  blazer: {
+    src: 'images/vocabulary/blazer.svg',
+    alt: 'ハンガーにかかった上着が、えりとポケットを見せているイラスト。',
+    caption: '「ブレザー、上着」。えりのある、かっちりした上着。',
+  },
+  blue: {
+    src: 'images/vocabulary/blue.svg',
+    alt: '絵の具の缶と筆で、青い色面が塗られているイラスト。',
+    caption: '「青い、青」。晴れた空や、海の色。',
+  },
+  boat: {
+    src: 'images/vocabulary/boat.svg',
+    alt: '小舟が水面に浮かび、オールが添えられているイラスト。',
+    caption: '「ボート、小舟」。こいで進む、小さな舟。',
+  },
+  body: {
+    src: 'images/vocabulary/body.svg',
+    alt: '体全体が点線で囲まれ、関節の位置に印がついているイラスト。',
+    caption: '「体、身体」。人や動物の、頭から足までの全体。',
+  },
+  bored: {
+    src: 'images/vocabulary/bored.svg',
+    alt: 'いすにだらりと座り、時計を見てあきているイラスト。',
+    caption: '「退屈した、飽きた」。することがなくて、いやになってくる様子。',
+  },
+  boring: {
+    src: 'images/vocabulary/boring.svg',
+    alt: '同じ形の棒が並ぶ話を聞きながら、居眠りしている人のイラスト。',
+    caption: '「退屈な、つまらない」。関心がわかず、長く感じられる様子。',
+  },
+  born: {
+    src: 'images/vocabulary/born.svg',
+    alt: '卵の殻が割れて、中からひなが生まれ出ているイラスト。',
+    caption: '「生まれた」。この世に出てきたことを表す。',
+  },
+  both: {
+    src: 'images/vocabulary/both.svg',
+    alt: '同じ茶わんが二つ並び、両方に印がついているイラスト。',
+    caption: '「両方の、どちらも」。二つのうちの一方だけでなく、どちらも指す。',
+  },
+  'bottle opener': {
+    src: 'images/vocabulary/bottle-opener.svg',
+    alt: '栓抜きでびんのふたを外し、ふたが浮き上がっているイラスト。',
+    caption: '「栓抜き」。びんのふたを、てこの力で外す道具。',
+  },
+  box: {
+    src: 'images/vocabulary/box.svg',
+    alt: 'ふたの開いた段ボール箱が、床に置かれているイラスト。',
+    caption: '「箱」。物を入れて、運ぶための四角い入れもの。',
+  },
+  boxer: {
+    src: 'images/vocabulary/boxer.svg',
+    alt: 'グローブをつけた人が、ぶら下がったサンドバッグを打っているイラスト。',
+    caption: '「ボクサー」。ボクシングをする人、その選手。',
+  },
+  boy: {
+    src: 'images/vocabulary/boy.svg',
+    alt: '帽子をかぶった男の子が、ボールで遊んでいるイラスト。',
+    caption: '「男の子、少年」。年がいかない、男の子。',
+  },
+  bread: {
+    src: 'images/vocabulary/bread.svg',
+    alt: '焼きたてのパンの山と、切り分けた一切れのイラスト。',
+    caption: '「パン」。粉をこねて焼いた、主食になる食べ物。',
+  },
+  break: {
+    src: 'images/vocabulary/break.svg',
+    alt: '両手で持った棒が、真ん中から折れているイラスト。',
+    caption: '「壊す、割る」。力を加えて、ものを二つに分けること。',
+  },
+  bring: {
+    src: 'images/vocabulary/bring.svg',
+    alt: '箱を抱えた人が、待っている相手の方へ歩いていくイラスト。',
+    caption: '「持ってくる、連れてくる」。話し手の方へ、物や人を運んでくる。',
+  },
+  brother: {
+    src: 'images/vocabulary/brother.svg',
+    alt: '背の違う二人の男の子が、並んでボールで遊んでいるイラスト。',
+    caption: '「兄、弟」。同じ親から生まれた、男きょうだい。',
+  },
+  brown: {
+    src: 'images/vocabulary/brown.svg',
+    alt: '絵の具の缶と筆で、茶色の色面が塗られているイラスト。',
+    caption: '「茶色の、茶色」。土や木の皮のような、暗い橙の色。',
+  },
+  build: {
+    src: 'images/vocabulary/build.svg',
+    alt: 'れんがを積み上げて、壁を造っているイラスト。',
+    caption: '「建てる、組み立てる」。材料を組み合わせて、形あるものにする。',
+  },
+  building: {
+    src: 'images/vocabulary/building.svg',
+    alt: '窓の並んだ高い建物と、その前の木のイラスト。',
+    caption: '「建物、ビル」。人が住んだり働いたりするために、建てたもの。',
+  },
+  bus: {
+    src: 'images/vocabulary/bus.svg',
+    alt: 'バスが停留所にとまり、人が乗りこもうとしているイラスト。',
+    caption: '「バス」。多くの人が乗って、決まった道を走る車。',
+  },
+  business: {
+    src: 'images/vocabulary/business.svg',
+    alt: '書類と硬貨をやり取りしている二人と、そばの鞄のイラスト。',
+    caption: '「仕事、商売」。お金や品をやり取りして、成り立つ活動。',
+  },
+  busy: {
+    src: 'images/vocabulary/busy.svg',
+    alt: '書類と電話を同時に扱い、頭の上に時計が浮かんでいるイラスト。',
+    caption: '「忙しい」。やることが多くて、余裕がない様子。',
+  },
+  buy: {
+    src: 'images/vocabulary/buy.svg',
+    alt: '店の人に硬貨を渡して、品物を受け取っているイラスト。',
+    caption: '「買う」。代金を払って、品物を手に入れること。',
+  },
+  cake: {
+    src: 'images/vocabulary/cake.svg',
+    alt: '皿にのった層になったケーキと、上のさくらんぼのイラスト。',
+    caption: '「ケーキ、菓子」。粉と卵を焼いて、甘く仕上げた食べ物。',
+  },
+  call: {
+    src: 'images/vocabulary/call.svg',
+    alt: '電話を耳にあてて、話しているイラスト。',
+    caption: '「電話する、呼ぶ」。声を届けて、相手と話すこと。',
+  },
+  came: {
+    src: 'images/vocabulary/came.svg',
+    alt: '遠くから歩いてきた人が、友だちの家の前に着いて手を振っているイラスト。',
+    caption: '「来た」。話し手のいる方へ、移動してきたことを表す過去形。',
+  },
+  camera: {
+    src: 'images/vocabulary/camera.svg',
+    alt: 'カメラを構えた人が、手を振る相手を写そうとしているイラスト。',
+    caption: '「カメラ」。光を記録して、写真をとる道具。',
+  },
+  candy: {
+    src: 'images/vocabulary/candy.svg',
+    alt: '両端をひねった包み紙のキャンディーが中央に置かれている',
+    caption: 'キャンディー＝candy。砂糖を煮固めた菓子で、英国では sweets とも言う。',
+  },
+  cannot: {
+    src: 'images/vocabulary/cannot.svg',
+    alt: '閉じたドアの前に立ち、手をのばす人と、取っ手の上に出た禁止の印',
+    caption: '〜できない＝cannot。can と not を1語にした形で、話しことばでは can\'t。',
+  },
+  capital: {
+    src: 'images/vocabulary/capital.svg',
+    alt: '建物の並ぶ街で、中央のいちばん高い塔に旗が立ち、その上に星が光る',
+    caption: '首都＝capital。国や州の中心となる都市。大文字の意味でも使う。',
+  },
+  car: {
+    src: 'images/vocabulary/car.svg',
+    alt: '道路に止まった乗用車を横から見たところ',
+    caption: '車、自動車＝car。',
+  },
+  card: {
+    src: 'images/vocabulary/card.svg',
+    alt: '開いた状態で立てたカードの表にハートが描かれている',
+    caption: 'カード＝card。はがきやトランプの札の意味もある。',
+  },
+  cardboard: {
+    src: 'images/vocabulary/cardboard.svg',
+    alt: '茶色の段ボール箱が二つ積んであり、上の箱が少し開いている',
+    caption: '厚紙、段ボール＝cardboard。',
+  },
+  carnival: {
+    src: 'images/vocabulary/carnival.svg',
+    alt: '観覧車の上に色とりどりの旗が並び、遊園地のにぎわいが見える',
+    caption: 'カーニバル、移動遊園地＝carnival。',
+  },
+  carry: {
+    src: 'images/vocabulary/carry.svg',
+    alt: '両腕で段ボール箱をいくつも抱えて運んでいる',
+    caption: '運ぶ、持ち歩く＝carry。',
+  },
+  cat: {
+    src: 'images/vocabulary/cat.svg',
+    alt: 'しっぽを立ててすわる猫を正面から見たところ',
+    caption: '猫＝cat。',
+  },
+  cd: {
+    src: 'images/vocabulary/cd.svg',
+    alt: '光を反射する円盤の中央に丸い穴があいたCD',
+    caption: 'CD、コンパクトディスク＝cd。',
+  },
+  'ceiling fan': {
+    src: 'images/vocabulary/ceiling-fan.svg',
+    alt: '天井から吊られた扇風機の羽根が回り、回転の矢印がついている',
+    caption: '天井扇、シーリングファン＝ceiling fan。天井の fan は「扇」の意味。',
+  },
+  cent: {
+    src: 'images/vocabulary/cent.svg',
+    alt: '百の粒のうち一つだけが大きく色づき、そばに小さな硬貨が置かれている',
+    caption: 'セント＝cent。1ドルの100分の1の金額。',
+  },
+  center: {
+    src: 'images/vocabulary/center.svg',
+    alt: '何重もの輪のいちばん内側に矢が当たり、中心の点が目立っている',
+    caption: '中心、中央＝center。施設、センターの意味でも使う。',
+  },
+  chalk: {
+    src: 'images/vocabulary/chalk.svg',
+    alt: '黒板に白い文字の列が書かれ、下の受けにチョークと黒板消しがのっている',
+    caption: 'チョーク、白墨＝chalk。',
+  },
+  child: {
+    src: 'images/vocabulary/child.svg',
+    alt: '背の高い大人のそばに、小さな子どもが手をつないで立っている',
+    caption: '子ども＝child。複数形は children と不規則に変わる。',
+  },
+  chimpanzee: {
+    src: 'images/vocabulary/chimpanzee.svg',
+    alt: '太い枝に両腕でぶら下がり、長い腕と丸い耳が目立つチンパンジー',
+    caption: 'チンパンジー＝chimpanzee。',
+  },
+  chocolate: {
+    src: 'images/vocabulary/chocolate.svg',
+    alt: '四角に区切られた茶色の板チョコと、欠けて外れた一かけら',
+    caption: 'チョコレート＝chocolate。',
+  },
+  choose: {
+    src: 'images/vocabulary/choose.svg',
+    alt: '並んだ四つの箱のうち一つを指さし、その上に印がついている',
+    caption: '選ぶ、選択する＝choose。どれか一つを選び取ること。',
+  },
+  cinema: {
+    src: 'images/vocabulary/cinema.svg',
+    alt: '入口にしま模様のひさしがつき、屋根の上にフィルムの巻きが光る映画館',
+    caption: '映画館＝cinema。映画そのものを指すこともある。',
+  },
+  city: {
+    src: 'images/vocabulary/city.svg',
+    alt: '高い建物がいくつも並んで立ち、道が横に走る都市の風景',
+    caption: '都市、市＝city。',
+  },
+  clap: {
+    src: 'images/vocabulary/clap.svg',
+    alt: '向かい合った両手が打ち合わされ、上下に動きの線が出ている',
+    caption: '拍手する＝clap。手をたたく音の意味でも使う。',
+  },
+  class: {
+    src: 'images/vocabulary/class.svg',
+    alt: '黒板の前で先生が説明し、教えられた生徒が机に向かって座っている',
+    caption: '授業、クラス＝class。組や階級の意味もある。',
+  },
+  clean: {
+    src: 'images/vocabulary/clean.svg',
+    alt: 'モップで床をふき、通ったあとが光ってきれいになっている',
+    caption: '清潔な、掃除する＝clean。形容詞と動詞の両方で使う。',
+  },
+  cleaner: {
+    src: 'images/vocabulary/cleaner.svg',
+    alt: 'つなぎ服の人が洗剤のスプレーを持ち、足もとにバケツが置いてある',
+    caption: '掃除人、洗剤＝cleaner。clean に -er がついた形。',
+  },
+  clipboard: {
+    src: 'images/vocabulary/clipboard.svg',
+    alt: '上を金具ではさんだ紙ばさみに、書きこみ欄と印が並んでいる',
+    caption: 'クリップボード、紙ばさみ＝clipboard。パソコンの一時保存領域の意味もある。',
+  },
+  clothes: {
+    src: 'images/vocabulary/clothes.svg',
+    alt: '横棒にハンガーでシャツが三枚つるされている',
+    caption: '衣服、服＝clothes。いつも複数形で使う。',
+  },
+  clothesline: {
+    src: 'images/vocabulary/clothesline.svg',
+    alt: '二本の支柱の間に張った綱に、洗濯ばさみで服がとめてある',
+    caption: '物干し綱、洗濯ひも＝clothesline。',
+  },
+  club: {
+    src: 'images/vocabulary/club.svg',
+    alt: 'そろいの服を着た仲間が輪になり、旗とボールを囲んでいる',
+    caption: 'クラブ、部活動＝club。仲間の集まりのこと。',
+  },
+  coat: {
+    src: 'images/vocabulary/coat.svg',
+    alt: 'ハンガーにかけられた、丈の長い前開きのコート',
+    caption: 'コート、上着＝coat。',
+  },
+  coffee: {
+    src: 'images/vocabulary/coffee.svg',
+    alt: '湯気の立つカップに濃い色のコーヒーが入っている',
+    caption: 'コーヒー＝coffee。',
+  },
+  'coffee maker': {
+    src: 'images/vocabulary/coffee-maker.svg',
+    alt: '上のタンクからコーヒーが落ち、ガラスのポットにたまっていく',
+    caption: 'コーヒーメーカー＝coffee maker。二語で一つの道具を表す。',
+  },
+  cold: {
+    src: 'images/vocabulary/cold.svg',
+    alt: '厚いコートを着た人が腕をさすり、周りに雪の結晶が舞っている',
+    caption: '寒い、冷たい＝cold。風邪の意味でも使う。',
+  },
+  college: {
+    src: 'images/vocabulary/college.svg',
+    alt: '柱の並んだ大きな学び舎の前に、木が立っている',
+    caption: '大学、単科大学＝college。',
+  },
+  color: {
+    src: 'images/vocabulary/color.svg',
+    alt: '手に持ったパレットに、いくつもの色の絵の具がのっている',
+    caption: '色、色合い＝color。米国式のつづり。',
+  },
+  colour: {
+    src: 'images/vocabulary/colour.svg',
+    alt: '絵の具のチューブから、いくつもの色が絞り出されている',
+    caption: '色、色合い＝colour。英国式のつづりで、米国式は color。',
+  },
+  come: {
+    src: 'images/vocabulary/come.svg',
+    alt: '歩いてきた人が、待っている人のほうへ近づいていく',
+    caption: '来る、着く＝come。話し手のほうへ向かう動き。',
+  },
+  'come in': {
+    src: 'images/vocabulary/come-in.svg',
+    alt: '開いたドアから部屋の中へ入ってくる人と、招き入れる人',
+    caption: '入ってくる＝come in。ノックへの返事としても使う。',
+  },
+  coming: {
+    src: 'images/vocabulary/coming.svg',
+    alt: 'バス停で待つ人のほうへ、バスが近づいてくる',
+    caption: '来るべき、やって来る＝coming。come の現在分詞。',
+  },
+  commuting: {
+    src: 'images/vocabulary/commuting.svg',
+    alt: '電車の車内で、つり革をつかんだ人たちが立っている',
+    caption: '通勤＝commuting。家と職場を往復すること。',
+  },
+  company: {
+    src: 'images/vocabulary/company.svg',
+    alt: '窓の並んだ会社の建物へ、かばんを持った人が向かっていく',
+    caption: '会社＝company。同席している仲間の意味もある。',
+  },
+  complete: {
+    src: 'images/vocabulary/complete.svg',
+    alt: '四つのピースが組み合わさって、絵が仕上がっている',
+    caption: '完全な、完成させる＝complete。すきまなく全部そろうこと。',
+  },
+  computer: {
+    src: 'images/vocabulary/computer.svg',
+    alt: '画面とキーボードのつながった机の上のコンピューター',
+    caption: 'コンピューター＝computer。',
+  },
+  concert: {
+    src: 'images/vocabulary/concert.svg',
+    alt: '舞台の上で歌う人に、客席から頭が集まっている',
+    caption: 'コンサート、演奏会＝concert。',
+  },
+  conversation: {
+    src: 'images/vocabulary/conversation.svg',
+    alt: '向かい合った二人の間で、ことばの吹き出しが行き交っている',
+    caption: '会話、話し合い＝conversation。',
+  },
+  cooler: {
+    src: 'images/vocabulary/cooler.svg',
+    alt: 'ふたを開けた保冷箱に、氷と飲み物が入っている',
+    caption: '保冷箱、クーラーボックス＝cooler。cool に -er がついた形。',
+  },
+  correct: {
+    src: 'images/vocabulary/correct.svg',
+    alt: 'まちがえた語を書き直し、正しいほうに印がついている',
+    caption: '正しい、訂正する＝correct。形容詞と動詞の両方で使う。',
+  },
+  cost: {
+    src: 'images/vocabulary/cost.svg',
+    alt: '商品のそばに値札が下がり、硬貨が積まれている',
+    caption: '費用がかかる、費用＝cost。代金がかかること。',
+  },
+  cot: {
+    src: 'images/vocabulary/cot.svg',
+    alt: '柵のついたベッドに赤ちゃんが寝ている',
+    caption: '（柵付きの）ベビーベッド、簡易ベッド＝cot。',
+  },
+  could: {
+    src: 'images/vocabulary/could.svg',
+    alt: '山の頂上まで登りきり、両腕を上げて旗のそばに立っている',
+    caption: '〜できた、〜してもいいですか＝could。can の過去形。',
+  },
+  country: {
+    src: 'images/vocabulary/country.svg',
+    alt: '丘の向こうに畑と農家が広がり、旗が立っている',
+    caption: '国、田舎＝country。土地そのものを指す言い方。',
+  },
+  courgette: {
+    src: 'images/vocabulary/courgette.svg',
+    alt: '緑のとれたズッキーニと、切った輪切りが並んでいる',
+    caption: 'ズッキーニ＝courgette。米国では zucchini。',
+  },
+  courier: {
+    src: 'images/vocabulary/courier.svg',
+    alt: '荷物をかかえた配達の人が、玄関先へ運んでいく',
+    caption: '宅配業者、配達人＝courier。',
+  },
+  cow: {
+    src: 'images/vocabulary/cow.svg',
+    alt: '白と黒のまだらの体に乳のふくらみがついた雌牛',
+    caption: '雌牛、乳牛＝cow。',
+  },
+  crosswalk: {
+    src: 'images/vocabulary/crosswalk.svg',
+    alt: '道路に白いしまが並び、その上を人が歩いて渡っている',
+    caption: '横断歩道＝crosswalk。',
+  },
+  cup: {
+    src: 'images/vocabulary/cup.svg',
+    alt: '受け皿の上にのった、取っ手つきのカップ',
+    caption: 'カップ、茶わん＝cup。優勝カップの意味でも使う。',
+  },
+  customer: {
+    src: 'images/vocabulary/customer.svg',
+    alt: '店のカウンターごしに、買い物客が店員と向き合っている',
+    caption: '客、顧客＝customer。',
+  },
+  cyclist: {
+    src: 'images/vocabulary/cyclist.svg',
+    alt: '自転車にまたがり、前かがみでペダルをこぐ人',
+    caption: '自転車に乗る人＝cyclist。',
+  },
+  dad: {
+    src: 'images/vocabulary/dad.svg',
+    alt: '父親の肩に子どもをのせて、いっしょに歩いている',
+    caption: 'お父さん、パパ＝dad。幼い子どもが使うくだけた言い方。',
+  },
+  dance: {
+    src: 'images/vocabulary/dance.svg',
+    alt: '手をつないだ二人が、腕を上げて踊っている',
+    caption: '踊る、ダンス＝dance。動詞と名詞の両方で使う。',
+  },
+  dandelion: {
+    src: 'images/vocabulary/dandelion.svg',
+    alt: '黄色い花をつけたタンポポから、綿毛が風に飛んでいく',
+    caption: 'タンポポ＝dandelion。',
+  },
+  daughter: {
+    src: 'images/vocabulary/daughter.svg',
+    alt: 'おさげの女の子が、親の手をとって立っている',
+    caption: '娘＝daughter。親から見た女の子。',
+  },
+  day: {
+    src: 'images/vocabulary/day.svg',
+    alt: '空高くのぼった太陽の下に、家と木が広がっている',
+    caption: '日、1日、昼間＝day。',
+  },
+  decide: {
+    src: 'images/vocabulary/decide.svg',
+    alt: '二つに分かれた道の前で、片方の道に足を踏み出している',
+    caption: '決める、決心する＝decide。いくつかから一つに決めること。',
+  },
+  dentistry: {
+    src: 'images/vocabulary/dentistry.svg',
+    alt: 'いすに寝かせた患者の口もとを、歯科医がのぞきこんでいる',
+    caption: '歯科、歯科医術＝dentistry。dentist は歯科医。',
+  },
+  deodorant: {
+    src: 'images/vocabulary/deodorant.svg',
+    alt: '両腕を上げた人のわきに、スプレーが吹きつけられている',
+    caption: '制汗剤、デオドラント＝deodorant。においを抑える化粧品。',
+  },
+  desk: {
+    src: 'images/vocabulary/desk.svg',
+    alt: '引き出しのついた机の上に、電気と文房具が置いてある',
+    caption: '机、事務机＝desk。受付などの窓口の意味もある。',
+  },
+  dictionary: {
+    src: 'images/vocabulary/dictionary.svg',
+    alt: '背の厚い辞書に、色分けされた見出しのつまみが並んでいる',
+    caption: '辞書、事典＝dictionary。',
+  },
+  die: {
+    src: 'images/vocabulary/die.svg',
+    alt: '花をそえた墓石が、草の上にひっそりと立っている',
+    caption: '死ぬ、亡くなる＝die。',
+  },
+  difference: {
+    src: 'images/vocabulary/difference.svg',
+    alt: '高さのちがう二本の棒と、その差をはかる矢印',
+    caption: '違い、差＝difference。different の名詞形。',
+  },
+  different: {
+    src: 'images/vocabulary/different.svg',
+    alt: 'まる、しかく、さんかくが並び、それぞれ形も色もちがう',
+    caption: '違う、異なる＝different。さまざまな、という意味でも使う。',
+  },
+  difficult: {
+    src: 'images/vocabulary/difficult.svg',
+    alt: 'もつれた縄を前に、頭をかかえて困っている',
+    caption: '難しい、困難な＝difficult。',
+  },
+  dinosaur: {
+    src: 'images/vocabulary/dinosaur.svg',
+    alt: '長い首を高くのばした恐竜が、大きな体で立っている',
+    caption: '恐竜＝dinosaur。',
+  },
+  dirty: {
+    src: 'images/vocabulary/dirty.svg',
+    alt: 'よごれたシャツに、茶色のしみと泥のはねがついている',
+    caption: '汚い、汚れた＝dirty。反対は clean。',
+  },
+  diving: {
+    src: 'images/vocabulary/diving.svg',
+    alt: '板から空高く跳び上がり、水面へ頭から落ちていく',
+    caption: 'ダイビング、飛び込み＝diving。dive の名詞形。',
+  },
+  do: {
+    src: 'images/vocabulary/do.svg',
+    alt: 'ほうきで床をはき、そばのメモにはすんだ印が並んでいる',
+    caption: 'する、行う＝do。疑問文や否定文を作る働きもある。',
+  },
+  does: {
+    src: 'images/vocabulary/does.svg',
+    alt: '一人だけがはきそうじをしており、二人のほうには印がついていない',
+    caption: 'do の三人称単数現在＝does。he や she のように一人を指すときの形。',
+  },
+  dog: {
+    src: 'images/vocabulary/dog.svg',
+    alt: '尾を立てた四つ足の犬が、こちらを向いて立っている',
+    caption: '犬＝dog。',
+  },
+  doing: {
+    src: 'images/vocabulary/doing.svg',
+    alt: '同じ人が少しずつずれて重なり、動きが続いていることがわかる',
+    caption: 'している（進行形）＝doing。do の現在分詞。',
+  },
+  dollar: {
+    src: 'images/vocabulary/dollar.svg',
+    alt: '緑色の紙幣が一枚置かれ、そばに金貨が積まれている',
+    caption: 'ドル＝dollar。米国などの通貨の単位。',
+  },
+  done: {
+    src: 'images/vocabulary/done.svg',
+    alt: '食べ終わった皿にフォークとナイフが置かれ、印がついている',
+    caption: '終わった、済んだ＝done。料理ができあがったという意味でも使う。',
+  },
+  door: {
+    src: 'images/vocabulary/door.svg',
+    alt: '開きかけのとに、動いた跡の弧が描かれている',
+    caption: 'ドア、扉＝door。戸口の意味もある。',
+  },
+  down: {
+    src: 'images/vocabulary/down.svg',
+    alt: '階段を下りていく人と、下向きの矢印',
+    caption: '下へ、下に＝down。〜を下って、という前置詞でも使う。',
+  },
+  downhill: {
+    src: 'images/vocabulary/downhill.svg',
+    alt: '坂を自転車で一気に下っていく',
+    caption: '下り坂で、悪化して＝downhill。下り方向を表す。',
+  },
+  dress: {
+    src: 'images/vocabulary/dress.svg',
+    alt: 'ハンガーにかけられた、すそが広がったワンピース',
+    caption: 'ワンピース＝dress。服を着せるという動詞でも使う。',
+  },
+  drills: {
+    src: 'images/vocabulary/drills.svg',
+    alt: '同じ行をなんども書き写し、丸い矢印で繰り返しを表している',
+    caption: '反復練習、ドリル＝drills。穴あけ工具の意味もある。',
+  },
+  drink: {
+    src: 'images/vocabulary/drink.svg',
+    alt: 'グラスを口もとにあてて、飲みものを飲んでいる',
+    caption: '飲む、飲み物＝drink。',
+  },
+  driver: {
+    src: 'images/vocabulary/driver.svg',
+    alt: 'ハンドルをにぎって運転席にすわっている人',
+    caption: '運転手、ドライバー＝driver。drive する人。',
+  },
+  'drop by': {
+    src: 'images/vocabulary/drop-by.svg',
+    alt: '通りから外れて、玄関先にちょっと立ち寄るところ',
+    caption: '立ち寄る、ふらっと訪ねる＝drop by。短く寄る感じの句動詞。',
+  },
+  dryer: {
+    src: 'images/vocabulary/dryer.svg',
+    alt: '丸い窓のドラムの中で、洗濯物が回って乾いている',
+    caption: '乾燥機、ドライヤー＝dryer。dry する道具。',
+  },
+  dummy: {
+    src: 'images/vocabulary/dummy.svg',
+    alt: '赤ちゃんの口にふくませる、輪のついたおしゃぶり',
+    caption: '（英国）おしゃぶり、マネキン、にせ物＝dummy。',
+  },
+  during: {
+    src: 'images/vocabulary/during.svg',
+    alt: '二つの時計の間の時間に、本を読んで過ごしている',
+    caption: '〜の間（ずっと・のどこかで）＝during。ある期間の中を表す。',
+  },
+  dusty: {
+    src: 'images/vocabulary/dusty.svg',
+    alt: 'ほこりをかぶった棚に、ほこりのたまりとくもの巣ができている',
+    caption: 'ほこりっぽい、ほこりをかぶった＝dusty。',
+  },
+  each: {
+    src: 'images/vocabulary/each.svg',
+    alt: '三つのさらの上に、それぞれりんごが一つずつのっている',
+    caption: 'それぞれの、おのおの＝each。一つずつを指すことば。',
+  },
+  ear: {
+    src: 'images/vocabulary/ear.svg',
+    alt: '横を向いた顔の耳が大きく描かれ、音がそこへ届いている',
+    caption: '耳＝ear。音を聞き分ける力の意味でも使う。',
+  },
+  early: {
+    src: 'images/vocabulary/early.svg',
+    alt: '時計が朝の六時をさし、丘の向こうから日がのぼりかけている',
+    caption: '早い、早く、初期の＝early。',
+  },
+  easel: {
+    src: 'images/vocabulary/easel.svg',
+    alt: '三本足の画架にキャンバスをのせ、絵の具で描いている',
+    caption: '画架、イーゼル＝easel。',
+  },
+  east: {
+    src: 'images/vocabulary/east.svg',
+    alt: '方位計の針が右をさし、右手の空から日がのぼる',
+    caption: '東、東の＝east。地図では右側にあたる方角。',
+  },
+  easy: {
+    src: 'images/vocabulary/easy.svg',
+    alt: '障害のないまっすぐな道を歩き、らくらくと目印に着く',
+    caption: '簡単な、やさしい、気楽な＝easy。',
+  },
+  eat: {
+    src: 'images/vocabulary/eat.svg',
+    alt: 'フォークで食べ物を口に運び、食事をとっている',
+    caption: '食べる＝eat。過去形は ate。',
+  },
+  sardine: {
+    src: 'images/vocabulary/sardine.svg',
+    alt: '開けた缶に小さなイワシが並び、手前に一匹が置かれている',
+    caption: 'イワシ、イワシの缶詰＝sardine。',
+  },
+  egg: {
+    src: 'images/vocabulary/egg.svg',
+    alt: 'フライパンの上で焼けている目玉焼きと、となりに置かれた殻つきの卵',
+    caption: '卵＝egg。白身と黄身に分かれた目玉焼きが卵そのもの。',
+  },
+  eight: {
+    src: 'images/vocabulary/eight.svg',
+    alt: '木のテーブルの上に、金色の丸いコインが8つ並んでいる',
+    caption: '8＝eight。',
+  },
+  eighteen: {
+    src: 'images/vocabulary/eighteen.svg',
+    alt: '10のまとまりの棒が1本と、ばらのコインが8つ並んでいる',
+    caption: '18＝eighteen。10と8に分けて数える。',
+  },
+  eighth: {
+    src: 'images/vocabulary/eighth.svg',
+    alt: '8段の階段を上りきったところに立ち、旗のそばで両手を上げている',
+    caption: '8番目の＝eighth。順番の8つめ。',
+  },
+  eighty: {
+    src: 'images/vocabulary/eighty.svg',
+    alt: '10のまとまりの棒が8本、テーブルの上に並んでいる',
+    caption: '80＝eighty。10が8つ分。',
+  },
+  eleven: {
+    src: 'images/vocabulary/eleven.svg',
+    alt: '10のまとまりの棒が1本と、ばらのコインが1つ置かれている',
+    caption: '11＝eleven。10と1。',
+  },
+  eleventh: {
+    src: 'images/vocabulary/eleventh.svg',
+    alt: '11段の階段を上りきったところに立ち、旗のそばで両手を上げている',
+    caption: '11番目の＝eleventh。順番の11番め。',
+  },
+  else: {
+    src: 'images/vocabulary/else.svg',
+    alt: '棚に並んだ3つの箱を前に、1つの箱を丸で囲み、そこへ点線の矢印がのびている',
+    caption: 'ほかのもの・別の＝else。なにか else で別のものを指す。',
+  },
+  email: {
+    src: 'images/vocabulary/email.svg',
+    alt: 'ノートパソコンの画面へ封筒が飛んでいくところ',
+    caption: '電子メール＝email。メールを送る動詞にもなる。',
+  },
+  empathy: {
+    src: 'images/vocabulary/empathy.svg',
+    alt: '悲しそうな人に寄り添って肩へ手を添え、二人の間にハートが浮かんでいる',
+    caption: '共感・思いやり＝empathy。相手の気持ちを自分のことのように感じること。',
+  },
+  employees: {
+    src: 'images/vocabulary/employees.svg',
+    alt: '会社の前に並んだ3人が、胸に社員証をつけている',
+    caption: '従業員・社員＝employees。雇われて働く人たち。',
+  },
+  end: {
+    src: 'images/vocabulary/end.svg',
+    alt: '道が遮断機で行き止まりになり、終点の旗が立っている',
+    caption: '終わり・端＝end。道が終わる場所。',
+  },
+  enjoy: {
+    src: 'images/vocabulary/enjoy.svg',
+    alt: 'いすに腰かけて飲み物を手にし、目を細めてくつろいでいる',
+    caption: '楽しむ・満喫する＝enjoy。',
+  },
+  enough: {
+    src: 'images/vocabulary/enough.svg',
+    alt: '瓶が点線のところまでちょうど満たされ、となりに緑のチェックがある',
+    caption: '十分な・十分に＝enough。足りている状態。',
+  },
+  evening: {
+    src: 'images/vocabulary/evening.svg',
+    alt: '山の向こうに沈みかけた太陽、灯りのついた家、ともった街灯',
+    caption: '夕方・晩＝evening。日が沈むころ。',
+  },
+  ever: {
+    src: 'images/vocabulary/ever.svg',
+    alt: '左にのびた時間の軸に過去の出来事が並び、右端の時計へ点線が弧を描いている',
+    caption: '今までに・かつて＝ever。これまでに一度でも、という意味。',
+  },
+  every: {
+    src: 'images/vocabulary/every.svg',
+    alt: 'カレンダーの升目すべてにチェックが入り、上の繰り返し矢印が回っている',
+    caption: '毎〜・すべての＝every。どの一つにも当てはまる。',
+  },
+  everybody: {
+    src: 'images/vocabulary/everybody.svg',
+    alt: '広場にたくさんの人が集まり、何人かは両手を上げている',
+    caption: 'みんな・だれでも＝everybody。その場の全員。',
+  },
+  everyone: {
+    src: 'images/vocabulary/everyone.svg',
+    alt: '広間の座席にたくさんの人が並んで座り、前を見ている',
+    caption: 'みんな・だれでも＝everyone。everybody とほぼ同じ。',
+  },
+  everything: {
+    src: 'images/vocabulary/everything.svg',
+    alt: 'テーブルの上に、本・コップ・箱・花・紙などいろいろな物がのっている',
+    caption: 'すべてのこと・何もかも＝everything。',
+  },
+  exam: {
+    src: 'images/vocabulary/exam.svg',
+    alt: '机に向かって答案用紙に書き込み、壁の時計が時間を刻んでいる',
+    caption: '試験・テスト＝exam。',
+  },
+  example: {
+    src: 'images/vocabulary/example.svg',
+    alt: '板の前に立ち、4つ並んだ丸のうち1つを指し棒で指している',
+    caption: '例・実例＝example。代表として示すもの。',
+  },
+  excited: {
+    src: 'images/vocabulary/excited.svg',
+    alt: '両足を地面から離して飛び上がり、両手を上げて目を丸くしている',
+    caption: 'わくわくした・興奮した＝excited。人が感じる側。',
+  },
+  exciting: {
+    src: 'images/vocabulary/exciting.svg',
+    alt: 'ジェットコースターが急な下り坂を滑り降り、後ろに速さの線がのびている',
+    caption: 'わくわくさせる・刺激的な＝exciting。物事が人を興奮させる側。',
+  },
+  explain: {
+    src: 'images/vocabulary/explain.svg',
+    alt: '図の前に立ち、指し棒で1つの箱を指して説明している',
+    caption: '説明する・解説する＝explain。',
+  },
+  'extension cord': {
+    src: 'images/vocabulary/extension-cord.svg',
+    alt: '壁のコンセントから長いコードがのび、たわんで離れたランプにつながる',
+    caption: '延長コード＝extension cord。',
+  },
+  eye: {
+    src: 'images/vocabulary/eye.svg',
+    alt: 'まぶた・虹彩・瞳が大きく描かれた目のクローズアップ',
+    caption: '目・視線＝eye。',
+  },
+  fact: {
+    src: 'images/vocabulary/fact.svg',
+    alt: '書類を虫めがねでのぞき、緑のチェックがついている',
+    caption: '事実・実際のこと＝fact。確かめられたこと。',
+  },
+  family: {
+    src: 'images/vocabulary/family.svg',
+    alt: '家の前に、大人と子どもが手をつないで並んでいる',
+    caption: '家族・一家＝family。',
+  },
+  'fan heater': {
+    src: 'images/vocabulary/fan-heater.svg',
+    alt: '箱型のヒーターの前で手をかざし、温かい風の波が立ちのぼっている',
+    caption: 'ファンヒーター＝fan heater。温風を送る暖房器具。',
+  },
+  faraway: {
+    src: 'images/vocabulary/faraway.svg',
+    alt: '岸から手をかざして遠くを見ており、水平線の先に小さな島が浮かんでいる',
+    caption: '遠くの・遠い＝faraway。',
+  },
+  fast: {
+    src: 'images/vocabulary/fast.svg',
+    alt: '車が道を猛スピードで走り、後ろに長い速度線が何本ものびている',
+    caption: '速い・速く＝fast。',
+  },
+  father: {
+    src: 'images/vocabulary/father.svg',
+    alt: '赤ちゃんをベビーカーに乗せて、後ろから押している父親',
+    caption: '父・父親＝father。',
+  },
+  favorite: {
+    src: 'images/vocabulary/favorite.svg',
+    alt: '棚に並んだ3つの箱のうち真ん中だけが丸で囲まれ、上にハートが浮かんでいる',
+    caption: 'お気に入りの＝favorite。',
+  },
+  favourite: {
+    src: 'images/vocabulary/favourite.svg',
+    alt: '棚に並んだ3つの箱のうち真ん中だけが丸で囲まれ、上にハートが浮かんでいる',
+    caption: 'お気に入りの＝favourite。favorite のイギリス綴り。',
+  },
+  feeling: {
+    src: 'images/vocabulary/feeling.svg',
+    alt: '胸のあたりにハートが浮かび、うれしそうな顔をした人',
+    caption: '気持ち・感情＝feeling。',
+  },
+  festival: {
+    src: 'images/vocabulary/festival.svg',
+    alt: '屋台の提灯と花火、集まった人たちでにぎわう祭り',
+    caption: '祭り・音楽祭＝festival。',
+  },
+  fetch: {
+    src: 'images/vocabulary/fetch.svg',
+    alt: '投げたボールをくわえて、犬が飼い主のところへ走ってくる',
+    caption: '取ってくる・連れてくる＝fetch。行って持って帰ってくる。',
+  },
+  few: {
+    src: 'images/vocabulary/few.svg',
+    alt: '8つ並んだ区切りのうち、硬貨が入っているのは3つだけ',
+    caption: '少しの・少数の＝few。数えられるものに使う。',
+  },
+  fifteen: {
+    src: 'images/vocabulary/fifteen.svg',
+    alt: '10のまとまりの棒が1本と、ばらのコインが5つ並んでいる',
+    caption: '15＝fifteen。10と5。',
+  },
+  fifth: {
+    src: 'images/vocabulary/fifth.svg',
+    alt: '5段の階段を上りきったところに立ち、旗のそばで両手を上げている',
+    caption: '5番目の＝fifth。順番の5つめ。',
+  },
+  fifty: {
+    src: 'images/vocabulary/fifty.svg',
+    alt: '10のまとまりの棒が5本、テーブルの上に並んでいる',
+    caption: '50＝fifty。10が5つ分。',
+  },
+  fill: {
+    src: 'images/vocabulary/fill.svg',
+    alt: '水差しから瓶へ水が注がれ、瓶がいっぱいになっていく',
+    caption: 'いっぱいにする・満たす＝fill。',
+  },
+  find: {
+    src: 'images/vocabulary/find.svg',
+    alt: '草むらを虫めがねでのぞいて、落ちていた鍵を見つけている',
+    caption: '見つける＝find。さがして見つける。',
+  },
+  'fire station': {
+    src: 'images/vocabulary/fire-station.svg',
+    alt: '大きな車庫の前に、はしごを積んだ消防車が止まっている消防署',
+    caption: '消防署＝fire station。',
+  },
+  fisherman: {
+    src: 'images/vocabulary/fisherman.svg',
+    alt: '桟橋に立って釣り糸をたらし、魚がかかっている',
+    caption: '漁師・釣り人＝fisherman。',
+  },
+  five: {
+    src: 'images/vocabulary/five.svg',
+    alt: '木のテーブルの上に、金色の丸いコインが5つ並んでいる',
+    caption: '5＝five。',
+  },
+  'flip-flops': {
+    src: 'images/vocabulary/flip-flops.svg',
+    alt: '砂浜にビーチサンダルが左右一足、脱ぎ置かれている',
+    caption: 'ビーチサンダル＝flip-flops。',
+  },
+  floor: {
+    src: 'images/vocabulary/floor.svg',
+    alt: '板張りの床にラグとボールが置かれ、奥の壁には窓がある',
+    caption: '床＝floor。建物の階の意味にもなる。',
+  },
+  flower: {
+    src: 'images/vocabulary/flower.svg',
+    alt: '植木鉢から3本の花が咲き、蜂が近づいている',
+    caption: '花・草花＝flower。',
+  },
+  follow: {
+    src: 'images/vocabulary/follow.svg',
+    alt: '前を歩く人を、もう一人があとから同じ道について歩いている',
+    caption: 'ついていく・従う＝follow。',
+  },
+  food: {
+    src: 'images/vocabulary/food.svg',
+    alt: 'テーブルに皿とスープの器、パン、飲み物が並んでいる',
+    caption: '食べ物・食事＝food。',
+  },
+  'food processor': {
+    src: 'images/vocabulary/food-processor.svg',
+    alt: 'フードプロセッサーの容器に野菜が落ち、中の刃が回っている',
+    caption: 'フードプロセッサー＝food processor。食材を刻む調理器具。',
+  },
+  foot: {
+    src: 'images/vocabulary/foot.svg',
+    alt: 'かかとから足指までの裸足と、となりに点線で描いた足あと',
+    caption: '足＝foot。くるぶしから下の部分。',
+  },
+  football: {
+    src: 'images/vocabulary/football.svg',
+    alt: 'サッカーボールがゴールネットへ向かって飛んでいく',
+    caption: 'サッカー（英）・フットボール＝football。',
+  },
+  for: {
+    src: 'images/vocabulary/for.svg',
+    alt: '雨の中で、片方の人がもう片方に傘をさしかけている',
+    caption: '〜のために＝for。だれかのためにする場面。',
+  },
+  forget: {
+    src: 'images/vocabulary/forget.svg',
+    alt: 'ベンチに鍵を置き忘れて立ち去り、頭の上には鍵と×の吹き出し',
+    caption: '忘れる・忘れ物をする＝forget。',
+  },
+  forty: {
+    src: 'images/vocabulary/forty.svg',
+    alt: '10のまとまりの棒が4本、テーブルの上に並んでいる',
+    caption: '40＝forty。10が4つ分。',
+  },
+  forwards: {
+    src: 'images/vocabulary/forwards.svg',
+    alt: '体を前に向けて歩き、進む先へ大きな矢印がのびている',
+    caption: '前方へ・前へ＝forwards。進む向き。',
+  },
+  four: {
+    src: 'images/vocabulary/four.svg',
+    alt: '木のテーブルの上に、金色の丸いコインが4つ並んでいる',
+    caption: '4＝four。',
+  },
+  fourteen: {
+    src: 'images/vocabulary/fourteen.svg',
+    alt: '10のまとまりの棒が1本と、ばらのコインが4つ並んでいる',
+    caption: '14＝fourteen。10と4。',
+  },
+  fourth: {
+    src: 'images/vocabulary/fourth.svg',
+    alt: '4段の階段を上りきったところに立ち、旗のそばで両手を上げている',
+    caption: '4番目の＝fourth。順番の4つめ。',
+  },
+  friend: {
+    src: 'images/vocabulary/friend.svg',
+    alt: '肩を組み合って並び、いっしょに笑っている二人',
+    caption: '友だち・友人＝friend。',
+  },
+  friendly: {
+    src: 'images/vocabulary/friendly.svg',
+    alt: '笑顔で手のひらを見せて手を差し出し、そばにハートが浮かんでいる',
+    caption: '友好的な・親切な＝friendly。',
+  },
+  from: {
+    src: 'images/vocabulary/from.svg',
+    alt: '左手前の家が点線の丸で囲まれ、封書がもう一方の家へ飛んでいく',
+    caption: '〜から＝from。出発点・起点を表す。',
+  },
+  front: {
+    src: 'images/vocabulary/front.svg',
+    alt: '正面から見た家。玄関へ続く道があり、手前に車が止まっている',
+    caption: '前・前面＝front。建物の正面。',
+  },
+  fruit: {
+    src: 'images/vocabulary/fruit.svg',
+    alt: 'かごにりんご・オレンジ・ぶどう・バナナが盛られている',
+    caption: '果物＝fruit。',
+  },
+  full: {
+    src: 'images/vocabulary/full.svg',
+    alt: 'グラスが縁までいっぱいで、水がこぼれ落ちている',
+    caption: 'いっぱいの・満ちた＝full。入りきらないほど。',
+  },
+  funny: {
+    src: 'images/vocabulary/funny.svg',
+    alt: '体をそらして大笑いし、そばのびっくり箱から顔が飛び出している',
+    caption: 'おかしい・笑える＝funny。',
+  },
+  game: {
+    src: 'images/vocabulary/game.svg',
+    alt: 'テーブルをはさんで二人が盤に向かい、さいころを振って遊んでいる',
+    caption: 'ゲーム・試合・遊び＝game。',
+  },
+  garden: {
+    src: 'images/vocabulary/garden.svg',
+    alt: '柵で囲った庭に花が並び、じょうろと蝶がいる',
+    caption: '庭・庭園＝garden。',
+  },
+  garment: {
+    src: 'images/vocabulary/garment.svg',
+    alt: 'ハンガーにかけた1着の衣服と、ぶら下がった値札',
+    caption: '衣服・衣類1点＝garment。',
+  },
+  geography: {
+    src: 'images/vocabulary/geography.svg',
+    alt: '台にのった地球儀と、となりに置かれた方位磁針',
+    caption: '地理・地理学＝geography。',
+  },
+  get: {
+    src: 'images/vocabulary/get.svg',
+    alt: '棚の上の箱へ手をのばして、取り出そうとしている',
+    caption: '手に入れる・着く＝get。手をのばして取る。',
+  },
+  girl: {
+    src: 'images/vocabulary/girl.svg',
+    alt: '風船を手にした女の子が、にこにこしながら立っている',
+    caption: '女の子・少女＝girl。',
+  },
+  give: {
+    src: 'images/vocabulary/give.svg',
+    alt: '箱を相手に手渡し、二人の手の間に点線の矢印がのびている',
+    caption: '与える・渡す＝give。',
+  },
+  glass: {
+    src: 'images/vocabulary/glass.svg',
+    alt: '窓から差し込む光と、窓台にのせた水の入ったグラス',
+    caption: 'ガラス・コップ＝glass。',
+  },
+  glasses: {
+    src: 'images/vocabulary/glasses.svg',
+    alt: '顏にかけた眼鏡。レンズには光が反射している',
+    caption: '眼鏡＝glasses。',
+  },
+  goes: {
+    src: 'images/vocabulary/goes.svg',
+    alt: '朝、家から出て歩いていく人。壁の時計は8時を指している',
+    caption: '行く＝goes。主語が he や she のときの go の形。',
+  },
+  going: {
+    src: 'images/vocabulary/going.svg',
+    alt: 'スーツケースを引いて、飛行機の方へ歩き出そうとしている',
+    caption: '行くこと＝going。be going to で〜する予定。',
+  },
+  golfer: {
+    src: 'images/vocabulary/golfer.svg',
+    alt: 'クラブを振りきってボールを打ち、グリーンの旗が見えている',
+    caption: 'ゴルファー・ゴルフをする人＝golfer。',
+  },
+  gone: {
+    src: 'images/vocabulary/gone.svg',
+    alt: '扉の開いた空の鳥かごと、遠くへ飛び去っていく鳥',
+    caption: 'いなくなった・行ってしまった＝gone。',
+  },
+  goodbye: {
+    src: 'images/vocabulary/goodbye.svg',
+    alt: '別れのあいさつに、二人が手を振り合っている',
+    caption: 'さようなら＝goodbye。',
+  },
+  gray: {
+    src: 'images/vocabulary/gray.svg',
+    alt: '灰色の猫と灰色の雲、足もとには灰色の石がころがっている',
+    caption: '灰色の・灰色＝gray。',
+  },
+  great: {
+    src: 'images/vocabulary/great.svg',
+    alt: '大きな山の頂上に立って両手を上げ、そばに旗がはためいている',
+    caption: 'すばらしい・大きな・偉大な＝great。',
+  },
+  green: {
+    src: 'images/vocabulary/green.svg',
+    alt: '緑の草の上に緑の木が並び、緑のカエルが鳴いている',
+    caption: '緑の・緑＝green。',
+  },
+  grey: {
+    src: 'images/vocabulary/grey.svg',
+    alt: '灰色の猫と灰色の雲、足もとには灰色の石がころがっている',
+    caption: '灰色の・灰色＝grey。gray のイギリス綴り。',
+  },
+  griddle: {
+    src: 'images/vocabulary/griddle.svg',
+    alt: '平らな鉄板でパンケーキを焼き、へらで返そうとしている',
+    caption: '平らな鉄板＝griddle。',
+  },
+  grinder: {
+    src: 'images/vocabulary/grinder.svg',
+    alt: '豆をひくひき器。ハンドルが回り、下の引き出しに粉がたまる',
+    caption: 'ひき器・研削機＝grinder。',
+  },
+  'ground floor': {
+    src: 'images/vocabulary/ground-floor.svg',
+    alt: '3階建ての建物で、いちばん下の階が点線の丸に囲まれている',
+    caption: '1階（英）・地上階＝ground floor。',
+  },
+  group: {
+    src: 'images/vocabulary/group.svg',
+    alt: '4人が肩を寄せて小さなかたまりになり、まわりを点線が囲んでいる',
+    caption: '集団・グループ＝group。',
+  },
+  grow: {
+    src: 'images/vocabulary/grow.svg',
+    alt: '小さな芽から大きな草へ、育っていく様子を上向きの矢印で示している',
+    caption: '育つ・育てる・増える＝grow。',
+  },
+  guess: {
+    src: 'images/vocabulary/guess.svg',
+    alt: '布をかぶせた物を見ながら考えこみ、頭の上には何かの形が浮かんでいる',
+    caption: '推測する・当てる＝guess。',
+  },
+  gym: {
+    src: 'images/vocabulary/gym.svg',
+    alt: 'ダンベルを棚に並べた筋トレの部屋で、バーベルを持ち上げている',
+    caption: 'ジム＝gym。訓練用の器具がある部屋。',
+  },
+  gymnasium: {
+    src: 'images/vocabulary/gymnasium.svg',
+    alt: '体育館のコートから、バスケットゴールめがけて球が飛んでいる',
+    caption: '体育館・屋内運動場＝gymnasium。',
+  },
+  gymnastics: {
+    src: 'images/vocabulary/gymnastics.svg',
+    alt: '平均台の上で両手を横にのばし、バランスをとっている',
+    caption: '体操・体操競技＝gymnastics。',
+  },
+  had: {
+    src: 'images/vocabulary/had.svg',
+    alt: 'いまは空のカップ。点線で満たされていたころの形と、過去へ戻る矢印',
+    caption: '持っていた＝had。have の過去形で、昔の状態を表す。',
+  },
+  hair: {
+    src: 'images/vocabulary/hair.svg',
+    alt: '長い髪をたらした頭と、となりのくし',
+    caption: '髪・毛＝hair。',
+  },
+  pestle: {
+    src: 'images/vocabulary/pestle.svg',
+    alt: 'すり鉢に入れた粒を、すりこぎでつぶしている',
+    caption: 'すりこぎ・乳棒＝pestle。',
+  },
+  walrus: {
+    src: 'images/vocabulary/walrus.svg',
+    alt: '氷の上にのったセイウチ。長い牙とひげが目立っている',
+    caption: 'セイウチ＝walrus。',
+  },
+  fertiliser: {
+    src: 'images/vocabulary/fertiliser.svg',
+    alt: '肥料の袋を傾けて芽に粒をふりまくイラスト。',
+    caption: '土にまいて植物の育ちをよくする肥料。',
+  },
+  haircut: {
+    src: 'images/vocabulary/haircut.svg',
+    alt: 'いすに座った人の髪をはさみで切っているイラスト。',
+    caption: '髪を切って整えてもらうこと。',
+  },
+  hamster: {
+    src: 'images/vocabulary/hamster.svg',
+    alt: '回し車のそばで丸くなっているハムスターのイラスト。',
+    caption: 'ほお袋に餌をためる小さなげっ歯類、ハムスター。',
+  },
+  happen: {
+    src: 'images/vocabulary/happen.svg',
+    alt: 'コップが棚から落ちて床で割れる、思いがけない出来事のイラスト。',
+    caption: '予期しないことが起こる。',
+  },
+  happy: {
+    src: 'images/vocabulary/happy.svg',
+    alt: '笑顔で小さなハートを両手に抱えているイラスト。',
+    caption: 'うれしくて幸せな気持ち。',
+  },
+  hard: {
+    src: 'images/vocabulary/hard.svg',
+    alt: '硬い岩にハンマーがはね返されるイラスト。',
+    caption: '固くて壊れない、または難しい。',
+  },
+  harmonica: {
+    src: 'images/vocabulary/harmonica.svg',
+    alt: 'ハーモニカを口にあてて吹いているイラスト。',
+    caption: '口で吹いて音を出す小さな楽器、ハーモニカ。',
+  },
+  has: {
+    src: 'images/vocabulary/has.svg',
+    alt: '箱をしっかり抱えて持っているイラスト。',
+    caption: '「持っている」を表す have の三人称単数形。',
+  },
+  hat: {
+    src: 'images/vocabulary/hat.svg',
+    alt: 'つばの広い帽子をかぶっている人のイラスト。',
+    caption: '頭にかぶる帽子。',
+  },
+  having: {
+    src: 'images/vocabulary/having.svg',
+    alt: '手に持ったカップを口に運んで飲んでいるイラスト。',
+    caption: '「持っている・している」を表す have の進行形。',
+  },
+  he: {
+    src: 'images/vocabulary/he.svg',
+    alt: '輪でかこんで男性ひとりを指し示すイラスト。',
+    caption: '男性を指す代名詞「彼は・彼が」。',
+  },
+  health: {
+    src: 'images/vocabulary/health.svg',
+    alt: 'ハートと脈の線、りんごで表す健康のイラスト。',
+    caption: '体の調子がよく元気なこと、健康。',
+  },
+  healthy: {
+    src: 'images/vocabulary/healthy.svg',
+    alt: '走って体を動かし、りんごを食べている健康な人のイラスト。',
+    caption: '体に良く、健康なようす。',
+  },
+  hear: {
+    src: 'images/vocabulary/hear.svg',
+    alt: 'リンを鳴らして音が耳にとどくようすのイラスト。',
+    caption: '音が自然に耳に入ってくる、聞こえる。',
+  },
+  hello: {
+    src: 'images/vocabulary/hello.svg',
+    alt: '電話を耳にあてて挨拶しているイラスト。',
+    caption: '電話や対面でのあいさつ「もしもし・こんにちは」。',
+  },
+  help: {
+    src: 'images/vocabulary/help.svg',
+    alt: '穴に落ちた人に手を差し伸べて引き上げるイラスト。',
+    caption: '困っている人の力になる、助ける。',
+  },
+  her: {
+    src: 'images/vocabulary/her.svg',
+    alt: '花を手渡された女性を輪で示すイラスト。',
+    caption: '女性を目的語・所有格で指す「彼女を・彼女の」。',
+  },
+  here: {
+    src: 'images/vocabulary/here.svg',
+    alt: '矢印が足もとの場所を指しているイラスト。',
+    caption: '話し手のいる場所「ここに・ここへ」。',
+  },
+  hey: {
+    src: 'images/vocabulary/hey.svg',
+    alt: '手を上げて大声で人を呼びとめるイラスト。',
+    caption: '人を呼びとめるときの「おい・やあ」。',
+  },
+  hi: {
+    src: 'images/vocabulary/hi.svg',
+    alt: '手をふって気軽にあいさつしているイラスト。',
+    caption: '気軽なあいさつ「やあ・こんにちは」。',
+  },
+  highchair: {
+    src: 'images/vocabulary/highchair.svg',
+    alt: '赤ちゃんが高い食事椅子に座っているイラスト。',
+    caption: '小さな子を高い位置に座らせる食事用の椅子。',
+  },
+  highlighter: {
+    src: 'images/vocabulary/highlighter.svg',
+    alt: '文書の一行を蛍光ペンでなぞって目立たせるイラスト。',
+    caption: '文字の上をなぞって目立たせる蛍光ペン。',
+  },
+  him: {
+    src: 'images/vocabulary/him.svg',
+    alt: '手紙を手渡された男性を輪で示すイラスト。',
+    caption: '男性を目的語として指す「彼を・彼に」。',
+  },
+  history: {
+    src: 'images/vocabulary/history.svg',
+    alt: '古い石の柱の神殿と時の流れを示す矢印のイラスト。',
+    caption: '昔から積み重ねられてきた出来事の流れ、歴史。',
+  },
+  hitchhike: {
+    src: 'images/vocabulary/hitchhike.svg',
+    alt: '道ばたで親指を上げて車を止めようとするイラスト。',
+    caption: '通りがかりの車に乗せてもらうヒッチハイク。',
+  },
+  hobby: {
+    src: 'images/vocabulary/hobby.svg',
+    alt: 'イーゼルに向かって絵を描いて楽しむイラスト。',
+    caption: '好きで続けている楽しみごと、趣味。',
+  },
+  hoodie: {
+    src: 'images/vocabulary/hoodie.svg',
+    alt: 'フードと大きなポケットのついたパーカーのイラスト。',
+    caption: 'フードのついた上着、パーカー。',
+  },
+  horse: {
+    src: 'images/vocabulary/horse.svg',
+    alt: 'たてがみと長い尾のある馬の横姿のイラスト。',
+    caption: '人を乗せたり荷を運んだりする家畜、馬。',
+  },
+  hot: {
+    src: 'images/vocabulary/hot.svg',
+    alt: '湯気の立つカップと太陽で表す暑さのイラスト。',
+    caption: '熱くて湯気が立つ、または暑い。',
+  },
+  hotel: {
+    src: 'images/vocabulary/hotel.svg',
+    alt: '窓のならぶ宿の入口に荷物を運ぶ人のいるイラスト。',
+    caption: '旅行者が泊まる宿、ホテル。',
+  },
+  hour: {
+    src: 'images/vocabulary/hour.svg',
+    alt: '時計の針が一周するあいだの時間を示すイラスト。',
+    caption: '60分の長さ、1時間。',
+  },
+  how: {
+    src: 'images/vocabulary/how.svg',
+    alt: '地図の上で道順をたどって行き方を示すイラスト。',
+    caption: '方法や手段をたずねる「どうやって」。',
+  },
+  humidifier: {
+    src: 'images/vocabulary/humidifier.svg',
+    alt: '白い霧を上に吹き出す加湿器のイラスト。',
+    caption: '部屋をうるおす家電、加湿器。',
+  },
+  hundred: {
+    src: 'images/vocabulary/hundred.svg',
+    alt: '10×10にきちんと並んだ点で100を表すイラスト。',
+    caption: '100、また非常に多い数。',
+  },
+  hungry: {
+    src: 'images/vocabulary/hungry.svg',
+    alt: 'おなかを押さえて空腹をこらえているイラスト。',
+    caption: 'おなかがすいた状態。',
+  },
+  husband: {
+    src: 'images/vocabulary/husband.svg',
+    alt: '指輪をかわした夫婦が並んで立っているイラスト。',
+    caption: '結婚している男性、夫。',
+  },
+  i: {
+    src: 'images/vocabulary/i.svg',
+    alt: '自分の胸に両手をあてて名乗るイラスト。',
+    caption: '話し手自身を表す「私は・私が」。',
+  },
+  ice: {
+    src: 'images/vocabulary/ice.svg',
+    alt: 'グラスに入った角氷と冷気のイラスト。',
+    caption: '水が凍って固まったもの、氷。',
+  },
+  idea: {
+    src: 'images/vocabulary/idea.svg',
+    alt: '頭の上に電球が光る、ひらめきのイラスト。',
+    caption: 'ふと浮かんだ考え、思いつき。',
+  },
+  if: {
+    src: 'images/vocabulary/if.svg',
+    alt: '道が二つに分かれる分かれ道のイラスト。',
+    caption: '「もし…なら」と条件を示す接続詞。',
+  },
+  important: {
+    src: 'images/vocabulary/important.svg',
+    alt: '両手で大切にかかえた箱と輝きのイラスト。',
+    caption: 'とても大切で、重要である。',
+  },
+  in: {
+    src: 'images/vocabulary/in.svg',
+    alt: '透明な箱の中にボールが入っているイラスト。',
+    caption: 'ある物の中にあることを示す「…の中に」。',
+  },
+  insomnia: {
+    src: 'images/vocabulary/insomnia.svg',
+    alt: '夜中、目を見開いたまま寝床で眠れずにいるイラスト。',
+    caption: '眠りたいのに眠れない不眠症。',
+  },
+  interested: {
+    src: 'images/vocabulary/interested.svg',
+    alt: '身を乗り出して本に見入っているイラスト。',
+    caption: '興味や関心を持っている状態。',
+  },
+  interesting: {
+    src: 'images/vocabulary/interesting.svg',
+    alt: '本を読んで思わず笑顔になっているイラスト。',
+    caption: '興味をひかれて面白い。',
+  },
+  internet: {
+    src: 'images/vocabulary/internet.svg',
+    alt: 'ノートパソコンと地球を線でつないだイラスト。',
+    caption: '世界のコンピュータをつなぐ網、インターネット。',
+  },
+  interpreter: {
+    src: 'images/vocabulary/interpreter.svg',
+    alt: '二人の間に立って言葉を行き来させているイラスト。',
+    caption: '異なる言語の間で言葉を伝える人、通訳者。',
+  },
+  into: {
+    src: 'images/vocabulary/into.svg',
+    alt: '箱の中へボールが入っていくイラスト。',
+    caption: '外から中へ入る動きを表す「…の中へ」。',
+  },
+  'ironing board': {
+    src: 'images/vocabulary/ironing-board.svg',
+    alt: 'アイロン台に布をのせてアイロンをあてるイラスト。',
+    caption: 'アイロンをかけるための台。',
+  },
+  is: {
+    src: 'images/vocabulary/is.svg',
+    alt: '二つの同じ形を等号で結ぶイラスト。',
+    caption: '「AはBです」と主語と説明をつなぐ語。',
+  },
+  island: {
+    src: 'images/vocabulary/island.svg',
+    alt: '海に浮かぶ島とヤシの木のイラスト。',
+    caption: '海に囲まれた陸地、島。',
+  },
+  its: {
+    src: 'images/vocabulary/its.svg',
+    alt: '犬のそばの茶わんを輪で指し示すイラスト。',
+    caption: 'ものや動物の所有を表す「その・それの」。',
+  },
+  mortar: {
+    src: 'images/vocabulary/mortar.svg',
+    alt: '乳鉢と乳棒ですりつぶして粉にするイラスト。',
+    caption: '薬や香辛料をすりつぶす道具、乳鉢。',
+  },
+  job: {
+    src: 'images/vocabulary/job.svg',
+    alt: 'かばんを持って職場へ向かう人のイラスト。',
+    caption: '働いて収入を得る仕事、職。',
+  },
+  join: {
+    src: 'images/vocabulary/join.svg',
+    alt: 'つながって並ぶ仲間の列に加わっていくイラスト。',
+    caption: '仲間や集まりに加わる、つながる。',
+  },
+  judo: {
+    src: 'images/vocabulary/judo.svg',
+    alt: '置の上で組み合って投げ技をかけるイラスト。',
+    caption: '日本の武道、柔道。',
+  },
+  juice: {
+    src: 'images/vocabulary/juice.svg',
+    alt: 'ストローをさしたジュースのグラスと果物のイラスト。',
+    caption: '果物をしぼった飲みもの、ジュース。',
+  },
+  nectar: {
+    src: 'images/vocabulary/nectar.svg',
+    alt: '花の蜜をハチが吸いに来るイラスト。',
+    caption: '花の中にある甘い蜜。',
+  },
+  jungle: {
+    src: 'images/vocabulary/jungle.svg',
+    alt: '木が何本も茂り、つるが垂れる密林のイラスト。',
+    caption: '熱帯のこんもりと茂った森、ジャングル。',
+  },
+  kangaroo: {
+    src: 'images/vocabulary/kangaroo.svg',
+    alt: 'おなかの袋から赤ちゃんが顔を出すカンガルーのイラスト。',
+    caption: 'おなかの袋で子を育てる動物、カンガルー。',
+  },
+  karate: {
+    src: 'images/vocabulary/karate.svg',
+    alt: '空手の突きで板を割るイラスト。',
+    caption: '日本の武道、空手。',
+  },
+  kayak: {
+    src: 'images/vocabulary/kayak.svg',
+    alt: 'パドルでこぐカヤックが水面を進むイラスト。',
+    caption: '一人乗りの細長い小舟、カヤック。',
+  },
+  keep: {
+    src: 'images/vocabulary/keep.svg',
+    alt: '錠のついた箱を両腕でかかえて手ばなさないイラスト。',
+    caption: '手もとにおいて、なくさずとっておく。',
+  },
+  kilometer: {
+    src: 'images/vocabulary/kilometer.svg',
+    alt: '道に距離の目印が置かれた長い一本道のイラスト。',
+    caption: '1000メートルを表す距離の単位。',
+  },
+  kindness: {
+    src: 'images/vocabulary/kindness.svg',
+    alt: '困っている人に食べものを差し出して助けるイラスト。',
+    caption: '相手を思いやるやさしさ、親切。',
+  },
+  kneel: {
+    src: 'images/vocabulary/kneel.svg',
+    alt: '片ひざを床について低くかがむイラスト。',
+    caption: 'ひざを床について体を低くする、ひざまずく。',
+  },
+  know: {
+    src: 'images/vocabulary/know.svg',
+    alt: '頭の中に電球がともっているイラスト。',
+    caption: '知っている、分かっている。',
+  },
+  koala: {
+    src: 'images/vocabulary/koala.svg',
+    alt: '木の枝にだきつくようにして座るコアラのイラスト。',
+    caption: '木の上で暮らすオーストラリアの動物、コアラ。',
+  },
+  'lamp shade': {
+    src: 'images/vocabulary/lamp-shade.svg',
+    alt: '電灯のかさから光が広がるイラスト。',
+    caption: '電灯の光をやわらげる、ランプのかさ。',
+  },
+  landslide: {
+    src: 'images/vocabulary/landslide.svg',
+    alt: '山の斜面がくずれ、岩や土が下へ流れ落ちるイラスト。',
+    caption: '地面が崩れて土砂が落ちる、地すべり。',
+  },
+  language: {
+    src: 'images/vocabulary/language.svg',
+    alt: '違う模様の吹き出しで言葉を交わす二人のイラスト。',
+    caption: '人々が使う言葉そのもの、言語。',
+  },
+  large: {
+    src: 'images/vocabulary/large.svg',
+    alt: '大きな木と小さな木を並べて大きさを示すイラスト。',
+    caption: '大きい、広い。',
+  },
+  late: {
+    src: 'images/vocabulary/late.svg',
+    alt: '時計を見ながら走って急いでいるイラスト。',
+    caption: '決めた時刻を過ぎている、遅れて。',
+  },
+  laugh: {
+    src: 'images/vocabulary/laugh.svg',
+    alt: '口を大きく開け、涙をためて笑う顔のイラスト。',
+    caption: '声を出して笑う。',
+  },
+  laundrette: {
+    src: 'images/vocabulary/laundrette.svg',
+    alt: '洗濯機が並ぶコインランドリーの店内のイラスト。',
+    caption: 'コインを入れて使う共用の洗濯場。',
+  },
+  learn: {
+    src: 'images/vocabulary/learn.svg',
+    alt: '本を読みながら学んだことが積み上がっていくイラスト。',
+    caption: '知識や技術を身につける、学ぶ。',
+  },
+  leg: {
+    src: 'images/vocabulary/leg.svg',
+    alt: 'ひざを丸で示した脚のイラスト。',
+    caption: '体を支えて歩くための脚。',
+  },
+  leggings: {
+    src: 'images/vocabulary/leggings.svg',
+    alt: '脚にぴったりした細身のズボンをはいているイラスト。',
+    caption: '脚に沿うぴったりしたズボン、レギンス。',
+  },
+  lesson: {
+    src: 'images/vocabulary/lesson.svg',
+    alt: '黒板の前に立つ先生と席についた生徒のイラスト。',
+    caption: '先生が教えるひと区切りの授業。',
+  },
+  let: {
+    src: 'images/vocabulary/let.svg',
+    alt: 'さえぎるロープを持ち上げて相手を通してあげるイラスト。',
+    caption: '行かせてあげる、…させてあげる。',
+  },
+  letter: {
+    src: 'images/vocabulary/letter.svg',
+    alt: '封筒から手紙を取り出しているイラスト。',
+    caption: '人に送る手紙、または文字。',
+  },
+  library: {
+    src: 'images/vocabulary/library.svg',
+    alt: '本棚に本が並び、人が読書している図書館のイラスト。',
+    caption: '本を集めて貸し出す施設、図書館。',
+  },
+  lick: {
+    src: 'images/vocabulary/lick.svg',
+    alt: '舌を出してアイスクリームをなめているイラスト。',
+    caption: '舌でなめる。',
+  },
+  life: {
+    src: 'images/vocabulary/life.svg',
+    alt: '幼い頃から年を重ねて人生の道を歩んでいくイラスト。',
+    caption: '人が生きていること、一生の歩み。',
+  },
+  'light switch': {
+    src: 'images/vocabulary/light-switch.svg',
+    alt: '壁のスイッチを入れて電灯がつくイラスト。',
+    caption: '部屋の電灯を入り切りするスイッチ。',
+  },
+  list: {
+    src: 'images/vocabulary/list.svg',
+    alt: '紙に項目が上から順に並んだ一覧のイラスト。',
+    caption: '順に並べた項目、リスト。',
+  },
+  listen: {
+    src: 'images/vocabulary/listen.svg',
+    alt: '耳をそばだててラジオの音に聞き入るイラスト。',
+    caption: '注意して耳を傾ける。',
+  },
+  'live on': {
+    src: 'images/vocabulary/live-on.svg',
+    alt: '毎日お米を主食にして食べているイラスト。',
+    caption: '…を主食にしてそれで暮らす。',
+  },
+  loafers: {
+    src: 'images/vocabulary/loafers.svg',
+    alt: 'ひもなしの革靴が二足並べられているイラスト。',
+    caption: 'ひもを結ばずに履く革靴、ローファー。',
+  },
+  lockers: {
+    src: 'images/vocabulary/lockers.svg',
+    alt: 'かぎのかかったロッカーが並び、一つが開いているイラスト。',
+    caption: 'かぎをかけて荷物を保管するロッカー。',
+  },
+  long: {
+    src: 'images/vocabulary/long.svg',
+    alt: '長くのびたロープと短いロープを並べたイラスト。',
+    caption: '端から端までのへだたりが大きい、長い。',
+  },
+  'look for': {
+    src: 'images/vocabulary/look-for.svg',
+    alt: '虫めがねで荷物の山をのぞいて探すイラスト。',
+    caption: '見つけようとして捜す。',
+  },
+  lose: {
+    src: 'images/vocabulary/lose.svg',
+    alt: '歩いていて小銭を落とし、それに気づかず行ってしまうイラスト。',
+    caption: '持っていたものをなくす、失う。',
+  },
+  'lost property': {
+    src: 'images/vocabulary/lost-property.svg',
+    alt: '忘れ物の品に札がつけられて並べられているイラスト。',
+    caption: '落とし物や忘れ物を預かる場所とその品。',
+  },
+  lot: {
+    src: 'images/vocabulary/lot.svg',
+    alt: '果物が山のようにたくさん積み上げられているイラスト。',
+    caption: '数量がとても多いこと、たくさん。',
+  },
+  lotion: {
+    src: 'images/vocabulary/lotion.svg',
+    alt: 'ボトルから化粧水を手のひらに出しているイラスト。',
+    caption: '肌につける化粧水、乳液。',
+  },
+  love: {
+    src: 'images/vocabulary/love.svg',
+    alt: '二人の間に大きなハートが浮かんでいるイラスト。',
+    caption: '大切に思う気持ち、愛すること。',
+  },
+  lunchbox: {
+    src: 'images/vocabulary/lunchbox.svg',
+    alt: 'ふたを開けた弁当箱におかずとごはんがつまっているイラスト。',
+    caption: '食事を入れて持ち歩く箱、弁当箱。',
+  },
+  machine: {
+    src: 'images/vocabulary/machine.svg',
+    alt: '歯車のついた機械が製品を送り出すイラスト。',
+    caption: '動力で動く装置、機械。',
+  },
+  magazine: {
+    src: 'images/vocabulary/magazine.svg',
+    alt: 'カラフルな表紙の雑誌が何冊か重なっているイラスト。',
+    caption: '記事や写真を載せた定期刊行の読みもの、雑誌。',
+  },
+  magazines: {
+    src: 'images/vocabulary/magazines.svg',
+    alt: 'テーブルに積まれた雑誌と、1冊を開いて読む人のイラスト。',
+    caption: '複数冊まとめて置いてある雑誌。magazine の複数形。',
+  },
+  main: {
+    src: 'images/vocabulary/main.svg',
+    alt: '幅の広い通りが画面を横切り、脇道が細く分かれているイラスト。',
+    caption: '中心になる一番大きな通り。main road / main street。',
+  },
+  man: {
+    src: 'images/vocabulary/man.svg',
+    alt: 'ネクタイを締めた大人の男性が立っているイラスト。',
+    caption: '成人した男性。複数形は men と不規則に変わる。',
+  },
+  many: {
+    src: 'images/vocabulary/many.svg',
+    alt: '箱からたくさんのボールがあふれ出ているイラスト。',
+    caption: '数えられるものが「たくさん」。many + 複数形で使う。',
+  },
+  married: {
+    src: 'images/vocabulary/married.svg',
+    alt: '指輪をはめた2人が並び、間にハートが浮かぶイラスト。',
+    caption: '結婚している状態。be married to 人 の形で使う。',
+  },
+  match: {
+    src: 'images/vocabulary/match.svg',
+    alt: 'ゴールの前で2人の選手がボールを挟んで向き合うイラスト。',
+    caption: 'スポーツの試合。ほかに「色が合う」「マッチ棒」の意味もある。',
+  },
+  math: {
+    src: 'images/vocabulary/math.svg',
+    alt: '黒板に三角形・円・四角と計算の記号が描かれているイラスト。',
+    caption: '数学。学校の科目としての math。',
+  },
+  maybe: {
+    src: 'images/vocabulary/maybe.svg',
+    alt: '考えている人の上に、晴れと雨の吹き出しが2つ浮かぶイラスト。',
+    caption: 'たぶん、もしかすると。どちらか分からない見込みを表す。',
+  },
+  me: {
+    src: 'images/vocabulary/me.svg',
+    alt: '品物を差し出され、自分に輪がかかっているイラスト。',
+    caption: '「私を・私に」。I の目的格で、give me のように使う。',
+  },
+  'measuring cup': {
+    src: 'images/vocabulary/measuring-cup.svg',
+    alt: '目盛りのついた計量カップに水が入っているイラスト。',
+    caption: '料理で分量を量るための計量カップ。',
+  },
+  meat: {
+    src: 'images/vocabulary/meat.svg',
+    alt: 'まな板の上に載った厚い肉と包丁のイラスト。',
+    caption: '食用の肉。ステーキやハムなど。',
+  },
+  meet: {
+    src: 'images/vocabulary/meet.svg',
+    alt: '2人が向かい合って握手しているイラスト。',
+    caption: '会う、待ち合わせて会う。人と会って話すこと。',
+  },
+  member: {
+    src: 'images/vocabulary/member.svg',
+    alt: '並んだ4人のうち1人だけが輪で囲まれているイラスト。',
+    caption: '会員、メンバー。集まりの一員であること。',
+  },
+  message: {
+    src: 'images/vocabulary/message.svg',
+    alt: '携帯電話を持った人の上に吹き出しが出ているイラスト。',
+    caption: '伝言、メッセージ。人に伝える短いことば。',
+  },
+  migraine: {
+    src: 'images/vocabulary/migraine.svg',
+    alt: '頭を押さえてうつむく人の頭のまわりに、稲妻のような痛みが走るイラスト。',
+    caption: 'ズキズキと痛む片頭痛。',
+  },
+  mile: {
+    src: 'images/vocabulary/mile.svg',
+    alt: '道ばたの距離標識から、遠くの家までの道のりが点線で示されたイラスト。',
+    caption: 'マイル。1マイルは約1.6kmの長さの単位。',
+  },
+  milk: {
+    src: 'images/vocabulary/milk.svg',
+    alt: '牛乳パックからコップへ牛乳が注がれているイラスト。',
+    caption: '牛乳、ミルク。白い飲み物。',
+  },
+  million: {
+    src: 'images/vocabulary/million.svg',
+    alt: '金貨の山と金袋が積み上がり、きらめいているイラスト。',
+    caption: '100万。millions of で「何百万もの」となる。',
+  },
+  miss: {
+    src: 'images/vocabulary/miss.svg',
+    alt: '発車していく電車に向かって、ホームから手を伸ばす人のイラスト。',
+    caption: '乗り遅れる。また、人に会えず寂しく思う気持ちも表す。',
+  },
+  mittens: {
+    src: 'images/vocabulary/mittens.svg',
+    alt: 'ひもでつながれた2つのミトンと、雪の結晶のイラスト。',
+    caption: '親指だけ分かれた手袋。ふつう複数形で使う。',
+  },
+  modern: {
+    src: 'images/vocabulary/modern.svg',
+    alt: 'ガラスの窓が並ぶ、新しくて高いビルのイラスト。',
+    caption: '現代の、近代的な、最新の。今の時代の様子を表す。',
+  },
+  moment: {
+    src: 'images/vocabulary/moment.svg',
+    alt: 'カメラのフラッシュが光り、跳んでいる人を写しているイラスト。',
+    caption: '瞬間。ほんの一瞬のできごと。',
+  },
+  'second-hand': {
+    src: 'images/vocabulary/second-hand.svg',
+    alt: '青空市の台の上に中古の品々と値札が並んでいるイラスト。',
+    caption: '中古の、使い古しの。second-hand shop で中古品店。',
+  },
+  money: {
+    src: 'images/vocabulary/money.svg',
+    alt: '財布から紙幣と硬貨があふれ出ているイラスト。',
+    caption: 'お金、金銭。現金全般を指す語。',
+  },
+  month: {
+    src: 'images/vocabulary/month.svg',
+    alt: '1か月分のマス目が並ぶカレンダーのイラスト。',
+    caption: '暦の1か月。a month で「1か月」。',
+  },
+  moonlight: {
+    src: 'images/vocabulary/moonlight.svg',
+    alt: '夜空に浮かぶ月と、水面に揺れる月明かりのイラスト。',
+    caption: '月光、月明かり。moon + light で「月の光」。',
+  },
+  more: {
+    src: 'images/vocabulary/more.svg',
+    alt: '積み上がったコインの山に、もう1枚コインが加わるイラスト。',
+    caption: 'もっと多くの、さらに。more + 名詞で「もっと多くの〜」。',
+  },
+  morning: {
+    src: 'images/vocabulary/morning.svg',
+    alt: '山の向こうから朝日が昇り、人が背伸びをしているイラスト。',
+    caption: '朝、午前。1日の始まりの時間。',
+  },
+  most: {
+    src: 'images/vocabulary/most.svg',
+    alt: '棒グラフの1本だけが他よりずば抜けて高いイラスト。',
+    caption: '最も、一番。many / much の最上級。',
+  },
+  mother: {
+    src: 'images/vocabulary/mother.svg',
+    alt: '女性が小さな子どもの手を引いて立っているイラスト。',
+    caption: '母、お母さん。自分にとっての母親。',
+  },
+  mountain: {
+    src: 'images/vocabulary/mountain.svg',
+    alt: '雪をかぶった峰が連なるイラスト。',
+    caption: '山、山岳。高くそびえる山の峰。',
+  },
+  mouth: {
+    src: 'images/vocabulary/mouth.svg',
+    alt: '人の顔の口の部分が輪で囲まれているイラスト。',
+    caption: '口。食べたり話したりする器官。',
+  },
+  mouthful: {
+    src: 'images/vocabulary/mouthful.svg',
+    alt: 'スプーン1杯の食べ物を口に運んでいるイラスト。',
+    caption: 'ひと口、ひと口分。a mouthful of 〜 の形で使う。',
+  },
+  movie: {
+    src: 'images/vocabulary/movie.svg',
+    alt: '映写機の光がスクリーンに当たり、映像が映っているイラスト。',
+    caption: '映画。a movie で1本の映画。',
+  },
+  mr: {
+    src: 'images/vocabulary/mr.svg',
+    alt: 'ネクタイ姿の男性が、白い名札のそばに立っているイラスト。',
+    caption: '男性の姓に付ける敬称「〜さん、〜氏」。',
+  },
+  mrs: {
+    src: 'images/vocabulary/mrs.svg',
+    alt: '手を上げて指輪を見せている女性と、ハートのイラスト。',
+    caption: '既婚の女性に付ける敬称「〜夫人、〜さん」。',
+  },
+  ms: {
+    src: 'images/vocabulary/ms.svg',
+    alt: '書類を抱えた女性が、白い名札のそばに立っているイラスト。',
+    caption: '既婚・未婚を問わない女性の敬称「〜さん」。',
+  },
+  much: {
+    src: 'images/vocabulary/much.svg',
+    alt: 'どんぶりにごはんが山のように盛られてこぼれそうなイラスト。',
+    caption: '数えられないものの「多くの」。much water / much money。',
+  },
+  mum: {
+    src: 'images/vocabulary/mum.svg',
+    alt: '子どもを抱きしめているお母さんのイラスト。',
+    caption: 'お母さん。家の中で呼びかけるときの言い方。',
+  },
+  music: {
+    src: 'images/vocabulary/music.svg',
+    alt: 'スピーカーから音符が飛び出しているイラスト。',
+    caption: '音楽。音を使って表す芸術。',
+  },
+  must: {
+    src: 'images/vocabulary/must.svg',
+    alt: 'チェック欄の並ぶ用紙と時計を前に、人が指をさしているイラスト。',
+    caption: '〜しなければならない（義務）。must は強い義務を表す。',
+  },
+  my: {
+    src: 'images/vocabulary/my.svg',
+    alt: '自分のバッグを抱え、持ち主を示す弧が描かれたイラスト。',
+    caption: '私の。話し手が自分のものだと示す語。',
+  },
+  name: {
+    src: 'images/vocabulary/name.svg',
+    alt: '白い名札を指さしている人のイラスト。',
+    caption: '名前。人や物を呼ぶときの語。',
+  },
+  nappy: {
+    src: 'images/vocabulary/nappy.svg',
+    alt: '寝ている赤ちゃんのおむつを替えているイラスト。',
+    caption: 'おむつ。赤ちゃんが使う紙や布の下着。',
+  },
+  nausea: {
+    src: 'images/vocabulary/nausea.svg',
+    alt: '口を手で押さえて気持ち悪そうにしているイラスト。',
+    caption: '吐き気、むかつき。乗り物酔いなどで感じる。',
+  },
+  near: {
+    src: 'images/vocabulary/near.svg',
+    alt: 'すぐ隣り合って建つ家と店の間に、短い両向きの矢印があるイラスト。',
+    caption: '〜の近くに、近い。距離が短いことを表す。',
+  },
+  neighbor: {
+    src: 'images/vocabulary/neighbor.svg',
+    alt: '隣り合う2軒の家の間に塀があり、2人が塀ごしに手を振っているイラスト。',
+    caption: '隣人、近所の人。',
+  },
+  neighborhood: {
+    src: 'images/vocabulary/neighborhood.svg',
+    alt: '家や木が集まった住宅街のイラスト。',
+    caption: '近所、地域。自分が住むまわりの一帯。',
+  },
+  neighborhoods: {
+    src: 'images/vocabulary/neighborhoods.svg',
+    alt: '2つのまとまりに分かれて住宅街が広がっているイラスト。',
+    caption: '近所・地域の複数形。2つ以上の地域を指す。',
+  },
+  never: {
+    src: 'images/vocabulary/never.svg',
+    alt: 'クッキーのびんに手を伸ばしかけて、禁止の印が付いているイラスト。',
+    caption: '決して〜ない、一度も〜ない。場面としては「決して手を出さない」。',
+  },
+  new: {
+    src: 'images/vocabulary/new.svg',
+    alt: '箱から新品のくつが出されて、きらめいているイラスト。',
+    caption: '新しい、新品の。買ったばかりの状態。',
+  },
+  news: {
+    src: 'images/vocabulary/news.svg',
+    alt: 'テレビ画面にニュースを読む人が映り、電波が広がっているイラスト。',
+    caption: 'ニュース、知らせ。テレビやラジオの報道。',
+  },
+  newspaper: {
+    src: 'images/vocabulary/newspaper.svg',
+    alt: '広げた新聞を読んでいる人のイラスト。',
+    caption: '新聞。news（知らせ）+ paper（紙）の語。',
+  },
+  nice: {
+    src: 'images/vocabulary/nice.svg',
+    alt: '花を差し出して、笑顔で応えてもらっているイラスト。',
+    caption: 'よい、感じのよい、親切な。',
+  },
+  night: {
+    src: 'images/vocabulary/night.svg',
+    alt: '月と星が輝く夜空の下、窓明かりのついた家のイラスト。',
+    caption: '夜、夜間。日が沈んで暗くなった時間。',
+  },
+  nine: {
+    src: 'images/vocabulary/nine.svg',
+    alt: 'お盆の上に9つのボールが並んでいるイラスト。',
+    caption: '9、九。nine の数。',
+  },
+  nineteen: {
+    src: 'images/vocabulary/nineteen.svg',
+    alt: '10のまとまりと9つのボールが並んでいるイラスト。',
+    caption: '19、十九。10と9に分けて数える数。',
+  },
+  ninety: {
+    src: 'images/vocabulary/ninety.svg',
+    alt: '90この点が9列10行に並んでいるイラスト。',
+    caption: '90、九十。9が10集まった数。',
+  },
+  ninth: {
+    src: 'images/vocabulary/ninth.svg',
+    alt: '9段の階段の一番上が輪で示され、旗が立っているイラスト。',
+    caption: '9番目の。順番が9番目であること。',
+  },
+  no: {
+    src: 'images/vocabulary/no.svg',
+    alt: '手のひらを前に出して断り、そばに禁止の印があるイラスト。',
+    caption: 'いいえ、1つも〜ない。no は否定の返事。',
+  },
+  nobody: {
+    src: 'images/vocabulary/nobody.svg',
+    alt: 'ベンチのそばに人の形の点線だけがあり、禁止の印が重なっているイラスト。',
+    caption: 'だれも〜ない。人が1人もいないこと。',
+  },
+  north: {
+    src: 'images/vocabulary/north.svg',
+    alt: '方位磁針の針が上を指し、後ろに山がそびえるイラスト。',
+    caption: '北。方角としての北、北の方角。',
+  },
+  nose: {
+    src: 'images/vocabulary/nose.svg',
+    alt: '人の顔の鼻の部分が輪で囲まれているイラスト。',
+    caption: '鼻。においを感じ、息をする器官。',
+  },
+  not: {
+    src: 'images/vocabulary/not.svg',
+    alt: '切り替えの下がったスイッチと消えた電球に、打ち消しの印が付いているイラスト。',
+    caption: '〜でない、〜しない。動詞や文を打ち消す語。',
+  },
+  nothing: {
+    src: 'images/vocabulary/nothing.svg',
+    alt: 'ふたの開いた空の箱の中が、点線だけで示されているイラスト。',
+    caption: '何も〜ない。中身が全くないこと。',
+  },
+  directions: {
+    src: 'images/vocabulary/directions.svg',
+    alt: '地図を持つ人に、もう1人が道を指して教えているイラスト。',
+    caption: '道順、行き方。また、指示や使い方。',
+  },
+  nun: {
+    src: 'images/vocabulary/nun.svg',
+    alt: '頭にベールをかぶり、胸の十字架に手を合わせているイラスト。',
+    caption: '修道女、尼僧。信仰のために暮らす女性。',
+  },
+  moisture: {
+    src: 'images/vocabulary/moisture.svg',
+    alt: '冷えたグラスの表面に水滴がつき、湯気が立っているイラスト。',
+    caption: '湿気、水分。空気や物の表面にある水。',
+  },
+  of: {
+    src: 'images/vocabulary/of.svg',
+    alt: 'オレンジから1房が取り出され、矢印で示されているイラスト。',
+    caption: '〜の、〜のうちの。全体から一部を取り出す関係。',
+  },
+  off: {
+    src: 'images/vocabulary/off.svg',
+    alt: 'スイッチが下に切り替わり、電球が消えているイラスト。',
+    caption: '（電源が）切れて。off は「離れて・切れて」が核。',
+  },
+  office: {
+    src: 'images/vocabulary/office.svg',
+    alt: '机の上のパソコンに向かって座って働く人のイラスト。',
+    caption: '事務所、会社。仕事をする部屋や組織。',
+  },
+  often: {
+    src: 'images/vocabulary/often.svg',
+    alt: '同じ動作を繰り返す矢印が、人をぐるりと囲んでいるイラスト。',
+    caption: 'しばしば、よく。頻度が高いことを表す副詞。',
+  },
+  oh: {
+    src: 'images/vocabulary/oh.svg',
+    alt: '驚いて口を開け、両手を上げているイラスト。',
+    caption: 'ああ、おや、あっ。驚きや気づきの声。',
+  },
+  ok: {
+    src: 'images/vocabulary/ok.svg',
+    alt: '親指を立てた手と、緑のチェック印のイラスト。',
+    caption: '大丈夫な、問題ない。同意や承諾を表す。',
+  },
+  old: {
+    src: 'images/vocabulary/old.svg',
+    alt: '杖をついた年配の人が立っているイラスト。',
+    caption: '年老いた。また、古い、昔の。',
+  },
+  on: {
+    src: 'images/vocabulary/on.svg',
+    alt: 'スイッチが上に入り、電球が明るくついているイラスト。',
+    caption: '（電源が）入って。on は「接触して・作動して」が核。',
+  },
+  one: {
+    src: 'images/vocabulary/one.svg',
+    alt: '台の上に1つだけボールが載り、輪で囲まれているイラスト。',
+    caption: '1、1つ。数が1であること。',
+  },
+  online: {
+    src: 'images/vocabulary/online.svg',
+    alt: 'ノートパソコンの上に電波の印が広がっているイラスト。',
+    caption: 'オンラインの、ネット上で。回線につながっている状態。',
+  },
+  only: {
+    src: 'images/vocabulary/only.svg',
+    alt: '同じ形が並ぶ中で1つだけ色がつき、輪で示されているイラスト。',
+    caption: 'ただ〜だけ、唯一の。それ以外に無いことを表す。',
+  },
+  open: {
+    src: 'images/vocabulary/open.svg',
+    alt: '戸が外へ大きく開き、開く動きが弧の矢印で示されているイラスト。',
+    caption: '開ける、開く、開いている。',
+  },
+  opinion: {
+    src: 'images/vocabulary/opinion.svg',
+    alt: '手を上げて発言し、頭の上の吹き出しに電球が浮かぶイラスト。',
+    caption: '意見、考え。自分がどう思うかを述べたもの。',
+  },
+  opposite: {
+    src: 'images/vocabulary/opposite.svg',
+    alt: '2人が背中合わせに立ち、左右反対向きの矢印が出ているイラスト。',
+    caption: '反対の、正反対の。向きや性質が逆であること。',
+  },
+  or: {
+    src: 'images/vocabulary/or.svg',
+    alt: '道が二手に分かれ、それぞれ別の建物へ向かう矢印が描かれたイラスト。',
+    caption: 'または、それとも。2つのうちどちらか一方。',
+  },
+  orange: {
+    src: 'images/vocabulary/orange.svg',
+    alt: 'オレンジの実と、切り分けた房と葉が描かれたイラスト。',
+    caption: 'オレンジ。色の名前にもなる果物。',
+  },
+  order: {
+    src: 'images/vocabulary/order.svg',
+    alt: '店員がお客の注文を書き取り、お客が指で示しているイラスト。',
+    caption: '注文する、注文。レストランで料理を頼む場面。順序の意味もある。',
+  },
+  other: {
+    src: 'images/vocabulary/other.svg',
+    alt: '2つの箱のうち、もう一方へ矢印が向かっているイラスト。',
+    caption: 'ほかの、別の。今示したものではないほう。',
+  },
+  our: {
+    src: 'images/vocabulary/our.svg',
+    alt: '3人が並んで立ち、全員が輪で囲まれているイラスト。',
+    caption: '私たちの。話し手を含む複数の所有を表す。',
+  },
+  out: {
+    src: 'images/vocabulary/out.svg',
+    alt: '開いた戸から外へ歩き出し、外向きの矢印が描かれたイラスト。',
+    caption: '外へ、外に。中から外へ出る動き。',
+  },
+  'oven glove': {
+    src: 'images/vocabulary/oven-glove.svg',
+    alt: '鍋つかみをはめた手が、天板から熱い鉄板を引き出しているイラスト。',
+    caption: '鍋つかみ、オーブンミトン。熱いものを握る厚手の手袋。',
+  },
+  over: {
+    src: 'images/vocabulary/over.svg',
+    alt: '人が柵を跳び越えているイラスト。',
+    caption: '〜の上を越えて。越えていく動きを表す。',
+  },
+  page: {
+    src: 'images/vocabulary/page.svg',
+    alt: '開いた本の1ページがめくられ、動きが矢印で示されているイラスト。',
+    caption: 'ページ。本や紙の1枚、1面。',
+  },
+  paint: {
+    src: 'images/vocabulary/paint.svg',
+    alt: 'ローラーで壁にペンキを塗っているイラスト。',
+    caption: '塗る、描く。ペンキや絵の具で色をつける。',
+  },
+  paintbrush: {
+    src: 'images/vocabulary/paintbrush.svg',
+    alt: '絵筆の先から色のついた線が引かれているイラスト。',
+    caption: '絵筆、はけ。絵の具をつけて描く道具。',
+  },
+  pair: {
+    src: 'images/vocabulary/pair.svg',
+    alt: '左右そろった1足のくつが並んでいるイラスト。',
+    caption: '1組、1対。2つで1組になるもの。',
+  },
+  panda: {
+    src: 'images/vocabulary/panda.svg',
+    alt: '竹を持って座っているパンダのイラスト。',
+    caption: 'パンダ。白黒の体をもつクマの仲間。',
+  },
+  paper: {
+    src: 'images/vocabulary/paper.svg',
+    alt: '机の上に重ねた白い紙と鉛筆のイラスト。',
+    caption: '紙。書いたり包んだりする材料。',
+  },
+  parent: {
+    src: 'images/vocabulary/parent.svg',
+    alt: '親が子どもの手を引いて立っているイラスト。',
+    caption: '親。母親・父親のどちらも指す語。',
+  },
+  park: {
+    src: 'images/vocabulary/park.svg',
+    alt: '木とベンチのある公園で、人がボールを蹴っているイラスト。',
+    caption: '公園。木や芝生があって憩える場所。',
+  },
+  part: {
+    src: 'images/vocabulary/part.svg',
+    alt: 'パズルの1ピースが抜き出され、矢印で示されているイラスト。',
+    caption: '部分、パーツ。全体を構成する1つ。',
+  },
+  partner: {
+    src: 'images/vocabulary/partner.svg',
+    alt: '2人が向かい合って長い箱を一緒に運んでいるイラスト。',
+    caption: '相棒、パートナー。一緒に何かをする相手。',
+  },
+  party: {
+    src: 'images/vocabulary/party.svg',
+    alt: '飾り旗を張った部屋で、グラスを手に三人が集まっているイラスト。',
+    caption: '人が集まって楽しむ会、パーティー。',
+  },
+  peeler: {
+    src: 'images/vocabulary/peeler.svg',
+    alt: '皮むき器を当てたジャガイモから、長い皮の帯がカールして落ちるイラスト。',
+    caption: '野菜の皮をむく道具、皮むき器。',
+  },
+  pen: {
+    src: 'images/vocabulary/pen.svg',
+    alt: 'ペンの先から紙に線が引かれていくイラスト。',
+    caption: 'インクで書く筆記用具、ペン。',
+  },
+  people: {
+    src: 'images/vocabulary/people.svg',
+    alt: '広い場所にたくさんの人が集まり、それぞれ別の方を向いて立っているイラスト。',
+    caption: 'たくさんの人々。person の複数として使う。',
+  },
+  perfect: {
+    src: 'images/vocabulary/perfect.svg',
+    alt: '的の真ん中に矢が突き刺さり、そばに印がつくイラスト。',
+    caption: '欠点がなく申し分ない、完璧な。',
+  },
+  person: {
+    src: 'images/vocabulary/person.svg',
+    alt: '点線の輪で囲まれた一人の人物のイラスト。',
+    caption: '一人の人間、個人。people の単数。',
+  },
+  phone: {
+    src: 'images/vocabulary/phone.svg',
+    alt: 'スマートフォンを耳に当てて話す人のイラスト。',
+    caption: '電話。動詞では電話をかける。',
+  },
+  photo: {
+    src: 'images/vocabulary/photo.svg',
+    alt: 'カメラのレンズの横に、写した写真が出ているイラスト。',
+    caption: 'カメラで写した写真。',
+  },
+  picnic: {
+    src: 'images/vocabulary/picnic.svg',
+    alt: 'シートの上にバスケットと果物を広げ、女の子が座っているイラスト。',
+    caption: '戸外で食事を楽しむこと、ピクニック。',
+  },
+  piece: {
+    src: 'images/vocabulary/piece.svg',
+    alt: '丸いケーキに切り込みが入り、切り分けた一切れが皿に置かれているイラスト。',
+    caption: '全体から切り分けた 1 片、部分。',
+  },
+  pig: {
+    src: 'images/vocabulary/pig.svg',
+    alt: '丸い体の豚が鼻先を下に向けて立っているイラスト。',
+    caption: '家畜として飼われる動物、豚。',
+  },
+  pink: {
+    src: 'images/vocabulary/pink.svg',
+    alt: 'うすい桃色の風船を三つ持って立つ人のイラスト。',
+    caption: 'ピンク色。うすい赤むらさきの色。',
+  },
+  pizza: {
+    src: 'images/vocabulary/pizza.svg',
+    alt: '丸いピザに切り込みが入り、一切れが皿にのっているイラスト。',
+    caption: '薄い生地に具をのせて焼いた料理、ピザ。',
+  },
+  plan: {
+    src: 'images/vocabulary/plan.svg',
+    alt: '紙の上に三つの囲みが矢印でつながり、それぞれに印がつくイラスト。',
+    caption: '前もって決めておく段取り、計画。',
+  },
+  plane: {
+    src: 'images/vocabulary/plane.svg',
+    alt: '雲の間を飛んでいく飛行機と、点線の航跡のイラスト。',
+    caption: '空を飛ぶ乗り物、飛行機。',
+  },
+  play: {
+    src: 'images/vocabulary/play.svg',
+    alt: '芝生の上で子どもがボールを蹴って遊ぶイラスト。',
+    caption: '楽しんで体を動かす、遊ぶ。',
+  },
+  player: {
+    src: 'images/vocabulary/player.svg',
+    alt: 'ユニフォームを着た選手がボールを両手で持っているイラスト。',
+    caption: '競技をする人、選手。',
+  },
+  police: {
+    src: 'images/vocabulary/police.svg',
+    alt: '制帽と制服姿の警察官が立っているイラスト。',
+    caption: '社会の安全を守る警察官、警察。',
+  },
+  'police station': {
+    src: 'images/vocabulary/police-station.svg',
+    alt: '警察官が前に立つ警察署の建物のイラスト。',
+    caption: '警察官が勤める建物、警察署。',
+  },
+  pool: {
+    src: 'images/vocabulary/pool.svg',
+    alt: '仕切りのロープが張られたプールの水面のイラスト。',
+    caption: '泳ぐために水を張った施設、プール。',
+  },
+  poor: {
+    src: 'images/vocabulary/poor.svg',
+    alt: '逆さにした財布から小銭が一枚だけ落ちるイラスト。',
+    caption: 'お金が足りない、貧しい。',
+  },
+  popular: {
+    src: 'images/vocabulary/popular.svg',
+    alt: '大勢の人から手を差し出されて囲まれた人のイラスト。',
+    caption: '多くの人に好かれている、人気がある。',
+  },
+  possible: {
+    src: 'images/vocabulary/possible.svg',
+    alt: '塀の切れ目に開いた門を人が通り抜けていくイラスト。',
+    caption: 'できる、ありうる、可能な。',
+  },
+  post: {
+    src: 'images/vocabulary/post.svg',
+    alt: '赤いポストの差し入れ口に封筒を入れようとする手のイラスト。',
+    caption: '郵便、郵便物。動詞では投函する。',
+  },
+  potato: {
+    src: 'images/vocabulary/potato.svg',
+    alt: '土の中にジャガイモがいくつも育ち、掘り出された芋がそばにあるイラスト。',
+    caption: '土の中で育ついも、ジャガイモ。',
+  },
+  'power strip': {
+    src: 'images/vocabulary/power-strip.svg',
+    alt: '電源タップに三つのプラグが差され、コードが伸びているイラスト。',
+    caption: 'コンセントを増やす延長用の電源タップ。',
+  },
+  practice: {
+    src: 'images/vocabulary/practice.svg',
+    alt: '同じ形を書き写した行が三つ並び、周りを循環矢印が回るイラスト。',
+    caption: '上達のために同じことを繰り返すこと、練習。',
+  },
+  practise: {
+    src: 'images/vocabulary/practise.svg',
+    alt: 'いすに座ってギターを繰り返し弾く練習をするイラスト。',
+    caption: '実際に体を動かして練習する(英つづり)。',
+  },
+  prepare: {
+    src: 'images/vocabulary/prepare.svg',
+    alt: 'スーツケースに服を詰め、そばの手がもう一枚を入れようとしているイラスト。',
+    caption: '前もって用意すること、準備する。',
+  },
+  'pressure cooker': {
+    src: 'images/vocabulary/pressure-cooker.svg',
+    alt: 'ふたを留めた圧力鍋から蒸気が勢いよく立ちのぼるイラスト。',
+    caption: '圧力をかけて短時間で調理する鍋。',
+  },
+  pretty: {
+    src: 'images/vocabulary/pretty.svg',
+    alt: '花を髪に飾って微笑む女の子のイラスト。',
+    caption: '見た目がかわいい、きれいな。',
+  },
+  probably: {
+    src: 'images/vocabulary/probably.svg',
+    alt: '曇り空の下、かさを持って出かける人のイラスト。',
+    caption: 'たぶん、おそらく(起こりそう)。',
+  },
+  problem: {
+    src: 'images/vocabulary/problem.svg',
+    alt: 'かみ合わない歯車を、困った顔で二人が見ているイラスト。',
+    caption: '困った事柄、解決すべき問題。',
+  },
+  programme: {
+    src: 'images/vocabulary/programme.svg',
+    alt: 'テレビ画面に映像が映り、番組が流れているイラスト。',
+    caption: 'テレビやラジオの番組。',
+  },
+  programmer: {
+    src: 'images/vocabulary/programmer.svg',
+    alt: '机の上の二台のモニターに向かってコードを書く人のイラスト。',
+    caption: 'プログラムを書く人、プログラマー。',
+  },
+  purple: {
+    src: 'images/vocabulary/purple.svg',
+    alt: '紫色のぶどうの房と葉のイラスト。',
+    caption: '赤と青の中間の色、紫。',
+  },
+  pushchair: {
+    src: 'images/vocabulary/pushchair.svg',
+    alt: '赤ちゃんを乗せたベビーカーを親が押して歩くイラスト。',
+    caption: '赤ちゃんを乗せて押す車、ベビーカー(英)。',
+  },
+  put: {
+    src: 'images/vocabulary/put.svg',
+    alt: '手に持ったりんごを箱の中へ入れるイラスト。',
+    caption: '手で持って中に入れる、置く。',
+  },
+  pyjamas: {
+    src: 'images/vocabulary/pyjamas.svg',
+    alt: 'ベッドの上に上下そろえたパジャマが置かれているイラスト。',
+    caption: '寝るときに着る服、パジャマ(英)。',
+  },
+  quick: {
+    src: 'images/vocabulary/quick.svg',
+    alt: '速度の線を引いて速く走る人のイラスト。',
+    caption: '動きが速い、素早い。',
+  },
+  quickly: {
+    src: 'images/vocabulary/quickly.svg',
+    alt: '時計を確かめながら急いで走る人のイラスト。',
+    caption: '素早く、すぐに(副詞)。',
+  },
+  quite: {
+    src: 'images/vocabulary/quite.svg',
+    alt: '思ったより大きな箱を両手で持ち上げる人のイラスト。',
+    caption: 'かなり、思った以上に(程度を示す)。',
+  },
+  quiz: {
+    src: 'images/vocabulary/quiz.svg',
+    alt: '四つの選択肢が並ぶ解答用紙に印をつけるイラスト。',
+    caption: '知識を問う小テスト、クイズ。',
+  },
+  radio: {
+    src: 'images/vocabulary/radio.svg',
+    alt: 'アンテナを伸ばしたラジオから音の波が広がるイラスト。',
+    caption: '音声を電波で受信する機器、ラジオ。',
+  },
+  rain: {
+    src: 'images/vocabulary/rain.svg',
+    alt: '雲から雨粒が降り、足もとに水たまりができているイラスト。',
+    caption: '空から降ってくる水、雨。',
+  },
+  rainbow: {
+    src: 'images/vocabulary/rainbow.svg',
+    alt: '空にかかる六色の虹と、足もとの雲のイラスト。',
+    caption: '雨上がりに見える七色の弧、虹。',
+  },
+  raincoat: {
+    src: 'images/vocabulary/raincoat.svg',
+    alt: '黄色いレインコートを着て雨の中を歩くイラスト。',
+    caption: '雨を防ぐために着る上着、レインコート。',
+  },
+  read: {
+    src: 'images/vocabulary/read.svg',
+    alt: 'いすに座って開いた本を読む人のイラスト。',
+    caption: '文字を目で追って内容を理解する、読む。',
+  },
+  ready: {
+    src: 'images/vocabulary/ready.svg',
+    alt: '荷物を背負って出発線に立ち、印がつくイラスト。',
+    caption: '支度がすんでいつでも始められる、用意ができた。',
+  },
+  real: {
+    src: 'images/vocabulary/real.svg',
+    alt: '木になっている本物の実に手を伸ばして確かめるイラスト。',
+    caption: 'にせものではない、本当の・実際の。',
+  },
+  really: {
+    src: 'images/vocabulary/really.svg',
+    alt: '驚いて両手を上げ、目を丸くした人のイラスト。',
+    caption: '本当に、実に(気持ちを強める)。',
+  },
+  reason: {
+    src: 'images/vocabulary/reason.svg',
+    alt: '赤信号の前で車が止まり、信号から車へ矢印が伸びるイラスト。',
+    caption: '物事がそうなるわけ、理由・原因。',
+  },
+  rechargeable: {
+    src: 'images/vocabulary/rechargeable.svg',
+    alt: '電池にプラグをつないで充電するイラスト。',
+    caption: '充電して何度も使える、充電できる。',
+  },
+  red: {
+    src: 'images/vocabulary/red.svg',
+    alt: '赤いりんごが三つ、かごに入っているイラスト。',
+    caption: 'りんごや血のような色、赤。',
+  },
+  remember: {
+    src: 'images/vocabulary/remember.svg',
+    alt: '古い写真を見て、頭の上に思い出の輪が浮かぶイラスト。',
+    caption: '心に浮かべる、思い出す。',
+  },
+  'remote control': {
+    src: 'images/vocabulary/remote-control.svg',
+    alt: 'リモコンをテレビに向けてボタンを押すイラスト。',
+    caption: 'テレビなどを遠くから操作する道具、リモコン。',
+  },
+  restaurant: {
+    src: 'images/vocabulary/restaurant.svg',
+    alt: '給仕が皿を運び、客がテーブルに着いているイラスト。',
+    caption: '食事を出す店、レストラン。',
+  },
+  return: {
+    src: 'images/vocabulary/return.svg',
+    alt: '棚に本を差し戻す手と、逆向きの矢印のイラスト。',
+    caption: '元の場所へ戻す、返す。',
+  },
+  rice: {
+    src: 'images/vocabulary/rice.svg',
+    alt: '茶碗に盛った白いご飯と、そばに稲の穂があるイラスト。',
+    caption: '炊いたご飯、米。',
+  },
+  'rice cooker': {
+    src: 'images/vocabulary/rice-cooker.svg',
+    alt: 'ふたを開けた炊飯器から湯気が立ちのぼるイラスト。',
+    caption: 'ご飯を炊く電気器具、炊飯器。',
+  },
+  rich: {
+    src: 'images/vocabulary/rich.svg',
+    alt: '金貨の山の前に立って満足げな人のイラスト。',
+    caption: 'お金や物をたくさん持っている、豊かな。',
+  },
+  right: {
+    src: 'images/vocabulary/right.svg',
+    alt: '右を指さし、右向きの矢印が伸びるイラスト。',
+    caption: '右の、右へ(方向)。',
+  },
+  river: {
+    src: 'images/vocabulary/river.svg',
+    alt: '岸に木が並ぶ川が、ゆるやかに蛇行して流れるイラスト。',
+    caption: '陸の水が流れる筋、川。',
+  },
+  road: {
+    src: 'images/vocabulary/road.svg',
+    alt: '中央線のある道路が遠くへ伸び、車が走っているイラスト。',
+    caption: '人や車が通る道、道路。',
+  },
+  room: {
+    src: 'images/vocabulary/room.svg',
+    alt: '窓とドアのある部屋に、ベッドと家具が置かれているイラスト。',
+    caption: '建物の中の仕切られた空間、部屋。',
+  },
+  'rubber band': {
+    src: 'images/vocabulary/rubber-band.svg',
+    alt: '輪ゴムで束ねた鉛筆と、伸び縮みを示す両向きの矢印のイラスト。',
+    caption: '輪の形をしたゴム、輪ゴム。',
+  },
+  rust: {
+    src: 'images/vocabulary/rust.svg',
+    alt: '鉄の板の一部に赤茶色のさびが広がっていくイラスト。',
+    caption: '鉄が酸化して赤茶色になること、さび。',
+  },
+  rusty: {
+    src: 'images/vocabulary/rusty.svg',
+    alt: '古びて板の全体がさび色になった鉄のイラスト。',
+    caption: 'さびがついた、さびている。',
+  },
+  sad: {
+    src: 'images/vocabulary/sad.svg',
+    alt: '涙をこぼして悲しそうな顔のイラスト。',
+    caption: '心が痛んで泣きたい気持ち、悲しい。',
+  },
+  sadness: {
+    src: 'images/vocabulary/sadness.svg',
+    alt: 'うつむいて座り、涙をこぼしている人のイラスト。',
+    caption: '悲しいという気持ち、悲しみ。',
+  },
+  salad: {
+    src: 'images/vocabulary/salad.svg',
+    alt: 'ボウルに葉野菜とトマトを入れたサラダのイラスト。',
+    caption: '野菜を生で混ぜて食べる料理、サラダ。',
+  },
+  same: {
+    src: 'images/vocabulary/same.svg',
+    alt: '同じ形と色の箱が二つ並び、間に等号が置かれているイラスト。',
+    caption: '違いがない、同様の。',
+  },
+  underestimate: {
+    src: 'images/vocabulary/underestimate.svg',
+    alt: '小さな袋から、思ったより大きな荷物が出てくるイラスト。',
+    caption: '実際より小さいと見積もる、軽く見る。',
+  },
+  scales: {
+    src: 'images/vocabulary/scales.svg',
+    alt: '体重計の上に立って目盛りを見る人のイラスト。',
+    caption: '体重を量るはかり、体重計。',
+  },
+  school: {
+    src: 'images/vocabulary/school.svg',
+    alt: '校舎の前に子どもたちが集まり、旗が立っているイラスト。',
+    caption: '勉強や学びのための場所、学校。',
+  },
+  science: {
+    src: 'images/vocabulary/science.svg',
+    alt: 'フラスコから泡が立ちのぼり、試験管が並ぶ実験のイラスト。',
+    caption: '自然のしくみを調べる学問、科学・理科。',
+  },
+  screws: {
+    src: 'images/vocabulary/screws.svg',
+    alt: 'ドライバーでねじを板に締めつけているイラスト。',
+    caption: '回して締める金具、ねじ(複数形)。',
+  },
+  sea: {
+    src: 'images/vocabulary/sea.svg',
+    alt: '波のうねる海にヨットが浮かび、太陽が光るイラスト。',
+    caption: '広く水をたたえた広がり、海。',
+  },
+  seaside: {
+    src: 'images/vocabulary/seaside.svg',
+    alt: '砂浜にパラソルとビーチボールがあり、波が寄せているイラスト。',
+    caption: '海のすぐそば、海辺。',
+  },
+  see: {
+    src: 'images/vocabulary/see.svg',
+    alt: '大きな目の前から、見ている先の木へ点線が伸びるイラスト。',
+    caption: '目でとらえる、見る。',
+  },
+  seedling: {
+    src: 'images/vocabulary/seedling.svg',
+    alt: '土の上に双葉の芽が出たばかりのイラスト。',
+    caption: '芽を出したばかりの若い植物、苗。',
+  },
+  sell: {
+    src: 'images/vocabulary/sell.svg',
+    alt: '店員が商品を手渡し、客が代金を払うイラスト。',
+    caption: '品物をお金と引きかえる、売る。',
+  },
+  send: {
+    src: 'images/vocabulary/send.svg',
+    alt: '封筒が矢印の向きに飛んでいくイラスト。',
+    caption: '相手に向けて届ける、送る。',
+  },
+  unwilling: {
+    src: 'images/vocabulary/unwilling.svg',
+    alt: '引っ張られても体を引いて動こうとしない人のイラスト。',
+    caption: '気が進まない、いやいやの。',
+  },
+  seven: {
+    src: 'images/vocabulary/seven.svg',
+    alt: '金貨が七枚、横一列に並んでいるイラスト。',
+    caption: '数7、七つ。',
+  },
+  seventeen: {
+    src: 'images/vocabulary/seventeen.svg',
+    alt: '金貨が十枚と七枚、二段に並んでいるイラスト。',
+    caption: '数17、十七。',
+  },
+  seventh: {
+    src: 'images/vocabulary/seventh.svg',
+    alt: '七つの箱が階段状に並び、七番目の箱だけが金色のイラスト。',
+    caption: '7番目の、7分の1。',
+  },
+  seventy: {
+    src: 'images/vocabulary/seventy.svg',
+    alt: '十のまとまりが七つ、縦に並んでいるイラスト。',
+    caption: '数70、七十。',
+  },
+  sewing: {
+    src: 'images/vocabulary/sewing.svg',
+    alt: '針と糸で二枚の布を縫い合わせるイラスト。',
+    caption: '布を縫って衣服を作ること、裁縫。',
+  },
+  sharpener: {
+    src: 'images/vocabulary/sharpener.svg',
+    alt: '鉛筆削りに鉛筆を差し込み、削りかすが落ちているイラスト。',
+    caption: '鉛筆の芯をとがらせる道具、鉛筆削り。',
+  },
+  shaver: {
+    src: 'images/vocabulary/shaver.svg',
+    alt: '電気シェーバーを頬に当ててひげをそるイラスト。',
+    caption: 'ひげをそる道具、かみそり・シェーバー。',
+  },
+  she: {
+    src: 'images/vocabulary/she.svg',
+    alt: '二人のうち右の女性が点線の輪で囲まれ、矢印で指されているイラスト。',
+    caption: '彼女は、彼女が(女性を指す語)。',
+  },
+  sheep: {
+    src: 'images/vocabulary/sheep.svg',
+    alt: 'もこもこの毛をした羊が草を食べているイラスト。',
+    caption: '毛や肉をとるために飼われる動物、羊。',
+  },
+  shepherd: {
+    src: 'images/vocabulary/shepherd.svg',
+    alt: '杖を持った羊飼いが、羊を二匹連れて歩くイラスト。',
+    caption: '羊を飼って世話をする人、羊飼い。',
+  },
+  shirt: {
+    src: 'images/vocabulary/shirt.svg',
+    alt: 'ハンガーにかけたワイシャツとネクタイのイラスト。',
+    caption: '上半身に着る衣服、シャツ。',
+  },
+  shoe: {
+    src: 'images/vocabulary/shoe.svg',
+    alt: '一足の靴が並べて置かれているイラスト。',
+    caption: '足を保護するはきもの、靴。',
+  },
+  shop: {
+    src: 'images/vocabulary/shop.svg',
+    alt: 'ひさしとショーウィンドウのある店先のイラスト。',
+    caption: '品物を売る場所、店。',
+  },
+  'shopping list': {
+    src: 'images/vocabulary/shopping-list.svg',
+    alt: '買い物かごの横で、メモの項目に印をつけていくイラスト。',
+    caption: '買う物を書き出したメモ、買い物リスト。',
+  },
+  short: {
+    src: 'images/vocabulary/short.svg',
+    alt: '長いひもをはさみで切り、短くなった端を手に持つイラスト。',
+    caption: '長さや丈が短い。',
+  },
+  should: {
+    src: 'images/vocabulary/should.svg',
+    alt: '作業の前にヘルメットをかぶり、そばに印がつくイラスト。',
+    caption: '〜すべきだ(助言や義務)。',
+  },
+  show: {
+    src: 'images/vocabulary/show.svg',
+    alt: '写真の入った大きな紙を相手に向けて差し出しているイラスト。',
+    caption: '見せる、示す。番組やショーの意味もある。',
+  },
+  shower: {
+    src: 'images/vocabulary/shower.svg',
+    alt: '頭の上のシャワーから湯が降りそそぎ、湯気が立っているイラスト。',
+    caption: 'シャワー、にわか雨。take a shower で「シャワーを浴びる」。',
+  },
+  sick: {
+    src: 'images/vocabulary/sick.svg',
+    alt: 'いすに座って体温計をくわえ、具合が悪そうなイラスト。',
+    caption: '病気の、気分が悪い。',
+  },
+  sightsee: {
+    src: 'images/vocabulary/sightsee.svg',
+    alt: 'カメラを構えて、遠くの塔を写真に撮っているイラスト。',
+    caption: '観光する、見物して回る。',
+  },
+  sing: {
+    src: 'images/vocabulary/sing.svg',
+    alt: '口を大きく開けて歌い、音符が浮かんでいるイラスト。',
+    caption: '歌う。',
+  },
+  sister: {
+    src: 'images/vocabulary/sister.svg',
+    alt: '背の違う二人の女の子が並んで立っているイラスト。',
+    caption: '姉、妹。',
+  },
+  sit: {
+    src: 'images/vocabulary/sit.svg',
+    alt: 'いすに腰かけて足もとに手を置いているイラスト。',
+    caption: '座る、位置する。',
+  },
+  'sit down': {
+    src: 'images/vocabulary/sit-down.svg',
+    alt: 'いすの真上から下向きの矢印で、腰を下ろす動きを示すイラスト。',
+    caption: '座る、腰を下ろす(sit down)。',
+  },
+  six: {
+    src: 'images/vocabulary/six.svg',
+    alt: '金のボールが2列に3つずつ、6つ並んでいるイラスト。',
+    caption: '6、六。',
+  },
+  sixteen: {
+    src: 'images/vocabulary/sixteen.svg',
+    alt: '10本をたばねた束と、ボール6つを並べて示したイラスト。',
+    caption: '16、十六。10と6を合わせた数。',
+  },
+  sixth: {
+    src: 'images/vocabulary/sixth.svg',
+    alt: '6つ並んだボールのうち、6番目だけが輪で示されているイラスト。',
+    caption: '6番目の。',
+  },
+  sixty: {
+    src: 'images/vocabulary/sixty.svg',
+    alt: '10本の束が6つ、2列に並んでいるイラスト。',
+    caption: '60、六十。',
+  },
+  sketchbook: {
+    src: 'images/vocabulary/sketchbook.svg',
+    alt: '開いたスケッチブックに木の下絵が描かれ、そばに鉛筆が置かれているイラスト。',
+    caption: 'スケッチブック、写生帳。',
+  },
+  skirt: {
+    src: 'images/vocabulary/skirt.svg',
+    alt: 'スカートをはいた人が立っているイラスト。',
+    caption: 'スカート。',
+  },
+  sled: {
+    src: 'images/vocabulary/sled.svg',
+    alt: '雪の坂を木のそりで滑り降りるイラスト。',
+    caption: 'そり。',
+  },
+  small: {
+    src: 'images/vocabulary/small.svg',
+    alt: '大きな家のとなりに小さな家が並び、小さい方が輪で囲まれているイラスト。',
+    caption: '小さい、少ない。',
+  },
+  sneakers: {
+    src: 'images/vocabulary/sneakers.svg',
+    alt: 'スニーカーが一足、床に並べて置かれているイラスト。',
+    caption: 'スニーカー、運動靴。',
+  },
+  snow: {
+    src: 'images/vocabulary/snow.svg',
+    alt: '雪が降りつづけ、家と木の上に積もっているイラスト。',
+    caption: '雪、雪が降る。',
+  },
+  snowboarding: {
+    src: 'images/vocabulary/snowboarding.svg',
+    alt: 'スノーボードの板に乗って雪の斜面を滑っているイラスト。',
+    caption: 'スノーボード。',
+  },
+  so: {
+    src: 'images/vocabulary/so.svg',
+    alt: '燃えるように暑い太陽の下で、うちわで扇いで汗をぬぐうイラスト。',
+    caption: 'とても、そんなに。程度を強める語。「だから」と結果を導く用法もある。',
+  },
+  some: {
+    src: 'images/vocabulary/some.svg',
+    alt: 'かごの中のクッキーをいくつか手に取っているイラスト。',
+    caption: 'いくつかの、少しの。全部ではなく一部を指す。',
+  },
+  somebody: {
+    src: 'images/vocabulary/somebody.svg',
+    alt: 'ドアの前に立ってノックしている、正体の分からない人の影のイラスト。',
+    caption: 'だれか。正体が分からない一人を指す語。',
+  },
+  someone: {
+    src: 'images/vocabulary/someone.svg',
+    alt: '遠くの道から手をふっている小さな人を、手前の人が指さしているイラスト。',
+    caption: 'だれか。somebody とほぼ同じで、少し改まった言い方。',
+  },
+  something: {
+    src: 'images/vocabulary/something.svg',
+    alt: '箱から出ている正体不明の物を、首をかしげてのぞきこむイラスト。',
+    caption: '何か、ある物。中身が分からない物を指す。',
+  },
+  sometimes: {
+    src: 'images/vocabulary/sometimes.svg',
+    alt: '7つ並んだ四角のうち、1つだけが金色で印がついているイラスト。',
+    caption: 'ときどき。いつもではない頻度を表す。',
+  },
+  son: {
+    src: 'images/vocabulary/son.svg',
+    alt: '大人と男の子が手をつないで並び、そばにボールが転がっているイラスト。',
+    caption: '息子。親から見た男の子。',
+  },
+  song: {
+    src: 'images/vocabulary/song.svg',
+    alt: '音符の書かれた本が開かれ、まわりに音符が浮かんでいるイラスト。',
+    caption: '歌。歌われる曲そのもの。',
+  },
+  soon: {
+    src: 'images/vocabulary/soon.svg',
+    alt: '時計と、まもなく到着するバスを点線の矢印で結んだイラスト。',
+    caption: 'まもなく、すぐに。',
+  },
+  sorry: {
+    src: 'images/vocabulary/sorry.svg',
+    alt: '割れたカップのそばで、頭を下げて謝っているイラスト。',
+    caption: 'すまなく思って、残念で。',
+  },
+  soup: {
+    src: 'images/vocabulary/soup.svg',
+    alt: '湯気の立つスープの皿に、スプーンが添えられているイラスト。',
+    caption: 'スープ。',
+  },
+  south: {
+    src: 'images/vocabulary/south.svg',
+    alt: '方位磁針の針が下を指し、下の方に太陽が描かれているイラスト。',
+    caption: '南、南の・南へ。',
+  },
+  space: {
+    src: 'images/vocabulary/space.svg',
+    alt: 'ロケットが惑星と星の間を飛んでいるイラスト。',
+    caption: '空間、場所。宇宙の意味でも使われる。',
+  },
+  speak: {
+    src: 'images/vocabulary/speak.svg',
+    alt: '吹き出しを出して話しかけ、いすの相手が聞いているイラスト。',
+    caption: '話す、話をする。',
+  },
+  special: {
+    src: 'images/vocabulary/special.svg',
+    alt: '3つのケーキのうち真ん中の1つだけが金色で、輪に囲まれているイラスト。',
+    caption: '特別な、特別の。',
+  },
+  spoonful: {
+    src: 'images/vocabulary/spoonful.svg',
+    alt: '粉を山もりにすくったスプーンから、カップへ粉が落ちるイラスト。',
+    caption: 'スプーン1杯の量。',
+  },
+  sport: {
+    src: 'images/vocabulary/sport.svg',
+    alt: 'ボールを蹴ってゴールをねらっているイラスト。',
+    caption: 'スポーツ、運動競技。',
+  },
+  stairs: {
+    src: 'images/vocabulary/stairs.svg',
+    alt: '積み上がった階段を、一段ずつ上っているイラスト。',
+    caption: '階段。',
+  },
+  'stand up': {
+    src: 'images/vocabulary/stand-up.svg',
+    alt: 'いすのそばに立ち、上向きの矢印と、空いた座面が示されているイラスト。',
+    caption: '立ち上がる、立っている。',
+  },
+  station: {
+    src: 'images/vocabulary/station.svg',
+    alt: '屋根つきのホームに電車がとまり、時計が下がっているイラスト。',
+    caption: '駅。署、局の意味もある。',
+  },
+  stethoscope: {
+    src: 'images/vocabulary/stethoscope.svg',
+    alt: '聴診器が、心臓の鼓動を表す線の上に置かれているイラスト。',
+    caption: '聴診器。',
+  },
+  stickers: {
+    src: 'images/vocabulary/stickers.svg',
+    alt: '台紙に星やハートのシールが並び、1枚がめくれかかっているイラスト。',
+    caption: 'ステッカー、シール。',
+  },
+  'sticky note': {
+    src: 'images/vocabulary/sticky-note.svg',
+    alt: 'ボードに貼られた付箋が1枚めくれて、角が丸まっているイラスト。',
+    caption: '付箋。はがして貼り直せる小さな紙。',
+  },
+  stop: {
+    src: 'images/vocabulary/stop.svg',
+    alt: '手のひらを前に出して止め、そばに八角形の標識が立っているイラスト。',
+    caption: '止まる、止める。停留所の意味もある。',
+  },
+  story: {
+    src: 'images/vocabulary/story.svg',
+    alt: 'いすに座って絵本を開き、読み聞かせているイラスト。',
+    caption: '話、物語。記事の意味もある。',
+  },
+  street: {
+    src: 'images/vocabulary/street.svg',
+    alt: '建物が並ぶ通りに、街灯とセンターラインのある道が続くイラスト。',
+    caption: '通り、街路。',
+  },
+  stressful: {
+    src: 'images/vocabulary/stressful.svg',
+    alt: '書類と時計に囲まれ、頭をかかえて緊張しているイラスト。',
+    caption: 'ストレスの多い、緊張する。',
+  },
+  strong: {
+    src: 'images/vocabulary/strong.svg',
+    alt: 'バーベルを頭上に持ち上げて立っているイラスト。',
+    caption: '強い、丈夫な、味が濃い。',
+  },
+  student: {
+    src: 'images/vocabulary/student.svg',
+    alt: 'かばんを背負い、本を抱えて歩いていくイラスト。',
+    caption: '学生、生徒。',
+  },
+  study: {
+    src: 'images/vocabulary/study.svg',
+    alt: '机に向かい、ランプの明かりで本を読んでいるイラスト。',
+    caption: '勉強する。研究・勉強という名詞の意味もある。',
+  },
+  summer: {
+    src: 'images/vocabulary/summer.svg',
+    alt: '強い日ざしと波の立つ海、砂浜にビーチボールが転がっているイラスト。',
+    caption: '夏。',
+  },
+  sun: {
+    src: 'images/vocabulary/sun.svg',
+    alt: '家の上に大きく輝いている太陽のイラスト。',
+    caption: '太陽、日光。',
+  },
+  sunbathe: {
+    src: 'images/vocabulary/sunbathe.svg',
+    alt: 'タオルの上に寝そべり、太陽の下で日光浴をしているイラスト。',
+    caption: '日光浴をする、日なたぼっこをする。',
+  },
+  sunburn: {
+    src: 'images/vocabulary/sunburn.svg',
+    alt: '赤くなった背中と肩に、太陽の光と熱の波線が当たっているイラスト。',
+    caption: '日焼け。赤くなってひりひりする肌。',
+  },
+  punctuality: {
+    src: 'images/vocabulary/punctuality.svg',
+    alt: '時計の針がちょうど時刻を指し、時間どおりに着いた人にチェックがついているイラスト。',
+    caption: '時間を守ること、正確さ。',
+  },
+  sunglasses: {
+    src: 'images/vocabulary/sunglasses.svg',
+    alt: '大きな顔に黒いサングラスがかかっているイラスト。',
+    caption: 'サングラス。',
+  },
+  sunshine: {
+    src: 'images/vocabulary/sunshine.svg',
+    alt: '雲がわきに流れ、明るい日ざしの中で人が手を広げているイラスト。',
+    caption: '日光、晴天。',
+  },
+  swimsuit: {
+    src: 'images/vocabulary/swimsuit.svg',
+    alt: 'ハンガーにかけられた水着と、足もとの波のイラスト。',
+    caption: '水着。',
+  },
+  synagogue: {
+    src: 'images/vocabulary/synagogue.svg',
+    alt: '六芒星の飾られた建物が立っているイラスト。',
+    caption: 'シナゴーグ、ユダヤ教の礼拝所。',
+  },
+  table: {
+    src: 'images/vocabulary/table.svg',
+    alt: '4本脚の食卓にカップと皿が載っているイラスト。',
+    caption: 'テーブル、食卓。一覧の「表」の意味もある。',
+  },
+  take: {
+    src: 'images/vocabulary/take.svg',
+    alt: '棚に並んだ箱を1つ、手をのばして取り上げているイラスト。',
+    caption: '取る、持っていく。乗る、時間がかかるの意味もある。',
+  },
+  'take care of': {
+    src: 'images/vocabulary/take-care-of.svg',
+    alt: '具合の悪い人に、そばから水のカップを差し出しているイラスト。',
+    caption: '〜の世話をする、〜に対処する。',
+  },
+  tall: {
+    src: 'images/vocabulary/tall.svg',
+    alt: '背の高い人と低い人が並び、高い方に目印がついているイラスト。',
+    caption: '背が高い、高い。',
+  },
+  tambourine: {
+    src: 'images/vocabulary/tambourine.svg',
+    alt: 'タンバリンを手に持って振り、音が広がっているイラスト。',
+    caption: 'タンバリン。',
+  },
+  taxi: {
+    src: 'images/vocabulary/taxi.svg',
+    alt: '屋根に標識のついた車がとまり、人が手を上げて呼びとめているイラスト。',
+    caption: 'タクシー。',
+  },
+  tea: {
+    src: 'images/vocabulary/tea.svg',
+    alt: '湯気の立つティーカップと、そばに置かれたティーポットのイラスト。',
+    caption: '茶、紅茶。お茶の時間の意味もある。',
+  },
+  teach: {
+    src: 'images/vocabulary/teach.svg',
+    alt: '黒板に書いた図を指して説明しているイラスト。',
+    caption: '教える。',
+  },
+  teacher: {
+    src: 'images/vocabulary/teacher.svg',
+    alt: '黒板の前に立ち、本を持って生徒の方を向いているイラスト。',
+    caption: '教師、先生。',
+  },
+  team: {
+    src: 'images/vocabulary/team.svg',
+    alt: '同じ色のユニフォームを着た3人が並び、前にボールが置かれているイラスト。',
+    caption: 'チーム、組。',
+  },
+  telephone: {
+    src: 'images/vocabulary/telephone.svg',
+    alt: '台の上に置かれた電話機と、らせん状にのびるコードのイラスト。',
+    caption: '電話、電話をかける。',
+  },
+  television: {
+    src: 'images/vocabulary/television.svg',
+    alt: '画面に山と太陽の映像が映っているテレビのイラスト。',
+    caption: 'テレビ、テレビ放送。',
+  },
+  tell: {
+    src: 'images/vocabulary/tell.svg',
+    alt: '相手の耳もとに口を寄せて、ひそひそと伝えているイラスト。',
+    caption: '話す、伝える。見分けるの意味もある。',
+  },
+  ten: {
+    src: 'images/vocabulary/ten.svg',
+    alt: '金のボールが2列に5つずつ、10個並んでいるイラスト。',
+    caption: '10、十、10歳。',
+  },
+  tennis: {
+    src: 'images/vocabulary/tennis.svg',
+    alt: 'ラケットを構えてボールを打ち、コートにネットが張られているイラスト。',
+    caption: 'テニス。',
+  },
+  tenth: {
+    src: 'images/vocabulary/tenth.svg',
+    alt: '10個並んだボールのうち、10番目だけが輪で示されているイラスト。',
+    caption: '10番目の、10分の1。',
+  },
+  terrible: {
+    src: 'images/vocabulary/terrible.svg',
+    alt: '黒い雲から雷が落ち、激しい雨の中を人が身をすくめて歩いているイラスト。',
+    caption: 'ひどい、恐ろしい。とても下手な、の意味もある。',
+  },
+  test: {
+    src: 'images/vocabulary/test.svg',
+    alt: '答案用紙に書き込み、チェックがついているイラスト。',
+    caption: '試験、テスト。試す、検査するの意味もある。',
+  },
+  than: {
+    src: 'images/vocabulary/than.svg',
+    alt: '天筆に大小の箱が載り、重い左側が下に傾いているイラスト。',
+    caption: '〜より。2つを比べる語。',
+  },
+  thank: {
+    src: 'images/vocabulary/thank.svg',
+    alt: '品物を手渡され、笑顔で受け取っているイラスト。',
+    caption: '感謝する、礼を言う。',
+  },
+  the: {
+    src: 'images/vocabulary/the.svg',
+    alt: '3つの箱のうち真ん中の1つだけが輪で囲まれ、上から矢印が指しているイラスト。',
+    caption: 'その、例の。特定のものを指す語。',
+  },
+  theater: {
+    src: 'images/vocabulary/theater.svg',
+    alt: '緞帳の下がった舞台と、階段状の客席が並んでいるイラスト。',
+    caption: '劇場、演劇。',
+  },
+  theatre: {
+    src: 'images/vocabulary/theatre.svg',
+    alt: 'スポットライトの当たった舞台で、2人の役者が向かい合って演じているイラスト。',
+    caption: '劇場、演劇。イギリス式のつづり。',
+  },
+  their: {
+    src: 'images/vocabulary/their.svg',
+    alt: '3人の人物から、共通で持っている家へ点線がのびているイラスト。',
+    caption: '彼らの、彼女らの。所有を表す語。',
+  },
+  them: {
+    src: 'images/vocabulary/them.svg',
+    alt: '3人の相手に向かって、品物を手渡しているイラスト。',
+    caption: '彼らを、彼らに。複数の目的格。',
+  },
+  then: {
+    src: 'images/vocabulary/then.svg',
+    alt: '道に沿って足あとが続き、順に進んでいくようすを示すイラスト。',
+    caption: 'そのとき、それから。順に起こることをつなぐ語。',
+  },
+  there: {
+    src: 'images/vocabulary/there.svg',
+    alt: '丘の上の木を指さし、矢印と輪でその場所を示すイラスト。',
+    caption: 'そこに、そこへ。〜がある、の意味でも使う。',
+  },
+  these: {
+    src: 'images/vocabulary/these.svg',
+    alt: '手前に並んだ3つの品物を指さし、輪で囲んでいるイラスト。',
+    caption: 'これらの。近くにある複数を指す語。',
+  },
+  those: {
+    src: 'images/vocabulary/those.svg',
+    alt: '遠くの3つの品物を指さし、点線の矢印と輪で示しているイラスト。',
+    caption: 'あれらの、それらの。遠くにある複数を指す語。',
+  },
+  they: {
+    src: 'images/vocabulary/they.svg',
+    alt: '3人が並んで一緒に歩いているイラスト。',
+    caption: '彼らは、彼女らは、それらは。複数の主語。',
+  },
+  thing: {
+    src: 'images/vocabulary/thing.svg',
+    alt: '箱やボール、りんごにカップと、いろいろな物が並んでいるイラスト。',
+    caption: '物、こと。まとめて物を指す語。',
+  },
+  think: {
+    src: 'images/vocabulary/think.svg',
+    alt: '頭の上の吹き出しの中に電球が浮かび、考えこんでいるイラスト。',
+    caption: '考える、思う。',
+  },
+  thirsty: {
+    src: 'images/vocabulary/thirsty.svg',
+    alt: '太陽の下、水の入ったグラスを手に持っているイラスト。',
+    caption: 'のどが渇いて。',
+  },
+  thirteen: {
+    src: 'images/vocabulary/thirteen.svg',
+    alt: '10本をたばねた束と、ボール3つを並べて示したイラスト。',
+    caption: '13、十三。10と3を合わせた数。',
+  },
+  thirty: {
+    src: 'images/vocabulary/thirty.svg',
+    alt: '10本の束が3つ並んでいるイラスト。',
+    caption: '30、三十。',
+  },
+  thousand: {
+    src: 'images/vocabulary/thousand.svg',
+    alt: '箱を四段のピラミッド状に積み上げたイラスト。',
+    caption: '1000、千。数が多いことを表す。',
+  },
+  three: {
+    src: 'images/vocabulary/three.svg',
+    alt: '金のボールが3つ並んでいるイラスト。',
+    caption: '3、三、3つ。',
+  },
+  through: {
+    src: 'images/vocabulary/through.svg',
+    alt: '丘のトンネルの中を列車が通り抜けているイラスト。',
+    caption: '〜を通って、〜を貫いて。〜の間じゅう、の意味もある。',
+  },
+  planner: {
+    src: 'images/vocabulary/planner.svg',
+    alt: '開いた手帳にマス目の予定表が広がり、そばにペンが置かれているイラスト。',
+    caption: '予定表、手帳。計画する人の意味もある。',
+  },
+  ticket: {
+    src: 'images/vocabulary/ticket.svg',
+    alt: '切り取り線のついたチケットを手に持っているイラスト。',
+    caption: '切符、チケット。違反切符の意味もある。',
+  },
+  'tidy up': {
+    src: 'images/vocabulary/tidy-up.svg',
+    alt: '棚に本をそろえ、散らかった物を箱にまとめているイラスト。',
+    caption: '片づける、整理する。',
+  },
+  'tin opener': {
+    src: 'images/vocabulary/tin-opener.svg',
+    alt: '缶切りで缶のふたを開け、めくれたふたが立っているイラスト。',
+    caption: '缶切り。',
+  },
+  tired: {
+    src: 'images/vocabulary/tired.svg',
+    alt: 'いすにぐったり腰かけて肩を落とし、頭の上に疲れの波線が漂うイラスト。',
+    caption: '疲れて力が入らず、ぐったりしているようす。',
+  },
+  to: {
+    src: 'images/vocabulary/to.svg',
+    alt: '点線の道にそって、駅のような建物へ歩いていくイラスト。',
+    caption: '行き先や到達点を表す前置詞「〜へ、〜に」。',
+  },
+  toasters: {
+    src: 'images/vocabulary/toasters.svg',
+    alt: 'カウンターに2台のトースターが並び、どちらからも食パンが飛び出しているイラスト。',
+    caption: 'パンを焼く道具トースターの複数形。',
+  },
+  today: {
+    src: 'images/vocabulary/today.svg',
+    alt: '暦のまん中のマスが色づき、その上に太陽がかがやいているイラスト。',
+    caption: '今この日を指す「今日」。',
+  },
+  together: {
+    src: 'images/vocabulary/together.svg',
+    alt: '二人が左右から同じ大きな箱をかかえて持ち上げているイラスト。',
+    caption: '同じ場所でいっしょに、まとまって。',
+  },
+  toilet: {
+    src: 'images/vocabulary/toilet.svg',
+    alt: '便器とタンク、壁のトイレットペーパーが並んでいるイラスト。',
+    caption: '用を足す場所、便所。',
+  },
+  tomato: {
+    src: 'images/vocabulary/tomato.svg',
+    alt: 'へたのついた丸いトマトと、切って種が見えるトマトのイラスト。',
+    caption: '赤くて丸い野菜、トマト。',
+  },
+  tomorrow: {
+    src: 'images/vocabulary/tomorrow.svg',
+    alt: '暦の次のマスへ矢印がのび、そばで朝日がのぼっているイラスト。',
+    caption: 'これから来る次の日、明日。',
+  },
+  tongs: {
+    src: 'images/vocabulary/tongs.svg',
+    alt: 'トングでフライパンのソーセージをはさみ、裏返そうとしているイラスト。',
+    caption: '2本の腕で物をつかむ台所の道具、トング。',
+  },
+  tonight: {
+    src: 'images/vocabulary/tonight.svg',
+    alt: '夜の空に月と星が光り、家の窓だけがあたたかく灯っているイラスト。',
+    caption: '今日の夜、今夜。',
+  },
+  too: {
+    src: 'images/vocabulary/too.svg',
+    alt: '荷物をつめすぎてスーツケースから服があふれ、ふたが閉まらないイラスト。',
+    caption: '「〜すぎる」「〜もまた」を表す副詞。',
+  },
+  tooth: {
+    src: 'images/vocabulary/tooth.svg',
+    alt: '白く光る歯と、そばに立てかけた歯ブラシのイラスト。',
+    caption: '口の中にあって物をかむ、歯。',
+  },
+  toothpick: {
+    src: 'images/vocabulary/toothpick.svg',
+    alt: 'つまようじに刺したチーズとオリーブを皿にのせ、予備の1本も置いてあるイラスト。',
+    caption: '食べ物に刺して使う小さな木のつまようじ。',
+  },
+  topic: {
+    src: 'images/vocabulary/topic.svg',
+    alt: '向かい合った二人の間の吹き出しに、話題を表す語のブロックが並んでいるイラスト。',
+    caption: '話の中心になる題材、話題。',
+  },
+  tornado: {
+    src: 'images/vocabulary/tornado.svg',
+    alt: '太い雲から細い漏斗がのびて地上に達し、木や瓦が巻き上げられているイラスト。',
+    caption: '激しい風が渦を巻いて地上を襲う竜巻。',
+  },
+  town: {
+    src: 'images/vocabulary/town.svg',
+    alt: '背の高い建物と家が道に沿って並び、街灯が立っているイラスト。',
+    caption: '家や店が集まってできた町。',
+  },
+  'town hall': {
+    src: 'images/vocabulary/town-hall.svg',
+    alt: '柱と時計、屋上の旗がついた石造りの市役所のイラスト。',
+    caption: '町の行政の中心になる建物、市役所。',
+  },
+  tracksuit: {
+    src: 'images/vocabulary/tracksuit.svg',
+    alt: '白いラインの入った上下そろいの服を着て走っているイラスト。',
+    caption: '運動着の上下そろい、ジャージ。',
+  },
+  'trade-off': {
+    src: 'images/vocabulary/trade-off.svg',
+    alt: '天秤の片方に金貨、もう片方に時計がのり、つり合わずに傾いているイラスト。',
+    caption: '一方を取れば他方をあきらめる、二者択一の妥協。',
+  },
+  traffic: {
+    src: 'images/vocabulary/traffic.svg',
+    alt: '道路に車が数珠つなぎに並び、信号が赤くともっているイラスト。',
+    caption: '道を行き交う車や人の流れ、交通。',
+  },
+  travel: {
+    src: 'images/vocabulary/travel.svg',
+    alt: 'スーツケースを引いて歩く人と、空を飛ぶ飛行機のイラスト。',
+    caption: '遠くへ出かけること、旅行。',
+  },
+  tree: {
+    src: 'images/vocabulary/tree.svg',
+    alt: '幹の太い大きな木が枝を広げ、実がいくつかなっているイラスト。',
+    caption: '幹と枝のある大きな植物、木。',
+  },
+  true: {
+    src: 'images/vocabulary/true.svg',
+    alt: '書類の上に大きな緑のチェックが描かれているイラスト。',
+    caption: '事実に合っていて正しい、本当の。',
+  },
+  grower: {
+    src: 'images/vocabulary/grower.svg',
+    alt: 'じょうろで畑の野菜の苗に水をやっている人のイラスト。',
+    caption: '作物を育てて出荷する人、栽培者。',
+  },
+  turn: {
+    src: 'images/vocabulary/turn.svg',
+    alt: '道が右手へ曲がっていて、車がそのカーブにそって進んでいくイラスト。',
+    caption: '進む向きを変える、曲がる。',
+  },
+  twelfth: {
+    src: 'images/vocabulary/twelfth.svg',
+    alt: '12個の丸が並び、最後の12番目だけが色づいて点線で囲まれているイラスト。',
+    caption: '12番目であることを表す数詞。',
+  },
+  twelve: {
+    src: 'images/vocabulary/twelve.svg',
+    alt: '12個の卵がきっちり収まった卵パックのイラスト。',
+    caption: '12、十二という数。',
+  },
+  twentieth: {
+    src: 'images/vocabulary/twentieth.svg',
+    alt: '20個の丸が並び、最後の20番目だけが色づいて点線で囲まれているイラスト。',
+    caption: '20番目であることを表す数詞。',
+  },
+  twenty: {
+    src: 'images/vocabulary/twenty.svg',
+    alt: '金貨が10枚ずつ2列、全部で20枚ならべられているイラスト。',
+    caption: '20、二十という数。',
+  },
+  twice: {
+    src: 'images/vocabulary/twice.svg',
+    alt: '鐘のまわりを二まわりする矢印が、2回鳴らすことを示しているイラスト。',
+    caption: '同じことを2回する、2度。',
+  },
+  two: {
+    src: 'images/vocabulary/two.svg',
+    alt: 'よく似たカップが2つ、湯気を立てて並んでいるイラスト。',
+    caption: '2、二つという数。',
+  },
+  typhoon: {
+    src: 'images/vocabulary/typhoon.svg',
+    alt: '海の上で渦を巻く雲から激しい雨が降り、木が風にしなっているイラスト。',
+    caption: '夏から秋に日本へ来る強い熱帯低気圧、台風。',
+  },
+  uncertain: {
+    src: 'images/vocabulary/uncertain.svg',
+    alt: '二つに分かれた点線の道の手前で、腕を広げて迷っているイラスト。',
+    caption: 'どちらが正しいか、どうなるか確信が持てない。',
+  },
+  under: {
+    src: 'images/vocabulary/under.svg',
+    alt: 'テーブルの下にボールが転がりこみ、下向きの矢印がその位置を示しているイラスト。',
+    caption: 'あるものより低い位置を表す「〜の下に」。',
+  },
+  understand: {
+    src: 'images/vocabulary/understand.svg',
+    alt: '頭の上に電球が光り、ひらめいたようすのイラスト。',
+    caption: '内容がわかる、理解する。',
+  },
+  university: {
+    src: 'images/vocabulary/university.svg',
+    alt: '時計台の屋根に角帽がのった、柱の多い大きな校舎のイラスト。',
+    caption: '高等教育を受ける学校、大学。',
+  },
+  untie: {
+    src: 'images/vocabulary/untie.svg',
+    alt: 'かた結びになったロープの両端を、外側へ引いてほどこうとしているイラスト。',
+    caption: '結んだものをほどく、結びを解く。',
+  },
+  until: {
+    src: 'images/vocabulary/until.svg',
+    alt: 'いすに座って待ちつづける人と、そこまでの時間を矢印で示す時計のイラスト。',
+    caption: 'ある時点まで続くことを表す「〜まで」。',
+  },
+  unwrap: {
+    src: 'images/vocabulary/unwrap.svg',
+    alt: '贈り物の箱のふたを持ち上げ、リボンをほどいて中をたしかめているイラスト。',
+    caption: '包みや包装を解いて開ける。',
+  },
+  up: {
+    src: 'images/vocabulary/up.svg',
+    alt: '気球が空へのぼっていくようすを、上向きの矢印が示しているイラスト。',
+    caption: '上の方へ、上へ。',
+  },
+  uphill: {
+    src: 'images/vocabulary/uphill.svg',
+    alt: '急な坂道で、荷物をうしろから押し上げているイラスト。',
+    caption: '上り坂の、上り坂で。',
+  },
+  us: {
+    src: 'images/vocabulary/us.svg',
+    alt: '外から箱を手渡された三人のグループに、点線の輪がかけられているイラスト。',
+    caption: '話し手を含む複数が受け取る側になる「私たちを・私たちに」。',
+  },
+  useful: {
+    src: 'images/vocabulary/useful.svg',
+    alt: 'はしごにのぼり、棚の上のびんを取ろうとしているイラスト。',
+    caption: '使うと役に立つ、便利な。',
+  },
+  usually: {
+    src: 'images/vocabulary/usually.svg',
+    alt: 'いつもの習慣のように、カップを持つ人と、繰り返しを表す輪の矢印がついた時計のイラスト。',
+    caption: 'たいてい、ふつうは。',
+  },
+  'vacuum cleaner': {
+    src: 'images/vocabulary/vacuum-cleaner.svg',
+    alt: 'そうじ機のノズルを床に当て、ほこりを吸い取っているイラスト。',
+    caption: '床やじゅうたんのごみを吸い取る電気掃除機。',
+  },
+  vegetable: {
+    src: 'images/vocabulary/vegetable.svg',
+    alt: 'かごにトマト、にんじん、ブロッコリーなどが山もりになっているイラスト。',
+    caption: '畑でとれる、食べられる植物、野菜。',
+  },
+  video: {
+    src: 'images/vocabulary/video.svg',
+    alt: 'ノートパソコンの画面いっぱいに再生の三角形が映っているイラスト。',
+    caption: '録画された映像、動画。',
+  },
+  violet: {
+    src: 'images/vocabulary/violet.svg',
+    alt: '紫色のすみれの花が三つ、葉の間から咲いているイラスト。',
+    caption: 'すみれ、およびそのすみれ色。',
+  },
+  visit: {
+    src: 'images/vocabulary/visit.svg',
+    alt: '玄関のドアの前に、贈り物を持って立っている人のイラスト。',
+    caption: '人の家や施設をたずねる、訪問する。',
+  },
+  wagon: {
+    src: 'images/vocabulary/wagon.svg',
+    alt: '荷物を高く積んだ四輪の荷車を、人が引っぱって歩いているイラスト。',
+    caption: '荷物を運ぶための、車輪のついた荷車。',
+  },
+  wake: {
+    src: 'images/vocabulary/wake.svg',
+    alt: 'ベッドのそばで両腕を上げてのびをし、目覚まし時計が鳴っているイラスト。',
+    caption: '眠りから目を覚ます、起こす。',
+  },
+  walk: {
+    src: 'images/vocabulary/walk.svg',
+    alt: '足あとを残しながら、腕をふって歩いていくイラスト。',
+    caption: '足で進む、散歩する。',
+  },
+  wall: {
+    src: 'images/vocabulary/wall.svg',
+    alt: 'れんがの壁にボールが当たり、はね返っていくイラスト。',
+    caption: '部屋や外を仕切る、れんがや板の壁。',
+  },
+  want: {
+    src: 'images/vocabulary/want.svg',
+    alt: 'ケーキに手をのばし、頭の上にハートが浮かんでいるイラスト。',
+    caption: 'ほしいと思う、〜したいと思う。',
+  },
+  was: {
+    src: 'images/vocabulary/was.svg',
+    alt: '写真立ての中に昔の家のようすがおさまり、時計からの矢印が過去を示しているイラスト。',
+    caption: 'be動詞の過去形で「〜だった」「〜にいた」。',
+  },
+  'wash up': {
+    src: 'images/vocabulary/wash-up.svg',
+    alt: '流しに皿を重ね、泡立てながら洗っているイラスト。',
+    caption: '食器を洗う(英)、手を洗う(米)。',
+  },
+  watch: {
+    src: 'images/vocabulary/watch.svg',
+    alt: '手首に巻いた小さな時計を、じっと見ているイラスト。',
+    caption: '身につける小型の時計、腕時計。',
+  },
+  we: {
+    src: 'images/vocabulary/we.svg',
+    alt: '三人がそろって手を上げ、いっしょに行動しているイラスト。',
+    caption: '話し手を含む複数が主語になる「私たちは・私たちが」。',
+  },
+  wear: {
+    src: 'images/vocabulary/wear.svg',
+    alt: 'コートを羽織り、マフラーを身につけているイラスト。',
+    caption: '衣服などを身につけている、着ている。',
+  },
+  weather: {
+    src: 'images/vocabulary/weather.svg',
+    alt: '窓のガラスの向こうに太陽と雲が見え、人が外の空模様を見ているイラスト。',
+    caption: 'その日の空模様、天気。',
+  },
+  website: {
+    src: 'images/vocabulary/website.svg',
+    alt: 'ノートパソコンの画面に、写真と文章が並んだページが映っているイラスト。',
+    caption: 'インターネット上で公開されているページ、ウェブサイト。',
+  },
+  websites: {
+    src: 'images/vocabulary/websites.svg',
+    alt: '三つのブラウザ画面が並んで開いているイラスト。',
+    caption: 'ウェブサイトの複数形で、いくつものページ。',
+  },
+  trader: {
+    src: 'images/vocabulary/trader.svg',
+    alt: '屋台の品物と硬貨を、商人と客が交換しているイラスト。',
+    caption: '品物を売り買いする人、商人。',
+  },
+  week: {
+    src: 'images/vocabulary/week.svg',
+    alt: '7つのマスが横に並び、全体が囲まれて1週間を表しているイラスト。',
+    caption: '7日間をひとまとまりにした期間、週。',
+  },
+  went: {
+    src: 'images/vocabulary/went.svg',
+    alt: '家から建物へ点線の道と足あとがのび、その先に立っているイラスト。',
+    caption: 'go の過去形で「行った」。',
+  },
+  were: {
+    src: 'images/vocabulary/were.svg',
+    alt: '写真立ての中に複数の家がおさまり、時計からの矢印が過去を示しているイラスト。',
+    caption: 'be動詞の過去形で、複数の主語に使う「〜だった」。',
+  },
+  west: {
+    src: 'images/vocabulary/west.svg',
+    alt: '海に沈む太陽と、左を指す矢印、方位の星のマークのイラスト。',
+    caption: '方角の西、西側。',
+  },
+  what: {
+    src: 'images/vocabulary/what.svg',
+    alt: 'ふたの開いた箱の中身が点線でぼかされ、そばの人が首をかしげているイラスト。',
+    caption: 'ものや内容をたずねる「何」。',
+  },
+  when: {
+    src: 'images/vocabulary/when.svg',
+    alt: '時計と暦の間を点線の矢印が行き来し、時をたずねていることを示すイラスト。',
+    caption: '時をたずねる「いつ」。',
+  },
+  where: {
+    src: 'images/vocabulary/where.svg',
+    alt: '地図に場所のピンが立ち、人が地図を広げて行き先を探しているイラスト。',
+    caption: '場所をたずねる「どこで・どこへ」。',
+  },
+  which: {
+    src: 'images/vocabulary/which.svg',
+    alt: '同じに見える二つの扉の前で、どちらにしようかと迷っているイラスト。',
+    caption: '二つ以上のうちどれかをたずねる「どちら・どれ」。',
+  },
+  white: {
+    src: 'images/vocabulary/white.svg',
+    alt: 'ローラーで壁を白く塗り分けているイラスト。',
+    caption: '白、白色。',
+  },
+  who: {
+    src: 'images/vocabulary/who.svg',
+    alt: 'カーテンのかげに人の形の点線が見え、そばの人が指さしているイラスト。',
+    caption: '人をたずねる「だれ」。',
+  },
+  why: {
+    src: 'images/vocabulary/why.svg',
+    alt: '石につまずいた人が石をふり返り、理由をたずねるように見つめているイラスト。',
+    caption: '理由をたずねる「なぜ」。',
+  },
+  wife: {
+    src: 'images/vocabulary/wife.svg',
+    alt: '向かい合った夫婦が手をつなぎ、間に指輪とハートが浮かんでいるイラスト。',
+    caption: '結婚している相手の女性、妻。',
+  },
+  window: {
+    src: 'images/vocabulary/window.svg',
+    alt: 'カーテンのついた四角い窓から、外の太陽と木が見えているイラスト。',
+    caption: '光や風を入れるために壁に開けた開口部、窓。',
+  },
+  wine: {
+    src: 'images/vocabulary/wine.svg',
+    alt: 'ぶどう酒のびんと、赤い液体の入ったグラスがテーブルに並んでいるイラスト。',
+    caption: 'ぶどうから作る酒、ワイン。',
+  },
+  winter: {
+    src: 'images/vocabulary/winter.svg',
+    alt: '葉を落とした裸の木と雪だるま、舞う雪で冬の景色を表したイラスト。',
+    caption: '一年で最も寒い季節、冬。',
+  },
+  with: {
+    src: 'images/vocabulary/with.svg',
+    alt: '犬を連れて、いっしょに散歩しているイラスト。',
+    caption: '「〜と一緒に」を表す前置詞。',
+  },
+  without: {
+    src: 'images/vocabulary/without.svg',
+    alt: '雨の中でかさを持たずにぬれている人と、打ち消されたかさの点線のイラスト。',
+    caption: '「〜なしで、〜がなければ」を表す前置詞。',
+  },
+  woman: {
+    src: 'images/vocabulary/woman.svg',
+    alt: 'スカートを着て、かばんを持って立っている女性のイラスト。',
+    caption: 'おとなの女の人、女性。',
+  },
+  wonderful: {
+    src: 'images/vocabulary/wonderful.svg',
+    alt: '大きな虹の下で人が両手を上げ、きらきらが光っているイラスト。',
+    caption: 'とてもすばらしい、素敵な。',
+  },
+  word: {
+    src: 'images/vocabulary/word.svg',
+    alt: '吹き出しの中に、語のかたまりを表す四角が並んでいるイラスト。',
+    caption: '意味をもつ言葉の単位、単語。',
+  },
+  work: {
+    src: 'images/vocabulary/work.svg',
+    alt: '机に向かってノートパソコンで仕事をしているイラスト。',
+    caption: '仕事、働くこと、機械が動くこと。',
+  },
+  world: {
+    src: 'images/vocabulary/world.svg',
+    alt: '台にのった地球儀と、そのまわりに立つ人びとのイラスト。',
+    caption: '地球全体、世の中。',
+  },
+  would: {
+    src: 'images/vocabulary/would.svg',
+    alt: 'いすに座った人の頭の上に、家の夢を思いうかべる点線の吹き出しがあるイラスト。',
+    caption: '仮定や過去の習慣を表す助動詞「〜だろう」。',
+  },
+  'wrapping paper': {
+    src: 'images/vocabulary/wrapping-paper.svg',
+    alt: '柄の入った包装紙のロールと、リボンで包まれた箱のイラスト。',
+    caption: '贈り物を包むための、模様のついた紙。',
+  },
+  wring: {
+    src: 'images/vocabulary/wring.svg',
+    alt: 'ぬれた布を両手でひねって、水をしぼり出しているイラスト。',
+    caption: '布などをねじって水や液を出す、絞る。',
+  },
+  write: {
+    src: 'images/vocabulary/write.svg',
+    alt: '机に向かってペンで紙に文字を書き込んでいるイラスト。',
+    caption: '文字や文章を書く。',
+  },
+  yacht: {
+    src: 'images/vocabulary/yacht.svg',
+    alt: '二枚の帆を上げたヨットが、波の上を走っているイラスト。',
+    caption: '帆やエンジンで走る小型の船、ヨット。',
+  },
+  yam: {
+    src: 'images/vocabulary/yam.svg',
+    alt: '土のついた長い山いもと、切って白い中身が見える輪切りのイラスト。',
+    caption: 'ねばりのある長い根菜、ヤム・山いも。',
+  },
+  year: {
+    src: 'images/vocabulary/year.svg',
+    alt: '花・太陽・葉・雪が円く並び、回る矢印が一年の巡りを表しているイラスト。',
+    caption: '1月から12月までの12か月、1年。',
+  },
+  yellow: {
+    src: 'images/vocabulary/yellow.svg',
+    alt: '黄色い花びらを広げた大きなひまわりが咲いているイラスト。',
+    caption: '黄色、黄色い色。',
+  },
+  yes: {
+    src: 'images/vocabulary/yes.svg',
+    alt: 'うなずいて手を上げる人のそばに、大きな緑のチェックが描かれているイラスト。',
+    caption: '肯定の返事「はい、そうだ」。',
+  },
+  yesterday: {
+    src: 'images/vocabulary/yesterday.svg',
+    alt: '暦の前のマスへ後ろ向きの矢印がのび、そばに低い太陽がしずんでいるイラスト。',
+    caption: '今日より前の1日、昨日。',
+  },
+  yoga: {
+    src: 'images/vocabulary/yoga.svg',
+    alt: 'マットの上であぐらをかき、背すじをのばして座っているイラスト。',
+    caption: '心と体をととのえる、インド生まれの体操、ヨガ。',
+  },
+  you: {
+    src: 'images/vocabulary/you.svg',
+    alt: '話し手が手をさしのべ、目の前にいる相手の点線の姿を指しているイラスト。',
+    caption: '目の前にいる相手を指す「あなたは・あなたを」。',
+  },
+  your: {
+    src: 'images/vocabulary/your.svg',
+    alt: '相手の点線の姿がかばんを持ち、そのかばんが囲まれて示されているイラスト。',
+    caption: '相手の持ち物を指す「あなたの」。',
+  },
+  yourself: {
+    src: 'images/vocabulary/yourself.svg',
+    alt: '姿見の前に立つ人が、鏡の中の自分を見ているイラスト。',
+    caption: '自分自身、自分で。',
+  },
+  zoo: {
+    src: 'images/vocabulary/zoo.svg',
+    alt: '柵で囲われた場所で動物がくつろぎ、外から人が見ているイラスト。',
+    caption: '動物を飼って見せる施設、動物園。',
+  },
 }

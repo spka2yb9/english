@@ -23,7 +23,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'Many people regard her as the best writer of her generation.',
     exampleTranslationJa: '多くの人が彼女を同世代で最高の作家とみなしている。',
     collocations: ['regard A as B', 'with regard to', 'highly regarded'],
-    etymology: '古フランス語 regarder(見る)から。「〜を見る→〜とみなす」と意味が広がった。',
     relatedWords: ['consider', 'respect', 'regarding'],
   },
   {
@@ -36,7 +35,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'This region is famous for its wine and beautiful mountains.',
     exampleTranslationJa: 'この地域はワインと美しい山々で有名だ。',
     collocations: ['mountainous region', 'coastal region', 'in the region of'],
-    etymology: 'ラテン語 regio(方向、支配する範囲)から。regere(支配する)が語根。',
     relatedWords: ['regional', 'area', 'district'],
   },
   {
@@ -86,7 +84,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'Regular exercise helps you stay healthy and sleep better.',
     exampleTranslationJa: '定期的な運動は健康を保ち、よく眠るのに役立つ。',
     collocations: ['regular exercise', 'on a regular basis', 'regular customer'],
-    etymology: 'ラテン語 regula(定規、規則)から。rule や regulate と同じ語根。',
     relatedWords: ['regularly', 'irregular', 'routine'],
   },
   {
@@ -188,7 +185,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'The band will release a new album next month.',
     exampleTranslationJa: 'そのバンドは来月新しいアルバムを発売する。',
     collocations: ['release a film', 'press release', 'release a prisoner'],
-    etymology: 'ラテン語 relaxare(緩める)が古フランス語を経て変化した語。relax と同じ語源。',
     relatedWords: ['publish', 'launch', 'free'],
   },
   {
@@ -226,7 +222,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'It was a great relief to hear that everyone was safe.',
     exampleTranslationJa: '全員が無事だと聞いて大いにほっとした。',
     collocations: ['a sense of relief', 'sigh of relief', 'pain relief', 'disaster relief'],
-    etymology: 'ラテン語 levare(軽くする)+ re- が語源。「重荷を軽くすること」。elevate と同根。',
     relatedWords: ['relieve', 'relaxation', 'comfort'],
   },
   {
@@ -277,7 +272,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'Many small businesses rely on local customers to survive.',
     exampleTranslationJa: '多くの小さな企業は生き残るために地元の客に頼っている。',
     collocations: ['rely on someone', 'rely heavily on', 'rely on someone to do'],
-    etymology: 'ラテン語 religare(しっかり縛る)が語源。re-(強調)+ ligare(結ぶ)。',
     relatedWords: ['reliable', 'depend', 'reliance', 'count on'],
   },
   {
@@ -432,7 +426,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'The restaurant has a reputation for excellent service.',
     exampleTranslationJa: 'そのレストランは素晴らしいサービスで評判だ。',
     collocations: ['have a reputation for', 'good reputation', 'damage a reputation'],
-    etymology: 'ラテン語 reputare(考え直す、見積もる)から。putare(考える)が語根で compute と同根。',
     relatedWords: ['fame', 'image', 'reputable'],
   },
   {
@@ -522,7 +515,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'Local residents are worried about the increase in traffic.',
     exampleTranslationJa: '地元住民は交通量の増加を心配している。',
     collocations: ['local residents', 'permanent resident', 'residents of the area'],
-    etymology: 'ラテン語 residere(座って留まる)から。re-(後ろに)+ sedere(座る)。',
     relatedWords: ['residence', 'residential', 'inhabitant', 'citizen'],
   },
   {
@@ -638,7 +630,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'The city plans to restore the old theater to its original condition.',
     exampleTranslationJa: '市はその古い劇場を元の状態に修復する計画だ。',
     collocations: ['restore order', 'restore confidence', 'restore a building'],
-    etymology: 'ラテン語 restaurare(再建する)から。restaurant(元気を回復させる場所)と同じ語源。',
     relatedWords: ['restoration', 'repair', 'recover'],
   },
   {
@@ -664,7 +655,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'The results of the test will be announced next Friday.',
     exampleTranslationJa: '試験の結果は来週の金曜日に発表される。',
     collocations: ['as a result of', 'result in', 'exam results'],
-    etymology: 'ラテン語 resultare(跳ね返る)から。re-(戻って)+ saltare(跳ぶ)。',
     relatedWords: ['outcome', 'consequence', 'effect'],
   },
   {
@@ -690,7 +680,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'My father plans to retire from his job next year.',
     exampleTranslationJa: '父は来年仕事を退職する予定だ。',
     collocations: ['retire from', 'retire early', 'retire at the age of'],
-    etymology: 'フランス語 retirer(引き下がる)から。re-(後ろへ)+ tirer(引く)。',
     relatedWords: ['retirement', 'retired', 'resign'],
   },
   {
@@ -716,7 +705,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'The report revealed serious problems in the safety system.',
     exampleTranslationJa: 'その報告書は安全システムの深刻な問題を明らかにした。',
     collocations: ['reveal a secret', 'reveal the truth', 'reveal that'],
-    etymology: 'ラテン語 revelare が語源。re-(除いて)+ velum(覆い、ベール)。「ベールを取り除く」。',
     relatedWords: ['disclose', 'expose', 'hide', 'revelation'],
   },
   {
@@ -729,7 +717,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'The company expects its revenue to grow by ten percent this year.',
     exampleTranslationJa: 'その会社は今年、収益が10パーセント伸びると見込んでいる。',
     collocations: ['tax revenue', 'annual revenue', 'generate revenue'],
-    etymology: 'フランス語で「戻ってくるもの」の意。re-(戻って)+ venir(来る ← ラテン語 venire)。',
     relatedWords: ['income', 'profit', 'earnings'],
   },
   {
@@ -793,7 +780,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'The dancers moved perfectly to the rhythm of the drums.',
     exampleTranslationJa: 'ダンサーたちは太鼓のリズムに合わせて完璧に動いた。',
     collocations: ['the rhythm of', 'a sense of rhythm', 'natural rhythm'],
-    etymology: 'ギリシャ語 rhythmos(流れ、拍子)から。',
     mnemonic: 'つづりは Rhythm Helps Your Two Hips Move の頭文字と覚える。',
     relatedWords: ['beat', 'tempo', 'rhythmic'],
   },
@@ -831,7 +817,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'Parents play an important role in their children’s education.',
     exampleTranslationJa: '親は子どもの教育において重要な役割を果たす。',
     collocations: ['play a role in', 'leading role', 'role model'],
-    etymology: 'フランス語 rôle から。もとは俳優のせりふが書かれた「巻紙」を指した。roll と同じ語源。',
     relatedWords: ['part', 'function', 'position'],
   },
   {
@@ -844,7 +829,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'The ball rolled down the hill and into the river.',
     exampleTranslationJa: 'ボールは坂を転がり落ちて川に入った。',
     collocations: ['roll down', 'roll up', 'roll over'],
-    etymology: 'ラテン語 rotula(小さな車輪)から。rota(車輪)が語根で rotate と同根。',
     relatedWords: ['rotate', 'spin', 'turn'],
   },
   {
@@ -882,7 +866,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'We took a different route to avoid the traffic jam.',
     exampleTranslationJa: '渋滞を避けるために別のルートを通った。',
     collocations: ['take a route', 'the shortest route', 'bus route', 'escape route'],
-    etymology: 'ラテン語 via rupta(切り開かれた道)から。rumpere(破る)が語根。',
     relatedWords: ['path', 'way', 'course', 'direction'],
   },
   {
@@ -920,7 +903,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'Thousands of people gathered to see the royal family.',
     exampleTranslationJa: '何千人もの人々が王室一家を見るために集まった。',
     collocations: ['royal family', 'royal palace', 'royal wedding'],
-    etymology: 'ラテン語 regalis(王の)がフランス語を経て変化した語。rex(王)が語根で regal と同根。',
     relatedWords: ['royalty', 'king', 'queen', 'noble'],
   },
   {
@@ -957,7 +939,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'It is rude to talk loudly on the phone on the train.',
     exampleTranslationJa: '電車の中で大声で電話するのは失礼だ。',
     collocations: ['rude to someone', 'rude behavior', "it's rude to do"],
-    etymology: 'ラテン語 rudis(未加工の、粗野な)から。',
     relatedWords: ['polite', 'impolite', 'rudeness', 'offensive'],
   },
   {
@@ -970,7 +951,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'The heavy rain ruined our plans for a picnic.',
     exampleTranslationJa: '大雨がピクニックの計画を台無しにした。',
     collocations: ['ruin your chances', 'completely ruin', 'ancient ruins', 'in ruins'],
-    etymology: 'ラテン語 ruina(崩壊)から。ruere(崩れ落ちる)が語根。',
     relatedWords: ['destroy', 'spoil', 'damage'],
   },
   {
@@ -983,7 +963,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'You must follow the rules of the game.',
     exampleTranslationJa: 'ゲームのルールに従わなければならない。',
     collocations: ['follow the rules', 'break a rule', 'as a rule', 'rule out'],
-    etymology: 'ラテン語 regula(定規、規則)から。regular や regulate と同じ語根。',
     relatedWords: ['ruler', 'regulation', 'law', 'govern'],
   },
   {
@@ -1008,7 +987,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'Many young people are leaving rural areas to find work in cities.',
     exampleTranslationJa: '多くの若者が都市で仕事を見つけるために農村部を離れている。',
     collocations: ['rural areas', 'rural communities', 'rural life'],
-    etymology: 'ラテン語 rus(田舎)から。',
     relatedWords: ['urban', 'countryside', 'agricultural'],
   },
   {
@@ -1046,7 +1024,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'The store gave us free samples of the new cheese.',
     exampleTranslationJa: 'その店は新しいチーズの無料サンプルをくれた。',
     collocations: ['free sample', 'blood sample', 'a sample of'],
-    etymology: '古フランス語 essample の短縮形で、example と同じ語源。',
     relatedWords: ['example', 'specimen', 'trial'],
   },
   {
@@ -1059,7 +1036,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'The weather satellite sends images of the storm every hour.',
     exampleTranslationJa: 'その気象衛星は1時間ごとに嵐の画像を送信する。',
     collocations: ['satellite image', 'communications satellite', 'launch a satellite'],
-    etymology: 'ラテン語 satelles(従者、護衛)から。「惑星に付き従うもの」の意味で使われるようになった。',
     relatedWords: ['orbit', 'spacecraft', 'GPS'],
   },
   {
@@ -1124,7 +1100,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'The earthquake caused damage on a massive scale.',
     exampleTranslationJa: 'その地震は大規模な被害をもたらした。',
     collocations: ['on a large scale', 'a scale of one to ten', 'full-scale'],
-    etymology: '「規模、目盛り」の意味はラテン語 scala(はしご)から。',
     relatedWords: ['size', 'range', 'measure'],
   },
   {
@@ -1174,7 +1149,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'The opening scene of the movie takes place in Tokyo.',
     exampleTranslationJa: 'その映画の冒頭のシーンは東京が舞台だ。',
     collocations: ['the scene of the accident', 'behind the scenes', 'opening scene'],
-    etymology: 'ギリシャ語 skene(舞台、テント)から。',
     relatedWords: ['scenery', 'setting', 'sight'],
   },
   {
@@ -1187,7 +1161,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'The project is running behind schedule because of the delays.',
     exampleTranslationJa: '遅延のせいでプロジェクトは予定より遅れている。',
     collocations: ['on schedule', 'behind schedule', 'a busy schedule', 'be scheduled for'],
-    etymology: 'ラテン語 schedula(小さな紙片)から。「紙に書かれた予定表」の意味に発展した。',
     relatedWords: ['timetable', 'plan', 'agenda'],
   },
   {
@@ -1200,7 +1173,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'The city introduced a new scheme to encourage recycling.',
     exampleTranslationJa: '市はリサイクルを促進する新しい制度を導入した。',
     collocations: ['pension scheme', 'color scheme', 'a scheme to do'],
-    etymology: 'ギリシャ語 schema(形、図)から。',
     relatedWords: ['plan', 'program', 'project'],
   },
   {
@@ -1213,7 +1185,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'She is a respected scholar of Japanese history.',
     exampleTranslationJa: '彼女は日本史の尊敬される学者だ。',
     collocations: ['a leading scholar', 'legal scholar', 'visiting scholar'],
-    etymology: 'ギリシャ語 schole(暇、そこから学問の意)が語源。school と同根。',
     relatedWords: ['scholarship', 'academic', 'researcher', 'expert'],
   },
   {
@@ -1239,7 +1210,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'She got a high score on the English test.',
     exampleTranslationJa: '彼女は英語のテストで高得点を取った。',
     collocations: ['high score', 'final score', 'score a goal'],
-    etymology: '古ノルド語 skor(刻み目)から。昔は木に刻み目を付けて数を数えた。',
     relatedWords: ['point', 'grade', 'result'],
   },
   {
@@ -1288,7 +1258,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'Seal the envelope before you mail the letter.',
     exampleTranslationJa: '手紙を出す前に封筒に封をしてください。',
     collocations: ['seal an envelope', 'seal a deal', 'tightly sealed'],
-    etymology: '「印、封印」の意味はラテン語 sigillum(小さな印)から。動物のアザラシは別語源。',
     relatedWords: ['close', 'stamp', 'signature'],
   },
   {
@@ -1301,7 +1270,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'The police searched the area for the missing child.',
     exampleTranslationJa: '警察は行方不明の子どもを求めてその地域を捜索した。',
     collocations: ['search for', 'in search of', 'search engine', 'search results'],
-    etymology: 'ラテン語 circare(歩き回る)から。circus(円)が語根で circle と同根。',
     relatedWords: ['seek', 'look for', 'explore'],
   },
   {
@@ -1404,7 +1372,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'She was promoted to a senior position in the marketing department.',
     exampleTranslationJa: '彼女はマーケティング部の上級職に昇進した。',
     collocations: ['senior manager', 'senior citizen', 'senior to someone'],
-    etymology: 'ラテン語 senex(老いた)の比較級で「より年上の」の意。senator と同根。',
     relatedWords: ['junior', 'superior', 'elderly'],
   },
   {
@@ -1417,7 +1384,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'Dogs have a much better sense of smell than humans.',
     exampleTranslationJa: '犬は人間よりもはるかに優れた嗅覚を持っている。',
     collocations: ['make sense', 'a sense of humor', 'common sense', 'in a sense'],
-    etymology: 'ラテン語 sensus(感覚)から。sentire(感じる)が語根。',
     relatedWords: ['sensible', 'sensitive', 'feeling', 'sensation'],
   },
   {
@@ -1457,7 +1423,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'Write a sentence using each new word you learned today.',
     exampleTranslationJa: '今日学んだ新しい単語をそれぞれ使って文を書きなさい。',
     collocations: ['write a sentence', 'complete sentence', 'a prison sentence'],
-    etymology: 'ラテン語 sententia(意見、判断)から。sentire(感じる)が語根で sense と同根。',
     relatedWords: ['phrase', 'paragraph', 'grammar'],
   },
   {
@@ -1496,7 +1461,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'The city held a series of concerts in the park this summer.',
     exampleTranslationJa: '市はこの夏、公園で一連のコンサートを開催した。',
     collocations: ['a series of', 'TV series', 'a new series'],
-    etymology: 'ラテン語 serere(つなぐ)から。「つながったもの」。',
     relatedWords: ['sequence', 'season', 'succession'],
   },
   {
@@ -1534,7 +1498,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'The restaurant serves breakfast from seven to ten in the morning.',
     exampleTranslationJa: 'そのレストランは朝7時から10時まで朝食を提供している。',
     collocations: ['serve food', 'serve customers', 'serve as'],
-    etymology: 'ラテン語 servire(仕える)から。servus(召使い)が語根。',
     relatedWords: ['service', 'server', 'provide'],
   },
   {
@@ -1560,7 +1523,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'We have a training session every Monday morning.',
     exampleTranslationJa: '毎週月曜の朝にトレーニングセッションがある。',
     collocations: ['training session', 'question and answer session', 'hold a session'],
-    etymology: 'ラテン語 sedere(座る)から。「座って行う集まり」の意。',
     relatedWords: ['meeting', 'class', 'period'],
   },
   {
@@ -1585,7 +1547,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'After years of traveling, they finally settled in a small town.',
     exampleTranslationJa: '何年も旅をした後、彼らはついに小さな町に定住した。',
     collocations: ['settle a dispute', 'settle down', 'settle in', 'settle the bill'],
-    etymology: '古英語 setl(座席)から。sit や set と同根で「腰を落ち着ける」が原義。',
     relatedWords: ['settlement', 'resolve', 'settle down'],
   },
   {
@@ -1610,7 +1571,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'We sat in the shade of a large tree to escape the heat.',
     exampleTranslationJa: '暑さを逃れるために大きな木の陰に座った。',
     collocations: ['in the shade', 'a shade of blue', 'provide shade'],
-    etymology: '古英語 sceadu(影)から。shadow と同じ語源。',
     relatedWords: ['shadow', 'shady', 'sunshine'],
   },
   {
@@ -1623,7 +1583,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'The tree cast a long shadow across the garden in the evening.',
     exampleTranslationJa: '夕方、その木は庭に長い影を落とした。',
     collocations: ['cast a shadow', 'in the shadow of', 'long shadows'],
-    etymology: '古英語 sceadu(影)から。shade と同じ語源。shade は「日陰」、shadow は「輪郭のある影」。',
     relatedWords: ['shade', 'silhouette', 'darkness'],
   },
   {
@@ -1672,7 +1631,6 @@ export const batch07: VocabularyEntry[] = [
     exampleSentence: 'I share an apartment with two friends from college.',
     exampleTranslationJa: '大学時代の友人2人とアパートを共有している。',
     collocations: ['share A with B', 'share information', 'share an opinion', 'market share'],
-    etymology: '古英語 scearu(切り分けること)から。shear(刈る)と同根で「切り分けて配る」が原義。',
     relatedWords: ['divide', 'split', 'shared', 'shareholder'],
   },
 ]

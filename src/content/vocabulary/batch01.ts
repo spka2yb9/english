@@ -48,7 +48,6 @@ export const batch01: VocabularyEntry[] = [
     exampleSentence: "Every living thing is made of cells.",
     exampleTranslationJa: "すべての生き物は細胞でできている。",
     collocations: ["blood cell", "cell phone", "prison cell"],
-    etymology: "ラテン語 cella(小部屋)に由来。細胞や独房を「小さな部屋」と見立てた語。",
     relatedWords: ["cellular", "cell phone"],
   },
   {
@@ -110,7 +109,6 @@ export const batch01: VocabularyEntry[] = [
     exampleSentence: "The hotel charges fifty dollars a night for parking.",
     exampleTranslationJa: "そのホテルは駐車場代として一泊50ドルを請求する。",
     collocations: ["free of charge", "in charge of", "charge a fee"],
-    etymology: "ラテン語 carrus(荷車)から。「荷を積む→負担をかける→請求する」と意味が広がった。",
     relatedWords: ["recharge", "overcharge", "fee"],
   },
   {
@@ -123,7 +121,6 @@ export const batch01: VocabularyEntry[] = [
     exampleSentence: "She donates part of her salary to a local charity every month.",
     exampleTranslationJa: "彼女は毎月、給料の一部を地元の慈善団体に寄付している。",
     collocations: ["donate to charity", "charity event", "raise money for charity"],
-    etymology: "ラテン語 caritas(愛)に由来。",
     relatedWords: ["donation", "volunteer", "nonprofit"],
   },
   {
@@ -186,7 +183,6 @@ export const batch01: VocabularyEntry[] = [
     exampleSentence: "The author cites several recent studies to support her argument.",
     exampleTranslationJa: "著者は自分の主張を裏付けるために、最近の複数の研究を引用している。",
     collocations: ["cite an example", "cite a source", "cite evidence"],
-    etymology: "ラテン語 citare(呼び出す)に由来。",
     mnemonic: "同じ発音の site(場所)・sight(視力)とセットで区別して覚える。",
     relatedWords: ["citation", "quote", "refer to"],
   },
@@ -213,7 +209,6 @@ export const batch01: VocabularyEntry[] = [
     exampleSentence: "The civil rights movement changed American society in the 1960s.",
     exampleTranslationJa: "公民権運動は1960年代のアメリカ社会を変えた。",
     collocations: ["civil rights", "civil war", "civil engineering"],
-    etymology: "ラテン語 civis(市民)に由来。",
     relatedWords: ["civilian", "civilization", "citizen"],
   },
   {
@@ -226,7 +221,6 @@ export const batch01: VocabularyEntry[] = [
     exampleSentence: "The company claims that its new product can save customers money.",
     exampleTranslationJa: "その会社は、新製品が顧客のお金の節約になると主張している。",
     collocations: ["claim responsibility", "make a claim", "an insurance claim"],
-    etymology: "ラテン語 clamare(叫ぶ)に由来。exclaim(叫ぶ)と同語源。",
     relatedWords: ["declare", "insist", "demand"],
   },
   {
@@ -264,7 +258,6 @@ export const batch01: VocabularyEntry[] = [
     exampleSentence: "The climate in this region is warm and dry for most of the year.",
     exampleTranslationJa: "この地域の気候は一年の大半が温暖で乾燥している。",
     collocations: ["climate change", "a mild climate", "the economic climate"],
-    etymology: "ギリシャ語 klima(傾き)に由来。太陽光の当たる角度(緯度)が気候を決めると考えられた。",
     relatedWords: ["weather", "environment", "temperature"],
   },
   {
@@ -600,7 +593,6 @@ export const batch01: VocabularyEntry[] = [
     exampleSentence: "Please give me a concrete example of what you mean.",
     exampleTranslationJa: "おっしゃっていることの具体的な例を挙げてください。",
     collocations: ["a concrete example", "concrete evidence", "a concrete plan"],
-    etymology: "ラテン語 concrescere(固まり合う)に由来。「固まった→形のある→具体的な」と意味が広がった。",
     relatedWords: ["abstract", "specific", "solid"],
   },
   {
@@ -1049,7 +1041,6 @@ export const batch01: VocabularyEntry[] = [
     exampleSentence: "The hotel is convenient for both shopping and sightseeing.",
     exampleTranslationJa: "そのホテルは買い物にも観光にも便利だ。",
     collocations: ["convenient for", "a convenient location", "at a convenient time"],
-    etymology: "ラテン語 convenire(集まる・適合する)から。con-(共に)+ ven(来る)。",
     relatedWords: ["convenience", "inconvenient", "handy"],
   },
   {
@@ -1138,7 +1129,6 @@ export const batch01: VocabularyEntry[] = [
     exampleSentence: "She left her corporate job to start her own cafe.",
     exampleTranslationJa: "彼女は自分のカフェを開くために会社勤めを辞めた。",
     collocations: ["corporate culture", "corporate image", "a corporate lawyer"],
-    etymology: "ラテン語 corpus(体)に由来。「一つの体としてまとまった組織」が原義。",
     relatedWords: ["corporation", "company", "business"],
   },
   {
@@ -1188,7 +1178,6 @@ export const batch01: VocabularyEntry[] = [
     exampleSentence: "It takes courage to admit your mistakes.",
     exampleTranslationJa: "自分の間違いを認めるには勇気がいる。",
     collocations: ["have the courage to do", "show great courage", "give someone courage"],
-    etymology: "ラテン語 cor(心臓)に由来。「心」が勇気の源と考えられた。",
     relatedWords: ["courageous", "brave", "bravery"],
   },
   {
@@ -1226,7 +1215,6 @@ export const batch01: VocabularyEntry[] = [
     exampleSentence: "She bought the sofa on credit and paid for it over six months.",
     exampleTranslationJa: "彼女はソファをクレジットで購入し、6か月かけて支払った。",
     collocations: ["a credit card", "on credit", "take credit for"],
-    etymology: "ラテン語 credere(信じる)に由来。「信用」が中心の意味。",
     relatedWords: ["credit card", "debt", "trust"],
   },
   {
@@ -1276,7 +1264,6 @@ export const batch01: VocabularyEntry[] = [
     exampleSentence: "The country is facing its worst economic crisis in decades.",
     exampleTranslationJa: "その国は数十年で最悪の経済危機に直面している。",
     collocations: ["an economic crisis", "in a crisis", "deal with a crisis"],
-    etymology: "ギリシャ語 krisis(判断・分かれ目)に由来。「運命の分かれ目」が原義。",
     relatedWords: ["emergency", "disaster", "critical"],
   },
   {
@@ -1289,7 +1276,6 @@ export const batch01: VocabularyEntry[] = [
     exampleSentence: "The most important criterion for the award is originality.",
     exampleTranslationJa: "その賞の最も重要な基準は独創性だ。",
     collocations: ["meet the criteria", "selection criteria", "a criterion for"],
-    etymology: "ギリシャ語由来。複数形 criteria もギリシャ語の形をそのまま保っている。",
     relatedWords: ["criteria", "standard", "measure"],
   },
   {
@@ -1365,7 +1351,6 @@ export const batch01: VocabularyEntry[] = [
     exampleSentence: "Sleep plays a crucial role in learning and memory.",
     exampleTranslationJa: "睡眠は学習と記憶において極めて重要な役割を果たす。",
     collocations: ["play a crucial role", "a crucial moment", "crucial to"],
-    etymology: "ラテン語 crux(十字・分かれ道)に由来。「岐路に立つほど重大な」という発想。",
     relatedWords: ["critical", "essential", "vital"],
   },
   {
@@ -1427,7 +1412,6 @@ export const batch01: VocabularyEntry[] = [
     exampleSentence: "You can exchange your currency at the airport.",
     exampleTranslationJa: "空港で通貨を両替できます。",
     collocations: ["foreign currency", "a strong currency", "digital currency"],
-    etymology: "ラテン語 currere(走る・流れる)に由来。「世の中を流通するもの」の意。current と同語源。",
     relatedWords: ["current", "exchange rate", "money"],
   },
   {
@@ -1440,7 +1424,6 @@ export const batch01: VocabularyEntry[] = [
     exampleSentence: "The current situation is much better than it was last year.",
     exampleTranslationJa: "現在の状況は昨年よりずっと良い。",
     collocations: ["the current situation", "current events", "an electric current"],
-    etymology: "ラテン語 currere(走る)に由来。「今流れている→現在の」。",
     relatedWords: ["currently", "currency", "present"],
   },
   {
@@ -1466,7 +1449,6 @@ export const batch01: VocabularyEntry[] = [
     exampleSentence: "The school added programming to its curriculum this year.",
     exampleTranslationJa: "その学校は今年、カリキュラムにプログラミングを加えた。",
     collocations: ["the school curriculum", "part of the curriculum", "curriculum design"],
-    etymology: "ラテン語で「走路」の意。「学びが進むコース」という発想から。",
     relatedWords: ["syllabus", "course", "subject"],
   },
   {
@@ -1491,7 +1473,6 @@ export const batch01: VocabularyEntry[] = [
     exampleSentence: "We waited in line at customs for almost an hour.",
     exampleTranslationJa: "私たちは税関で1時間近く列に並んで待った。",
     collocations: ["go through customs", "customs officer", "customs duty"],
-    etymology: "custom(慣習)から。「慣習的に徴収される税」の意味を経て税関を指すようになった。",
     relatedWords: ["custom", "border", "duty"],
   },
   {
@@ -1565,7 +1546,6 @@ export const batch01: VocabularyEntry[] = [
     exampleSentence: "He worked two jobs to pay off his debt.",
     exampleTranslationJa: "彼は借金を返すために仕事を2つ掛け持ちした。",
     collocations: ["pay off a debt", "be in debt", "get into debt"],
-    etymology: "ラテン語 debere(負う)に由来。発音しない b はラテン語の綴りの名残。",
     relatedWords: ["loan", "owe", "borrow"],
   },
   {
@@ -1578,7 +1558,6 @@ export const batch01: VocabularyEntry[] = [
     exampleSentence: "The technology has advanced rapidly over the past decade.",
     exampleTranslationJa: "この10年でその技術は急速に進歩した。",
     collocations: ["the past decade", "for decades", "the first decade of"],
-    etymology: "ギリシャ語 deka(10)に由来。December(元は10番目の月)と同じ語根。",
     relatedWords: ["century", "era", "period"],
   },
   {

@@ -11,7 +11,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "The crew had to abandon the ship after the engine caught fire.",
     exampleTranslationJa: "エンジンから火が出たため、乗組員は船を放棄しなければならなかった。",
     collocations: ["abandon a plan", "abandon ship", "abandon hope"],
-    etymology: "古フランス語 a bandon(〜の支配に委ねて)に由来。「支配に委ねる→手放す」と意味が発展した。",
     relatedWords: ["desert", "quit", "give up"],
   },
   {
@@ -24,7 +23,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "Plants absorb water and nutrients through their roots.",
     exampleTranslationJa: "植物は根から水分と養分を吸収する。",
     collocations: ["absorb water", "absorb information", "be absorbed in"],
-    etymology: "ラテン語 absorbere(ab- 離れて + sorbere 吸い込む)に由来。",
     relatedWords: ["absorption", "soak", "take in"],
   },
   {
@@ -50,7 +48,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "She has an excellent academic record at her university.",
     exampleTranslationJa: "彼女は大学で優秀な学業成績を収めている。",
     collocations: ["academic year", "academic performance", "academic research"],
-    etymology: "プラトンが教えた古代アテネの学園アカデメイア(Akademeia)に由来する。",
     relatedWords: ["academy", "scholar", "education"],
   },
   {
@@ -126,7 +123,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "The weather forecast was surprisingly accurate this week.",
     exampleTranslationJa: "今週の天気予報は驚くほど正確だった。",
     collocations: ["accurate information", "accurate description", "highly accurate"],
-    etymology: "ラテン語 accuratus(注意深く仕上げられた)に由来。cura(注意・世話)は cure と同語根。",
     relatedWords: ["accuracy", "exact", "precise"],
   },
   {
@@ -228,7 +224,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "The house does not have adequate space for a family of five.",
     exampleTranslationJa: "その家には5人家族に十分な広さがない。",
     collocations: ["adequate supply", "adequate training", "adequate preparation"],
-    etymology: "ラテン語 adaequatus(等しくされた)に由来。aequus(等しい)は equal と同語根。",
     wordFormation: "否定形は in- を付けた inadequate(不十分な)。",
     relatedWords: ["sufficient", "inadequate", "enough"],
   },
@@ -255,7 +250,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "I really admire her for starting her own business at twenty.",
     exampleTranslationJa: "20歳で自分の会社を立ち上げた彼女に、心から感心している。",
     collocations: ["admire someone for", "greatly admire", "admire the view"],
-    etymology: "ラテン語 admirari(〜に驚く)に由来。mir(驚く・見る)は miracle, mirror と同語根。",
     relatedWords: ["admiration", "respect", "praise"],
   },
   {
@@ -281,7 +275,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "The school decided to adopt a new teaching method this year.",
     exampleTranslationJa: "その学校は今年、新しい教授法を採用することを決めた。",
     collocations: ["adopt an approach", "adopt a child", "widely adopted"],
-    etymology: "ラテン語 adoptare(ad- 〜へ + optare 選ぶ)に由来。option(選択肢)と同語根。",
     relatedWords: ["adoption", "accept", "embrace"],
   },
   {
@@ -397,7 +390,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "The first item on the agenda is next year's budget.",
     exampleTranslationJa: "議題の最初の項目は来年度の予算だ。",
     collocations: ["on the agenda", "set the agenda", "hidden agenda"],
-    etymology: "ラテン語で「なされるべき事柄」の意。agere(行う)に由来し、act, agent と同語根。",
     relatedWords: ["schedule", "program", "plan"],
   },
   {
@@ -460,7 +452,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "I set my alarm for six because I have an early flight tomorrow.",
     exampleTranslationJa: "明日は朝早い便に乗るので、目覚ましを6時にセットした。",
     collocations: ["set an alarm", "fire alarm", "alarm clock", "raise the alarm"],
-    etymology: "イタリア語 all'arme(武器を取れ)に由来。戦いの警告の叫びが「警報」の意味になった。",
     relatedWords: ["alert", "warning", "alarming"],
   },
   {
@@ -486,7 +477,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "Her ambition is to become a pilot for an international airline.",
     exampleTranslationJa: "彼女の夢は国際線のパイロットになることだ。",
     collocations: ["achieve an ambition", "have an ambition", "political ambitions"],
-    etymology: "ラテン語 ambitio(票を求めて歩き回ること)に由来。amb-(周りを)+ ire(行く)。",
     relatedWords: ["ambitious", "goal", "dream"],
   },
   {
@@ -526,7 +516,6 @@ export const batch00: VocabularyEntry[] = [
     exampleTranslationJa: "その報告書には調査結果の詳細な分析が含まれている。",
     collocations: ["detailed analysis", "data analysis", "carry out an analysis"],
     wordFormation: "複数形は analyses /əˈnæləsiːz/ と形と発音が変わる点に注意。",
-    etymology: "ギリシャ語 analusis(ほどくこと・分解)に由来。ana-(完全に)+ lysis(ほどく)。",
     relatedWords: ["analyze", "analyst", "analytical"],
   },
   {
@@ -590,7 +579,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "The company holds its annual meeting every March.",
     exampleTranslationJa: "その会社は毎年3月に年次総会を開く。",
     collocations: ["annual meeting", "annual report", "annual income"],
-    etymology: "ラテン語 annus(年)に由来。anniversary(記念日)と同語根。",
     relatedWords: ["annually", "anniversary", "yearly"],
   },
   {
@@ -603,7 +591,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "We anticipate that sales will increase during the holiday season.",
     exampleTranslationJa: "私たちはホリデーシーズンに売上が伸びると見込んでいる。",
     collocations: ["anticipate problems", "anticipate demand", "eagerly anticipated"],
-    etymology: "ラテン語 anticipare(ante- 前に + capere 取る)に由来。「先に取る→先回りする」が原義。",
     relatedWords: ["anticipation", "expect", "predict"],
   },
   {
@@ -616,7 +603,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "She felt anxious about her job interview the next morning.",
     exampleTranslationJa: "彼女は翌朝の就職面接のことで不安を感じていた。",
     collocations: ["feel anxious about", "anxious to know", "get anxious"],
-    etymology: "ラテン語 angere(締めつける・苦しめる)に由来。anxiety(不安)と同語根。",
     relatedWords: ["anxiety", "worried", "nervous"],
   },
   {
@@ -630,7 +616,6 @@ export const batch00: VocabularyEntry[] = [
     exampleTranslationJa: "彼はまた遅刻したことを先生に謝った。",
     collocations: ["apologize for", "apologize to someone", "sincerely apologize"],
     wordFormation: "名詞は apology(謝罪)。イギリス英語のつづりは apologise。",
-    etymology: "ギリシャ語 apologia(弁明の言葉)に由来。apo-(離れて)+ logos(言葉)。",
     relatedWords: ["apology", "forgive", "excuse"],
   },
   {
@@ -669,7 +654,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "The design of the app appeals to younger users.",
     exampleTranslationJa: "そのアプリのデザインは若いユーザーの心をつかんでいる。",
     collocations: ["appeal to", "wide appeal", "make an appeal for"],
-    etymology: "ラテン語 appellare(呼びかける)に由来。",
     relatedWords: ["appealing", "attract", "charm"],
   },
   {
@@ -722,7 +706,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "I really appreciate your help with the project.",
     exampleTranslationJa: "プロジェクトを手伝ってくれて本当に感謝しています。",
     collocations: ["appreciate your help", "greatly appreciate", "appreciate the value of"],
-    etymology: "ラテン語 pretium(価格・価値)に由来。price, precious と同語根。「価値を認める」が原義。",
     relatedWords: ["appreciation", "grateful", "value"],
   },
   {
@@ -735,7 +718,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "As we approached the station, the train was just leaving.",
     exampleTranslationJa: "私たちが駅に近づいたとき、ちょうど電車が出発するところだった。",
     collocations: ["approach a problem", "a new approach to", "as winter approaches"],
-    etymology: "ラテン語 prope(近く)に由来する appropiare(近づく)から。",
     relatedWords: ["method", "near", "come close"],
   },
   {
@@ -748,7 +730,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "Jeans are not appropriate clothing for a formal dinner.",
     exampleTranslationJa: "ジーンズはフォーマルな夕食会にふさわしい服装ではない。",
     collocations: ["appropriate for", "take appropriate action", "where appropriate"],
-    etymology: "ラテン語 proprius(自分自身の)に由来。proper(適切な)と同語根。",
     wordFormation: "否定形は inappropriate(不適切な)。",
     relatedWords: ["inappropriate", "suitable", "proper"],
   },
@@ -762,7 +743,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "The city council approved the plan for the new park.",
     exampleTranslationJa: "市議会は新しい公園の計画を承認した。",
     collocations: ["approve of", "approve a plan", "officially approved"],
-    etymology: "ラテン語 approbare(ad- 〜へ + probare 良いと証明する)に由来。prove と同語根。",
     relatedWords: ["approval", "disapprove", "accept"],
   },
   {
@@ -775,7 +755,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "The journey takes approximately two hours by train.",
     exampleTranslationJa: "その旅は電車でおよそ2時間かかる。",
     collocations: ["approximately half", "approximately ten percent"],
-    etymology: "ラテン語 proximus(最も近い)に由来。「正確な値に近い」が原義。",
     relatedWords: ["approximate", "about", "roughly"],
   },
   {
@@ -840,7 +819,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "The police arrested two men in connection with the robbery.",
     exampleTranslationJa: "警察は強盗事件に関連して男2人を逮捕した。",
     collocations: ["be arrested for", "under arrest", "make an arrest"],
-    etymology: "ラテン語 restare(とどまる: rest と同語根)に由来。「動きを止める→身柄を拘束する」と発展した。",
     relatedWords: ["police", "crime", "charge"],
   },
   {
@@ -853,7 +831,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "Artificial intelligence is changing the way we work.",
     exampleTranslationJa: "人工知能は私たちの働き方を変えつつある。",
     collocations: ["artificial intelligence", "artificial flowers", "artificial light"],
-    etymology: "ラテン語 ars(技術: art の語源)+ facere(作る)に由来。「技術で作られた」が原義。",
     relatedWords: ["natural", "man-made", "synthetic"],
   },
   {
@@ -918,7 +895,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "Volunteers assisted the elderly residents during the evacuation.",
     exampleTranslationJa: "ボランティアたちは避難の際に高齢の住民を援助した。",
     collocations: ["assist someone with", "assist in doing"],
-    etymology: "ラテン語 assistere(そばに立つ)に由来。ad-(〜のそばに)+ sistere(立つ)。",
     relatedWords: ["assistance", "assistant", "help"],
   },
   {
@@ -931,7 +907,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "Many people associate summer with festivals and fireworks.",
     exampleTranslationJa: "多くの人は夏と聞くと祭りや花火を連想する。",
     collocations: ["associate A with B", "be associated with", "a business associate"],
-    etymology: "ラテン語 socius(仲間)に由来。social, society と同語根。",
     relatedWords: ["association", "connect", "link"],
   },
   {
@@ -957,7 +932,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "I assumed that the meeting was canceled because nobody was there.",
     exampleTranslationJa: "誰もいなかったので、会議は中止になったのだと思い込んだ。",
     collocations: ["assume that", "let's assume", "assume responsibility"],
-    etymology: "ラテン語 assumere(ad- 〜へ + sumere 取る)に由来。consume, resume と同語根。",
     relatedWords: ["assumption", "suppose", "presume"],
   },
   {
@@ -984,7 +958,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "The restaurant has a relaxed and friendly atmosphere.",
     exampleTranslationJa: "そのレストランはくつろいだ親しみやすい雰囲気だ。",
     collocations: ["a relaxed atmosphere", "the Earth's atmosphere", "create an atmosphere"],
-    etymology: "ギリシャ語 atmos(蒸気)+ sphaira(球: sphere)に由来。「地球を包む蒸気の球」が原義。",
     relatedWords: ["mood", "environment", "air"],
   },
   {
@@ -1010,7 +983,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "She passed her driving test on her first attempt.",
     exampleTranslationJa: "彼女は最初の挑戦で運転免許試験に合格した。",
     collocations: ["make an attempt", "in an attempt to", "a failed attempt"],
-    etymology: "ラテン語 attemptare(ad- 〜へ + temptare 試す)に由来。tempt と同語根。",
     relatedWords: ["try", "effort", "trial"],
   },
   {
@@ -1023,7 +995,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "More than two hundred people attended the conference.",
     exampleTranslationJa: "200人を超える人々がその会議に出席した。",
     collocations: ["attend a meeting", "attend school", "attend to a customer"],
-    etymology: "ラテン語 attendere(ad- 〜へ + tendere 伸ばす)に由来。「注意を向ける」が原義。extend, tension と同語根。",
     relatedWords: ["attendance", "attention", "participate"],
   },
   {
@@ -1074,7 +1045,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "The audience clapped loudly at the end of the concert.",
     exampleTranslationJa: "コンサートの終わりに観客は大きな拍手を送った。",
     collocations: ["a large audience", "target audience", "a member of the audience"],
-    etymology: "ラテン語 audire(聞く)に由来。audio, audition と同語根。「聞く人々」が原義。",
     relatedWords: ["spectator", "viewer", "crowd"],
   },
   {
@@ -1101,7 +1071,6 @@ export const batch00: VocabularyEntry[] = [
     exampleTranslationJa: "部屋を出ると照明は自動的に消える。",
     collocations: ["automatically updated", "happen automatically"],
     wordFormation: "automatic(自動の)+ -ally(副詞化)。",
-    etymology: "ギリシャ語 automatos(自ら動く)に由来。auto-(自分自身)は automobile と同じ接頭辞。",
     relatedWords: ["automatic", "manually", "automation"],
   },
   {
@@ -1202,7 +1171,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "It is hard to keep a good balance between work and family life.",
     exampleTranslationJa: "仕事と家庭生活のバランスをうまく保つのは難しい。",
     collocations: ["keep your balance", "a balance between", "lose your balance"],
-    etymology: "ラテン語 bilanx(bi- 2つの + lanx 皿)に由来。「2つの皿を持つはかり」が原義。",
     relatedWords: ["balanced", "imbalance", "stability"],
   },
   {
@@ -1253,7 +1221,6 @@ export const batch00: VocabularyEntry[] = [
     exampleTranslationJa: "エラーを早く見つけるために、私たちは毎日データを確認している。",
     collocations: ["on a regular basis", "on the basis of", "form the basis of"],
     wordFormation: "base(土台)と同語根。複数形は bases /ˈbeɪsiːz/。",
-    etymology: "ギリシャ語 basis(足場・土台)に由来。",
     relatedWords: ["base", "basic", "foundation"],
   },
   {
@@ -1266,7 +1233,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "The two companies are fighting a battle for control of the market.",
     exampleTranslationJa: "その2社は市場の支配権をめぐって争いを繰り広げている。",
     collocations: ["fight a battle", "a battle against cancer", "win the battle"],
-    etymology: "ラテン語 battuere(打つ)に由来。combat, batter と同語根。",
     relatedWords: ["fight", "war", "struggle"],
   },
   {
@@ -1343,7 +1309,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "Regular exercise has many benefits for your health.",
     exampleTranslationJa: "定期的な運動は健康に多くの利益をもたらす。",
     collocations: ["health benefits", "benefit from", "for the benefit of"],
-    etymology: "ラテン語 bene(良く)+ facere(行う)に由来。「良い行い」が原義。",
     relatedWords: ["beneficial", "advantage", "profit"],
   },
   {
@@ -1395,7 +1360,6 @@ export const batch00: VocabularyEntry[] = [
     exampleTranslationJa: "彼女は医師になりたいので生物学を勉強している。",
     collocations: ["study biology", "a biology class", "marine biology"],
     wordFormation: "bio(生命)+ -logy(〜学)。biography, biotechnology と同じ bio。",
-    etymology: "ギリシャ語 bios(生命)+ logos(学問・言葉)に由来。",
     relatedWords: ["biological", "chemistry", "physics"],
   },
   {
@@ -1482,7 +1446,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "Which brand of coffee do you usually buy?",
     exampleTranslationJa: "普段どのブランドのコーヒーを買いますか。",
     collocations: ["a famous brand", "brand name", "brand-new"],
-    etymology: "古英語で「燃える木・焼き印」の意。家畜に押した焼き印が「銘柄」の意味に発展した。",
     relatedWords: ["label", "make", "trademark"],
   },
   {
@@ -1521,7 +1484,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "The president made a brief statement to the press this morning.",
     exampleTranslationJa: "大統領は今朝、報道陣に短い声明を発表した。",
     collocations: ["a brief visit", "in brief", "a brief explanation"],
-    etymology: "ラテン語 brevis(短い)に由来。abbreviate(省略する)と同語根。",
     relatedWords: ["briefly", "short", "briefing"],
   },
   {
@@ -1560,7 +1522,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "We have a limited budget for this year's school festival.",
     exampleTranslationJa: "今年の学園祭の予算は限られている。",
     collocations: ["a limited budget", "on a budget", "the annual budget"],
-    etymology: "古フランス語 bougette(小さな革袋)に由来。「お金を入れる袋」から「予算」の意味に発展した。",
     relatedWords: ["cost", "expense", "funding"],
   },
   {
@@ -1599,7 +1560,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "Can you calculate the total cost of the trip?",
     exampleTranslationJa: "旅行の総費用を計算してくれますか。",
     collocations: ["calculate the cost", "calculate the distance", "carefully calculated"],
-    etymology: "ラテン語 calculus(計算に使った小石)に由来。小石を並べて数を数えたことから。",
     relatedWords: ["calculation", "calculator", "count"],
   },
   {
@@ -1612,7 +1572,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "The city started a campaign to encourage people to recycle more.",
     exampleTranslationJa: "市はリサイクルを促進するためのキャンペーンを開始した。",
     collocations: ["launch a campaign", "an election campaign", "an advertising campaign"],
-    etymology: "ラテン語 campus(平原)に由来。軍隊が平原で行う「一連の軍事行動」から意味が広がった。",
     relatedWords: ["movement", "election", "promotion"],
   },
   {
@@ -1625,7 +1584,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "The outdoor concert was canceled because of heavy rain.",
     exampleTranslationJa: "大雨のため野外コンサートは中止になった。",
     collocations: ["cancel a flight", "cancel an order", "cancel at the last minute"],
-    etymology: "ラテン語 cancellare(格子状の線を引いて消す)に由来。cancelli(格子)から。",
     relatedWords: ["cancellation", "call off", "postpone"],
   },
   {
@@ -1638,7 +1596,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "There are three candidates for the position of school principal.",
     exampleTranslationJa: "校長のポストには3人の候補者がいる。",
     collocations: ["a presidential candidate", "a strong candidate", "a candidate for"],
-    etymology: "ラテン語 candidatus(白い服を着た人)に由来。古代ローマの立候補者が白いトーガを着たことから。",
     relatedWords: ["applicant", "election", "nominee"],
   },
   {
@@ -1690,7 +1647,6 @@ export const batch00: VocabularyEntry[] = [
     exampleSentence: "She began her career as a journalist at a local newspaper.",
     exampleTranslationJa: "彼女は地方紙の記者としてキャリアをスタートさせた。",
     collocations: ["a career in", "a successful career", "change careers"],
-    etymology: "ラテン語 carrus(車)に由来し、フランス語 carrière(馬車の走路)を経て「人生の進路」の意味になった。",
     relatedWords: ["profession", "occupation", "job"],
   },
 ]

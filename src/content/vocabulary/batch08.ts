@@ -59,7 +59,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'The news of his sudden death came as a great shock to us.',
     exampleTranslationJa: '彼の突然の死の知らせは、私たちに大きな衝撃を与えた。',
     collocations: ['come as a shock', 'in shock', 'culture shock'],
-    etymology: 'フランス語 choc(衝突)から。',
     relatedWords: ['shocked', 'shocking', 'surprise'],
   },
   {
@@ -148,7 +147,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'The sight of the ocean from the hill was amazing.',
     exampleTranslationJa: '丘から見える海の光景は見事だった。',
     collocations: ['at first sight', 'lose sight of', 'catch sight of'],
-    etymology: '古英語由来で、see(見る)と同語源。',
     relatedWords: ['view', 'vision', 'sightseeing'],
   },
   {
@@ -161,7 +159,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'The road sign says you cannot park here.',
     exampleTranslationJa: 'その道路標識には、ここに駐車できないと書かれている。',
     collocations: ['a road sign', 'a sign of stress', 'sign a contract'],
-    etymology: 'ラテン語 signum(印)から。signal, signature と同語源。',
     relatedWords: ['signal', 'signature', 'symptom'],
   },
   {
@@ -188,7 +185,6 @@ export const batch08: VocabularyEntry[] = [
     exampleTranslationJa: '今年はオンライン売上に大幅な増加が見られた。',
     collocations: ['a significant difference', 'a significant increase', 'play a significant role'],
     wordFormation: 'sign(印)+ fic(作る)+ -ant。「意味を作り出す」が原義。',
-    etymology: 'ラテン語 significare(意味する)から。sign と同語源。',
     relatedWords: ['significantly', 'significance', 'important'],
   },
   {
@@ -226,7 +222,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'The whole class remained silent during the test.',
     exampleTranslationJa: 'テストの間、クラス全体が静かなままだった。',
     collocations: ['remain silent', 'fall silent', 'a silent room'],
-    etymology: 'ラテン語 silere(静かである)から。',
     relatedWords: ['silence', 'silently', 'quiet'],
   },
   {
@@ -239,7 +234,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'Your phone is very similar to mine.',
     exampleTranslationJa: '君の電話は私のとよく似ている。',
     collocations: ['similar to', 'in a similar way', 'strikingly similar'],
-    etymology: 'ラテン語 similis(似ている)から。simulate, assemble と同語源。',
     relatedWords: ['similarly', 'similarity', 'alike'],
   },
   {
@@ -278,7 +272,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'Please accept my sincere apologies for the delay.',
     exampleTranslationJa: '遅延について心よりお詫び申し上げます。',
     collocations: ['a sincere apology', 'sincere thanks'],
-    etymology: 'ラテン語 sincerus(純粋な)から。',
     relatedWords: ['sincerely', 'sincerity', 'honest'],
   },
   {
@@ -291,7 +284,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'They chose this site for the new stadium.',
     exampleTranslationJa: '彼らは新しいスタジアムの用地としてこの場所を選んだ。',
     collocations: ['a construction site', 'a historic site', 'visit a site'],
-    etymology: 'ラテン語 situs(位置)から。situation と同語源。',
     relatedWords: ['website', 'location', 'situation'],
   },
   {
@@ -304,7 +296,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'The economic situation is slowly getting better.',
     exampleTranslationJa: '経済状況は少しずつ良くなっている。',
     collocations: ['a difficult situation', 'handle a situation', 'the current situation'],
-    etymology: 'ラテン語 situs(位置)から。site と同語源。',
     relatedWords: ['circumstance', 'condition', 'site'],
   },
   {
@@ -427,7 +418,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'Loneliness is becoming a serious social problem.',
     exampleTranslationJa: '孤独は深刻な社会問題になりつつある。',
     collocations: ['social media', 'social problems', 'social skills'],
-    etymology: 'ラテン語 socius(仲間)から。society と同語源。',
     relatedWords: ['society', 'sociable', 'community'],
   },
   {
@@ -440,7 +430,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'Every member of society has rights and responsibilities.',
     exampleTranslationJa: '社会の一員は誰もが権利と責任を持つ。',
     collocations: ['modern society', 'a member of society', 'an aging society'],
-    etymology: 'ラテン語 socius(仲間)から。social と同語源。',
     relatedWords: ['social', 'community', 'culture'],
   },
   {
@@ -453,7 +442,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'We need solid evidence before we accuse anyone.',
     exampleTranslationJa: '誰かを責める前に、確かな証拠が必要だ。',
     collocations: ['solid evidence', 'a solid foundation', 'frozen solid'],
-    etymology: 'ラテン語 solidus(固い)から。',
     relatedWords: ['liquid', 'firm', 'reliable'],
   },
   {
@@ -479,7 +467,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'It took me an hour to solve the puzzle.',
     exampleTranslationJa: 'そのパズルを解くのに1時間かかった。',
     collocations: ['solve a problem', 'solve a mystery', 'solve a puzzle'],
-    etymology: 'ラテン語 solvere(ほどく、解く)から。resolve, dissolve と同語源。',
     relatedWords: ['solution', 'resolve', 'figure out'],
   },
   {
@@ -505,7 +492,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'What sort of music do you listen to?',
     exampleTranslationJa: 'どんな種類の音楽を聴きますか。',
     collocations: ['this sort of thing', 'all sorts of', 'sort the files'],
-    etymology: 'ラテン語 sors(くじ、運命)から。',
     relatedWords: ['kind', 'type', 'sort out'],
   },
   {
@@ -530,7 +516,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'The sun is our main source of energy.',
     exampleTranslationJa: '太陽は私たちの主なエネルギー源だ。',
     collocations: ['a source of energy', 'a reliable source', 'a source of income'],
-    etymology: '古フランス語で「湧き出るところ」。ラテン語 surgere(昇る)から。',
     relatedWords: ['resource', 'origin', 'cause'],
   },
   {
@@ -568,7 +553,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'This species of bird is found only on these islands.',
     exampleTranslationJa: 'この鳥の種はこれらの島だけに生息する。',
     collocations: ['an endangered species', 'a rare species', 'species of plants'],
-    etymology: 'ラテン語 species(見た目、種類)から。specere(見る)が語根で、special と同語源。',
     relatedWords: ['specific', 'breed', 'endangered'],
   },
   {
@@ -607,7 +591,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'The team showed great fighting spirit until the end.',
     exampleTranslationJa: 'チームは最後まで見事な闘志を見せた。',
     collocations: ['team spirit', 'in high spirits', 'the spirit of the law'],
-    etymology: 'ラテン語 spiritus(息)から。inspire, expire と同語源。',
     relatedWords: ['spiritual', 'soul', 'mood'],
   },
   {
@@ -681,7 +664,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: "The patient's condition is now stable.",
     exampleTranslationJa: '患者の容体は現在安定している。',
     collocations: ['a stable job', 'a stable relationship', 'remain stable'],
-    etymology: 'ラテン語 stabilis(しっかり立つ)から。語根 sta(立つ)は stand, state と同語源。',
     relatedWords: ['stability', 'steady', 'unstable'],
   },
   {
@@ -694,7 +676,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'The hotel staff were friendly and helpful.',
     exampleTranslationJa: 'そのホテルの従業員は親切で頼りになった。',
     collocations: ['a member of staff', 'medical staff', 'train the staff'],
-    etymology: '原義は古英語の「棒、杖」。軍の司令部を経て「職員」の意味になった。',
     relatedWords: ['employee', 'personnel', 'crew'],
   },
   {
@@ -707,7 +688,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'The project is still at an early stage.',
     exampleTranslationJa: 'そのプロジェクトはまだ初期段階にある。',
     collocations: ['at an early stage', 'stage by stage', 'on stage'],
-    etymology: '古フランス語 estage から。語根はラテン語 stare(立つ)。',
     relatedWords: ['phase', 'step', 'level'],
   },
   {
@@ -720,7 +700,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'The food at this restaurant is of a very high standard.',
     exampleTranslationJa: 'このレストランの料理は非常に水準が高い。',
     collocations: ['high standards', 'safety standards', 'the standard size'],
-    etymology: '古フランス語 estandart(軍旗)から。「王の旗印」が「基準」の意味に発展した。',
     relatedWords: ['level', 'quality', 'normal'],
   },
   {
@@ -745,7 +724,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'The old bridge is in a dangerous state.',
     exampleTranslationJa: 'その古い橋は危険な状態にある。',
     collocations: ['a state of emergency', 'the state of the economy', 'state an opinion'],
-    etymology: 'ラテン語 stare(立つ)の派生 status から。station, statue と同語源。',
     relatedWords: ['statement', 'status', 'condition'],
   },
   {
@@ -771,7 +749,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'One shocking statistic is that a third of all food is wasted.',
     exampleTranslationJa: '衝撃的な統計の一つは、全食料の3分の1が廃棄されているということだ。',
     collocations: ['official statistics', 'according to statistics', 'a surprising statistic'],
-    etymology: '元は「国家(state)に関する数値データ」を指した語。state, status と同語源。',
     relatedWords: ['statistics', 'data', 'figure'],
   },
   {
@@ -784,7 +761,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'Doctors have a high social status in many countries.',
     exampleTranslationJa: '多くの国で医師は高い社会的地位を持つ。',
     collocations: ['social status', 'marital status', 'check the status of an order'],
-    etymology: 'ラテン語 status(立っている状態)から。state と同語源。',
     relatedWords: ['state', 'position', 'rank'],
   },
   {
@@ -919,7 +895,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'You can store your photos safely in the cloud.',
     exampleTranslationJa: '写真はクラウドに安全に保存できる。',
     collocations: ['store data', 'store food', 'a department store'],
-    etymology: 'ラテン語 instaurare(補充する)に由来。restore と同語源。',
     relatedWords: ['storage', 'save', 'keep'],
   },
   {
@@ -932,7 +907,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'We need a new strategy to attract younger customers.',
     exampleTranslationJa: '若い顧客を引きつけるための新しい戦略が必要だ。',
     collocations: ['develop a strategy', 'a marketing strategy', 'a long-term strategy'],
-    etymology: 'ギリシャ語 strategos(将軍)から。元は軍事用語。',
     relatedWords: ['strategic', 'tactic', 'plan'],
   },
   {
@@ -971,7 +945,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'She has been under a lot of stress at work lately.',
     exampleTranslationJa: '彼女は最近、仕事で大きなストレスを抱えている。',
     collocations: ['under stress', 'reduce stress', 'stress the importance of'],
-    etymology: 'distress の短縮形として生まれた語。語根はラテン語 stringere(締める)で、strict と同語源。',
     relatedWords: ['stressful', 'pressure', 'strain'],
   },
   {
@@ -996,7 +969,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'Our school has strict rules about mobile phones.',
     exampleTranslationJa: '私たちの学校には携帯電話に関する厳しい規則がある。',
     collocations: ['strict rules', 'a strict teacher', 'a strict diet'],
-    etymology: 'ラテン語 stringere(締める)から。stress, strain と同語源。',
     relatedWords: ['strictly', 'severe', 'firm'],
   },
   {
@@ -1021,7 +993,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'The structure of the essay is clear and easy to follow.',
     exampleTranslationJa: 'その小論文の構成は明快で分かりやすい。',
     collocations: ['the structure of society', 'a wooden structure', 'sentence structure'],
-    etymology: 'ラテン語 struere(積み上げる)から。construct, instruction と同語源。',
     relatedWords: ['structural', 'construct', 'framework'],
   },
   {
@@ -1058,7 +1029,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'Science was my favorite subject at school.',
     exampleTranslationJa: '理科は学校でいちばん好きな科目だった。',
     collocations: ['a school subject', 'change the subject', 'the subject of a sentence'],
-    etymology: 'ラテン語 sub(下に)+ jacere(投げる)から。「下に置かれたもの」が原義。',
     relatedWords: ['topic', 'theme', 'object'],
   },
   {
@@ -1110,7 +1080,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'If you keep practicing, you will succeed in the end.',
     exampleTranslationJa: '練習を続ければ、最後には成功するだろう。',
     collocations: ['succeed in business', 'succeed in doing', 'succeed to the throne'],
-    etymology: 'ラテン語 sub(後に)+ cedere(行く)から。「後に続く」が原義。',
     relatedWords: ['success', 'successful', 'fail'],
   },
   {
@@ -1173,7 +1142,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'He suffers from severe headaches.',
     exampleTranslationJa: '彼はひどい頭痛に悩まされている。',
     collocations: ['suffer from', 'suffer damage', 'suffer a loss'],
-    etymology: 'ラテン語 sub(下で)+ ferre(運ぶ)から。「重みを下から支えて耐える」が原義。',
     relatedWords: ['suffering', 'pain', 'endure'],
   },
   {
@@ -1186,7 +1154,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'Make sure you have sufficient time to prepare.',
     exampleTranslationJa: '準備に十分な時間を確保するようにしなさい。',
     collocations: ['sufficient evidence', 'sufficient funds', 'sufficient time'],
-    etymology: 'ラテン語 sub(下に)+ facere(作る)から。「必要を満たすだけ作る」が原義。',
     relatedWords: ['insufficient', 'enough', 'adequate'],
   },
   {
@@ -1199,7 +1166,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'I suggest taking a break before we continue.',
     exampleTranslationJa: '続ける前に休憩を取ることを提案します。',
     collocations: ['suggest an idea', 'suggest doing', 'evidence suggests that'],
-    etymology: 'ラテン語 sub(下から)+ gerere(運ぶ)から。「下からそっと差し出す」イメージ。',
     relatedWords: ['suggestion', 'propose', 'recommend'],
   },
   {
@@ -1225,7 +1191,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: "Does ten o'clock suit you?",
     exampleTranslationJa: '10時はご都合よろしいですか。',
     collocations: ['suit your schedule', 'a business suit', 'suit you perfectly'],
-    etymology: 'ラテン語 sequi(後に従う)に由来。pursue, sue と同語源。',
     relatedWords: ['suitable', 'fit', 'match'],
   },
   {
@@ -1251,7 +1216,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'They spent a large sum of money on the renovation.',
     exampleTranslationJa: '彼らは改装に多額の金を費やした。',
     collocations: ['a large sum of money', 'the sum of', 'in sum'],
-    etymology: 'ラテン語 summa(最上のもの、合計)から。summit(頂上)と同語源。',
     relatedWords: ['total', 'amount', 'summarize'],
   },
   {
@@ -1277,7 +1241,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'The town depends on the river for its water supply.',
     exampleTranslationJa: 'その町は水の供給をその川に頼っている。',
     collocations: ['supply and demand', 'a power supply', 'supply A with B'],
-    etymology: 'ラテン語 supplere(満たす)から。sub(下から)+ plere(満たす)で、complete と同語源。',
     relatedWords: ['demand', 'provide', 'supplier'],
   },
   {
@@ -1290,7 +1253,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'My family supported me when I decided to change jobs.',
     exampleTranslationJa: '転職を決めたとき、家族は私を支えてくれた。',
     collocations: ['support a family', 'financial support', 'support a team'],
-    etymology: 'ラテン語 sub(下から)+ portare(運ぶ)から。transport, portable と同語源。',
     relatedWords: ['supporter', 'supportive', 'assist'],
   },
   {
@@ -1303,7 +1265,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'I suppose we should start without him.',
     exampleTranslationJa: '彼抜きで始めるべきだと思う。',
     collocations: ['I suppose so', 'be supposed to', 'suppose that'],
-    etymology: 'ラテン語 sub(下に)+ ponere(置く)から。「下に置いて前提とする」。position と同語源。',
     relatedWords: ['assume', 'guess', 'presume'],
   },
   {
@@ -1329,7 +1290,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'He needs surgery on his left knee.',
     exampleTranslationJa: '彼は左ひざの手術が必要だ。',
     collocations: ['undergo surgery', 'heart surgery', 'plastic surgery'],
-    etymology: 'ギリシャ語 kheir(手)+ ergon(仕事)に由来し、「手仕事」が原義。',
     relatedWords: ['surgeon', 'operation', 'treatment'],
   },
   {
@@ -1367,7 +1327,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'We carried out a survey of five hundred customers.',
     exampleTranslationJa: '私たちは500人の顧客を対象に調査を実施した。',
     collocations: ['conduct a survey', 'a recent survey', 'survey results'],
-    etymology: 'sur-(上から)+ ラテン語 videre(見る)。「上から見渡す」が原義。',
     relatedWords: ['questionnaire', 'research', 'poll'],
   },
   {
@@ -1380,7 +1339,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'Only a few passengers survived the crash.',
     exampleTranslationJa: 'その事故で生き残った乗客はわずかだった。',
     collocations: ['survive an accident', 'survive the winter', 'struggle to survive'],
-    etymology: 'ラテン語 super(超えて)+ vivere(生きる)から。vivid, revive と同語源。',
     relatedWords: ['survival', 'survivor', 'live'],
   },
   {
@@ -1393,7 +1351,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'I suspect that he already knows the truth.',
     exampleTranslationJa: '彼はすでに真実を知っているのではないかと思う。',
     collocations: ['suspect someone of lying', 'a murder suspect', 'strongly suspect'],
-    etymology: 'ラテン語 sub(下から)+ specere(見る)から。「下からうかがい見る」が原義。inspect, respect と同語源。',
     relatedWords: ['suspicion', 'suspicious', 'doubt'],
   },
   {
@@ -1406,7 +1363,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'It is hard to sustain this pace of growth for long.',
     exampleTranslationJa: 'この成長ペースを長く維持するのは難しい。',
     collocations: ['sustain growth', 'sustain interest', 'sustain life'],
-    etymology: 'ラテン語 sub(下から)+ tenere(保つ)から。maintain, contain と同語源。',
     relatedWords: ['sustainable', 'maintain', 'sustainability'],
   },
   {
@@ -1456,7 +1412,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'The dove is a symbol of peace.',
     exampleTranslationJa: 'ハトは平和の象徴だ。',
     collocations: ['a symbol of peace', 'a status symbol', 'a chemical symbol'],
-    etymology: 'ギリシャ語 symbolon(照合のしるし)から。syn(共に)+ ballein(投げる)。',
     relatedWords: ['symbolic', 'symbolize', 'sign'],
   },
   {
@@ -1470,7 +1425,6 @@ export const batch08: VocabularyEntry[] = [
     exampleTranslationJa: '家を失った家族たちに深く同情する。',
     collocations: ['express sympathy', 'have sympathy for', 'a letter of sympathy'],
     wordFormation: 'sym-(共に)+ pathy(感情)。empathy, apathy と同じ語根。',
-    etymology: 'ギリシャ語 syn(共に)+ pathos(感情)から。',
     relatedWords: ['sympathize', 'sympathetic', 'empathy'],
   },
   {
@@ -1483,7 +1437,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'A high fever is a common symptom of the flu.',
     exampleTranslationJa: '高熱はインフルエンザによく見られる症状だ。',
     collocations: ['show symptoms', 'a common symptom', 'symptoms of stress'],
-    etymology: 'ギリシャ語 syn(共に)+ piptein(落ちる)から。「病気に伴って起こること」が原義。',
     relatedWords: ['sign', 'disease', 'diagnosis'],
   },
   {
@@ -1496,7 +1449,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'The school introduced a new system for reporting absences.',
     exampleTranslationJa: '学校は欠席を報告する新しい仕組みを導入した。',
     collocations: ['an education system', 'a computer system', 'the immune system'],
-    etymology: 'ギリシャ語 systema(組み合わされたもの)から。syn(共に)+ histanai(立てる)。',
     relatedWords: ['systematic', 'structure', 'organization'],
   },
   {
@@ -1545,7 +1497,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'She showed a talent for music at an early age.',
     exampleTranslationJa: '彼女は幼い頃から音楽の才能を見せた。',
     collocations: ['a talent for', 'natural talent', 'young talent'],
-    etymology: 'ギリシャ語 talanton(はかり、貨幣単位)から。聖書のたとえ話を通じて「才能」の意味になった。',
     relatedWords: ['talented', 'gift', 'ability'],
   },
   {
@@ -1558,7 +1509,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'Our sales target for this year is ten million yen.',
     exampleTranslationJa: '今年の売上目標は1000万円だ。',
     collocations: ['set a target', 'meet a target', 'a target audience'],
-    etymology: '古フランス語 targe(小さな盾)から。「盾」から「射撃の的」へと意味が変化した。',
     relatedWords: ['goal', 'aim', 'objective'],
   },
   {
@@ -1571,7 +1521,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'My first task every morning is to check email.',
     exampleTranslationJa: '毎朝最初の仕事はメールの確認だ。',
     collocations: ['complete a task', 'a difficult task', 'daily tasks'],
-    etymology: '中世ラテン語 taxa(課されたもの)から。tax(税)と同語源。',
     relatedWords: ['duty', 'assignment', 'job'],
   },
   {
@@ -1584,7 +1533,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'The government plans to raise the tax on cigarettes.',
     exampleTranslationJa: '政府はたばこ税を引き上げる計画だ。',
     collocations: ['pay taxes', 'raise taxes', 'income tax'],
-    etymology: 'ラテン語 taxare(評価する、査定する)から。',
     relatedWords: ['taxpayer', 'income', 'duty'],
   },
   {
@@ -1597,7 +1545,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'The launch was delayed because of a technical problem.',
     exampleTranslationJa: '技術的な問題のため、発売は延期された。',
     collocations: ['a technical problem', 'technical support', 'technical terms'],
-    etymology: 'ギリシャ語 tekhne(技術)から。technique, technology と同語源。',
     relatedWords: ['technique', 'technology', 'technically'],
   },
   {
@@ -1610,7 +1557,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'The doctor developed a new technique for treating burns.',
     exampleTranslationJa: 'その医師はやけどを治療する新しい技法を開発した。',
     collocations: ['develop a technique', 'a relaxation technique', 'basic techniques'],
-    etymology: 'ギリシャ語 tekhne(技術)から。',
     relatedWords: ['technical', 'method', 'skill'],
   },
   {
@@ -1636,7 +1582,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'She found a temporary job for the summer.',
     exampleTranslationJa: '彼女は夏の間の臨時の仕事を見つけた。',
     collocations: ['a temporary job', 'a temporary solution', 'on a temporary basis'],
-    etymology: 'ラテン語 tempus(時)から。contemporary と同語源。',
     relatedWords: ['temporarily', 'permanent', 'short-term'],
   },
   {
@@ -1649,7 +1594,6 @@ export const batch08: VocabularyEntry[] = [
     exampleSentence: 'I tend to wake up early even on weekends.',
     exampleTranslationJa: '私は週末でも早く目が覚める傾向がある。',
     collocations: ['tend to do', 'tend to be'],
-    etymology: 'ラテン語 tendere(伸ばす、向かう)から。extend, intend と同語源。',
     relatedWords: ['tendency', 'incline', 'likely'],
   },
   {

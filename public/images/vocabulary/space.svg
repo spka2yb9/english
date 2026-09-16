@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"
+     aria-label="ロケットが惑星と星の間を飛んでいるイラスト。">
+  <style>
+    .a { fill: none; stroke: #2f4055; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .o { stroke: #2f4055; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ground { fill: #edf3ed; stroke: none; }
+    .paper { fill: #fffefd; stroke: #2f4055; stroke-width: 2.5; stroke-linejoin: round; }
+    .muted { fill: none; stroke: #80909d; stroke-width: 2.5; stroke-dasharray: 7 8; stroke-linecap: round; }
+    .ink { fill: #2f4055; stroke: none; }
+    text { display: none; }
+    .teal { fill: #238b83; } .tealp { fill: #dff4ef; } .teald { fill: #176a66; } .teals { fill: none; stroke: #238b83; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .coral { fill: #e86452; } .coralp { fill: #fde9e3; } .corald { fill: #b74338; } .corals { fill: none; stroke: #e86452; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gold { fill: #d99a2b; } .goldp { fill: #fff0c5; } .goldd { fill: #a66b15; } .golds { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .blue { fill: #4e86c6; } .bluep { fill: #e1edfb; } .blued { fill: #315f98; } .blues { fill: none; stroke: #4e86c6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .violet { fill: #816eb2; } .violetp { fill: #eee8fb; } .violetd { fill: #5f4d91; } .violets { fill: none; stroke: #816eb2; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #4e986a; } .greenp { fill: #e1f3e5; } .greend { fill: #34734d; } .greens { fill: none; stroke: #4e986a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="600" height="400" rx="20" fill="#fffaf1"/>
+  <path d="M0 306h600v94H0z" class="ground"/>
+  <g transform="translate(240 200) rotate(-30)">
+  <path d="M0-96q30 34 30 96v40h-60v-40q0-62 30-96z" fill="#fffefd" class="o"/>
+  <circle cy="-30" r="17" class="bluep o"/>
+  <path d="M-30 24l-32 48h32zM30 24l32 48h-32z" class="coral o"/>
+  <path d="M-20 40h40l-20 42z" class="gold o"/>
+</g>
+<circle cx="470" cy="140" r="46" class="violetp o"/>
+<ellipse cx="470" cy="140" rx="88" ry="20" fill="none" stroke="#5f4d91" stroke-width="7"
+         transform="rotate(-18 470 140)"/>
+<circle cx="150" cy="330" r="34" class="greenp o"/>
+<circle cx="182" cy="312" r="9" class="greend"/>
+<path d="M420 284.0l5.0 11.0 11.0 5.0-11.0 5.0-5.0 11.0-5.0-11.0-11.0-5.0 11.0-5.0z" class="gold o"/><path d="M120 105.6l4.5 9.9 9.9 4.5-9.9 4.5-4.5 9.9-4.5-9.9-9.9-4.5 9.9-4.5z" class="gold o"/><path d="M540 267.2l4.0 8.8 8.8 4.0-8.8 4.0-4.0 8.8-4.0-8.8-8.8-4.0 8.8-4.0z" class="gold o"/><path d="M330 68.8l3.5 7.699999999999999 7.699999999999999 3.5-7.699999999999999 3.5-3.5 7.699999999999999-3.5-7.699999999999999-7.699999999999999-3.5 7.699999999999999-3.5z" class="gold o"/>
+<path d="M60 386h480" class="a"/>
+</svg>
