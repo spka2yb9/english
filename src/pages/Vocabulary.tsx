@@ -81,7 +81,8 @@ export function Vocabulary() {
       <div className="page vocab-page">
         <h1>英単語</h1>
         <p className="page-lead">
-          {SESSION_SIZE}語を出題します。レベルの低い語(A2 → B1 → B2)を優先し、復習の時期が来た語は先に戻します。
+          {SESSION_SIZE}語を出題します。復習の時期が来た語(再学習中・予定日超過)を最大3語、残りは新しい語から選び、
+          レベルの低い語(A2 → B1 → B2)を優先します。
           単語を見て意味を思い出せるか自分で判定してください。わからなかった語は、わかるまで繰り返し出題されます。
         </p>
         <MasteryChart stats={getVocabStats()} history={getVocabHistory()} />

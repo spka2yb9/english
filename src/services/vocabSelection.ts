@@ -4,7 +4,9 @@
 //   - 「わからない」と答えた語は再学習中(lapsed)になり、日をまたがず次のセッションで最優先に戻る。
 //     セッション内で「わかる」に変わっても、次のセッションでもう一度正解するまで再学習中のまま
 //   - 予定日を過ぎた語だけを復習候補にし、残りは未出題語から補う
-//   - 選ぶときにレベルを見て重み付けする(A2 → B1 → B2 の順に優先。`LEVEL_WEIGHTS`)
+//   - 復習に使う枠は半分まで。残りは必ず未出題語(新出語)に回す
+//   - 選ぶときにレベルを見て重み付けする(A2 → B1 → B2 の順に優先。`LEVEL_WEIGHTS`)。
+//     新出語の先頭は一番低いレベルから取り、未出題の A2 が残っている限り必ず出る
 //     復習の必要性(再学習中・予定日超過)はレベルより常に優先する
 
 // node のスクリプト(--experimental-strip-types)からも読み込めるよう、拡張子を明示する。
@@ -80,11 +82,41 @@ export function reviewScore(stat: WordStat, now: number): number {
 }
 
 /**
+ * レベルを低い順に並べたもの。未出題語の枠はこの順に確保する。
+ */
+const LEVEL_ORDER = ['A2', 'B1', 'B2']
+
+/**
+ * 未出題語から slots 件を選ぶ。
+ * 先頭の1語は「未出題が残っている一番低いレベル」から取り、残りはレベル重み付きの抽選で埋める。
+ * levelOf を渡さないときは均等抽選。
+ */
+function pickNewWords(
+  unseen: readonly string[],
+  slots: number,
+  weightOf: (id: string) => number,
+  levelOf: ((id: string) => string | undefined) | undefined,
+  rng: () => number,
+): string[] {
+  if (slots <= 0) return []
+  if (!levelOf) return weightedSample(unseen, () => 1, slots, rng)
+  const lowest = LEVEL_ORDER.find((level) => unseen.some((id) => levelOf(id) === level))
+  if (lowest === undefined) return weightedSample(unseen, weightOf, slots, rng)
+  const guaranteed = weightedSample(
+    unseen.filter((id) => levelOf(id) === lowest),
+    weightOf,
+    1,
+    rng,
+  )
+  const rest = unseen.filter((id) => !guaranteed.includes(id))
+  return [...guaranteed, ...weightedSample(rest, weightOf, slots - guaranteed.length, rng)]
+}
+
+/**
  * セッションの語を選択する。
- * 再学習中の語を先に入れ、予定日を過ぎた語で半分まで埋め、残りを未出題語から選ぶ。
- * 未出題語が尽きたら、予定日前の語も補充する。
- * levelOf を渡すと、すべての段階でレベルの低い語(A2 → B1 → B2)が優先される。
- * 再学習中の語だけは、レベルに経過日数を掛けた重みで選ぶ(古い取りこぼしも戻るようにするため)。
+ * 復習(再学習中 → 予定日超過)に半分の枠を使い、残りは必ず未出題語(新出語)に回す。
+ * 新出語の先頭は一番低いレベルから取り、残りはレベルの低い語ほど選ばれやすくする。
+ * 予定日前の語は、それでも足りないときだけ補充する。
  */
 export function selectSessionWords(
   allIds: readonly string[],
@@ -112,20 +144,24 @@ export function selectSessionWords(
     }))
     .sort((a, b) => b.score - a.score)
 
-  // 再学習中(直近で「わからない」と答えた)語は、新出語の枠を削ってでも次のセッションに戻す。
-  // 枠に全員収まるなら全員を戻す。収まらないときだけ、レベル重みに経過日数を掛けた抽選にする。
+  // 復習(再学習中+予定日超過)に使う枠の上限。残りは必ず未出題語に回す。
+  // ここを上限なしにすると、再学習中の語が5語を占めて新出語が1語も出なくなる。
+  const reviewSlots = Math.ceil(count / 2)
+
+  // 再学習中(直近で「わからない」と答えた)語を枠の限り戻す。
+  // 枠に全員収まるときは全員戻し、収まらないときはレベル重みに経過日数を掛けて選ぶ。
   const lapsed = scored.filter((c) => isLapsed(stats[c.id]))
   const picked =
-    lapsed.length <= count
+    lapsed.length <= reviewSlots
       ? lapsed.map((c) => c.id)
-      : weightedSample(lapsed, (c) => c.weight * (1 + c.days), count, rng).map((c) => c.id)
-  // 予定日を過ぎた語は、レベルの低い語から先に出す。
+      : weightedSample(lapsed, (c) => c.weight * (1 + c.days), reviewSlots, rng).map((c) => c.id)
+  // 予定日を過ぎた語は、残りの復習枠にレベルの低い語から入れる。
   const due = scored
     .filter((c) => c.score >= 1 && !isLapsed(stats[c.id]))
     .sort((a, b) => b.weight - a.weight || b.score - a.score)
-  picked.push(...due.slice(0, Math.max(0, Math.ceil(count / 2) - picked.length)).map((c) => c.id))
-  // 未出題語はレベルの低い語ほど選ばれやすくする。
-  picked.push(...weightedSample(unseen, weightOf, Math.max(0, count - picked.length), rng))
+  picked.push(...due.slice(0, Math.max(0, reviewSlots - picked.length)).map((c) => c.id))
+  // 残りの枠は未出題語。先頭は一番低いレベル(A2 → B1 → B2)の語を確保する。
+  picked.push(...pickNewWords(unseen, count - picked.length, weightOf, levelOf, rng))
 
   // まだ足りなければ、予定日前の語もレベルの低い語から、延滞している順に補充する
   const pickedIds = new Set(picked)

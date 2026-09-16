@@ -126,6 +126,22 @@ describe('レベルの重み付け', () => {
     expect(rate('c10')).toBeGreaterThan(b2PerWord)
   })
 
+  it('未出題に A2 が残っていれば、どのセッションにも A2 が入る', () => {
+    for (let seed = 1; seed <= 30; seed++) {
+      const picked = selectSessionWords([...A2, ...B2], {}, NOW, 5, seededRng(seed), levelOf)
+      expect(picked.some((id) => levelOf(id) === 'A2')).toBe(true)
+    }
+  })
+
+  it('再学習中(B2)が枠を埋めていても、未出題の A2 が必ず入る', () => {
+    let stats: WordStats = {}
+    for (const id of B2.slice(0, 20)) stats = recordAnswer(stats, id, false, NOW)
+    for (let seed = 1; seed <= 30; seed++) {
+      const picked = selectSessionWords([...A2, ...B2], stats, NOW, 5, seededRng(seed), levelOf)
+      expect(picked.some((id) => levelOf(id) === 'A2')).toBe(true)
+    }
+  })
+
   it('levelOf を渡さなければ従来どおりレベルを見ない(音声練習の互換)', () => {
     let a2 = 0
     let b2 = 0
@@ -213,12 +229,22 @@ describe('わからなかった語の再学習', () => {
     expect(picked).toEqual(expect.arrayContaining(['w0', 'w1', 'w2', 'w3']))
   })
 
-  it('わからなかった語が半分を超えても、全部が次のセッションに戻る', () => {
+  it('再学習中の語が枠を超えても、枠のぶんだけ次のセッションに戻る', () => {
     let stats: WordStats = {}
     const missed = POOL.slice(0, 8)
     for (const id of missed) stats = recordAnswer(stats, id, false, NOW)
     const picked = selectSessionWords(POOL, stats, NOW, 10, seededRng(5))
-    expect(picked).toEqual(expect.arrayContaining(missed))
+    const returned = picked.filter((id) => missed.includes(id))
+    // 復習に使う枠は半分(10語なら5語)。残りは新出語に回す。
+    expect(returned).toHaveLength(5)
+  })
+
+  it('再学習中が枠を埋めても、未出題語の枠は残る', () => {
+    let stats: WordStats = {}
+    for (const id of POOL.slice(0, 20)) stats = recordAnswer(stats, id, false, NOW)
+    const picked = selectSessionWords(POOL, stats, NOW, 5, seededRng(1))
+    expect(picked.filter((id) => stats[id])).toHaveLength(3) // 復習枠
+    expect(picked.filter((id) => !stats[id])).toHaveLength(2) // 新出語の枠
   })
 
   it('別セッションでもう一度正解すると再学習を抜け、通常の間隔に戻る', () => {
