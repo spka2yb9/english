@@ -2811,6 +2811,14 @@
   font-weight: 800;
 }
 
+.vocab-complete-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  justify-content: center;
+  margin-top: 1.35rem;
+}
+
 /* Tablet and mobile */
 
 @media (max-width: 879px) {

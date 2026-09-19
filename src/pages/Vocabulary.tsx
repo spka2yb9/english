@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { allVocabulary, findWord } from '../content/vocabulary'
 import type { VocabularyEntry } from '../content/types'
 import { AudioButton } from '../components/AudioButton'
@@ -50,6 +51,13 @@ export function Vocabulary() {
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
   }, [])
+
+  // 語が切り替わったら、前の語の解説で読み進めた位置ではなくカードの先頭から確認できるようにする。
+  // 出題中の onNext では session が入れ替わるので、開始時・次の語・完了画面のすべてで先頭に戻る。
+  useEffect(() => {
+    if (!session) return
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+  }, [session])
 
   const start = () => {
     // レベルの低い語(A2 → B1 → B2)を優先して出題する。findWord は Map 参照なので、
@@ -104,9 +112,14 @@ export function Vocabulary() {
               ? `わからなかった語も、${session.round}周目ですべて「わかる」になりました。`
               : '1周目ですべての語がわかりました。素晴らしい!'}
           </p>
-          <button type="button" className="btn-primary btn-large" onClick={start}>
-            もう一度{SESSION_SIZE}語に挑戦する
-          </button>
+          <div className="vocab-complete-actions">
+            <button type="button" className="btn-primary btn-large" onClick={start}>
+              もう一度{SESSION_SIZE}語に挑戦する
+            </button>
+            <Link className="btn-secondary btn-large" to="/">
+              ホームに戻る
+            </Link>
+          </div>
         </div>
       </div>
     )
