@@ -99,10 +99,12 @@ describe('イングバードのほめ方', () => {
     expect(back.praise.title).toContain('1か月ぶり')
   })
 
-  it('節目と久しぶりが重なったら節目を優先する', () => {
+  it('節目と久しぶりが重なったら節目を優先し、復帰も祝う', () => {
     for (const day of ['2026-09-01', '2026-09-02', '2026-09-03', '2026-09-04']) recordStudyDay(day)
     const fifth = recordStudyDay('2026-09-20') // 16日ぶりだが5日目
     expect(fifth.praise.kind).toBe('milestone')
+    expect(fifth.praise.title).toContain('5日目')
+    expect(fifth.praise.message).toContain('復帰')
   })
 
   it('学習ずみの日に再訪したら、それもほめる', () => {

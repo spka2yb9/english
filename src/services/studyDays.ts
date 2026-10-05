@@ -161,14 +161,17 @@ export function praiseFor(
   }
 
   if (isMilestone(status.totalDays)) {
+    // 久しぶりの復帰と節目が重なった日は、両方を祝う(休んでいた日は減らないことも伝える)
+    const back = (status.lastGap ?? 0) >= 3
     return {
       kind: 'milestone',
       mood: 'cheer',
       confetti: true,
       title: `${status.totalDays}日目に到達!`,
-      message:
-        MILESTONE_WORDS[status.totalDays] ??
-        `トータル${status.totalDays}日ぶんの英語が、きみの中に積み上がってるよ。えらい!`,
+      message: back
+        ? `${describeGap(status.lastGap ?? 0)}の復帰で、しかも${status.totalDays}日目!休んでいた日は、ここまでの記録を1日も減らしていないよ。`
+        : (MILESTONE_WORDS[status.totalDays] ??
+          `トータル${status.totalDays}日ぶんの英語が、きみの中に積み上がってるよ。えらい!`),
     }
   }
 
