@@ -1,0 +1,382 @@
+/* 英文法セクションの質問チャット。右下のボタンから開く(SPはボトムシート、PCは右下のパネル)。 */
+
+.ingbird-chat-fab {
+  position: fixed;
+  right: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  z-index: 65;
+  display: grid;
+  width: 62px;
+  height: 62px;
+  padding: 0;
+  place-items: center;
+  background: var(--paper);
+  border: 1px solid #bfdcd4;
+  border-radius: 50%;
+  box-shadow: 0 10px 26px rgb(17 39 56 / 20%);
+  cursor: pointer;
+}
+
+.ingbird-chat-fab:hover {
+  border-color: var(--teal);
+  box-shadow: 0 14px 32px rgb(17 39 56 / 26%);
+  transform: translateY(-1px);
+}
+
+.ingbird-chat-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  display: grid;
+  width: 22px;
+  height: 22px;
+  place-items: center;
+  color: #fff;
+  background: var(--teal);
+  border: 2px solid var(--paper);
+  border-radius: 50%;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* SP(既存レイアウトのモバイル境界)まではボトムシート、PCでは右下のチャットウィジェット */
+
+.ingbird-chat-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 69;
+  background: transparent;
+}
+
+.ingbird-chat-panel {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 70;
+  display: flex;
+  width: min(430px, calc(100vw - 32px));
+  max-height: min(72vh, 640px);
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: 0 18px 52px rgb(17 39 56 / 24%);
+  animation: ingbird-chat-up 0.32s cubic-bezier(0.2, 0.9, 0.3, 1.15) both;
+}
+
+@media (max-width: 879px) {
+  .ingbird-chat-backdrop {
+    background: rgb(16 47 73 / 35%);
+  }
+
+  .ingbird-chat-panel {
+    inset-inline: 0;
+    right: auto;
+    bottom: 0;
+    width: min(100%, 560px);
+    max-height: min(80dvh, 640px);
+    margin-inline: auto;
+    border-radius: 20px 20px 0 0;
+  }
+}
+
+/* チャットを開いている間は、学習日のトーストはチャット内のメッセージに任せる */
+body:has(.ingbird-chat-panel) .ingbird-toast {
+  display: none;
+}
+
+/* 開いている間はボタンも隠す(パネルの角に覗かないように) */
+body:has(.ingbird-chat-panel) .ingbird-chat-fab {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ingbird-chat-head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 0.8rem 0.6rem 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.ingbird-chat-head-text {
+  min-width: 0;
+  flex: 1;
+}
+
+.ingbird-chat-title {
+  margin-bottom: 0;
+  color: var(--navy);
+  font-size: 0.98rem;
+  font-weight: 800;
+}
+
+.ingbird-chat-sub {
+  margin-bottom: 0;
+  overflow: hidden;
+  color: var(--ink-500);
+  font-size: 0.78rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ingbird-chat-close {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  place-items: center;
+  color: var(--ink-500);
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.ingbird-chat-close:hover {
+  color: var(--ink-950);
+  background: var(--canvas);
+}
+
+.ingbird-chat-log {
+  display: flex;
+  min-height: 220px;
+  padding: 0.9rem 0.9rem 0.4rem;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.7rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--canvas-warm);
+}
+
+.ingbird-chat-row {
+  display: flex;
+}
+
+.ingbird-chat-row.user {
+  justify-content: flex-end;
+}
+
+.ingbird-chat-bubble {
+  max-width: 86%;
+  padding: 0.6rem 0.8rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow-sm);
+}
+
+.ingbird-chat-row.user .ingbird-chat-bubble {
+  color: #fff;
+  background: var(--navy);
+  border-color: var(--navy);
+}
+
+.ingbird-chat-text {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+.ingbird-chat-quote {
+  margin: 0.55rem 0 0;
+  padding: 0.55rem 0.65rem;
+  background: var(--canvas);
+  border: 0;
+  border-left: 3px solid var(--teal);
+  border-radius: 0 10px 10px 0;
+}
+
+.ingbird-chat-row.user .ingbird-chat-quote {
+  background: rgb(255 255 255 / 12%);
+  border-left-color: #7fd0c3;
+}
+
+.ingbird-chat-quote figcaption {
+  margin-bottom: 0.25rem;
+  color: var(--teal);
+  font-size: 0.72rem;
+  font-weight: 760;
+  letter-spacing: 0.06em;
+}
+
+.ingbird-chat-row.user .ingbird-chat-quote figcaption {
+  color: #a8ded3;
+}
+
+.ingbird-chat-en {
+  display: flex;
+  margin-bottom: 0.2rem;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  color: var(--ink-950);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.ingbird-chat-ja {
+  margin-bottom: 0.2rem;
+  font-size: 0.86rem;
+}
+
+.ingbird-chat-note {
+  margin-bottom: 0.15rem;
+  color: var(--ink-650);
+  font-size: 0.8rem;
+}
+
+.ingbird-chat-quote-text {
+  margin-bottom: 0.2rem;
+  font-size: 0.84rem;
+  line-height: 1.65;
+}
+
+.ingbird-chat-quote-text:last-child,
+.ingbird-chat-ja:last-child,
+.ingbird-chat-note:last-child {
+  margin-bottom: 0;
+}
+
+.ingbird-chat-thinking {
+  display: flex;
+  margin: 0;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--ink-500);
+  font-size: 0.8rem;
+}
+
+.ingbird-chat-thinking span {
+  display: inline-flex;
+  gap: 3px;
+}
+
+.ingbird-chat-thinking i {
+  width: 6px;
+  height: 6px;
+  background: var(--teal);
+  border-radius: 50%;
+  animation: ingbird-chat-dot 1s ease-in-out infinite;
+}
+
+.ingbird-chat-thinking i:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.ingbird-chat-thinking i:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.ingbird-chat-chips {
+  display: flex;
+  /* ログが長くなるとflexの縮小でこの行だけ潰れるため、縮小を禁止して高さを固定する。 */
+  flex: 0 0 auto;
+  gap: 0.45rem;
+  padding: 0.55rem 0.9rem;
+  overflow-x: auto;
+  border-top: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.ingbird-chat-chips button {
+  min-height: 36px;
+  padding: 0.35rem 0.7rem;
+  flex: 0 0 auto;
+  color: var(--teal);
+  background: var(--teal-soft);
+  border: 1px solid #bfe0d8;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.ingbird-chat-chips button:hover {
+  color: #fff;
+  background: var(--teal);
+}
+
+.ingbird-chat-form {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.6rem 0.8rem calc(0.6rem + env(safe-area-inset-bottom, 0px));
+  border-top: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.ingbird-chat-form input {
+  min-width: 0;
+  min-height: 44px;
+  padding: 0.5rem 0.75rem;
+  flex: 1;
+  background: var(--canvas);
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
+
+.ingbird-chat-form input:focus-visible {
+  border-color: var(--teal);
+  outline: 3px solid var(--focus);
+  outline-offset: 1px;
+}
+
+.ingbird-chat-send {
+  min-height: 44px;
+  padding: 0 1rem;
+  color: #fff;
+  background: var(--teal);
+  border: 0;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.ingbird-chat-send:disabled {
+  cursor: default;
+  opacity: 0.45;
+}
+
+@keyframes ingbird-chat-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ingbird-chat-dot {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(-3px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ingbird-chat-panel {
+    animation: none;
+  }
+
+  .ingbird-chat-thinking i {
+    animation: none;
+  }
+}

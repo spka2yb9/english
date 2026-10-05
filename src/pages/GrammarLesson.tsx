@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { LessonBlocks } from '../components/LessonBlocks'
+import { IngbirdChat } from '../components/IngbirdChat'
 import { Quiz } from '../components/Quiz'
 import { WordOrder } from '../components/WordOrder'
 import { findLesson, findUnit, nextLesson } from '../content/grammar'
@@ -159,6 +160,9 @@ function GrammarLessonContent({ lesson }: { lesson: GrammarLesson }) {
           </Link>
         )}
       </footer>
+
+      {/* このセクションについてイングバードに質問できる(SP・PC共通) */}
+      <IngbirdChat lesson={lesson} />
     </div>
   )
 }
