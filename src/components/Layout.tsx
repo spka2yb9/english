@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
+import { IngbirdPraise } from './IngbirdPraise'
 import { LearningIcon } from './LearningIcon'
 
 const NAV_ITEMS = [
@@ -91,6 +92,8 @@ export function Layout() {
       <main className="main" id="main-content" tabIndex={-1}>
         <Outlet />
       </main>
+
+      <IngbirdPraise />
     </div>
   )
 }

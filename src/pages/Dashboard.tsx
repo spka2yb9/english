@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { IngbirdCard } from '../components/IngbirdCard'
 import { LearningIcon } from '../components/LearningIcon'
 import { grammarLessonSummaries, readingPassageCount, vocabularyCount } from '../content/summary'
 import { getCompletedLessons, getTodayVocabCount, getVocabStats } from '../services/progress'
@@ -26,6 +27,8 @@ export function Dashboard() {
     <div className="page dashboard">
       <h1>ホーム</h1>
       <p className="page-lead">B2まで、短いセクションを積み重ねて学習しましょう。</p>
+
+      <IngbirdCard />
 
       <div className="dash-grid">
         <Link to="/grammar" className="dash-card">

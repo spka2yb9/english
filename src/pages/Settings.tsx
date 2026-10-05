@@ -2,10 +2,11 @@ import { useEffect, useRef, useState } from 'react'
 import { SyncPanel } from '../components/SyncPanel'
 import { getCompletedLessons, getGrammarItemStats, getVocabHistory, getVocabStats } from '../services/progress'
 import { KEYS, loadJson, resetProgress } from '../services/storage'
+import { getStudyDays } from '../services/studyDays'
 import { push, signedIn } from '../services/sync'
 
 /**
- * リセットの単位は学習エリアごとの4つ。それぞれが localStorage に持つキーをまとめて消す。
+ * リセットの単位は学習エリアごとの5つ。それぞれが localStorage に持つキーをまとめて消す。
  * 件数は localStorage だけから数え、教材データは読み込まない(音声練習も practice.ts 経由では数えない —
  * 文バンクを設定ページのチャンクに持ち込んでしまうため)。
  */
@@ -15,6 +16,7 @@ function savedGroups() {
   const items = Object.keys(getGrammarItemStats()).length
   const words = Object.keys(getVocabStats()).length
   const days = getVocabHistory().length
+  const studyDays = getStudyDays().length
   const sentences = recorded(`${KEYS.practiceStats}.shadowing`) + recorded(`${KEYS.practiceStats}.dictation`)
   const passages = loadJson<string[]>(KEYS.readingDone, []).length
   return [
@@ -45,6 +47,13 @@ function savedGroups() {
       prefixes: [KEYS.readingDone],
       count: passages,
       detail: `読了した ${passages}本`,
+    },
+    {
+      id: 'studyDays',
+      label: '学習日',
+      prefixes: [KEYS.studyDays],
+      count: studyDays,
+      detail: `学習した ${studyDays}日（トータル）`,
     },
   ]
 }

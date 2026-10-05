@@ -3,6 +3,7 @@
 // 問題数や終わりは決めない — 声に出す・書き取る反復の場なので、続けたいだけ続けられる。
 
 import { KEYS, loadJson, saveJson } from './storage.ts'
+import { recordStudyDay } from './studyDays.ts'
 import { dictationSentences, sentenceBank, type BankSentence } from './sentenceBank.ts'
 
 export type PracticeMode = 'shadowing' | 'dictation'
@@ -38,6 +39,7 @@ export function getPracticeStats(mode: PracticeMode): PracticeStats {
 export function recordPracticeAnswer(mode: PracticeMode, sentenceId: string): void {
   const stats = getPracticeStats(mode)
   saveJson(statsKey(mode), { ...stats, [sentenceId]: (stats[sentenceId] ?? 0) + 1 })
+  recordStudyDay()
 }
 
 /**

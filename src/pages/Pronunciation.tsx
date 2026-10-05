@@ -6,6 +6,7 @@ import { AudioButton } from '../components/AudioButton'
 import { EnglishExample } from '../components/EnglishExample'
 import { Quiz } from '../components/Quiz'
 import { RichText } from '../components/RichText'
+import { recordStudyDay } from '../services/studyDays'
 
 const QUESTIONS_PER_ROUND = 10
 
@@ -105,7 +106,7 @@ export function Pronunciation() {
           入る記号を4択で選びましょう。選択肢には似た音の記号が並びます。
           全{ipaQuizWords.length}問から毎回{QUESTIONS_PER_ROUND}問をランダムに出題します。
         </p>
-        <Quiz key={round.n} questions={round.questions} />
+        <Quiz key={round.n} questions={round.questions} onAnswer={() => recordStudyDay()} />
         <button
           type="button"
           className="btn-secondary"

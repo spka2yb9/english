@@ -45,4 +45,5 @@ export const KEYS = {
   practiceStats: 'eng.practice.stats', // Record<sentenceId, number> 音声練習の文の実施回数(周回の位置を兼ねる)
   readingDone: 'eng.reading.done', // string[] 読了した本文ID
   readingOpen: 'eng.reading.open', // string[] 多読一覧で開いているレベル
+  studyDays: 'eng.study.days', // string[] 何かしら学習した日(YYYY-MM-DD)。連続ではなくトータルで数える
 } as const

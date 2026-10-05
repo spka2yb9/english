@@ -11,6 +11,7 @@ import {
   shiftDate,
 } from './progress'
 import { KEYS, loadJson } from './storage'
+import { getStudyStatus } from './studyDays'
 
 beforeEach(() => {
   localStorage.clear()
@@ -56,6 +57,13 @@ describe('語彙統計の永続化', () => {
     const history = getVocabHistory()
     expect(history).toHaveLength(1) // 同じ日は1行にまとまる
     expect(history[0].mastered).toBe(1) // b は苦手なので定着に入らない
+  })
+
+  it('語彙に答えるとその日が学習日になる', () => {
+    recordVocabAnswer({ a: { seen: 1, known: 1, unknown: 0, lastAt: 1, streak: 1 } })
+    const status = getStudyStatus()
+    expect(status.studiedToday).toBe(true)
+    expect(status.totalDays).toBe(1)
   })
 
   it('日付が変わると今日の練習数は0から始まる', () => {

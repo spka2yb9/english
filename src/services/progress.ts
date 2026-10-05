@@ -1,9 +1,14 @@
 // 学習進捗のローカル永続化(文法の完了レッスン・文法問題のSRS・語彙統計・語彙の日次ログ)
 
+import { shiftDate, todayString } from './dates'
 import { KEYS, loadJson, saveJson } from './storage'
+import { recordStudyDay } from './studyDays'
 import { flushPush } from './sync'
 import { masteryOf, recordAnswer } from './vocabSelection'
 import type { WordStats } from './vocabSelection'
+
+// 日付の計算は dates.ts に集約した。既存の import 元を変えないよう shiftDate はここから再輸出する。
+export { shiftDate }
 
 export function getCompletedLessons(): Set<string> {
   return new Set(loadJson<string[]>(KEYS.grammarProgress, []))
@@ -15,8 +20,10 @@ export function getCompletedLessons(): Set<string> {
  */
 export function markLessonCompleted(lessonId: string, completed = true): void {
   const lessons = getCompletedLessons()
-  if (completed) lessons.add(lessonId)
-  else lessons.delete(lessonId)
+  if (completed) {
+    lessons.add(lessonId)
+    recordStudyDay() // 取り消しは学習ではないので、完了したときだけその日を数える
+  } else lessons.delete(lessonId)
   saveJson(KEYS.grammarProgress, [...lessons])
   flushPush()
 }
@@ -33,6 +40,7 @@ export function getGrammarItemStats(): WordStats {
  */
 export function recordGrammarItemAnswer(questionId: string, correct: boolean): void {
   saveJson(KEYS.grammarItemStats, recordAnswer(getGrammarItemStats(), questionId, correct))
+  recordStudyDay()
 }
 
 export function getVocabStats(): WordStats {
@@ -56,21 +64,6 @@ export type VocabDay = {
 /** 保持する日数。1日1行なので4か月分でも数KB。 */
 const HISTORY_DAYS = 120
 
-function dateString(d: Date): string {
-  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
-}
-
-function todayString(): string {
-  return dateString(new Date())
-}
-
-/** YYYY-MM-DD を days 日ずらす。月末・うるう年は Date に任せる。 */
-export function shiftDate(date: string, days: number): string {
-  const d = new Date(`${date}T00:00:00`)
-  d.setDate(d.getDate() + days)
-  return dateString(d)
-}
-
 export function getVocabHistory(): VocabDay[] {
   const raw = loadJson<VocabDay[]>(KEYS.vocabDaily, [])
   return Array.isArray(raw) ? raw : [] // 旧形式({date,count})は1日分なので捨てる
@@ -90,6 +83,7 @@ export function recordVocabAnswer(stats: WordStats): void {
   if (last?.date === date) days[days.length - 1] = { date, count: last.count + 1, mastered }
   else days.push({ date, count: 1, mastered })
   saveJson(KEYS.vocabDaily, days.slice(-HISTORY_DAYS))
+  recordStudyDay()
 }
 
 /**

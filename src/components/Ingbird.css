@@ -1,0 +1,530 @@
+/* マスコット「イングバード」。体はCSSで色を付け、SVGのパーツを動かす。 */
+
+.ingbird {
+  display: block;
+  overflow: visible;
+}
+
+.ingbird-shadow {
+  fill: rgb(18 33 47 / 10%);
+}
+
+.ingbird-inner {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  animation: ingbird-bob 3.6s ease-in-out infinite;
+}
+
+.ingbird-body {
+  fill: #2f8f83;
+  stroke: #1f6b62;
+  stroke-width: 2;
+}
+
+.ingbird-belly {
+  fill: #fdf3dd;
+}
+
+.ingbird-wing {
+  fill: #1f6b62;
+}
+
+.ingbird-wing-left {
+  transform-box: fill-box;
+  transform-origin: right top;
+}
+
+.ingbird-wing-right {
+  transform-box: fill-box;
+  transform-origin: left top;
+}
+
+.ingbird-tail {
+  fill: #1f6b62;
+  stroke: #17564f;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
+.ingbird-eye {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ingbird-blink 5.4s ease-in-out infinite;
+}
+
+.ingbird-eye-white {
+  fill: #fff;
+}
+
+.ingbird-pupil {
+  fill: #12212f;
+}
+
+.ingbird-eye-spark {
+  fill: #fff;
+}
+
+.ingbird-cheek {
+  fill: #f0a48f;
+  opacity: 0.75;
+}
+
+.ingbird-beak {
+  fill: #e8a33d;
+  stroke: #c07f22;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
+.ingbird-cap {
+  fill: #1d4d70;
+  stroke: #173f5f;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
+.ingbird-cap-base {
+  fill: #173f5f;
+}
+
+.ingbird-tassel {
+  fill: none;
+  stroke: #d9a441;
+  stroke-linecap: round;
+  stroke-width: 2.4;
+}
+
+.ingbird-tassel-bead {
+  fill: #d9a441;
+}
+
+.ingbird-foot {
+  fill: none;
+  stroke: #d99a2b;
+  stroke-linecap: round;
+  stroke-width: 3.4;
+}
+
+.ingbird-sparkles {
+  fill: #e3b04f;
+  opacity: 0;
+}
+
+.ingbird-sparkles path {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.ingbird-sparkle-2 {
+  fill: #e08a76;
+}
+
+.ingbird-sparkle-3 {
+  fill: #7fb8c9;
+}
+
+/* うれしいとき: 羽をゆっくり動かす */
+[data-mood="happy"] .ingbird-wing-left {
+  animation: ingbird-flap-left 1.9s ease-in-out infinite alternate;
+}
+
+[data-mood="happy"] .ingbird-wing-right {
+  animation: ingbird-flap-right 1.9s ease-in-out infinite alternate;
+}
+
+/* 大喜び: 跳ねながら羽をばたつかせ、星がまたたく */
+[data-mood="cheer"] .ingbird-inner {
+  animation: ingbird-hop 1.05s ease-in-out infinite;
+}
+
+[data-mood="cheer"] .ingbird-wing-left {
+  animation: ingbird-flap-left 0.36s ease-in-out infinite alternate;
+}
+
+[data-mood="cheer"] .ingbird-wing-right {
+  animation: ingbird-flap-right 0.36s ease-in-out infinite alternate;
+}
+
+[data-mood="cheer"] .ingbird-sparkles path {
+  animation: ingbird-twinkle 1.4s ease-in-out infinite;
+}
+
+[data-mood="cheer"] .ingbird-sparkle-2 {
+  animation-delay: 0.3s;
+}
+
+[data-mood="cheer"] .ingbird-sparkle-3 {
+  animation-delay: 0.65s;
+}
+
+@keyframes ingbird-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes ingbird-blink {
+  0%,
+  91%,
+  100% {
+    transform: scaleY(1);
+  }
+
+  93%,
+  95% {
+    transform: scaleY(0.08);
+  }
+}
+
+@keyframes ingbird-flap-left {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(-24deg);
+  }
+}
+
+@keyframes ingbird-flap-right {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(24deg);
+  }
+}
+
+@keyframes ingbird-hop {
+  0%,
+  100% {
+    transform: translateY(0) scale(1, 1);
+  }
+
+  40% {
+    transform: translateY(-7px) scale(0.98, 1.03);
+  }
+
+  55% {
+    transform: translateY(0) scale(1.03, 0.97);
+  }
+}
+
+@keyframes ingbird-twinkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.5) rotate(0);
+  }
+
+  50% {
+    opacity: 0.95;
+    transform: scale(1) rotate(18deg);
+  }
+}
+
+/* ===== ホームのカード ===== */
+
+.ingbird-card {
+  position: relative;
+  display: flex;
+  gap: 1.4rem;
+  align-items: flex-start;
+  margin-bottom: 1.4rem;
+  padding: 1.5rem 1.7rem;
+  overflow: hidden;
+  background: linear-gradient(140deg, #f2faf7 0%, #fff 58%);
+  border: 1px solid #cfe6de;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.ingbird-card::after {
+  position: absolute;
+  right: -40px;
+  bottom: -55px;
+  width: 180px;
+  height: 180px;
+  background: var(--teal-soft);
+  border-radius: 50%;
+  content: "";
+  opacity: 0.7;
+}
+
+.ingbird-card-bird {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  flex: 0 0 auto;
+}
+
+.ingbird-name {
+  color: var(--teal);
+  font-size: 0.72rem;
+  font-weight: 760;
+  letter-spacing: 0.14em;
+}
+
+.ingbird-card-body {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  flex: 1;
+}
+
+.ingbird-card-kicker {
+  margin-bottom: 0.25rem;
+  color: var(--ink-500);
+  font-size: 0.78rem;
+  font-weight: 720;
+  letter-spacing: 0.08em;
+}
+
+.ingbird-card-title {
+  margin-bottom: 0.3rem;
+  color: var(--navy);
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+}
+
+.ingbird-card-message {
+  margin-bottom: 0.95rem;
+  color: var(--ink-650);
+}
+
+.ingbird-card-stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem 1.4rem;
+  padding-top: 0.8rem;
+  border-top: 1px dashed #cfe0da;
+}
+
+.ingbird-total {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  margin-bottom: 0;
+}
+
+.ingbird-total strong {
+  color: var(--teal);
+  font-family: var(--english);
+  font-size: 2.3rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.ingbird-total span {
+  color: var(--ink-650);
+  font-size: 0.88rem;
+  font-weight: 720;
+}
+
+.ingbird-today {
+  margin-bottom: 0;
+  color: var(--ink-650);
+  font-size: 0.88rem;
+  font-weight: 720;
+}
+
+.ingbird-today.done {
+  color: var(--teal);
+}
+
+.ingbird-meter {
+  margin-top: 0.85rem;
+}
+
+.ingbird-meter p {
+  margin-bottom: 0.35rem;
+  color: var(--ink-650);
+  font-size: 0.82rem;
+}
+
+.ingbird-meter .progress-bar {
+  height: 8px;
+  margin-bottom: 0;
+}
+
+.ingbird-meter .progress-fill {
+  background: linear-gradient(90deg, #2f8f83, #5cb8a4);
+}
+
+.ingbird-card-note {
+  margin: 0.85rem 0 0;
+  color: var(--ink-500);
+  font-size: 0.78rem;
+}
+
+.ingbird-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+/* ===== 学習した瞬間のメッセージ(全ページ共通) ===== */
+
+.ingbird-toast {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 60;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  width: min(392px, calc(100vw - 28px));
+  padding: 0.95rem 2.2rem 0.95rem 1rem;
+  background: #fff;
+  border: 1px solid #bfdcd4;
+  border-radius: 18px;
+  box-shadow: 0 18px 46px rgb(17 39 56 / 18%);
+  animation: ingbird-toast-in 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.25) both;
+}
+
+.ingbird-toast-bird {
+  flex: 0 0 auto;
+}
+
+.ingbird-toast-body {
+  min-width: 0;
+}
+
+.ingbird-toast-title {
+  margin-bottom: 0.15rem;
+  color: var(--navy);
+  font-size: 1.02rem;
+  font-weight: 800;
+}
+
+.ingbird-toast-message {
+  margin-bottom: 0.4rem;
+  color: var(--ink-650);
+  font-size: 0.85rem;
+  line-height: 1.65;
+}
+
+.ingbird-toast-total {
+  margin-bottom: 0;
+  color: var(--teal);
+  font-size: 0.78rem;
+  font-weight: 760;
+}
+
+.ingbird-toast-total strong {
+  font-family: var(--english);
+  font-size: 1rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.ingbird-toast-close {
+  position: absolute;
+  top: 0.45rem;
+  right: 0.5rem;
+  display: grid;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  place-items: center;
+  color: var(--ink-500);
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.ingbird-toast-close:hover {
+  color: var(--ink-950);
+  background: var(--canvas);
+}
+
+.ingbird-confetti {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.ingbird-confetti span {
+  position: absolute;
+  top: -14px;
+  display: block;
+  border-radius: 2px;
+  animation: ingbird-confetti-fall 1.7s ease-in both;
+}
+
+@keyframes ingbird-toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(26px) scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes ingbird-confetti-fall {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) rotate(0);
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(200px) rotate(320deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .ingbird-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 1.3rem 1.15rem;
+    text-align: center;
+  }
+
+  .ingbird-card-stats {
+    justify-content: center;
+  }
+
+  .ingbird-card-actions {
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ingbird *,
+  .ingbird *::before,
+  .ingbird *::after,
+  .ingbird-toast,
+  .ingbird-confetti span {
+    animation: none !important;
+  }
+
+  .ingbird-sparkles {
+    opacity: 0;
+  }
+}

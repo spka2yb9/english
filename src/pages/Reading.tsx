@@ -5,6 +5,7 @@ import { Quiz } from '../components/Quiz'
 import { findPassage, readingPassages } from '../content/reading'
 import type { ReadingPassage } from '../content/types'
 import { KEYS, loadJson, saveJson } from '../services/storage'
+import { recordStudyDay } from '../services/studyDays'
 import { flushPush } from '../services/sync'
 
 const LEVELS: ReadingPassage['level'][] = ['A2', 'B1', 'B2']
@@ -19,8 +20,10 @@ function getDone(): Set<string> {
  */
 function markPassageDone(passageId: string, done = true): void {
   const ids = getDone()
-  if (done) ids.add(passageId)
-  else ids.delete(passageId)
+  if (done) {
+    ids.add(passageId)
+    recordStudyDay() // 読了の取り消しは学習ではないので、読了したときだけその日を数える
+  } else ids.delete(passageId)
   saveJson(KEYS.readingDone, [...ids])
   flushPush()
 }
