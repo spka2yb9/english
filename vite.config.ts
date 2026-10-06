@@ -20,5 +20,8 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     setupFiles: ['./src/test/setup.ts'],
+    // CIの遅いマシンでも落ちないよう、既定のテストタイムアウトに余裕を持たせる。
+    // 特に全レッスンを走査するテスト(セクションQ&Aの評価)は重い。
+    testTimeout: 30_000,
   },
 })

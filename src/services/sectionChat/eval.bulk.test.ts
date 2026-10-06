@@ -103,6 +103,6 @@ describe('全レッスンのQA自己整合', () => {
       if (failures.length > 0) console.log(`BULK_FAILURES:\n${failures.join('\n')}`)
       expect(accuracy).toBeGreaterThanOrEqual(0.9)
     },
-    120_000,
+    240_000,
   )
 })

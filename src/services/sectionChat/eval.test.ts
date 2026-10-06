@@ -435,13 +435,20 @@ describe('判定精度の評価セット', () => {
     let passed = 0
     let total = 0
     const failures: string[] = []
+    // 索引の構築は重いのでレッスンごとに1回だけにして、ケース間は reset() で会話を区切る
+    const chats = new Map<string, ReturnType<typeof createSectionChat>>()
     for (const item of CASES) {
       const lesson = findLesson(item.id)
       if (!lesson) throw new Error(`レッスンが見つかりません: ${item.id}`)
-      const chat = createSectionChat(lesson, () => 0)
+      let chat = chats.get(item.id)
+      if (!chat) {
+        chat = createSectionChat(lesson, () => 0)
+        chats.set(item.id, chat)
+      }
+      chat.reset()
       item.steps.forEach((step, index) => {
         total += 1
-        const reply = chat.reply(step.q)
+        const reply = chat!.reply(step.q)
         if (!check(reply, step)) {
           const actual = reply.kind === 'answer' ? `${reply.intent}/${textOf(reply).replace(/\n/g, ' ').slice(0, 60)}` : 'fallback'
           failures.push(`${item.id} step${index + 1} "${step.q}" -> ${actual}`)
@@ -455,6 +462,6 @@ describe('判定精度の評価セット', () => {
     if (failures.length > 0) console.log(`FAILURES(${failures.length}):\n${failures.join('\n')}`)
     expect(accuracy).toBeGreaterThanOrEqual(0.9)
     },
-    30_000,
+    120_000,
   )
 })
