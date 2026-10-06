@@ -116,7 +116,7 @@ export function recordStudyDay(today: string = todayString()): StudyRecord {
 }
 
 /** 「5日ぶり」「1週間ぶり」「1か月ぶり」…の言い方。 */
-function describeGap(gap: number): string {
+export function describeGap(gap: number): string {
   if (gap < 7) return `${gap}日ぶり`
   if (gap < 30) return `${Math.floor(gap / 7)}週間ぶり`
   if (gap < 365) return `${Math.floor(gap / 30)}か月ぶり`

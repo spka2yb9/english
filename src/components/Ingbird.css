@@ -1039,6 +1039,166 @@
   font-weight: 720;
 }
 
+/* ===== タップで話す吹き出し ===== */
+
+.ingbird-talk-btn {
+  display: block;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ingbird-talk-btn:focus-visible {
+  outline: 3px solid rgb(47 143 131 / 45%);
+  outline-offset: 5px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .ingbird-talk-btn:hover {
+    transform: translateY(-3px);
+  }
+}
+
+.ingbird-talk-hint {
+  color: var(--ink-500);
+  font-size: 0.66rem;
+  font-weight: 680;
+  letter-spacing: 0.02em;
+}
+
+.ingbird-bubble-area {
+  position: relative;
+}
+
+.ingbird-bubble {
+  position: relative;
+  margin-bottom: 1rem;
+  padding: 0.8rem 1rem 0.75rem;
+  background: #fff;
+  border: 1px solid #bfdcd4;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgb(17 39 56 / 10%);
+  text-align: left;
+  animation: ingbird-bubble-in 0.32s cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
+}
+
+/* 吹き出しのしっぽ。回転した正方形の左上の角を、左(狭い画面では上)に向ける */
+.ingbird-bubble::before {
+  position: absolute;
+  top: 30px;
+  left: -6px;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-top: 1px solid #bfdcd4;
+  border-left: 1px solid #bfdcd4;
+  content: "";
+  transform: rotate(-45deg);
+}
+
+.ingbird-bubble-badge {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+  margin-bottom: 0.35rem;
+  color: var(--teal);
+  font-size: 0.72rem;
+  font-weight: 780;
+  letter-spacing: 0.06em;
+}
+
+.ingbird-bubble-scene {
+  padding: 0.1rem 0.5rem;
+  color: var(--ink-650);
+  background: var(--teal-soft);
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 720;
+  letter-spacing: 0.02em;
+}
+
+.ingbird-bubble-en {
+  margin-bottom: 0.2rem;
+  color: var(--navy);
+  font-family: var(--english);
+  font-size: 1.12rem;
+  font-weight: 760;
+  line-height: 1.45;
+}
+
+.ingbird-bubble-ja {
+  margin-bottom: 0.3rem;
+  color: var(--ink-950);
+  font-size: 0.9rem;
+  font-weight: 680;
+}
+
+.ingbird-bubble-note {
+  margin-bottom: 0;
+  color: var(--ink-500);
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.ingbird-bubble-text {
+  margin-bottom: 0;
+  color: var(--ink-950);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.ingbird-bubble-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+  margin-top: 0.6rem;
+  padding-top: 0.55rem;
+  border-top: 1px dashed #d8e8e2;
+}
+
+.ingbird-bubble-btn {
+  padding: 0.28rem 0.7rem;
+  color: var(--ink-650);
+  background: var(--canvas);
+  border: 1px solid #d3e5de;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 720;
+}
+
+.ingbird-bubble-btn:hover {
+  color: var(--teal);
+  border-color: #9fcfc3;
+}
+
+.ingbird-bubble-btn.is-quiet {
+  margin-left: auto;
+  padding: 0.28rem 0.55rem;
+  color: var(--ink-500);
+  background: transparent;
+  border-color: transparent;
+  font-size: 0.9rem;
+}
+
+@keyframes ingbird-bubble-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 .ingbird-card-body {
   position: relative;
   z-index: 1;
@@ -1284,6 +1444,14 @@
     text-align: center;
   }
 
+  /* 縦並びのときは、しっぽを上(鳥のいる向き)へ */
+  .ingbird-bubble::before {
+    top: -6px;
+    left: 50%;
+    margin-left: -6px;
+    transform: rotate(45deg);
+  }
+
   .ingbird-card-stats {
     justify-content: center;
   }
@@ -1299,6 +1467,7 @@
   .ingbird *::after,
   .ingbird-toast,
   .ingbird-confetti span,
+  .ingbird-bubble,
   .ingbird-card-bird::before {
     animation: none !important;
   }
