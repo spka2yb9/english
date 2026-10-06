@@ -133,7 +133,7 @@ export function IngbirdChat({
         aria-label="イングバードにこのセクションを質問する"
         onClick={open ? closeChat : openChat}
       >
-        <Ingbird mood={open ? 'happy' : 'idle'} size={44} decorative />
+        <Ingbird mood={open ? (thinking ? 'think' : 'happy') : 'idle'} size={44} decorative />
         <span className="ingbird-chat-badge" aria-hidden="true">
           ?
         </span>
@@ -149,7 +149,7 @@ export function IngbirdChat({
             aria-label={`イングバードに「${lesson.title}」を質問する`}
           >
             <header className="ingbird-chat-head">
-              <Ingbird mood="happy" size={40} decorative />
+              <Ingbird mood={thinking ? 'think' : 'happy'} size={40} decorative />
               <div className="ingbird-chat-head-text">
                 <p className="ingbird-chat-title">イングバードにきく</p>
                 <p className="ingbird-chat-sub">{lesson.title}</p>

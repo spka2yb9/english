@@ -6,7 +6,36 @@ import { IngbirdCard } from './IngbirdCard'
 import { IngbirdPraise } from './IngbirdPraise'
 import { todayString, shiftDate } from '../services/dates'
 import { KEYS, saveJson } from '../services/storage'
-import { recordStudyDay } from '../services/studyDays'
+import { recordStudyDay, type IngbirdMood } from '../services/studyDays'
+
+const ALL_MOODS: IngbirdMood[] = [
+  'idle',
+  'happy',
+  'cheer',
+  'party',
+  'proud',
+  'wave',
+  'curious',
+  'wow',
+  'sleepy',
+  'shy',
+  'think',
+  'sing',
+]
+
+const MOOD_PARTS = [
+  '.ingbird-brow',
+  '.ingbird-eye-arc',
+  '.ingbird-eye-lid',
+  '.ingbird-beak-lower',
+  '.ingbird-sparkles',
+  '.ingbird-hearts',
+  '.ingbird-notes',
+  '.ingbird-zzz',
+  '.ingbird-question',
+  '.ingbird-bang',
+  '.ingbird-thought',
+]
 
 beforeEach(() => {
   localStorage.clear()
@@ -32,6 +61,20 @@ describe('Ingbird', () => {
     expect(svg).toHaveAttribute('data-mood', 'cheer')
     expect(svg).toHaveAttribute('aria-hidden', 'true')
     expect(svg?.querySelector('.ingbird-sparkles')).not.toBeNull()
+  })
+
+  it('すべての気分を描けて、表情のパーツ(眉・まぶた・くちばし・飾り)を備える', () => {
+    for (const mood of ALL_MOODS) {
+      const { container, unmount } = render(<Ingbird mood={mood} />)
+      expect(container.querySelector('svg')).toHaveAttribute('data-mood', mood)
+      for (const part of MOOD_PARTS) expect(container.querySelector(part), `${mood}/${part}`).not.toBeNull()
+      unmount()
+    }
+  })
+
+  it('気分を指定しなくても描ける(いつもの表情)', () => {
+    const { container } = render(<Ingbird decorative />)
+    expect(container.querySelector('svg')).toHaveAttribute('data-mood', 'idle')
   })
 })
 
@@ -64,6 +107,25 @@ describe('IngbirdCard', () => {
     const { container } = renderCard()
     expect(container.querySelector('.ingbird-total')?.textContent).toBe('0日')
     expect(screen.getByText('今日はまだ、これから!')).toBeInTheDocument()
+  })
+
+  it('気分に合わせた表情とラベルを出し、お祝いの日はカードも祝う', () => {
+    saveJson(KEYS.studyDays, [todayString()])
+    const { container } = renderCard()
+    expect(screen.getByText('1日目、はじまった!')).toBeInTheDocument()
+    // Math.random は 0 固定なので、抽選は各候補の先頭になる
+    expect(container.querySelector('.ingbird-mood-party')).not.toBeNull()
+    expect(screen.getByText('お祝い')).toBeInTheDocument()
+    expect(container.querySelector('.ingbird-card')?.className).toContain('is-celebrating')
+  })
+
+  it('ふつうの日は控えめな表情で、お祝いクラスは付かない', () => {
+    const today = todayString()
+    saveJson(KEYS.studyDays, [shiftDate(today, -1), today])
+    const { container } = renderCard()
+    expect(container.querySelector('.ingbird-card')?.className).not.toContain('is-celebrating')
+    expect(screen.getByText('にっこり')).toBeInTheDocument()
+    expect(container.querySelector('.ingbird-mood-happy')).not.toBeNull()
   })
 })
 

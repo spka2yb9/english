@@ -134,3 +134,82 @@ describe('イングバードのほめ方', () => {
     expect(praise.title.length).toBeGreaterThan(0)
   })
 })
+
+describe('イングバードの気分と豊富な言い回し', () => {
+  const titlesFor = (make: (rng: () => number) => { title: string; mood: string }, samples = 20): { titles: Set<string>; moods: Set<string> } => {
+    const titles = new Set<string>()
+    const moods = new Set<string>()
+    for (let index = 0; index < samples; index += 1) {
+      const praise = make(() => index / samples)
+      titles.add(praise.title)
+      moods.add(praise.mood)
+    }
+    return { titles, moods }
+  }
+
+  it('今日ぶんの日は、多くの言い回しと気分から選ぶ', () => {
+    recordStudyDay('2026-09-10')
+    recordStudyDay('2026-09-11')
+    const status = getStudyStatus('2026-09-11')
+    const { titles, moods } = titlesFor((rng) => praiseFor(status, true, rng))
+    expect(titles.size).toBeGreaterThanOrEqual(10)
+    expect([...moods].every((mood) => ['cheer', 'happy', 'proud', 'sing'].includes(mood))).toBe(true)
+    expect(moods.size).toBeGreaterThanOrEqual(3)
+  })
+
+  it('0日の日は、はじめの1日を誘う候補をたくさん持つ', () => {
+    const status = getStudyStatus('2026-09-10')
+    const { titles, moods } = titlesFor((rng) => praiseFor(status, false, rng))
+    expect(titles.size).toBeGreaterThanOrEqual(8)
+    expect([...moods].every((mood) => ['curious', 'wave', 'happy', 'think'].includes(mood))).toBe(true)
+  })
+
+  it('少しあいた日も、責めずに誘う候補を持っている', () => {
+    recordStudyDay('2026-09-09')
+    const status = getStudyStatus('2026-09-10') // 1日あけて、今日はまだ
+    expect(status.daysSinceLast).toBe(1)
+    const { titles } = titlesFor((rng) => praiseFor(status, false, rng))
+    expect(titles.size).toBeGreaterThanOrEqual(8)
+  })
+
+  it('久しぶりの復帰は、どの言い回しでも「減らさない」ことを伝える', () => {
+    recordStudyDay('2026-09-01')
+    recordStudyDay('2026-09-10') // 9日ぶり
+    const status = getStudyStatus('2026-09-10')
+    expect(status.lastGap).toBe(9)
+    for (let index = 0; index < 20; index += 1) {
+      const praise = praiseFor(status, true, () => index / 20)
+      expect(praise.kind).toBe('return')
+      expect(praise.title).toContain('1週間ぶり')
+      expect(praise.message).toContain('減らさない')
+      expect(['wave', 'happy', 'proud']).toContain(praise.mood)
+    }
+  })
+
+  it('節目は何度でも特別で、言い回しも気分も複数ある', () => {
+    for (const day of ['2026-09-01', '2026-09-02', '2026-09-03', '2026-09-04']) recordStudyDay(day)
+    recordStudyDay('2026-09-05')
+    const status = getStudyStatus('2026-09-05')
+    const { titles } = titlesFor((rng) => praiseFor(status, true, rng))
+    expect(titles.size).toBeGreaterThanOrEqual(2)
+    for (let index = 0; index < 20; index += 1) {
+      const praise = praiseFor(status, true, () => index / 20)
+      expect(praise.kind).toBe('milestone')
+      expect(praise.title).toContain('5日目')
+      expect(['party', 'proud', 'cheer']).toContain(praise.mood)
+    }
+  })
+
+  it('復帰と節目が重なった日は、どの言い回しでも復帰を祝う', () => {
+    for (const day of ['2026-09-01', '2026-09-02', '2026-09-03', '2026-09-04']) recordStudyDay(day)
+    const status = recordStudyDay('2026-09-20').status // 16日ぶりに5日目
+    expect(status.totalDays).toBe(5)
+    expect(status.lastGap).toBe(16)
+    for (let index = 0; index < 20; index += 1) {
+      const praise = praiseFor(status, true, () => index / 20)
+      expect(praise.kind).toBe('milestone')
+      expect(praise.title).toContain('5日目')
+      expect(praise.message).toContain('復帰')
+    }
+  })
+})

@@ -1,7 +1,23 @@
 import { Link } from 'react-router-dom'
 import { Ingbird } from './Ingbird'
 import './Ingbird.css'
-import { MILESTONES, getStudyStatus, praiseFor } from '../services/studyDays'
+import { MILESTONES, getStudyStatus, praiseFor, type IngbirdMood } from '../services/studyDays'
+
+/** カードに添える、そのときの気分の短いラベル。 */
+const MOOD_LABELS: Record<IngbirdMood, string> = {
+  idle: 'のんびり',
+  happy: 'にっこり',
+  cheer: 'はりきり',
+  party: 'お祝い',
+  proud: 'どや顔',
+  wave: 'おかえり',
+  curious: 'きになる',
+  wow: 'びっくり',
+  sleepy: 'おやすみ',
+  shy: 'てれ',
+  think: '考え中',
+  sing: 'ごきげん',
+}
 
 /**
  * ホームのマスコットカード。数えるのは連続日数ではなく、学習した日の合計(トータル)。
@@ -16,10 +32,14 @@ export function IngbirdCard() {
   const ratio = next ? (status.totalDays - previous) / (next.at - previous) : 1
 
   return (
-    <section className="ingbird-card" aria-label="イングバードからのメッセージ">
-      <div className="ingbird-card-bird">
-        <Ingbird mood={praise.mood} size={128} decorative />
+    <section
+      className={`ingbird-card${praise.confetti ? ' is-celebrating' : ''}`}
+      aria-label="イングバードからのメッセージ"
+    >
+      <div className={`ingbird-card-bird ingbird-mood-${praise.mood}`}>
+        <Ingbird mood={praise.mood} size={132} decorative />
         <span className="ingbird-name">イングバード</span>
+        <span className="ingbird-mood-label">{MOOD_LABELS[praise.mood]}</span>
       </div>
       <div className="ingbird-card-body">
         <p className="ingbird-card-kicker">きみの学習日（トータル）</p>
