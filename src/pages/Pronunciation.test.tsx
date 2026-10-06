@@ -24,8 +24,10 @@ beforeEach(() => {
 
 describe('Pronunciation', () => {
   it('発音表の例語の音声を再生する', () => {
-    render(<Pronunciation />)
-    fireEvent.click(screen.getByRole('button', { name: '音声を再生: see' }))
+    const { container } = render(<Pronunciation />)
+    // 演習のお題が偶然同じ語になると、演習側にも同じ再生ボタンが出る。表セクション内だけを見る。
+    const table = within(container.querySelector('.ipa-section')!)
+    fireEvent.click(table.getByRole('button', { name: '音声を再生: see' }))
     expect(speakMock).toHaveBeenCalledWith('see', { rate: 1.0 })
   })
 })
