@@ -8,23 +8,6 @@ import { todayString, shiftDate } from '../services/dates'
 import { KEYS, saveJson } from '../services/storage'
 import { recordStudyDay, type IngbirdMood } from '../services/studyDays'
 
-const { speakMock, hasVoiceMock } = vi.hoisted(() => ({
-  speakMock: vi.fn(() => Promise.resolve()),
-  hasVoiceMock: vi.fn(() => false),
-}))
-
-vi.mock('../services/speech', () => ({
-  DEFAULT_LOCALE: 'en-US',
-  NORMAL_RATE: 1.0,
-  SLOW_RATE: 0.5,
-  speechService: {
-    isSupported: () => true,
-    hasVoice: (...args: unknown[]) => hasVoiceMock(...(args as [])),
-    speak: (...args: unknown[]) => speakMock(...(args as [])),
-    stop: vi.fn(),
-  },
-}))
-
 const ALL_MOODS: IngbirdMood[] = [
   'idle',
   'happy',
@@ -57,9 +40,6 @@ const MOOD_PARTS = [
 beforeEach(() => {
   localStorage.clear()
   vi.spyOn(Math, 'random').mockReturnValue(0) // 言い回しの抽選を固定する
-  speakMock.mockClear()
-  hasVoiceMock.mockClear()
-  hasVoiceMock.mockReturnValue(false)
 })
 
 afterEach(() => {
@@ -148,35 +128,30 @@ describe('IngbirdCard', () => {
     expect(container.querySelector('.ingbird-mood-happy')).not.toBeNull()
   })
 
-  it('タップすると吹き出しでひとことを話し、もう一度押すと次に変わる', async () => {
-    const { container } = renderCard()
-    const bird = screen.getByRole('button', { name: 'イングバードに話しかける' })
-    expect(bird).toHaveAttribute('aria-expanded', 'false')
-    expect(container.querySelector('.ingbird-bubble')).toBeNull()
-
-    fireEvent.click(bird)
-    // Math.random は 0 固定なので、最初は励ましの先頭のセリフ
-    await screen.findByText(/今日もここに来た/)
-    expect(bird).toHaveAttribute('aria-expanded', 'true')
-    expect(container.querySelector('.ingbird-bubble-text')?.textContent).toContain('今日もここに来た')
+  it('画面を開くと、今日ぶんの進捗に合わせたひとことを自動で出す', async () => {
+    const today = todayString()
+    saveJson(KEYS.studyDays, [shiftDate(today, -1), today])
+    renderCard()
+    // Math.random は 0 固定なので、本文の先頭にトータル日数が入る
+    const bubble = await screen.findByText(/トータル2日/)
+    expect(bubble.closest('.ingbird-bubble')).not.toBeNull()
     expect(screen.getByText('イングバードのひとこと')).toBeInTheDocument()
-    expect(screen.getByText('もう一度タップで次のひとこと')).toBeInTheDocument()
-
-    const before = container.querySelector('.ingbird-bubble')?.textContent
-    fireEvent.click(screen.getByRole('button', { name: '別のひとこと' }))
-    await waitFor(() => {
-      expect(container.querySelector('.ingbird-bubble')?.textContent).not.toBe(before)
-    })
-
-    fireEvent.click(screen.getByRole('button', { name: '吹き出しを閉じる' }))
-    expect(container.querySelector('.ingbird-bubble')).toBeNull()
-    expect(bird).toHaveAttribute('aria-expanded', 'false')
+    expect(screen.getByRole('button', { name: 'イングバードに話しかける' })).toHaveAttribute('aria-expanded', 'true')
   })
 
-  it('英会話フレーズは英文と和訳を出し、英語で自動的に読み上げる', async () => {
+  it('まだ1日も学習していなくても、開いた時点ではじまりのひとことを出す', async () => {
     const { container } = renderCard()
+    await screen.findByText(/まだ0日でも大丈夫/)
+    // 初期表示の気分はカードのほめ言葉に合わせる(0日目の「きになる」)
+    expect(container.querySelector('.ingbird-mood-curious')).not.toBeNull()
+  })
+
+  it('バードをタップすると次のひとことに変わり、閉じられる', async () => {
+    const { container } = renderCard()
+    await screen.findByText(/まだ0日でも大丈夫/)
     const bird = screen.getByRole('button', { name: 'イングバードに話しかける' })
-    let previous = ''
+
+    let previous = container.querySelector('.ingbird-bubble')?.textContent ?? ''
     for (let i = 0; i < 6 && !container.querySelector('.ingbird-bubble-en'); i += 1) {
       fireEvent.click(bird)
       await waitFor(() => {
@@ -191,31 +166,10 @@ describe('IngbirdCard', () => {
     expect(container.querySelector('.ingbird-bubble-ja')?.textContent?.length).toBeGreaterThan(1)
     expect(container.querySelector('.ingbird-bubble-note')?.textContent?.length).toBeGreaterThan(5)
     expect(screen.getByText('英会話フレーズ')).toBeInTheDocument()
-    expect(speakMock).toHaveBeenCalledWith(english?.textContent, { locale: 'en-US' })
-    expect(screen.getByRole('button', { name: /もう一度聞く/ })).toBeInTheDocument()
-  })
 
-  it('日本語の音声がない環境では、日本語のセリフを勝手に読み上げない', async () => {
-    renderCard()
-    fireEvent.click(screen.getByRole('button', { name: 'イングバードに話しかける' }))
-    await screen.findByText(/今日もここに来た/)
-    expect(speakMock).not.toHaveBeenCalled()
-    // 押しても読めない「よみあげ」は出さない
-    expect(screen.queryByRole('button', { name: /よみあげ/ })).toBeNull()
-  })
-
-  it('日本語の音声がある環境では、日本語のセリフも読み上げる', async () => {
-    hasVoiceMock.mockReturnValue(true)
-    renderCard()
-    fireEvent.click(screen.getByRole('button', { name: 'イングバードに話しかける' }))
-    await screen.findByText(/今日もここに来た/)
-    expect(speakMock).toHaveBeenCalledWith(expect.stringContaining('今日もここに来た'), { locale: 'ja-JP' })
-    expect(screen.getByRole('button', { name: /よみあげ/ })).toBeInTheDocument()
-
-    // よみあげボタンで、同じセリフをもう一度読める
-    speakMock.mockClear()
-    fireEvent.click(screen.getByRole('button', { name: /よみあげ/ }))
-    expect(speakMock).toHaveBeenCalledWith(expect.stringContaining('今日もここに来た'), { locale: 'ja-JP' })
+    fireEvent.click(screen.getByRole('button', { name: '吹き出しを閉じる' }))
+    expect(container.querySelector('.ingbird-bubble')).toBeNull()
+    expect(bird).toHaveAttribute('aria-expanded', 'false')
   })
 })
 

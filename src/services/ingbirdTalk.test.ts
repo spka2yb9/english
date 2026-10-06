@@ -7,6 +7,7 @@ import { ENCOURAGE_BODIES } from '../content/ingbird/encouragement'
 import {
   createTalkState,
   encourageBranch,
+  firstTalk,
   nextTalk,
   timeBucket,
   type TalkState,
@@ -68,6 +69,22 @@ describe('つぶやきの抽選', () => {
     const line = nextTalk(createTalkState(), status())
     expect(line.kind).toBe('encourage')
     expect(line.text.length).toBeGreaterThan(5)
+  })
+
+  it('画面を開いたときのひとことは、進捗に合わせた本文から必ず選ぶ', () => {
+    const fresh = status({ totalDays: 0, studiedToday: false, lastDate: null, daysSinceLast: null, lastGap: null })
+    const first = firstTalk(createTalkState(), fresh, mulberry32(1))
+    expect(first.kind).toBe('encourage')
+    expect(first.id.startsWith('c-noDays-')).toBe(true)
+    expect(first.text.includes('{')).toBe(false)
+
+    const done = status({ totalDays: 7, studiedToday: true, lastGap: 1 })
+    const second = firstTalk(createTalkState(), done, mulberry32(2))
+    expect(second.id.startsWith('c-todayDone-')).toBe(true)
+
+    const back = status({ totalDays: 30, studiedToday: false, daysSinceLast: 10, lastGap: 1 })
+    const third = firstTalk(createTalkState(), back, mulberry32(3))
+    expect(third.id.startsWith('c-back-')).toBe(true)
   })
 
   it('励まし・フレーズ・コツの3種類が混ざり、偏りすぎない', () => {

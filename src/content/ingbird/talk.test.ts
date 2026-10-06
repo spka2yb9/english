@@ -39,7 +39,7 @@ describe('イングバードのつぶやきコーパス', () => {
     }
   })
 
-  it('フレーズは英文・和訳・使いどころがそろい、IDが一意で、読み上げられる', () => {
+  it('フレーズは英文・和訳・使いどころがそろい、IDが一意で、文として整っている', () => {
     const ids = new Set<string>()
     const english = new Set<string>()
     const japanese = new Set<string>()
@@ -53,7 +53,7 @@ describe('イングバードのつぶやきコーパス', () => {
       english.add(phrase.en)
       expect(japanese.has(phrase.ja), `${phrase.ja} が重複`).toBe(false)
       japanese.add(phrase.ja)
-      // TTSに渡せない記号が無いこと(文末の句読点・禁止文字)
+      // 文として整っていること(文末の句読点・余計な記号の混入なし)
       expect(checkAudioText(phrase.en, phrase.id)).toEqual([])
     }
   })

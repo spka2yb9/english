@@ -9,11 +9,6 @@ export type SpeechOptions = {
 
 export interface SpeechService {
   isSupported(): boolean
-  /**
-   * その言語の音声が使えるか。日本語のつぶやきを自動で読むかの判断に使う。
-   * 音声一覧がまだ読み込まれていない環境では false になることがある。
-   */
-  hasVoice?(locale: string): boolean
   /** 再生開始。既存の再生は停止する。終了(またはキャンセル)時に resolve。 */
   speak(text: string, options?: SpeechOptions): Promise<void>
   stop(): void
@@ -34,12 +29,6 @@ class WebSpeechService implements SpeechService {
       'speechSynthesis' in window &&
       typeof SpeechSynthesisUtterance !== 'undefined'
     )
-  }
-
-  hasVoice(locale: string): boolean {
-    if (!this.isSupported()) return false
-    const prefix = locale.split('-')[0].toLowerCase()
-    return window.speechSynthesis.getVoices().some((voice) => voice.lang.replace('_', '-').toLowerCase().startsWith(prefix))
   }
 
   private pickVoice(locale: string): SpeechSynthesisVoice | null {

@@ -1,12 +1,11 @@
-import { useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Ingbird } from './Ingbird'
 import './Ingbird.css'
 import { MILESTONES, getStudyStatus, praiseFor, type IngbirdMood } from '../services/studyDays'
-import { speechService } from '../services/speech'
 import type { TalkLine } from '../content/ingbird/types'
 
-/** つぶやきのコーパスは大きいので、最初のタップまで読み込まない。 */
+/** つぶやきのコーパスは大きいので、画面を開いてから読み込む。 */
 type TalkModule = typeof import('../services/ingbirdTalk')
 
 /** カードに添える、そのときの気分の短いラベル。 */
@@ -31,62 +30,67 @@ const KIND_LABELS: Record<TalkLine['kind'], string> = {
   phrase: '英会話フレーズ',
 }
 
-/** つぶやきを読み上げる文とロケール。フレーズ以外は日本語で読む。 */
-function speechOf(talk: TalkLine): { text: string; locale: string } {
-  return talk.speech ?? { text: talk.text, locale: 'ja-JP' }
-}
-
 /**
  * ホームのマスコットカード。数えるのは連続日数ではなく、学習した日の合計(トータル)。
  * 久しぶりの日も、まだ学習していない日も、責めずに「来たこと」からほめる。
  *
- * イングバードをタップすると吹き出しが出て、励まし・学習のコツ・英会話フレーズを
- * 1つずつ話す。話した言葉は、日本語の音声があれば読み上げる。
+ * 画面を開くと、そのときの進捗に合わせたひとことを吹き出しで自動的に話す。
+ * 吹き出しはカードの内容に重ねて出すので、レイアウトは動かない。
+ * イングバードをタップすると次のひとこと(励まし・コツ・英会話フレーズ)に変わる。
  */
 export function IngbirdCard() {
   // カードのほめ言葉は表示中ずっと同じにする(再描画のたびに抽選し直さない)。
   const [status] = useState(() => getStudyStatus())
   const [praise] = useState(() => praiseFor(status))
   const [talk, setTalk] = useState<TalkLine | null>(null)
+  const [talkMood, setTalkMood] = useState<IngbirdMood | null>(null)
   const [talkCount, setTalkCount] = useState(0)
   const [thinking, setThinking] = useState(false)
   const talkModule = useRef<TalkModule | null>(null)
   const talkState = useRef<ReturnType<TalkModule['createTalkState']> | null>(null)
   const loading = useRef(false)
+  const autoTalked = useRef(false)
 
   const { next } = status
   // 直前の節目から次の節目までを1本のバーにする(0日目は0→1日目の区間)
   const previous = MILESTONES.filter((milestone) => milestone <= status.totalDays).at(-1) ?? 0
   const ratio = next ? (status.totalDays - previous) / (next.at - previous) : 1
-  const mood = talk?.mood ?? (thinking ? 'think' : praise.mood)
+  const mood = talkMood ?? (thinking ? 'think' : praise.mood)
 
-  function speak(line: TalkLine) {
-    if (!speechService.isSupported()) return
-    const { text, locale } = speechOf(line)
-    // 日本語の声が入っていない環境で、無理に日本語を読ませない。
-    if (!locale.startsWith('en') && !(speechService.hasVoice?.(locale) ?? false)) return
-    void speechService.speak(text, { locale })
-  }
+  // status と praise は表示中変わらないので、loadTalk は実質的に固定される。
+  const loadTalk = useCallback(
+    async (first: boolean) => {
+      if (loading.current) return
+      loading.current = true
+      // 初期表示は待たせない(考え中の顔に切り替えず、カードの気分のまま読み込む)
+      if (!first) setThinking(true)
+      try {
+        if (!talkModule.current) talkModule.current = await import('../services/ingbirdTalk')
+        const module = talkModule.current
+        if (!talkState.current) talkState.current = module.createTalkState()
+        const line = first
+          ? module.firstTalk(talkState.current, status)
+          : module.nextTalk(talkState.current, status)
+        // 初期表示はカードの気分(お祝いなど)をそのまま使う。タップしたときは、ひとことに合わせる。
+        setTalkMood(first ? praise.mood : line.mood)
+        setTalk(line)
+        setTalkCount((count) => count + 1)
+      } catch {
+        // コーパスを読み込めない環境では何も話さない(ホームの操作は壊さない)
+      } finally {
+        loading.current = false
+        setThinking(false)
+      }
+    },
+    [status, praise.mood],
+  )
 
-  async function handleTalk() {
-    if (loading.current) return
-    loading.current = true
-    setThinking(true)
-    try {
-      if (!talkModule.current) talkModule.current = await import('../services/ingbirdTalk')
-      const module = talkModule.current
-      if (!talkState.current) talkState.current = module.createTalkState()
-      const line = module.nextTalk(talkState.current, status)
-      setTalk(line)
-      setTalkCount((count) => count + 1)
-      speak(line)
-    } catch {
-      // コーパスを読み込めない環境では何も話さない(ホームの操作は壊さない)
-    } finally {
-      loading.current = false
-      setThinking(false)
-    }
-  }
+  // 画面を開いたときの初期表示。StrictMode の二重実行でも1回だけにする。
+  useEffect(() => {
+    if (autoTalked.current) return
+    autoTalked.current = true
+    void loadTalk(true)
+  }, [loadTalk])
 
   return (
     <section
@@ -97,20 +101,20 @@ export function IngbirdCard() {
         <button
           type="button"
           className="ingbird-talk-btn"
-          onClick={handleTalk}
+          onClick={() => void loadTalk(false)}
           aria-expanded={talk !== null}
           aria-controls="ingbird-talk"
           aria-label="イングバードに話しかける"
         >
-          <Ingbird mood={mood} size={132} decorative />
+          <Ingbird mood={mood} size={145} decorative />
         </button>
         <span className="ingbird-name">イングバード</span>
         <span className="ingbird-mood-label">{MOOD_LABELS[mood]}</span>
-        <span className="ingbird-talk-hint">{talk ? 'もう一度タップで次のひとこと' : 'タップでひとこと'}</span>
+        <span className="ingbird-talk-hint">タップで次のひとこと</span>
       </div>
 
       <div className="ingbird-card-body">
-        {/* 読み上げ用の領域は常に置き、中身だけを差し替えて通知されるようにする */}
+        {/* 読み上げ機に届ける領域は常に置き、中身だけを差し替える */}
         <div className="ingbird-bubble-area" id="ingbird-talk" aria-live="polite">
           {talk && (
             <div className="ingbird-bubble" key={talkCount} data-kind={talk.kind}>
@@ -130,14 +134,6 @@ export function IngbirdCard() {
                 <p className="ingbird-bubble-text">{talk.text}</p>
               )}
               <div className="ingbird-bubble-actions">
-                {speechService.isSupported() && (talk.kind === 'phrase' || (speechService.hasVoice?.('ja-JP') ?? false)) && (
-                  <button type="button" className="ingbird-bubble-btn" onClick={() => speak(talk)}>
-                    {talk.kind === 'phrase' ? '🔊 もう一度聞く' : '🔊 よみあげ'}
-                  </button>
-                )}
-                <button type="button" className="ingbird-bubble-btn" onClick={handleTalk}>
-                  別のひとこと
-                </button>
                 <button
                   type="button"
                   className="ingbird-bubble-btn is-quiet"

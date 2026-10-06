@@ -132,21 +132,7 @@ function nextKind(state: TalkState, rng: () => number): TalkKind {
   return kind
 }
 
-function encourageLine(state: TalkState, status: StudyStatus, hour: number, rng: () => number): TalkLine {
-  const mood = pickMood('encourage', rng)
-  const source = ENCOURAGE_SOURCES[draw(state, 'encourage-source', ENCOURAGE_SOURCES.length, rng)]
-
-  if (source === 'greeting') {
-    const bucket = timeBucket(hour)
-    const index = draw(state, `greeting-${bucket}`, TIME_GREETINGS[bucket].length, rng)
-    return { id: `g-${bucket}-${index + 1}`, kind: 'encourage', mood, text: TIME_GREETINGS[bucket][index] }
-  }
-
-  if (source === 'line') {
-    const index = draw(state, 'encourage-line', ENCOURAGE_LINES.length, rng)
-    return { id: `e${index + 1}`, kind: 'encourage', mood, text: ENCOURAGE_LINES[index] }
-  }
-
+function composedEncourage(state: TalkState, status: StudyStatus, rng: () => number, mood: IngbirdMood): TalkLine {
   const branch = encourageBranch(status)
   const bodies = ENCOURAGE_BODIES[branch]
   const values: Record<string, string> = {
@@ -169,6 +155,34 @@ function encourageLine(state: TalkState, status: StudyStatus, hour: number, rng:
 
   const closing = ENCOURAGE_CLOSINGS[draw(state, 'encourage-closing', ENCOURAGE_CLOSINGS.length, rng)]
   return { id: `c-${branch}-${index + 1}`, kind: 'encourage', mood, text: `${body} ${closing}` }
+}
+
+function encourageLine(state: TalkState, status: StudyStatus, hour: number, rng: () => number): TalkLine {
+  const mood = pickMood('encourage', rng)
+  const source = ENCOURAGE_SOURCES[draw(state, 'encourage-source', ENCOURAGE_SOURCES.length, rng)]
+
+  if (source === 'greeting') {
+    const bucket = timeBucket(hour)
+    const index = draw(state, `greeting-${bucket}`, TIME_GREETINGS[bucket].length, rng)
+    return { id: `g-${bucket}-${index + 1}`, kind: 'encourage', mood, text: TIME_GREETINGS[bucket][index] }
+  }
+
+  if (source === 'line') {
+    const index = draw(state, 'encourage-line', ENCOURAGE_LINES.length, rng)
+    return { id: `e${index + 1}`, kind: 'encourage', mood, text: ENCOURAGE_LINES[index] }
+  }
+
+  return composedEncourage(state, status, rng, mood)
+}
+
+/**
+ * 画面を開いたときの最初のひとこと。進捗に合わせて組み立てた本文から必ず選ぶ。
+ * タップして聞く場合は nextTalk を使う。
+ */
+export function firstTalk(state: TalkState, status: StudyStatus, rng: () => number = Math.random): TalkLine {
+  state.started = true
+  state.lastKind = 'encourage'
+  return composedEncourage(state, status, rng, pickMood('encourage', rng))
 }
 
 /**
