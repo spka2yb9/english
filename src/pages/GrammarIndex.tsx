@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { GrammarPatternOverview } from '../components/GrammarPatternOverview'
 import { grammarRoadmap } from '../content/grammar/roadmap'
 import { LEVEL_ORDER, allLessons, unitsByLevel } from '../content/grammar'
 import { getCompletedLessons } from '../services/progress'
@@ -34,6 +35,10 @@ export function GrammarIndex() {
   return (
     <div className="page">
       <h1>英文法</h1>
+      <p className="page-lead">
+        英文は「主語 + 動詞」を軸に組み上がっています。まずは5文型の見取り図で骨組みを確認し、
+        レベル別のセクションへ進みましょう。
+      </p>
       <p className="grammar-progress-line">
         英文法 {completedCount} / {allLessons.length} セクション完了
       </p>
@@ -50,6 +55,8 @@ export function GrammarIndex() {
           {exportError}
         </p>
       )}
+
+      <GrammarPatternOverview />
 
       <Link className="roadmap-cta" to="/grammar/roadmap" aria-labelledby="roadmap-cta-heading">
         <span className="roadmap-cta-body">

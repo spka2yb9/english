@@ -558,7 +558,7 @@ export const u29: GrammarUnit = {
           ],
           correctIndex: 1,
           explanation: 'essential / important / necessary などのあとの that節では、主語が三人称単数でも動詞を原形にします。',
-          choiceNotes: ['この構文では三単現の s を付けません。', null, '過去形は使いません。', '進行形はこの構文では使いません。'],
+          choiceNotes: ['イギリス英語では wears も見られますが、アメリカ英語では原形 wear が標準です。', null, '過去形は使いません。', '進行形はこの構文では使いません。'],
           audioEn: 'It is essential that every visitor wear a badge while inside the research building.',
         },
         {

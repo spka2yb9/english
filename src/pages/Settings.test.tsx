@@ -57,6 +57,19 @@ describe('Settings', () => {
     expect(localStorage.getItem(KEYS.grammarProgress)).not.toBeNull()
   })
 
+  it('3分間Englishの完了も単独でリセットできる', () => {
+    saveJson(KEYS.threeMinuteProgress, ['u01-l1'])
+    saveJson(KEYS.grammarProgress, ['u01-l1'])
+
+    renderPage()
+    fireEvent.click(screen.getByRole('checkbox', { name: '3分間English' }))
+    fireEvent.click(screen.getByRole('button', { name: '選んだ進捗をリセットする' }))
+    fireEvent.click(screen.getByRole('button', { name: 'リセットする' }))
+
+    expect(localStorage.getItem(KEYS.threeMinuteProgress)).toBeNull()
+    expect(localStorage.getItem(KEYS.grammarProgress)).not.toBeNull()
+  })
+
   it('選んだエリアだけを消し、ほかのエリアと同期の設定は残す', () => {
     saveJson(KEYS.grammarProgress, ['u01-l1'])
     saveJson(KEYS.grammarItemStats, { 'u01-l1-q1': { seen: 1 } })

@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
 import { IngbirdCard } from '../components/IngbirdCard'
 import { LearningIcon } from '../components/LearningIcon'
-import { grammarLessonSummaries, readingPassageCount, vocabularyCount } from '../content/summary'
-import { getCompletedLessons, getTodayVocabCount, getVocabStats } from '../services/progress'
+import { readingPassageCount, vocabularyCount } from '../content/summary'
+import { getTodayVocabCount, getVocabStats } from '../services/progress'
 import { SESSION_SIZE } from '../services/vocabSelection'
 
 /**
@@ -12,10 +12,11 @@ import { SESSION_SIZE } from '../services/vocabSelection'
  * カウンタ2つのために文法・語彙の全チャンク(gzip 約700KB)がトップページに乗るため。
  */
 export function Dashboard() {
-  const completed = getCompletedLessons()
-  const totalLessons = grammarLessonSummaries.length
-  const completedCount = grammarLessonSummaries.filter((l) => completed.has(l.id)).length
-  const nextGrammar = grammarLessonSummaries.find((l) => !completed.has(l.id))
+  // 英文法ページは一時的に非公開。再開するときは以下の集計とカードを戻す。
+  // const completed = getCompletedLessons()
+  // const totalLessons = grammarLessonSummaries.length
+  // const completedCount = grammarLessonSummaries.filter((l) => completed.has(l.id)).length
+  // const nextGrammar = grammarLessonSummaries.find((l) => !completed.has(l.id))
 
   const stats = getVocabStats()
   const statEntries = Object.values(stats)
@@ -31,6 +32,7 @@ export function Dashboard() {
       <IngbirdCard />
 
       <div className="dash-grid">
+        {/* 英文法ページは一時的に非公開。再開するときはこのカードを戻す。
         <Link to="/grammar" className="dash-card">
           <h2><span className="dash-title-icon"><LearningIcon kind="grammar" /></span>英文法</h2>
           <p className="dash-stat">
@@ -48,6 +50,7 @@ export function Dashboard() {
             <p className="dash-next">すべてのセクションを完了しました!</p>
           )}
         </Link>
+        */}
 
         <Link to="/vocabulary" className="dash-card">
           <h2><span className="dash-title-icon"><LearningIcon kind="vocabulary" /></span>英単語</h2>

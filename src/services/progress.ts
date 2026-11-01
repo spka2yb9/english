@@ -28,6 +28,21 @@ export function markLessonCompleted(lessonId: string, completed = true): void {
   flushPush()
 }
 
+export function getThreeMinuteCompleted(): Set<string> {
+  return new Set(loadJson<string[]>(KEYS.threeMinuteProgress, []))
+}
+
+/** 3分間English の1話を完了にする。文法の完了とは別に数える。 */
+export function markThreeMinuteCompleted(lessonId: string, completed = true): void {
+  const lessons = getThreeMinuteCompleted()
+  if (completed) {
+    lessons.add(lessonId)
+    recordStudyDay()
+  } else lessons.delete(lessonId)
+  saveJson(KEYS.threeMinuteProgress, [...lessons])
+  flushPush()
+}
+
 export function getGrammarItemStats(): WordStats {
   return loadJson<WordStats>(KEYS.grammarItemStats, {})
 }

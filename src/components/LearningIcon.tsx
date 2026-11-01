@@ -2,6 +2,7 @@ type IconKind =
   | 'home'
   | 'pronunciation'
   | 'grammar'
+  | 'three-minute'
   | 'vocabulary'
   | 'practice'
   | 'reading'
@@ -31,6 +32,13 @@ export function LearningIcon({ kind, size = 22 }: { kind: IconKind; size?: numbe
       )}
       {kind === 'grammar' && (
         <path d="M4.3 4.2h5.4A2.3 2.3 0 0 1 12 6.5v13a2.3 2.3 0 0 0-2.3-2.3H4.3zM19.7 4.2h-5.4A2.3 2.3 0 0 0 12 6.5v13a2.3 2.3 0 0 1 2.3-2.3h5.4z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+      )}
+      {kind === 'three-minute' && (
+        <>
+          <path d="M4 5.4h11.2a2.8 2.8 0 0 1 2.8 2.8v5.2a2.8 2.8 0 0 1-2.8 2.8H9.3L5.2 19v-3.1A2.8 2.8 0 0 1 4 13.4z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+          <path d="M7.4 9.2h9.1M7.4 12.4h5.8" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+          <circle cx="18.6" cy="5.6" r="2.6" fill="currentColor" />
+        </>
       )}
       {kind === 'vocabulary' && (
         <>

@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, waitFor } from '@testing-library/react'
+import { fireEvent, render, screen, waitFor, within } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { Ingbird } from './Ingbird'
@@ -7,6 +7,9 @@ import { IngbirdPraise } from './IngbirdPraise'
 import { todayString, shiftDate } from '../services/dates'
 import { KEYS, saveJson } from '../services/storage'
 import { recordStudyDay, type IngbirdMood } from '../services/studyDays'
+import { EVOLUTIONS } from '../services/ingbirdEvolution'
+import { DEFAULT_OUTFIT, OUTFIT_ITEMS, OUTFIT_SLOT_ORDER, type IngbirdOutfit } from '../content/ingbird/outfits'
+import { getOutfit, saveOutfit } from '../services/ingbirdWardrobe'
 
 const ALL_MOODS: IngbirdMood[] = [
   'idle',
@@ -78,6 +81,102 @@ describe('Ingbird', () => {
   })
 })
 
+describe('Ingbird の進化', () => {
+  const THRESHOLDS: Record<string, number> = {
+    aura: 1,
+    rocks: 2,
+    crest: 2,
+    embers: 3,
+    lightning: 3,
+    'evolution-eyes': 4,
+    'halo-ring': 5,
+  }
+
+  it('0〜5のすべての段階を描けて、段階に応じたパーツが点く', () => {
+    for (const info of EVOLUTIONS) {
+      const { container, unmount } = render(<Ingbird evolution={info.stage} />)
+      expect(container.querySelector('svg')).toHaveAttribute('data-evolution', String(info.stage))
+      for (const [part, threshold] of Object.entries(THRESHOLDS)) {
+        const node = container.querySelector(`.ingbird-${part}`)
+        expect(node, `${info.stage}/${part}`).not.toBeNull()
+        expect(node?.classList.contains('is-on'), `${info.stage}/${part} の点灯`).toBe(info.stage >= threshold)
+      }
+      unmount()
+    }
+  })
+
+  it('進化を指定しなければ、ふつうの姿', () => {
+    const { container } = render(<Ingbird decorative />)
+    expect(container.querySelector('svg')).toHaveAttribute('data-evolution', '0')
+    expect(container.querySelector('.ingbird-aura')?.classList.contains('is-on')).toBe(false)
+  })
+})
+
+describe('Ingbird の着せかえ', () => {
+  const FULL: IngbirdOutfit = {
+    glasses: 'sunglasses',
+    hat: 'crown',
+    effect: 'sakura',
+    accessory: 'scarf',
+    shoes: 'sneakers',
+  }
+
+  it('メガネ・帽子・小物・エフェクトを描き分ける', () => {
+    const { container } = render(<Ingbird outfit={FULL} />)
+    const svg = container.querySelector('svg')
+    expect(svg).toHaveAttribute('data-glasses', 'sunglasses')
+    expect(svg).toHaveAttribute('data-hat', 'crown')
+    expect(svg).toHaveAttribute('data-effect', 'sakura')
+    expect(svg).toHaveAttribute('data-accessory', 'scarf')
+    expect(svg).toHaveAttribute('data-shoes', 'sneakers')
+    expect(container.querySelector('.ingbird-glasses-sunglasses')).not.toBeNull()
+    expect(container.querySelector('.ingbird-hat-crown')).not.toBeNull()
+    expect(container.querySelector('.ingbird-fx-sakura')).not.toBeNull()
+    expect(container.querySelector('.ingbird-scarf-group')).not.toBeNull()
+    expect(container.querySelector('.ingbird-shoes-sneakers')).not.toBeNull()
+    // 王冠をかぶったら学帽は消える
+    expect(container.querySelector('.ingbird-cap')).toBeNull()
+  })
+
+  it('すべての着せかえアイテムを描ける', () => {
+    const prefix = {
+      glasses: 'ingbird-glasses',
+      hat: 'ingbird-hat',
+      effect: 'ingbird-fx',
+      accessory: 'ingbird-accessory',
+      shoes: 'ingbird-shoes',
+    } as const
+    for (const slot of OUTFIT_SLOT_ORDER) {
+      for (const item of OUTFIT_ITEMS[slot]) {
+        if (item.id === 'none' || (slot === 'hat' && item.id === 'grad')) continue
+        const outfit = { ...DEFAULT_OUTFIT, [slot]: item.id } as IngbirdOutfit
+        const { container, unmount } = render(<Ingbird outfit={outfit} />)
+        expect(container.querySelector(`.${prefix[slot]}-${item.id}`), `${slot}/${item.id}`).not.toBeNull()
+        unmount()
+      }
+    }
+  })
+
+  it('帽子なしでは学帽も消え、メガネなしでは眼鏡パーツが出ない', () => {
+    const { container } = render(
+      <Ingbird outfit={{ glasses: 'none', hat: 'none', effect: 'none', accessory: 'none', shoes: 'none' }} />,
+    )
+    expect(container.querySelector('.ingbird-cap')).toBeNull()
+    expect(container.querySelector('.ingbird-hat')).toBeNull()
+    expect(container.querySelector('.ingbird-glasses')).toBeNull()
+    expect(container.querySelector('.ingbird-effect')).toBeNull()
+    expect(container.querySelector('.ingbird-accessory')).toBeNull()
+    expect(container.querySelector('.ingbird-shoes')).toBeNull()
+  })
+
+  it('既定は学帽をかぶったすがた', () => {
+    const { container } = render(<Ingbird decorative />)
+    expect(container.querySelector('svg')).toHaveAttribute('data-hat', 'grad')
+    expect(container.querySelector('.ingbird-cap')).not.toBeNull()
+    expect(container.querySelector('.ingbird-tassel-group')).not.toBeNull()
+  })
+})
+
 describe('IngbirdCard', () => {
   it('学習日は連続ではなくトータルで表示する', () => {
     const today = todayString()
@@ -146,6 +245,89 @@ describe('IngbirdCard', () => {
     expect(container.querySelector('.ingbird-mood-curious')).not.toBeNull()
   })
 
+  it('まだ進化していない日は「ふつう」', () => {
+    const { container } = renderCard()
+    expect(screen.getByText('ふつう')).toBeInTheDocument()
+    expect(container.querySelector('svg')).toHaveAttribute('data-evolution', '0')
+  })
+
+  it('学習日トータルに応じた進化を表示する', () => {
+    const today = todayString()
+    saveJson(
+      KEYS.studyDays,
+      Array.from({ length: 30 }, (_, index) => shiftDate(today, -29 + index)),
+    )
+    const { container } = renderCard()
+    expect(screen.getByText('雷光')).toBeInTheDocument()
+    expect(container.querySelector('.ingbird-evolution-label.is-stage-3')).not.toBeNull()
+    expect(container.querySelector('svg')).toHaveAttribute('data-evolution', '3')
+    expect(container.querySelector('.ingbird-lightning')?.classList.contains('is-on')).toBe(true)
+  })
+
+  it('学習日が足りないアイテムは、必要日数つきで選べない', async () => {
+    const { container } = renderCard()
+    await waitFor(() => expect(container.querySelector('.ingbird-bubble')).not.toBeNull())
+    fireEvent.click(screen.getByRole('button', { name: 'きせかえ' }))
+
+    expect(screen.getByText(/解放 \d+ \/ \d+/)).toBeInTheDocument()
+    const preview = container.querySelector('.ingbird-wardrobe-next')
+    expect(preview).not.toBeNull()
+    expect(within(preview as HTMLElement).getByText('つぎのごほうび')).toBeInTheDocument()
+    expect(within(preview as HTMLElement).getByText('あと1日')).toBeInTheDocument()
+    // 1日で解放される2つ(丸メガネ・きらきら)のプレビュー
+    expect(within(preview as HTMLElement).getByText('丸メガネ')).toBeInTheDocument()
+    expect(within(preview as HTMLElement).getByText('きらきら')).toBeInTheDocument()
+
+    const lockedCrown = screen.getByRole('button', { name: /^王冠/ })
+    expect(lockedCrown).toBeDisabled()
+    expect(lockedCrown).toHaveTextContent('50日')
+    expect(screen.getByRole('button', { name: '学帽' })).toBeEnabled()
+
+    fireEvent.click(lockedCrown)
+    expect(container.querySelector('svg')).toHaveAttribute('data-hat', 'grad')
+  })
+
+  it('きせかえパネルでメガネや帽子を変えられ、保存される', async () => {
+    const today = todayString()
+    saveJson(
+      KEYS.studyDays,
+      Array.from({ length: 60 }, (_, index) => shiftDate(today, -59 + index)),
+    )
+    const { container } = renderCard()
+    await screen.findByText(/トータル60日/)
+    const open = screen.getByRole('button', { name: 'きせかえ' })
+    expect(open).toHaveAttribute('aria-expanded', 'false')
+
+    fireEvent.click(open)
+    expect(open).toHaveAttribute('aria-expanded', 'true')
+    const panel = screen.getByRole('group', { name: 'イングバードのきせかえ' })
+
+    fireEvent.click(within(panel).getByRole('button', { name: 'サングラス' }))
+    expect(container.querySelector('svg')).toHaveAttribute('data-glasses', 'sunglasses')
+    expect(within(panel).getByRole('button', { name: 'サングラス' })).toHaveAttribute('aria-pressed', 'true')
+
+    fireEvent.click(within(panel).getByRole('button', { name: '王冠' }))
+    expect(container.querySelector('svg')).toHaveAttribute('data-hat', 'crown')
+    expect(container.querySelector('.ingbird-crown')).not.toBeNull()
+    expect(getOutfit()).toMatchObject({ glasses: 'sunglasses', hat: 'crown' })
+
+    fireEvent.click(screen.getByRole('button', { name: 'きせかえを閉じる' }))
+    expect(screen.queryByRole('group', { name: 'イングバードのきせかえ' })).toBeNull()
+  })
+
+  it('保存した着せかえを読み込み、はじめの姿に戻せる', async () => {
+    saveOutfit({ glasses: 'round', hat: 'beanie', effect: 'snow', accessory: 'bowtie', shoes: 'boots' })
+    const { container } = renderCard()
+    await screen.findByText(/まだ0日でも大丈夫/)
+    expect(container.querySelector('.ingbird-beanie')).not.toBeNull()
+
+    fireEvent.click(screen.getByRole('button', { name: 'きせかえ' }))
+    fireEvent.click(screen.getByRole('button', { name: 'はじめの姿にもどす' }))
+    expect(container.querySelector('svg')).toHaveAttribute('data-hat', 'grad')
+    expect(container.querySelector('.ingbird-beanie')).toBeNull()
+    expect(getOutfit()).toEqual(DEFAULT_OUTFIT)
+  })
+
   it('バードをタップすると次のひとことに変わり、閉じられる', async () => {
     const { container } = renderCard()
     await screen.findByText(/まだ0日でも大丈夫/)
@@ -182,9 +364,28 @@ describe('IngbirdPraise', () => {
     const toast = await screen.findByRole('status')
     expect(toast).toHaveTextContent('1日目、はじまった!')
     expect(toast).toHaveTextContent('学習日 1日（トータル）')
+    // 1日目で解放される着せかえを知らせる
+    expect(toast).toHaveClass('has-unlock')
+    expect(toast).toHaveTextContent('新しいアイテムを解放!')
+    expect(toast).toHaveTextContent('メガネ・丸メガネ')
+    expect(toast).toHaveTextContent('エフェクト・きらきら')
 
     fireEvent.click(screen.getByRole('button', { name: 'メッセージを閉じる' }))
     expect(screen.queryByRole('status')).toBeNull()
+  })
+
+  it('新しいアイテムがない日は、解放の知らせを出さない', async () => {
+    const today = todayString()
+    saveJson(
+      KEYS.studyDays,
+      Array.from({ length: 18 }, (_, index) => shiftDate(today, -18 + index)),
+    )
+    render(<IngbirdPraise />)
+    recordStudyDay()
+    const toast = await screen.findByRole('status')
+    expect(toast).toHaveTextContent('学習日 19日（トータル）')
+    expect(toast).not.toHaveTextContent('新しいアイテムを解放!')
+    expect(screen.queryByText('新しいアイテムを解放!')).toBeNull()
   })
 
   it('同じ日の2回目以降は出し直さない', async () => {

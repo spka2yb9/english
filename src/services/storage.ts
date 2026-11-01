@@ -39,6 +39,7 @@ export function resetProgress(prefixes: readonly string[]): void {
 
 export const KEYS = {
   grammarProgress: 'eng.grammar.completed', // string[] レッスンID
+  threeMinuteProgress: 'eng.threeMinute.completed', // string[] 3分間English の完了話ID
   vocabStats: 'eng.vocab.stats', // Record<wordId, WordStat>
   vocabDaily: 'eng.vocab.daily', // VocabDay[] 1日1行の学習ログ(旧形式は { date, count })
   grammarItemStats: 'eng.grammar.items', // Record<questionId, WordStat> 文法問題のSRS
@@ -46,4 +47,5 @@ export const KEYS = {
   readingDone: 'eng.reading.done', // string[] 読了した本文ID
   readingOpen: 'eng.reading.open', // string[] 多読一覧で開いているレベル
   studyDays: 'eng.study.days', // string[] 何かしら学習した日(YYYY-MM-DD)。連続ではなくトータルで数える
+  ingbirdOutfit: 'eng.ingbird.outfit', // IngbirdOutfit マスコットの着せかえ(見た目だけ)
 } as const

@@ -1,0 +1,337 @@
+/* 3分間English の会話UI。先生は左、生徒は右に置き、必ず吹き出しで話す。 */
+
+.tm-dialogue {
+  display: grid;
+  gap: 1rem;
+  padding: 0.35rem 0 0.5rem;
+}
+
+.tm-turn {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+}
+
+.tm-turn-hiyoko {
+  flex-direction: row-reverse;
+}
+
+.tm-avatar {
+  flex: 0 0 64px;
+  width: 64px;
+  padding-top: 0.1rem;
+}
+
+.tm-avatar .ingbird,
+.tm-avatar .hiyoko {
+  width: 64px;
+  height: 64px;
+}
+
+.tm-bubble-wrap {
+  min-width: 0;
+  max-width: min(76%, 660px);
+}
+
+.tm-speaker {
+  margin: 0 0 0.24rem;
+  color: var(--ink-500);
+  font-size: 0.7rem;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+}
+
+.tm-turn-ingbird .tm-speaker {
+  color: var(--teal);
+}
+
+.tm-turn-hiyoko .tm-speaker {
+  color: #a16a12;
+  text-align: right;
+}
+
+.tm-bubble {
+  position: relative;
+  padding: 0.9rem 1.05rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow-sm);
+}
+
+.tm-turn-ingbird .tm-bubble {
+  background: linear-gradient(180deg, #f7fdfc, #eef9f7);
+  border-color: #c5e4df;
+  border-top-left-radius: 6px;
+}
+
+.tm-turn-hiyoko .tm-bubble {
+  background: linear-gradient(180deg, #fffdf5, #fff8e4);
+  border-color: #ead7aa;
+  border-top-right-radius: 6px;
+}
+
+.tm-turn-ingbird .tm-bubble::before {
+  position: absolute;
+  top: 15px;
+  left: -9px;
+  border-top: 8px solid transparent;
+  border-right: 10px solid #eef9f7;
+  border-bottom: 8px solid transparent;
+  content: "";
+}
+
+.tm-turn-hiyoko .tm-bubble::before {
+  position: absolute;
+  top: 15px;
+  right: -9px;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 10px solid #fff8e4;
+  content: "";
+}
+
+.tm-bubble > p {
+  margin-bottom: 0.6rem;
+  color: var(--ink-800);
+  font-size: 0.94rem;
+  line-height: 1.78;
+}
+
+.tm-bubble > p:last-child,
+.tm-bubble > ul:last-child {
+  margin-bottom: 0;
+}
+
+.tm-bubble > ul {
+  margin: 0 0 0.6rem;
+  padding-left: 1.15rem;
+}
+
+.tm-bubble li {
+  color: var(--ink-800);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.tm-bubble li + li {
+  margin-top: 0.2rem;
+}
+
+.tm-bubble strong {
+  color: var(--ink-950);
+  background: linear-gradient(transparent 62%, #ffe6a3 62%);
+}
+
+.tm-en-card {
+  margin-top: 0.7rem;
+  padding: 0.65rem 0.8rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+}
+
+.tm-en {
+  margin: 0;
+  color: var(--ink-950);
+  font-size: 0.98rem;
+  font-weight: 650;
+  line-height: 1.55;
+}
+
+.tm-en .hl {
+  padding: 0 0.1em;
+  background: #ffe9a8;
+  border-radius: 3px;
+}
+
+.tm-ja {
+  margin: 0.12rem 0 0;
+  color: var(--ink-650);
+  font-size: 0.81rem;
+}
+
+.tm-en-audio {
+  display: inline-flex;
+  gap: 0.3rem;
+  margin-top: 0.35rem;
+}
+
+.tm-scene {
+  margin: 0.15rem 0 0.35rem;
+  padding: 0.85rem 0.95rem 1rem;
+  background: #fff;
+  border: 1px dashed #b8d8d3;
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.tm-scene-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin: 0 0 0.6rem;
+  padding: 0.16rem 0.58rem;
+  color: #176d69;
+  background: var(--teal-soft);
+  border: 1px solid #c5e4df;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 750;
+  letter-spacing: 0.03em;
+}
+
+.tm-scene-label span {
+  color: var(--gold);
+}
+
+/* 文法ページのブロックを、ホワイトボードの中身として裸にする。 */
+.tm-scene-body .block {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.tm-scene-body .block h3 {
+  margin-bottom: 0.65rem;
+  font-size: 1rem;
+}
+
+.tm-scene-body .block-examples {
+  background: transparent;
+}
+
+.tm-scene-body .example {
+  background: #fbfdfd;
+}
+
+.tm-scene .example-more {
+  margin-top: 0.65rem;
+  padding-top: 0.55rem;
+  border-top: 1px dashed var(--line);
+}
+
+.tm-scene .example-more > summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.1rem;
+  color: var(--teal);
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 750;
+  list-style: none;
+}
+
+.tm-scene .example-more > summary::-webkit-details-marker {
+  display: none;
+}
+
+.tm-scene .example-more > summary::after {
+  display: inline-grid;
+  width: 1.25rem;
+  height: 1.25rem;
+  place-items: center;
+  color: var(--teal);
+  background: var(--teal-soft);
+  border-radius: 50%;
+  content: "+";
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+.tm-scene .example-more[open] > summary::after {
+  content: "−";
+}
+
+.tm-scene .example-more-count {
+  color: var(--ink-500);
+  font-weight: 650;
+}
+
+.tm-scene .example-more-body {
+  margin-top: 0.55rem;
+}
+
+.tm-scene-animation {
+  border-style: solid;
+  border-color: var(--line);
+}
+
+.tm-scene-animation .grammar-animation {
+  margin: 0;
+  border: 0;
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .tm-turn,
+  .tm-scene {
+    animation: tm-rise 360ms ease both;
+  }
+}
+
+@keyframes tm-rise {
+  from {
+    opacity: 0;
+    transform: translateY(7px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 700px) {
+  .tm-turn {
+    gap: 0.45rem;
+  }
+
+  .tm-avatar {
+    flex-basis: 48px;
+    width: 48px;
+  }
+
+  .tm-avatar .ingbird,
+  .tm-avatar .hiyoko {
+    width: 48px;
+    height: 48px;
+  }
+
+  .tm-bubble-wrap {
+    max-width: calc(100% - 52px);
+  }
+
+  .tm-bubble {
+    padding: 0.75rem 0.85rem;
+    border-radius: 14px;
+  }
+
+  .tm-turn-ingbird .tm-bubble {
+    border-top-left-radius: 5px;
+  }
+
+  .tm-turn-hiyoko .tm-bubble {
+    border-top-right-radius: 5px;
+  }
+
+  .tm-bubble > p {
+    font-size: 0.9rem;
+  }
+
+  .tm-scene {
+    padding: 0.7rem 0.6rem 0.8rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tm-turn,
+  .tm-scene {
+    animation: none;
+  }
+}

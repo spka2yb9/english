@@ -6,7 +6,9 @@ import { LearningIcon } from './LearningIcon'
 const NAV_ITEMS = [
   { to: '/', label: 'ホーム', icon: 'home' },
   { to: '/pronunciation', label: '発音記号', icon: 'pronunciation' },
-  { to: '/grammar', label: '英文法', icon: 'grammar' },
+  // 英文法ページは一時的に非公開。再開するときはこの行を戻す。
+  // { to: '/grammar', label: '英文法', icon: 'grammar' },
+  { to: '/three-minute', label: '3分間English', icon: 'three-minute' },
   { to: '/vocabulary', label: '英単語', icon: 'vocabulary' },
   { to: '/practice', label: '音声練習', icon: 'practice' },
   { to: '/reading', label: '多読', icon: 'reading' },

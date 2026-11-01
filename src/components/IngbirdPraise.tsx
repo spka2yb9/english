@@ -2,6 +2,9 @@ import { useEffect, useRef, useState } from 'react'
 import { Ingbird } from './Ingbird'
 import './Ingbird.css'
 import { STUDY_RECORDED_EVENT, type StudyRecord } from '../services/studyDays'
+import { evolutionFor } from '../services/ingbirdEvolution'
+import { itemsUnlockedAt, OUTFIT_SLOT_LABELS } from '../content/ingbird/outfits'
+import { getOutfit } from '../services/ingbirdWardrobe'
 
 /** 表示しておく時間。閉じるボタンでも消せる。 */
 const SHOW_MS = 9_000
@@ -50,9 +53,12 @@ export function IngbirdPraise() {
 
   if (!record) return null
   const { praise, status } = record
+  const outfit = getOutfit()
+  // この学習日でちょうど解放された着せかえ。
+  const unlockedItems = itemsUnlockedAt(status.totalDays)
 
   return (
-    <div className="ingbird-toast" key={shownCount} role="status">
+    <div className={`ingbird-toast${unlockedItems.length > 0 ? ' has-unlock' : ''}`} key={shownCount} role="status">
       {praise.confetti && (
         <div className="ingbird-confetti" aria-hidden="true">
           {CONFETTI.map((piece, index) => (
@@ -69,13 +75,32 @@ export function IngbirdPraise() {
           ))}
         </div>
       )}
-      <Ingbird mood={praise.mood} size={86} decorative className="ingbird-toast-bird" />
+      <Ingbird
+        mood={praise.mood}
+        evolution={evolutionFor(status.totalDays)}
+        outfit={outfit}
+        size={86}
+        decorative
+        className="ingbird-toast-bird"
+      />
       <div className="ingbird-toast-body">
         <p className="ingbird-toast-title">{praise.title}</p>
         <p className="ingbird-toast-message">{praise.message}</p>
         <p className="ingbird-toast-total">
           学習日 <strong>{status.totalDays}</strong>日（トータル）
         </p>
+        {unlockedItems.length > 0 && (
+          <div className="ingbird-toast-unlock">
+            <p className="ingbird-toast-unlock-title">新しいアイテムを解放!</p>
+            <div className="ingbird-toast-unlock-list">
+              {unlockedItems.map(({ slot, item }) => (
+                <span className="ingbird-toast-unlock-item" key={`${slot}-${item.id}`}>
+                  {OUTFIT_SLOT_LABELS[slot]}・{item.label}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
       <button
         type="button"

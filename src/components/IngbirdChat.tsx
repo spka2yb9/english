@@ -3,6 +3,7 @@ import type { GrammarLesson } from '../content/types'
 import { createSectionChat, type SectionChat } from '../services/sectionChat'
 import type { QaQuote } from '../services/sectionChat'
 import { STUDY_RECORDED_EVENT, type StudyRecord } from '../services/studyDays'
+import { getOutfit } from '../services/ingbirdWardrobe'
 import { AudioButton } from './AudioButton'
 import { Ingbird } from './Ingbird'
 import './IngbirdChat.css'
@@ -39,6 +40,8 @@ export function IngbirdChat({
   const [messages, setMessages] = useState<Message[]>([])
   const [input, setInput] = useState('')
   const [thinking, setThinking] = useState(false)
+  // 着せかえはホームで変えたものを引き継ぐ(表示中は変わらないので初回だけ読む)
+  const [outfit] = useState(() => getOutfit())
   const nextId = useRef(0)
   const logRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
@@ -133,7 +136,12 @@ export function IngbirdChat({
         aria-label="イングバードにこのセクションを質問する"
         onClick={open ? closeChat : openChat}
       >
-        <Ingbird mood={open ? (thinking ? 'think' : 'happy') : 'idle'} size={44} decorative />
+        <Ingbird
+          mood={open ? (thinking ? 'think' : 'happy') : 'idle'}
+          outfit={outfit}
+          size={44}
+          decorative
+        />
         <span className="ingbird-chat-badge" aria-hidden="true">
           ?
         </span>
@@ -149,7 +157,7 @@ export function IngbirdChat({
             aria-label={`イングバードに「${lesson.title}」を質問する`}
           >
             <header className="ingbird-chat-head">
-              <Ingbird mood={thinking ? 'think' : 'happy'} size={40} decorative />
+              <Ingbird mood={thinking ? 'think' : 'happy'} outfit={outfit} size={40} decorative />
               <div className="ingbird-chat-head-text">
                 <p className="ingbird-chat-title">イングバードにきく</p>
                 <p className="ingbird-chat-sub">{lesson.title}</p>

@@ -274,8 +274,8 @@ export const u26: GrammarUnit = {
           sentenceJa: '四六時中あれこれ指図されるのが好きな人はいません。',
           choices: ['telling', 'being told', 'to told', 'being telling'],
           correctIndex: 1,
-          explanation: '主語の「人」は指図されるside、つまりされる側なので、動名詞の受動形 being told を使います。',
-          choiceNotes: ['telling だと「自分が指図する」side になり、意味が逆です。', null, 'to の後ろに過去分詞を直接置くことはできません。to be told なら可能です。', 'being の後ろは過去分詞です。-ing形は続けられません。'],
+          explanation: '主語の「人」は指図される側、つまりされる側なので、動名詞の受動形 being told を使います。',
+          choiceNotes: ['telling だと「自分が指図する」側になり、意味が逆です。', null, 'to の後ろに過去分詞を直接置くことはできません。to be told なら可能です。', 'being の後ろは過去分詞です。-ing形は続けられません。'],
           audioEn: 'Nobody likes being told what to do all the time.',
         },
         {
@@ -532,7 +532,7 @@ export const u26: GrammarUnit = {
           ],
           correctIndex: 0,
           explanation: 'get受動態は予期しない出来事や変化を表します。過去の出来事なので got を使います。',
-          choiceNotes: [null, 'get受動態を進行形にすることはほとんどありません。', '現在完了では過去の一時点を示す文脈と合いません。', '現在形では過去の出来事を表せません。'],
+          choiceNotes: [null, 'ここは「破損した」という完了した出来事なので got が自然です。進行形にすると「破損し続けていた」という別の意味になります。', '現在完了では過去の一時点を示す文脈と合いません。', '現在形では過去の出来事を表せません。'],
           audioEn: 'Two of our suitcases got damaged somewhere between Narita and Helsinki.',
         },
         {

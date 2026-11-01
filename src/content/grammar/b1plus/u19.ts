@@ -51,7 +51,7 @@ export const u19: GrammarUnit = {
           type: 'explanation',
           title: '代名詞と時の表現もずれる',
           body:
-            '時制だけでなく、**代名詞は伝える人の視点**に合わせて変わり、**時や場所の表現**も発言した時点を基準にした言い方にずれます。\n\n- now → then(そのとき)\n- today → that day(その日)\n- yesterday → the day before(その前日)\n- tomorrow → the next day(その翌日)\n- here → there\n\nなお、「水は100度で沸騰する」のような**今も変わらず成り立つ事実**は、時制をずらさずに伝えることもよくあります。The teacher said that water boils at 100 degrees. でも自然です。',
+            '時制だけでなく、**代名詞は伝える人の視点**に合わせて変わり、**時や場所の表現**も発言した時点を基準にした言い方にずれます。\n\n- now → then(そのとき)\n- today → that day(その日)\n- yesterday → the day before(その前日)\n- tomorrow → the next day(その翌日)\n- here → there\n\nなお、「水は100度で沸騰する」のような**今も変わらず成り立つ事実**は、時制をずらさずに伝えることもよくあります。The teacher said that water boils at 100 degrees. でも自然です。\n\n同じように、発言内容が**今も続いている**場合は、現在形のまま伝えられます。She said she lives in Nagoya. は、今も名古屋に住んでいると分かっている場合に使えます。',
         },
         {
           type: 'examples',
@@ -74,7 +74,7 @@ export const u19: GrammarUnit = {
           choices: ['lives', 'lived', 'is living', 'will live'],
           correctIndex: 1,
           explanation: 'said が過去なので、発言時の現在形 live は1つ過去にずらして lived にします。',
-          choiceNotes: ['said(過去)に合わせて時制をずらす必要があります。', null, '現在進行形のままでは伝える時点とのずれを表せません。', '発言は「住んでいる」という現在の事実で、未来の話ではありません。'],
+          choiceNotes: ['この練習では、発言時点を基準に過去へずらします。今も同じなら lives のままも可能です。', null, '現在進行形のままでは伝える時点とのずれを表せません。', '発言は「住んでいる」という現在の事実で、未来の話ではありません。'],
           audioEn: 'Yuki said she lived in Nagoya.',
         },
         {

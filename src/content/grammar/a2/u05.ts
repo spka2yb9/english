@@ -29,7 +29,7 @@ export const u05: GrammarUnit = {
             { label: '形容詞', text: 'small' },
             { label: '名詞', text: 'cat' },
           ],
-          caption: '必ず「形容詞 → 名詞」の順です。× a cat small のように名詞のあとに置くことはできません。',
+          caption: '基本は「形容詞 → 名詞」の順です。× a cat small のように、ふつうの名詞のあとには置きません。something cold のように -thing の語を説明するときは後ろに置きます。',
         },
         {
           type: 'examples',
@@ -57,7 +57,7 @@ export const u05: GrammarUnit = {
           choices: ['I watched an interesting movie.', 'I watched a movie interesting.', 'I watched interesting a movie.', 'I watched an interesting.'],
           correctIndex: 0,
           explanation: '形容詞は名詞の前に置きます。interesting は母音の音で始まるので冠詞は an です。',
-          choiceNotes: [null, '形容詞を名詞のあとに置くことはできません。', '冠詞は「冠詞 + 形容詞 + 名詞」の先頭に置きます。', '形容詞だけで文を終えられません。名詞(movie)が必要です。'],
+          choiceNotes: [null, 'この文では、形容詞 interesting は名詞 movie の前に置きます。a movie interesting の語順では使えません。', '冠詞は「冠詞 + 形容詞 + 名詞」の先頭に置きます。', '形容詞だけで文を終えられません。名詞(movie)が必要です。'],
           audioEn: 'I watched an interesting movie.',
         },
         {

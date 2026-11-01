@@ -1161,6 +1161,128 @@
   font-size: 0.95rem;
 }
 
+/* 英文法ページ冒頭の5文型見取り図 */
+.grammar-pattern-overview {
+  margin-top: 1.5rem;
+  padding: clamp(1.1rem, 3vw, 1.6rem);
+  background: linear-gradient(180deg, #f8fcfb, #f2faf8);
+  border: 1px solid #cfe5df;
+  border-radius: var(--radius-md);
+}
+
+.grammar-pattern-overview h2 {
+  margin-bottom: 0.55rem;
+  color: var(--navy);
+}
+
+.grammar-pattern-overview .role-guide {
+  margin-top: 0.9rem;
+}
+
+.grammar-pattern-subheading {
+  margin: 1.2rem 0 0.55rem;
+  color: var(--navy);
+  font-size: 0.95rem;
+}
+
+.grammar-pattern-table-wrap {
+  overflow-x: auto;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.grammar-pattern-table-wrap:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.grammar-pattern-table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+}
+
+.grammar-pattern-table th,
+.grammar-pattern-table td {
+  padding: 0.58rem 0.7rem;
+  border-bottom: 1px solid #edf1f2;
+  text-align: left;
+  vertical-align: top;
+}
+
+.grammar-pattern-table thead th {
+  color: var(--ink-500);
+  background: var(--canvas-warm);
+  font-size: 0.73rem;
+  letter-spacing: 0.03em;
+}
+
+.grammar-pattern-table tbody th {
+  color: var(--navy);
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.grammar-pattern-table tbody tr:last-child th,
+.grammar-pattern-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.grammar-pattern-skeleton {
+  display: inline-block;
+  padding: 0.1rem 0.45rem;
+  color: var(--teal);
+  background: var(--teal-soft);
+  border-radius: 999px;
+  font-family: var(--english);
+  font-size: 0.74rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.grammar-pattern-example {
+  display: block;
+  color: var(--ink-950);
+  font-weight: 620;
+}
+
+.grammar-pattern-ja {
+  display: block;
+  margin-top: 0.1rem;
+  color: var(--ink-500);
+  font-size: 0.77rem;
+}
+
+.grammar-pattern-relation {
+  display: inline-block;
+  margin: 0 0.3rem 0.2rem 0;
+  padding: 0.08rem 0.42rem;
+  color: #8a5a12;
+  background: var(--gold-soft);
+  border-radius: 999px;
+  font-family: var(--english);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.grammar-pattern-note {
+  margin: 0.8rem 0 0;
+  padding: 0.65rem 0.8rem;
+  color: var(--ink-650);
+  background: var(--canvas-warm);
+  border: 1px solid #eadfc4;
+  border-radius: 8px;
+  font-size: 0.82rem;
+}
+
+.grammar-pattern-more {
+  margin: 0.9rem 0 0;
+  font-size: 0.84rem;
+  font-weight: 650;
+}
+
 /* S / V / O / C / M の意味を示すカード列 */
 .role-guide {
   display: grid;

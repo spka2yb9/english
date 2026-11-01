@@ -141,7 +141,7 @@ export const u24: GrammarUnit = {
           ],
           correctIndex: 1,
           explanation: '「〜してもらう」は have + 物 + 過去分詞の語順です。物が先、過去分詞があとになります。',
-          choiceNotes: ['過去分詞と目的語の順序が逆です。物を先に置きます。', null, 'スーツは「洗われる」側なので原形ではなく過去分詞にします。', 'have のあとに -ing は続けられません。'],
+          choiceNotes: ['have cleaned this suit だと「このスーツを洗い終えている必要がある」という別の意味になります。ここは「スーツをクリーニングに出す」所以、have this suit cleaned の語順です。', null, 'スーツは「洗われる」側なので原形ではなく過去分詞にします。', 'have のあとに -ing は続けられません。'],
           audioEn: 'I need to have this suit cleaned before the interview on Monday.',
         },
         {

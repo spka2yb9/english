@@ -202,7 +202,7 @@ export const u17: GrammarUnit = {
           choices: ['have been reading', 'have read', 'am reading', 'read'],
           correctIndex: 1,
           explanation: '「3章」という完了した量を報告しているので、結果に注目する現在完了 have read を使います。',
-          choiceNotes: ['現在完了進行形は動作の継続に注目する形で、「3章」という完了した量の報告には使えません。', null, '現在進行形では「ここまでに読み終えた量」を表せません。', 'so far(今までのところ)は現在とつながる表現なので、過去形とは合いません。'],
+          choiceNotes: ['この文は「3章読み終えた」という完了した量の報告なので、現在完了 have read が自然です。進行形は、その3章を読む作業の継続に注目する形になります。', null, '現在進行形では「ここまでに読み終えた量」を表せません。', 'so far(今までのところ)は現在とつながる表現なので、過去形とは合いません。'],
           audioEn: 'I have read three chapters of this book so far.',
         },
         {

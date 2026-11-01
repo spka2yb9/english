@@ -1,4 +1,4 @@
-import type { ContrastSide, LessonBlock } from '../content/types'
+import type { ContrastSide, GrammarExample, LessonBlock } from '../content/types'
 import { EnglishExample } from './EnglishExample'
 import { Illustration } from './Illustration'
 import { RichText } from './RichText'
@@ -7,17 +7,42 @@ import { SentenceExpansion } from './SentenceExpansion'
 import { Timeline } from './Timeline'
 
 /** レッスンのコンテンツブロック列を描画する。 */
-export function LessonBlocks({ blocks }: { blocks: LessonBlock[] }) {
+export function LessonBlocks({
+  blocks,
+  collapseExamplesAfter,
+}: {
+  blocks: LessonBlock[]
+  /** 例文を先頭N件だけ表示し、残りをアコーディオンに畳む。 */
+  collapseExamplesAfter?: number
+}) {
   return (
     <>
       {blocks.map((block, i) => (
-        <Block key={i} block={block} />
+        <Block key={i} block={block} collapseExamplesAfter={collapseExamplesAfter} />
       ))}
     </>
   )
 }
 
-function Block({ block }: { block: LessonBlock }) {
+function ExampleList({ items, startIndex = 0 }: { items: GrammarExample[]; startIndex?: number }) {
+  return (
+    <>
+      {items.map((ex, i) => (
+        <EnglishExample
+          key={startIndex + i}
+          text={ex.en}
+          translation={ex.ja}
+          highlight={ex.highlight}
+          note={ex.note}
+          pattern={ex.pattern}
+          patternNote={ex.patternNote}
+        />
+      ))}
+    </>
+  )
+}
+
+function Block({ block, collapseExamplesAfter }: { block: LessonBlock; collapseExamplesAfter?: number }) {
   switch (block.type) {
     case 'explanation':
       return (
@@ -26,23 +51,27 @@ function Block({ block }: { block: LessonBlock }) {
           <RichText text={block.body} />
         </section>
       )
-    case 'examples':
+    case 'examples': {
+      const limit = collapseExamplesAfter !== undefined && collapseExamplesAfter > 0 ? collapseExamplesAfter : undefined
+      const visible = limit === undefined ? block.items : block.items.slice(0, limit)
+      const hidden = limit === undefined ? [] : block.items.slice(limit)
       return (
         <section className="block block-examples">
           {block.title && <h3>{block.title}</h3>}
-          {block.items.map((ex, i) => (
-            <EnglishExample
-              key={i}
-              text={ex.en}
-              translation={ex.ja}
-              highlight={ex.highlight}
-              note={ex.note}
-              pattern={ex.pattern}
-              patternNote={ex.patternNote}
-            />
-          ))}
+          <ExampleList items={visible} />
+          {hidden.length > 0 && (
+            <details className="example-more">
+              <summary>
+                続きを見る <span className="example-more-count">あと{hidden.length}文</span>
+              </summary>
+              <div className="example-more-body">
+                <ExampleList items={hidden} startIndex={visible.length} />
+              </div>
+            </details>
+          )}
         </section>
       )
+    }
     case 'timeline':
       return (
         <section className="block block-timeline">

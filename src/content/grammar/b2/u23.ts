@@ -476,7 +476,7 @@ export const u23: GrammarUnit = {
             ],
             pointJa: '別の人の行動には過去形(仮定法)',
           },
-          note: '後ろに「別の主語」が入った瞬間、動詞は過去形になります。形は過去でも意味は現在・未来です。',
+          note: '後ろに「別の主語」が入ると、標準的には動詞を過去形にします。形は過去でも意味は現在・未来です。',
         },
         {
           type: 'explanation',
@@ -516,8 +516,8 @@ export const u23: GrammarUnit = {
           sentenceJa: 'このことはまだ誰にも言わないでほしいのですが。',
           choices: ["don't tell", "didn't tell", "won't tell", 'not tell'],
           correctIndex: 1,
-          explanation: 'would rather の後ろに別の主語(you)が来ると、動詞は過去形になります。形は過去でも「これから」の話です。',
-          choiceNotes: ['別の主語が入るときは現在形ではなく過去形を使います。', null, 'would rather の節の中で will は使いません。', "原形が使えるのは主語が入らないとき(I'd rather not tell)だけです。"],
+          explanation: 'would rather の後ろに別の主語(you)が来ると、動詞は標準的に過去形になります。形は過去でも「これから」の話です。',
+          choiceNotes: ['別の主語が入るときは、標準的には現在形ではなく過去形を使います。', null, 'would rather の節の中で will は使いません。', "原形が使えるのは主語が入らないとき(I'd rather not tell)です。"],
           audioEn: "I'd rather you didn't tell anyone about this yet.",
         },
         {
@@ -528,7 +528,7 @@ export const u23: GrammarUnit = {
           choices: ['go', 'went', 'will go', 'have gone'],
           correctIndex: 1,
           explanation: "It's time + 主語の後ろは過去形を使います。「もうすべき時間なのに、まだしていない」というニュアンスです。",
-          choiceNotes: ["It's time の後ろに主語が入る場合、現在形ではなく過去形にします。", null, '未来の話に見えますが、この構文では will を使いません。', '完了形は使いません。単純な過去形にします。'],
+          choiceNotes: ["It's time の後ろに主語が入る場合、標準的には現在形ではなく過去形にします。", null, '未来の話に見えますが、この構文では will を使いません。', '完了形は使いません。単純な過去形にします。'],
           audioEn: "It's already midnight. It's time the children went to bed.",
         },
         {
@@ -558,8 +558,8 @@ export const u23: GrammarUnit = {
             'will continue',
           ],
           correctIndex: 1,
-          explanation: 'would rather のあとに別の主語(we)が入ると、動詞は過去形になります。形は過去でも、指しているのは明日の話です。',
-          choiceNotes: ['原形が使えるのは主語を挟まないとき(I would rather continue)だけです。', null, 'would rather のあとに to不定詞は続けられません。', 'この構文の節の中では will を使いません。'],
+          explanation: 'would rather のあとに別の主語(we)が入ると、動詞は標準的に過去形になります。形は過去でも、指しているのは明日の話です。',
+          choiceNotes: ['この練習では、別の主語が入るときは過去形 continued にします。会話では原形も聞かれますが、標準的な形は過去形です。', null, 'would rather のあとに to不定詞は続けられません。', 'この構文の節の中では will を使いません。'],
           audioEn: "It's getting late. I'd rather we continued this discussion tomorrow morning.",
         },
         {
@@ -574,7 +574,7 @@ export const u23: GrammarUnit = {
           ],
           correctIndex: 1,
           explanation: "It's high time + 主語のあとは過去形にします。「もうその時期なのに、まだしていない」という現実とのずれを過去形で表します。",
-          choiceNotes: ['主語が入る場合は現在形ではなく過去形にします。', null, 'この構文では will を使いません。', '完了形ではなく単純な過去形を使います。'],
+          choiceNotes: ['主語が入る場合は、標準的には現在形ではなく過去形にします。', null, 'この構文では will を使いません。', '完了形ではなく単純な過去形を使います。'],
           audioEn: 'It is high time we discussed this problem seriously.',
         },
         {

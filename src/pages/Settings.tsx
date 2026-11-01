@@ -6,7 +6,7 @@ import { getStudyDays } from '../services/studyDays'
 import { push, signedIn } from '../services/sync'
 
 /**
- * リセットの単位は学習エリアごとの5つ。それぞれが localStorage に持つキーをまとめて消す。
+ * リセットの単位は学習エリアごとの6つ。それぞれが localStorage に持つキーをまとめて消す。
  * 件数は localStorage だけから数え、教材データは読み込まない(音声練習も practice.ts 経由では数えない —
  * 文バンクを設定ページのチャンクに持ち込んでしまうため)。
  */
@@ -14,6 +14,7 @@ function savedGroups() {
   const recorded = (key: string) => Object.keys(loadJson<Record<string, unknown>>(key, {})).length
   const lessons = getCompletedLessons().size
   const items = Object.keys(getGrammarItemStats()).length
+  const threeMinute = loadJson<string[]>(KEYS.threeMinuteProgress, []).length
   const words = Object.keys(getVocabStats()).length
   const days = getVocabHistory().length
   const studyDays = getStudyDays().length
@@ -26,6 +27,13 @@ function savedGroups() {
       prefixes: [KEYS.grammarProgress, KEYS.grammarItemStats],
       count: lessons + items,
       detail: `完了 ${lessons}セクション・正誤を記録した ${items}問`,
+    },
+    {
+      id: 'threeMinute',
+      label: '3分間English',
+      prefixes: [KEYS.threeMinuteProgress],
+      count: threeMinute,
+      detail: `完了した ${threeMinute}話`,
     },
     {
       id: 'vocab',

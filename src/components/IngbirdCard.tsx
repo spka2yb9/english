@@ -3,6 +3,22 @@ import { Link } from 'react-router-dom'
 import { Ingbird } from './Ingbird'
 import './Ingbird.css'
 import { MILESTONES, getStudyStatus, praiseFor, type IngbirdMood } from '../services/studyDays'
+import { evolutionFor, evolutionInfo } from '../services/ingbirdEvolution'
+import {
+  changeOutfit,
+  daysToNextOutfitUnlock,
+  DEFAULT_OUTFIT,
+  isOutfitUnlocked,
+  nextOutfitUnlocks,
+  OUTFIT_ITEMS,
+  OUTFIT_SLOT_LABELS,
+  OUTFIT_SLOT_ORDER,
+  OUTFIT_TOTAL,
+  unlockedOutfitCount,
+  type IngbirdOutfit,
+  type OutfitSlot,
+} from '../content/ingbird/outfits'
+import { getOutfit, saveOutfit } from '../services/ingbirdWardrobe'
 import type { TalkLine } from '../content/ingbird/types'
 
 /** つぶやきのコーパスは大きいので、画面を開いてから読み込む。 */
@@ -46,6 +62,8 @@ export function IngbirdCard() {
   const [talkMood, setTalkMood] = useState<IngbirdMood | null>(null)
   const [talkCount, setTalkCount] = useState(0)
   const [thinking, setThinking] = useState(false)
+  const [outfit, setOutfit] = useState<IngbirdOutfit>(() => getOutfit())
+  const [wardrobeOpen, setWardrobeOpen] = useState(false)
   const talkModule = useRef<TalkModule | null>(null)
   const talkState = useRef<ReturnType<TalkModule['createTalkState']> | null>(null)
   const loading = useRef(false)
@@ -56,6 +74,11 @@ export function IngbirdCard() {
   const previous = MILESTONES.filter((milestone) => milestone <= status.totalDays).at(-1) ?? 0
   const ratio = next ? (status.totalDays - previous) / (next.at - previous) : 1
   const mood = talkMood ?? (thinking ? 'think' : praise.mood)
+  const evolution = evolutionFor(status.totalDays)
+  const evolutionLabel = evolutionInfo(evolution)
+  const unlockedCount = unlockedOutfitCount(status.totalDays)
+  const nextItems = nextOutfitUnlocks(status.totalDays)
+  const daysToNext = daysToNextOutfitUnlock(status.totalDays)
 
   // status と praise は表示中変わらないので、loadTalk は実質的に固定される。
   const loadTalk = useCallback(
@@ -92,6 +115,17 @@ export function IngbirdCard() {
     void loadTalk(true)
   }, [loadTalk])
 
+  function chooseOutfit(slot: OutfitSlot, id: string) {
+    const next = changeOutfit(outfit, slot, id)
+    setOutfit(next)
+    saveOutfit(next)
+  }
+
+  function resetOutfit() {
+    setOutfit(DEFAULT_OUTFIT)
+    saveOutfit(DEFAULT_OUTFIT)
+  }
+
   return (
     <section
       className={`ingbird-card${praise.confetti ? ' is-celebrating' : ''}`}
@@ -101,16 +135,37 @@ export function IngbirdCard() {
         <button
           type="button"
           className="ingbird-talk-btn"
-          onClick={() => void loadTalk(false)}
+          onClick={() => {
+            setWardrobeOpen(false)
+            void loadTalk(false)
+          }}
           aria-expanded={talk !== null}
           aria-controls="ingbird-talk"
           aria-label="イングバードに話しかける"
         >
-          <Ingbird mood={mood} size={145} decorative />
+          <Ingbird mood={mood} evolution={evolution} outfit={outfit} size={145} decorative />
         </button>
         <span className="ingbird-name">イングバード</span>
+        <span
+          className={`ingbird-evolution-label is-stage-${evolution}`}
+          title={evolutionLabel.description}
+        >
+          {evolutionLabel.label}
+        </span>
         <span className="ingbird-mood-label">{MOOD_LABELS[mood]}</span>
         <span className="ingbird-talk-hint">タップで次のひとこと</span>
+        <button
+          type="button"
+          className="ingbird-wardrobe-open"
+          onClick={() => {
+            setWardrobeOpen((open) => !open)
+            setTalk(null)
+          }}
+          aria-expanded={wardrobeOpen}
+          aria-controls="ingbird-wardrobe"
+        >
+          きせかえ
+        </button>
       </div>
 
       <div className="ingbird-card-body">
@@ -141,6 +196,92 @@ export function IngbirdCard() {
                   aria-label="吹き出しを閉じる"
                 >
                   ×
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
+
+        <div className="ingbird-wardrobe-area" id="ingbird-wardrobe">
+          {wardrobeOpen && (
+            <div className="ingbird-wardrobe" role="group" aria-label="イングバードのきせかえ">
+              <div className="ingbird-wardrobe-head">
+                <div>
+                  <p className="ingbird-wardrobe-title">きせかえ</p>
+                  <p className="ingbird-wardrobe-progress">
+                    解放 {unlockedCount} / {OUTFIT_TOTAL}
+                    {nextItems.length > 0
+                      ? ` ・ 次のアイテムまで あと${daysToNext}日`
+                      : ' ・ すべて解放!'}
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  className="ingbird-wardrobe-close"
+                  onClick={() => setWardrobeOpen(false)}
+                  aria-label="きせかえを閉じる"
+                >
+                  ×
+                </button>
+              </div>
+
+              {nextItems.length > 0 && (
+                <div className="ingbird-wardrobe-next">
+                  <div className="ingbird-wardrobe-next-head">
+                    <p className="ingbird-wardrobe-next-title">つぎのごほうび</p>
+                    <p className="ingbird-wardrobe-next-days">あと{daysToNext}日</p>
+                  </div>
+                  <div className="ingbird-wardrobe-next-items">
+                    {nextItems.map(({ slot, item }) => (
+                      <div className="ingbird-wardrobe-next-item" key={`${slot}-${item.id}`}>
+                        <Ingbird
+                          mood="happy"
+                          evolution={evolution}
+                          outfit={changeOutfit(outfit, slot, item.id)}
+                          size={48}
+                          decorative
+                        />
+                        <div>
+                          <p className="ingbird-wardrobe-next-label">{item.label}</p>
+                          <p className="ingbird-wardrobe-next-sub">
+                            {OUTFIT_SLOT_LABELS[slot]}・トータル{item.unlockDays}日
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+              {OUTFIT_SLOT_ORDER.map((slot) => (
+                <div className="ingbird-wardrobe-row" key={slot}>
+                  <p className="ingbird-wardrobe-label">{OUTFIT_SLOT_LABELS[slot]}</p>
+                  <div className="ingbird-wardrobe-items">
+                    {[...OUTFIT_ITEMS[slot]]
+                      .sort((a, b) => a.unlockDays - b.unlockDays)
+                      .map((item) => {
+                      const selected = outfit[slot] === item.id
+                      const unlocked = isOutfitUnlocked(item, status.totalDays)
+                      return (
+                        <button
+                          key={item.id}
+                          type="button"
+                          className={`ingbird-wardrobe-item${selected ? ' is-selected' : ''}${unlocked ? '' : ' is-locked'}${item.theme === 'dark' ? ' is-dark' : ''}`}
+                          aria-pressed={selected}
+                          disabled={!unlocked}
+                          title={unlocked ? item.description : `トータル${item.unlockDays}日で解放`}
+                          onClick={() => chooseOutfit(slot, item.id)}
+                        >
+                          {item.label}
+                          {!unlocked && <span className="ingbird-wardrobe-lock">{item.unlockDays}日</span>}
+                        </button>
+                      )
+                    })}
+                  </div>
+                </div>
+              ))}
+              <div className="ingbird-wardrobe-foot">
+                <button type="button" className="ingbird-wardrobe-reset" onClick={resetOutfit}>
+                  はじめの姿にもどす
                 </button>
               </div>
             </div>

@@ -532,7 +532,7 @@ export const u02: GrammarUnit = {
           choices: ["OK, I'll get it.", 'OK, I get it.', 'OK, I am get it.', 'OK, I will getting it.'],
           correctIndex: 0,
           explanation: 'ベルの音を聞いて今この場で決めた行動なので、will(短縮形 I\'ll)を使います。',
-          choiceNotes: [null, '現在形は習慣を表すので、今この場で決めた行動には合いません。', 'be動詞と動詞の原形は並べられません。', 'will のあとは動詞の原形を使います。'],
+          choiceNotes: [null, "「I get it.」は「わかった」という意味で、「私が（ベルに）出る」という意味にはなりません。その場で決めた行動なので I'll get it. と言います。", 'be動詞と動詞の原形は並べられません。', 'will のあとは動詞の原形を使います。'],
           audioEn: "OK, I'll get it.",
         },
         {

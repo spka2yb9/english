@@ -28,6 +28,25 @@ describe('GrammarIndex', () => {
     expect(document.querySelectorAll('.roadmap-step')).toHaveLength(0)
   })
 
+  it('冒頭に5文型の見取り図を置き、詳細ページへ案内する', () => {
+    render(
+      <MemoryRouter>
+        <GrammarIndex />
+      </MemoryRouter>,
+    )
+
+    expect(
+      screen.getByRole('heading', { level: 2, name: '5文型は、動詞のあとに何が続くかで決まる' }),
+    ).toBeInTheDocument()
+    for (const label of ['第1文型 SV', '第2文型 SVC', '第3文型 SVO', '第4文型 SVOO', '第5文型 SVOC']) {
+      expect(screen.getByText(label)).toBeInTheDocument()
+    }
+    expect(screen.getByRole('link', { name: /5文型と英文の作られ方を詳しく見る/ })).toHaveAttribute(
+      'href',
+      '/grammar/roadmap',
+    )
+  })
+
   it('レベル別のセクション一覧を残し、既存のリンクを壊さない', () => {
     render(
       <MemoryRouter>

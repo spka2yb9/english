@@ -69,7 +69,7 @@ export const u12: GrammarUnit = {
           choices: ['am visiting', 'visit', 'will visiting', 'am visit'],
           correctIndex: 0,
           explanation: 'すでに決まっている確定した予定なので現在進行形 am visiting を使います。パーティーを断る理由になるほど固まった予定です。',
-          choiceNotes: [null, '現在形は習慣やいつでも成り立つ事実を表すので、特定の日の予定には使えません。', 'will の後ろは動詞の原形です。will visiting という形はありません。', 'be動詞の後ろに動詞の原形は置けません。-ing形が必要です。'],
+          choiceNotes: [null, '現在形だと「ふだん訪ねている」という習慣の意味になり、今夜の予定には合いません。', 'will の後ろは動詞の原形です。will visiting という形はありません。', 'be動詞の後ろに動詞の原形は置けません。-ing形が必要です。'],
           audioEn: "I can't come to the party tonight. I am visiting my grandmother in Nagoya.",
         },
         {

@@ -1,0 +1,1402 @@
+/* イングバードの着せかえパーツの色と動き。
+   形は IngbirdOutfit.tsx、気分・進化・レイアウトは Ingbird.css / IngbirdCard 側。 */
+
+/* ===== 共通の布・金属 ===== */
+
+.ingbird-fabric-gold {
+  fill: #f2c14a;
+  stroke: #c99a2e;
+}
+
+.ingbird-fabric-gold-strong {
+  fill: #ffd76a;
+  stroke: #c99a2e;
+}
+
+.ingbird-fabric-navy {
+  fill: #1d4d70;
+  stroke: #173f5f;
+}
+
+.ingbird-fabric-teal {
+  fill: #2f8f83;
+  stroke: #1f6b62;
+}
+
+.ingbird-fabric-red {
+  fill: #e08a76;
+  stroke: #c96e5a;
+}
+
+.ingbird-fabric-plum {
+  fill: #4b3a7a;
+  stroke: #33265c;
+}
+
+.ingbird-fabric-cream {
+  fill: #fdf3dd;
+  stroke: #e3d3b4;
+}
+
+.ingbird-fabric-dark {
+  fill: #12212f;
+  stroke: #0b1622;
+}
+
+.ingbird-fabric-pink {
+  fill: #f6b7c7;
+  stroke: #e28fa4;
+}
+
+.ingbird-fabric-green {
+  fill: #7fb07a;
+  stroke: #5f8f5a;
+}
+
+.ingbird-fabric-silver {
+  fill: #d7dee6;
+  stroke: #aab6c2;
+}
+
+.ingbird-fabric-brown {
+  fill: #a9784a;
+  stroke: #7d5735;
+}
+
+.ingbird-fabric-straw {
+  fill: #e6c27a;
+  stroke: #b9944e;
+}
+
+.ingbird-fabric-white {
+  fill: #fff;
+  stroke: #c9d8df;
+}
+
+.ingbird-hat path,
+.ingbird-hat ellipse,
+.ingbird-hat circle,
+.ingbird-hat rect {
+  stroke-linejoin: round;
+  stroke-width: 1.4;
+}
+
+.ingbird-hat .ingbird-line-gold {
+  fill: none;
+  stroke: #f2c14a;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.ingbird-hat .ingbird-line-cream {
+  fill: none;
+  stroke: #fdf3dd;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.ingbird-hat-stem,
+.ingbird-antenna-stem {
+  fill: none;
+  stroke: #173f5f;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+/* ===== メガネ ===== */
+
+.ingbird-glasses .ingbird-frame {
+  fill: none;
+  stroke: #173f5f;
+  stroke-linecap: round;
+  stroke-width: 2.2;
+}
+
+.ingbird-glasses .ingbird-lens {
+  fill: rgb(255 255 255 / 16%);
+  stroke: #173f5f;
+  stroke-width: 2.2;
+}
+
+.ingbird-glasses .ingbird-lens-heart {
+  fill: rgb(224 138 118 / 28%);
+  stroke: #c96e5a;
+  stroke-width: 2;
+}
+
+.ingbird-glasses .ingbird-shield {
+  fill: rgb(18 33 47 / 84%);
+  stroke: #0b1622;
+  stroke-width: 1.4;
+}
+
+.ingbird-glasses .ingbird-shield-glint {
+  fill: none;
+  stroke: rgb(255 255 255 / 55%);
+  stroke-linecap: round;
+  stroke-width: 1.6;
+}
+
+.ingbird-glasses .ingbird-rb-1,
+.ingbird-glasses .ingbird-rb-2,
+.ingbird-glasses .ingbird-rb-3 {
+  fill: none;
+  stroke-width: 2.2;
+}
+
+.ingbird-glasses .ingbird-rb-1 {
+  stroke: #e08a76;
+}
+
+.ingbird-glasses .ingbird-rb-2 {
+  stroke: #f2c14a;
+}
+
+.ingbird-glasses .ingbird-rb-3 {
+  stroke: #7fb8c9;
+}
+
+.ingbird-glasses .ingbird-visor {
+  fill: rgb(47 143 131 / 55%);
+  stroke: #1f6b62;
+  stroke-width: 1.8;
+}
+
+.ingbird-glasses .ingbird-goggle {
+  fill: rgb(255 255 255 / 22%);
+  stroke: #4b3a7a;
+  stroke-width: 3;
+}
+
+.ingbird-glasses .ingbird-goggle-strap {
+  fill: none;
+  stroke: #4b3a7a;
+  stroke-linecap: round;
+  stroke-width: 2.4;
+}
+
+.ingbird-glasses .ingbird-lens-gold {
+  fill: rgb(246 201 69 / 30%);
+  stroke: #d9a441;
+  stroke-width: 2;
+}
+
+.ingbird-glasses .ingbird-frame-gold {
+  fill: none;
+  stroke: #d9a441;
+  stroke-linecap: round;
+  stroke-width: 2.2;
+}
+
+.ingbird-glasses .ingbird-lens-rimless {
+  fill: rgb(255 255 255 / 10%);
+  stroke: rgb(23 63 95 / 35%);
+  stroke-width: 1.2;
+}
+
+.ingbird-glasses .ingbird-frame-rimless {
+  fill: none;
+  stroke: #aab6c2;
+  stroke-linecap: round;
+  stroke-width: 1.4;
+}
+
+.ingbird-glasses .ingbird-lens-diamond {
+  fill: rgb(127 184 201 / 26%);
+  stroke: #5f9cae;
+  stroke-width: 2;
+}
+
+.ingbird-glasses .ingbird-spiral {
+  fill: none;
+  stroke: #d9a441;
+  stroke-linecap: round;
+  stroke-width: 1.8;
+}
+
+.ingbird-glasses .ingbird-lens-3d-red {
+  fill: rgb(224 138 118 / 55%);
+  stroke: #c96e5a;
+  stroke-width: 2;
+}
+
+.ingbird-glasses .ingbird-lens-3d-blue {
+  fill: rgb(127 184 201 / 55%);
+  stroke: #5f9cae;
+  stroke-width: 2;
+}
+
+.ingbird-glasses .ingbird-goggle-ski {
+  fill: rgb(127 224 195 / 32%);
+  stroke: #2f8f83;
+  stroke-width: 3;
+}
+
+.ingbird-glasses .ingbird-petal {
+  fill: #f6b7c7;
+  stroke: #e28fa4;
+  stroke-width: 0.8;
+}
+
+.ingbird-glasses .ingbird-cyber-frame {
+  fill: rgb(18 33 47 / 88%);
+  stroke: #7fe0c3;
+  stroke-width: 1.6;
+}
+
+.ingbird-glasses .ingbird-cyber-line {
+  fill: none;
+  stroke: #7fe0c3;
+  stroke-linecap: round;
+  stroke-width: 1.6;
+  filter: drop-shadow(0 0 2px #7fe0c3);
+}
+
+.ingbird-glasses .ingbird-star-legend {
+  fill: rgb(255 215 106 / 45%);
+  stroke: #ffd76a;
+  stroke-width: 1.8;
+  filter: drop-shadow(0 0 3px rgb(255 215 106 / 80%));
+}
+
+/* ===== 小物 ===== */
+
+.ingbird-ribbon {
+  fill: none;
+  stroke: #2f8f83;
+  stroke-linecap: round;
+  stroke-width: 2.6;
+}
+
+.ingbird-chain {
+  fill: none;
+  stroke: #d9a441;
+  stroke-width: 1.8;
+}
+
+.ingbird-headphone-band {
+  fill: none;
+  stroke: #1d4d70;
+  stroke-linecap: round;
+  stroke-width: 4;
+}
+
+.ingbird-star {
+  fill: #fdf3dd;
+}
+
+.ingbird-whistle-cord,
+.ingbird-camera-strap {
+  fill: none;
+  stroke: #173f5f;
+  stroke-linecap: round;
+  stroke-width: 2;
+}
+
+.ingbird-wing-lines {
+  fill: none;
+  stroke: #c9d8df;
+  stroke-linecap: round;
+  stroke-width: 1.2;
+}
+
+/* ===== エフェクト ===== */
+
+.ingbird-fx-leaves ellipse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ingbird-fx-fall 5.2s linear infinite;
+}
+
+.ingbird-fx-leaves ellipse:nth-child(2) {
+  animation-delay: 1.2s;
+}
+
+.ingbird-fx-leaves ellipse:nth-child(3) {
+  animation-delay: 2.6s;
+}
+
+.ingbird-fx-leaves ellipse:nth-child(4) {
+  animation-delay: 3.9s;
+}
+
+.ingbird-leaf-green {
+  fill: #8dbb84;
+  stroke: #669d5e;
+  stroke-width: 0.8;
+}
+
+.ingbird-leaf-orange {
+  fill: #e6a35c;
+  stroke: #c9863e;
+  stroke-width: 0.8;
+}
+
+.ingbird-fx-notes .ingbird-note-stem {
+  fill: none;
+  stroke: #1d4d70;
+  stroke-linecap: round;
+  stroke-width: 2.2;
+}
+
+.ingbird-fx-notes ellipse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ingbird-fx-float 4.2s ease-in-out infinite;
+}
+
+.ingbird-fx-notes ellipse:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.ingbird-fx-notes ellipse:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.ingbird-fx-notes ellipse:nth-child(5) {
+  animation-delay: 0.9s;
+}
+
+.ingbird-fx-notes ellipse:nth-child(6) {
+  animation-delay: 1.2s;
+}
+
+.ingbird-heart {
+  fill: #e08a76;
+  stroke: #c96e5a;
+  stroke-width: 0.8;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ingbird-fx-float 4.4s ease-in-out infinite;
+}
+
+.ingbird-heart:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.ingbird-heart:nth-child(3) {
+  animation-delay: 1.2s;
+}
+
+.ingbird-heart:nth-child(4) {
+  animation-delay: 1.8s;
+}
+
+.ingbird-star-dot {
+  fill: #fff7d0;
+  stroke: #e8d58a;
+  stroke-width: 0.8;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ingbird-fx-twinkle 3s ease-in-out infinite;
+}
+
+.ingbird-star-dot:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+.ingbird-star-dot:nth-child(3) {
+  animation-delay: 1.4s;
+}
+
+.ingbird-star-dot:nth-child(4) {
+  animation-delay: 2.1s;
+}
+
+.ingbird-confetti-piece {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ingbird-fx-fall 4.6s linear infinite;
+}
+
+.ingbird-confetti-piece.piece-1 {
+  fill: #e08a76;
+}
+
+.ingbird-confetti-piece.piece-2 {
+  fill: #f2c14a;
+  animation-delay: 0.5s;
+}
+
+.ingbird-confetti-piece.piece-3 {
+  fill: #7fb8c9;
+  animation-delay: 1.1s;
+}
+
+.ingbird-confetti-piece.piece-4 {
+  fill: #7fb07a;
+  animation-delay: 1.7s;
+}
+
+.ingbird-confetti-piece.piece-5 {
+  fill: #c3b0ff;
+  animation-delay: 2.4s;
+}
+
+.ingbird-confetti-piece.piece-6 {
+  fill: #f6b7c7;
+  animation-delay: 3.1s;
+}
+
+.ingbird-rain {
+  fill: none;
+  stroke: #8fb8d9;
+  stroke-linecap: round;
+  stroke-width: 1.6;
+  animation: ingbird-fx-fall 1.9s linear infinite;
+}
+
+.ingbird-firefly {
+  fill: #ffe9a3;
+  stroke: #f2c14a;
+  stroke-width: 0.6;
+  filter: drop-shadow(0 0 3px rgb(255 224 138 / 90%));
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ingbird-fx-twinkle 3.2s ease-in-out infinite;
+}
+
+.ingbird-firefly:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.ingbird-firefly:nth-child(3) {
+  animation-delay: 1.2s;
+}
+
+.ingbird-firefly:nth-child(4) {
+  animation-delay: 1.8s;
+}
+
+.ingbird-firefly:nth-child(5) {
+  animation-delay: 2.4s;
+}
+
+.ingbird-fx-lightning .ingbird-bolt {
+  fill: #ffe8a3;
+  stroke: #fff7d9;
+  stroke-linejoin: round;
+  stroke-width: 0.7;
+  animation: ingbird-bolt-flash 3.6s linear infinite;
+}
+
+.ingbird-fx-lightning .ingbird-bolt:nth-child(2) {
+  animation-delay: 1.2s;
+}
+
+.ingbird-fx-lightning .ingbird-bolt:nth-child(3) {
+  animation-delay: 2.4s;
+}
+
+.ingbird-fx-rainbow path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-width: 2.4;
+  animation: ingbird-fx-float 6s ease-in-out infinite;
+}
+
+.ingbird-fx-rainbow .ingbird-rainbow-1 {
+  stroke: #e08a76;
+}
+
+.ingbird-fx-rainbow .ingbird-rainbow-2 {
+  stroke: #f2c14a;
+}
+
+.ingbird-fx-rainbow .ingbird-rainbow-3 {
+  stroke: #7fb8c9;
+}
+
+.ingbird-fx-bigbubbles circle {
+  fill: rgb(190 232 245 / 28%);
+  stroke: #9fd5e8;
+  stroke-width: 1.8;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ingbird-fx-float 5s ease-in-out infinite;
+}
+
+.ingbird-fx-bigbubbles circle:nth-child(2) {
+  animation-delay: 1.2s;
+}
+
+.ingbird-fx-bigbubbles circle:nth-child(3) {
+  animation-delay: 2.4s;
+}
+
+.ingbird-fx-goldsparkle path {
+  fill: #f6c945;
+  stroke: #e0a92e;
+  stroke-width: 0.8;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ingbird-fx-twinkle 2.8s ease-in-out infinite;
+}
+
+.ingbird-fx-goldsparkle path:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+.ingbird-fx-goldsparkle path:nth-child(3) {
+  animation-delay: 1.4s;
+}
+
+.ingbird-fx-goldsparkle path:nth-child(4) {
+  animation-delay: 2.1s;
+}
+
+.ingbird-meteor-trail {
+  fill: none;
+  stroke: #f2c14a;
+  stroke-linecap: round;
+  stroke-width: 1.6;
+  opacity: 0.7;
+}
+
+.ingbird-meteor-head {
+  fill: #fff7d0;
+  filter: drop-shadow(0 0 3px rgb(255 215 106 / 90%));
+  animation: ingbird-fx-twinkle 2.4s ease-in-out infinite;
+}
+
+.ingbird-fx-aurora path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-width: 2.4;
+  opacity: 0.65;
+  animation: ingbird-fx-float 7s ease-in-out infinite;
+}
+
+.ingbird-aurora-1 {
+  stroke: #7fe0c3;
+}
+
+.ingbird-aurora-2 {
+  stroke: #9fd5e8;
+  animation-delay: 1.1s;
+}
+
+.ingbird-aurora-3 {
+  stroke: #b49cff;
+  animation-delay: 2.2s;
+}
+
+.ingbird-galaxy-dot {
+  fill: #e9e4ff;
+  animation: ingbird-fx-twinkle 4s ease-in-out infinite;
+}
+
+.ingbird-galaxy-dot:nth-child(2n) {
+  animation-delay: 1.3s;
+}
+
+.ingbird-galaxy-star {
+  fill: #c3b0ff;
+  stroke: #9a86e0;
+  stroke-width: 0.6;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ingbird-fx-twinkle 3.4s ease-in-out infinite;
+}
+
+/* ===== 追加のエフェクト ===== */
+
+.ingbird-butterfly-wing {
+  fill: #f6b7c7;
+  stroke: #e28fa4;
+  stroke-width: 0.8;
+  animation: ingbird-fx-twinkle 2.4s ease-in-out infinite;
+}
+
+.ingbird-fx-butterfly ellipse:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.ingbird-fx-butterfly ellipse:nth-child(3) {
+  animation-delay: 1.2s;
+}
+
+.ingbird-fx-butterfly ellipse:nth-child(4) {
+  animation-delay: 1.35s;
+}
+
+.ingbird-fx-balloons ellipse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ingbird-fx-float 5s ease-in-out infinite;
+  stroke-width: 1;
+}
+
+.ingbird-balloon-1 {
+  fill: #e08a76;
+  stroke: #c96e5a;
+}
+
+.ingbird-balloon-2 {
+  fill: #7fb8c9;
+  stroke: #5f9cae;
+  animation-delay: 1.2s;
+}
+
+.ingbird-balloon-3 {
+  fill: #f2c14a;
+  stroke: #d9a441;
+  animation-delay: 2.4s;
+}
+
+.ingbird-balloon-string {
+  fill: none;
+  stroke: #aab6c2;
+  stroke-width: 1;
+}
+
+.ingbird-bubblestar {
+  fill: rgb(246 201 69 / 18%);
+  stroke: #e0b64a;
+  stroke-width: 1.4;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ingbird-fx-float 4.6s ease-in-out infinite;
+}
+
+.ingbird-fx-bubblestars circle:nth-child(2) {
+  animation-delay: 1.1s;
+}
+
+.ingbird-fx-bubblestars circle:nth-child(3) {
+  animation-delay: 2.2s;
+}
+
+.ingbird-fx-bubblestars circle:nth-child(4) {
+  animation-delay: 3.3s;
+}
+
+.ingbird-fx-fireworks path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-width: 2;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ingbird-fx-twinkle 2.6s ease-in-out infinite;
+}
+
+.ingbird-firework-1 {
+  stroke: #e08a76;
+}
+
+.ingbird-firework-2 {
+  stroke: #7fb8c9;
+  animation-delay: 1.3s;
+}
+
+.ingbird-leaf-gold {
+  fill: #f2c14a;
+  stroke: #d9a441;
+  stroke-width: 0.8;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ingbird-fx-fall 5.4s linear infinite;
+}
+
+.ingbird-fx-gold_leaves ellipse:nth-child(2) {
+  animation-delay: 1.3s;
+}
+
+.ingbird-fx-gold_leaves ellipse:nth-child(3) {
+  animation-delay: 2.7s;
+}
+
+.ingbird-fx-gold_leaves ellipse:nth-child(4) {
+  animation-delay: 4.1s;
+}
+
+.ingbird-stardust-dot {
+  fill: #e9e4ff;
+  animation: ingbird-fx-twinkle 3.6s ease-in-out infinite;
+}
+
+.ingbird-fx-stardust circle:nth-child(2n) {
+  animation-delay: 1.1s;
+}
+
+.ingbird-fx-stardust circle:nth-child(3n) {
+  animation-delay: 2.2s;
+}
+
+.ingbird-comet-tail {
+  fill: none;
+  stroke: #f2c14a;
+  stroke-linecap: round;
+  stroke-width: 2;
+  opacity: 0.7;
+}
+
+.ingbird-comet-head {
+  fill: #fff7d0;
+  filter: drop-shadow(0 0 3px rgb(255 215 106 / 90%));
+  animation: ingbird-fx-twinkle 2.6s ease-in-out infinite;
+}
+
+.ingbird-sun {
+  fill: #ffd76a;
+  stroke: #e0b64a;
+  stroke-width: 1;
+  filter: drop-shadow(0 0 4px rgb(255 215 106 / 80%));
+  animation: ingbird-fx-twinkle 4s ease-in-out infinite;
+}
+
+.ingbird-sun-ray {
+  fill: none;
+  stroke: #e8c977;
+  stroke-linecap: round;
+  stroke-width: 1.6;
+}
+
+.ingbird-thunder-bolt {
+  fill: #ffe8a3;
+  stroke: #fff7d9;
+  stroke-width: 0.8;
+  animation: ingbird-bolt-flash 3s linear infinite;
+}
+
+.ingbird-stardust-legend {
+  fill: #fff2b8;
+  filter: drop-shadow(0 0 3px rgb(255 215 106 / 90%));
+  animation: ingbird-fx-twinkle 3s ease-in-out infinite;
+}
+
+.ingbird-fx-stardust_legend circle:nth-child(2n) {
+  animation-delay: 0.9s;
+}
+
+.ingbird-fx-stardust_legend circle:nth-child(3n) {
+  animation-delay: 1.8s;
+}
+
+/* ===== 靴 ===== */
+
+.ingbird-shoes {
+  stroke-linejoin: round;
+  stroke-width: 1.2;
+}
+
+.ingbird-shoe-white {
+  fill: #fff;
+  stroke: #c9d8df;
+}
+
+.ingbird-shoe-line {
+  fill: none;
+  stroke: #9fb0bd;
+  stroke-linecap: round;
+  stroke-width: 1;
+}
+
+.ingbird-shoe-brown {
+  fill: #8a5a3a;
+  stroke: #6d452b;
+}
+
+.ingbird-shoe-yellow {
+  fill: #f2c14a;
+  stroke: #c99a2e;
+}
+
+.ingbird-shoe-pink {
+  fill: #f6b7c7;
+  stroke: #e28fa4;
+}
+
+.ingbird-shoe-black {
+  fill: #2b3440;
+  stroke: #12212f;
+}
+
+.ingbird-shoe-teal {
+  fill: #2f8f83;
+  stroke: #1f6b62;
+}
+
+.ingbird-shoe-gold {
+  fill: #f6c945;
+  stroke: #d9a441;
+}
+
+.ingbird-shoe-silver {
+  fill: #d7dee6;
+  stroke: #aab6c2;
+}
+
+.ingbird-shoe-glass {
+  fill: rgb(159 213 232 / 45%);
+  stroke: #8fb8d9;
+}
+
+.ingbird-shoe-cloud {
+  fill: #fff;
+  stroke: #d7e3ea;
+}
+
+.ingbird-shoe-wood {
+  fill: #b9944e;
+  stroke: #8a6a30;
+}
+
+.ingbird-shoe-cream {
+  fill: #fdf3dd;
+  stroke: #e3d3b4;
+}
+
+.ingbird-shoe-sole {
+  fill: #8a5a3a;
+  stroke: #6d452b;
+}
+
+.ingbird-shoe-strap {
+  fill: none;
+  stroke: #a9784a;
+  stroke-linecap: round;
+  stroke-width: 1.6;
+}
+
+.ingbird-shoe-wheel {
+  fill: #4b5563;
+  stroke: #2b3440;
+  stroke-width: 1;
+}
+
+.ingbird-shoe-blade {
+  fill: none;
+  stroke: #aab6c2;
+  stroke-linecap: round;
+  stroke-width: 2;
+}
+
+.ingbird-shoe-star {
+  fill: #fff2b8;
+}
+
+.ingbird-shoe-flame {
+  fill: #f2c14a;
+  stroke: #e08a76;
+  stroke-width: 0.8;
+  transform-box: fill-box;
+  transform-origin: top center;
+  animation: ingbird-flame-flicker 0.45s ease-in-out infinite alternate;
+}
+
+.ingbird-shoe-sparkle {
+  fill: #e8fbff;
+  stroke: #8fe8ff;
+  stroke-width: 0.8;
+  animation: ingbird-fx-twinkle 3s ease-in-out infinite;
+}
+
+/* ===== ダークファンタジー(300日以降) ===== */
+
+.ingbird-dark-horn {
+  fill: #2a2238;
+  stroke: #6b4bb0;
+  stroke-width: 1.4;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 3px rgb(107 75 176 / 60%));
+}
+
+.ingbird-dark-metal {
+  fill: #241c36;
+  stroke: #6b4bb0;
+  stroke-width: 1.4;
+  stroke-linejoin: round;
+}
+
+.ingbird-dark-gem {
+  fill: #b49cff;
+  stroke: #7a5fd0;
+  stroke-width: 1;
+  filter: drop-shadow(0 0 3px rgb(180 156 255 / 85%));
+}
+
+.ingbird-dark-bone {
+  fill: #d7dee6;
+  stroke: #9aa6b2;
+  stroke-width: 1.2;
+}
+
+.ingbird-dark-hollow {
+  fill: #0d0a16;
+}
+
+.ingbird-dark-cloth {
+  fill: #221b33;
+  stroke: #4a3a6b;
+  stroke-width: 1.4;
+  stroke-linejoin: round;
+}
+
+.ingbird-dark-trim {
+  fill: #4b3a7a;
+  stroke: #6b4bb0;
+  stroke-width: 1;
+}
+
+.ingbird-dark-shadow {
+  fill: #120e1e;
+  stroke: #33265c;
+  stroke-width: 1;
+}
+
+.ingbird-dark-eye {
+  fill: #ff6b81;
+  stroke: #c93a52;
+  stroke-width: 1.2;
+  filter: drop-shadow(0 0 4px rgb(255 93 115 / 90%));
+  animation: ingbird-dark-pulse 2.4s ease-in-out infinite;
+}
+
+.ingbird-dark-pupil {
+  fill: none;
+  stroke: #1a0f1f;
+  stroke-linecap: round;
+  stroke-width: 1.6;
+}
+
+.ingbird-dark-lens {
+  fill: rgb(107 75 176 / 35%);
+  stroke: #8b6be0;
+  stroke-width: 2;
+}
+
+.ingbird-dark-frame {
+  fill: none;
+  stroke: #8b6be0;
+  stroke-linecap: round;
+  stroke-width: 2.2;
+}
+
+.ingbird-dark-mask {
+  fill: #1a1426;
+  stroke: #4a3a6b;
+  stroke-width: 1.6;
+  stroke-linejoin: round;
+}
+
+.ingbird-dark-slit {
+  fill: none;
+  stroke: #ff6b81;
+  stroke-linecap: round;
+  stroke-width: 2;
+  filter: drop-shadow(0 0 3px rgb(255 93 115 / 80%));
+}
+
+.ingbird-dark-wing {
+  fill: #241c36;
+  stroke: #4a3a6b;
+  stroke-width: 1.4;
+  stroke-linejoin: round;
+}
+
+.ingbird-dark-chain {
+  fill: none;
+  stroke: #9a86e0;
+  stroke-width: 2;
+}
+
+.ingbird-dark-orb {
+  fill: #33265c;
+  stroke: #8b6be0;
+  stroke-width: 1.4;
+  filter: drop-shadow(0 0 5px rgb(139 107 224 / 80%));
+}
+
+.ingbird-dark-orb-glint {
+  fill: #e9e4ff;
+}
+
+.ingbird-dark-spike {
+  fill: #4a3a6b;
+  stroke: #6b4bb0;
+  stroke-width: 1;
+}
+
+.ingbird-dark-scale {
+  fill: #2b3a3f;
+  stroke: #4f7a74;
+  stroke-width: 1.2;
+}
+
+.ingbird-dark-flame {
+  fill: #8b6be0;
+  stroke: #b49cff;
+  stroke-width: 0.8;
+  transform-box: fill-box;
+  transform-origin: bottom center;
+  animation: ingbird-dark-flame 1.2s ease-in-out infinite alternate;
+}
+
+.ingbird-dark-mist {
+  fill: none;
+  stroke: #6b4bb0;
+  stroke-linecap: round;
+  stroke-width: 2;
+  opacity: 0.55;
+  animation: ingbird-dark-drift 5s ease-in-out infinite;
+}
+
+.ingbird-dark-glow {
+  fill: #b49cff;
+  filter: drop-shadow(0 0 5px rgb(180 156 255 / 85%));
+  animation: ingbird-dark-pulse 3s ease-in-out infinite;
+}
+
+.ingbird-dark-bat {
+  fill: #1a1426;
+  stroke: #6b4bb0;
+  stroke-width: 0.8;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ingbird-dark-fly 3.2s ease-in-out infinite;
+}
+
+.ingbird-blood-moon {
+  fill: #c93a52;
+  stroke: #8b2a3d;
+  filter: drop-shadow(0 0 10px rgb(201 58 82 / 65%));
+}
+
+.ingbird-blood-moon-ring {
+  fill: none;
+  stroke: rgb(201 58 82 / 45%);
+  stroke-width: 2;
+}
+
+.ingbird-ghost {
+  fill: rgb(215 222 230 / 55%);
+  stroke: #9aa6b2;
+  stroke-width: 1;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ingbird-ghost-float 4s ease-in-out infinite;
+}
+
+.ingbird-abyss-swirl {
+  fill: none;
+  stroke: #4a3a6b;
+  stroke-linecap: round;
+  stroke-width: 2.4;
+  animation: ingbird-dark-drift 6s ease-in-out infinite;
+}
+
+.ingbird-abyss-dot {
+  fill: #6b4bb0;
+  animation: ingbird-dark-pulse 3.4s ease-in-out infinite;
+}
+
+.ingbird-void-rift {
+  fill: none;
+  stroke: #120e1e;
+  stroke-linecap: round;
+  stroke-width: 6;
+}
+
+.ingbird-void-glow {
+  fill: none;
+  stroke: #b49cff;
+  stroke-linecap: round;
+  stroke-width: 1.6;
+  filter: drop-shadow(0 0 4px rgb(180 156 255 / 90%));
+  animation: ingbird-dark-pulse 2.8s ease-in-out infinite;
+}
+
+@keyframes ingbird-dark-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes ingbird-dark-flame {
+  from {
+    transform: scaleY(0.88) scaleX(0.94);
+  }
+
+  to {
+    transform: scaleY(1.12) scaleX(1);
+  }
+}
+
+@keyframes ingbird-dark-drift {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: translateX(0);
+  }
+
+  50% {
+    opacity: 0.75;
+    transform: translateX(4px);
+  }
+}
+
+@keyframes ingbird-dark-fly {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+
+  50% {
+    transform: translateY(-4px) rotate(-6deg);
+  }
+}
+
+@keyframes ingbird-ghost-float {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 0.85;
+    transform: translateY(-5px);
+  }
+}
+
+/* ===== 追加の帽子・メガネ・小物・靴・雨 ===== */
+
+.ingbird-hat-black {
+  fill: #241c36;
+  stroke: #4a3a6b;
+}
+
+.ingbird-gold-tassel {
+  fill: none;
+  stroke: #d9a441;
+  stroke-linecap: round;
+  stroke-width: 2.4;
+}
+
+.ingbird-phoenix-1 {
+  fill: #f2c14a;
+  stroke: #e08a76;
+  stroke-width: 1.2;
+  stroke-linejoin: round;
+}
+
+.ingbird-phoenix-2 {
+  fill: #e08a76;
+  stroke: #c96e5a;
+  stroke-width: 1;
+  stroke-linejoin: round;
+}
+
+.ingbird-glasses .ingbird-lens-tinted {
+  fill: rgb(127 184 201 / 38%);
+  stroke: #5f9cae;
+  stroke-width: 2;
+}
+
+.ingbird-glasses .ingbird-lens-butterfly {
+  fill: rgb(246 183 199 / 45%);
+  stroke: #e28fa4;
+  stroke-width: 1.8;
+}
+
+.ingbird-glasses .ingbird-lens-tulip {
+  fill: rgb(246 201 69 / 30%);
+  stroke: #d9a441;
+  stroke-width: 2;
+}
+
+.ingbird-glasses .ingbird-lens-halo {
+  fill: rgb(255 215 106 / 22%);
+  stroke: #f2c14a;
+  stroke-width: 2;
+  filter: drop-shadow(0 0 3px rgb(255 215 106 / 70%));
+}
+
+.ingbird-glasses .ingbird-swirl-lens {
+  fill: none;
+  stroke: #f2c14a;
+  stroke-linecap: round;
+  stroke-width: 2;
+}
+
+.ingbird-glasses .ingbird-neon-frame {
+  fill: rgb(18 33 47 / 70%);
+  stroke: #7fe0c3;
+  stroke-width: 2;
+  filter: drop-shadow(0 0 3px rgb(127 224 195 / 70%));
+}
+
+.ingbird-glasses .ingbird-neon-line {
+  fill: none;
+  stroke: #7fe0c3;
+  stroke-linecap: round;
+  stroke-width: 1.8;
+}
+
+.ingbird-glasses .ingbird-mirror-lens {
+  fill: rgb(190 214 228 / 85%);
+  stroke: #8fb8d9;
+  stroke-width: 2;
+}
+
+.ingbird-lanyard {
+  fill: none;
+  stroke: #2f8f83;
+  stroke-linecap: round;
+  stroke-width: 2;
+}
+
+.ingbird-jelly {
+  fill: rgb(246 183 199 / 55%);
+  stroke: #e28fa4;
+  stroke-width: 1.2;
+}
+
+.ingbird-rain-light {
+  fill: none;
+  stroke: #a9cfe4;
+  stroke-linecap: round;
+  stroke-width: 1.4;
+  animation: ingbird-fx-fall 2.6s linear infinite;
+}
+
+.ingbird-snow-light {
+  fill: none;
+  stroke: #d9edf5;
+  stroke-linecap: round;
+  stroke-width: 1.4;
+  animation: ingbird-fx-fall-slow 6s linear infinite;
+}
+
+.ingbird-drop {
+  fill: #9fd5e8;
+  stroke: #6fa9bd;
+  stroke-width: 0.8;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ingbird-fx-fall 3s ease-in infinite;
+}
+
+.ingbird-drop-red {
+  fill: #e08a76;
+  stroke: #c96e5a;
+}
+
+.ingbird-drop-yellow {
+  fill: #f2c14a;
+  stroke: #d9a441;
+}
+
+.ingbird-drop-blue {
+  fill: #7fb8c9;
+  stroke: #5f9cae;
+}
+
+.ingbird-drop-green {
+  fill: #8dbb84;
+  stroke: #669d5e;
+}
+
+.ingbird-fx-raindrops path:nth-child(2) {
+  animation-delay: 0.8s;
+}
+
+.ingbird-fx-raindrops path:nth-child(3) {
+  animation-delay: 1.6s;
+}
+
+.ingbird-fx-raindrops path:nth-child(4) {
+  animation-delay: 2.4s;
+}
+
+.ingbird-fx-rainbow_rain path:nth-child(2) {
+  animation-delay: 0.8s;
+}
+
+.ingbird-fx-rainbow_rain path:nth-child(3) {
+  animation-delay: 1.6s;
+}
+
+.ingbird-fx-rainbow_rain path:nth-child(4) {
+  animation-delay: 2.4s;
+}
+
+.ingbird-star-rain {
+  fill: #fff7d0;
+  stroke: #e8d58a;
+  stroke-width: 0.8;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ingbird-fx-fall 4s linear infinite;
+}
+
+.ingbird-fx-star_rain path:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.ingbird-fx-star_rain path:nth-child(3) {
+  animation-delay: 2s;
+}
+
+.ingbird-fx-star_rain path:nth-child(4) {
+  animation-delay: 3s;
+}
+
+.ingbird-gold-drop {
+  fill: none;
+  stroke: #f2c14a;
+  stroke-linecap: round;
+  stroke-width: 2;
+  animation: ingbird-fx-fall 2.4s linear infinite;
+}
+
+.ingbird-rain-reverse {
+  fill: none;
+  stroke: #b49cff;
+  stroke-linecap: round;
+  stroke-width: 1.6;
+  animation: ingbird-rain-rise 3s linear infinite;
+}
+
+.ingbird-storm-wind {
+  fill: none;
+  stroke: #9fd5e8;
+  stroke-linecap: round;
+  stroke-width: 1.6;
+  opacity: 0.7;
+  animation: ingbird-dark-drift 4s ease-in-out infinite;
+}
+
+@keyframes ingbird-rain-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes ingbird-flame-flicker {
+  from {
+    opacity: 0.8;
+    transform: scaleY(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scaleY(1.15);
+  }
+}
