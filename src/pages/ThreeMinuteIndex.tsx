@@ -3,6 +3,7 @@ import { Ingbird } from '../components/Ingbird'
 import { Hiyoko } from '../components/threeMinute/Hiyoko'
 import { useIngbirdAppearance } from '../components/threeMinute/useIngbirdAppearance'
 import { LEVEL_ORDER, allLessons, grammarUnits } from '../content/grammar'
+import { THREE_MINUTE_PATTERN_INTRO_ID, THREE_MINUTE_PATTERN_INTRO_TITLE } from '../content/threeMinute/ids'
 import { getThreeMinuteCompleted } from '../services/progress'
 import './ThreeMinute.css'
 
@@ -16,13 +17,17 @@ const LEVEL_LABEL: Record<string, string> = {
 
 /**
  * 3分間English の一覧。
- * 英文法と同じ33ユニット・116セクションを、会話形式の短いお話として並べる。
+ * 冒頭に5文型の導入を置き、そのあとに英文法と同じ33ユニット・116セクションを並べる。
  */
 export function ThreeMinuteIndex() {
   const appearance = useIngbirdAppearance()
   const completed = getThreeMinuteCompleted()
-  const completedCount = allLessons.filter((lesson) => completed.has(lesson.id)).length
-  const next = allLessons.find((lesson) => !completed.has(lesson.id))
+  const introDone = completed.has(THREE_MINUTE_PATTERN_INTRO_ID)
+  const totalStories = allLessons.length + 1
+  const completedCount = allLessons.filter((lesson) => completed.has(lesson.id)).length + (introDone ? 1 : 0)
+  const next = introDone
+    ? allLessons.find((lesson) => !completed.has(lesson.id))
+    : { id: THREE_MINUTE_PATTERN_INTRO_ID, title: THREE_MINUTE_PATTERN_INTRO_TITLE }
 
   return (
     <div className="page tm-page">
@@ -32,7 +37,7 @@ export function ThreeMinuteIndex() {
           <h1 id="tm-title">3分間English</h1>
           <p className="tm-hero-lead">
             イングバード先生とヒヨコ君の、やさしい英文法教室。
-            英文法の全範囲を、1話3分ほどの会話でひとつずつ学べます。
+            まずは5文型の地図から、英文法の全範囲を1話ずつ学べます。
           </p>
           <div className="tm-hero-actions">
             {next ? (
@@ -51,11 +56,11 @@ export function ThreeMinuteIndex() {
             */}
           </div>
           <div className="tm-hero-stats" aria-label="収録内容">
-            <span>{allLessons.length}話</span>
+            <span>{totalStories}話</span>
             <span>{grammarUnits.length}ユニット</span>
             <span>{LEVEL_ORDER.length}レベル</span>
             <span>
-              完了 {completedCount} / {allLessons.length}
+              完了 {completedCount} / {totalStories}
             </span>
           </div>
         </div>
@@ -79,9 +84,26 @@ export function ThreeMinuteIndex() {
         </div>
       </section>
 
+      <Link
+        to={`/three-minute/${THREE_MINUTE_PATTERN_INTRO_ID}`}
+        className={`tm-start-card${introDone ? ' done' : ''}`}
+        aria-labelledby="tm-start-title"
+      >
+        <span className="tm-start-kicker">まずはここから・約9分</span>
+        <h2 id="tm-start-title">{THREE_MINUTE_PATTERN_INTRO_TITLE}</h2>
+        <span className="tm-start-lead">
+          S / V / O / C / M の役割から、5文型すべての見分け方まで。
+          アニメーションと例文で、英文の骨組みをひととおり理解できます。
+        </span>
+        <span className="tm-start-topics">S / V / O / C / M ・ 5文型 ・ O = C の見分け方</span>
+        <span className="tm-start-cta">
+          {introDone ? '✓ 完了 — もう一度読む' : '5文型をはじめから学ぶ'} <span aria-hidden="true">→</span>
+        </span>
+      </Link>
+
       <p className="tm-note">
-        「3分間」は1話の目安です。図や音声もあわせて、ゆっくり進めてね。
-        各話の最後に、4択の理解度チェックが4問あります。
+        「3分間」は1話の目安です。最初の「5文型の地図」は、5文型をひととおり理解するための少し長めの導入(約9分)です。
+        図や音声もあわせて、ゆっくり進めてね。各話の最後に、4択の理解度チェックがあります(通常4問、5文型の導入は8問)。
       </p>
 
       <section className="tm-level-section" aria-labelledby="tm-level-list">

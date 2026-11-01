@@ -2,12 +2,17 @@
 
 .tm-dialogue {
   display: grid;
+  /* 自動列のままだと、吹き出しの最大内容幅(英文1行分)まで列が広がり、
+     スマホでページ全体が横にはみ出す。列は必ず画面幅に収める。 */
+  grid-template-columns: minmax(0, 1fr);
   gap: 1rem;
   padding: 0.35rem 0 0.5rem;
 }
 
 .tm-turn {
   display: flex;
+  min-width: 0;
+  max-width: 100%;
   align-items: flex-start;
   gap: 0.7rem;
 }
@@ -52,7 +57,9 @@
 
 .tm-bubble {
   position: relative;
+  min-width: 0;
   padding: 0.9rem 1.05rem;
+  overflow-wrap: anywhere;
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: 18px;
@@ -124,6 +131,7 @@
 }
 
 .tm-en-card {
+  min-width: 0;
   margin-top: 0.7rem;
   padding: 0.65rem 0.8rem;
   background: #fff;
@@ -158,12 +166,24 @@
 }
 
 .tm-scene {
+  min-width: 0;
+  max-width: 100%;
   margin: 0.15rem 0 0.35rem;
   padding: 0.85rem 0.95rem 1rem;
   background: #fff;
   border: 1px dashed #b8d8d3;
   border-radius: 16px;
   box-shadow: var(--shadow-sm);
+}
+
+.tm-scene-body {
+  min-width: 0;
+}
+
+/* 表や構造図は各ブロック内で横スクロールさせ、ホワイトボード自体は広げない。 */
+.tm-scene-body .table-scroll,
+.tm-scene-body .structure-row {
+  max-width: 100%;
 }
 
 .tm-scene-label {

@@ -36,6 +36,6 @@ export type ThreeMinuteSection = {
   /** 会話と図の情報量から出した読了目安(分)。 */
   minutes: number
   parts: ThreeMinutePart[]
-  /** 最後の理解度チェック。必ず4問。 */
+  /** 最後の理解度チェック。通常の話は4問、5文型の導入は8問。 */
   quiz: QuizQuestion[]
 }

@@ -23,6 +23,8 @@ B2の34セクションは到達判定に足る演習量を確保するため1セ
   構造図と5文型すべての2Dアニメーションで示す(`src/content/grammar/structures/skeleton.ts` /
   `patternGuide.ts` / `patternAnimations.ts`)。旧 u01-l4「英語の語順 SVO」と
   旧 u01-l5「5文型で文の骨組みを見る」はここへ統合し、カリキュラムからは削除する。
+- 同じ5文型の内容は、3分間English の冒頭「5文型の地図」でも会話形式で学べる
+  (`src/content/threeMinute/patternIntro.ts`)。英文法の116セクションには数えない。
 - 骨格を取り出す目を養うため、導線上の15セクションに構造ブロック(breakdown / expansion)と
   「構造チェック」を合成時に差し込む(`src/content/grammar/structures/`)。既存のレッスン定義と既存クイズは
   書き換えない(構造チェックは理解度チェックとは別セクションとして追加し、IDは `<lessonId>-s<n>` にする)。

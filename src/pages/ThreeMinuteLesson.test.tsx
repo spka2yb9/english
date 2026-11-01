@@ -37,6 +37,27 @@ describe('ThreeMinuteLessonPage', () => {
     expect(within(screen.getByRole('group', { name: '選択肢' })).getAllByRole('button')).toHaveLength(4)
   })
 
+  it('5文型の導入は、5つのアニメーションと8問の理解度チェックを表示する', () => {
+    render(
+      <MemoryRouter initialEntries={['/three-minute/intro-patterns']}>
+        <Routes>
+          <Route path="/three-minute/:lessonId" element={<ThreeMinuteLessonPage />} />
+        </Routes>
+      </MemoryRouter>,
+    )
+
+    expect(screen.getByRole('heading', { level: 1, name: '5文型の地図' })).toBeInTheDocument()
+    // 英語の語順に1つ、5文型それぞれに1つ。合計6つのアニメーションで確かめる。
+    expect(document.querySelectorAll('.grammar-animation')).toHaveLength(6)
+    expect(screen.getAllByText('S / V / O / C / M の役割').length).toBeGreaterThan(0)
+    expect(screen.getByRole('heading', { level: 2, name: '理解度チェック' })).toBeInTheDocument()
+    expect(screen.getByText('問題 1 / 8')).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /次のお話: be動詞の現在形/ })).toHaveAttribute(
+      'href',
+      '/three-minute/u01-l1',
+    )
+  })
+
   it('保存済みの着せかえと進化段階を、先生の姿に反映する', () => {
     localStorage.setItem(
       KEYS.ingbirdOutfit,

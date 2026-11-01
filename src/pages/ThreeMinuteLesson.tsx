@@ -5,8 +5,8 @@ import { Quiz } from '../components/Quiz'
 import { Hiyoko } from '../components/threeMinute/Hiyoko'
 import { ThreeMinuteDialogue } from '../components/threeMinute/Dialogue'
 import { useIngbirdAppearance } from '../components/threeMinute/useIngbirdAppearance'
-import { nextLesson } from '../content/grammar'
-import { getThreeMinuteSection, type ThreeMinuteSection } from '../content/threeMinute'
+import { getThreeMinuteSection, nextThreeMinuteSection, type ThreeMinuteSection } from '../content/threeMinute'
+import { THREE_MINUTE_PATTERN_INTRO_ID } from '../content/threeMinute/ids'
 import {
   getThreeMinuteCompleted,
   markThreeMinuteCompleted,
@@ -38,7 +38,9 @@ function ThreeMinuteLessonContent({ section }: { section: ThreeMinuteSection }) 
   const [completed, setCompleted] = useState(() => getThreeMinuteCompleted().has(section.lessonId))
   const [quizDone, setQuizDone] = useState(false)
   const [correctCount, setCorrectCount] = useState(0)
-  const next = nextLesson(section.lessonId)
+  const next = nextThreeMinuteSection(section.lessonId)
+  const isIntro = section.lessonId === THREE_MINUTE_PATTERN_INTRO_ID
+  const allCorrect = quizDone && correctCount === section.quiz.length
 
   const toggleCompleted = () => {
     markThreeMinuteCompleted(section.lessonId, !completed)
@@ -53,12 +55,14 @@ function ThreeMinuteLessonContent({ section }: { section: ThreeMinuteSection }) 
 
       <header className="tm-lesson-header">
         <div className="tm-lesson-kicker">
-          <span className="lesson-level-badge">{section.level}</span>
+          <span className="lesson-level-badge">{isIntro ? 'はじめに' : section.level}</span>
           <span className="tm-lesson-time">読了目安 約{section.minutes}分</span>
         </div>
         <h1>{section.title}</h1>
         <p className="tm-lesson-lead">
-          イングバード先生とヒヨコ君の会話で、{section.title}のポイントを学びます。
+          {isIntro
+            ? 'イングバード先生とヒヨコ君の会話で、英文の骨組みをひととおり学びます。'
+            : `イングバード先生とヒヨコ君の会話で、${section.title}のポイントを学びます。`}
         </p>
         <div className="lesson-goal tm-goal">
           <h2>このお話のゴール</h2>
@@ -87,7 +91,7 @@ function ThreeMinuteLessonContent({ section }: { section: ThreeMinuteSection }) 
 
       <section className="lesson-quiz tm-quiz" aria-labelledby="tm-quiz-title">
         <h2 id="tm-quiz-title">理解度チェック</h2>
-        <p className="section-lead">4問の4択です。答えるとすぐに解説が出ます。</p>
+        <p className="section-lead">{section.quiz.length}問の4択です。答えるとすぐに解説が出ます。</p>
         <Quiz
           questions={section.quiz}
           onAnswer={(question, correct) => {
@@ -103,7 +107,7 @@ function ThreeMinuteLessonContent({ section }: { section: ThreeMinuteSection }) 
       {quizDone && (
         <div className="tm-clear" role="status">
           <Ingbird
-            mood={correctCount === 4 ? 'party' : 'happy'}
+            mood={allCorrect ? 'party' : 'happy'}
             evolution={appearance.evolution}
             outfit={appearance.outfit}
             size={74}
@@ -111,15 +115,15 @@ function ThreeMinuteLessonContent({ section }: { section: ThreeMinuteSection }) 
           />
           <div>
             <p className="tm-clear-title">
-              {correctCount === 4 ? '4問ぜんぶ正解!' : `${section.quiz.length}問中 ${correctCount}問正解!`}
+              {allCorrect ? `${section.quiz.length}問ぜんぶ正解!` : `${section.quiz.length}問中 ${correctCount}問正解!`}
             </p>
             <p>
-              {correctCount === 4
+              {allCorrect
                 ? 'ヒヨコ君、すごいね! この調子で次のお話へ進もう♪'
                 : 'おしい問題もあったね。解説を読み返せば、次はできるよ。'}
             </p>
           </div>
-          <Hiyoko mood={correctCount === 4 ? 'cheer' : 'happy'} size={66} decorative />
+          <Hiyoko mood={allCorrect ? 'cheer' : 'happy'} size={66} decorative />
         </div>
       )}
 

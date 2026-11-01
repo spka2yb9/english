@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { IngbirdCard } from '../components/IngbirdCard'
 import { LearningIcon } from '../components/LearningIcon'
 import { grammarLessonSummaries, readingPassageCount, vocabularyCount } from '../content/summary'
+import { THREE_MINUTE_PATTERN_INTRO_ID } from '../content/threeMinute/ids'
 import { getThreeMinuteCompleted, getTodayVocabCount, getVocabStats } from '../services/progress'
 import { SESSION_SIZE } from '../services/vocabSelection'
 
@@ -18,10 +19,12 @@ export function Dashboard() {
   // const completedCount = grammarLessonSummaries.filter((l) => completed.has(l.id)).length
   // const nextGrammar = grammarLessonSummaries.find((l) => !completed.has(l.id))
 
-  // 3分間Englishは英文法の全セクションを1話ずつ扱うため、件数は文法サマリーと同じ。
-  const threeMinuteCount = grammarLessonSummaries.length
+  // 3分間Englishは、英文法の全セクションに5文型の導入を1話足した構成。
+  const threeMinuteCount = grammarLessonSummaries.length + 1
   const threeMinuteCompleted = getThreeMinuteCompleted()
-  const threeMinuteDone = grammarLessonSummaries.filter((lesson) => threeMinuteCompleted.has(lesson.id)).length
+  const threeMinuteDone =
+    grammarLessonSummaries.filter((lesson) => threeMinuteCompleted.has(lesson.id)).length +
+    (threeMinuteCompleted.has(THREE_MINUTE_PATTERN_INTRO_ID) ? 1 : 0)
 
   const stats = getVocabStats()
   const statEntries = Object.values(stats)
