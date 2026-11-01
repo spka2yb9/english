@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
 import { IngbirdCard } from '../components/IngbirdCard'
 import { LearningIcon } from '../components/LearningIcon'
-import { readingPassageCount, vocabularyCount } from '../content/summary'
-import { getTodayVocabCount, getVocabStats } from '../services/progress'
+import { grammarLessonSummaries, readingPassageCount, vocabularyCount } from '../content/summary'
+import { getThreeMinuteCompleted, getTodayVocabCount, getVocabStats } from '../services/progress'
 import { SESSION_SIZE } from '../services/vocabSelection'
 
 /**
@@ -18,6 +18,11 @@ export function Dashboard() {
   // const completedCount = grammarLessonSummaries.filter((l) => completed.has(l.id)).length
   // const nextGrammar = grammarLessonSummaries.find((l) => !completed.has(l.id))
 
+  // 3分間Englishは英文法の全セクションを1話ずつ扱うため、件数は文法サマリーと同じ。
+  const threeMinuteCount = grammarLessonSummaries.length
+  const threeMinuteCompleted = getThreeMinuteCompleted()
+  const threeMinuteDone = grammarLessonSummaries.filter((lesson) => threeMinuteCompleted.has(lesson.id)).length
+
   const stats = getVocabStats()
   const statEntries = Object.values(stats)
   const studiedWords = statEntries.length
@@ -32,6 +37,27 @@ export function Dashboard() {
       <IngbirdCard />
 
       <div className="dash-grid">
+        <Link to="/three-minute" className="dash-card">
+          <h2><span className="dash-title-icon"><LearningIcon kind="three-minute" /></span>3分間English</h2>
+          <p className="dash-stat">{threeMinuteDone} / {threeMinuteCount}話 完了</p>
+          <div
+            className="progress-bar"
+            role="progressbar"
+            aria-valuenow={threeMinuteDone}
+            aria-valuemin={0}
+            aria-valuemax={threeMinuteCount}
+            aria-label="3分間Englishの進捗"
+          >
+            <div
+              className="progress-fill"
+              style={{ width: threeMinuteCount ? `${(threeMinuteDone / threeMinuteCount) * 100}%` : '0%' }}
+            />
+          </div>
+          <p className="dash-next">
+            イングバード先生とヒヨコ君の会話で、英文法を1話3分ほどで学び直せます。各話の最後に4択の確認問題つき。
+          </p>
+        </Link>
+
         {/* 英文法ページは一時的に非公開。再開するときはこのカードを戻す。
         <Link to="/grammar" className="dash-card">
           <h2><span className="dash-title-icon"><LearningIcon kind="grammar" /></span>英文法</h2>
