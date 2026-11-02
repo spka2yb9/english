@@ -64,7 +64,7 @@ export const u29: GrammarUnit = {
           right: {
             label: '関係代名詞の that(絞り込み)',
             items: [
-              { en: 'the fact that he tried to hide', ja: '彼が隠そうとした事実', highlight: 'that he tried to hide' },
+              { en: 'the evidence that she collected', ja: '彼女が集めた証拠', highlight: 'that she collected' },
               { en: 'the idea that she proposed', ja: '彼女が提案したアイデア', highlight: 'that she proposed' },
             ],
             pointJa: 'that の後ろは欠けのある文(hide や proposed の目的語がない)',

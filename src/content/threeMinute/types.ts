@@ -26,6 +26,12 @@ export type ThreeMinutePart =
   /** 文法ページの3段階アニメーションをそのまま使う。 */
   | { kind: 'animation'; animation: LessonAnimation }
 
+export type ThreeMinuteTerm = {
+  term: string
+  /** 会話に出てきた文法用語のやさしい意味。 */
+  plain: string
+}
+
 export type ThreeMinuteSection = {
   lessonId: string
   title: string
@@ -36,6 +42,8 @@ export type ThreeMinuteSection = {
   /** 会話と図の情報量から出した読了目安(分)。 */
   minutes: number
   parts: ThreeMinutePart[]
+  /** 会話に出てきた文法用語のミニ辞典。読み返し用。 */
+  terms: ThreeMinuteTerm[]
   /** 最後の理解度チェック。通常の話は4問、5文型の導入は8問。 */
   quiz: QuizQuestion[]
 }

@@ -31,7 +31,7 @@ export const u24: GrammarUnit = {
             { label: '物', text: 'my hair' },
             { label: '過去分詞', text: 'cut' },
           ],
-          caption: '「物」は「される」側なので過去分詞。had cut my hair と語順を変えると過去完了(自分で切った)になってしまうので、順番が命です。',
+          caption: '「物」は「される」側なので過去分詞。had cut my hair にすると「(自分が)髪を切った」という過去完了の文になり、「してもらう」の意味になりません。語順が命です。',
         },
         {
           type: 'explanation',
@@ -223,7 +223,7 @@ export const u24: GrammarUnit = {
       summary: [
         'have + 物 + 過去分詞 = 「(お金を払って)〜してもらう」。物は「される」側なので過去分詞。',
         'get + 物 + 過去分詞も同じ意味で、より会話的。',
-        '語順が重要。had my hair cut は「切ってもらった」、had cut my hair は過去完了で「自分で切っていた」。',
+        '語順が重要。had my hair cut は「切ってもらった」、had cut my hair は過去完了で「(自分が)髪を切った」。',
         'have + 物 + 過去分詞は「〜される」という被害(had my wallet stolen)も表す。',
       ],
     },

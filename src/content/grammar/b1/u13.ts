@@ -71,7 +71,7 @@ export const u13: GrammarUnit = {
           choices: ['built', 'was built', 'is built', 'was build'],
           correctIndex: 1,
           explanation: '城は「建てられる」側なので受動態 be + 過去分詞を使います。ago があるので be動詞は過去形 was です。',
-          choiceNotes: ['built だけでは「城が(何かを)建てた」という能動の過去形になってしまいます。', null, 'ago は過去の話を表すので、現在形 is built は使えません。', 'be動詞のあとは過去分詞 built です。原形 build は使えません。'],
+          choiceNotes: ['built だけでは受動の意味にならず、目的語もないので文として成り立ちません。be動詞 + 過去分詞が必要です。', null, 'ago は過去の話を表すので、現在形 is built は使えません。', 'be動詞のあとは過去分詞 built です。原形 build は使えません。'],
           audioEn: 'This castle was built about four hundred years ago.',
         },
         {

@@ -16,7 +16,7 @@ export const b2bPatterns: PatternMap = {
   'The possibility that the shipment will arrive late worries the whole production team.': { pattern: 'SVO', note: 'S=The possibility、O=the team。' },
   'the fact that he lied': { pattern: 'SV', note: '名詞句。同格の that節の中は he lied で SV。' },
   'the idea that money buys happiness': { pattern: 'SVO', note: '名詞句。that節の中は money buys happiness。' },
-  'the fact that he tried to hide': { pattern: 'SVO', note: '名詞句。関係節の hide は目的語を欠く。' },
+  'the evidence that she collected': { pattern: 'SVO', note: '名詞句。関係節の collected は目的語を欠く。' },
   'the idea that she proposed': { pattern: 'SVO', note: '名詞句。関係節の proposed も目的語を欠く。' },
   // u29-l2 wh節・whether節
   'Whether we expand overseas is still under discussion.': { pattern: 'SVC', note: 'whether節が主語(S)。is under discussion が C。' },

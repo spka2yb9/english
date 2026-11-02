@@ -139,7 +139,7 @@ export const lessonIllustrations: Record<string, LessonIllustration> = {
   // U07 比較
   'u07-l1': {
     kind: 'bars-compare',
-    labels: ['Mia', 'taller than', 'Ken'],
+    labels: ['Ken', 'taller than', 'Mia'],
     caption: '「Ken is taller than Mia.」高い方を主語にすると比較級の文になります。',
   },
   'u07-l2': {
@@ -655,9 +655,9 @@ export const lessonIllustrations: Record<string, LessonIllustration> = {
     caption: 'few / little は「ほとんどない」、a few / a little は「少しある」。数えられるかで選びます。',
   },
   'u33-l3': {
-    kind: 'linked-pair',
-    labels: ['turn off', 'the light'],
-    caption: '分離できる句動詞では、代名詞は turn it off のように必ず間に置きます。',
+    kind: 'swap-cards',
+    labels: ['turn it off', 'turn off it'],
+    caption: '分離できる句動詞では、代名詞は turn it off のように動詞と副詞の間に置きます。turn off it とは言いません。',
   },
 }
 

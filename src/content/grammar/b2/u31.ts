@@ -40,6 +40,12 @@ export const u31: GrammarUnit = {
               caption: '過去に始まり、今も続く。since / for とセットで使います。',
             },
             {
+              title: '基準になる過去: We arrived at the station.',
+              point: 60,
+              pointLabel: '駅に到着(基準)',
+              caption: 'この時点より前に電車は出発していました。',
+            },
+            {
               title: '過去完了: The train had already left when we arrived.',
               point: 25,
               pointLabel: '電車が出発',
@@ -309,7 +315,7 @@ export const u31: GrammarUnit = {
             ],
             pointJa: 'その時までずっと続く',
           },
-          note: '動詞が finish / send / arrive のような1回きりの動作なら by、stay / wait / be open のような続く動作・状態なら until です。',
+          note: 'by は「その時までのどこかで完了する期限」、until は「その時までずっと続く終点」です。finish / send / arrive は by と、stay / wait / be open は until と相性がよいですが、動詞だけで決めず、時間表現の意味で選びます。',
         },
         {
           type: 'contrast',
@@ -562,7 +568,7 @@ export const u31: GrammarUnit = {
           type: 'explanation',
           title: '最後の仕上げは「形の使い分け」',
           body:
-            'このレッスンでは、意味が近いのに形の使い方が違うために間違えやすい単語ペアを整理します。\n\n見分けの軸はシンプルです。\n\n- **後ろに何が来るか**: so の後ろは形容詞・副詞、such の後ろは名詞のかたまり\n- **単数か複数か**: another は単数、other は複数・不可算\n- **目的語があるか**: rise は自動詞、raise は他動詞\n\nどれも「意味」ではなく「形のルール」で決まるので、軸さえ覚えれば確実に得点源にできます。',
+            'このレッスンでは、意味が近いのに形の使い方が違うために間違えやすい単語ペアを整理します。\n\n見分けの軸はシンプルです。\n\n- **後ろに何が来るか**: so の後ろは形容詞・副詞、such の後ろは名詞のかたまり。ただし so many / so much + 名詞のように、so が many / much と組む形は別扱いです\n- **単数か複数か**: another は単数、other は複数・不可算\n- **目的語があるか**: rise は自動詞、raise は他動詞\n\nどれも「意味」ではなく「形のルール」で決まるので、軸さえ覚えれば確実に得点源にできます。',
         },
         {
           type: 'contrast',
@@ -647,7 +653,7 @@ export const u31: GrammarUnit = {
           correctIndex: 1,
           explanation: 'a boring lecture という名詞のかたまりが続くので such を使います。such a ... that の形です。',
           choiceNotes: [
-            'so の後ろは形容詞・副詞だけです。a boring lecture という名詞のかたまりには such を使います。',
+            'so は形容詞・副詞を修飾します。so many books のように many / much と組む形はありますが、a boring lecture という名詞のかたまりには such を使います。',
             null,
             'too は「〜すぎる」を表し、that節と組み合わせるこの形には使えません。',
             'very は that節と組み合わせて「とても〜なので…」の形を作れません。',

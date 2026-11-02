@@ -89,6 +89,23 @@ function ThreeMinuteLessonContent({ section }: { section: ThreeMinuteSection }) 
 
       <ThreeMinuteDialogue section={section} appearance={appearance} />
 
+      {section.terms.length > 0 && (
+        <section className="tm-terms" aria-labelledby="tm-terms-title">
+          <h2 id="tm-terms-title">今日の用語メモ</h2>
+          <p className="section-lead">
+            会話に出てきた文法用語を、やさしい言葉でまとめました。読み返すときにどうぞ。
+          </p>
+          <dl className="tm-term-list">
+            {section.terms.map((item) => (
+              <div className="tm-term" key={item.term}>
+                <dt>{item.term}</dt>
+                <dd>{item.plain}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+      )}
+
       <section className="lesson-quiz tm-quiz" aria-labelledby="tm-quiz-title">
         <h2 id="tm-quiz-title">理解度チェック</h2>
         <p className="section-lead">{section.quiz.length}問の4択です。答えるとすぐに解説が出ます。</p>

@@ -182,6 +182,8 @@ say(HIYOKO, '動詞の前に主語、動詞のあとに目的語。まずはこ�
 say(INGBIRD, '次に、文の中の役割に名前をつけよう。S・V・O・C・M の5つ。', 'happy')
 show(roleTable, 'S / V / O / C / M の役割')
 say(HIYOKO, 'Sは主語、Vは動詞、Oは目的語、Cは補語、Mは修飾語…アルファベットがいっぱいで、ちょっとこんがらがるよ。', 'think')
+say(HIYOKO, 'Mって、マンゴーのM? 文型にフルーツが出てくるの?', 'curious')
+say(INGBIRD, 'マンゴーじゃない! Mは修飾語。飾りだから、なくても文は成り立つ。', 'proud')
 say(
   INGBIRD,
   '覚え方は簡単。**S と V はどの文にもいる**。O と C は動詞が「必要とするか」で決まる。M はいてもいなくてもいい飾り。',
@@ -239,6 +241,8 @@ say(HIYOKO, '「〜に」があるから SVOO かと思ったけど、to がつ�
 say(INGBIRD, 'その通り。**to / for + 人** は修飾語。SVOO は「人 + もの」をそのまま並べたときだけだよ。', 'proud')
 
 say(INGBIRD, '第4文型 **SVOO**。目的語が2つ並ぶ型。', 'happy')
+say(HIYOKO, 'SVOが2つなら、SVO2って呼べばいいじゃん!', 'cheer')
+say(INGBIRD, '呼び方を勝手に変えるな! SVOOだ。Oが2つ並ぶから第4文型。', 'proud')
 animate(patternAnimations.SVOO)
 say(INGBIRD, '順番は **人 → もの**。give, send, show, teach などが代表だよ。', 'happy')
 show(examplesBlock('第4文型 SVOO の例', examplesOf('SVOO')), '第4文型 SVOO の例')
@@ -437,5 +441,13 @@ export const patternIntroSection: ThreeMinuteSection = {
     'S / V / O / C / M の役割と、SV・SVC・SVO・SVOO・SVOC の5つの骨組みを、どんな文でも見分けられるようになります。',
   minutes: 9,
   parts,
+  terms: [
+    { term: '主語(S)', plain: '文の「だれが・何が」にあたる部分。英語では動詞の前に置きます。' },
+    { term: '動詞(V)', plain: '動作や状態を表す語。文の中心になります。' },
+    { term: '目的語(O)', plain: '動詞の動作の対象。「〜を・〜に」にあたる語です。' },
+    { term: '補語(C)', plain: '主語や目的語を説明する語。「S = C」「O = C」の関係になるときの C です。' },
+    { term: '修飾語(M)', plain: '文の骨格に情報を足す飾り。場所・時・様子などを表し、外しても文は成り立ちます。' },
+    { term: '5文型', plain: 'SV・SVC・SVO・SVOO・SVOC の5つの骨組み。動詞のあとに何が続くかで決まります。' },
+  ],
   quiz: patternIntroQuiz,
 }

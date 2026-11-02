@@ -39,7 +39,7 @@ export const u01: GrammarUnit = {
             { label: 'be動詞(=)', text: 'is' },
             { label: '主語を説明する言葉', text: 'a nurse' },
           ],
-          caption: '「She = a nurse」と左右をイコールでつなぐのが be動詞です。右側には名詞(a nurse)・形容詞(tired)・場所(in the kitchen)のどれも置けます。',
+          caption: '「She = a nurse」と左右をイコールでつなぐのが be動詞です。右側に名詞(a nurse)や形容詞(tired)が来ると、主語を説明する補語(C)になります。場所(in the kitchen)は「どこ」を足す飾り(M)なので、5文型ではSVになります。',
         },
         {
           type: 'examples',
@@ -128,7 +128,7 @@ export const u01: GrammarUnit = {
           type: 'explanation',
           title: '三単現の -s',
           body:
-            '主語が **he / she / it(3人称・単数)** で **現在形** のとき、動詞に -s を付けます。この3条件がそろったときだけです。\n\n- I work. / You work. / They work.\n- She work**s**. / My father work**s**.\n\n付け方のルール:\n\n- ふつうは -s: works, likes, plays\n- s / sh / ch / x / o で終わる語は -es: watches, goes, washes\n- 子音 + y は y を i に変えて -es: study → studies\n- 不規則: have → has',
+            '「三単現」は **三人称・単数・現在** の略です。話し手(I / we)が1人称、聞き手(you)が2人称、それ以外(he / she / it / they)が3人称。そのうち he / she / it のように1人・1つのときが単数です。つまり **he / she / it が主語で、今の習慣を表す現在形** のとき、動詞に -s を付けます。この3条件がそろったときだけです。\n\n- I work. / You work. / They work.\n- She work**s**. / My father work**s**.\n\n付け方のルール:\n\n- ふつうは -s: works, likes, plays\n- s / sh / ch / x / o で終わる語は -es: watches, goes, washes\n- 子音 + y は y を i に変えて -es: study → studies\n- 不規則: have → has',
         },
         {
           type: 'examples',

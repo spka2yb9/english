@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { grammarUnits } from '../../content/grammar'
+import { LESSON_ANIMATIONS } from '../../content/grammar/animations'
 import { lessonToMarkdown, unitToMarkdown, unitsToMarkdown } from './markdown'
 
 describe('grammar Markdown export', () => {
@@ -18,7 +19,7 @@ describe('grammar Markdown export', () => {
 
   it('挿絵ブロックを図の説明テキストとして出力する', () => {
     const markdown = lessonToMarkdown(lesson)
-    expect(markdown).toContain('**図:** be動詞で主語と説明をつなぐの2Dアニメーション。')
+    expect(markdown).toContain(`**図:** ${LESSON_ANIMATIONS[lesson.id].title}の2Dアニメーション。`)
     expect(markdown).toContain('1. She is a nurse.')
     expect(markdown).toContain('2. She is not a nurse.')
     expect(markdown).toContain('3. Is she a nurse?')

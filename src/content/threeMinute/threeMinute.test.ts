@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { patternAnimations, patternQuiz, wordOrderAnimation, wordOrderQuiz } from '../grammar/structures/index.ts'
 import { allLessons } from '../grammar/index.ts'
 import { buildMistake, buildThreeMinuteSection } from './build.ts'
+import { COMEDY_BEATS } from './comedy.ts'
 import { THREE_MINUTE_PATTERN_INTRO_ID } from './ids.ts'
 import { getThreeMinuteSection, nextThreeMinuteSection, patternIntroSection, threeMinuteLessonCount } from './index.ts'
 
@@ -24,10 +25,23 @@ describe('3分間English の会話スクリプト', () => {
   it('図表・例文・まとめを落とさず、最後に4択のクイズを4問だけ置く', () => {
     for (const lesson of allLessons) {
       const section = buildThreeMinuteSection(lesson)
-      const visualCount = lesson.blocks.filter((block) => block.type !== 'explanation').length
+      // 挿絵ブロックは「うごいてわかる」と同じアニメーションを描くため、
+      // 3分間ページではブロックとして重ねず、アニメーション1回にまとめている。
+      const visualCount =
+        lesson.blocks.filter((block) => block.type !== 'explanation' && block.type !== 'illustration').length +
+        lesson.blocks.filter((block) => block.type === 'explanation' && block.title === '文型の視点').length
       const renderedVisualCount = section.parts.filter((part) => part.kind === 'block').length
 
       expect(renderedVisualCount).toBe(visualCount)
+
+      // 挿絵のキャプションは、アニメーションの補足として会話に残す。
+      for (const block of lesson.blocks) {
+        if (block.type !== 'illustration' || !block.caption) continue
+        expect(
+          section.parts.some((part) => part.kind === 'line' && part.line.text.includes(block.caption!)),
+          lesson.id,
+        ).toBe(true)
+      }
       expect(section.quiz).toHaveLength(4)
       expect(section.quiz.every((question) => question.choices.length === 4)).toBe(true)
       for (const point of lesson.summary) {
@@ -38,6 +52,8 @@ describe('3分間English の会話スクリプト', () => {
       // 解説の書き出しも、会話の中に必ず残す(説明の抜け落ちを防ぐ)。
       for (const block of lesson.blocks) {
         if (block.type !== 'explanation') continue
+        // 「文型の視点」は専門的な補足なので、会話で読み上げず、ホワイトボードの「文型メモ」として見せる。
+        if (block.title === '文型の視点') continue
         const firstSentence = block.body.split(/\n\n+/)[0]?.split(/(?<=[。！？])/)[0]?.trim()
         if (!firstSentence) continue
         expect(
@@ -52,6 +68,76 @@ describe('3分間English の会話スクリプト', () => {
       const section = buildThreeMinuteSection(lesson)
       expect(section.minutes).toBeGreaterThanOrEqual(3)
       expect(section.minutes).toBeLessThanOrEqual(5)
+    }
+  })
+
+  it('冒頭に、その話の用語への見当違いと先生のツッコミを入れる', () => {
+    for (const lesson of allLessons) {
+      const section = buildThreeMinuteSection(lesson)
+      const beat = COMEDY_BEATS[lesson.id]
+      expect(beat, lesson.id).toBeDefined()
+      expect(beat.student.trim(), lesson.id).not.toBe('')
+      expect(beat.teacher.trim(), lesson.id).not.toBe('')
+
+      const lines = section.parts.flatMap((part) => (part.kind === 'line' ? [part.line] : []))
+      const studentIndex = lines.findIndex((line) => line.speaker === 'hiyoko' && line.text === beat.student)
+      const teacherIndex = lines.findIndex((line) => line.speaker === 'ingbird' && line.text === beat.teacher)
+      expect(studentIndex, lesson.id).toBeGreaterThanOrEqual(0)
+      expect(teacherIndex, lesson.id).toBe(studentIndex + 1)
+    }
+  })
+
+  it('内部ユニット番号や、本文の見出しをそのまま復唱しない', () => {
+    for (const lesson of allLessons) {
+      const section = buildThreeMinuteSection(lesson)
+      for (const part of section.parts) {
+        if (part.kind !== 'line') continue
+        expect(part.line.text, lesson.id).not.toMatch(/U\d\d/)
+        if (part.line.speaker === 'hiyoko') {
+          expect(part.line.text, lesson.id).not.toContain('日本語ではこう考える')
+        }
+      }
+    }
+  })
+
+  it('会話に出てきた用語を、やさしい説明つきで残す', () => {
+    for (const lesson of allLessons) {
+      const section = buildThreeMinuteSection(lesson)
+      expect(section.terms.length, lesson.id).toBeGreaterThan(0)
+      expect(new Set(section.terms.map((term) => term.term)).size, lesson.id).toBe(section.terms.length)
+      for (const term of section.terms) {
+        expect(term.term.trim(), lesson.id).not.toBe('')
+        expect(term.plain.trim(), lesson.id).not.toBe('')
+      }
+    }
+  })
+
+  it('文型の視点は、5文型の地図を思い出す前置きのあとに「文型メモ」として置く', () => {
+    for (const lesson of allLessons) {
+      const section = buildThreeMinuteSection(lesson)
+      const index = section.parts.findIndex((part) => part.kind === 'block' && part.label === '文型メモ')
+      expect(index, lesson.id).toBeGreaterThanOrEqual(0)
+      expect(
+        section.parts.slice(0, index).some((part) => part.kind === 'line' && part.line.text.includes('5文型の地図')),
+        lesson.id,
+      ).toBe(true)
+      expect(
+        section.parts.slice(index + 1).some((part) => part.kind === 'line' && part.line.text.includes('読み飛ばしてOK')),
+        lesson.id,
+      ).toBe(true)
+    }
+  })
+
+  it('同じ先生のセリフを続けて繰り返さない', () => {
+    for (const lesson of allLessons) {
+      const section = buildThreeMinuteSection(lesson)
+      for (let index = 1; index < section.parts.length; index += 1) {
+        const previous = section.parts[index - 1]
+        const current = section.parts[index]
+        if (previous.kind !== 'line' || current.kind !== 'line') continue
+        if (previous.line.speaker !== 'ingbird' || current.line.speaker !== 'ingbird') continue
+        expect(current.line.text, lesson.id).not.toBe(previous.line.text)
+      }
     }
   })
 
@@ -78,6 +164,7 @@ describe('3分間English の5文型の導入', () => {
     expect(patternIntroSection.title).toBe('5文型の地図')
     expect(patternIntroSection.unitTitle).toBe('はじめに')
     expect(patternIntroSection.parts.length).toBeGreaterThan(60)
+    expect(patternIntroSection.terms.length).toBeGreaterThan(0)
     // 導入の次は、英文法の最初のセクションへ進む。
     expect(nextThreeMinuteSection(THREE_MINUTE_PATTERN_INTRO_ID)).toEqual({
       id: 'u01-l1',

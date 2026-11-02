@@ -29,8 +29,14 @@ describe('ThreeMinuteLessonPage', () => {
     // 先生と生徒の吹き出しが交互に並ぶ。
     expect(document.querySelectorAll('.tm-turn-ingbird').length).toBeGreaterThan(5)
     expect(document.querySelectorAll('.tm-turn-hiyoko').length).toBeGreaterThan(5)
-    // 文法ページのアニメーションをそのまま使う。
-    expect(document.querySelector('.grammar-animation')).not.toBeNull()
+    // 文法ページのアニメーションをそのまま使う。挿絵ブロックと同じ図なので、表示は1回だけ。
+    expect(document.querySelectorAll('.grammar-animation')).toHaveLength(1)
+    expect(screen.queryByText('イメージでわかる')).not.toBeInTheDocument()
+    // 冒頭のボケとツッコミ、専門用語のやさしい言い換えも表示する。
+    expect(screen.getByText(/蜂じゃない/)).toBeInTheDocument()
+    expect(screen.getByText('文型メモ')).toBeInTheDocument()
+    expect(screen.getByRole('heading', { level: 2, name: '今日の用語メモ' })).toBeInTheDocument()
+    expect(document.querySelector('.tm-term dt')?.textContent).toBe('be動詞')
     // 問題演習は最後の4問だけ。
     expect(screen.getByRole('heading', { level: 2, name: '理解度チェック' })).toBeInTheDocument()
     expect(screen.getByText('問題 1 / 4')).toBeInTheDocument()
@@ -50,6 +56,7 @@ describe('ThreeMinuteLessonPage', () => {
     // 英語の語順に1つ、5文型それぞれに1つ。合計6つのアニメーションで確かめる。
     expect(document.querySelectorAll('.grammar-animation')).toHaveLength(6)
     expect(screen.getAllByText('S / V / O / C / M の役割').length).toBeGreaterThan(0)
+    expect(screen.getByRole('heading', { level: 2, name: '今日の用語メモ' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { level: 2, name: '理解度チェック' })).toBeInTheDocument()
     expect(screen.getByText('問題 1 / 8')).toBeInTheDocument()
     expect(screen.getByRole('link', { name: /次のお話: be動詞の現在形/ })).toHaveAttribute(

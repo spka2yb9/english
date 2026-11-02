@@ -36,6 +36,7 @@ import { u31 } from './b2/u31.ts'
 import { u32 } from './b2/u32.ts'
 import { u33 } from './b2/u33.ts'
 import { applyLessonExpansions } from './expansions/index.ts'
+import { humanizeCurriculumRefs } from './humanize.ts'
 import { applyLessonIllustrations } from './illustrations.ts'
 import { applyLessonPatterns } from './patterns/index.ts'
 import { applyLessonStructures } from './structures/index.ts'
@@ -49,8 +50,11 @@ const baseGrammarUnits: GrammarUnit[] = [
 ]
 
 // 構造ブロックは「文型の視点」(patterns)の直後へ差し込むため、最も外側で適用する。
-export const grammarUnits: GrammarUnit[] = applyLessonStructures(
-  applyLessonIllustrations(applyLessonPatterns(applyLessonExpansions(baseGrammarUnits))),
+// 最後に、本文中の内部ユニット番号(U01 など)を学習者向けの名前に置き換える。
+export const grammarUnits: GrammarUnit[] = humanizeCurriculumRefs(
+  applyLessonStructures(
+    applyLessonIllustrations(applyLessonPatterns(applyLessonExpansions(baseGrammarUnits))),
+  ),
 )
 
 export const LEVEL_ORDER: CefrLevel[] = ['A2', 'A2+', 'B1', 'B1+', 'B2']

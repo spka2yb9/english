@@ -22,7 +22,7 @@ export function scene(title: string, mode: AnimationMode, frames: [string, strin
 }
 
 export const LESSON_ANIMATIONS: Record<string, LessonAnimation> = {
-  'u01-l1': scene('be動詞で主語と説明をつなぐ', 'sentence', [
+  'u01-l1': scene('be動詞の肯定・否定・疑問', 'sentence', [
     'She|is|a nurse. :: is が「彼女」と「看護師」をつなぎます。',
     'She|is|not|a nurse. :: 否定するときは、be動詞のあとに not を入れます。',
     'Is|she|a nurse? :: 質問するときは、be動詞を主語の前へ動かします。',
@@ -38,7 +38,7 @@ export const LESSON_ANIMATIONS: Record<string, LessonAnimation> = {
     'He|does|not|play|tennis. :: 否定文でも does が働くので、動詞は play です。',
   ]),
   'u02-l1': scene('今を切り取る進行形', 'timeline', [
-    'She|starts|cooking. :: 料理を始めました。',
+    'She|starts|cooking. :: 開始の瞬間です。ここから料理が始まります。',
     'She|is cooking|now. :: 今は動作の途中。be動詞 + -ing で表します。',
     'Dinner|is|ready. :: 動作が終わりました。「料理中」とは違う状態です。',
   ], ['開始', '今・途中', '終了']),
@@ -58,7 +58,7 @@ export const LESSON_ANIMATIONS: Record<string, LessonAnimation> = {
     'She|finished|at eight. :: 8時に終えた出来事は過去形で表します。',
   ], ['6時', '7時・途中', '8時']),
   'u02-l5': scene('その場の決定から未来へ', 'timeline', [
-    'Those bags|look|heavy. :: 今、相手が困っていることに気づきました。',
+    'Those bags|look|heavy. :: 相手が大変そうだと気づきました。',
     "I|will help|you. :: その場で決めたことを will で伝えます。",
     "I|will carry|this bag. :: 決めた行動は、これから実行します。",
   ], ['気づく', '今決める', 'これから']),
@@ -100,7 +100,7 @@ export const LESSON_ANIMATIONS: Record<string, LessonAnimation> = {
   'u11-l2': scene('今までの経験を積み重ねる', 'timeline', ['I|have visited|Kyoto once. :: 今までに1回、京都を訪れた経験があります。', 'I|have visited|Kyoto twice. :: 2回目の経験が増えました。', 'I|have visited|Kyoto three times. :: 今までの回数を現在完了で伝えます。'], ['1回目', '2回目', '今まで3回']),
   'u11-l3': scene('始まりから今まで続く', 'timeline', ['I|have lived here|since 2019. :: since は、住み始めた時点を示します。', 'I|have lived here|for years. :: for は、続いている期間の長さを示します。', 'I|still live|here. :: どちらも、今なお住んでいることにつながります。'], ['2019年', '続いた期間', '今も続く']),
   'u11-l4': scene('今の完了状態を確かめる', 'timeline', ['I|haven’t sent it|yet. :: まだ送っていない段階では not ... yet です。', 'I|have just sent|it. :: 送ったばかりなら just を使います。', 'I|have already sent|it. :: 今は、すでに送り終えています。'], ['未完了', 'たった今', 'すでに完了']),
-  'u11-l5': scene('過去で閉じるか今へつなぐか', 'timeline', ['I|lost my key|yesterday. :: 過去形は、昨日の出来事を伝えます。', 'I|found it|later. :: あとで見つかった場合も、過去形の文と矛盾しません。', 'I|have lost|my key. :: 現在完了では、今も鍵がない状態を伝えます。'], ['過去の出来事', 'その後', '今との関係']),
+  'u11-l5': scene('過去で閉じるか今へつなぐか', 'timeline', ['I|lost my key|yesterday. :: 過去形は、昨日の出来事を伝えます。', 'I|found it|later. :: あとで見つかった場合も、過去形の文と矛盾しません。', 'I|have lost|my key. :: これは別の場面。現在完了では、今も鍵がない状態を伝えます。'], ['過去の出来事', 'その後', '今との関係']),
   'u11-l6': scene('現在完了の3つの見方', 'timeline', ['I|have been|to Kyoto. :: 経験：今までにしたことがあるかを見ます。', 'I|have lived here|for years. :: 継続：過去から今まで続いている期間を見ます。', 'I|have finished|my work. :: 完了：今、終わった状態になっているかを見ます。'], ['経験', '継続', '完了']),
   'u12-l1': scene('手配した予定を未来に置く', 'timeline', ['We|agreed|on a time. :: 相手と会う日時を決めました。', 'I|am meeting Ken|tomorrow. :: 手配済みの予定を現在進行形で伝えます。', 'We|are meeting|at three. :: 実際に会うのは明日の3時です。'], ['手配した', '今話す', '明日3時']),
   'u12-l2': scene('未来表現を決まり方で選ぶ', 'branch', ["I|will help|you. :: 今この場で決めた行動です。", 'I|am going to travel. :: 前から持っている計画です。', 'I|am flying|tomorrow. :: 飛行機などの手配も済んだ予定です。'], ['その場の決定', '前からの計画', '手配済み']),

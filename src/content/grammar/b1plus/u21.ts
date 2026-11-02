@@ -26,7 +26,7 @@ export const u21: GrammarUnit = {
           type: 'contrast',
           title: 'remember to do vs remember doing',
           left: {
-            label: 'remember to do(これから)',
+            label: 'remember to do(これからすることを覚えている)',
             items: [
               { en: 'Please remember to bring your passport tomorrow.', ja: '明日は忘れずにパスポートを持ってきてください。', highlight: 'remember to bring' },
               { en: 'I remembered to send the invoice this morning.', ja: '今朝、忘れずに請求書を送りました。', highlight: 'remembered to send' },
@@ -34,7 +34,7 @@ export const u21: GrammarUnit = {
             pointJa: 'これからすべきことを覚えている → 忘れずに〜する',
           },
           right: {
-            label: 'remember doing(過去)',
+            label: 'remember doing(したことを覚えている)',
             items: [
               { en: 'I remember visiting this town as a child.', ja: '子どものころにこの町を訪れたのを覚えています。', highlight: 'remember visiting' },
               { en: "I don't remember saying that.", ja: 'そんなことを言った覚えはありません。', highlight: 'remember saying' },
